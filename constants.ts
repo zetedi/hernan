@@ -1,8 +1,8 @@
 import { Language, TranslationData } from './types';
 
 export const IMAGES = {
-  hero: "https://picsum.photos/seed/andes/1920/1080",
-  about: "https://picsum.photos/seed/shaman/800/1000",
+  hero: "img/alpacas.jpg",
+  about: "img/about/hat.jpg",
   gallery: [
     "https://picsum.photos/seed/ceremony1/600/400",
     "https://picsum.photos/seed/ceremony2/400/600",

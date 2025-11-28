@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { TranslationData } from '../types';
 import { IMAGES } from '../constants';
 
@@ -27,12 +28,12 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
         <p className="text-lg md:text-2xl text-gray-200 mb-10 font-light tracking-wider drop-shadow-md">
           {t.subtitle}
         </p>
-        <a 
-          href="#contact"
-          className="inline-block bg-pacha-gold/90 hover:bg-pacha-gold text-pacha-earth font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl uppercase tracking-widest text-sm"
+        <Link 
+          to="/contact"
+          className="inline-block bg-pacha-gold hover:bg-[#b08d48] text-pacha-stone font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl uppercase tracking-widest text-sm"
         >
           {t.cta}
-        </a>
+        </Link>
       </div>
       
       {/* Scroll Indicator */}
