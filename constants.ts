@@ -1,7 +1,7 @@
 import { Language, TranslationData } from './types';
 
 export const IMAGES = {
-  hero: "img/alpacas.jpg",
+  hero: "/img/alpacas.jpg",
   about: "img/about/hat.jpg",
   gallery: [
     "https://picsum.photos/seed/ceremony1/600/400",
