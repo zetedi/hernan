@@ -1,15 +1,31 @@
 import { Language, TranslationData } from './types';
 
+// SVG Data URI for the Cactus Logo
+const LOGO_SVG = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRThCOTIzIiBzdHJva2Utd2lkdGg9IjIiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNSAyNSkiPjxwYXRoIGQ9Ik0yNSA1MCBMMjUgMTAgQzI1IDUgMzUgNSAzNSAxMCBMMzUgNTAgTTI1IDMwIEwxNSAzMCBDNSAzMCA1IDE1IDE1IDE1IEwyNSAyMCBNMzUgMzAgTDQ1IDMwIEM1NSAzMCA1NSAxNSA0NSAxNSBMMzUgMjAiIGZpbGw9IiM4QTlBNkEiIHN0cm9rZT0iIzI2MjAxQiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L2c+PC9zdmc+`;
+
 export const IMAGES = {
-  hero: "/img/alpacas.jpg",
-  about: "img/ag.jpg",
+  logo: "/img/logo.svg",
+  hero: "/img/hero.jpg",
+  about: "/img/about.jpg",
   gallery: [
-    "https://picsum.photos/seed/ceremony1/600/400",
-    "https://picsum.photos/seed/ceremony2/400/600",
-    "https://picsum.photos/seed/ceremony3/600/600",
-    "https://picsum.photos/seed/ceremony4/600/800",
-    "https://picsum.photos/seed/ceremony5/600/400",
-    "https://picsum.photos/seed/ceremony6/400/400",
+    "/img/gallery/1.jpg",
+    "/img/gallery/2.jpg",
+    "/img/gallery/3.jpg",
+    "/img/gallery/4.jpg",
+    "/img/gallery/5.jpg",
+    "/img/gallery/6.jpg",
+    "/img/gallery/7.jpg",
+    "/img/gallery/8.jpg",
+    "/img/gallery/9.jpg",
+    "/img/gallery/10.jpg",
+    "/img/gallery/11.jpg",
+    "/img/gallery/12.jpg",
+    "/img/gallery/13.jpg",
+    "/img/gallery/14.jpg",
+    "/img/gallery/15.jpg",
+    "/img/gallery/16.jpg",
+    "/img/gallery/17.jpg",
+    "/img/gallery/18.jpg",
   ]
 };
 
@@ -26,6 +42,24 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "Sacred Medicine of the Andes",
       subtitle: "Reconnect with Pachamama through traditional Wachuma ceremonies in the Sacred Valley.",
       cta: "Book a Ceremony"
+    },
+    benefits: {
+      title: "The Power of Wachuma",
+      subtitle: "Why we journey with the Sacred Cactus",
+      items: [
+        {
+          title: "Emotional Healing",
+          description: "Release past traumas and emotional blockages stored in the body, finding forgiveness and peace."
+        },
+        {
+          title: "Connection to Nature",
+          description: "Experience a profound unity with the Earth, the elements, and the living spirit of the Andes."
+        },
+        {
+          title: "Clarity & Vision",
+          description: "Quiet the mind to receive guidance, purpose, and a renewed perspective on your life path."
+        }
+      ]
     },
     about: {
       title: "Meet Hernan",
@@ -97,6 +131,24 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       subtitle: "Reconecta con la Pachamama a través de ceremonias tradicionales de Wachuma en el Valle Sagrado.",
       cta: "Reserva una Ceremonia"
     },
+    benefits: {
+      title: "El Poder del Wachuma",
+      subtitle: "Por qué viajamos con el Cactus Sagrado",
+      items: [
+        {
+          title: "Sanación Emocional",
+          description: "Libera traumas pasados y bloqueos emocionales almacenados en el cuerpo, encontrando perdón y paz."
+        },
+        {
+          title: "Conexión con la Naturaleza",
+          description: "Experimenta una profunda unidad con la Tierra, los elementos y el espíritu vivo de los Andes."
+        },
+        {
+          title: "Claridad y Visión",
+          description: "Aquieta la mente para recibir guía, propósito y una perspectiva renovada sobre tu camino de vida."
+        }
+      ]
+    },
     about: {
       title: "Conoce a Hernan",
       subtitle: "Guardián del Cactus Sagrado",
@@ -156,16 +208,34 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   },
   [Language.QU]: {
     nav: {
-      home: "Qallariy", // Start/Home
-      about: "Hernanmanta", // About Hernan
-      services: "Ruwaykuna", // Ceremonies/Activities
-      gallery: "Rikch'akuna", // Images
-      contact: "Willanakuy" // Contact
+      home: "Qallariy",
+      about: "Hernanmanta",
+      services: "Ruwaykuna",
+      gallery: "Rikch'akuna",
+      contact: "Willanakuy"
     },
     hero: {
       title: "Andespi Hampi Wachuma",
       subtitle: "Pachamamawan tinkuy, ñawpa Wachuma hampiywan Valle Sagradopi.",
       cta: "Hampiyta mañakuy"
+    },
+    benefits: {
+      title: "Wachumaq Kallpan",
+      subtitle: "Imarayku Hampiwan Purinchik",
+      items: [
+        {
+          title: "Sunqu Hampiy",
+          description: "Ñawpa nanaykunata wisch'uspa, sunqu tiyaykuyta tarinki. Pampachakuywan thak kawsaywan."
+        },
+        {
+          title: "Pachamamawan Tinkuy",
+          description: "Hallp'awan, wayrawan, yakuwan, ninawan hukllachakuy. Apukunaq kallpanta riqsiy."
+        },
+        {
+          title: "Yuyay Ch'uya",
+          description: "Umata ch'uyanchaspa, allin ñanta rikunki. Musuq kawsayta qallarinaykipaq."
+        }
+      ]
     },
     about: {
       title: "Hernanwan riqsinakuy",
@@ -222,6 +292,94 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
     },
     footer: {
       rights: "Tukuy derechokuna waqaychasqa."
+    }
+  },
+  [Language.AR]: {
+    nav: {
+      home: "الرئيسية",
+      about: "عن هيرنان",
+      services: "الاحتفالات",
+      gallery: "المعرض",
+      contact: "اتصل بنا"
+    },
+    hero: {
+      title: "الطب المقدس للأنديز",
+      subtitle: "أعد الاتصال بـ باتشاماما من خلال احتفالات واتشوما التقليدية في الوادي المقدس.",
+      cta: "احجز احتفالاً"
+    },
+    benefits: {
+      title: "قوة الواتشوما",
+      subtitle: "لماذا نخوض الرحلة مع الصبار المقدس",
+      items: [
+        {
+          title: "الشفاء العاطفي",
+          description: "تحرير الصدمات الماضية والانسدادات العاطفية المخزنة في الجسد، وإيجاد الغفران والسلام."
+        },
+        {
+          title: "الاتصال بالطبيعة",
+          description: "تجربة وحدة عميقة مع الأرض، والعناصر، والروح الحية للأنديز."
+        },
+        {
+          title: "الوضوح والرؤية",
+          description: "تهدئة العقل لتلقي التوجيه، والهدف، ومنظور متجدد لمسار حياتك."
+        }
+      ]
+    },
+    about: {
+      title: "تعرف على هيرنان",
+      subtitle: "حارس الصبار المقدس",
+      description: [
+        "كرس هيرنان حياته لدراسة وحفظ حكمة الأنديز القديمة. ولد في قلب الأنديز، ويحمل سلالة أسلافه، ويشارك القوة الشفائية لصبار واتشوما (سان بيدرو).",
+        "احتفالاته ليست مجرد طقوس؛ إنها رحلات عميقة داخل الذات، تسترشد بأرواح الجبال (آبوس) والأرض الأم (باتشاماما). مع أكثر من 20 عامًا من الخبرة، يوفر هيرنان مساحة آمنة وحقيقية وتحويلية."
+      ]
+    },
+    services: {
+      title: "خدماتنا",
+      items: [
+        {
+          title: "احتفال نهاري",
+          description: "انغماس كامل ليوم واحد في الطبيعة، والتواصل مع الطب تحت الشمس. يشمل التطهير والتكامل.",
+          price: "$150"
+        },
+        {
+          title: "خلوة البدر",
+          description: "جرب سحر واتشوما تحت ضوء البدر. ليلة من النار والموسيقى والشفاء العميق.",
+          price: "$200"
+        },
+        {
+          title: "شفاء خاص",
+          description: "جلسات فردية مصممة لاحتياجاتك الروحية والعاطفية المحددة. إزالة الانسداد العميق.",
+          price: "استفسر"
+        }
+      ]
+    },
+    testimonials: {
+      title: "أصوات من القلب",
+      items: [
+        {
+          name: "سارة ج.",
+          location: "الولايات المتحدة",
+          text: "تجربتي مع هيرنان غيرت حياتي. شعرت باتصال بالأرض لم أشعر به من قبل."
+        },
+        {
+          name: "مارك د.",
+          location: "فرنسا",
+          text: "أصلي، قوي، وآمن. هيرنان سيد حقيقي في الطب."
+        }
+      ]
+    },
+    contact: {
+      title: "تواصل معنا",
+      form: {
+        name: "الاسم",
+        email: "البريد الإلكتروني",
+        message: "رسالتك",
+        submit: "إرسال الرسالة"
+      },
+      info: "نحن موجودون في قلب الوادي المقدس، بالقرب من كالكا، كوسكو."
+    },
+    footer: {
+      rights: "جميع الحقوق محفوظة."
     }
   }
 };

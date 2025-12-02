@@ -1,7 +1,8 @@
 export enum Language {
   EN = 'EN',
   ES = 'ES',
-  QU = 'QU'
+  QU = 'QU',
+  AR = 'AR'
 }
 
 export interface NavLink {
@@ -28,6 +29,11 @@ export interface TestimonialItem {
   text: string;
 }
 
+export interface BenefitItem {
+  title: string;
+  description: string;
+}
+
 export interface TranslationData {
   nav: {
     home: string;
@@ -40,6 +46,11 @@ export interface TranslationData {
     title: string;
     subtitle: string;
     cta: string;
+  };
+  benefits: {
+    title: string;
+    subtitle: string;
+    items: BenefitItem[];
   };
   about: SectionContent;
   services: {

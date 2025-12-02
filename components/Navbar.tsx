@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Language, TranslationData } from '../types';
 import { LanguageSelector } from './LanguageSelector';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { IMAGES } from '../constants';
 
 interface NavbarProps {
   t: TranslationData['nav'];
@@ -12,7 +13,19 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageChange }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Trigger shrink effect after scrolling 20px
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { label: t.home, path: '/' },
@@ -23,35 +36,66 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
   ];
 
   const isActive = (path: string) => {
-    return location.pathname === path ? 'text-pacha-gold font-bold' : 'text-gray-300 hover:text-pacha-gold';
+    // Determine active state styling
+    if (location.pathname === path) {
+        return 'text-pacha-gold font-bold border-b-2 border-pacha-gold';
+    }
+    return 'text-white/90 hover:text-pacha-gold hover:bg-white/10 rounded-md';
   };
 
+  // Logic for navbar background: Transparent only on Home at the top, otherwise dark stone
+  const navBackgroundClass = isHome && !isScrolled 
+    ? 'bg-transparent' 
+    : 'bg-pacha-stone/95 shadow-lg backdrop-blur-md';
+
+  // Logic for logo size:
+  // Mobile: Always w-12 h-12
+  // Desktop (md+):
+  //   - Scrolled: w-12 h-12
+  //   - Top: w-32 h-32 (Floating large)
+  const logoContainerClass = isScrolled 
+    ? 'w-12 h-12' 
+    : 'w-12 h-12 md:w-32 md:h-32 md:mt-8';
+
   return (
-    <nav className="fixed w-full z-50 bg-pacha-stone/90 backdrop-blur-sm border-b border-pacha-leaf shadow-md transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <nav className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${navBackgroundClass}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? 'h-20' : 'h-24'}`}>
           
-          {/* Logo */}
-          <Link to="/" className="flex-shrink-0 flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-            <Leaf className="text-pacha-gold h-8 w-8" />
-            <div className="flex flex-col">
-              <span className="text-white font-serif font-bold text-xl tracking-wider uppercase">Hernan</span>
-              <span className="text-pacha-gold text-xs tracking-[0.2em] uppercase">Wachuma</span>
+          {/* Logo - Floating Effect */}
+          <Link 
+            to="/" 
+            className="flex-shrink-0 flex items-center gap-3 cursor-pointer group" 
+            onClick={() => window.scrollTo(0,0)}
+          >
+            <div className={`relative transition-all duration-500 ease-in-out ${logoContainerClass}`}>
+              <img 
+                src={IMAGES.logo} 
+                alt="Hernan Wachuma Logo" 
+                className="w-full h-full object-contain drop-shadow-md"
+              />
+            </div>
+            
+            <div className={`flex flex-col transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-80'}`}>
+              <span className="text-white font-serif font-bold text-xl tracking-wider uppercase group-hover:text-pacha-gold transition-colors shadow-black drop-shadow-md">Hernan</span>
+              <span className="text-pacha-gold text-xs tracking-[0.2em] uppercase drop-shadow-md">Wachuma</span>
             </div>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-2">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 to={link.path}
-                className={`font-medium text-sm tracking-wide transition-colors uppercase ${isActive(link.path)}`}
+                className={`font-medium text-sm tracking-wide transition-all duration-300 px-4 py-2 uppercase ${isActive(link.path)}`}
               >
                 {link.label}
               </Link>
             ))}
-            <LanguageSelector currentLanguage={currentLanguage} onLanguageChange={onLanguageChange} />
+            <div className="pl-4 ml-4 border-l border-white/20">
+               <LanguageSelector currentLanguage={currentLanguage} onLanguageChange={onLanguageChange} />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -59,7 +103,7 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
              <LanguageSelector currentLanguage={currentLanguage} onLanguageChange={onLanguageChange} />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none"
+              className="text-white hover:text-pacha-gold focus:outline-none transition-colors"
             >
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -69,15 +113,15 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-pacha-earth border-t border-pacha-leaf">
+        <div className="md:hidden bg-pacha-earth/95 backdrop-blur-xl border-t border-pacha-leaf/30 animate-fade-in-down">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 to={link.path}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium text-center uppercase ${
-                  location.pathname === link.path ? 'bg-pacha-leaf text-white' : 'text-gray-300 hover:text-white hover:bg-pacha-leaf/50'
+                className={`block px-3 py-4 rounded-md text-base font-medium text-center uppercase tracking-widest ${
+                  location.pathname === link.path ? 'bg-pacha-leaf/20 text-pacha-gold' : 'text-gray-200 hover:text-white hover:bg-white/5'
                 }`}
               >
                 {link.label}

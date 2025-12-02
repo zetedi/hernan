@@ -7,6 +7,7 @@ import { Services } from './components/Services';
 import { Gallery } from './components/Gallery';
 import { Testimonials } from './components/Testimonials';
 import { Contact } from './components/Contact';
+import { Benefits } from './components/Benefits';
 import { Language } from './types';
 import { TRANSLATIONS } from './constants';
 
@@ -16,13 +17,26 @@ const App: React.FC = () => {
 
   const t = TRANSLATIONS[currentLanguage];
 
-  // Set document title based on language
+  // Handle document title and RTL direction based on language
   useEffect(() => {
+    // Set Title
     document.title = currentLanguage === Language.EN 
       ? "Hernan Wachuma - Sacred Medicine" 
       : currentLanguage === Language.ES 
       ? "Hernan Wachuma - Medicina Sagrada"
-      : "Hernan Wachuma - Hampi Wachuma";
+      : currentLanguage === Language.QU
+      ? "Hernan Wachuma - Hampi Wachuma"
+      : "هيرنان واتشوما - الطب المقدس"; // Arabic Title
+
+    // Set Text Direction (RTL/LTR)
+    if (currentLanguage === Language.AR) {
+      document.documentElement.dir = 'rtl';
+      document.documentElement.lang = 'ar';
+    } else {
+      document.documentElement.dir = 'ltr';
+      document.documentElement.lang = currentLanguage.toLowerCase();
+    }
+
   }, [currentLanguage]);
 
   // Scroll to top on route change
@@ -39,7 +53,12 @@ const App: React.FC = () => {
       />
       <main className="flex-grow">
         <Routes>
-          <Route path="/" element={<Hero t={t.hero} />} />
+          <Route path="/" element={
+            <>
+              <Hero t={t.hero} />
+              <Benefits t={t.benefits} />
+            </>
+          } />
           <Route path="/about" element={
             <>
               <About t={t.about} />

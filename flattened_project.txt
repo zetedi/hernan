@@ -1,0 +1,1530 @@
+=== ./index.tsx ===
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+
+=== ./App.tsx ===
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { Navbar } from './components/Navbar';
+import { Hero } from './components/Hero';
+import { About } from './components/About';
+import { Services } from './components/Services';
+import { Gallery } from './components/Gallery';
+import { Testimonials } from './components/Testimonials';
+import { Contact } from './components/Contact';
+import { Benefits } from './components/Benefits';
+import { Language } from './types';
+import { TRANSLATIONS } from './constants';
+
+const App: React.FC = () => {
+  const [currentLanguage, setCurrentLanguage] = useState<Language>(Language.EN);
+  const location = useLocation();
+
+  const t = TRANSLATIONS[currentLanguage];
+
+  // Handle document title and RTL direction based on language
+  useEffect(() => {
+    // Set Title
+    document.title = currentLanguage === Language.EN 
+      ? "Hernan Wachuma - Sacred Medicine" 
+      : currentLanguage === Language.ES 
+      ? "Hernan Wachuma - Medicina Sagrada"
+      : currentLanguage === Language.QU
+      ? "Hernan Wachuma - Hampi Wachuma"
+      : "هيرنان واتشوما - الطب المقدس"; // Arabic Title
+
+    // Set Text Direction (RTL/LTR)
+    if (currentLanguage === Language.AR) {
+      document.documentElement.dir = 'rtl';
+      document.documentElement.lang = 'ar';
+    } else {
+      document.documentElement.dir = 'ltr';
+      document.documentElement.lang = currentLanguage.toLowerCase();
+    }
+
+  }, [currentLanguage]);
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  return (
+    <div className="min-h-screen flex flex-col font-sans text-gray-900">
+      <Navbar 
+        t={t.nav} 
+        currentLanguage={currentLanguage} 
+        onLanguageChange={setCurrentLanguage} 
+      />
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero t={t.hero} />
+              <Benefits t={t.benefits} />
+            </>
+          } />
+          <Route path="/about" element={
+            <>
+              <About t={t.about} />
+              <Testimonials t={t.testimonials} />
+            </>
+          } />
+          <Route path="/services" element={<Services t={t.services} />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact t={t.contact} footerT={t.footer} />} />
+        </Routes>
+      </main>
+    </div>
+  );
+};
+
+export default App;
+
+=== ./index.html ===
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hernan Wachuma - Sacred Medicine</title>
+    <meta name="description" content="Traditional Andean healing and Wachuma ceremonies in the Sacred Valley." />
+    <!-- Favicon: Cactus Emoji -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌵</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pacha: {
+                earth: '#5E4B35', // Rich Walnut (Textile brown)
+                leaf: '#8A9A6A',  // Andean Sage (Border stitching)
+                sand: '#E6DFD4',  // Alpaca Wool (Light stripes)
+                gold: '#E8B923',  // Inti Yellow (Border accent)
+                stone: '#26201B', // Dark Wool (Dark stripes)
+              }
+            },
+            fontFamily: {
+              serif: ['Caveat', 'cursive'],
+              sans: ['Lato', 'sans-serif'],
+              cinzel: ['Cinzel', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Lato', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Caveat', cursive;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?external=react,react-dom"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-pacha-sand text-pacha-earth antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+=== ./metadata.json ===
+{
+  "name": "Hernan Wachuma - Andean Medicine",
+  "description": "A multilingual React application for Hernan Wachuma, featuring healing ceremonies and Andean wisdom in English, Spanish, and Quechua.",
+  "requestFramePermissions": []
+}
+
+=== ./README.md ===
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
+
+# Run and deploy your AI Studio app
+
+This contains everything you need to run your app locally.
+
+View your app in AI Studio: https://ai.studio/apps/drive/140PbHxJnqjHoocQUUUZtSk8a0s1oaXhr
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
+
+
+=== ./types.ts ===
+export enum Language {
+  EN = 'EN',
+  ES = 'ES',
+  QU = 'QU',
+  AR = 'AR'
+}
+
+export interface NavLink {
+  label: string;
+  href: string;
+}
+
+export interface SectionContent {
+  title: string;
+  subtitle?: string;
+  description: string | string[];
+  cta?: string;
+}
+
+export interface ServiceItem {
+  title: string;
+  description: string;
+  price?: string;
+}
+
+export interface TestimonialItem {
+  name: string;
+  location: string;
+  text: string;
+}
+
+export interface BenefitItem {
+  title: string;
+  description: string;
+}
+
+export interface TranslationData {
+  nav: {
+    home: string;
+    about: string;
+    services: string;
+    gallery: string;
+    contact: string;
+  };
+  hero: {
+    title: string;
+    subtitle: string;
+    cta: string;
+  };
+  benefits: {
+    title: string;
+    subtitle: string;
+    items: BenefitItem[];
+  };
+  about: SectionContent;
+  services: {
+    title: string;
+    items: ServiceItem[];
+  };
+  testimonials: {
+    title: string;
+    items: TestimonialItem[];
+  };
+  contact: {
+    title: string;
+    form: {
+      name: string;
+      email: string;
+      message: string;
+      submit: string;
+    };
+    info: string;
+  };
+  footer: {
+    rights: string;
+  };
+}
+
+=== ./components/Gallery.tsx ===
+import React, { useState, useEffect } from 'react';
+import { X, ZoomIn } from 'lucide-react';
+import { IMAGES } from '../constants';
+
+export const Gallery: React.FC = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Prevent scrolling when modal is open
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedImage]);
+
+  return (
+    <section id="gallery" className="pt-32 pb-20 bg-white">
+       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold text-pacha-earth mb-12 text-center">
+            Gallery
+        </h2>
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+            {IMAGES.gallery.map((src, idx) => (
+                <div 
+                    key={idx} 
+                    className="break-inside-avoid overflow-hidden rounded-lg shadow-lg group cursor-pointer relative"
+                    onClick={() => setSelectedImage(src)}
+                >
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <ZoomIn className="text-white w-8 h-8 opacity-80" />
+                    </div>
+                    <img 
+                        src={src} 
+                        alt={`Gallery ${idx + 1}`} 
+                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+            ))}
+        </div>
+      </div>
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div 
+            className="fixed inset-0 z-[60] bg-black/95 flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300"
+            onClick={() => setSelectedImage(null)}
+        >
+            <button 
+                className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors focus:outline-none"
+                aria-label="Close gallery"
+                onClick={() => setSelectedImage(null)}
+            >
+                <X size={40} />
+            </button>
+            <div className="relative max-w-7xl max-h-[90vh]">
+                <img 
+                    src={selectedImage} 
+                    alt="Full screen view" 
+                    className="max-w-full max-h-[90vh] object-contain rounded-sm shadow-2xl"
+                    onClick={(e) => e.stopPropagation()} 
+                />
+            </div>
+        </div>
+      )}
+    </section>
+  );
+};
+
+=== ./components/Hero.tsx ===
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { TranslationData } from '../types';
+import { IMAGES } from '../constants';
+
+interface HeroProps {
+  t: TranslationData['hero'];
+}
+
+export const Hero: React.FC<HeroProps> = ({ t }) => {
+  return (
+    <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={IMAGES.hero}
+          alt="Sacred Valley Landscape" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-pacha-stone" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto h-full flex flex-col justify-center overflow-y-auto py-20 no-scrollbar">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 font-serif tracking-wide drop-shadow-lg shrink-0">
+          {t.title}
+        </h1>
+        <p className="text-lg md:text-2xl text-gray-200 mb-8 font-light tracking-wider drop-shadow-md shrink-0">
+          {t.subtitle}
+        </p>
+
+        {/* YouTube Video */}
+        <div className="w-full max-w-xl mx-auto mb-10 shrink-0">
+          <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl border border-pacha-gold/30 bg-black/50">
+            <iframe 
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/yfB7mFZmvNs?rel=0" 
+              title="Hernan Wachuma Ceremony"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+        
+        <div className="shrink-0 pb-8">
+          <Link 
+            to="/contact"
+            className="inline-block bg-pacha-gold hover:bg-[#b08d48] text-pacha-stone font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl uppercase tracking-widest text-sm"
+          >
+            {t.cta}
+          </Link>
+        </div>
+      </div>
+      
+      {/* Scroll Indicator - Hidden on small screens/landscape where height is limited */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden lg:block">
+        <svg className="w-6 h-6 text-white/70" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </div>
+    </section>
+  );
+};
+
+=== ./components/Navbar.tsx ===
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Language, TranslationData } from '../types';
+import { LanguageSelector } from './LanguageSelector';
+import { Menu, X } from 'lucide-react';
+import { IMAGES } from '../constants';
+
+interface NavbarProps {
+  t: TranslationData['nav'];
+  currentLanguage: Language;
+  onLanguageChange: (lang: Language) => void;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageChange }) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Trigger shrink effect after scrolling 20px
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { label: t.home, path: '/' },
+    { label: t.about, path: '/about' },
+    { label: t.services, path: '/services' },
+    { label: t.gallery, path: '/gallery' },
+    { label: t.contact, path: '/contact' },
+  ];
+
+  const isActive = (path: string) => {
+    // Determine active state styling
+    if (location.pathname === path) {
+        return 'text-pacha-gold font-bold border-b-2 border-pacha-gold';
+    }
+    return 'text-white/90 hover:text-pacha-gold hover:bg-white/10 rounded-md';
+  };
+
+  // Logic for navbar background: Transparent only on Home at the top, otherwise dark stone
+  const navBackgroundClass = isHome && !isScrolled 
+    ? 'bg-transparent' 
+    : 'bg-pacha-stone/95 shadow-lg backdrop-blur-md';
+
+  // Logic for logo size:
+  // Mobile: Always w-12 h-12
+  // Desktop (md+):
+  //   - Scrolled: w-12 h-12
+  //   - Top: w-32 h-32 (Floating large)
+  const logoContainerClass = isScrolled 
+    ? 'w-12 h-12' 
+    : 'w-12 h-12 md:w-32 md:h-32 md:mt-8';
+
+  return (
+    <nav className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${navBackgroundClass}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? 'h-20' : 'h-24'}`}>
+          
+          {/* Logo - Floating Effect */}
+          <Link 
+            to="/" 
+            className="flex-shrink-0 flex items-center gap-3 cursor-pointer group" 
+            onClick={() => window.scrollTo(0,0)}
+          >
+            <div className={`relative transition-all duration-500 ease-in-out ${logoContainerClass}`}>
+              <img 
+                src={IMAGES.logo} 
+                alt="Hernan Wachuma Logo" 
+                className="w-full h-full object-contain drop-shadow-md"
+              />
+            </div>
+            
+            <div className={`flex flex-col transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-80'}`}>
+              <span className="text-white font-serif font-bold text-xl tracking-wider uppercase group-hover:text-pacha-gold transition-colors shadow-black drop-shadow-md">Hernan</span>
+              <span className="text-pacha-gold text-xs tracking-[0.2em] uppercase drop-shadow-md">Wachuma</span>
+            </div>
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-2">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.path}
+                className={`font-medium text-sm tracking-wide transition-all duration-300 px-4 py-2 uppercase ${isActive(link.path)}`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="pl-4 ml-4 border-l border-white/20">
+               <LanguageSelector currentLanguage={currentLanguage} onLanguageChange={onLanguageChange} />
+            </div>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center gap-4">
+             <LanguageSelector currentLanguage={currentLanguage} onLanguageChange={onLanguageChange} />
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-white hover:text-pacha-gold focus:outline-none transition-colors"
+            >
+              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-pacha-earth/95 backdrop-blur-xl border-t border-pacha-leaf/30 animate-fade-in-down">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.path}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block px-3 py-4 rounded-md text-base font-medium text-center uppercase tracking-widest ${
+                  location.pathname === link.path ? 'bg-pacha-leaf/20 text-pacha-gold' : 'text-gray-200 hover:text-white hover:bg-white/5'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+=== ./components/Contact.tsx ===
+import React from 'react';
+import { TranslationData } from '../types';
+import { Mail, MapPin, Instagram, Facebook } from 'lucide-react';
+
+interface ContactProps {
+  t: TranslationData['contact'];
+  footerT: TranslationData['footer'];
+}
+
+export const Contact: React.FC<ContactProps> = ({ t, footerT }) => {
+  return (
+    <section id="contact" className="bg-pacha-stone text-gray-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <div className="grid lg:grid-cols-2 gap-16">
+          
+          {/* Contact Info */}
+          <div>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-pacha-gold mb-8">
+              {t.title}
+            </h2>
+            <p className="text-xl text-gray-400 mb-12 font-light">
+              {t.info}
+            </p>
+            
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <MapPin className="text-pacha-gold w-6 h-6 mt-1" />
+                <div>
+                  <h4 className="font-bold text-white mb-1">Location</h4>
+                  <p className="text-gray-400">Sacred Valley of the Incas, Cusco, Peru</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <Mail className="text-pacha-gold w-6 h-6 mt-1" />
+                <div>
+                  <h4 className="font-bold text-white mb-1">Email</h4>
+                  <p className="text-gray-400">info@hernan-wachuma.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-12 flex gap-4">
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-pacha-gold hover:text-pacha-earth transition-colors">
+                <Instagram size={20} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-pacha-gold hover:text-pacha-earth transition-colors">
+                <Facebook size={20} />
+              </a>
+            </div>
+          </div>
+
+          {/* Form */}
+          <div className="bg-pacha-earth/30 p-8 rounded-2xl border border-white/10">
+            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <div>
+                <label className="block text-sm font-medium text-pacha-gold mb-2 uppercase tracking-wider">{t.form.name}</label>
+                <input 
+                  type="text" 
+                  className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-pacha-gold transition-colors"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-pacha-gold mb-2 uppercase tracking-wider">{t.form.email}</label>
+                <input 
+                  type="email" 
+                  className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-pacha-gold transition-colors"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-pacha-gold mb-2 uppercase tracking-wider">{t.form.message}</label>
+                <textarea 
+                  rows={4}
+                  className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-pacha-gold transition-colors"
+                ></textarea>
+              </div>
+              <button 
+                type="submit" 
+                className="w-full bg-pacha-leaf hover:bg-green-700 text-white font-bold py-4 rounded-lg transition-colors uppercase tracking-widest"
+              >
+                {t.form.submit}
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+      
+      {/* Footer */}
+      <div className="border-t border-white/5 py-8 text-center text-sm text-gray-500">
+        <p>&copy; {new Date().getFullYear()} Hernan Wachuma. {footerT.rights}</p>
+      </div>
+    </section>
+  );
+};
+
+=== ./components/Services.tsx ===
+import React from 'react';
+import { TranslationData } from '../types';
+import { Sun, Moon, Sparkles } from 'lucide-react';
+
+interface ServicesProps {
+  t: TranslationData['services'];
+}
+
+export const Services: React.FC<ServicesProps> = ({ t }) => {
+  const icons = [Sun, Moon, Sparkles];
+
+  return (
+    <section id="services" className="pt-32 pb-24 bg-pacha-stone text-white relative">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-pacha-gold mb-4">
+            {t.title}
+          </h2>
+          <div className="w-24 h-1 bg-pacha-leaf mx-auto"></div>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {t.items.map((item, index) => {
+            const Icon = icons[index % icons.length];
+            return (
+              <div key={index} className="bg-pacha-earth/50 border border-pacha-leaf/30 p-8 rounded-xl hover:bg-pacha-earth hover:border-pacha-gold transition-all duration-300 group">
+                <div className="w-14 h-14 bg-pacha-stone rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-pacha-gold/20">
+                  <Icon className="text-pacha-gold w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-serif font-bold mb-4 text-gray-100 group-hover:text-pacha-gold transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-gray-400 mb-6 leading-relaxed min-h-[80px]">
+                  {item.description}
+                </p>
+                <div className="flex items-center justify-between border-t border-white/10 pt-4">
+                  <span className="text-pacha-sand font-mono text-sm uppercase tracking-wider">Contribution</span>
+                  <span className="text-xl font-bold text-pacha-gold">{item.price}</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+=== ./components/Testimonials.tsx ===
+import React from 'react';
+import { TranslationData } from '../types';
+import { Quote } from 'lucide-react';
+
+interface TestimonialsProps {
+  t: TranslationData['testimonials'];
+}
+
+export const Testimonials: React.FC<TestimonialsProps> = ({ t }) => {
+  return (
+    <section className="py-24 bg-pacha-leaf/10 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-pacha-gold/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-pacha-earth/10 rounded-full blur-3xl"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold text-pacha-earth mb-16 text-center">
+          {t.title}
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          {t.items.map((item, index) => (
+            <div key={index} className="bg-white p-8 rounded-2xl shadow-xl relative">
+              <Quote className="absolute top-6 left-6 text-pacha-gold/30 w-12 h-12 transform -scale-x-100" />
+              <div className="relative z-10">
+                <p className="text-gray-600 text-lg italic mb-6 leading-relaxed">
+                  "{item.text}"
+                </p>
+                <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                        <img src={`https://picsum.photos/seed/user${index}/100/100`} alt="User" className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                        <h4 className="font-bold text-pacha-earth font-serif">{item.name}</h4>
+                        <span className="text-sm text-pacha-leaf uppercase tracking-wider">{item.location}</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+=== ./components/LanguageSelector.tsx ===
+import React, { useState } from 'react';
+import { Language } from '../types';
+import { Globe } from 'lucide-react';
+
+interface LanguageSelectorProps {
+  currentLanguage: Language;
+  onLanguageChange: (lang: Language) => void;
+}
+
+export const LanguageSelector: React.FC<LanguageSelectorProps> = ({ currentLanguage, onLanguageChange }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => setIsOpen(!isOpen);
+
+  const handleSelect = (lang: Language) => {
+    onLanguageChange(lang);
+    setIsOpen(false);
+  };
+
+  return (
+    <div className="relative">
+      <button 
+        onClick={toggleDropdown}
+        className="flex items-center gap-2 px-3 py-2 text-white hover:text-pacha-gold transition-colors focus:outline-none"
+        aria-label="Select Language"
+      >
+        <Globe size={20} />
+        <span className="font-bold">{currentLanguage}</span>
+      </button>
+
+      {isOpen && (
+        <div className="absolute right-0 mt-2 w-32 bg-pacha-earth rounded-md shadow-lg py-1 z-50 border border-pacha-leaf">
+          {Object.values(Language).map((lang) => (
+            <button
+              key={lang}
+              onClick={() => handleSelect(lang)}
+              className={`block w-full text-left px-4 py-2 text-sm hover:bg-pacha-leaf hover:text-white transition-colors ${
+                currentLanguage === lang ? 'bg-pacha-leaf/50 text-white font-bold' : 'text-gray-200'
+              }`}
+            >
+              {lang === Language.EN && 'English'}
+              {lang === Language.ES && 'Español'}
+              {lang === Language.QU && 'Runasimi'}
+              {lang === Language.AR && 'العربية'}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+=== ./components/Benefits.tsx ===
+import React from 'react';
+import { TranslationData } from '../types';
+import { Heart, Leaf, Eye } from 'lucide-react';
+
+interface BenefitsProps {
+  t: TranslationData['benefits'];
+}
+
+export const Benefits: React.FC<BenefitsProps> = ({ t }) => {
+  const icons = [Heart, Leaf, Eye];
+
+  return (
+    <section className="py-20 bg-pacha-sand/30 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <span className="text-pacha-leaf font-bold tracking-widest uppercase text-sm mb-2 block">
+            {t.subtitle}
+          </span>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-pacha-earth">
+            {t.title}
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-10">
+          {t.items.map((item, index) => {
+            const Icon = icons[index % icons.length];
+            return (
+              <div key={index} className="flex flex-col items-center text-center group">
+                <div className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-6 transform group-hover:-translate-y-2 transition-transform duration-300 border border-pacha-gold/20">
+                  <Icon className="text-pacha-earth w-10 h-10 group-hover:text-pacha-gold transition-colors" />
+                </div>
+                <h3 className="text-xl font-serif font-bold text-pacha-stone mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed max-w-xs">
+                  {item.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+=== ./components/About.tsx ===
+import React from 'react';
+import { TranslationData } from '../types';
+import { IMAGES } from '../constants';
+
+interface AboutProps {
+  t: TranslationData['about'];
+}
+
+export const About: React.FC<AboutProps> = ({ t }) => {
+  return (
+    <section id="about" className="pt-32 pb-20 bg-pacha-sand/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+          
+          {/* Image Grid */}
+          <div className="relative mb-12 lg:mb-0">
+            <div className="absolute inset-0 bg-pacha-gold/20 transform rotate-3 rounded-2xl"></div>
+            <img 
+              src={IMAGES.about}
+              alt="Hernan during ceremony" 
+              className="relative rounded-2xl shadow-2xl w-full h-auto object-cover transform -rotate-3 transition-transform hover:rotate-0 duration-500"
+            />
+          </div>
+
+          {/* Text Content */}
+          <div>
+            <span className="text-pacha-leaf font-bold tracking-widest uppercase text-sm mb-2 block">
+              {t.subtitle}
+            </span>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-pacha-earth mb-8">
+              {t.title}
+            </h2>
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed font-light">
+              {(Array.isArray(t.description) ? t.description : [t.description]).map((paragraph, idx) => (
+                <p key={idx}>{paragraph}</p>
+              ))}
+            </div>
+            
+            <div className="mt-10 flex items-center gap-4">
+              <div className="h-px bg-pacha-leaf/30 flex-1"></div>
+              <div className="text-pacha-gold text-2xl">✤</div>
+              <div className="h-px bg-pacha-leaf/30 flex-1"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+=== ./package.json ===
+{
+  "name": "hernan-wachuma---andean-medicine",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide-react": "^0.555.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "6.22.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
+
+
+=== ./constants.ts ===
+import { Language, TranslationData } from './types';
+
+// SVG Data URI for the Cactus Logo
+const LOGO_SVG = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRThCOTIzIiBzdHJva2Utd2lkdGg9IjIiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNSAyNSkiPjxwYXRoIGQ9Ik0yNSA1MCBMMjUgMTAgQzI1IDUgMzUgNSAzNSAxMCBMMzUgNTAgTTI1IDMwIEwxNSAzMCBDNSAzMCA1IDE1IDE1IDE1IEwyNSAyMCBNMzUgMzAgTDQ1IDMwIEM1NSAzMCA1NSAxNSA0NSAxNSBMMzUgMjAiIGZpbGw9IiM4QTlBNkEiIHN0cm9rZT0iIzI2MjAxQiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L2c+PC9zdmc+`;
+
+export const IMAGES = {
+  logo: "/img/logo.svg",
+  hero: "/img/hero.jpg",
+  about: "/img/about.jpg",
+  gallery: [
+    "/img/gallery/1.jpg",
+    "/img/gallery/2.jpg",
+    "/img/gallery/3.jpg",
+    "/img/gallery/4.jpg",
+    "/img/gallery/5.jpg",
+    "/img/gallery/6.jpg",
+    "/img/gallery/7.jpg",
+    "/img/gallery/8.jpg",
+    "/img/gallery/9.jpg",
+    "/img/gallery/10.jpg",
+    "/img/gallery/11.jpg",
+    "/img/gallery/12.jpg",
+    "/img/gallery/13.jpg",
+    "/img/gallery/14.jpg",
+    "/img/gallery/15.jpg",
+    "/img/gallery/16.jpg",
+    "/img/gallery/17.jpg",
+    "/img/gallery/18.jpg",
+  ]
+};
+
+export const TRANSLATIONS: Record<Language, TranslationData> = {
+  [Language.EN]: {
+    nav: {
+      home: "Home",
+      about: "About Hernan",
+      services: "Ceremonies",
+      gallery: "Gallery",
+      contact: "Contact"
+    },
+    hero: {
+      title: "Sacred Medicine of the Andes",
+      subtitle: "Reconnect with Pachamama through traditional Wachuma ceremonies in the Sacred Valley.",
+      cta: "Book a Ceremony"
+    },
+    benefits: {
+      title: "The Power of Wachuma",
+      subtitle: "Why we journey with the Sacred Cactus",
+      items: [
+        {
+          title: "Emotional Healing",
+          description: "Release past traumas and emotional blockages stored in the body, finding forgiveness and peace."
+        },
+        {
+          title: "Connection to Nature",
+          description: "Experience a profound unity with the Earth, the elements, and the living spirit of the Andes."
+        },
+        {
+          title: "Clarity & Vision",
+          description: "Quiet the mind to receive guidance, purpose, and a renewed perspective on your life path."
+        }
+      ]
+    },
+    about: {
+      title: "Meet Hernan",
+      subtitle: "Guardian of the Sacred Cactus",
+      description: [
+        "Hernan has dedicated his life to the study and preservation of Andean ancestral wisdom. Born in the heart of the Andes, he carries the lineage of his ancestors, sharing the healing power of the Wachuma (San Pedro) cactus.",
+        "His ceremonies are not just rituals; they are deep journeys into the self, guided by the spirits of the mountains (Apus) and Mother Earth (Pachamama). With over 20 years of experience, Hernan provides a safe, authentic, and transformative space."
+      ]
+    },
+    services: {
+      title: "Our Offerings",
+      items: [
+        {
+          title: "Day Ceremony",
+          description: "A full day immersion in nature, connecting with the medicine under the sun. Includes cleansing and integration.",
+          price: "$150"
+        },
+        {
+          title: "Full Moon Retreat",
+          description: "Experience the magic of Wachuma under the light of the full moon. A night of fire, music, and deep healing.",
+          price: "$200"
+        },
+        {
+          title: "Private Healing",
+          description: "One-on-one sessions tailored to your specific spiritual and emotional needs. Deep blockage removal.",
+          price: "Inquire"
+        }
+      ]
+    },
+    testimonials: {
+      title: "Voices from the Heart",
+      items: [
+        {
+          name: "Sarah J.",
+          location: "USA",
+          text: "My experience with Hernan changed my life. I felt a connection to the earth I had never felt before."
+        },
+        {
+          name: "Marc D.",
+          location: "France",
+          text: "Authentic, powerful, and safe. Hernan is a true master of the medicine."
+        }
+      ]
+    },
+    contact: {
+      title: "Get in Touch",
+      form: {
+        name: "Your Name",
+        email: "Your Email",
+        message: "Your Message",
+        submit: "Send Message"
+      },
+      info: "We are located in the heart of the Sacred Valley, near Calca, Cusco."
+    },
+    footer: {
+      rights: "All rights reserved."
+    }
+  },
+  [Language.ES]: {
+    nav: {
+      home: "Inicio",
+      about: "Sobre Hernan",
+      services: "Ceremonias",
+      gallery: "Galería",
+      contact: "Contacto"
+    },
+    hero: {
+      title: "Medicina Sagrada de los Andes",
+      subtitle: "Reconecta con la Pachamama a través de ceremonias tradicionales de Wachuma en el Valle Sagrado.",
+      cta: "Reserva una Ceremonia"
+    },
+    benefits: {
+      title: "El Poder del Wachuma",
+      subtitle: "Por qué viajamos con el Cactus Sagrado",
+      items: [
+        {
+          title: "Sanación Emocional",
+          description: "Libera traumas pasados y bloqueos emocionales almacenados en el cuerpo, encontrando perdón y paz."
+        },
+        {
+          title: "Conexión con la Naturaleza",
+          description: "Experimenta una profunda unidad con la Tierra, los elementos y el espíritu vivo de los Andes."
+        },
+        {
+          title: "Claridad y Visión",
+          description: "Aquieta la mente para recibir guía, propósito y una perspectiva renovada sobre tu camino de vida."
+        }
+      ]
+    },
+    about: {
+      title: "Conoce a Hernan",
+      subtitle: "Guardián del Cactus Sagrado",
+      description: [
+        "Hernan ha dedicado su vida al estudio y preservación de la sabiduría ancestral andina. Nacido en el corazón de los Andes, lleva el linaje de sus antepasados, compartiendo el poder curativo del cactus Wachuma (San Pedro).",
+        "Sus ceremonias no son solo rituales; son viajes profundos hacia el ser, guiados por los espíritus de las montañas (Apus) y la Madre Tierra (Pachamama). Con más de 20 años de experiencia, Hernan brinda un espacio seguro, auténtico y transformador."
+      ]
+    },
+    services: {
+      title: "Nuestros Servicios",
+      items: [
+        {
+          title: "Ceremonia de Día",
+          description: "Una inmersión de día completo en la naturaleza, conectando con la medicina bajo el sol. Incluye limpieza e integración.",
+          price: "$150"
+        },
+        {
+          title: "Retiro de Luna Llena",
+          description: "Experimenta la magia del Wachuma bajo la luz de la luna llena. Una noche de fuego, música y sanación profunda.",
+          price: "$200"
+        },
+        {
+          title: "Sanación Privada",
+          description: "Sesiones individuales adaptadas a tus necesidades espirituales y emocionales específicas. Eliminación de bloqueos profundos.",
+          price: "Consultar"
+        }
+      ]
+    },
+    testimonials: {
+      title: "Voces del Corazón",
+      items: [
+        {
+          name: "Sarah J.",
+          location: "EE.UU.",
+          text: "Mi experiencia con Hernan cambió mi vida. Sentí una conexión con la tierra que nunca antes había sentido."
+        },
+        {
+          name: "Marc D.",
+          location: "Francia",
+          text: "Auténtico, poderoso y seguro. Hernan es un verdadero maestro de la medicina."
+        }
+      ]
+    },
+    contact: {
+      title: "Contáctanos",
+      form: {
+        name: "Tu Nombre",
+        email: "Tu Correo",
+        message: "Tu Mensaje",
+        submit: "Enviar Mensaje"
+      },
+      info: "Estamos ubicados en el corazón del Valle Sagrado, cerca de Calca, Cusco."
+    },
+    footer: {
+      rights: "Todos los derechos reservados."
+    }
+  },
+  [Language.QU]: {
+    nav: {
+      home: "Qallariy",
+      about: "Hernanmanta",
+      services: "Ruwaykuna",
+      gallery: "Rikch'akuna",
+      contact: "Willanakuy"
+    },
+    hero: {
+      title: "Andespi Hampi Wachuma",
+      subtitle: "Pachamamawan tinkuy, ñawpa Wachuma hampiywan Valle Sagradopi.",
+      cta: "Hampiyta mañakuy"
+    },
+    benefits: {
+      title: "Wachumaq Kallpan",
+      subtitle: "Imarayku Hampiwan Purinchik",
+      items: [
+        {
+          title: "Sunqu Hampiy",
+          description: "Ñawpa nanaykunata wisch'uspa, sunqu tiyaykuyta tarinki. Pampachakuywan thak kawsaywan."
+        },
+        {
+          title: "Pachamamawan Tinkuy",
+          description: "Hallp'awan, wayrawan, yakuwan, ninawan hukllachakuy. Apukunaq kallpanta riqsiy."
+        },
+        {
+          title: "Yuyay Ch'uya",
+          description: "Umata ch'uyanchaspa, allin ñanta rikunki. Musuq kawsayta qallarinaykipaq."
+        }
+      ]
+    },
+    about: {
+      title: "Hernanwan riqsinakuy",
+      subtitle: "Wachumaq pakaqnin",
+      description: [
+        "Hernanqa tukuy kawsayninta churarqan Andes yachaykunata waqaychayman. Andes sunqunpi paqarisqa, ñawpa taytankunaq yachayninta apamun, Wachuma (San Pedro) hampiyta runakunaman qaraspa.",
+        "Paypa ruwayninkunaqa manan haywarikuyllachu; ukhunchikman puririymi, Apukunaq Pachamamaq pusasqan. 20 wata masñan kaypi llank'an, Hernanqa chiqaq, qhali, allin tinkuyta qusunki."
+      ]
+    },
+    services: {
+      title: "Ruwaykuna",
+      items: [
+        {
+          title: "P'unchay Ceremonia",
+          description: "Tukuy p'unchaw pachamamawan tinkuy, inti k'anchaypi. Ch'uyanchakuywan ima.",
+          price: "$150"
+        },
+        {
+          title: "Killa Hunt'a",
+          description: "Wachumaq kallpanta riqsiy killa k'anchaypi. Nina, taki, ukhu hampikuy tuta.",
+          price: "$200"
+        },
+        {
+          title: "Sapalla Hampikuy",
+          description: "Sapallaykipar kikiykipaq hampiy. Llasa q'epikunata wisch'unapaq.",
+          price: "Tapukuy"
+        }
+      ]
+    },
+    testimonials: {
+      title: "Sunqumanta Rimaykuna",
+      items: [
+        {
+          name: "Sarah J.",
+          location: "USA",
+          text: "Hernanwan tinkusqay kawsayniyta tikrarqan. Pachamamawan tinkurqani manan hayk'aq hina."
+        },
+        {
+          name: "Marc D.",
+          location: "Francia",
+          text: "Chiqaq, kallpasapa. Hernanqa hatun yachaqmi."
+        }
+      ]
+    },
+    contact: {
+      title: "Willanakusun",
+      form: {
+        name: "Suti",
+        email: "Chaski",
+        message: "Willakuy",
+        submit: "Apachiy"
+      },
+      info: "Valle Sagrado sunqunpi tarikuyku, Calca, Cusco qayllapi."
+    },
+    footer: {
+      rights: "Tukuy derechokuna waqaychasqa."
+    }
+  },
+  [Language.AR]: {
+    nav: {
+      home: "الرئيسية",
+      about: "عن هيرنان",
+      services: "الاحتفالات",
+      gallery: "المعرض",
+      contact: "اتصل بنا"
+    },
+    hero: {
+      title: "الطب المقدس للأنديز",
+      subtitle: "أعد الاتصال بـ باتشاماما من خلال احتفالات واتشوما التقليدية في الوادي المقدس.",
+      cta: "احجز احتفالاً"
+    },
+    benefits: {
+      title: "قوة الواتشوما",
+      subtitle: "لماذا نخوض الرحلة مع الصبار المقدس",
+      items: [
+        {
+          title: "الشفاء العاطفي",
+          description: "تحرير الصدمات الماضية والانسدادات العاطفية المخزنة في الجسد، وإيجاد الغفران والسلام."
+        },
+        {
+          title: "الاتصال بالطبيعة",
+          description: "تجربة وحدة عميقة مع الأرض، والعناصر، والروح الحية للأنديز."
+        },
+        {
+          title: "الوضوح والرؤية",
+          description: "تهدئة العقل لتلقي التوجيه، والهدف، ومنظور متجدد لمسار حياتك."
+        }
+      ]
+    },
+    about: {
+      title: "تعرف على هيرنان",
+      subtitle: "حارس الصبار المقدس",
+      description: [
+        "كرس هيرنان حياته لدراسة وحفظ حكمة الأنديز القديمة. ولد في قلب الأنديز، ويحمل سلالة أسلافه، ويشارك القوة الشفائية لصبار واتشوما (سان بيدرو).",
+        "احتفالاته ليست مجرد طقوس؛ إنها رحلات عميقة داخل الذات، تسترشد بأرواح الجبال (آبوس) والأرض الأم (باتشاماما). مع أكثر من 20 عامًا من الخبرة، يوفر هيرنان مساحة آمنة وحقيقية وتحويلية."
+      ]
+    },
+    services: {
+      title: "خدماتنا",
+      items: [
+        {
+          title: "احتفال نهاري",
+          description: "انغماس كامل ليوم واحد في الطبيعة، والتواصل مع الطب تحت الشمس. يشمل التطهير والتكامل.",
+          price: "$150"
+        },
+        {
+          title: "خلوة البدر",
+          description: "جرب سحر واتشوما تحت ضوء البدر. ليلة من النار والموسيقى والشفاء العميق.",
+          price: "$200"
+        },
+        {
+          title: "شفاء خاص",
+          description: "جلسات فردية مصممة لاحتياجاتك الروحية والعاطفية المحددة. إزالة الانسداد العميق.",
+          price: "استفسر"
+        }
+      ]
+    },
+    testimonials: {
+      title: "أصوات من القلب",
+      items: [
+        {
+          name: "سارة ج.",
+          location: "الولايات المتحدة",
+          text: "تجربتي مع هيرنان غيرت حياتي. شعرت باتصال بالأرض لم أشعر به من قبل."
+        },
+        {
+          name: "مارك د.",
+          location: "فرنسا",
+          text: "أصلي، قوي، وآمن. هيرنان سيد حقيقي في الطب."
+        }
+      ]
+    },
+    contact: {
+      title: "تواصل معنا",
+      form: {
+        name: "الاسم",
+        email: "البريد الإلكتروني",
+        message: "رسالتك",
+        submit: "إرسال الرسالة"
+      },
+      info: "نحن موجودون في قلب الوادي المقدس، بالقرب من كالكا، كوسكو."
+    },
+    footer: {
+      rights: "جميع الحقوق محفوظة."
+    }
+  }
+};
+
+=== ./tsconfig.json ===
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "module": "ESNext",
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "skipLibCheck": true,
+    "types": [
+      "node"
+    ],
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  }
+}
+
+=== ./vite.config.ts ===
+import path from 'path';
+import { defineConfig, loadEnv } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig(({ mode }) => {
+    const env = loadEnv(mode, '.', '');
+    return {
+      server: {
+        port: 3000,
+        host: '0.0.0.0',
+      },
+      plugins: [react()],
+      define: {
+        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+      },
+      resolve: {
+        alias: {
+          '@': path.resolve(__dirname, '.'),
+        }
+      }
+    };
+});
+
+
+=== ./flat.sh ===
+#!/bin/bash
+
+# Output file for flattened project
+OUTPUT_FILE="${1:-flattened_project.txt}"
+
+# Check if this is a Git repository
+if [ ! -d .git ]; then
+  echo "Error: This doesn't seem to be a Git repository (no .git directory found)."
+  exit 1
+fi
+
+# Clear output file
+> "$OUTPUT_FILE"
+
+# Counters for summary
+INCLUDED_COUNT=0
+EXCLUDED_COUNT=0
+
+# Image extensions to exclude
+IMAGE_EXTENSIONS="\.png$|\.jpg$|\.jpeg$|\.gif$|\.bmp$|\.webp$|\.ico$|\.svg$"
+
+# Function to check if a file is ignored by .gitignore
+is_ignored() {
+  local path="$1"
+  path="${path#./}"
+  git check-ignore -q "$path" 2>/dev/null && return 0
+  local parent="$path"
+  while [ "$parent" != "." ] && [ "$parent" != "/" ]; do
+    parent=$(dirname "$parent")
+    git check-ignore -q "$parent" 2>/dev/null && return 0
+  done
+  return 1
+}
+
+# Function to check if a file is text-based
+is_text_file() {
+  local file="$1"
+  local ext="${file##*.}"
+  case "$ext" in
+    ts|tsx|js|jsx|css|json|html|md|txt|sh|yml|yaml)
+      return 0
+      ;;
+    *)
+      return 1
+      ;;
+  esac
+}
+
+# Find and process files
+find . -type f -not -path '*/node_modules/*' -not -path '*/.git/*' | while read -r file; do
+  # Skip output file, lock files, and Firebase cache
+  if [ "$file" = "./$OUTPUT_FILE" ] ||
+     [[ "$file" == *"/bun.lockb" ]] ||
+     [[ "$file" == *"/package-lock.json" ]] ||
+     [[ "$file" == *"/.firebase/"* ]]; then
+    ((EXCLUDED_COUNT++))
+    continue
+  fi
+
+  # Skip image files
+  if echo "$file" | grep -E -q "$IMAGE_EXTENSIONS"; then
+    ((EXCLUDED_COUNT++))
+    continue
+  fi
+
+  # Skip ignored files
+  if is_ignored "$file"; then
+    ((EXCLUDED_COUNT++))
+    continue
+  fi
+
+  # Include text-based files
+  if is_text_file "$file"; then
+    echo "=== $file ===" >> "$OUTPUT_FILE"
+    cat "$file" >> "$OUTPUT_FILE"
+    echo -e "\n" >> "$OUTPUT_FILE"
+    ((INCLUDED_COUNT++))
+  else
+    ((EXCLUDED_COUNT++))
+  fi
+done
+
+# Print summary
+echo "Flattened project written to: $OUTPUT_FILE"
+echo "Summary: Included $INCLUDED_COUNT files, excluded $EXCLUDED_COUNT files"#!/bin/bash
+
+# Output file for flattened project
+OUTPUT_FILE="${1:-flattened_project.txt}"
+
+# Check if this is a Git repository
+if [ ! -d .git ]; then
+  echo "Error: This doesn't seem to be a Git repository (no .git directory found)."
+  exit 1
+fi
+
+# Clear output file
+> "$OUTPUT_FILE"
+
+# Counters for summary
+INCLUDED_COUNT=0
+EXCLUDED_COUNT=0
+
+# Image extensions to exclude
+IMAGE_EXTENSIONS="\.png$|\.jpg$|\.jpeg$|\.gif$|\.bmp$|\.webp$|\.ico$|\.svg$"
+
+# Function to check if a file is ignored by .gitignore
+is_ignored() {
+  local path="$1"
+  path="${path#./}"
+  git check-ignore -q "$path" 2>/dev/null && return 0
+  local parent="$path"
+  while [ "$parent" != "." ] && [ "$parent" != "/" ]; do
+    parent=$(dirname "$parent")
+    git check-ignore -q "$parent" 2>/dev/null && return 0
+  done
+  return 1
+}
+
+# Function to check if a file is text-based
+is_text_file() {
+  local file="$1"
+  local ext="${file##*.}"
+  case "$ext" in
+    ts|tsx|js|jsx|css|json|html|md|txt|sh|yml|yaml)
+      return 0
+      ;;
+    *)
+      return 1
+      ;;
+  esac
+}
+
+# Find and process files
+find . -type f -not -path '*/node_modules/*' -not -path '*/.git/*' | while read -r file; do
+  # Skip output file, lock files, and Firebase cache
+  if [ "$file" = "./$OUTPUT_FILE" ] ||
+     [[ "$file" == *"/bun.lockb" ]] ||
+     [[ "$file" == *"/package-lock.json" ]] ||
+     [[ "$file" == *"/.firebase/"* ]]; then
+    ((EXCLUDED_COUNT++))
+    continue
+  fi
+
+  # Skip image files
+  if echo "$file" | grep -E -q "$IMAGE_EXTENSIONS"; then
+    ((EXCLUDED_COUNT++))
+    continue
+  fi
+
+  # Skip ignored files
+  if is_ignored "$file"; then
+    ((EXCLUDED_COUNT++))
+    continue
+  fi
+
+  # Include text-based files
+  if is_text_file "$file"; then
+    echo "=== $file ===" >> "$OUTPUT_FILE"
+    cat "$file" >> "$OUTPUT_FILE"
+    echo -e "\n" >> "$OUTPUT_FILE"
+    ((INCLUDED_COUNT++))
+  else
+    ((EXCLUDED_COUNT++))
+  fi
+done
+
+# Print summary
+echo "Flattened project written to: $OUTPUT_FILE"
+echo "Summary: Included $INCLUDED_COUNT files, excluded $EXCLUDED_COUNT files"
+
