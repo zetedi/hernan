@@ -23,6 +23,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.cache
 
 flattened_project.txt
 flattened_project.txt.debug
