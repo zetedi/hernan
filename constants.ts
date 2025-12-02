@@ -1,8 +1,5 @@
 import { Language, TranslationData } from './types';
 
-// SVG Data URI for the Cactus Logo
-const LOGO_SVG = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRThCOTIzIiBzdHJva2Utd2lkdGg9IjIiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNSAyNSkiPjxwYXRoIGQ9Ik0yNSA1MCBMMjUgMTAgQzI1IDUgMzUgNSAzNSAxMCBMMzUgNTAgTTI1IDMwIEwxNSAzMCBDNSAzMCA1IDE1IDE1IDE1IEwyNSAyMCBNMzUgMzAgTDQ1IDMwIEM1NSAzMCA1NSAxNSA0NSAxNSBMMzUgMjAiIGZpbGw9IiM4QTlBNkEiIHN0cm9rZT0iIzI2MjAxQiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L2c+PC9zdmc+`;
-
 export const IMAGES = {
   logo: "/img/logo.svg",
   hero: "/img/hero.jpg",
