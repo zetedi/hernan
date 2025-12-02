@@ -54,7 +54,7 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
       
       {/* Scroll Indicator - Hidden on small screens/landscape where height is limited */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden lg:block">
-        <img src="/img/hero.svg" alt="Scroll down" className="w-6 h-6 text-white/70 opacity-70" />
+        <img src="/hero.svg" alt="Scroll down" className="w-6 h-6 text-white/70 opacity-70" />
       </div>
     </section>
   );
