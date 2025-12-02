@@ -21,7 +21,7 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto h-full flex flex-col justify-center overflow-y-auto py-20 no-scrollbar">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto h-full flex flex-col justify-start md:justify-center overflow-y-auto pt-36 pb-20 md:py-20 no-scrollbar">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 font-serif tracking-wide drop-shadow-lg shrink-0">
           {t.title}
         </h1>
@@ -54,9 +54,7 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
       
       {/* Scroll Indicator - Hidden on small screens/landscape where height is limited */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden lg:block">
-        <svg className="w-6 h-6 text-white/70" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
+        <img src="/img/hero.svg" alt="Scroll down" className="w-6 h-6 text-white/70 opacity-70" />
       </div>
     </section>
   );
