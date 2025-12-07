@@ -3,7 +3,9 @@ export enum Language {
   ES = 'ES',
   QU = 'QU',
   AR = 'AR',
-  JA = 'JA'
+  JA = 'JA',
+  HU = 'HU',
+  SA = 'SA'
 }
 
 export interface NavLink {

@@ -41,7 +41,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       subtitle: "Reconnect with Pachamama through traditional Wachuma ceremonies in the Sacred Valley.",
       cta: "Book a Ceremony",
       ausangateTeaser: {
-        label: "Exclusive",
+        label: "Inclusive",
         title: "Ausangate Journey"
       }
     },
@@ -181,7 +181,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       subtitle: "Reconecta con la Pachamama a través de ceremonias tradicionales de Wachuma en el Valle Sagrado.",
       cta: "Reserva una Ceremonia",
       ausangateTeaser: {
-        label: "Exclusivo",
+        label: "Inclusivo",
         title: "Viaje al Ausangate"
       }
     },
@@ -321,7 +321,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       subtitle: "Pachamamawan tinkuy, ñawpa Wachuma hampiywan Valle Sagradopi.",
       cta: "Hampiyta mañakuy",
       ausangateTeaser: {
-        label: "Sapaq",
+        label: "Llapanpaq",
         title: "Apu Ausangate Puririy"
       }
     },
@@ -461,7 +461,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       subtitle: "أعد الاتصال بـ باتشاماما من خلال احتفالات واتشوما التقليدية في الوادي المقدس.",
       cta: "احجز احتفالاً",
       ausangateTeaser: {
-        label: "حصري",
+        label: "شامل",
         title: "رحلة أوسانجاتي"
       }
     },
@@ -601,7 +601,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       subtitle: "聖なる谷で伝統的なワチュマセレモニーを通じてパチャママと再びつながりましょう。",
       cta: "セレモニーを予約する",
       ausangateTeaser: {
-        label: "限定",
+        label: "包括的",
         title: "アウサンガテへの旅"
       }
     },
@@ -726,6 +726,286 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
     },
     footer: {
       rights: "全著作権所有。"
+    }
+  },
+  [Language.HU]: {
+    nav: {
+      home: "Kezdőlap",
+      about: "Hernanról",
+      services: "Szertartások",
+      gallery: "Galéria",
+      contact: "Kapcsolat"
+    },
+    hero: {
+      title: "Az Andok Szent Gyógyító Ereje",
+      subtitle: "Kapcsolódj újra Pacha Mamához hagyományos Wachuma szertartásokon keresztül a Szent Völgyben.",
+      cta: "Foglalj Szertartást",
+      ausangateTeaser: {
+        label: "Inkluzív",
+        title: "Ausangate Utazás"
+      }
+    },
+    benefits: {
+      title: "A Wachuma Ereje",
+      subtitle: "Miért utazunk a Szent Kaktusszal",
+      items: [
+        {
+          title: "Érzelmi Gyógyulás",
+          description: "A testben tárolt múltbeli traumák és érzelmi blokkok elengedése, a megbocsátás és a béke megtalálása."
+        },
+        {
+          title: "Kapcsolat a Természettel",
+          description: "Tapasztald meg a mély egységet a Földdel, az elemekkel és az Andok élő szellemével."
+        },
+        {
+          title: "Tisztánlátás és Vízió",
+          description: "Csendesítsd le az elmét, hogy útmutatást, célt és megújult perspektívát kaphass életutadra."
+        }
+      ]
+    },
+    about: {
+      title: "Ismerd meg Hernant",
+      subtitle: "A Szent Kaktusz Őrzője",
+      description: [
+        "Hernan életét az andoki ősi bölcsesség tanulmányozásának és megőrzésének szentelte. Az Andok szívében született, ősei vonalát viszi tovább, megosztva a Wachuma (San Pedro) kaktusz gyógyító erejét.",
+        "Szertartásai nem csupán rituálék; mély utazások az önvalóba, a hegyek szellemei (Apuk) és a Földanya (Pacha Mama) vezetésével. Több mint 20 éves tapasztalattal Hernan biztonságos, hiteles és átalakító teret biztosít."
+      ]
+    },
+    services: {
+      title: "Ajánlataink",
+      items: [
+        {
+          title: "Nappali Szertartás",
+          description: "Egész napos elmerülés a természetben, kapcsolódás a gyógyító erővel a nap alatt. Tisztítást és integrációt tartalmaz.",
+          price: "$150"
+        },
+        {
+          title: "Telihold Elvonulás",
+          description: "Tapasztald meg a Wachuma varázsát a telihold fénye alatt. Tűz, zene és mély gyógyulás éjszakája.",
+          price: "$200"
+        },
+        {
+          title: "Privát Gyógyítás",
+          description: "Személyre szabott egyéni ülések a te specifikus spirituális és érzelmi igényeidhez. Mély blokkok oldása.",
+          price: "Érdeklődj"
+        }
+      ],
+      ausangateCta: {
+        title: "Különleges Elvonulás: Ausangate Expedíció",
+        description: "Csatlakozz hozzánk egy 7 napos átalakító utazásra az Ausangate szent hegyéhez. Hőforrások, túrázás és mély gyógyító munka.",
+        button: "Útiterv Megtekintése"
+      }
+    },
+    ausangate: {
+      title: "Ausangate Szent Utazás",
+      subtitle: "7 Nap Gyógyulás a Magas Andokban",
+      description: "Egy mély expedíció, amely egyesíti Pacchanta gyógyító vizeit, Apu Ausangate fenséges jelenlétét, valamint a Wachuma és a Temazcal átalakító erejét.",
+      cta: "Helyfoglalás",
+      itinerary: [
+        {
+          day: "1. Nap",
+          title: "Érkezés és Megtisztulás",
+          description: "Utazás Pacchantába. Lazítás a természetes termálvízben a test megtisztítására, majd túra az Ausangate felé a szándékok megfogalmazására."
+        },
+        {
+          day: "2. Nap",
+          title: "Első Wachuma Szertartás",
+          description: "A szív megnyitása az Apu felé. Nappali szertartás a hegy szellemével és a hatalmas andoki éggel való kapcsolódáshoz."
+        },
+        {
+          day: "3. Nap",
+          title: "Temazcal (Izzasztókunyhó)",
+          description: "Hagyományos gőzfürdő rituálé, amely a Földanya méhét jelképezi. Fizikai és spirituális méregtelenítés."
+        },
+        {
+          day: "4. Nap",
+          title: "Második Wachuma Szertartás",
+          description: "Az utazás elmélyítése. Belső blokkok oldása és a tudat tágítása a magaslatok csendjében."
+        },
+        {
+          day: "5. Nap",
+          title: "Temazcal",
+          description: "Egy második izzasztókunyhó szertartás a kapott energiák leföldelésére és a lélek további tisztítására."
+        },
+        {
+          day: "6. Nap",
+          title: "Harmadik Wachuma és Integráció",
+          description: "Az utolsó gyógyító szertartás. Fókuszban az integráció, a hála és a hét során kapott gyógyulás lezárása."
+        },
+        {
+          day: "7. Nap",
+          title: "Visszautazás",
+          description: "Túra le a hegyről, utolsó fürdőzés a Pacchanta hőforrásokban, majd visszautazás Pisacba."
+        }
+      ]
+    },
+    testimonials: {
+      title: "Szívből Jövő Hangok",
+      items: [
+        {
+          name: "Sarah J.",
+          location: "USA",
+          text: "A Hernannal szerzett tapasztalatom megváltoztatta az életemet. Olyan kapcsolatot éreztem a földdel, amit még soha."
+        },
+        {
+          name: "Marc D.",
+          location: "Franciaország",
+          text: "Hiteles, erőteljes és biztonságos. Hernan a gyógyító növények igazi mestere."
+        }
+      ]
+    },
+    contact: {
+      title: "Lépj Kapcsolatba Velünk",
+      form: {
+        name: "Neved",
+        email: "E-mail Címed",
+        message: "Üzeneted",
+        submit: "Üzenet Küldése"
+      },
+      info: "A Szent Völgy szívében, Calca közelében, Cuscóban találhatsz meg minket."
+    },
+    footer: {
+      rights: "Minden jog fenntartva."
+    }
+  },
+  [Language.SA]: {
+    nav: {
+      home: "गृहम् (Home)",
+      about: "परिचय (About)",
+      services: "संस्काराः (Ceremonies)",
+      gallery: "चित्रशाला (Gallery)",
+      contact: "संपर्कः (Contact)"
+    },
+    hero: {
+      title: "अण्डीज पर्वतस्य पवित्रा ओषधिः",
+      subtitle: "पवित्र उपत्यकायां पारम्परिक वाचुमा संस्कारैः सह पचममया सह पुनः संयोगं कुरुत।",
+      cta: "संस्कारस्य आरक्षणं कुरुत",
+      ausangateTeaser: {
+        label: "सर्वसमावेशक (Inclusive)",
+        title: "औसंगते यात्रा"
+      }
+    },
+    benefits: {
+      title: "वाचुमायाः शक्तिः",
+      subtitle: "वयं पवित्र सिदुना सह किमर्थं यात्रां कुर्मः",
+      items: [
+        {
+          title: "भावनात्मक चिकित्सा",
+          description: "शरीरे संचितं पूर्वदोषं भावनात्मकबाधां च मुक्त्वा क्षां शान्तिं च प्राप्नोति।"
+        },
+        {
+          title: "प्रकृत्या सह संयोगः",
+          description: "पृथिव्या, तत्त्वैः, अण्डीज पर्वतस्य जीवितात्मना सह गभीरं एकतां अनुभवतु।"
+        },
+        {
+          title: "स्पष्टता दृष्टिः च",
+          description: "मार्गदर्शनं, उद्देश्यं, जीवनमार्गस्य नवीकृतदृष्टिकोणं च प्राप्तुं मनः शान्तं कुरुत।"
+        }
+      ]
+    },
+    about: {
+      title: "हर्नानेन सह मिलतु",
+      subtitle: "पवित्र सिदु रक्षकः",
+      description: [
+        "हर्नानः अण्डीज पर्वतस्य पूर्वजज्ञानस्य अध्ययने संरक्षणे च स्वजीवनं समर्पितवान्। अण्डीज पर्वतस्य हृदये जातः सः स्वपूर्वजानां वंशं वहति, वाचुमा (San Pedro) सिदुना चिकित्साशक्तिं वितरति।",
+        "तस्य संस्काराः न केवलं कर्मकाण्डाः; ते पर्वतानां (Apus) पृथिव्याः (Pachamama) च आत्मभिः मार्गदर्शिते आत्मनि गभीराः यात्राः सन्ति। २० वर्षाणाम् अधिकानुभवेन सह, हर्नानः सुरक्षितं, प्रामाणिकं, परिवर्तनकारी च स्थानं ददाति।"
+      ]
+    },
+    services: {
+      title: "अस्माकं प्रदानान",
+      items: [
+        {
+          title: "दिवस संस्कारः",
+          description: "सूर्यस्य अधः ओषध्या सह संयोगं कृत्वा प्रकृतौ पूर्णदिवसस्य निमज्जनम्। शुद्धिः एकीकरणं च सम्मिलितम्।",
+          price: "$150"
+        },
+        {
+          title: "पूर्णचन्द्र शिबिरम्",
+          description: "पूर्णचन्द्रस्य प्रकाशे वाचुमायाः जादू अनुभवतु। अग्नेः, संगीतस्य, गभीरचिकित्सायाः च रात्रिः।",
+          price: "$200"
+        },
+        {
+          title: "व्यक्तिगत चिकित्सा",
+          description: "भवतः विशिष्टाध्यात्मिकभावनात्मक आवश्यकताभ्यः अनुकूलिताः एकैकं सत्रम्। गभीरबाधा निवारणम्।",
+          price: "पृच्छतु"
+        }
+      ],
+      ausangateCta: {
+        title: "विशेष शिबिरम्: औसंगते अभियानम्",
+        description: "पवित्र पर्वत औसंगते प्रति ७ दिवसानां परिवर्तनकारी यात्रायां अस्माभिः सह सम्मिलितुं। उष्णस्रोताः, पदयात्रा, गभीर ओषधिकार्यं च।",
+        button: "यात्राक्रमं पश्यतु"
+      }
+    },
+    ausangate: {
+      title: "औसंगते पवित्र यात्रा",
+      subtitle: "उच्च अण्डीज पर्वते ७ दिवसानां चिकित्सा",
+      description: "पच्चान्तायाः चिकित्साजलानाम्, अपु औसंगते इत्यस्य भव्योपस्थितेः, वाचुमा-तेमास्कल् इत्ययोः परिवर्तनकारीशक्तेः च संयोगं कुर्वती गभीरा अभियानम्।",
+      cta: "स्वस्थानं आरक्षयतु",
+      itinerary: [
+        {
+          day: "दिनम् १",
+          title: "आगमनं शुद्धिः च",
+          description: "पच्चान्ता प्रति यात्रा। शरीरं शुद्धीकर्तुं प्राकृतिक उष्णजले विश्रामः, ततः अस्माकं संकल्पान् स्थापयितुं औसंगते प्रति पदयात्रा।"
+        },
+        {
+          day: "दिनम् २",
+          title: "प्रथम वाचुमा संस्कारः",
+          description: "अपुं प्रति हृदयं उद्घाटनम्। पर्वतस्य आत्मना विशाल अण्डीज आकाशेन सह संयोगं कुर्वन् दिवससंस्कारः।"
+        },
+        {
+          day: "दिनम् ३",
+          title: "तेमास्कल् (स्वेद कुटीर)",
+          description: "मातृपृथिव्याः गर्भं प्रतिनिधियन्ती पारम्परिक वाष्पस्नानविधिः। शारीरिक आध्यात्मिक विषहरणम्।",
+        },
+        {
+          day: "दिनम् ४",
+          title: "द्वितीय वाचुमा संस्कारः",
+          description: "यात्रां गभीरीकरणम्। आन्तरिकबाधाः कार्यं कृत्वा उच्चस्थानानां मौने चेतनायाः विस्तारः।"
+        },
+        {
+          day: "दिनम् ५",
+          title: "तेमास्कल्",
+          description: "प्राप्त ऊर्जाः स्थापयितुं आत्मानं च अधिकं शुद्धीकर्तुं द्वितीयः स्वेदकुटीरसंस्कारः।"
+        },
+        {
+          day: "दिनम् ६",
+          title: "तृतीय वाचुमा एकीकरणं च",
+          description: "अन्तिम ओषधिसंस्कारः। एकीकरणे, कृतज्ञतायां, सप्ताहकाले प्राप्तचिकित्सायाः मुद्रांकने च ध्यानम्।"
+        },
+        {
+          day: "दिनम् ७",
+          title: "प्रत्यागमन यात्रा",
+          description: "पर्वतात् अधः पदयात्रा, पच्चान्ता उष्णस्रोतेषु अन्तिमस्नानं, पिसक् प्रति परिवहनं च।"
+        }
+      ]
+    },
+    testimonials: {
+      title: "हृदयात् स्वराः",
+      items: [
+        {
+          name: "Sarah J.",
+          location: "USA",
+          text: "हर्नानेन सह मम अनुभवेन मम जीवनं परिवर्तितम्। अहं पृथिव्या सह तादृशं सम्बन्धं अनुभूतवान् यत् पूर्वं कदापि न अनुभूतवान्।"
+        },
+        {
+          name: "Marc D.",
+          location: "France",
+          text: "प्रामाणिकं, शक्तिशाली, सुरक्षितं च। हर्नानः ओषधेः सत्यः गुरुः अस्ति।"
+        }
+      ]
+    },
+    contact: {
+      title: "संपर्कं कुरुत",
+      form: {
+        name: "भवतः नाम",
+        email: "भवतः ईमेल",
+        message: "भवतः संदेशः",
+        submit: "संदेशं प्रेषयतु"
+      },
+      info: "वयं पवित्र उपत्यकायाः हृदये, काल्का, कुस्को समीपे स्थिताः स्मः।"
+    },
+    footer: {
+      rights: "सर्वाधिकारः सुरक्षितः।"
     }
   }
 };

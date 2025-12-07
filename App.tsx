@@ -25,6 +25,8 @@ const App: React.FC = () => {
     else if (currentLanguage === Language.ES) document.title = "Hernan Wachuma - Medicina Sagrada";
     else if (currentLanguage === Language.QU) document.title = "Hernan Wachuma - Hampi Wachuma";
     else if (currentLanguage === Language.JA) document.title = "ヘルナン・ワチュマ - アンデスの聖なる薬";
+    else if (currentLanguage === Language.HU) document.title = "Hernan Wachuma - Andok Szent Gyógyító Ereje";
+    else if (currentLanguage === Language.SA) document.title = "Hernan Wachuma - पवित्र अण्डीज ओषधि";
     else document.title = "هيرنان واتشوما - الطب المقدس"; // Arabic Title
 
     // Set Text Direction (RTL/LTR)
