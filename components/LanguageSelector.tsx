@@ -42,6 +42,7 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({ currentLangu
               {lang === Language.ES && 'Español'}
               {lang === Language.QU && 'Runasimi'}
               {lang === Language.AR && 'العربية'}
+              {lang === Language.JA && '日本語'}
             </button>
           ))}
         </div>

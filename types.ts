@@ -2,7 +2,8 @@ export enum Language {
   EN = 'EN',
   ES = 'ES',
   QU = 'QU',
-  AR = 'AR'
+  AR = 'AR',
+  JA = 'JA'
 }
 
 export interface NavLink {
@@ -34,6 +35,12 @@ export interface BenefitItem {
   description: string;
 }
 
+export interface ItineraryDay {
+  day: string;
+  title: string;
+  description: string;
+}
+
 export interface TranslationData {
   nav: {
     home: string;
@@ -56,6 +63,18 @@ export interface TranslationData {
   services: {
     title: string;
     items: ServiceItem[];
+    ausangateCta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
+  ausangate: {
+    title: string;
+    subtitle: string;
+    description: string;
+    itinerary: ItineraryDay[];
+    cta: string;
   };
   testimonials: {
     title: string;

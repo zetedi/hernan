@@ -8,6 +8,7 @@ import { Gallery } from './components/Gallery';
 import { Testimonials } from './components/Testimonials';
 import { Contact } from './components/Contact';
 import { Benefits } from './components/Benefits';
+import { Ausangate } from './components/Ausangate';
 import { Language } from './types';
 import { TRANSLATIONS } from './constants';
 
@@ -20,13 +21,11 @@ const App: React.FC = () => {
   // Handle document title and RTL direction based on language
   useEffect(() => {
     // Set Title
-    document.title = currentLanguage === Language.EN 
-      ? "Hernan Wachuma - Sacred Medicine" 
-      : currentLanguage === Language.ES 
-      ? "Hernan Wachuma - Medicina Sagrada"
-      : currentLanguage === Language.QU
-      ? "Hernan Wachuma - Hampi Wachuma"
-      : "هيرنان واتشوما - الطب المقدس"; // Arabic Title
+    if (currentLanguage === Language.EN) document.title = "Hernan Wachuma - Sacred Medicine";
+    else if (currentLanguage === Language.ES) document.title = "Hernan Wachuma - Medicina Sagrada";
+    else if (currentLanguage === Language.QU) document.title = "Hernan Wachuma - Hampi Wachuma";
+    else if (currentLanguage === Language.JA) document.title = "ヘルナン・ワチュマ - アンデスの聖なる薬";
+    else document.title = "هيرنان واتشوما - الطب المقدس"; // Arabic Title
 
     // Set Text Direction (RTL/LTR)
     if (currentLanguage === Language.AR) {
@@ -66,6 +65,7 @@ const App: React.FC = () => {
             </>
           } />
           <Route path="/services" element={<Services t={t.services} />} />
+          <Route path="/ausangate" element={<Ausangate t={t.ausangate} />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact t={t.contact} footerT={t.footer} />} />
         </Routes>

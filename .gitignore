@@ -12,7 +12,6 @@ dist
 dist-ssr
 *.local
 .env
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -27,6 +26,3 @@ dist-ssr
 
 flattened_project.txt
 flattened_project.txt.debug
-
-# Branch config
-# public/config.json

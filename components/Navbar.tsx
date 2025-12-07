@@ -52,10 +52,10 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
   // Mobile: Always w-12 h-12
   // Desktop (md+):
   //   - Scrolled: w-12 h-12
-  //   - Top: w-32 h-32 (Floating large)
+  //   - Top: w-32 h-32 (Floating large) and more padding top (mt-20) to push it down
   const logoContainerClass = isScrolled 
     ? 'w-12 h-12' 
-    : 'w-12 h-12 md:w-32 md:h-32 md:mt-8';
+    : 'w-12 h-12 md:w-32 md:h-32 md:mt-20';
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${navBackgroundClass}`}>
