@@ -53,6 +53,10 @@ export interface TranslationData {
     title: string;
     subtitle: string;
     cta: string;
+    ausangateTeaser: {
+      label: string;
+      title: string;
+    };
   };
   benefits: {
     title: string;

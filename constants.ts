@@ -39,7 +39,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
     hero: {
       title: "Sacred Medicine of the Andes",
       subtitle: "Reconnect with Pachamama through traditional Wachuma ceremonies in the Sacred Valley.",
-      cta: "Book a Ceremony"
+      cta: "Book a Ceremony",
+      ausangateTeaser: {
+        label: "Exclusive",
+        title: "Ausangate Journey"
+      }
     },
     benefits: {
       title: "The Power of Wachuma",
@@ -175,7 +179,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
     hero: {
       title: "Medicina Sagrada de los Andes",
       subtitle: "Reconecta con la Pachamama a través de ceremonias tradicionales de Wachuma en el Valle Sagrado.",
-      cta: "Reserva una Ceremonia"
+      cta: "Reserva una Ceremonia",
+      ausangateTeaser: {
+        label: "Exclusivo",
+        title: "Viaje al Ausangate"
+      }
     },
     benefits: {
       title: "El Poder del Wachuma",
@@ -311,7 +319,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
     hero: {
       title: "Andespi Hampi Wachuma",
       subtitle: "Pachamamawan tinkuy, ñawpa Wachuma hampiywan Valle Sagradopi.",
-      cta: "Hampiyta mañakuy"
+      cta: "Hampiyta mañakuy",
+      ausangateTeaser: {
+        label: "Sapaq",
+        title: "Apu Ausangate Puririy"
+      }
     },
     benefits: {
       title: "Wachumaq Kallpan",
@@ -447,7 +459,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
     hero: {
       title: "الطب المقدس للأنديز",
       subtitle: "أعد الاتصال بـ باتشاماما من خلال احتفالات واتشوما التقليدية في الوادي المقدس.",
-      cta: "احجز احتفالاً"
+      cta: "احجز احتفالاً",
+      ausangateTeaser: {
+        label: "حصري",
+        title: "رحلة أوسانجاتي"
+      }
     },
     benefits: {
       title: "قوة الواتشوما",
@@ -583,7 +599,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
     hero: {
       title: "アンデスの聖なる薬",
       subtitle: "聖なる谷で伝統的なワチュマセレモニーを通じてパチャママと再びつながりましょう。",
-      cta: "セレモニーを予約する"
+      cta: "セレモニーを予約する",
+      ausangateTeaser: {
+        label: "限定",
+        title: "アウサンガテへの旅"
+      }
     },
     benefits: {
       title: "ワチュマの力",
