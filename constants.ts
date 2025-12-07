@@ -67,8 +67,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "Meet Hernan",
       subtitle: "Guardian of the Sacred Cactus",
       description: [
-        "Hernan has dedicated his life to the study and preservation of Andean ancestral wisdom. Born in the heart of the Andes, he carries the lineage of his ancestors, sharing the healing power of the Wachuma (San Pedro) cactus.",
-        "His ceremonies are not just rituals; they are deep journeys into the self, guided by the spirits of the mountains (Apus) and Mother Earth (Pachamama). With over 20 years of experience, Hernan provides a safe, authentic, and transformative space."
+        "<strong>Hernan</strong> is a spiritual guide born and raised in the Sacred Valley of Peru. With years of experience and a deep connection to Andean traditions, Hernan has guided countless souls through transformative Huachuma ceremonies. Every ceremony is held with respect, humility, and a commitment to authenticity."
       ]
     },
     services: {

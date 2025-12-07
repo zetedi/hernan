@@ -13,7 +13,7 @@ export const About: React.FC<AboutProps> = ({ t }) => {
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
           
           {/* Image Grid */}
-          <div className="relative mb-12 lg:mb-0">
+          <div className="relative mb-12 lg:mb-0 max-w-sm mx-auto">
             <div className="absolute inset-0 bg-pacha-gold/20 transform rotate-3 rounded-2xl"></div>
             <img 
               src={IMAGES.about}
@@ -30,9 +30,9 @@ export const About: React.FC<AboutProps> = ({ t }) => {
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-pacha-earth mb-8">
               {t.title}
             </h2>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed font-light">
+            <div className="space-y-6 text-base text-gray-700 leading-relaxed font-light">
               {(Array.isArray(t.description) ? t.description : [t.description]).map((paragraph, idx) => (
-                <p key={idx}>{paragraph}</p>
+                <p key={idx} dangerouslySetInnerHTML={{ __html: paragraph }} />
               ))}
             </div>
             
