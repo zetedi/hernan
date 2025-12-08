@@ -10,16 +10,17 @@ export const About: React.FC<AboutProps> = ({ t }) => {
   return (
     <section id="about" className="pt-32 pb-20 bg-pacha-sand/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-          
-          {/* Image Grid */}
-          <div className="relative mb-12 lg:mb-0 max-w-sm mx-auto">
-            <div className="absolute inset-0 bg-pacha-gold/20 transform rotate-3 rounded-2xl"></div>
-            <img 
-              src={IMAGES.about}
-              alt="Hernan during ceremony" 
-              className="relative rounded-2xl shadow-2xl w-full h-auto object-cover transform -rotate-3 transition-transform hover:rotate-0 duration-500"
-            />
+        <div className="clearfix">
+          {/* Floated Image */}
+          <div className="float-left mr-6 mb-4 w-40 md:w-72">
+            <div className="relative">
+                <div className="absolute inset-0 bg-pacha-gold/20 transform rotate-3 rounded-2xl"></div>
+                <img 
+                src={IMAGES.about}
+                alt="Hernan during ceremony" 
+                className="relative rounded-2xl shadow-2xl w-full h-auto object-cover transform -rotate-3 transition-transform hover:rotate-0 duration-500"
+                />
+            </div>
           </div>
 
           {/* Text Content */}

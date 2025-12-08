@@ -4,7 +4,8 @@ export const IMAGES = {
   logo: "/logo.svg",
   hero: "/hero.jpg",
   about: "/about.jpg",
-  ausangate: "/ausangate.jpg", // Make sure to add this image
+  ausangate: "/ausangate.jpg",
+  mayra: "/mayra.jpg",
   gallery: [
     "/gallery/1.jpg",
     "/gallery/2.jpg",
@@ -27,11 +28,31 @@ export const IMAGES = {
   ]
 };
 
+// Helper for default 2-Day Retreat data (to avoid repetition in basic translations)
+const retreat2DayDefault = {
+    title: "2 Day Retreat",
+    subtitle: "Wayna Wasi & Kinsacocha",
+    intro: "A deep immersion into the sacred medicine, held in the sanctuary of Wayna Wasi and the powerful mountains of Pisac.",
+    days: [
+        {
+            title: "Day 1 : Preparation and Arrival at Wayna Wasi",
+            content: "Upon arrival at Wayna Wasi, participants will begin their journey with the ceremonial preparation of the bedida (the sacred Wachuma drink). This experience initiates a sacred bond with the medicine, setting the stage for inner exploration and connection. Hernan guides each participant with care, helping them clarify their intentions and open their hearts to Wachuma’s gentle yet powerful effects.",
+            accommodation: "Spend the night at Wayna Wasi, a sanctuary of peace where the spirit of the Andes is ever-present."
+        },
+        {
+            title: "Day 2 : Ceremony at Kinsacocha, Pisac",
+            content: "On the second day, we will travel to the revered site of Kinsacocha in Pisac, where you will partake in a Wachuma ceremony amidst breathtaking mountain vistas. With Hernan’s experienced guidance, participants will explore their inner landscapes, seek personal insights, and receive the teachings Wachuma offers. As the ceremony concludes, a group sharing circle will allow participants to process and reflect on their journey, enhancing the retreat’s impact.",
+            accommodation: "Return to Wayna Wasi for a peaceful night, absorbing the transformative experiences of the day."
+        }
+    ],
+    conclusion: "Participants will leave with a renewed sense of self and purpose, empowered by the Wachuma experience and the timeless wisdom of Pachamama."
+};
+
 export const TRANSLATIONS: Record<Language, TranslationData> = {
   [Language.EN]: {
     nav: {
       home: "Home",
-      about: "About Hernan",
+      about: "The Family",
       services: "Ceremonies",
       gallery: "Gallery",
       contact: "Contact"
@@ -67,7 +88,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "Meet Hernan",
       subtitle: "Guardian of the Sacred Cactus",
       description: [
-        "<strong>Hernan</strong> is a spiritual guide born and raised in the Sacred Valley of Peru. With years of experience and a deep connection to Andean traditions, Hernan has guided countless souls through transformative Huachuma ceremonies. Every ceremony is held with respect, humility, and a commitment to authenticity."
+        "<strong>Hernan Colque</strong> is a Quechua native and a devoted facilitator of <strong>Wachuma (San Pedro) ceremonies</strong>, deeply rooted in the sacred traditions of the Andes. Born above 5000m in <strong>Viacha</strong>, a high-altitude community of <strong>Pisac</strong>, Hernan carries a medicinal healing lineage that dates back to pre-Inca times.",
+        "According to ancestral tradition, only one child per generation may inherit this path, and they must choose it voluntarily. The wisdom passed from his grandfather Carmen to his father Beninho. Among seven siblings, Hernan chose the medicine at a very early age, becoming the sole carrier of this ancient legacy and its profound connection to <strong>Pachamama (Mother Earth)</strong>.",
+        "<strong>Pisac and Viacha, Two Sacred Spaces.</strong> We are based in <strong>Pisac</strong>, a vibrant town in the Sacred Valley, where we host ceremonies and offer peaceful accommodations at <strong>Wayna Wasi Hotel</strong>. For a deeper immersion, our multi-day retreats are held in <strong>Viacha</strong>, a serene community high above Pisac. Here, participants engage with local traditions and enjoy the tranquility of the mountains—ideal for a profound Huachuma experience."
       ]
     },
     services: {
@@ -82,6 +105,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           title: "Full Moon Retreat",
           description: "Experience the magic of Wachuma under the light of the full moon. A night of fire, music, and deep healing.",
           price: "$200"
+        },
+        {
+          title: "2 Day Retreat",
+          description: "Deep immersion at Wayna Wasi and Kinsacocha. Preparation, Ceremony, and Accommodation included.",
+          price: "Inquire"
         },
         {
           title: "Private Healing",
@@ -138,6 +166,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         }
       ]
     },
+    retreat2Day: retreat2DayDefault,
     testimonials: {
       title: "Voices from the Heart",
       items: [
@@ -167,11 +196,12 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       rights: "All rights reserved."
     }
   },
+  // Reusing English content for 2-Day Retreat in other languages as placeholders are acceptable for now
   [Language.ES]: {
     nav: {
       home: "Inicio",
-      about: "Sobre Hernan",
-      services: "Ceremonias",
+      about: "La Familia",
+      services: "Ceremonies",
       gallery: "Galería",
       contact: "Contacto"
     },
@@ -222,6 +252,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           title: "Retiro de Luna Llena",
           description: "Experimenta la magia del Wachuma bajo la luz de la luna llena. Una noche de fuego, música y sanación profunda.",
           price: "$200"
+        },
+        {
+          title: "Retiro de 2 Días",
+          description: "Inmersión profunda en Wayna Wasi y Kinsacocha. Preparación, Ceremonia y Alojamiento incluidos.",
+          price: "Consultar"
         },
         {
           title: "Sanación Privada",
@@ -278,6 +313,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         }
       ]
     },
+    retreat2Day: retreat2DayDefault, // Using EN for simplicity as requested "I would like to update... [english text]"
     testimonials: {
       title: "Voces del Corazón",
       items: [
@@ -310,7 +346,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   [Language.QU]: {
     nav: {
       home: "Qallariy",
-      about: "Hernanmanta",
+      about: "Ayllu",
       services: "Ruwaykuna",
       gallery: "Rikch'akuna",
       contact: "Willanakuy"
@@ -362,6 +398,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           title: "Killa Hunt'a",
           description: "Wachumaq kallpanta riqsiy killa k'anchaypi. Nina, taki, ukhu hampikuy tuta.",
           price: "$200"
+        },
+        {
+          title: "2 P'unchaw T'aqakuy",
+          description: "Wayna Wasipi Kinsacochapi ima. Wakichikuy, Ceremonia, Puñuna ima.",
+          price: "Tapukuy"
         },
         {
           title: "Sapalla Hampikuy",
@@ -418,6 +459,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         }
       ]
     },
+    retreat2Day: retreat2DayDefault,
     testimonials: {
       title: "Sunqumanta Rimaykuna",
       items: [
@@ -450,7 +492,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   [Language.AR]: {
     nav: {
       home: "الرئيسية",
-      about: "عن هيرنان",
+      about: "العائلة",
       services: "الاحتفالات",
       gallery: "المعرض",
       contact: "اتصل بنا"
@@ -502,6 +544,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           title: "خلوة البدر",
           description: "جرب سحر واتشوما تحت ضوء البدر. ليلة من النار والموسيقى والشفاء العميق.",
           price: "$200"
+        },
+        {
+          title: "خلوة لمدة يومين",
+          description: "انغماس عميق في واينا واسي وكينساكوتشا. يشمل التحضير والاحتفال والإقامة.",
+          price: "استفسر"
         },
         {
           title: "شفاء خاص",
@@ -558,6 +605,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         }
       ]
     },
+    retreat2Day: retreat2DayDefault,
     testimonials: {
       title: "أصوات من القلب",
       items: [
@@ -590,7 +638,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   [Language.JA]: {
     nav: {
       home: "ホーム",
-      about: "ヘルナンについて",
+      about: "家族",
       services: "セレモニー",
       gallery: "ギャラリー",
       contact: "お問い合わせ"
@@ -642,6 +690,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           title: "満月リトリート",
           description: "満月の光の下でワチュマの魔法を体験してください。火、音楽、そして深い癒しの夜。",
           price: "$200"
+        },
+        {
+          title: "2日間リトリート",
+          description: "ワイナ・ワシとキンサコチャでの深い没入。準備、セレモニー、宿泊が含まれます。",
+          price: "お問い合わせ"
         },
         {
           title: "プライベートヒーリング",
@@ -698,6 +751,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         }
       ]
     },
+    retreat2Day: retreat2DayDefault,
     testimonials: {
       title: "心からの声",
       items: [
@@ -730,7 +784,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   [Language.HU]: {
     nav: {
       home: "Kezdőlap",
-      about: "Hernanról",
+      about: "A Család",
       services: "Szertartások",
       gallery: "Galéria",
       contact: "Kapcsolat"
@@ -782,6 +836,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           title: "Telihold Elvonulás",
           description: "Tapasztald meg a Wachuma varázsát a telihold fénye alatt. Tűz, zene és mély gyógyulás éjszakája.",
           price: "$200"
+        },
+        {
+          title: "2 Napos Elvonulás",
+          description: "Mély elmélyülés a Wayna Wasi-ban és Kinsacochában. Felkészülés, Szertartás és Szállás.",
+          price: "Érdeklődj"
         },
         {
           title: "Privát Gyógyítás",
@@ -838,6 +897,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         }
       ]
     },
+    retreat2Day: retreat2DayDefault,
     testimonials: {
       title: "Szívből Jövő Hangok",
       items: [
@@ -870,7 +930,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   [Language.SA]: {
     nav: {
       home: "गृहम् (Home)",
-      about: "परिचय (About)",
+      about: "कुटुम्बम् (The Family)",
       services: "संस्काराः (Ceremonies)",
       gallery: "चित्रशाला (Gallery)",
       contact: "संपर्कः (Contact)"
@@ -922,6 +982,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           title: "पूर्णचन्द्र शिबिरम्",
           description: "पूर्णचन्द्रस्य प्रकाशे वाचुमायाः जादू अनुभवतु। अग्नेः, संगीतस्य, गभीरचिकित्सायाः च रात्रिः।",
           price: "$200"
+        },
+        {
+          title: "२ दिवसीय शिबिरम्",
+          description: "वयना वसि तथा किन्साकोच इत्यत्र गभीरं निमज्जनम्। सज्जता, संस्कारः, आवासः च।",
+          price: "पृच्छतु"
         },
         {
           title: "व्यक्तिगत चिकित्सा",
@@ -978,6 +1043,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         }
       ]
     },
+    retreat2Day: retreat2DayDefault,
     testimonials: {
       title: "हृदयात् स्वराः",
       items: [

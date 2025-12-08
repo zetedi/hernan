@@ -9,6 +9,7 @@ import { Testimonials } from './components/Testimonials';
 import { Contact } from './components/Contact';
 import { Benefits } from './components/Benefits';
 import { Ausangate } from './components/Ausangate';
+import { Retreat2Day } from './components/Retreat2Day';
 import { Language } from './types';
 import { TRANSLATIONS } from './constants';
 
@@ -68,6 +69,7 @@ const App: React.FC = () => {
           } />
           <Route path="/services" element={<Services t={t.services} />} />
           <Route path="/ausangate" element={<Ausangate t={t.ausangate} />} />
+          <Route path="/retreat-2day" element={<Retreat2Day t={t.retreat2Day} />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact t={t.contact} footerT={t.footer} />} />
         </Routes>

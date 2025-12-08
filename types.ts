@@ -43,6 +43,12 @@ export interface ItineraryDay {
   description: string;
 }
 
+export interface RetreatDay {
+    title: string;
+    content: string;
+    accommodation?: string;
+}
+
 export interface TranslationData {
   nav: {
     home: string;
@@ -81,6 +87,13 @@ export interface TranslationData {
     description: string;
     itinerary: ItineraryDay[];
     cta: string;
+  };
+  retreat2Day: {
+      title: string;
+      subtitle: string;
+      intro: string;
+      days: RetreatDay[];
+      conclusion: string;
   };
   testimonials: {
     title: string;
