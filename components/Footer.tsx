@@ -31,35 +31,19 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
           </div>
 
           {/* Column 2: Links */}
-          <div className="grid grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-bold text-pacha-gold uppercase tracking-wider text-sm mb-4">
-                {data.columns.about.title}
-              </h3>
-              <ul className="space-y-2">
-                {data.columns.about.items.map((item, idx) => (
-                  <li key={idx}>
-                    <Link to={item.href} className="text-gray-400 hover:text-white text-sm transition-colors">
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-pacha-gold uppercase tracking-wider text-sm mb-4">
-                {data.columns.useful.title}
-              </h3>
-              <ul className="space-y-2">
-                {data.columns.useful.items.map((item, idx) => (
-                  <li key={idx}>
-                    <Link to={item.href} className="text-gray-400 hover:text-white text-sm transition-colors">
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div>
+            <h3 className="font-bold text-pacha-gold uppercase tracking-wider text-sm mb-4">
+              {data.columns.links.title}
+            </h3>
+            <ul className="space-y-2">
+              {data.columns.links.items.map((item, idx) => (
+                <li key={idx}>
+                  <Link to={item.href} className="text-gray-400 hover:text-white text-sm transition-colors">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Column 3: Reviews & Social */}

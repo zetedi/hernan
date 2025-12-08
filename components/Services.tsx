@@ -29,11 +29,14 @@ export const Services: React.FC<ServicesProps> = ({ t }) => {
             const Icon = icons[index % icons.length];
             const isRetreat2Day = item.title.includes("2 Day") || item.title.includes("2 Días") || item.title.includes("2 P'unchaw") || item.title.includes("لمدة يومين") || item.title.includes("2日間") || item.title.includes("2 Napos") || item.title.includes("२ दिवसीय");
             const isDeeperWork = item.title.includes("15 Day") || item.title.includes("15 Días") || item.title.includes("15 P'unchaw") || item.title.includes("15 يومًا") || item.title.includes("15日間") || item.title.includes("15 Napos") || item.title.includes("१५ दिवसीय") || item.title.includes("Deep") || item.title.includes("Profunda");
+            const isPrivate = item.title.includes("Private") || item.title.includes("Privada") || item.title.includes("Sapalla") || item.title.includes("خاص") || item.title.includes("プライベート") || item.title.includes("Privát") || item.title.includes("व्यक्तिगत");
+
+            const isSpecialCard = isRetreat2Day || isDeeperWork || isPrivate;
 
             // Base styling
             const baseClasses = "border border-pacha-leaf/30 p-8 rounded-xl transition-all duration-300 group flex flex-col relative overflow-hidden backdrop-blur-sm";
             // Conditional styling: If special card (retreat or deeper work), no bg color (image used). If normal, use earth color.
-            const colorClasses = (isRetreat2Day || isDeeperWork)
+            const colorClasses = isSpecialCard
                 ? "hover:border-pacha-gold" 
                 : "bg-pacha-earth/50 hover:bg-pacha-earth hover:border-pacha-gold";
 
@@ -41,6 +44,7 @@ export const Services: React.FC<ServicesProps> = ({ t }) => {
             let bgImage = null;
             if (isRetreat2Day) bgImage = IMAGES.mayra;
             if (isDeeperWork) bgImage = IMAGES.drum;
+            if (isPrivate) bgImage = IMAGES.private;
 
             return (
               <div key={index} className={`${baseClasses} ${colorClasses}`}>
@@ -83,7 +87,7 @@ export const Services: React.FC<ServicesProps> = ({ t }) => {
                         ) : (
                           <Link 
                                 to="/contact"
-                                className={`block w-full text-center font-bold py-2 rounded-lg transition-colors border ${isDeeperWork ? 'bg-pacha-gold/20 hover:bg-pacha-gold/40 text-pacha-gold border-pacha-gold/50' : 'bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white border-pacha-leaf/50'}`}
+                                className={`block w-full text-center font-bold py-2 rounded-lg transition-colors border ${isSpecialCard ? 'bg-pacha-gold/20 hover:bg-pacha-gold/40 text-pacha-gold border-pacha-gold/50' : 'bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white border-pacha-leaf/50'}`}
                             >
                                 Inquire
                             </Link>

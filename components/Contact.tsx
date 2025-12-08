@@ -1,6 +1,7 @@
 import React from 'react';
 import { TranslationData } from '../types';
 import { Mail, MapPin, Instagram, Facebook } from 'lucide-react';
+import { IMAGES } from '../constants';
 
 interface ContactProps {
   t: TranslationData['contact'];
@@ -9,8 +10,14 @@ interface ContactProps {
 
 export const Contact: React.FC<ContactProps> = ({ t }) => {
   return (
-    <section id="contact" className="bg-pacha-stone text-gray-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48 pb-20 md:pt-56">
+    <section id="contact" className="relative bg-pacha-stone text-gray-300 min-h-screen">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+         <img src={IMAGES.connect} alt="Connect Background" className="w-full h-full object-cover" />
+         <div className="absolute inset-0 bg-black/70" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48 pb-20 md:pt-56 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16">
           
           {/* Contact Info */}
@@ -50,32 +57,32 @@ export const Contact: React.FC<ContactProps> = ({ t }) => {
           </div>
 
           {/* Form */}
-          <div className="bg-pacha-earth/30 p-8 rounded-2xl border border-white/10">
+          <div className="bg-pacha-earth/30 p-8 rounded-2xl border border-white/10 backdrop-blur-sm">
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div>
                 <label className="block text-sm font-medium text-pacha-gold mb-2 uppercase tracking-wider">{t.form.name}</label>
                 <input 
                   type="text" 
-                  className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-pacha-gold transition-colors"
+                  className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-pacha-gold transition-colors"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-pacha-gold mb-2 uppercase tracking-wider">{t.form.email}</label>
                 <input 
                   type="email" 
-                  className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-pacha-gold transition-colors"
+                  className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-pacha-gold transition-colors"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-pacha-gold mb-2 uppercase tracking-wider">{t.form.message}</label>
                 <textarea 
                   rows={4}
-                  className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-pacha-gold transition-colors"
+                  className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-pacha-gold transition-colors"
                 ></textarea>
               </div>
               <button 
                 type="submit" 
-                className="w-full bg-pacha-leaf hover:bg-green-700 text-white font-bold py-4 rounded-lg transition-colors uppercase tracking-widest"
+                className="w-full bg-pacha-leaf hover:bg-green-700 text-white font-bold py-4 rounded-lg transition-colors uppercase tracking-widest shadow-lg"
               >
                 {t.form.submit}
               </button>

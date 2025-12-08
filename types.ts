@@ -83,11 +83,7 @@ export interface FooterLink {
 export interface FooterData {
   description: string;
   columns: {
-    about: {
-      title: string;
-      items: FooterLink[];
-    };
-    useful: {
+    links: {
       title: string;
       items: FooterLink[];
     };

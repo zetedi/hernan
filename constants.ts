@@ -7,6 +7,8 @@ export const IMAGES = {
   ausangate: "/ausangate.jpg",
   mayra: "/mayra.jpg",
   drum: "/drum.jpg",
+  connect: "/connect.jpg",
+  private: "/private.jpg",
   day1: "/day1.jpg",
   day2: "/day2.jpg",
   day3: "/day3.jpg",
@@ -128,19 +130,11 @@ const preparationDefault = {
 const footerDefault = {
   description: "Experience the transformative power of Wachuma, the sacred Andean plant medicine known as San Pedro. Join Hernan in guided ceremonies that will help you reconnect with your inner self, heal deeply, and awaken your spirit near Cusco, in the heart of Peru’s Sacred Valley.",
   columns: {
-    about: {
-      title: "About us",
+    links: {
+      title: "Links",
       items: [
         { label: "About us", href: "/about" },
-        { label: "The Community", href: "#" },
-        { label: "Our Blog", href: "#" }
-      ]
-    },
-    useful: {
-      title: "Useful links",
-      items: [
-        { label: "Homepage", href: "/" },
-        { label: "Terms of Service", href: "#" },
+        { label: "The Community", href: "/about" },
         { label: "Contact us", href: "/contact" }
       ]
     },
@@ -446,7 +440,20 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       },
       info: "Estamos ubicados en el corazón del Valle Sagrado, cerca de Calca, Cusco."
     },
-    footer: footerDefault
+    footer: {
+      ...footerDefault,
+      columns: {
+        ...footerDefault.columns,
+        links: {
+            title: "Enlaces",
+            items: [
+                { label: "La Familia", href: "/about" },
+                { label: "La Comunidad", href: "/about" },
+                { label: "Contacto", href: "/contact" }
+            ]
+        }
+      }
+    }
   },
   [Language.QU]: {
     nav: {
@@ -586,7 +593,20 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       },
       info: "Valle Sagrado sunqunpi tarikuyku, Calca, Cusco qayllapi."
     },
-    footer: footerDefault
+    footer: {
+      ...footerDefault,
+      columns: {
+        ...footerDefault.columns,
+        links: {
+            title: "T'inkikuna",
+            items: [
+                { label: "Ayllu", href: "/about" },
+                { label: "Ayllu", href: "/about" },
+                { label: "Willanakuy", href: "/contact" }
+            ]
+        }
+      }
+    }
   },
   [Language.AR]: {
     nav: {
@@ -726,7 +746,39 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       },
       info: "نحن موجودون في قلب الوادي المقدس، بالقرب من كالكا، كوسكو."
     },
-    footer: footerDefault
+    footer: {
+      ...footerDefault,
+      description: "جرب القوة التحويلية للواتشوما، طب النباتات الأنديزية المقدسة المعروف باسم سان بيدرو. انضم إلى هيرنان في احتفالات موجهة ستساعدك على إعادة الاتصال بذاتك الداخلية، والشفاء بعمق، وإيقاظ روحك بالقرب من كوسكو، في قلب الوادي المقدس في بيرو.",
+      columns: {
+        ...footerDefault.columns,
+        links: {
+            title: "روابط",
+            items: [
+                { label: "العائلة", href: "/about" },
+                { label: "المجتمع", href: "/about" },
+                { label: "اتصل بنا", href: "/contact" }
+            ]
+        },
+        reviews: {
+          title: "تقييمات جوجل",
+          rating: "4,9/5"
+        },
+        follow: {
+          title: "تابعنا",
+          facebook: "https://www.facebook.com/hernan.wachuma",
+          instagram: "https://www.instagram.com/hernan_wachuma"
+        },
+        contact: {
+          title: "اتصل بنا",
+          email: "contact@hernan-wachuma.com",
+          phone: "+51 928 383 821"
+        },
+        find: {
+          title: "تجدنا",
+          address: "واينا واسي، بيساك، بيرو"
+        }
+      }
+    }
   },
   [Language.JA]: {
     nav: {
@@ -866,7 +918,20 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       },
       info: "私たちはクスコのカルカ近く、聖なる谷の中心に位置しています。"
     },
-    footer: footerDefault
+    footer: {
+      ...footerDefault,
+      columns: {
+        ...footerDefault.columns,
+        links: {
+            title: "リンク",
+            items: [
+                { label: "家族", href: "/about" },
+                { label: "コミュニティ", href: "/about" },
+                { label: "お問い合わせ", href: "/contact" }
+            ]
+        }
+      }
+    }
   },
   [Language.HU]: {
     nav: {
@@ -1006,7 +1071,20 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       },
       info: "A Szent Völgy szívében, Calca közelében, Cuscóban találhatsz meg minket."
     },
-    footer: footerDefault
+    footer: {
+      ...footerDefault,
+      columns: {
+        ...footerDefault.columns,
+        links: {
+            title: "Linkek",
+            items: [
+                { label: "A Család", href: "/about" },
+                { label: "A Közösség", href: "/about" },
+                { label: "Kapcsolat", href: "/contact" }
+            ]
+        }
+      }
+    }
   },
   [Language.SA]: {
     nav: {
@@ -1146,6 +1224,19 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       },
       info: "वयं पवित्र उपत्यकायाः हृदये, काल्का, कुस्को समीपे स्थिताः स्मः।"
     },
-    footer: footerDefault
+    footer: {
+      ...footerDefault,
+      columns: {
+        ...footerDefault.columns,
+        links: {
+            title: "सम्बन्धाः",
+            items: [
+                { label: "कुटुम्बम्", href: "/about" },
+                { label: "समुदायः", href: "/about" },
+                { label: "संपर्कः", href: "/contact" }
+            ]
+        }
+      }
+    }
   }
 };
