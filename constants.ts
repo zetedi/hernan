@@ -6,6 +6,13 @@ export const IMAGES = {
   about: "/about.jpg",
   ausangate: "/ausangate.jpg",
   mayra: "/mayra.jpg",
+  day1: "/day1.jpg",
+  day2: "/day2.jpg",
+  day3: "/day3.jpg",
+  day4: "/day4.jpg",
+  day5: "/day5.jpg",
+  day6: "/day6.jpg",
+  day7: "/day7.jpg",
   gallery: [
     "/gallery/1.jpg",
     "/gallery/2.jpg",
@@ -166,16 +173,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "Our Offerings",
       items: [
         {
-          title: "Day Ceremony",
-          description: "A full day immersion in nature, connecting with the medicine under the sun. Includes cleansing and integration.",
-          price: "$150"
-        },
-        {
-          title: "Full Moon Retreat",
-          description: "Experience the magic of Wachuma under the light of the full moon. A night of fire, music, and deep healing.",
-          price: "$200"
-        },
-        {
           title: "2 Day Retreat",
           description: "Deep immersion at Wayna Wasi and Kinsacocha. Preparation, Ceremony, and Accommodation included.",
           price: "Inquire"
@@ -194,7 +191,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
     },
     ausangate: {
       title: "Ausangate Sacred Journey",
-      subtitle: "7 Days of Healing in the High Andes",
+      subtitle: "December 3rd, 2026 - 7 Days of Healing",
       description: "A profound expedition combining the healing waters of Pacchanta, the majestic presence of Apu Ausangate, and the transformative power of Wachuma and Temazcal.",
       cta: "Reserve Your Spot",
       itinerary: [
@@ -313,16 +310,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "Nuestros Servicios",
       items: [
         {
-          title: "Ceremonia de Día",
-          description: "Una inmersión de día completo en la naturaleza, conectando con la medicina bajo el sol. Incluye limpieza e integración.",
-          price: "$150"
-        },
-        {
-          title: "Retiro de Luna Llena",
-          description: "Experimenta la magia del Wachuma bajo la luz de la luna llena. Una noche de fuego, música y sanación profunda.",
-          price: "$200"
-        },
-        {
           title: "Retiro de 2 Días",
           description: "Inmersión profunda en Wayna Wasi y Kinsacocha. Preparación, Ceremonia y Alojamiento incluidos.",
           price: "Consultar"
@@ -341,7 +328,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
     },
     ausangate: {
       title: "Viaje Sagrado al Ausangate",
-      subtitle: "7 Días de Sanación en los Andes Altos",
+      subtitle: "3 de Diciembre 2026 - 7 Días de Sanación",
       description: "Una expedición profunda que combina las aguas curativas de Pacchanta, la majestuosa presencia del Apu Ausangate y el poder transformador del Wachuma y el Temazcal.",
       cta: "Reserva tu Lugar",
       itinerary: [
@@ -460,16 +447,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "Ruwaykuna",
       items: [
         {
-          title: "P'unchay Ceremonia",
-          description: "Tukuy p'unchaw pachamamawan tinkuy, inti k'anchaypi. Ch'uyanchakuywan ima.",
-          price: "$150"
-        },
-        {
-          title: "Killa Hunt'a",
-          description: "Wachumaq kallpanta riqsiy killa k'anchaypi. Nina, taki, ukhu hampikuy tuta.",
-          price: "$200"
-        },
-        {
           title: "2 P'unchaw T'aqakuy",
           description: "Wayna Wasipi Kinsacochapi ima. Wakichikuy, Ceremonia, Puñuna ima.",
           price: "Tapukuy"
@@ -488,7 +465,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
     },
     ausangate: {
       title: "Apu Ausangate Puririy",
-      subtitle: "7 P'unchaw Hampi Hanan Andespi",
+      subtitle: "3 Disimbre 2026 - 7 P'unchaw Hampi",
       description: "Hatun puririy Pacchanta q'uñi yakupi, Apu Ausangate ñawpaqninpi, Wachumawan Temazcalwan ima.",
       cta: "Kyllqachikuy",
       itinerary: [
@@ -607,16 +584,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "خدماتنا",
       items: [
         {
-          title: "احتفال نهاري",
-          description: "انغماس كامل ليوم واحد في الطبيعة، والتواصل مع الطب تحت الشمس. يشمل التطهير والتكامل.",
-          price: "$150"
-        },
-        {
-          title: "خلوة البدر",
-          description: "جرب سحر واتشوما تحت ضوء البدر. ليلة من النار والموسيقى والشفاء العميق.",
-          price: "$200"
-        },
-        {
           title: "خلوة لمدة يومين",
           description: "انغماس عميق في واينا واسي وكينساكوتشا. يشمل التحضير والاحتفال والإقامة.",
           price: "استفسر"
@@ -635,7 +602,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
     },
     ausangate: {
       title: "رحلة أوسانجاتي المقدسة",
-      subtitle: "7 أيام من الشفاء في أعالي الأنديز",
+      subtitle: "3 ديسمبر 2026 - 7 أيام من الشفاء",
       description: "رحلة عميقة تجمع بين مياه باتشانتا الشافية، والحضور المهيب لجبل أوسانجاتي، والقوة التحويلية للواتشوما والتيمزكال.",
       cta: "احجز مكانك",
       itinerary: [
@@ -754,16 +721,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "私たちの提供するもの",
       items: [
         {
-          title: "デイセレモニー",
-          description: "太陽の下で薬とつながり、自然に一日中浸ります。浄化と統合が含まれます。",
-          price: "$150"
-        },
-        {
-          title: "満月リトリート",
-          description: "満月の光の下でワチュマの魔法を体験してください。火、音楽、そして深い癒しの夜。",
-          price: "$200"
-        },
-        {
           title: "2日間リトリート",
           description: "ワイナ・ワシとキンサコチャでの深い没入。準備、セレモニー、宿泊が含まれます。",
           price: "お問い合わせ"
@@ -782,7 +739,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
     },
     ausangate: {
       title: "アウサンガテ聖なる旅",
-      subtitle: "アンデス高地での7日間の癒し",
+      subtitle: "2026年12月3日 - アンデス高地での7日間の癒し",
       description: "パッチャンタの癒しの水、アプ・アウサンガテの荘厳な存在、そしてワチュマとテマズカルの変容力を組み合わせた深い遠征。",
       cta: "場所を予約する",
       itinerary: [
@@ -901,16 +858,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "Ajánlataink",
       items: [
         {
-          title: "Nappali Szertartás",
-          description: "Egész napos elmerülés a természetben, kapcsolódás a gyógyító erővel a nap alatt. Tisztítást és integrációt tartalmaz.",
-          price: "$150"
-        },
-        {
-          title: "Telihold Elvonulás",
-          description: "Tapasztald meg a Wachuma varázsát a telihold fénye alatt. Tűz, zene és mély gyógyulás éjszakája.",
-          price: "$200"
-        },
-        {
           title: "2 Napos Elvonulás",
           description: "Mély elmélyülés a Wayna Wasi-ban és Kinsacochában. Felkészülés, Szertartás és Szállás.",
           price: "Érdeklődj"
@@ -929,7 +876,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
     },
     ausangate: {
       title: "Ausangate Szent Utazás",
-      subtitle: "7 Nap Gyógyulás a Magas Andokban",
+      subtitle: "2026. december 3. - 7 Nap Gyógyulás a Magas Andokban",
       description: "Egy mély expedíció, amely egyesíti Pacchanta gyógyító vizeit, Apu Ausangate fenséges jelenlétét, valamint a Wachuma és a Temazcal átalakító erejét.",
       cta: "Helyfoglalás",
       itinerary: [
@@ -1048,16 +995,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "अस्माकं प्रदानान",
       items: [
         {
-          title: "दिवस संस्कारः",
-          description: "सूर्यस्य अधः ओषध्या सह संयोगं कृत्वा प्रकृतौ पूर्णदिवसस्य निमज्जनम्। शुद्धिः एकीकरणं च सम्मिलितम्।",
-          price: "$150"
-        },
-        {
-          title: "पूर्णचन्द्र शिबिरम्",
-          description: "पूर्णचन्द्रस्य प्रकाशे वाचुमायाः जादू अनुभवतु। अग्नेः, संगीतस्य, गभीरचिकित्सायाः च रात्रिः।",
-          price: "$200"
-        },
-        {
           title: "२ दिवसीय शिबिरम्",
           description: "वयना वसि तथा किन्साकोच इत्यत्र गभीरं निमज्जनम्। सज्जता, संस्कारः, आवासः च।",
           price: "पृच्छतु"
@@ -1076,7 +1013,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
     },
     ausangate: {
       title: "औसंगते पवित्र यात्रा",
-      subtitle: "उच्च अण्डीज पर्वते ७ दिवसानां चिकित्सा",
+      subtitle: "दिसम्बर ३, २०२६ - उच्च अण्डीज पर्वते ७ दिवसानां चिकित्सा",
       description: "पच्चान्तायाः चिकित्साजलानाम्, अपु औसंगते इत्यस्य भव्योपस्थितेः, वाचुमा-तेमास्कल् इत्ययोः परिवर्तनकारीशक्तेः च संयोगं कुर्वती गभीरा अभियानम्।",
       cta: "स्वस्थानं आरक्षयतु",
       itinerary: [
