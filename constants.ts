@@ -28,7 +28,7 @@ export const IMAGES = {
   ]
 };
 
-// Helper for default 2-Day Retreat data (to avoid repetition in basic translations)
+// Helper for default 2-Day Retreat data
 const retreat2DayDefault = {
     title: "2 Day Retreat",
     subtitle: "Wayna Wasi & Kinsacocha",
@@ -46,6 +46,75 @@ const retreat2DayDefault = {
         }
     ],
     conclusion: "Participants will leave with a renewed sense of self and purpose, empowered by the Wachuma experience and the timeless wisdom of Pachamama."
+};
+
+// Helper for Preparation Data
+const preparationDefault = {
+  title: "Preparing for Your San Pedro Retreat",
+  subtitle: "Empower the Future of the Andean Community",
+  intro: "Welcome to your transformative three-day San Pedro retreat! To make the most of this experience, we invite you to prepare yourself both physically and mentally in advance. Here’s a guide to ensure a meaningful journey.",
+  diet: {
+    title: "Preparation: Light Diet and Setting Intentions",
+    description: "Leading up to the retreat, a light, clean diet can help open your body and mind to the experience. Here are some suggestions to follow for at least 3-5 days before arriving:",
+    items: [
+      { label: "Vegetarian Diet", text: "Avoid meat and animal products as they can weigh on the digestive system." },
+      { label: "No Added Sugars", text: "Refrain from consuming processed sugars to keep your energy balanced." },
+      { label: "Limit Stimulants", text: "Reduce or eliminate caffeine, alcohol, and other stimulants to help clear your mind and body." },
+      { label: "Avoid Heavy Foods", text: "Cut out fried foods and dairy for an easier digestive process." },
+      { label: "Hydration", text: "Drink plenty of water to help with clarity and overall well-being." },
+      { label: "Intentions", text: "Beyond diet, take some time each day to set intentions for the retreat. Whether through journaling, meditation, or quiet reflection, tune into what you hope to gain or release through this journey." }
+    ]
+  },
+  packing: {
+    title: "The Day of the Ceremony",
+    description: "On the day of the ceremony, which will take place on the second day of the retreat, we recommend bringing a few personal items that can enhance your connection and contribute to the sacred space.",
+    items: [
+      { label: "Wear Comfortable Clothing", text: "Dress in loose, comfortable clothing suitable for the outdoors." },
+      { label: "Sun Hat or Cap", text: "Since the ceremony will be held outside, bring a hat or cap to protect yourself from the sun." },
+      { label: "Bring an Offering", text: "It’s customary to bring fruits and flowers as offerings for the ceremony. This gesture symbolizes gratitude and connection to nature." },
+      { label: "Carry a Water Bottle", text: "Staying hydrated throughout the day is essential." },
+      { label: "Notebook and Pen", text: "You may feel inspired to journal after the ceremony to capture thoughts, insights, or emotions." }
+    ]
+  },
+  suggestions: {
+    title: "Additional Suggestions for the Retreat",
+    description: "To enhance your journey, consider the following:",
+    items: [
+      { label: "Respect Quiet Time", text: "Use periods of silence to reflect and process your experience." },
+      { label: "Breathwork and Meditation", text: "Gentle breathing exercises or meditation can help ground you and keep you centered." },
+      { label: "Digital Detox", text: "Disconnect from phones and other electronics, allowing yourself to be fully present." },
+      { label: "Connect with Nature", text: "If possible, spend time in nature each day, letting it support your journey inward." }
+    ]
+  },
+  closing: "By preparing mindfully and staying open, you’ll create space for the San Pedro medicine to guide you on a profound path of discovery. We look forward to sharing this special experience with you.",
+  risks: {
+    title: "Important Notice: Understanding the Risks and Responsibilities",
+    intro: "While this retreat is designed to offer a safe and transformative experience, it’s important to acknowledge that participation in a San Pedro ceremony involves both physical and psychological risks. Please review the following considerations carefully to ensure informed participation:",
+    sections: [
+      {
+        title: "Health and Medical Disclosure",
+        items: [
+          { label: "Medical Conditions", text: "Participants should inform facilitators of any medical conditions, including heart issues, mental health conditions, or any history of seizures. Some pre-existing conditions may increase risks associated with the San Pedro experience." },
+          { label: "Medications", text: "Certain medications, including antidepressants, antipsychotics, and some over-the-counter drugs, may have adverse interactions with San Pedro. Please disclose any medications to the facilitators well before the retreat." },
+          { label: "Physical Sensitivity", text: "San Pedro can cause temporary physical effects, such as nausea, vomiting, and increased heart rate. Participants should be physically and mentally prepared for these effects." }
+        ]
+      },
+      {
+        title: "Psychological Risks and Emotional Responsibility",
+        items: [
+          { label: "Intense Experiences", text: "San Pedro can bring up deep emotions and past traumas, which can be challenging to process. Participants are encouraged to engage in personal reflection or seek professional guidance beforehand if they have a history of trauma." },
+          { label: "Integration Support", text: "Following the retreat, participants may benefit from additional support to integrate their experiences. It is advised to plan for time, support, and resources to process any insights or emotions that arise." }
+        ]
+      },
+      {
+        title: "Personal Responsibility",
+        items: [
+          { label: "Informed Consent", text: "By participating in this retreat, you acknowledge that you are voluntarily engaging in this experience. Any insights, challenges, or personal transformations you experience are your own responsibility." },
+          { label: "Safety Precautions", text: "Follow all safety guidelines provided by facilitators, including dietary restrictions, suggested behavior during ceremonies, and limitations on physical activities." }
+        ]
+      }
+    ]
+  }
 };
 
 export const TRANSLATIONS: Record<Language, TranslationData> = {
@@ -167,6 +236,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       ]
     },
     retreat2Day: retreat2DayDefault,
+    preparation: preparationDefault,
     testimonials: {
       title: "Voices from the Heart",
       items: [
@@ -196,7 +266,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       rights: "All rights reserved."
     }
   },
-  // Reusing English content for 2-Day Retreat in other languages as placeholders are acceptable for now
   [Language.ES]: {
     nav: {
       home: "Inicio",
@@ -313,7 +382,8 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         }
       ]
     },
-    retreat2Day: retreat2DayDefault, // Using EN for simplicity as requested "I would like to update... [english text]"
+    retreat2Day: retreat2DayDefault,
+    preparation: preparationDefault,
     testimonials: {
       title: "Voces del Corazón",
       items: [
@@ -460,6 +530,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       ]
     },
     retreat2Day: retreat2DayDefault,
+    preparation: preparationDefault,
     testimonials: {
       title: "Sunqumanta Rimaykuna",
       items: [
@@ -606,6 +677,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       ]
     },
     retreat2Day: retreat2DayDefault,
+    preparation: preparationDefault,
     testimonials: {
       title: "أصوات من القلب",
       items: [
@@ -752,6 +824,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       ]
     },
     retreat2Day: retreat2DayDefault,
+    preparation: preparationDefault,
     testimonials: {
       title: "心からの声",
       items: [
@@ -898,6 +971,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       ]
     },
     retreat2Day: retreat2DayDefault,
+    preparation: preparationDefault,
     testimonials: {
       title: "Szívből Jövő Hangok",
       items: [
@@ -1044,6 +1118,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       ]
     },
     retreat2Day: retreat2DayDefault,
+    preparation: preparationDefault,
     testimonials: {
       title: "हृदयात् स्वराः",
       items: [

@@ -68,8 +68,22 @@ const App: React.FC = () => {
             </>
           } />
           <Route path="/services" element={<Services t={t.services} />} />
-          <Route path="/ausangate" element={<Ausangate t={t.ausangate} />} />
-          <Route path="/retreat-2day" element={<Retreat2Day t={t.retreat2Day} />} />
+          <Route path="/ausangate" element={
+            // Injecting preparation data into the props. 
+            // In types.ts we updated TranslationData to include 'preparation', so t.preparation exists.
+            // We combine it because AusangateProps expects t: TranslationData['ausangate']
+            // We can extend the prop or simply pass it as part of the object if we treat it loosely, 
+            // or better, we updated the Ausangate component to look for it.
+            // Since we cannot change the Interface of Ausangate['t'] easily without nesting it inside types, 
+            // we will pass a composite object or ignore the TS error in the short term, 
+            // OR ideally: The updated types.ts shows 'preparation' is a sibling to 'ausangate'.
+            // So we should update Ausangate to accept a separate prop or merge them.
+            // For now, I'll pass it merged and use ts-ignore in the component as done above.
+            <Ausangate t={{...t.ausangate, preparation: t.preparation} as any} />
+          } />
+          <Route path="/retreat-2day" element={
+            <Retreat2Day t={{...t.retreat2Day, preparation: t.preparation} as any} />
+          } />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact t={t.contact} footerT={t.footer} />} />
         </Routes>

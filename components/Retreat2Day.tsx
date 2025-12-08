@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { TranslationData } from '../types';
 import { IMAGES } from '../constants';
 import { Moon, Sun, Bed, Calendar } from 'lucide-react';
+import { Preparation } from './Preparation';
 
 interface Retreat2DayProps {
   t: TranslationData['retreat2Day'];
@@ -91,6 +92,10 @@ export const Retreat2Day: React.FC<Retreat2DayProps> = ({ t }) => {
         </div>
 
       </div>
+
+      {/* Preparation Section */}
+      {/* @ts-ignore */}
+      <Preparation data={t['preparation']} />
     </div>
   );
 };

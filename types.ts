@@ -49,6 +49,32 @@ export interface RetreatDay {
     accommodation?: string;
 }
 
+export interface PreparationItem {
+  label: string;
+  text: string;
+}
+
+export interface PreparationSection {
+  title: string;
+  description?: string;
+  items: PreparationItem[];
+}
+
+export interface PreparationData {
+  title: string;
+  subtitle: string;
+  intro: string;
+  diet: PreparationSection;
+  packing: PreparationSection;
+  suggestions: PreparationSection;
+  closing: string;
+  risks: {
+    title: string;
+    intro: string;
+    sections: PreparationSection[];
+  };
+}
+
 export interface TranslationData {
   nav: {
     home: string;
@@ -95,6 +121,7 @@ export interface TranslationData {
       days: RetreatDay[];
       conclusion: string;
   };
+  preparation: PreparationData;
   testimonials: {
     title: string;
     items: TestimonialItem[];
