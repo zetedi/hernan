@@ -6,6 +6,7 @@ export const IMAGES = {
   about: "/about.jpg",
   ausangate: "/ausangate.jpg",
   mayra: "/mayra.jpg",
+  drum: "/drum.jpg",
   day1: "/day1.jpg",
   day2: "/day2.jpg",
   day3: "/day3.jpg",
@@ -124,6 +125,47 @@ const preparationDefault = {
   }
 };
 
+const footerDefault = {
+  description: "Experience the transformative power of Wachuma, the sacred Andean plant medicine known as San Pedro. Join Hernan in guided ceremonies that will help you reconnect with your inner self, heal deeply, and awaken your spirit near Cusco, in the heart of Peru’s Sacred Valley.",
+  columns: {
+    about: {
+      title: "About us",
+      items: [
+        { label: "About us", href: "/about" },
+        { label: "The Community", href: "#" },
+        { label: "Our Blog", href: "#" }
+      ]
+    },
+    useful: {
+      title: "Useful links",
+      items: [
+        { label: "Homepage", href: "/" },
+        { label: "Terms of Service", href: "#" },
+        { label: "Contact us", href: "/contact" }
+      ]
+    },
+    reviews: {
+      title: "Google Reviews",
+      rating: "4,9/5"
+    },
+    follow: {
+      title: "Follow us",
+      facebook: "https://www.facebook.com/hernan.wachuma",
+      instagram: "https://www.instagram.com/hernan_wachuma"
+    },
+    contact: {
+      title: "Contact us",
+      email: "contact@hernan-wachuma.com",
+      phone: "+51 928 383 821"
+    },
+    find: {
+      title: "Find us",
+      address: "Wayna Wasi, Pisac, Peru"
+    }
+  },
+  rights: "All rights reserved."
+};
+
 export const TRANSLATIONS: Record<Language, TranslationData> = {
   [Language.EN]: {
     nav: {
@@ -175,6 +217,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         {
           title: "2 Day Retreat",
           description: "Deep immersion at Wayna Wasi and Kinsacocha. Preparation, Ceremony, and Accommodation included.",
+          price: "Inquire"
+        },
+        {
+          title: "15 Day Deep Transformation",
+          description: "A profound journey of self-discovery and healing. Inquire for details on this intensive retreat.",
           price: "Inquire"
         },
         {
@@ -259,9 +306,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       },
       info: "We are located in the heart of the Sacred Valley, near Calca, Cusco."
     },
-    footer: {
-      rights: "All rights reserved."
-    }
+    footer: footerDefault
   },
   [Language.ES]: {
     nav: {
@@ -312,6 +357,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         {
           title: "Retiro de 2 Días",
           description: "Inmersión profunda en Wayna Wasi y Kinsacocha. Preparación, Ceremonia y Alojamiento incluidos.",
+          price: "Consultar"
+        },
+        {
+          title: "Transformación Profunda de 15 Días",
+          description: "Un viaje profundo de autodescubrimiento y sanación. Consulta para más detalles sobre este retiro intensivo.",
           price: "Consultar"
         },
         {
@@ -396,9 +446,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       },
       info: "Estamos ubicados en el corazón del Valle Sagrado, cerca de Calca, Cusco."
     },
-    footer: {
-      rights: "Todos los derechos reservados."
-    }
+    footer: footerDefault
   },
   [Language.QU]: {
     nav: {
@@ -449,6 +497,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         {
           title: "2 P'unchaw T'aqakuy",
           description: "Wayna Wasipi Kinsacochapi ima. Wakichikuy, Ceremonia, Puñuna ima.",
+          price: "Tapukuy"
+        },
+        {
+          title: "15 P'unchaw Hatun T'aqakuy",
+          description: "Hatun puririy ukhunchikman. Kay hatun hampikuymanta tapukuy.",
           price: "Tapukuy"
         },
         {
@@ -533,9 +586,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       },
       info: "Valle Sagrado sunqunpi tarikuyku, Calca, Cusco qayllapi."
     },
-    footer: {
-      rights: "Tukuy derechokuna waqaychasqa."
-    }
+    footer: footerDefault
   },
   [Language.AR]: {
     nav: {
@@ -586,6 +637,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         {
           title: "خلوة لمدة يومين",
           description: "انغماس عميق في واينا واسي وكينساكوتشا. يشمل التحضير والاحتفال والإقامة.",
+          price: "استفسر"
+        },
+        {
+          title: "تحول عميق لمدة 15 يومًا",
+          description: "رحلة عميقة لاكتشاف الذات والشفاء. استفسر للحصول على تفاصيل حول هذه الخلوة المكثفة.",
           price: "استفسر"
         },
         {
@@ -670,9 +726,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       },
       info: "نحن موجودون في قلب الوادي المقدس، بالقرب من كالكا، كوسكو."
     },
-    footer: {
-      rights: "جميع الحقوق محفوظة."
-    }
+    footer: footerDefault
   },
   [Language.JA]: {
     nav: {
@@ -723,6 +777,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         {
           title: "2日間リトリート",
           description: "ワイナ・ワシとキンサコチャでの深い没入。準備、セレモニー、宿泊が含まれます。",
+          price: "お問い合わせ"
+        },
+        {
+          title: "15日間の深い変容",
+          description: "自己発見と癒しの深い旅。この集中的なリトリートの詳細についてはお問い合わせください。",
           price: "お問い合わせ"
         },
         {
@@ -807,9 +866,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       },
       info: "私たちはクスコのカルカ近く、聖なる谷の中心に位置しています。"
     },
-    footer: {
-      rights: "全著作権所有。"
-    }
+    footer: footerDefault
   },
   [Language.HU]: {
     nav: {
@@ -860,6 +917,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         {
           title: "2 Napos Elvonulás",
           description: "Mély elmélyülés a Wayna Wasi-ban és Kinsacochában. Felkészülés, Szertartás és Szállás.",
+          price: "Érdeklődj"
+        },
+        {
+          title: "15 Napos Mély Átalakulás",
+          description: "Az önfelfedezés és gyógyulás mély utazása. Érdeklődj a részletekért erről az intenzív elvonulásról.",
           price: "Érdeklődj"
         },
         {
@@ -944,9 +1006,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       },
       info: "A Szent Völgy szívében, Calca közelében, Cuscóban találhatsz meg minket."
     },
-    footer: {
-      rights: "Minden jog fenntartva."
-    }
+    footer: footerDefault
   },
   [Language.SA]: {
     nav: {
@@ -997,6 +1057,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         {
           title: "२ दिवसीय शिबिरम्",
           description: "वयना वसि तथा किन्साकोच इत्यत्र गभीरं निमज्जनम्। सज्जता, संस्कारः, आवासः च।",
+          price: "पृच्छतु"
+        },
+        {
+          title: "१५ दिवसीय गभीर परिवर्तन",
+          description: "आत्म-आविष्कारस्य चिकित्सायाः च गभीरा यात्रा। अस्य गहनशिबिरस्य विषये विवरणार्थं पृच्छतु।",
           price: "पृच्छतु"
         },
         {
@@ -1081,8 +1146,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       },
       info: "वयं पवित्र उपत्यकायाः हृदये, काल्का, कुस्को समीपे स्थिताः स्मः।"
     },
-    footer: {
-      rights: "सर्वाधिकारः सुरक्षितः।"
-    }
+    footer: footerDefault
   }
 };

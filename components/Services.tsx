@@ -28,22 +28,28 @@ export const Services: React.FC<ServicesProps> = ({ t }) => {
           {t.items.map((item, index) => {
             const Icon = icons[index % icons.length];
             const isRetreat2Day = item.title.includes("2 Day") || item.title.includes("2 Días") || item.title.includes("2 P'unchaw") || item.title.includes("لمدة يومين") || item.title.includes("2日間") || item.title.includes("2 Napos") || item.title.includes("२ दिवसीय");
+            const isDeeperWork = item.title.includes("15 Day") || item.title.includes("15 Días") || item.title.includes("15 P'unchaw") || item.title.includes("15 يومًا") || item.title.includes("15日間") || item.title.includes("15 Napos") || item.title.includes("१५ दिवसीय") || item.title.includes("Deep") || item.title.includes("Profunda");
 
             // Base styling
             const baseClasses = "border border-pacha-leaf/30 p-8 rounded-xl transition-all duration-300 group flex flex-col relative overflow-hidden backdrop-blur-sm";
-            // Conditional styling: If retreat, no bg color (image used). If normal, use earth color.
-            const colorClasses = isRetreat2Day 
+            // Conditional styling: If special card (retreat or deeper work), no bg color (image used). If normal, use earth color.
+            const colorClasses = (isRetreat2Day || isDeeperWork)
                 ? "hover:border-pacha-gold" 
                 : "bg-pacha-earth/50 hover:bg-pacha-earth hover:border-pacha-gold";
+
+            // Determine Background Image
+            let bgImage = null;
+            if (isRetreat2Day) bgImage = IMAGES.mayra;
+            if (isDeeperWork) bgImage = IMAGES.drum;
 
             return (
               <div key={index} className={`${baseClasses} ${colorClasses}`}>
                 
-                {/* Background Image for 2-Day Retreat */}
-                {isRetreat2Day && (
+                {/* Background Image for Special Cards */}
+                {bgImage && (
                     <>
                         <img 
-                            src={IMAGES.mayra} 
+                            src={bgImage} 
                             alt="Background" 
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
@@ -67,12 +73,19 @@ export const Services: React.FC<ServicesProps> = ({ t }) => {
                             <span className="text-pacha-sand font-mono text-sm uppercase tracking-wider">Contribution</span>
                             <span className="text-xl font-bold text-pacha-gold">{item.price}</span>
                         </div>
-                        {isRetreat2Day && (
+                        {isRetreat2Day ? (
                             <Link 
                                 to="/retreat-2day"
                                 className="block w-full text-center bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white font-bold py-2 rounded-lg transition-colors border border-pacha-leaf/50"
                             >
                                 View Details
+                            </Link>
+                        ) : (
+                          <Link 
+                                to="/contact"
+                                className={`block w-full text-center font-bold py-2 rounded-lg transition-colors border ${isDeeperWork ? 'bg-pacha-gold/20 hover:bg-pacha-gold/40 text-pacha-gold border-pacha-gold/50' : 'bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white border-pacha-leaf/50'}`}
+                            >
+                                Inquire
                             </Link>
                         )}
                     </div>

@@ -7,7 +7,7 @@ interface ContactProps {
   footerT: TranslationData['footer'];
 }
 
-export const Contact: React.FC<ContactProps> = ({ t, footerT }) => {
+export const Contact: React.FC<ContactProps> = ({ t }) => {
   return (
     <section id="contact" className="bg-pacha-stone text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48 pb-20 md:pt-56">
@@ -83,11 +83,6 @@ export const Contact: React.FC<ContactProps> = ({ t, footerT }) => {
           </div>
 
         </div>
-      </div>
-      
-      {/* Footer */}
-      <div className="border-t border-white/5 py-8 text-center text-sm text-gray-500">
-        <p>&copy; {new Date().getFullYear()} Hernan Wachuma. {footerT.rights}</p>
       </div>
     </section>
   );

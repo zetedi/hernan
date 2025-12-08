@@ -40,7 +40,7 @@ export interface BenefitItem {
 export interface ItineraryDay {
   day: string;
   title: string;
-  description: string;
+  description: string | string[];
 }
 
 export interface RetreatDay {
@@ -73,6 +73,44 @@ export interface PreparationData {
     intro: string;
     sections: PreparationSection[];
   };
+}
+
+export interface FooterLink {
+  label: string;
+  href: string;
+}
+
+export interface FooterData {
+  description: string;
+  columns: {
+    about: {
+      title: string;
+      items: FooterLink[];
+    };
+    useful: {
+      title: string;
+      items: FooterLink[];
+    };
+    reviews: {
+      title: string;
+      rating: string;
+    };
+    follow: {
+      title: string;
+      facebook: string;
+      instagram: string;
+    };
+    contact: {
+      title: string;
+      email: string;
+      phone: string;
+    };
+    find: {
+      title: string;
+      address: string;
+    };
+  };
+  rights: string;
 }
 
 export interface TranslationData {
@@ -110,7 +148,7 @@ export interface TranslationData {
   ausangate: {
     title: string;
     subtitle: string;
-    description: string;
+    description: string | string[];
     itinerary: ItineraryDay[];
     cta: string;
   };
@@ -136,7 +174,5 @@ export interface TranslationData {
     };
     info: string;
   };
-  footer: {
-    rights: string;
-  };
+  footer: FooterData;
 }

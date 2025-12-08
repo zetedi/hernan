@@ -11,7 +11,7 @@ export const About: React.FC<AboutProps> = ({ t }) => {
     <section id="about" className="pt-48 pb-20 bg-pacha-stone">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="clearfix">
-          {/* Floated Image */}
+          {/* Floated Image - No Hover Animation */}
           <div className="float-left mr-8 mb-4 w-40 md:w-72">
             <div className="relative">
                 <img 
