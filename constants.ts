@@ -343,8 +343,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "Conoce a Hernan",
       subtitle: "Guardián del Cactus Sagrado",
       description: [
-        "Hernan ha dedicado su vida al estudio y preservación de la sabiduría ancestral andina. Nacido en el corazón de los Andes, lleva el linaje de sus antepasados, compartiendo el poder curativo del cactus Wachuma (San Pedro).",
-        "Sus ceremonias no son solo rituales; son viajes profundos hacia el ser, guiados por los espíritus de las montañas (Apus) y la Madre Tierra (Pachamama). Con más de 20 años de experiencia, Hernan brinda un espacio seguro, auténtico y transformador."
+        "<strong>Hernan Colque</strong> es nativo Quechua y un devoto facilitador de <strong>ceremonias de Wachuma (San Pedro)</strong>, profundamente arraigado en las tradiciones sagradas de los Andes. Nacido a más de 5000m en <strong>Viacha</strong>, una comunidad de altura de <strong>Pisac</strong>, Hernan lleva un linaje de sanación medicinal que se remonta a tiempos pre-incas.",
+        "Según la tradición ancestral, solo un hijo por generación puede heredar este camino, y debe elegirlo voluntariamente. La sabiduría pasó de su abuelo Carmen a su padre Beninho. Entre siete hermanos, Hernan eligió la medicina a una edad muy temprana, convirtiéndose en el único portador de este antiguo legado y su profunda conexión con la <strong>Pachamama (Madre Tierra)</strong>.",
+        "<strong>Pisac y Viacha, Dos Espacios Sagrados.</strong> Estamos ubicados en <strong>Pisac</strong>, un pueblo vibrante en el Valle Sagrado, donde realizamos ceremonias y ofrecemos alojamiento tranquilo en el <strong>Hotel Wayna Wasi</strong>. Para una inmersión más profunda, nuestros retiros de varios días se llevan a cabo en <strong>Viacha</strong>, una comunidad serena en lo alto de Pisac. Aquí, los participantes se involucran con las tradiciones locales y disfrutan de la tranquilidad de las montañas, ideal para una experiencia profunda de Huachuma."
       ]
     },
     services: {
@@ -497,8 +498,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "Hernanwan riqsinakuy",
       subtitle: "Wachumaq pakaqnin",
       description: [
-        "Hernanqa tukuy kawsayninta churarqan Andes yachaykunata waqaychayman. Andes sunqunpi paqarisqa, ñawpa taytankunaq yachayninta apamun, Wachuma (San Pedro) hampiyta runakunaman qaraspa.",
-        "Paypa ruwayninkunaqa manan haywarikuyllachu; ukhunchikman puririymi, Apukunaq Pachamamaq pusasqan. 20 wata masñan kaypi llank'an, Hernanqa chiqaq, qhali, allin tinkuyta qusunki."
+        "<strong>Hernan Colque</strong>qa Quechua runan, <strong>Wachuma hampiy</strong> ruwaq, Andes ñawpa yachaykunapi saphichasqa. 5000m hanaqpi paqarisqa <strong>Viacha</strong> ayllupi, <strong>Pisac</strong> qayllapi, Hernan ñawpa hampiy yachayta apamun.",
+        "Ñawpa kamachikuykuna hina, sapa miraymanta huk wawakllan kay ñanta qatinan, pay kikinmi akllakunan. Hatun taytan Carmenmanta taytan Beninhoman yachay chayarqan. Qanchis wawqipanantinmanta, Hernanmi huch'uylanpi hampiyta akllakurqan, kay ñawpa yachayta apaspa <strong>Pachamamawan</strong> tinkuspa.",
+        "<strong>Pisacwan Viachawan, Iskay Willka T'aqakuna.</strong> Tiyayku <strong>Pisac</strong> llaqtapi, Valle Sagradopi, maypichus ceremoniyakunata ruwayku, thak puñunata <strong>Wayna Wasi Hotel</strong>pi quykuspa. Aswan ukhuman rinapaq, achka p'unchaw t'aqakuykunaqa <strong>Viacha</strong>pi ruwakun, Pisac patapi tiyaq ayllu. Kaypi, runakuna ayllu yachaykunawan tinkunku, urqukunaq thak kaynintapas tarinku—Huachumawan allin tinkunapaq."
       ]
     },
     services: {
@@ -651,8 +653,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "تعرف على هيرنان",
       subtitle: "حارس الصبار المقدس",
       description: [
-        "كرس هيرنان حياته لدراسة وحفظ حكمة الأنديز القديمة. ولد في قلب الأنديز، ويحمل سلالة أسلافه، ويشارك القوة الشفائية لصبار واتشوما (سان بيدرو).",
-        "احتفالاته ليست مجرد طقوس؛ إنها رحلات عميقة داخل الذات، تسترشد بأرواح الجبال (آبوس) والأرض الأم (باتشاماما). مع أكثر من 20 عامًا من الخبرة، يوفر هيرنان مساحة آمنة وحقيقية وتحويلية."
+        "<strong>هيرنان كولكي</strong> هو من سكان الكيتشوا الأصليين وميسّر مخلص <strong>لاحتفالات واتشوما (سان بيدرو)</strong>، متجذر بعمق في التقاليد المقدسة للأنديز. ولد على ارتفاع يزيد عن 5000 متر في <strong>فياتشا</strong>، وهو مجتمع مرتفع في <strong>بيساك</strong>، ويحمل هيرنان سلالة علاجية طبية تعود إلى عصور ما قبل الإنكا.",
+        "وفقًا لتقليد الأجداد، يمكن لطفل واحد فقط في كل جيل أن يرث هذا المسار، ويجب عليه اختياره طواعية. انتقلت الحكمة من جده كارمن إلى والده بنينيو. من بين سبعة أشقاء، اختار هيرنان الطب في سن مبكرة جدًا، ليصبح الحامل الوحيد لهذا الإرث القديم وعلاقته العميقة بـ <strong>باتشاماما (الأرض الأم)</strong>.",
+        "<strong>بيساك وفياتشا، مساحتان مقدستان.</strong> نحن موجودون في <strong>بيساك</strong>، وهي بلدة نابضة بالحياة في الوادي المقدس، حيث نستضيف الاحتفالات ونوفر أماكن إقامة هادئة في <strong>فندق واينا واسي</strong>. للحصول على انغماس أعمق، تُعقد خلواتنا لعدة أيام في <strong>فياتشا</strong>، وهو مجتمع هادئ فوق بيساك. هنا، يشارك الحاضرون في التقاليد المحلية ويستمتعون بهدوء الجبال - وهو أمر مثالي لتجربة هواتشوما عميقة."
       ]
     },
     services: {
@@ -824,8 +827,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "ヘルナンについて",
       subtitle: "聖なるサボテンの守護者",
       description: [
-        "ヘルナンは、アンデスの先祖代々の知恵の研究と保存に人生を捧げてきました。アンデスの中心で生まれた彼は、先祖の血統を受け継ぎ、ワチュマ（サンペドロ）サボテンの治癒力を共有しています。",
-        "彼のセレモニーは単なる儀式ではありません。それは、山の精霊（アプ）と母なる大地（パチャママ）に導かれた、自己への深い旅です。20年以上の経験を持つヘルナンは、安全で、本物の、変容的な空間を提供します。"
+        "<strong>ヘルナン・コルケ</strong>は、ケチュア族の出身であり、<strong>ワチュマ（サンペドロ）セレモニー</strong>の献身的なファシリテーターです。アンデスの神聖な伝統に深く根ざしています。<strong>ピサック</strong>の高地コミュニティである<strong>ヴィアチャ</strong>の標高5000m以上で生まれたヘルナンは、プレ・インカ時代にまで遡る薬用治癒の血統を受け継いでいます。",
+        "先祖代々の伝統によれば、各世代に一人の子供だけがこの道を継承することができ、彼らは自発的にそれを選ばなければなりません。知恵は祖父のカルメンから父のベニーニョへと受け継がれました。7人の兄弟の中で、ヘルナンは非常に早い年齢で薬を選び、この古代の遺産と<strong>パチャママ（母なる大地）</strong>との深いつながりの唯一の担い手となりました。",
+        "<strong>ピサックとヴィアチャ、二つの聖なる空間。</strong> 私たちは聖なる谷の活気ある町<strong>ピサック</strong>に拠点を置き、そこでセレモニーを開催し、<strong>ワイナ・ワシ・ホテル</strong>で静かな宿泊施設を提供しています。より深い没入体験のために、数日間のリトリートはピサックの高台にある静かなコミュニティ、<strong>ヴィアチャ</strong>で開催されます。ここでは、参加者は地元の伝統に触れ、山の静けさを楽しむことができます。これは、深いワチュマ体験に理想的です。"
       ]
     },
     services: {
@@ -978,8 +982,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "Ismerd meg Hernant",
       subtitle: "A Szent Kaktusz Őrzője",
       description: [
-        "Hernan életét az andoki ősi bölcsesség tanulmányozásának és megőrzésének szentelte. Az Andok szívében született, ősei vonalát viszi tovább, megosztva a Wachuma (San Pedro) kaktusz gyógyító erejét.",
-        "Szertartásai nem csupán rituálék; mély utazások az önvalóba, a hegyek szellemei (Apuk) és a Földanya (Pacha Mama) vezetésével. Több mint 20 éves tapasztalattal Hernan biztonságos, hiteles és átalakító teret biztosít."
+        "<strong>Hernan Colque</strong>, a Quechua nép szülötte, elkötelezett vezetője a <strong>Wachuma (San Pedro) szertartásoknak</strong>, melyek gyökerei mélyen az Andok szent hagyományaiba nyúlnak vissza. <strong>Viacha</strong> 5000 méter feletti, <strong>Pisac</strong> melletti közösségében született és nevelkedett, így Hernan egy olyan gyógyító vonalat visz tovább, amely az inka idők előtti korokig nyúlik vissza.",
+        "Az ősi hagyományok szerint generációnként csak egy gyermek örökölheti ezt az utat, és ezt önként kell választania. A bölcsesség nagyapjától, Carmentől szállt apjára, Beninhóra. Hét testvére közül Hernan már nagyon fiatalon választotta a gyógyítást, így ő lett ennek az ősi örökségnek és a <strong>Pacha Mamával (Földanya)</strong> való mély kapcsolatnak az egyedüli hordozója.",
+        "<strong>Pisac és Viacha, Két Szent Tér.</strong> Székhelyünk <strong>Pisacban</strong>, a Szent Völgy egyik nyüzsgő városában található, ahol szertartásokat tartunk és békés szállást kínálunk a <strong>Wayna Wasi Hotelben</strong>. A mélyebb elmélyülés érdekében többnapos elvonulásainkat <strong>Viachában</strong> tartjuk, egy békés közösségben, magasan Pisac felett. Itt a résztvevők megismerkedhetnek a helyi hagyományokkal és élvezhetik a hegyek nyugalmát – ami ideális egy mély Huachuma élményhez."
       ]
     },
     services: {
@@ -1132,8 +1137,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       title: "हर्नानेन सह मिलतु",
       subtitle: "पवित्र सिदु रक्षकः",
       description: [
-        "हर्नानः अण्डीज पर्वतस्य पूर्वजज्ञानस्य अध्ययने संरक्षणे च स्वजीवनं समर्पितवान्। अण्डीज पर्वतस्य हृदये जातः सः स्वपूर्वजानां वंशं वहति, वाचुमा (San Pedro) सिदुना चिकित्साशक्तिं वितरति।",
-        "तस्य संस्काराः न केवलं कर्मकाण्डाः; ते पर्वतानां (Apus) पृथिव्याः (Pachamama) च आत्मभिः मार्गदर्शिते आत्मनि गभीराः यात्राः सन्ति। २० वर्षाणाम् अधिकानुभवेन सह, हर्नानः सुरक्षितं, प्रामाणिकं, परिवर्तनकारी च स्थानं ददाति।"
+        "<strong>हर्नानः (Hernan Colque)</strong> एकः क्वेशुआ (Quechua) देशीयः अस्ति तथा <strong>वाचुमा (San Pedro) संस्काराणां</strong> एकः समर्पितः सुगमकर्ता अस्ति, यः अण्डीज पर्वतस्य पवित्रपरम्परासु गभीरं रूढः अस्ति। <strong>पिसक् (Pisac)</strong> इत्यस्य उच्च-उन्नयन-समुदाये <strong>वियाचा (Viacha)</strong> इत्यत्र ५००० मीटरतः अधिके जातः, हर्नानः औषधीय-चिकित्सा-वंशं वहति यत् पूर्व-इन्का-काले अस्ति।",
+        "पैतृकपरम्परानुसारं, प्रति पीढीं केवलं एकः बालः एव एतं मार्गं उत्तराधिकारं प्राप्तुं शक्नोति, सः च स्वेच्छया तस्य चयनं कर्तव्यम्। तस्य पितामहः कार्मेन् इत्यस्मात् तस्य पिता बेनिन्हो इत्यस्मै ज्ञानं प्राप्तम्। सप्तसहोदराणां मध्ये, हर्नानः अतीव बाल्यकाले एव ओषधिं चितवान्, अस्य प्राचीनपरम्परायाः <strong>पचममया (मातृपृथिव्या)</strong> सह तस्य गभीरसम्बन्धस्य च एकमात्रः वाहकः अभवत्।",
+        "<strong>पिसक् तथा वियाचा, द्वे पवित्र स्थाने।</strong> वयं पवित्र उपत्यकायाः जीवन्त नगरे <strong>पिसक्</strong> मध्ये स्थिताः स्मः, यत्र वयं संस्कारान् आयोजयामः तथा <strong>वयना वसि होटले</strong> शान्तं आवासं यच्छामः। गभीर निमज्जनाय, अस्माकं बहुदिवसीय शिबिराणि पिसक् उपरि शान्त समुदाय <strong>वियाचा</strong> मध्ये भवन्ति। अत्र, भागिनः स्थानीय परम्पराभिः सह मिलन्ति पर्वतानां शान्तिं च अनुभवन्ति—गभीर वाचुमा अनुभवाय उत्तमम्।"
       ]
     },
     services: {
