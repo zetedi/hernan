@@ -175,7 +175,8 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       cta: "Book a Ceremony",
       ausangateTeaser: {
         label: "Inclusive",
-        title: "Ausangate Journey"
+        title: "Ausangate Journey",
+        date: "December 3rd, 2026"
       }
     },
     benefits: {
@@ -316,7 +317,8 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       cta: "Reserva una Ceremonia",
       ausangateTeaser: {
         label: "Inclusivo",
-        title: "Viaje al Ausangate"
+        title: "Viaje al Ausangate",
+        date: "3 de Diciembre, 2026"
       }
     },
     benefits: {
@@ -469,7 +471,8 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       cta: "Hampiyta mañakuy",
       ausangateTeaser: {
         label: "Llapanpaq",
-        title: "Apu Ausangate Puririy"
+        title: "Apu Ausangate Puririy",
+        date: "3 Disimbre, 2026"
       }
     },
     benefits: {
@@ -622,7 +625,8 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       cta: "احجز احتفالاً",
       ausangateTeaser: {
         label: "شامل",
-        title: "رحلة أوسانجاتي"
+        title: "رحلة أوسانجاتي",
+        date: "3 ديسمبر 2026"
       }
     },
     benefits: {
@@ -794,7 +798,8 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       cta: "セレモニーを予約する",
       ausangateTeaser: {
         label: "包括的",
-        title: "アウサンガテへの旅"
+        title: "アウサンガテへの旅",
+        date: "2026年12月3日"
       }
     },
     benefits: {
@@ -947,7 +952,8 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       cta: "Foglalj Szertartást",
       ausangateTeaser: {
         label: "Inkluzív",
-        title: "Ausangate Utazás"
+        title: "Ausangate Utazás",
+        date: "2026. december 3."
       }
     },
     benefits: {
@@ -1100,7 +1106,8 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       cta: "संस्कारस्य आरक्षणं कुरुत",
       ausangateTeaser: {
         label: "सर्वसमावेशक (Inclusive)",
-        title: "औसंगते यात्रा"
+        title: "औसंगते यात्रा",
+        date: "दिसम्बर ३, २०२६"
       }
     },
     benefits: {

@@ -124,6 +124,7 @@ export interface TranslationData {
     ausangateTeaser: {
       label: string;
       title: string;
+      date: string;
     };
   };
   benefits: {

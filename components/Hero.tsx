@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationData } from '../types';
 import { IMAGES } from '../constants';
+import { Calendar } from 'lucide-react';
 
 interface HeroProps {
   t: TranslationData['hero'];
@@ -51,9 +52,13 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
                 <span className="text-pacha-gold font-bold uppercase tracking-[0.2em] text-sm mb-2 bg-black/40 px-3 py-1 rounded-full border border-pacha-gold/50 backdrop-blur-sm">
                     {t.ausangateTeaser.label}
                 </span>
-                <h3 className="text-white font-serif text-3xl md:text-4xl drop-shadow-xl font-bold tracking-wide">
+                <h3 className="text-white font-serif text-3xl md:text-4xl drop-shadow-xl font-bold tracking-wide mb-2">
                     {t.ausangateTeaser.title}
                 </h3>
+                 <div className="flex items-center gap-2 text-white/90 bg-black/30 px-3 py-1 rounded-md backdrop-blur-sm">
+                    <Calendar className="w-4 h-4 text-pacha-gold" />
+                    <span className="font-light tracking-wide text-sm">{t.ausangateTeaser.date}</span>
+                 </div>
             </div>
           </Link>
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -20,27 +21,25 @@ const App: React.FC = () => {
 
   const t = TRANSLATIONS[currentLanguage];
 
-  // Handle document title and RTL direction based on language
-  useEffect(() => {
-    // Set Title
-    if (currentLanguage === Language.EN) document.title = "Hernan Wachuma - Sacred Medicine";
-    else if (currentLanguage === Language.ES) document.title = "Hernan Wachuma - Medicina Sagrada";
-    else if (currentLanguage === Language.QU) document.title = "Hernan Wachuma - Hampi Wachuma";
-    else if (currentLanguage === Language.JA) document.title = "ヘルナン・ワチュマ - アンデスの聖なる薬";
-    else if (currentLanguage === Language.HU) document.title = "Hernan Wachuma - Andok Szent Gyógyító Ereje";
-    else if (currentLanguage === Language.SA) document.title = "Hernan Wachuma - पवित्र अण्डीज ओषधि";
-    else document.title = "هيرنان واتشوما - الطب المقدس"; // Arabic Title
-
-    // Set Text Direction (RTL/LTR)
-    if (currentLanguage === Language.AR) {
-      document.documentElement.dir = 'rtl';
-      document.documentElement.lang = 'ar';
-    } else {
-      document.documentElement.dir = 'ltr';
-      document.documentElement.lang = currentLanguage.toLowerCase();
+  // Helper to get title based on language
+  const getTitle = (lang: Language) => {
+    switch (lang) {
+        case Language.EN: return "Hernan Wachuma - Sacred Medicine";
+        case Language.ES: return "Hernan Wachuma - Medicina Sagrada";
+        case Language.QU: return "Hernan Wachuma - Hampi Wachuma";
+        case Language.JA: return "ヘルナン・ワチュマ - アンデスの聖なる薬";
+        case Language.HU: return "Hernan Wachuma - Andok Szent Gyógyító Ereje";
+        case Language.SA: return "Hernan Wachuma - पवित्र अण्डीज ओषधि";
+        case Language.AR: return "هيرنان واتشوما - الطب المقدس";
+        default: return "Hernan Wachuma";
     }
+  };
 
-  }, [currentLanguage]);
+  // Helper to get text direction
+  const getDir = (lang: Language) => lang === Language.AR ? 'rtl' : 'ltr';
+
+  // Helper to get HTML lang attribute
+  const getHtmlLang = (lang: Language) => lang.toLowerCase();
 
   // Scroll to top on route change
   useEffect(() => {
@@ -49,6 +48,11 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col font-sans text-gray-900">
+      <Helmet htmlAttributes={{ lang: getHtmlLang(currentLanguage), dir: getDir(currentLanguage) }}>
+        <title>{getTitle(currentLanguage)}</title>
+        <meta name="description" content={t.footer.description} />
+      </Helmet>
+
       <Navbar 
         t={t.nav} 
         currentLanguage={currentLanguage} 
