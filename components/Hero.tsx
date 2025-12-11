@@ -11,9 +11,9 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ t }) => {
   return (
     <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image - Parallax */}
+      {/* Background Image - Parallax (Disabled on Mobile) */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-fixed bg-no-repeat"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-scroll md:bg-fixed bg-no-repeat"
         style={{ backgroundImage: `url(${IMAGES.hero})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-pacha-stone" />

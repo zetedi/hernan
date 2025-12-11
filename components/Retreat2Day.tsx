@@ -21,10 +21,10 @@ export const Retreat2Day: React.FC<Retreat2DayProps> = ({ t }) => {
 
   return (
     <div className="bg-pacha-sand min-h-screen text-pacha-earth">
-      {/* Hero Header - Parallax */}
+      {/* Hero Header - Parallax (Disabled on Mobile) */}
       <div className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div 
-            className="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-center bg-scroll md:bg-fixed bg-no-repeat"
             style={{ backgroundImage: `url(${IMAGES.mayra})` }}
         >
           <div className="absolute inset-0 bg-black/40" />

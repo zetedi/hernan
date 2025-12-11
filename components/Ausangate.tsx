@@ -12,10 +12,10 @@ interface AusangateProps {
 export const Ausangate: React.FC<AusangateProps> = ({ t }) => {
   return (
     <div className="bg-pacha-stone min-h-screen">
-      {/* Hero Header - Parallax */}
+      {/* Hero Header - Parallax (Disabled on Mobile) */}
       <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
-            className="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-center bg-scroll md:bg-fixed bg-no-repeat"
             style={{ backgroundImage: `url(${IMAGES.ausangate})` }}
         >
           <div className="absolute inset-0 bg-black/50" />

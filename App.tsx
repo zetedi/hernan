@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -15,6 +14,7 @@ import { Retreat1Day } from './components/Retreat1Day';
 import { CostaRica } from './components/CostaRica';
 import { Footer } from './components/Footer';
 import { GoogleReviewsWidget } from './components/GoogleReviewsWidget';
+import { SEO } from './components/SEO';
 import { Language } from './types';
 import { TRANSLATIONS } from './constants';
 
@@ -51,10 +51,12 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col font-sans text-gray-900">
-      <Helmet htmlAttributes={{ lang: getHtmlLang(currentLanguage), dir: getDir(currentLanguage) }}>
-        <title>{getTitle(currentLanguage)}</title>
-        <meta name="description" content={t.footer.description} />
-      </Helmet>
+      <SEO 
+        title={getTitle(currentLanguage)}
+        description={t.footer.description}
+        lang={getHtmlLang(currentLanguage)}
+        dir={getDir(currentLanguage)}
+      />
 
       <Navbar 
         t={t.nav} 
