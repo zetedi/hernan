@@ -11,6 +11,8 @@ import { Contact } from './components/Contact';
 import { Benefits } from './components/Benefits';
 import { Ausangate } from './components/Ausangate';
 import { Retreat2Day } from './components/Retreat2Day';
+import { Retreat1Day } from './components/Retreat1Day';
+import { CostaRica } from './components/CostaRica';
 import { Footer } from './components/Footer';
 import { Language } from './types';
 import { TRANSLATIONS } from './constants';
@@ -76,8 +78,14 @@ const App: React.FC = () => {
           <Route path="/ausangate" element={
             <Ausangate t={{...t.ausangate, preparation: t.preparation} as any} />
           } />
+          <Route path="/costa-rica" element={
+            <CostaRica t={t.costaRica} preparation={t.preparation} />
+          } />
           <Route path="/retreat-2day" element={
             <Retreat2Day t={{...t.retreat2Day, preparation: t.preparation} as any} />
+          } />
+          <Route path="/retreat-1day" element={
+            <Retreat1Day t={t.retreat1Day} preparation={t.preparation} />
           } />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact t={t.contact} footerT={t.footer} />} />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TranslationData } from '../types';
 import { Mail, MapPin, Instagram, Facebook } from 'lucide-react';
 import { IMAGES } from '../constants';
@@ -9,6 +9,31 @@ interface ContactProps {
 }
 
 export const Contact: React.FC<ContactProps> = ({ t }) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Construct mailto link
+    const subject = `Inquiry from ${formData.name}`;
+    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+    const mailtoLink = `mailto:info@hernan-wachuma.com?subject=${encodeURIComponent(subject)}&body=${body}`; // Note: body isn't fully supported in all mail clients via URL, but works in many
+
+    // Open mail client
+    window.location.href = mailtoLink;
+  };
+
   return (
     <section id="contact" className="relative bg-pacha-stone text-gray-300 min-h-screen">
       {/* Background Image */}
@@ -58,11 +83,15 @@ export const Contact: React.FC<ContactProps> = ({ t }) => {
 
           {/* Form */}
           <div className="bg-pacha-earth/30 p-8 rounded-2xl border border-white/10 backdrop-blur-sm">
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-medium text-pacha-gold mb-2 uppercase tracking-wider">{t.form.name}</label>
                 <input 
                   type="text" 
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
                   className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-pacha-gold transition-colors"
                 />
               </div>
@@ -70,6 +99,10 @@ export const Contact: React.FC<ContactProps> = ({ t }) => {
                 <label className="block text-sm font-medium text-pacha-gold mb-2 uppercase tracking-wider">{t.form.email}</label>
                 <input 
                   type="email" 
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                   className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-pacha-gold transition-colors"
                 />
               </div>
@@ -77,6 +110,10 @@ export const Contact: React.FC<ContactProps> = ({ t }) => {
                 <label className="block text-sm font-medium text-pacha-gold mb-2 uppercase tracking-wider">{t.form.message}</label>
                 <textarea 
                   rows={4}
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                   className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-pacha-gold transition-colors"
                 ></textarea>
               </div>

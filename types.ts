@@ -126,6 +126,11 @@ export interface TranslationData {
       title: string;
       date: string;
     };
+    costaRicaTeaser: {
+        label: string;
+        title: string;
+        date: string;
+    };
   };
   benefits: {
     title: string;
@@ -149,7 +154,26 @@ export interface TranslationData {
     itinerary: ItineraryDay[];
     cta: string;
   };
+  costaRica: {
+      title: string;
+      subtitle: string;
+      intro: string;
+      description: string | string[];
+      details: {
+          location: string;
+          capacity: string;
+          dates: string;
+      };
+      cta: string;
+  };
   retreat2Day: {
+      title: string;
+      subtitle: string;
+      intro: string;
+      days: RetreatDay[];
+      conclusion: string;
+  };
+  retreat1Day: {
       title: string;
       subtitle: string;
       intro: string;

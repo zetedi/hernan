@@ -16,7 +16,6 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
-  const isGallery = location.pathname === '/gallery';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,9 +57,6 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
     ? 'w-12 h-12' 
     : 'w-12 h-12 md:w-32 md:h-32 md:mt-20';
 
-  // Logic for logo color: Green on Gallery page, otherwise White
-  const logoColorClass = isGallery ? 'text-pacha-leaf' : 'text-white';
-
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${navBackgroundClass}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -72,7 +68,7 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
             className="flex-shrink-0 flex items-center gap-3 cursor-pointer group" 
             onClick={() => window.scrollTo(0,0)}
           >
-            <div className={`relative transition-all duration-500 ease-in-out ${logoContainerClass} ${logoColorClass}`}>
+            <div className={`relative transition-all duration-500 ease-in-out text-white ${logoContainerClass}`}>
               <Logo className="w-full h-full object-contain drop-shadow-md" />
             </div>
             
