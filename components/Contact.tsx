@@ -11,9 +11,11 @@ interface ContactProps {
 export const Contact: React.FC<ContactProps> = ({ t }) => {
   return (
     <section id="contact" className="relative bg-pacha-stone text-gray-300 min-h-screen flex items-center">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-         <img src={IMAGES.connect} alt="Connect Background" className="w-full h-full object-cover" />
+      {/* Background Image - Parallax */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-fixed bg-no-repeat"
+        style={{ backgroundImage: `url(${IMAGES.connect})` }}
+      >
          <div className="absolute inset-0 bg-black/70" />
       </div>
 

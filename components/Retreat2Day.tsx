@@ -21,15 +21,12 @@ export const Retreat2Day: React.FC<Retreat2DayProps> = ({ t }) => {
 
   return (
     <div className="bg-pacha-sand min-h-screen text-pacha-earth">
-      {/* Hero Header */}
+      {/* Hero Header - Parallax */}
       <div className="relative h-[50vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src={IMAGES.mayra}
-            onError={(e) => { e.currentTarget.src = IMAGES.hero; }}
-            alt="Mayra Background" 
-            className="w-full h-full object-cover"
-          />
+        <div 
+            className="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat"
+            style={{ backgroundImage: `url(${IMAGES.mayra})` }}
+        >
           <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">

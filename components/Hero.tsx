@@ -11,13 +11,11 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ t }) => {
   return (
     <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={IMAGES.hero}
-          alt="Sacred Valley Landscape" 
-          className="w-full h-full object-cover"
-        />
+      {/* Background Image - Parallax */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-fixed bg-no-repeat"
+        style={{ backgroundImage: `url(${IMAGES.hero})` }}
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-pacha-stone" />
       </div>
 

@@ -12,15 +12,12 @@ interface AusangateProps {
 export const Ausangate: React.FC<AusangateProps> = ({ t }) => {
   return (
     <div className="bg-pacha-stone min-h-screen">
-      {/* Hero Header */}
+      {/* Hero Header - Parallax */}
       <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src={IMAGES.ausangate}
-            onError={(e) => { e.currentTarget.src = IMAGES.hero; }}
-            alt="Ausangate Mountain" 
-            className="w-full h-full object-cover"
-          />
+        <div 
+            className="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat"
+            style={{ backgroundImage: `url(${IMAGES.ausangate})` }}
+        >
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">

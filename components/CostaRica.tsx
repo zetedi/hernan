@@ -13,15 +13,12 @@ interface CostaRicaProps {
 export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation }) => {
   return (
     <div className="bg-pacha-sand min-h-screen text-pacha-earth">
-      {/* Hero Header */}
+      {/* Hero Header - Parallax */}
       <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src={IMAGES.costa}
-            onError={(e) => { e.currentTarget.src = IMAGES.hero; }}
-            alt="Costa Rica" 
-            className="w-full h-full object-cover"
-          />
+        <div 
+            className="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat"
+            style={{ backgroundImage: `url(${IMAGES.costa})` }}
+        >
           <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-t from-pacha-sand via-transparent to-transparent" />
         </div>

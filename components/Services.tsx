@@ -13,8 +13,8 @@ export const Services: React.FC<ServicesProps> = ({ t }) => {
 
   return (
     <section id="services" className="pt-32 pb-24 bg-pacha-stone text-white relative">
-       {/* Background Pattern */}
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+       {/* Background Pattern - Parallax */}
+       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 bg-fixed"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
