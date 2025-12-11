@@ -14,6 +14,7 @@ import { Retreat2Day } from './components/Retreat2Day';
 import { Retreat1Day } from './components/Retreat1Day';
 import { CostaRica } from './components/CostaRica';
 import { Footer } from './components/Footer';
+import { GoogleReviewsWidget } from './components/GoogleReviewsWidget';
 import { Language } from './types';
 import { TRANSLATIONS } from './constants';
 
@@ -66,6 +67,7 @@ const App: React.FC = () => {
             <>
               <Hero t={t.hero} />
               <Benefits t={t.benefits} />
+              <GoogleReviewsWidget />
             </>
           } />
           <Route path="/about" element={

@@ -186,7 +186,7 @@ const footerDefault = {
     },
     contact: {
       title: "Contact us",
-      email: "contact@hernan-wachuma.com",
+      email: "hernan.wachuma@gmail.com",
       phone: "+51 928 383 821"
     },
     find: {
