@@ -89,7 +89,7 @@ const costaRicaDefault = {
     details: {
         location: "Secret Location, Costa Rica",
         capacity: "Limited to 21 Souls",
-        dates: "Coming Soon"
+        dates: "January 22-28, 2026"
     },
     cta: "Request Invitation"
 };
@@ -215,7 +215,7 @@ const enTranslations: TranslationData = {
       costaRicaTeaser: {
         label: "Special Event",
         title: "Costa Rica Pilgrimage",
-        date: "Coming Soon"
+        date: "January 22-28, 2026"
       }
     },
     benefits: {
@@ -366,7 +366,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           subtitle: "Reconecta con la Pachamama a través de ceremonias tradicionales de Wachuma en el Valle Sagrado.",
           cta: "Reserva una Ceremonia",
           ausangateTeaser: { label: "Inclusivo", title: "Viaje al Ausangate", date: "3 de Enero, 2026" },
-          costaRicaTeaser: { label: "Evento Especial", title: "Peregrinaje a Costa Rica", date: "Próximamente" }
+          costaRicaTeaser: { label: "Evento Especial", title: "Peregrinaje a Costa Rica", date: "22-28 de Enero, 2026" }
       },
       benefits: {
         title: "El Poder del Wachuma",
@@ -422,7 +422,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             "Guiados por una profunda visión y un mensaje directo de la medicina, este retiro es un peregrinaje espiritual que conecta la sabiduría de los Andes con el poder limpiador del océano.",
             "Nos reuniremos en un lugar secreto y apartado, inmersos en el abrazo de la naturaleza. Esta experiencia íntima está estrictamente limitada a 21 participantes."
         ],
-        details: { location: "Ubicación Secreta, Costa Rica", capacity: "Limitado a 21 Almas", dates: "Próximamente" },
+        details: { location: "Ubicación Secreta, Costa Rica", capacity: "Limitado a 21 Almas", dates: "22-28 de Enero, 2026" },
         cta: "Solicitar Invitación"
       },
       retreat2Day: {
@@ -520,7 +520,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           subtitle: "Pachamamawan tinkuy ñawpaq Wachuma raymikunawan Willka Qhichwapi.",
           cta: "Hampi Akllay",
           ausangateTeaser: { label: "Llapapaq", title: "Ausangate Puririy", date: "3 Enero killa, 2026" },
-          costaRicaTeaser: { label: "Hatun Raymi", title: "Costa Rica Puririy", date: "Chayamuq P'unchawkuna" }
+          costaRicaTeaser: { label: "Hatun Raymi", title: "Costa Rica Puririy", date: "22-28 Enero killa, 2026" }
       },
       benefits: {
         title: "Wachumaq Kallpan",
@@ -576,7 +576,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             "Huk musquymi kayta purichin, Ande yachayta mama quchawan tinkuchispa.",
             "Pakasqa k'itipin huñunakusun. 21 runallapaqmi."
         ],
-        details: { location: "Pakasqa K'iti, Costa Rica", capacity: "21 Runalla", dates: "Chayamuq P'unchaw" },
+        details: { location: "Pakasqa K'iti, Costa Rica", capacity: "21 Runalla", dates: "22-28 Enero killa, 2026" },
         cta: "Mañakuy"
       },
       retreat2Day: {
@@ -672,7 +672,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           subtitle: "تواصل مع باتشاماما من خلال احتفالات ووتشوما التقليدية في الوادي المقدس.",
           cta: "احجز احتفالاً",
           ausangateTeaser: { label: "شامل", title: "رحلة أوسانجاتي", date: "3 يناير 2026" },
-          costaRicaTeaser: { label: "حدث خاص", title: "حج كوستاريكا", date: "قريباً" }
+          costaRicaTeaser: { label: "حدث خاص", title: "حج كوستاريكا", date: "22-28 يناير 2026" }
       },
       benefits: {
         title: "قوة الواتشوما",
@@ -728,7 +728,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             "هذه الخلوة هي حج روحي يربط حكمة جبال الأنديز بالقوة المطهرة للمحيط.",
             "سنجتمع في مكان سري ومعزول."
         ],
-        details: { location: "موقع سري، كوستاريكا", capacity: "محدود بـ 21 روحاً", dates: "قريباً" },
+        details: { location: "موقع سري، كوستاريكا", capacity: "محدود بـ 21 روحاً", dates: "22-28 يناير 2026" },
         cta: "طلب دعوة"
       },
       retreat2Day: {
@@ -826,7 +826,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           subtitle: "聖なる谷での伝統的なワチュマセレモニーを通じて、パチャママと再びつながりましょう。",
           cta: "セレモニーを予約する",
           ausangateTeaser: { label: "包括的", title: "アウサンガテの旅", date: "2026年1月3日" },
-          costaRicaTeaser: { label: "特別イベント", title: "コスタリカ巡礼", date: "近日公開" }
+          costaRicaTeaser: { label: "特別イベント", title: "コスタリカ巡礼", date: "2026年1月22日-28日" }
       },
       benefits: {
         title: "ワチュマの力",
@@ -882,7 +882,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             "深いビジョンと薬からの直接のメッセージに導かれたこのリトリートは、アンデスの山々の知恵と海の浄化力を結ぶ精神的な巡礼です。",
             "自然に抱かれた秘密の人里離れた場所に集まります。"
         ],
-        details: { location: "秘密の場所、コスタリカ", capacity: "21名限定", dates: "近日公開" },
+        details: { location: "秘密の場所、コスタリカ", capacity: "21名限定", dates: "2026年1月22日-28日" },
         cta: "招待をリクエスト"
       },
       retreat2Day: {
@@ -980,7 +980,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           subtitle: "Kapcsolódj újra Pachamamával a hagyományos Wachuma szertartásokon keresztül a Szent Völgyben.",
           cta: "Szertartás Foglalása",
           ausangateTeaser: { label: "Exkluzív", title: "Ausangate Utazás", date: "2026. Január 3." },
-          costaRicaTeaser: { label: "Különleges Esemény", title: "Costa Rica-i Zarándoklat", date: "Hamarosan" }
+          costaRicaTeaser: { label: "Különleges Esemény", title: "Costa Rica-i Zarándoklat", date: "2026. Január 22-28." }
       },
       benefits: {
         title: "A Wachuma Ereje",
@@ -1036,7 +1036,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             "Ez az elvonulás egy spirituális zarándoklat, amely összeköti az Andok hegyeinek bölcsességét az óceán tisztító erejével.",
             "Egy titkos, eldugott helyen gyűlünk össze."
         ],
-        details: { location: "Titkos Helyszín, Costa Rica", capacity: "21 Lélekre Korlátozva", dates: "Hamarosan" },
+        details: { location: "Titkos Helyszín, Costa Rica", capacity: "21 Lélekre Korlátozva", dates: "2026. Január 22-28." },
         cta: "Meghívó Kérése"
       },
       retreat2Day: {
@@ -1134,7 +1134,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           subtitle: "पवित्र-उपत्यकायाम् पारम्परिक-वाचुमा-उत्सवैः सह पचमामायाः सह पुनः संयोगं कुरुत.",
           cta: "उत्सवं आरक्षयतु",
           ausangateTeaser: { label: "सम्पूर्ण", title: "औसंगते यात्रा", date: "३ जनवरी २०२६" },
-          costaRicaTeaser: { label: "विशेष आयोजन", title: "कोस्टारिका तीर्थयात्रा", date: "शीघ्रमेव" }
+          costaRicaTeaser: { label: "विशेष आयोजन", title: "कोस्टारिका तीर्थयात्रा", date: "२२-२८ जनवरी २०२६" }
       },
       benefits: {
         title: "वाचुमायाः शक्तिः",
@@ -1190,7 +1190,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             "पवित्र-पर्वतानां ज्ञानं समुद्रस्य शुद्धिकरण-शक्त्या सह संयोजयति इयं तीर्थयात्रा।",
             "वयं गुप्त-स्थाने मिलिष्यामः।"
         ],
-        details: { location: "गुप्त स्थानम्, कोस्टारिका", capacity: "२१ जनानां कृते सीमितम्", dates: "शीघ्रमेव" },
+        details: { location: "गुप्त स्थानम्, कोस्टारिका", capacity: "२१ जनानां कृते सीमितम्", dates: "२२-२८ जनवरी २०२६" },
         cta: "आमन्त्रणं याचताम्"
       },
       retreat2Day: {
