@@ -8,16 +8,11 @@ import { Preparation } from './Preparation';
 interface Retreat1DayProps {
   t: TranslationData['retreat1Day'];
   preparation: TranslationData['preparation'];
+  ui: TranslationData['ui'];
 }
 
-export const Retreat1Day: React.FC<Retreat1DayProps> = ({ t, preparation }) => {
-  const content = t || {
-      title: "1 Day Ceremony",
-      subtitle: "Sacred Sites of the Valley",
-      intro: "A focused and profound journey into the medicine.",
-      days: [],
-      conclusion: ""
-  };
+export const Retreat1Day: React.FC<Retreat1DayProps> = ({ t, preparation, ui }) => {
+  const content = t;
 
   return (
     <div className="bg-pacha-sand min-h-screen text-pacha-earth">
@@ -48,18 +43,18 @@ export const Retreat1Day: React.FC<Retreat1DayProps> = ({ t, preparation }) => {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="bg-white p-6 rounded-xl shadow-sm text-center border border-pacha-leaf/10">
                 <Clock className="w-8 h-8 text-pacha-leaf mx-auto mb-3" />
-                <h3 className="font-bold text-pacha-earth mb-1">Duration</h3>
-                <p className="text-gray-600 text-sm">Full Day (Morning to Afternoon)</p>
+                <h3 className="font-bold text-pacha-earth mb-1">{t.details.durationLabel}</h3>
+                <p className="text-gray-600 text-sm">{t.details.durationValue}</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm text-center border border-pacha-leaf/10">
                 <MapPin className="w-8 h-8 text-pacha-leaf mx-auto mb-3" />
-                <h3 className="font-bold text-pacha-earth mb-1">Location</h3>
-                <p className="text-gray-600 text-sm">Sacred Valley Sites</p>
+                <h3 className="font-bold text-pacha-earth mb-1">{t.details.locationLabel}</h3>
+                <p className="text-gray-600 text-sm">{t.details.locationValue}</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm text-center border border-pacha-leaf/10">
                 <Sun className="w-8 h-8 text-pacha-leaf mx-auto mb-3" />
-                <h3 className="font-bold text-pacha-earth mb-1">Focus</h3>
-                <p className="text-gray-600 text-sm">Connection & Clarity</p>
+                <h3 className="font-bold text-pacha-earth mb-1">{t.details.focusLabel}</h3>
+                <p className="text-gray-600 text-sm">{t.details.focusValue}</p>
             </div>
         </div>
 
@@ -80,7 +75,7 @@ export const Retreat1Day: React.FC<Retreat1DayProps> = ({ t, preparation }) => {
                     {day.accommodation && (
                         <div className="bg-pacha-sand/30 p-4 rounded-lg flex gap-3 items-start mt-8">
                             <p className="text-sm text-gray-600 italic">
-                                <span className="font-bold text-pacha-earth not-italic block mb-1">Note:</span>
+                                <span className="font-bold text-pacha-earth not-italic block mb-1">{ui.note}:</span>
                                 {day.accommodation}
                             </p>
                         </div>
@@ -98,7 +93,7 @@ export const Retreat1Day: React.FC<Retreat1DayProps> = ({ t, preparation }) => {
                 className="inline-flex items-center gap-2 bg-pacha-earth hover:bg-pacha-stone text-white font-bold py-4 px-12 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl uppercase tracking-widest text-sm"
             >
                 <Calendar className="w-5 h-5" />
-                <span>Book This Ceremony</span>
+                <span>{ui.bookCeremony}</span>
             </Link>
         </div>
 

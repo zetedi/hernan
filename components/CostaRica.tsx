@@ -8,9 +8,10 @@ import { Preparation } from './Preparation';
 interface CostaRicaProps {
   t: TranslationData['costaRica'];
   preparation: TranslationData['preparation'];
+  ui: TranslationData['ui'];
 }
 
-export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation }) => {
+export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui }) => {
   return (
     <div className="bg-pacha-sand min-h-screen text-pacha-earth">
       {/* Hero Header - Parallax (Disabled on Mobile) */}
@@ -47,7 +48,7 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation }) => {
             {/* Left Column: Details Card */}
             <div className="md:col-span-1 space-y-8">
                 <div className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-pacha-gold sticky top-32">
-                    <h3 className="font-serif font-bold text-2xl text-pacha-earth mb-6">Event Details</h3>
+                    <h3 className="font-serif font-bold text-2xl text-pacha-earth mb-6">{ui.eventDetails}</h3>
                     
                     <div className="space-y-6">
                         <div className="flex items-start gap-4">
@@ -55,7 +56,7 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation }) => {
                                 <Palmtree className="w-5 h-5 text-pacha-leaf" />
                             </div>
                             <div>
-                                <span className="block text-xs font-bold text-gray-400 uppercase tracking-wider">Location</span>
+                                <span className="block text-xs font-bold text-gray-400 uppercase tracking-wider">{ui.location}</span>
                                 <span className="text-pacha-stone font-medium">{t.details.location}</span>
                             </div>
                         </div>
@@ -65,7 +66,7 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation }) => {
                                 <Users className="w-5 h-5 text-pacha-leaf" />
                             </div>
                             <div>
-                                <span className="block text-xs font-bold text-gray-400 uppercase tracking-wider">Capacity</span>
+                                <span className="block text-xs font-bold text-gray-400 uppercase tracking-wider">{ui.capacity}</span>
                                 <span className="text-pacha-stone font-medium">{t.details.capacity}</span>
                             </div>
                         </div>
@@ -75,8 +76,8 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation }) => {
                                 <Waves className="w-5 h-5 text-pacha-leaf" />
                             </div>
                             <div>
-                                <span className="block text-xs font-bold text-gray-400 uppercase tracking-wider">Theme</span>
-                                <span className="text-pacha-stone font-medium">Ocean & Mountain</span>
+                                <span className="block text-xs font-bold text-gray-400 uppercase tracking-wider">{ui.theme}</span>
+                                <span className="text-pacha-stone font-medium">{t.themeValue}</span>
                             </div>
                         </div>
                     </div>
@@ -105,9 +106,9 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation }) => {
                 <div className="bg-pacha-leaf/10 p-8 rounded-xl border border-pacha-leaf/20 flex gap-4 items-start">
                     <Eye className="w-8 h-8 text-pacha-leaf flex-shrink-0 mt-1" />
                     <div>
-                        <h4 className="font-serif font-bold text-xl text-pacha-earth mb-2">A Vision from the Medicine</h4>
+                        <h4 className="font-serif font-bold text-xl text-pacha-earth mb-2">{t.visionTitle}</h4>
                         <p className="text-gray-700 italic">
-                            This gathering is not just a retreat; it is a response to a call. The medicine spoke of connecting the wisdom held in the high Andes with the purifying, fluid energy of the ocean. A pilgrimage of spirit and body.
+                            {t.visionText}
                         </p>
                     </div>
                 </div>

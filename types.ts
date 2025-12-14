@@ -109,7 +109,26 @@ export interface FooterData {
   rights: string;
 }
 
+export interface UiLabels {
+    viewDetails: string;
+    inquire: string;
+    contribution: string;
+    bookRetreat: string;
+    bookCeremony: string;
+    accommodation: string;
+    note: string;
+    eventDetails: string;
+    location: string;
+    capacity: string;
+    theme: string;
+    email: string;
+    whatsapp: string;
+    connectWithUs: string;
+    featuredExperience: string;
+}
+
 export interface TranslationData {
+  ui: UiLabels;
   nav: {
     home: string;
     about: string;
@@ -165,6 +184,9 @@ export interface TranslationData {
           dates: string;
       };
       cta: string;
+      visionTitle: string;
+      visionText: string;
+      themeValue: string;
   };
   retreat2Day: {
       title: string;
@@ -179,6 +201,14 @@ export interface TranslationData {
       intro: string;
       days: RetreatDay[];
       conclusion: string;
+      details: {
+          durationLabel: string;
+          durationValue: string;
+          locationLabel: string;
+          locationValue: string;
+          focusLabel: string;
+          focusValue: string;
+      };
   };
   preparation: PreparationData;
   testimonials: {

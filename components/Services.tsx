@@ -6,9 +6,10 @@ import { Sun, Moon, Sparkles, Mountain, Palmtree } from 'lucide-react';
 
 interface ServicesProps {
   t: TranslationData['services'];
+  ui: TranslationData['ui'];
 }
 
-export const Services: React.FC<ServicesProps> = ({ t }) => {
+export const Services: React.FC<ServicesProps> = ({ t, ui }) => {
   const icons = [Sun, Moon, Sparkles];
 
   return (
@@ -38,7 +39,7 @@ export const Services: React.FC<ServicesProps> = ({ t }) => {
              <div className="flex-1">
                 <div className="flex items-center gap-3 mb-4 text-pacha-gold">
                    <Mountain />
-                   <span className="font-bold tracking-widest uppercase text-sm">Featured Experience</span>
+                   <span className="font-bold tracking-widest uppercase text-sm">{ui.featuredExperience}</span>
                 </div>
                 <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
                   {t.ausangateCta.title}
@@ -59,19 +60,22 @@ export const Services: React.FC<ServicesProps> = ({ t }) => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {t.items.map((item, index) => {
             const Icon = icons[index % icons.length];
-            const isRetreat2Day = item.title.includes("2 Day") || item.title.includes("2 Días") || item.title.includes("2 P'unchaw") || item.title.includes("لمدة يومين") || item.title.includes("2日間") || item.title.includes("2 Napos") || item.title.includes("२ दिवसीय");
             
-            const isOneDay = item.title.includes("1 Day") || item.title.includes("1 Día") || item.title.includes("1 P'unchaw") || item.title.includes("ليوم واحد") || item.title.includes("1日") || item.title.includes("1 Napos") || item.title.includes("१ दिवसीय");
+            // Map index to service type to avoid string matching
+            // 0: 2 Day Retreat
+            // 1: 1 Day Ceremony
+            // 2: Costa Rica
+            // 3: Private Healing
             
-            const isCostaRica = item.title.includes("Costa Rica") || item.title.includes("コスタリカ") || item.title.includes("كوستاريكا");
-
-            const isPrivate = item.title.includes("Private") || item.title.includes("Privada") || item.title.includes("Sapalla") || item.title.includes("خاص") || item.title.includes("プライベート") || item.title.includes("Privát") || item.title.includes("व्यक्तिगत");
+            const isRetreat2Day = index === 0;
+            const isOneDay = index === 1;
+            const isCostaRica = index === 2;
+            const isPrivate = index === 3;
 
             const isSpecialCard = isRetreat2Day || isOneDay || isPrivate || isCostaRica;
 
             // Base styling
             const baseClasses = "border border-pacha-leaf/30 p-6 rounded-xl transition-all duration-300 group flex flex-col relative overflow-hidden backdrop-blur-sm";
-            // Conditional styling: If special card (retreat or deeper work), no bg color (image used). If normal, use earth color.
             const colorClasses = isSpecialCard
                 ? "hover:border-pacha-gold" 
                 : "bg-pacha-earth/50 hover:bg-pacha-earth hover:border-pacha-gold";
@@ -112,7 +116,7 @@ export const Services: React.FC<ServicesProps> = ({ t }) => {
                     </p>
                     <div className="border-t border-white/10 pt-4 mt-auto">
                         <div className="flex items-center justify-between mb-4">
-                            <span className="text-pacha-sand font-mono text-xs uppercase tracking-wider">Contribution</span>
+                            <span className="text-pacha-sand font-mono text-xs uppercase tracking-wider">{ui.contribution}</span>
                             <span className="text-lg font-bold text-pacha-gold">{item.price}</span>
                         </div>
                         {isRetreat2Day ? (
@@ -120,28 +124,28 @@ export const Services: React.FC<ServicesProps> = ({ t }) => {
                                 to="/retreat-2day"
                                 className="block w-full text-center bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white font-bold py-2 rounded-lg transition-colors border border-pacha-leaf/50 text-sm"
                             >
-                                View Details
+                                {ui.viewDetails}
                             </Link>
                         ) : isCostaRica ? (
                              <Link 
                                 to="/costa-rica"
                                 className="block w-full text-center bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white font-bold py-2 rounded-lg transition-colors border border-pacha-leaf/50 text-sm"
                             >
-                                View Details
+                                {ui.viewDetails}
                             </Link>
                         ) : isOneDay ? (
                              <Link 
                                 to="/retreat-1day"
                                 className="block w-full text-center bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white font-bold py-2 rounded-lg transition-colors border border-pacha-leaf/50 text-sm"
                             >
-                                View Details
+                                {ui.viewDetails}
                             </Link>
                         ) : (
                           <Link 
                                 to="/contact"
                                 className={`block w-full text-center font-bold py-2 rounded-lg transition-colors border text-sm ${isSpecialCard ? 'bg-pacha-gold/20 hover:bg-pacha-gold/40 text-pacha-gold border-pacha-gold/50' : 'bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white border-pacha-leaf/50'}`}
                             >
-                                Inquire
+                                {ui.inquire}
                             </Link>
                         )}
                     </div>

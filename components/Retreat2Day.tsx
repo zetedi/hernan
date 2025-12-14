@@ -7,17 +7,11 @@ import { Preparation } from './Preparation';
 
 interface Retreat2DayProps {
   t: TranslationData['retreat2Day'];
+  ui: TranslationData['ui'];
 }
 
-export const Retreat2Day: React.FC<Retreat2DayProps> = ({ t }) => {
-  // Use a default object if t is undefined (e.g. if new language added without translation yet)
-  const content = t || {
-      title: "2 Day Retreat",
-      subtitle: "Wayna Wasi & Kinsacocha",
-      intro: "A deep immersion into the sacred medicine.",
-      days: [],
-      conclusion: ""
-  };
+export const Retreat2Day: React.FC<Retreat2DayProps> = ({ t, ui }) => {
+  const content = t;
 
   return (
     <div className="bg-pacha-sand min-h-screen text-pacha-earth">
@@ -65,7 +59,7 @@ export const Retreat2Day: React.FC<Retreat2DayProps> = ({ t }) => {
                     <div className="bg-pacha-sand/30 p-4 rounded-lg flex gap-3 items-start relative z-10">
                         <Bed className="w-5 h-5 text-pacha-leaf flex-shrink-0 mt-1" />
                         <p className="text-sm text-gray-600 italic">
-                            <span className="font-bold text-pacha-earth not-italic block mb-1">Accommodation:</span>
+                            <span className="font-bold text-pacha-earth not-italic block mb-1">{ui.accommodation}:</span>
                             {day.accommodation}
                         </p>
                     </div>
@@ -84,7 +78,7 @@ export const Retreat2Day: React.FC<Retreat2DayProps> = ({ t }) => {
                 className="inline-flex items-center gap-2 bg-pacha-earth hover:bg-pacha-stone text-white font-bold py-4 px-12 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl uppercase tracking-widest text-sm"
             >
                 <Calendar className="w-5 h-5" />
-                <span>Book This Retreat</span>
+                <span>{ui.bookRetreat}</span>
             </Link>
         </div>
 

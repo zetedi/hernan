@@ -6,9 +6,10 @@ import { IMAGES } from '../constants';
 interface ContactProps {
   t: TranslationData['contact'];
   footerT: TranslationData['footer'];
+  ui: TranslationData['ui'];
 }
 
-export const Contact: React.FC<ContactProps> = ({ t, footerT }) => {
+export const Contact: React.FC<ContactProps> = ({ t, footerT, ui }) => {
   return (
     <section id="contact" className="relative bg-pacha-stone text-gray-300 min-h-screen flex items-center">
       {/* Background Image - Parallax (Disabled on Mobile) */}
@@ -36,7 +37,7 @@ export const Contact: React.FC<ContactProps> = ({ t, footerT }) => {
                         <MapPin className="text-pacha-gold w-8 h-8" />
                     </div>
                     <div>
-                        <h4 className="font-bold text-white mb-1 uppercase tracking-wider text-sm">Location</h4>
+                        <h4 className="font-bold text-white mb-1 uppercase tracking-wider text-sm">{ui.location}</h4>
                         <p className="text-gray-400">Sacred Valley, Cusco, Peru</p>
                     </div>
                 </div>
@@ -46,7 +47,7 @@ export const Contact: React.FC<ContactProps> = ({ t, footerT }) => {
                         <Mail className="text-pacha-gold w-8 h-8" />
                     </div>
                     <div>
-                        <h4 className="font-bold text-white mb-1 uppercase tracking-wider text-sm">Email</h4>
+                        <h4 className="font-bold text-white mb-1 uppercase tracking-wider text-sm">{ui.email}</h4>
                         <a href="mailto:hernan.wachuma@gmail.com" className="text-gray-400 hover:text-white transition-colors text-lg break-all">
                             hernan.wachuma@gmail.com
                         </a>
@@ -60,7 +61,7 @@ export const Contact: React.FC<ContactProps> = ({ t, footerT }) => {
                         </svg>
                     </div>
                     <div>
-                        <h4 className="font-bold text-white mb-1 uppercase tracking-wider text-sm">WhatsApp</h4>
+                        <h4 className="font-bold text-white mb-1 uppercase tracking-wider text-sm">{ui.whatsapp}</h4>
                         <a 
                             href={`https://wa.me/${footerT.columns.contact.phone.replace(/[^0-9]/g, '')}`}
                             target="_blank"
@@ -74,7 +75,7 @@ export const Contact: React.FC<ContactProps> = ({ t, footerT }) => {
             </div>
 
             <div className="mt-12 pt-8 border-t border-white/10">
-                <p className="text-sm text-gray-500 mb-6 uppercase tracking-widest">Connect with us</p>
+                <p className="text-sm text-gray-500 mb-6 uppercase tracking-widest">{ui.connectWithUs}</p>
                 <div className="flex gap-6 justify-center">
                     <a href="https://www.instagram.com/hernan_wachuma" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-pacha-gold hover:text-pacha-earth transition-colors transform hover:scale-110 duration-300">
                         <Instagram size={24} />

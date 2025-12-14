@@ -78,21 +78,21 @@ const App: React.FC = () => {
               <Testimonials t={t.testimonials} />
             </>
           } />
-          <Route path="/services" element={<Services t={t.services} />} />
+          <Route path="/services" element={<Services t={t.services} ui={t.ui} />} />
           <Route path="/ausangate" element={
             <Ausangate t={{...t.ausangate, preparation: t.preparation} as any} />
           } />
           <Route path="/costa-rica" element={
-            <CostaRica t={t.costaRica} preparation={t.preparation} />
+            <CostaRica t={t.costaRica} preparation={t.preparation} ui={t.ui} />
           } />
           <Route path="/retreat-2day" element={
-            <Retreat2Day t={{...t.retreat2Day, preparation: t.preparation} as any} />
+            <Retreat2Day t={{...t.retreat2Day, preparation: t.preparation} as any} ui={t.ui} />
           } />
           <Route path="/retreat-1day" element={
-            <Retreat1Day t={t.retreat1Day} preparation={t.preparation} />
+            <Retreat1Day t={t.retreat1Day} preparation={t.preparation} ui={t.ui} />
           } />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact t={t.contact} footerT={t.footer} />} />
+          <Route path="/contact" element={<Contact t={t.contact} footerT={t.footer} ui={t.ui} />} />
         </Routes>
       </main>
       <Footer data={t.footer} />
