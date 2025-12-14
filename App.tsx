@@ -13,6 +13,7 @@ import { Retreat2Day } from './components/Retreat2Day';
 import { Retreat1Day } from './components/Retreat1Day';
 import { CostaRica } from './components/CostaRica';
 import { Footer } from './components/Footer';
+import { FAQ } from './components/FAQ';
 import { GoogleReviewsWidget } from './components/GoogleReviewsWidget';
 import { SEO } from './components/SEO';
 import { Language } from './types';
@@ -92,6 +93,7 @@ const App: React.FC = () => {
             <Retreat1Day t={t.retreat1Day} preparation={t.preparation} ui={t.ui} />
           } />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/faq" element={<FAQ t={t.faq} />} />
           <Route path="/contact" element={<Contact t={t.contact} footerT={t.footer} ui={t.ui} />} />
         </Routes>
       </main>

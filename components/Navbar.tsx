@@ -32,6 +32,7 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
     { label: t.about, path: '/about' },
     { label: t.services, path: '/services' },
     { label: t.gallery, path: '/gallery' },
+    { label: t.faq, path: '/faq' },
     { label: t.contact, path: '/contact' },
   ];
 

@@ -127,6 +127,24 @@ export interface UiLabels {
     featuredExperience: string;
 }
 
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface ArticleItem {
+  title: string;
+  content: string[];
+}
+
+export interface FAQData {
+  title: string;
+  subtitle: string;
+  articles: ArticleItem[];
+  questionsTitle: string;
+  questions: FAQItem[];
+}
+
 export interface TranslationData {
   ui: UiLabels;
   nav: {
@@ -135,6 +153,7 @@ export interface TranslationData {
     services: string;
     gallery: string;
     contact: string;
+    faq: string;
   };
   hero: {
     title: string;
@@ -211,6 +230,7 @@ export interface TranslationData {
       };
   };
   preparation: PreparationData;
+  faq: FAQData;
   testimonials: {
     title: string;
     items: TestimonialItem[];
