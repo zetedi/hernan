@@ -4,6 +4,11 @@ import { IMAGES } from '../constants';
 
 export const Gallery: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  // Minimum swipe distance (in px)
+  const minSwipeDistance = 50;
 
   // Sort images naturally by filename (e.g. 1.jpg, 2.jpg, ... 10.jpg)
   const galleryImages = React.useMemo(() => {
@@ -56,6 +61,32 @@ export const Gallery: React.FC = () => {
     }
   };
 
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe) {
+      // Swiped Left -> Next Image
+      setSelectedIndex((prev) => (prev !== null ? (prev + 1) % galleryImages.length : null));
+    }
+    if (isRightSwipe) {
+      // Swiped Right -> Previous Image
+      setSelectedIndex((prev) => (prev !== null ? (prev - 1 + galleryImages.length) % galleryImages.length : null));
+    }
+  };
+
   return (
     <section id="gallery" className="pt-32 pb-20 bg-pacha-stone min-h-screen">
        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -87,6 +118,9 @@ export const Gallery: React.FC = () => {
         <div 
             className="fixed inset-0 z-[60] bg-black/95 flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300"
             onClick={() => setSelectedIndex(null)}
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
         >
             {/* Close Button */}
             <button 
@@ -114,11 +148,13 @@ export const Gallery: React.FC = () => {
                 <ChevronRight className="w-8 h-8 md:w-10 md:h-10" />
             </button>
 
-            <div className="relative max-w-7xl max-h-[85vh] w-full flex items-center justify-center px-8 md:px-12">
+            <div className="relative max-w-7xl max-h-[85vh] w-full flex items-center justify-center px-8 md:px-12 select-none">
                 <img 
                     src={galleryImages[selectedIndex]} 
                     alt="Full screen view" 
-                    className="max-w-full max-h-[85vh] object-contain rounded-sm shadow-2xl"
+                    className="max-w-full max-h-[85vh] object-contain rounded-sm shadow-2xl pointer-events-none md:pointer-events-auto"
+                    // Pointer events none on mobile image to allow touch events to pass through for swiping if needed, 
+                    // though touch events on container should handle it.
                     onClick={(e) => e.stopPropagation()} 
                 />
             </div>

@@ -10,7 +10,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ t }) => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
       {/* Background Image - Parallax (Disabled on Mobile) */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-scroll md:bg-fixed bg-no-repeat"
@@ -20,7 +20,7 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-6xl mx-auto w-full pt-32 pb-20 md:pt-40 md:pb-24">
+      <div className="relative z-10 text-center px-4 max-w-6xl mx-auto w-full my-auto">
         
         {/* Text Container */}
         <div className="max-w-4xl mx-auto w-full mb-12">
