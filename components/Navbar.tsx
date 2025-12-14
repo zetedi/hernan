@@ -49,13 +49,13 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
     : 'bg-pacha-stone/95 shadow-lg backdrop-blur-md';
 
   // Logic for logo size:
-  // Mobile: Always w-12 h-12
-  // Desktop (md+):
+  // Mobile/Tablet: Always w-12 h-12
+  // Desktop (lg+):
   //   - Scrolled: w-12 h-12
   //   - Top: w-32 h-32 (Floating large) and more padding top (mt-20) to push it down
   const logoContainerClass = isScrolled 
     ? 'w-12 h-12' 
-    : 'w-12 h-12 md:w-32 md:h-32 md:mt-20';
+    : 'w-12 h-12 lg:w-32 lg:h-32 lg:mt-20';
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${navBackgroundClass}`}>
@@ -78,8 +78,8 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
             </div>
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-2">
+          {/* Desktop Menu (Visible on LG and up) */}
+          <div className="hidden lg:flex items-center space-x-2">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
@@ -94,8 +94,8 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-4">
+          {/* Mobile Menu Button (Visible up to LG) */}
+          <div className="lg:hidden flex items-center gap-4">
              <LanguageSelector currentLanguage={currentLanguage} onLanguageChange={onLanguageChange} />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -109,7 +109,7 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-pacha-earth/95 backdrop-blur-xl border-t border-pacha-leaf/30 animate-fade-in-down">
+        <div className="lg:hidden bg-pacha-earth/95 backdrop-blur-xl border-t border-pacha-leaf/30 animate-fade-in-down">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link

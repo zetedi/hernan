@@ -99,19 +99,19 @@ export const Gallery: React.FC = () => {
 
             {/* Navigation Buttons */}
             <button
-                className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-3 focus:outline-none z-50 bg-black/20 rounded-full backdrop-blur-sm"
+                className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-2 md:p-3 focus:outline-none z-50 bg-black/20 rounded-full backdrop-blur-sm"
                 onClick={handlePrev}
                 aria-label="Previous image"
             >
-                <ChevronLeft size={40} />
+                <ChevronLeft className="w-8 h-8 md:w-10 md:h-10" />
             </button>
 
             <button
-                className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-3 focus:outline-none z-50 bg-black/20 rounded-full backdrop-blur-sm"
+                className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-2 md:p-3 focus:outline-none z-50 bg-black/20 rounded-full backdrop-blur-sm"
                 onClick={handleNext}
                 aria-label="Next image"
             >
-                <ChevronRight size={40} />
+                <ChevronRight className="w-8 h-8 md:w-10 md:h-10" />
             </button>
 
             <div className="relative max-w-7xl max-h-[85vh] w-full flex items-center justify-center px-8 md:px-12">

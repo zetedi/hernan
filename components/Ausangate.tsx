@@ -87,7 +87,7 @@ export const Ausangate: React.FC<AusangateProps> = ({ t }) => {
                 
                 {/* Image/Video Card (Opposite Side) */}
                 <div className={`hidden md:block w-1/2 ${isLeft ? 'pl-16' : 'pr-16'}`}>
-                   <div className="rounded-xl overflow-hidden shadow-2xl border border-white/10 h-64 w-full relative group">
+                   <div className="rounded-xl overflow-hidden shadow-2xl border border-white/10 aspect-video w-full relative group">
                         {isTemazcalDay ? (
                              <video 
                                 src={IMAGES.fireVideo} 
@@ -111,7 +111,7 @@ export const Ausangate: React.FC<AusangateProps> = ({ t }) => {
 
                 {/* Mobile Image/Video (Below text on mobile) */}
                  <div className="md:hidden w-full pl-12">
-                   <div className="rounded-xl overflow-hidden shadow-lg border border-white/10 h-48 w-full relative">
+                   <div className="rounded-xl overflow-hidden shadow-lg border border-white/10 aspect-video w-full relative">
                         {isTemazcalDay ? (
                              <video 
                                 src={IMAGES.fireVideo} 
