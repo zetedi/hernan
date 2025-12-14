@@ -10,12 +10,8 @@ export const Gallery: React.FC = () => {
   // Minimum swipe distance (in px)
   const minSwipeDistance = 50;
 
-  // Sort images naturally by filename (e.g. 1.jpg, 2.jpg, ... 10.jpg)
-  const galleryImages = React.useMemo(() => {
-    return [...IMAGES.gallery].sort((a, b) => 
-      a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
-    );
-  }, []);
+  // Use the image list directly from constants (which is already sorted and dynamic)
+  const galleryImages = IMAGES.gallery;
 
   // Prevent scrolling when modal is open
   useEffect(() => {

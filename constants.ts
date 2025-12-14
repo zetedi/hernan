@@ -1,5 +1,59 @@
 import { Language, TranslationData } from './types';
 
+// --- DYNAMIC IMAGE LOADING (VITE) ---
+// To use dynamic loading:
+// 1. Create a folder named 'assets' in your project root (same level as this file).
+// 2. Create a 'gallery' folder inside 'assets'.
+// 3. Move your gallery images into './assets/gallery/'.
+// Vite will automatically find them, sort them, and include them in the build.
+
+const galleryModules = import.meta.glob('./assets/gallery/*.{jpg,JPG,jpeg,JPEG,png,PNG,webp,WEBP}', { 
+    eager: true, 
+    import: 'default' 
+});
+
+// Sort the found files numerically by their original filename (1.jpg, 2.jpg, 10.jpg...)
+const sortedGalleryKeys = Object.keys(galleryModules).sort((a, b) => {
+    const nameA = a.split('/').pop() || '';
+    const nameB = b.split('/').pop() || '';
+    return nameA.localeCompare(nameB, undefined, { numeric: true, sensitivity: 'base' });
+});
+
+const dynamicGallery = sortedGalleryKeys.map(key => galleryModules[key] as string);
+
+// Log to console in Development mode so you can see if images are found
+if (import.meta.env.DEV) {
+    console.log(`[Gallery System] Found ${dynamicGallery.length} images in ./assets/gallery/`);
+    if (dynamicGallery.length > 0) {
+        console.log(`[Gallery System] Files detected:`, sortedGalleryKeys);
+    } else {
+        console.log(`[Gallery System] No images found in ./assets/gallery/. Using fallback list.`);
+    }
+}
+
+// Fallback list (Used if assets/gallery folder is empty or doesn't exist yet)
+// These rely on files being in the 'public/gallery' folder.
+const fallbackGallery = [
+    "/gallery/1.jpg",
+    "/gallery/2.jpg",
+    "/gallery/3.jpg",
+    "/gallery/4.jpg",
+    "/gallery/5.jpg",
+    "/gallery/6.jpg",
+    "/gallery/7.jpg",
+    "/gallery/8.jpg",
+    "/gallery/9.jpg",
+    "/gallery/10.jpg",
+    "/gallery/11.jpg",
+    "/gallery/12.jpg",
+    "/gallery/13.jpg",
+    "/gallery/14.jpg",
+    "/gallery/15.jpg",
+    "/gallery/16.jpg",
+    "/gallery/17.jpg",
+    "/gallery/18.jpg",
+];
+
 export const IMAGES = {
   logo: "/logo.svg",
   hero: "/hero.jpg",
@@ -21,26 +75,8 @@ export const IMAGES = {
   day6: "/day6.jpg",
   day7: "/day7.jpg",
   fireVideo: "/fire.mp4",
-  gallery: [
-    "/gallery/1.jpg",
-    "/gallery/2.jpg",
-    "/gallery/3.jpg",
-    "/gallery/4.jpg",
-    "/gallery/5.jpg",
-    "/gallery/6.jpg",
-    "/gallery/7.jpg",
-    "/gallery/8.jpg",
-    "/gallery/9.jpg",
-    "/gallery/10.jpg",
-    "/gallery/11.jpg",
-    "/gallery/12.jpg",
-    "/gallery/13.jpg",
-    "/gallery/14.jpg",
-    "/gallery/15.jpg",
-    "/gallery/16.jpg",
-    "/gallery/17.jpg",
-    "/gallery/18.jpg",
-  ]
+  // Use dynamic list if files are found, otherwise use fallback
+  gallery: dynamicGallery.length > 0 ? dynamicGallery : fallbackGallery
 };
 
 // --- BASE ENGLISH DATA HELPERS ---
