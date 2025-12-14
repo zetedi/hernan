@@ -56,6 +56,9 @@ export const Ausangate: React.FC<AusangateProps> = ({ t }) => {
             if (descriptionStr.toLowerCase().includes('temazcal')) DayIcon = Flame;
             if (descriptionStr.toLowerCase().includes('waters') || descriptionStr.toLowerCase().includes('yaku')) DayIcon = Droplets;
 
+            // Check if it is a Temazcal day (Day 3 or Day 5, indices 2 and 4) to use video
+            const isTemazcalDay = index === 2 || index === 4;
+
             return (
               <div key={index} className={`flex flex-col md:flex-row items-center gap-8 ${isLeft ? '' : 'md:flex-row-reverse'}`}>
                 
@@ -82,26 +85,50 @@ export const Ausangate: React.FC<AusangateProps> = ({ t }) => {
                   </div>
                 </div>
                 
-                {/* Image Card (Opposite Side) */}
+                {/* Image/Video Card (Opposite Side) */}
                 <div className={`hidden md:block w-1/2 ${isLeft ? 'pl-16' : 'pr-16'}`}>
                    <div className="rounded-xl overflow-hidden shadow-2xl border border-white/10 h-64 w-full relative group">
-                        <img 
-                            src={dayImage || IMAGES.ausangate} 
-                            alt={day.title}
-                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                        {isTemazcalDay ? (
+                             <video 
+                                src={IMAGES.fireVideo} 
+                                poster={dayImage || IMAGES.ausangate}
+                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                             />
+                        ) : (
+                            <img 
+                                src={dayImage || IMAGES.ausangate} 
+                                alt={day.title}
+                                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                            />
+                        )}
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                    </div>
                 </div>
 
-                {/* Mobile Image (Below text on mobile) */}
+                {/* Mobile Image/Video (Below text on mobile) */}
                  <div className="md:hidden w-full pl-12">
                    <div className="rounded-xl overflow-hidden shadow-lg border border-white/10 h-48 w-full relative">
-                        <img 
-                            src={dayImage || IMAGES.ausangate} 
-                            alt={day.title}
-                            className="w-full h-full object-cover"
-                        />
+                        {isTemazcalDay ? (
+                             <video 
+                                src={IMAGES.fireVideo} 
+                                poster={dayImage || IMAGES.ausangate}
+                                className="w-full h-full object-cover"
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                             />
+                        ) : (
+                            <img 
+                                src={dayImage || IMAGES.ausangate} 
+                                alt={day.title}
+                                className="w-full h-full object-cover"
+                            />
+                        )}
                    </div>
                 </div>
               </div>

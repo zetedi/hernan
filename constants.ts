@@ -20,6 +20,7 @@ export const IMAGES = {
   day5: "/day5.jpg",
   day6: "/day6.jpg",
   day7: "/day7.jpg",
+  fireVideo: "/fire.mp4",
   gallery: [
     "/gallery/1.jpg",
     "/gallery/2.jpg",
@@ -295,8 +296,8 @@ const enTranslations: TranslationData = {
         },
         {
           day: "Day 3",
-          title: "Temazcal (Sweat Lodge)",
-          description: "A traditional steam bath ritual representing the womb of Mother Earth. Physical and spiritual detoxification."
+          title: "Temazcal (Sweat Lodge) & Rapé",
+          description: "A traditional steam bath ritual representing the womb of Mother Earth. Physical and spiritual detoxification with sacred Rapé medicine."
         },
         {
           day: "Day 4",
@@ -305,8 +306,8 @@ const enTranslations: TranslationData = {
         },
         {
           day: "Day 5",
-          title: "Temazcal",
-          description: "A second sweat lodge ceremony to ground the energies received and purify the spirit further."
+          title: "Temazcal & Rapé",
+          description: "A second sweat lodge ceremony to ground the energies received and purify the spirit further with sacred Rapé."
         },
         {
           day: "Day 6",
@@ -406,9 +407,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         itinerary: [
           { day: "Día 1", title: "Llegada y Purificación", description: "Viaje a Pacchanta. Relajación en aguas termales y caminata hacia el Ausangate para establecer intenciones." },
           { day: "Día 2", title: "Primera Ceremonia de Wachuma", description: "Abriendo el corazón al Apu. Ceremonia diurna conectando con el espíritu de la montaña." },
-          { day: "Día 3", title: "Temazcal", description: "Ritual de baño de vapor tradicional que representa el vientre de la Madre Tierra. Desintoxicación física y espiritual." },
+          { day: "Día 3", title: "Temazcal y Rapé", description: "Ritual de baño de vapor tradicional que representa el vientre de la Madre Tierra. Desintoxicación física y espiritual con medicina sagrada de Rapé." },
           { day: "Día 4", title: "Segunda Ceremonia de Wachuma", description: "Profundizando el viaje. Trabajando a través de bloqueos internos en el silencio de las tierras altas." },
-          { day: "Día 5", title: "Temazcal", description: "Segundo baño de vapor para asentar las energías recibidas y purificar el espíritu." },
+          { day: "Día 5", title: "Temazcal y Rapé", description: "Segundo baño de vapor para asentar las energías recibidas y purificar el espíritu aún más con Rapé." },
           { day: "Día 6", title: "Tercera Ceremonia de Wachuma", description: "Integración y gratitud. Sellando la sanación recibida durante la semana." },
           { day: "Día 7", title: "Viaje de Regreso", description: "Caminata de descenso, baño final en aguas termales y transporte de regreso a Pisac." }
         ]
@@ -560,9 +561,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         itinerary: [
           { day: "P'unchaw 1", title: "Chayamuy & Ch'uyanchay", description: "Pacchantaman riy. Q'uñi yakupi samay, Ausangatepaq yuyay churay." },
           { day: "P'unchaw 2", title: "Ñawpaq Wachuma", description: "Sunqu kichay Apupaq. P'unchaw ceremonia." },
-          { day: "P'unchaw 3", title: "Temazcal", description: "Pachamama wiksanpi humpiy. Kurku ch'uyanchay." },
+          { day: "P'unchaw 3", title: "Temazcal & Rapé", description: "Pachamama wiksanpi humpiy. Kurku ch'uyanchay, Rapé hampiwan." },
           { day: "P'unchaw 4", title: "Iskay Kaq Wachuma", description: "Ukhu puri. Ch'in pampapi yuyay." },
-          { day: "P'unchaw 5", title: "Temazcal", description: "Iskay kaq humpiy, kallpa chaskisqa takyachinapaq." },
+          { day: "P'unchaw 5", title: "Temazcal & Rapé", description: "Iskay kaq humpiy, kallpa chaskisqa takyachinapaq, Rapé hampiwan." },
           { day: "P'unchaw 6", title: "Kinsa Kaq Wachuma", description: "Tukuy tinkuchiy. Añaschay." },
           { day: "P'unchaw 7", title: "Kutimpuy", description: "Uraykamuy, q'uñi yaku, Pisaqman kutiy." }
         ]
@@ -712,9 +713,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         itinerary: [
           { day: "اليوم 1", title: "الوصول والتطهير", description: "السفر إلى باتشانتا. الاسترخاء في المياه الحرارية." },
           { day: "اليوم 2", title: "احتفال واتشوما الأول", description: "فتح القلب للأبو. احتفال نهاري." },
-          { day: "اليوم 3", title: "تيمازكال", description: "طقوس حمام البخار التقليدي." },
+          { day: "اليوم 3", title: "تيمازكال و رابي", description: "طقوس حمام البخار التقليدي الذي يمثل رحم الأرض الأم. التخلص من السموم الجسدية والروحية مع طب الرابي المقدس." },
           { day: "اليوم 4", title: "احتفال واتشوما الثاني", description: "تعميق الرحلة في صمت المرتفعات." },
-          { day: "اليوم 5", title: "تيمازكال", description: "حمام بخار ثان لتثبيت الطاقات." },
+          { day: "اليوم 5", title: "تيمازكال و رابي", description: "حمام بخار ثان لتثبيت الطاقات وتطهير الروح أكثر مع الرابي." },
           { day: "اليوم 6", title: "احتفال واتشوما الثالث", description: "الاندماج والامتنان." },
           { day: "اليوم 7", title: "رحلة العودة", description: "العودة إلى بيساك." }
         ]
@@ -866,9 +867,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         itinerary: [
           { day: "1日目", title: "到着と浄化", description: "パッチャンタへ移動。温泉でリラックスし、アウサンガテに向けてハイキング。" },
           { day: "2日目", title: "最初のワチュマセレモニー", description: "アプに心を開く。山の精霊とつながる昼間のセレモニー。" },
-          { day: "3日目", title: "テマズカル", description: "母なる地球の子宮を表す伝統的な蒸し風呂の儀式。" },
+          { day: "3日目", title: "テマズカル＆ラペ", description: "母なる地球の子宮を表す伝統的な蒸し風呂の儀式。聖なるラペの薬による身体的および精神的な解毒。" },
           { day: "4日目", title: "2回目のワチュマセレモニー", description: "旅を深める。高地の静寂の中で内なるブロックに取り組む。" },
-          { day: "5日目", title: "テマズカル", description: "受け取ったエネルギーを定着させ、精神を浄化するための2回目の蒸し風呂。" },
+          { day: "5日目", title: "テマズカル＆ラペ", description: "受け取ったエネルギーを定着させ、精神をさらに浄化するための2回目の蒸し風呂と聖なるラペ。" },
           { day: "6日目", title: "3回目のワチュマ＆統合", description: "最後の薬のセレモニー。統合と感謝に焦点を当てる。" },
           { day: "7日目", title: "帰路", description: "山を下り、パッチャンタの温泉に浸かり、ピサックへ戻る。" }
         ]
@@ -1020,9 +1021,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         itinerary: [
           { day: "1. Nap", title: "Érkezés és Megtisztulás", description: "Utazás Pacchantába. Lazítás a termálvízben." },
           { day: "2. Nap", title: "Első Wachuma Szertartás", description: "A szív megnyitása az Apu felé. Nappali szertartás." },
-          { day: "3. Nap", title: "Temazcal", description: "Hagyományos gőzfürdő rituálé." },
+          { day: "3. Nap", title: "Temazcal és Rapé", description: "Hagyományos gőzfürdő rituálé, amely a Földanya méhét jelképezi. Fizikai és spirituális méregtelenítés szent Rapéval." },
           { day: "4. Nap", title: "Második Wachuma Szertartás", description: "Az utazás elmélyítése a felvidéki csendben." },
-          { day: "5. Nap", title: "Temazcal", description: "Második gőzfürdő az energiák leföldelésére." },
+          { day: "5. Nap", title: "Temazcal és Rapé", description: "Második gőzfürdő az energiák leföldelésére és a lélek további tisztítására szent Rapéval." },
           { day: "6. Nap", title: "Harmadik Wachuma & Integráció", description: "Záró szertartás. Fókuszban az integráció és hála." },
           { day: "7. Nap", title: "Visszaút", description: "Visszatérés Pisacba." }
         ]
@@ -1174,9 +1175,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         itinerary: [
           { day: "दिवसः १", title: "आगमनं शुद्धिकरणं च", description: "पच्छान्ता प्रति यात्रा। उष्ण-जले विश्रामः।" },
           { day: "दिवसः २", title: "प्रथमः वाचुमा उत्सवः", description: "अपु प्रति हृदयस्य उद्घाटनम्। दिवा उत्सवः।" },
-          { day: "दिवसः ३", title: "तेमाज्कल्", description: "परम्परागतः वाष्प-स्नान-संस्कारः।" },
+          { day: "दिवसः ३", title: "तेमाज्कल् & रापे (Rapé)", description: "परम्परागतः वाष्प-स्नान-संस्कारः। पवित्र-रापे-औषधेन सह शारीरिक-आध्यात्मिक-शुद्धिकरणम्।" },
           { day: "दिवसः ४", title: "द्वितीयः वाचुमा उत्सवः", description: "यात्रां गभीरीकरणम्।" },
-          { day: "दिवसः ५", title: "तेमाज्कल्", description: "ऊर्जां स्थापयितुं द्वितीयः वाष्प-स्नानः।" },
+          { day: "दिवसः ५", title: "तेमाज्कल् & रापे (Rapé)", description: "ऊर्जां स्थापयितुं द्वितीयः वाष्प-स्नानः पवित्र-रापे-औषधेन सह।" },
           { day: "दिवसः ६", title: "तृतीयः वाचुमा & एकीकरणम्", description: "अन्तिमः औषध-उत्सवः। कृतज्ञता।" },
           { day: "दिवसः ७", title: "प्रत्यागमनम्", description: "पिसाक् प्रति प्रत्यागमनम्।" }
         ]
