@@ -75,7 +75,7 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
             
             <div className={`flex flex-col transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-80'}`}>
               <span className="text-white font-serif font-bold text-xl tracking-wider uppercase group-hover:text-pacha-gold transition-colors shadow-black drop-shadow-md">Hernan</span>
-              <span className="text-pacha-gold text-xs tracking-[0.2em] uppercase drop-shadow-md">Wachuma</span>
+              <span className="text-pacha-gold text-xs tracking-[0.2em] uppercase drop-shadow-md">Raíces Quechua</span>
             </div>
           </Link>
 

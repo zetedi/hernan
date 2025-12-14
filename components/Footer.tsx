@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FooterData } from '../types';
 import { Logo } from './Logo';
@@ -22,7 +22,7 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
               </div>
               <div className="flex flex-col">
                 <span className="font-serif font-bold text-xl tracking-wider uppercase">Hernan</span>
-                <span className="text-pacha-gold text-xs tracking-[0.2em] uppercase">Wachuma</span>
+                <span className="text-pacha-gold text-xs tracking-[0.2em] uppercase">Raíces Quechua</span>
               </div>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -117,7 +117,7 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-           <p>&copy; {new Date().getFullYear()} Hernan Wachuma. {data.rights}</p>
+           <p>&copy; {new Date().getFullYear()} Hernan Raíces Quechua. {data.rights}</p>
         </div>
       </div>
     </footer>

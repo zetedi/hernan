@@ -20,7 +20,8 @@ import { Language } from './types';
 import { TRANSLATIONS } from './constants';
 
 const App: React.FC = () => {
-  const [currentLanguage, setCurrentLanguage] = useState<Language>(Language.EN);
+  // Set default language to Spanish
+  const [currentLanguage, setCurrentLanguage] = useState<Language>(Language.ES);
   const location = useLocation();
 
   const t = TRANSLATIONS[currentLanguage];
@@ -28,14 +29,14 @@ const App: React.FC = () => {
   // Helper to get title based on language
   const getTitle = (lang: Language) => {
     switch (lang) {
-        case Language.EN: return "Hernan Wachuma - Sacred Medicine";
-        case Language.ES: return "Hernan Wachuma - Medicina Sagrada";
-        case Language.QU: return "Hernan Wachuma - Hampi Wachuma";
-        case Language.JA: return "ヘルナン・ワチュマ - アンデスの聖なる薬";
-        case Language.HU: return "Hernan Wachuma - Andok Szent Gyógyító Ereje";
-        case Language.SA: return "Hernan Wachuma - पवित्र अण्डीज ओषधि";
-        case Language.AR: return "هيرنان واتشوما - الطب المقدس";
-        default: return "Hernan Wachuma";
+        case Language.EN: return "Hernan Raíces Quechua - Sacred Medicine";
+        case Language.ES: return "Hernan Raíces Quechua - Medicina Sagrada";
+        case Language.QU: return "Hernan Raíces Quechua - Hampi Wachuma";
+        case Language.JA: return "ヘルナン・ライセス・ケチュア - アンデスの聖なる薬";
+        case Language.HU: return "Hernan Raíces Quechua - Andok Szent Gyógyító Ereje";
+        case Language.SA: return "Hernan Raíces Quechua - पवित्र अण्डीज ओषधि";
+        case Language.AR: return "هيرنان جذور الكيتشوا - الطب المقدس";
+        default: return "Hernan Raíces Quechua";
     }
   };
 
