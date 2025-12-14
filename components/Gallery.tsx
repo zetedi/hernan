@@ -5,6 +5,13 @@ import { IMAGES } from '../constants';
 export const Gallery: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
+  // Sort images naturally by filename (e.g. 1.jpg, 2.jpg, ... 10.jpg)
+  const galleryImages = React.useMemo(() => {
+    return [...IMAGES.gallery].sort((a, b) => 
+      a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
+    );
+  }, []);
+
   // Prevent scrolling when modal is open
   useEffect(() => {
     if (selectedIndex !== null) {
@@ -38,14 +45,14 @@ export const Gallery: React.FC = () => {
   const handleNext = (e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (selectedIndex !== null) {
-      setSelectedIndex((prev) => (prev! + 1) % IMAGES.gallery.length);
+      setSelectedIndex((prev) => (prev! + 1) % galleryImages.length);
     }
   };
 
   const handlePrev = (e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (selectedIndex !== null) {
-      setSelectedIndex((prev) => (prev! - 1 + IMAGES.gallery.length) % IMAGES.gallery.length);
+      setSelectedIndex((prev) => (prev! - 1 + galleryImages.length) % galleryImages.length);
     }
   };
 
@@ -56,7 +63,7 @@ export const Gallery: React.FC = () => {
             Gallery
         </h2>
         <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
-            {IMAGES.gallery.map((src, idx) => (
+            {galleryImages.map((src, idx) => (
                 <div 
                     key={idx} 
                     className="break-inside-avoid overflow-hidden rounded-lg shadow-lg group cursor-pointer relative border border-white/10"
@@ -83,42 +90,42 @@ export const Gallery: React.FC = () => {
         >
             {/* Close Button */}
             <button 
-                className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors focus:outline-none z-50"
+                className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors focus:outline-none z-50 p-2 bg-black/20 rounded-full"
                 aria-label="Close gallery"
                 onClick={() => setSelectedIndex(null)}
             >
-                <X size={40} />
+                <X size={32} />
             </button>
 
             {/* Navigation Buttons */}
             <button
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-2 focus:outline-none z-50 hidden md:block"
+                className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-3 focus:outline-none z-50 bg-black/20 rounded-full backdrop-blur-sm"
                 onClick={handlePrev}
                 aria-label="Previous image"
             >
-                <ChevronLeft size={60} />
+                <ChevronLeft size={40} />
             </button>
 
             <button
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-2 focus:outline-none z-50 hidden md:block"
+                className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-3 focus:outline-none z-50 bg-black/20 rounded-full backdrop-blur-sm"
                 onClick={handleNext}
                 aria-label="Next image"
             >
-                <ChevronRight size={60} />
+                <ChevronRight size={40} />
             </button>
 
-            <div className="relative max-w-7xl max-h-[90vh] flex items-center justify-center">
+            <div className="relative max-w-7xl max-h-[85vh] w-full flex items-center justify-center px-8 md:px-12">
                 <img 
-                    src={IMAGES.gallery[selectedIndex]} 
+                    src={galleryImages[selectedIndex]} 
                     alt="Full screen view" 
-                    className="max-w-full max-h-[90vh] object-contain rounded-sm shadow-2xl"
+                    className="max-w-full max-h-[85vh] object-contain rounded-sm shadow-2xl"
                     onClick={(e) => e.stopPropagation()} 
                 />
             </div>
             
             {/* Image Counter */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80 font-mono text-sm">
-                {selectedIndex + 1} / {IMAGES.gallery.length}
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/80 font-mono text-sm bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm">
+                {selectedIndex + 1} / {galleryImages.length}
             </div>
         </div>
       )}

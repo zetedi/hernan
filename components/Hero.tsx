@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationData } from '../types';
 import { IMAGES } from '../constants';
-import { Calendar, ChevronDown, Mountain, Palmtree, Flower } from 'lucide-react';
+import { Calendar, ChevronDown, Palmtree, Flower } from 'lucide-react';
 
 interface HeroProps {
   t: TranslationData['hero'];
@@ -10,7 +10,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ t }) => {
   return (
-    <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image - Parallax (Disabled on Mobile) */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-scroll md:bg-fixed bg-no-repeat"
@@ -20,20 +20,20 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-6xl mx-auto h-full flex flex-col justify-start md:justify-center overflow-y-auto pt-36 pb-20 md:py-20 no-scrollbar">
+      <div className="relative z-10 text-center px-4 max-w-6xl mx-auto w-full pt-32 pb-20 md:pt-40 md:pb-24">
         
         {/* Text Container */}
-        <div className="max-w-4xl mx-auto w-full mb-8">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 font-serif tracking-wide drop-shadow-lg shrink-0">
+        <div className="max-w-4xl mx-auto w-full mb-12">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-serif tracking-wide drop-shadow-lg">
             {t.title}
           </h1>
-          <p className="text-lg md:text-2xl text-gray-200 mb-4 font-light tracking-wider drop-shadow-md shrink-0">
+          <p className="text-lg md:text-2xl text-gray-200 mb-6 font-light tracking-wider drop-shadow-md">
             {t.subtitle}
           </p>
         </div>
 
-        {/* Media Container: 2x2 Grid - Height Reduced to h-48 */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 shrink-0 items-stretch">
+        {/* Media Container: 2x2 Grid */}
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           
           {/* 1. 2 Day Retreat Card (First) */}
           <Link 
@@ -125,7 +125,7 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
 
         </div>
         
-        <div className="shrink-0 pb-8">
+        <div>
           <Link 
             to="/contact"
             className="inline-block bg-pacha-gold hover:bg-[#b08d48] text-pacha-stone font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl uppercase tracking-widest text-sm"
@@ -135,7 +135,7 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
         </div>
       </div>
       
-      {/* Scroll Indicator - Fixed visible arrow */}
+      {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden lg:block z-20">
         <ChevronDown className="w-10 h-10 text-white/80 drop-shadow-md" />
       </div>
