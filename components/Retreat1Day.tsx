@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TranslationData } from '../types';
+import { TranslationData, Language } from '../types';
 import { IMAGES } from '../constants';
 import { Sun, Calendar, Clock, MapPin, FileText } from 'lucide-react';
 import { Preparation } from './Preparation';
@@ -9,9 +10,10 @@ interface Retreat1DayProps {
   t: TranslationData['retreat1Day'];
   preparation: TranslationData['preparation'];
   ui: TranslationData['ui'];
+  lang?: Language;
 }
 
-export const Retreat1Day: React.FC<Retreat1DayProps> = ({ t, preparation, ui }) => {
+export const Retreat1Day: React.FC<Retreat1DayProps> = ({ t, preparation, ui, lang }) => {
   const content = t;
 
   return (
@@ -37,7 +39,7 @@ export const Retreat1Day: React.FC<Retreat1DayProps> = ({ t, preparation, ui }) 
           {/* Flyer Link Button */}
           <div className="mt-8 flex justify-center">
             <Link 
-                to="/flyer?event=retreat1Day" 
+                to={`/flyer?event=retreat1Day&lang=${lang || 'ES'}`} 
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-pacha-gold text-white hover:text-pacha-stone border border-white/30 hover:border-pacha-gold font-bold py-3 px-8 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg group uppercase tracking-widest text-sm"
             >

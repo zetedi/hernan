@@ -1,5 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, useSearchParams } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -22,10 +23,15 @@ import { Language } from './types';
 import { TRANSLATIONS } from './constants';
 
 const App: React.FC = () => {
-  // Set default language to Spanish
-  const [currentLanguage, setCurrentLanguage] = useState<Language>(Language.ES);
+  const [searchParams] = useSearchParams();
+  const urlLang = searchParams.get('lang') as Language;
+  
+  // Initialize language from URL if valid, otherwise default to ES
+  const [currentLanguage, setCurrentLanguage] = useState<Language>(() => {
+    return Object.values(Language).includes(urlLang) ? urlLang : Language.ES;
+  });
+  
   const location = useLocation();
-
   const t = TRANSLATIONS[currentLanguage];
 
   // Helper to get title based on language
@@ -57,7 +63,6 @@ const App: React.FC = () => {
 
   if (isFlyerRoute) {
       // Parse query param to decide which flyer to show
-      const searchParams = new URLSearchParams(location.search);
       const type = searchParams.get('event') as 'ausangate' | 'costaRica' | 'retreat2Day' | 'retreat1Day' | 'juchuy' || 'ausangate';
       
       let flyerData;
@@ -67,7 +72,7 @@ const App: React.FC = () => {
       else if (type === 'juchuy') flyerData = t.juchuy;
       else flyerData = t.ausangate;
 
-      return <EventFlyer t={flyerData} contact={t.contact} footer={t.footer} type={type} />;
+      return <EventFlyer t={flyerData} flyerT={t.flyer} contact={t.contact} footer={t.footer} type={type} />;
   }
 
   return (
@@ -88,7 +93,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={
             <>
-              <Hero t={t.hero} />
+              <Hero t={t.hero} lang={currentLanguage} />
               <Benefits t={t.benefits} />
               <GoogleReviewsWidget />
             </>
@@ -99,21 +104,21 @@ const App: React.FC = () => {
               <Testimonials t={t.testimonials} />
             </>
           } />
-          <Route path="/services" element={<Services t={t.services} ui={t.ui} />} />
+          <Route path="/services" element={<Services t={t.services} ui={t.ui} lang={currentLanguage} />} />
           <Route path="/ausangate" element={
-            <Ausangate t={{...t.ausangate, preparation: t.preparation} as any} />
+            <Ausangate t={{...t.ausangate, preparation: t.preparation} as any} lang={currentLanguage} />
           } />
           <Route path="/costa-rica" element={
-            <CostaRica t={t.costaRica} preparation={t.preparation} ui={t.ui} />
+            <CostaRica t={t.costaRica} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
           } />
           <Route path="/juchuy-qosqo" element={
-            <JuchuyQosqo t={t.juchuy} preparation={t.preparation} ui={t.ui} />
+            <JuchuyQosqo t={t.juchuy} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
           } />
           <Route path="/retreat-2day" element={
-            <Retreat2Day t={{...t.retreat2Day, preparation: t.preparation} as any} ui={t.ui} />
+            <Retreat2Day t={{...t.retreat2Day, preparation: t.preparation} as any} ui={t.ui} lang={currentLanguage} />
           } />
           <Route path="/retreat-1day" element={
-            <Retreat1Day t={t.retreat1Day} preparation={t.preparation} ui={t.ui} />
+            <Retreat1Day t={t.retreat1Day} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
           } />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/faq" element={<FAQ t={t.faq} />} />

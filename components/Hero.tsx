@@ -1,19 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TranslationData } from '../types';
+import { TranslationData, Language } from '../types';
 import { IMAGES } from '../constants';
 import { Calendar, ChevronDown, Palmtree, Flower } from 'lucide-react';
 
 interface HeroProps {
   t: TranslationData['hero'];
+  lang?: Language;
 }
 
-export const Hero: React.FC<HeroProps> = ({ t }) => {
+export const Hero: React.FC<HeroProps> = ({ t, lang }) => {
   return (
     <section id="hero" className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
       {/* Background Image - Parallax (Disabled on Mobile) */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-[center_10%] md:bg-center bg-scroll md:bg-fixed bg-no-repeat"
+        className="absolute inset-0 z-0 bg-cover bg-[center_25%] md:bg-center bg-scroll md:bg-fixed bg-no-repeat"
         style={{ backgroundImage: `url(${IMAGES.hero})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-pacha-stone" />

@@ -1,15 +1,17 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TranslationData } from '../types';
+import { TranslationData, Language } from '../types';
 import { IMAGES } from '../constants';
 import { Mountain, Flame, Droplets, Calendar, FileText } from 'lucide-react';
 import { Preparation } from './Preparation';
 
 interface AusangateProps {
   t: TranslationData['ausangate'];
+  lang?: Language;
 }
 
-export const Ausangate: React.FC<AusangateProps> = ({ t }) => {
+export const Ausangate: React.FC<AusangateProps> = ({ t, lang }) => {
   return (
     <div className="bg-pacha-stone min-h-screen">
       {/* Hero Header - Parallax (Disabled on Mobile) */}
@@ -37,7 +39,7 @@ export const Ausangate: React.FC<AusangateProps> = ({ t }) => {
           {/* Flyer Link Button */}
           <div className="flex justify-center">
             <Link 
-                to="/flyer?event=ausangate" 
+                to={`/flyer?event=ausangate&lang=${lang || 'ES'}`} 
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-pacha-gold text-white hover:text-pacha-stone border border-white/30 hover:border-pacha-gold font-bold py-3 px-8 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg group uppercase tracking-widest text-sm"
             >

@@ -1,3 +1,5 @@
+
+
 export enum Language {
   EN = 'EN',
   ES = 'ES',
@@ -129,6 +131,15 @@ export interface UiLabels {
     viewFlyer: string;
 }
 
+export interface FlyerLabels {
+  highlights: string;
+  scan: string;
+  reserve: string;
+  limited: string;
+  flexibleDates: string;
+  print: string;
+}
+
 export interface FAQItem {
   question: string;
   answer: string;
@@ -149,6 +160,7 @@ export interface FAQData {
 
 export interface TranslationData {
   ui: UiLabels;
+  flyer: FlyerLabels;
   nav: {
     home: string;
     about: string;

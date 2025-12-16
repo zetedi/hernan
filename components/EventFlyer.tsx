@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { TranslationData } from '../types';
 import { IMAGES } from '../constants';
@@ -6,16 +7,17 @@ import { Calendar, MapPin, Mail, Phone, Printer } from 'lucide-react';
 
 interface EventFlyerProps {
   t: any; // Can be Ausangate, Costa Rica, or generic retreat data
+  flyerT: TranslationData['flyer'];
   contact: TranslationData['contact'];
   footer: TranslationData['footer'];
   type: 'ausangate' | 'costaRica' | 'retreat2Day' | 'retreat1Day' | 'juchuy';
 }
 
-export const EventFlyer: React.FC<EventFlyerProps> = ({ t, contact, footer, type }) => {
+export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, footer, type }) => {
   // Determine images and specific data based on type
   let bgImage = IMAGES.ausangate;
   let locationText = "Cusco, Peru";
-  let dateText = t.subtitle || "Flexible Dates";
+  let dateText = t.subtitle || flyerT.flexibleDates;
   const isJuchuy = type === 'juchuy';
   
   if (type === 'costaRica') {
@@ -57,7 +59,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, contact, footer, type
                 className="bg-pacha-gold text-pacha-stone font-bold py-3 px-6 rounded-full shadow-2xl flex items-center gap-2 hover:bg-[#b08d48] transition-all transform hover:scale-105 border-2 border-white ring-4 ring-black/10"
             >
                 <Printer size={20} />
-                <span>Print / Save PDF</span>
+                <span>{flyerT.print}</span>
             </button>
         </div>
 
@@ -126,7 +128,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, contact, footer, type
                     <div className="grid grid-cols-3 gap-8 items-center">
                         {/* Highlights / Itinerary Summary */}
                         <div className="col-span-2 bg-pacha-sand/30 p-6 rounded-xl border border-pacha-gold/20 print:bg-transparent print:border-gray-300">
-                            <h3 className="text-pacha-gold font-bold uppercase tracking-widest mb-4 border-b border-pacha-gold/30 pb-2 text-sm print:text-black print:border-black">Experience Highlights</h3>
+                            <h3 className="text-pacha-gold font-bold uppercase tracking-widest mb-4 border-b border-pacha-gold/30 pb-2 text-sm print:text-black print:border-black">{flyerT.highlights}</h3>
                             <ul className="space-y-2">
                                 {t.itinerary ? (
                                     t.itinerary.map((day: any, i: number) => (
@@ -153,7 +155,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, contact, footer, type
                             <div className="bg-white p-2 rounded-lg shadow-md border border-gray-200 mb-2 print:shadow-none print:border-black">
                                 <img src={qrCodeUrl} alt="Scan for details" className="w-24 h-24" />
                             </div>
-                            <span className="text-xs font-bold uppercase tracking-wider text-pacha-stone">Scan for Details</span>
+                            <span className="text-xs font-bold uppercase tracking-wider text-pacha-stone">{flyerT.scan}</span>
                         </div>
                     </div>
                 </div>
@@ -165,8 +167,8 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, contact, footer, type
                     
                     <div className="flex justify-between items-center max-w-4xl mx-auto relative z-10">
                         <div className="text-left">
-                            <h4 className="font-serif text-3xl text-pacha-gold mb-1 print:text-black">Reserve Your Spot</h4>
-                            <p className="text-gray-400 text-sm uppercase tracking-wider print:text-gray-600">Limited spaces available</p>
+                            <h4 className="font-serif text-3xl text-pacha-gold mb-1 print:text-black">{flyerT.reserve}</h4>
+                            <p className="text-gray-400 text-sm uppercase tracking-wider print:text-gray-600">{flyerT.limited}</p>
                         </div>
                         <div className="text-right space-y-2">
                             <div className="flex items-center justify-end gap-3 text-sm font-medium">

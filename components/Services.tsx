@@ -1,15 +1,17 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TranslationData } from '../types';
+import { TranslationData, Language } from '../types';
 import { IMAGES } from '../constants';
 import { Sun, Moon, Sparkles, Mountain, Utensils } from 'lucide-react';
 
 interface ServicesProps {
   t: TranslationData['services'];
   ui: TranslationData['ui'];
+  lang?: Language;
 }
 
-export const Services: React.FC<ServicesProps> = ({ t, ui }) => {
+export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
   const icons = [Sun, Utensils, Sparkles, Moon];
 
   return (
