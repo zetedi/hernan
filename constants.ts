@@ -523,36 +523,42 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             { question: "¿Qué debo traer al retiro?", answer: "Se proporcionará una lista detallada, pero lo esencial incluye ropa cómoda, zapatos para caminar y un corazón abierto." },
             { question: "¿Qué idioma se habla durante el retiro?", answer: "Hernán habla quechua y español. Si no hablas estos idiomas, habrá un traductor disponible." },
             { question: "¿Es seguro el retiro?", answer: "La seguridad es nuestra prioridad. Nuestros retiros se llevan a cabo en un entorno controlado con facilitadores experimentados." },
-            { question: "¿Cuál es su política de reembolso?", answer: "Los depósitos son reembolsables hasta una fecha específica. Fomentamos la comunicación temprana si tus planes change to ensure clarity and support." }
+            { question: "¿Cuál es su política de reembolso?", answer: "Los depósitos son reembolsables hasta una fecha específica. Fomentamos la comunicación temprana si tus planes cambian." }
         ]
       },
-      testimonials: { title: "Szívből Jövő Hangok", items: [{ 
-          name: "Zoltan E.", 
-          location: "Magyarország", 
-          text: `Ez egy igazán hiteles élmény, amely összeköt a föld szellemével és a növényi orvosság gyógyító erejével. Mély kapcsolódás az inkák és az inkák előtti idők szellemi vezetőinek ősi bölcsességével Hernan mesteren keresztül. Nagyon hálás vagyok ezért az utazásért.`, 
-          image: IMAGES.zoltan 
-      }, {
-        name: "Stephanie K.",
-        location: "Google Review",
-        text: `Olyan szerencsésnek érzem magam, hogy részt vehettem egy egész napos Wachuma szertartáson Don Hernannal. Felutaztunk a hegyekbe, egy helyi falun keresztül, hogy közösséget vállaljunk a természettel, a szellemmel és a kölcsönösség energiájával. Útmutatása őszinte, és az orvossága a legjobb Wachuma, amit valaha ittam. Visszatértünk a házába, hogy ízletes házi andoki levessel és a kertben rakott tűzzel fejezzük be a szertartást a telihold és a csillagok alatt. Erősen ajánlom a Wayna Wasi meglátogatását és a Don Hernannal való munkát. 🫶🏼✨🌵🙏🏼⛰️`,
-        image: IMAGES.kittel
-    }] },
-    contact: {
-        title: "Kapcsolat",
-        form: { name: "Neved", email: "Email Címed", message: "Üzeneted", submit: "Üzenet Küldése" },
-        info: "A Szent Völgy szívében, Calca közelében, Cuscóban találhatóunk."
-    },
-    footer: {
-        description: "Tapasztald meg a Wachuma, az Andok szent növényi medicinájának átalakító erejét. Csatlakozz Hernanhoz vezetett szertartásokon, amelyek segítenek újra kapcsolódni belső énedhez, mélyen gyógyulni és felébreszteni szellemedet Peru Szent Völgyének szívében.",
-        columns: {
-            links: { title: "Linkek", items: [{label: "Rólunk", href: "/about"}, {label: "A Közösség", href: "/about"}, {label: "Kapcsolat", href: "/contact"}] },
-            reviews: { title: "Google Értékelések", rating: "4,9/5" },
-            follow: { title: "Kövess Minket", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram },
-            contact: { title: "Kapcsolat", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone },
-            find: { title: "Helyszín", address: "Wayna Wasi, Pisac, Peru" }
-        },
-        rights: "Minden jog fenntartva."
-    }
+      testimonials: {
+          title: "Voces del Corazón",
+          items: [
+              { 
+                  name: "Zoltan E.", 
+                  location: "Hungría", 
+                  text: `Es una experiencia verdaderamente auténtica de conexión con el espíritu de la tierra y el poder curativo de la medicina de las plantas. Ha sido una conexión profunda con la sabiduría antigua de los guías espirituales Incas y Pre-Incas a través del Maestro Hernan. Estoy muy agradecido por el viaje.`,
+                  image: IMAGES.zoltan 
+              },
+              {
+                name: "Stephanie K.",
+                location: "Google Review",
+                text: `Me siento muy afortunada de haber participado en una ceremonia de Wachuma de día completo con Don Hernan. Viajamos hacia las montañas, a través de un pueblo local, para comulgar con la naturaleza, el espíritu y la energía de la reciprocidad. Su guía es sincera y su medicina es el mejor Wachuma I’ve imbibed. Regresamos a su casa para terminar la ceremonia con una deliciosa sopa andina casera y un fuego en el jardín bajo la luna llena y las estrellas. Recomiendo encarecidamente visitar Wayna Wasi y trabajar con Don Hernan. 🫶🏼✨🌵🙏🏼⛰️`,
+                image: IMAGES.kittel
+            }
+          ]
+      },
+      contact: {
+          title: "Contáctanos",
+          form: { name: "Tu Nombre", email: "Tu Email", message: "Tu Mensaje", submit: "Enviar Mensaje" },
+          info: "Estamos ubicados en el corazón del Valle Sagrado, cerca de Calca, Cusco."
+      },
+      footer: {
+          description: "Experimenta el poder transformador del Wachuma, la medicina sagrada de plantas andinas conocida como San Pedro. Únete a Hernan en ceremonias guiadas que te ayudarán a reconectar con tu ser interior, sanar profundamente y despertar tu espíritu cerca de Cusco, en el corazón del Valle Sagrado del Perú.",
+          columns: {
+              links: { title: "Enlaces", items: [{label: "Nosotros", href: "/about"}, {label: "La Comunidad", href: "/about"}, {label: "Contacto", href: "/contact"}] },
+              reviews: { title: "Reseñas de Google", rating: "4,9/5" },
+              follow: { title: "Síguenos", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram },
+              contact: { title: "Contacto", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone },
+              find: { title: "Ubicación", address: "Wayna Wasi, Pisac, Perú" }
+          },
+          rights: "Todos los derechos reservados."
+      }
   },
 
   // HUNGARIAN
@@ -798,7 +804,184 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       hero: { title: "Willka Hampi Wachuma", subtitle: "Pachamamawan tinkuy, ñawpaq yachaywan.", cta: "Raymita Waqaychay", ausangateTeaser: { label: "Kuraq", title: "Ausangate Puriy", date: "Enero 3-9, 2026" }, costaRicaTeaser: { label: "Hatun Raymi", title: "Costa Rica Puriy", date: "Enero 22-28, 2026" } },
       benefits: { title: "Wachuma Kallpa", subtitle: "Imarayku purinchik kay hampiwan", items: [{ title: "Sonqo Hampi", description: "Llakikunata qarqoy, hawkayayta tariy." }, { title: "Pachamamawan Tinkuy", description: "Allpawan, wayrawan, yakuyan, ninawan huklla kay." }, { title: "Yuyay K'anchay", description: "Musuq yuyayta tariy, ñanniykita rikuriy." }] },
       services: { title: "Munayniyku", items: [{ title: "2 P'unchay T'aqakuy", description: "Wayna Wasi & Kinsacocha. $173+.", price: "$173+" }, { title: "Juchuy Qosqo Puriy", description: "2 P'unchay ñawpaq llaqtapi.", price: "$200+" }, { title: "1 P'unchay Raymi", description: "Huk p'unchay hampiwan.", price: "$250" }, { title: "Costa Rica Puriy", description: "Mama Qochawan tinkuy.", price: "Tapukuy" }, { title: "Sapaq Hampi", description: "Qamllapaq hampi.", price: "Tapukuy" }], ausangateCta: { title: "Ausangate Puriy", description: "7 p'unchay Apu Ausangatewan.", button: "Qhawariy" } },
-      footer: { description: "Wachuma hampiwan tinkuy, Hernanwan kuska.", columns: { links: { title: "Tinkiykuna", items: [{label: "Ayllu", href: "/about"}, {label: "Tinkuy", href: "/contact"}] }, reviews: { title: "Google", rating: "4,9/5" }, follow: { title: "Qatipay", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram }, contact: { title: "Tinkuy", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone }, find: { title: "Tiyay", address: "Wayna Wasi, Pisac, Perú" } }, rights: "Llapallan." }
+      footer: { description: "Wachuma hampiwan tinkuy, Hernanwan kuska.", columns: { links: { title: "Tinkiykuna", items: [{label: "Ayllu", href: "/about"}, {label: "Tinkuy", href: "/contact"}] }, reviews: { title: "Google", rating: "4,9/5" }, follow: { title: "Qatipay", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram }, contact: { title: "Tinkuy", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone }, find: { title: "Tiyay", address: "Wayna Wasi, Pisac, Perú" } }, rights: "Llapallan." },
+      about: {
+        title: "Hernanwan Riqsinakuy",
+        subtitle: "Willka Hampi Waqaychaq",
+        description: [
+            "<strong>Hernan Colque</strong> runa simi rimaq, <strong>Wachuma hampiq</strong>, ñawpaq yachaykunata apaq. <strong>Viacha</strong> llaqtapi paqarisqa, <strong>Pisac</strong> patapi, payqa ñawpaq hampiq yawarniyuq.",
+            "Ñawpaq yachaykuna willan, sapa miraymanta huklla kay ñanta apanman. Abuelon Carmenmanta taytan Beninhoman yachay chayarqa. Qanchis wawqikunamanta, Hernanllataq kay ñanta akllarqa, <strong>Pachamamawan</strong> tinkuspa.",
+            "<strong>Espinar llaqtamanta Ccana yawar.</strong> Hernanpa yawarninqa <strong>Ccana (K'ana)</strong> llaqtamanta. K'ana runakunaqa Inka Pachacutecwan thakpi tinkurqanku, manan maqanakuspachu. Chayrayku <strong>'Sinchis'</strong> sutichasqa karqanku, allin awqaq runakuna.",
+            "<strong>Wachuma Nunam.</strong> Wachumaqa ñawpaq runakunata tinkuchirqa, chayta sunqunkupi waqaycharqanku. Kay hampiqa yachachikunmi, kunan p'unchaykunaqa Hernan kay yachayta apachkan.",
+            "<strong>Pisacwan Viachawan.</strong> <strong>Pisac</strong> llaqtapi tiyayku, <strong>Wayna Wasi Hotelpi</strong> samaykuna kan. Aswan kuraq hampiqa <strong>Viacha</strong> ayllupi ruwakun, urqu patapi."
+        ],
+        cta: "Ñuqaykuwan Tinkuy"
+      },
+      ausangate: {
+        title: "Ausangate Willka Puriy",
+        subtitle: "Enero 3-9, 2026",
+        description: "Huk hatun puriy, Pacchanta q'uñi yakupi, Apu Ausangatewan, Wachuma hampiwan, Temazcalwan ima.",
+        cta: "Tiyayniykita Waqaychay",
+        itinerary: [
+          { day: "1 P'unchay", title: "Chayamuy & Ch'uyay", description: "Pacchantaman puriy. Q'uñi yakupi ch'uyakuy, Ausangate ñawpaqpi mañakuy." },
+          { day: "2 P'unchay", title: "Ñawpaq Wachuma Raymi", description: "Apuwan tinkuy. P'unchaypi hampi ukyay, urquwan tinkunapaq." },
+          { day: "3 P'unchay", title: "Temazcal & Rapé", description: "Pachamama wiksanpi ch'uyay. Hampi wapsiwan, Rapé hampiwan ima." },
+          { day: "4 P'unchay", title: "Iskay Kaq Wachuma Raymi", description: "Ukhu yuyayman puriy. Ch'in pampapi yuyayta kicharichiy." },
+          { day: "5 P'unchay", title: "Temazcal & Rapé", description: "Iskay kaq wapsi wasi, kallpata tiyachiy." },
+          { day: "6 P'unchay", title: "Kimsa Kaq Wachuma & Tukunapaq", description: "Tukuy hampi. Añaschay, kallpachakuy, tukuy yachasqata huñuy." },
+          { day: "7 P'unchay", title: "Kutimuy", description: "Urqumanta uraykamuy, Pacchanta yakupi samay, Pisacman kutimuy." }
+        ]
+      },
+      costaRica: {
+        title: "Costa Rica Willka Puriy",
+        subtitle: "Urquwan Mama Qochawan Tinkun",
+        intro: "Huk sapaq kuti, Costa Rica suyu ukhupi. Willka urqukuna mama qochawan tinkunqaku, Wachuma hampiwan.",
+        description: [
+            "Ñuqaykuwan kay hatun puriyman hamuy. Hernan apamun Wachuma hampita Costa Rica allpaman.",
+            "Musquypi rikhurisqa, kay puriyqa urqukunata qochawan tinkuchinapaq.",
+            "Wachuma hampiwan, Rapé hampiwan, t'ikakunawan ima ch'uyanchik.",
+            "Pakasqa tiyaypi kanqa. 21 runallapaqmi, aswan allin tinkuypaq."
+        ],
+        details: { location: "Pakasqa Tiyay, Costa Rica", capacity: "21 Runalla", dates: "Enero 22-28, 2026" },
+        cta: "Mink'ata Mañakuy",
+        visionTitle: "Hampi Musquy",
+        visionText: "Kayqa manan puriyllachu; kayqa apukunaq waqaychayninmi. Hampiqa nirqa: Urquq yachayninta qochawan tinkuchiy.",
+        themeValue: "Qocha & Urqu"
+      },
+      retreat2Day: {
+        title: "2 P'unchay T'aqakuy",
+        subtitle: "Wayna Wasi & Kinsacocha",
+        intro: "Ukhu hampi puriy, Wayna Wasi ukhupi, Pisac urqukunawan.",
+        days: [
+            { title: "1 P'unchay : Wakichikuy & Wayna Wasiman Chayamuy", content: "Wayna Wasiman chayamuspa, Wachuma hampi wakichiyta qallarinchik. Kayqa hampiwan tinkuymi. Hernan pusasunki allin yuyaywan.", accommodation: "Wayna Wasipi puñuy, apukunaq qhawayninpi." },
+            { title: "2 P'unchay : Kinsacocha Raymi", content: "Iskay p'unchaypi, Kinsacocha quchaman risun. Chaypi Wachumata ukyasun, urqukunaq chawpinpi. Hernanwan kuska, ukhu sunquykita qhaway. Tukuypi, rimanakuy kanqa.", accommodation: "Wayna Wasiman kutimuy samarinapaq." }
+        ],
+        conclusion: "Musuq kallpawan ripunki, Wachuma yachaywan, Pachamamaq kallpanwan."
+      },
+      juchuy: {
+        title: "Juchuy Qosqo Ñawpaq Yachay",
+        subtitle: "Ayllu, Mikhuy & Ñawpaq Wasi",
+        intro: "2 p'unchay puriy Juchuy Qosqoman, ñawpaq wasikunata qhaway, aylluwan tiyay.",
+        days: [
+            { title: "1 P'unchay : Puriy & Wayk'uy", content: "Juchuy Qosqoman wicharisun. Ch'isipi, huk ayllu wasipi samasun. Kuska wayk'usun, lawata mikhusun, nina patapi rimanakusun.", accommodation: "Ayllu wasipi puñuy." },
+            { title: "2 P'unchay : Raymi Ñawpaq Wasipi", content: "Sut'iyaypi, Wachuma raymita ruwasun Juchuy Qosqo ukhupi. Mana achkha runawanchu, aswan allin tinkuypaq. Ñawpaq runakunawan rimanakusun.", accommodation: "Pisacman kutimuy." }
+        ],
+        conclusion: "Ñawpaq yachay, kawsay, hampi ima. Wiksa hunt'a, sunqu hunt'a ripunki."
+      },
+      retreat1Day: {
+          title: "1 P'unchay Raymi",
+          subtitle: "Willka Tiyaykuna",
+          intro: "Huk p'unchay hampiwan, urqukunapi, quchakunapi, ñawpaq wasikunapi.",
+          days: [
+              { title: "Raymi", content: "Tutallamanta lluqsisun huk willka tiyayman (Pumamarca, Kinsacocha). T'uqay p'unchay hampiwan kasun. Hernan pusasunki. Ch'isipi tukusun.", accommodation: "Manan puñuy kanchu, ichaqa apasaykiku." }
+          ],
+          conclusion: "Musuqyachiy, ch'uyayachiy, sunqu pampachay.",
+          details: { durationLabel: "Unay", durationValue: "Huk P'unchay", locationLabel: "Tiyay", locationValue: "Willka Qhichwa", focusLabel: "Yuyay", focusValue: "Hampi & Pachamama" }
+      },
+      preparation: {
+        title: "San Pedro Raymipaq Wakichikuy",
+        subtitle: "Andes Ayllu Kallpachay",
+        intro: "Allin hamuy! Kay hatun raymipaq, allinta wakichikunayki tiyan, cuerpoykita, yuyayniykita ima.",
+        diet: {
+            title: "Mikhuy & Yuyay",
+            description: "Manaraq hamuchkaspa, kaykunata ruway 3-5 p'unchay ñawpaqta:",
+            items: [
+                { label: "Mana Aychata", text: "Ama aychata mikhuychu, wiksayki ch'uya kananpaq." },
+                { label: "Mana Misk'ita", text: "Ama azucarta mikhuychu." },
+                { label: "Mana Tragu", text: "Ama machaychu, ama cigarrota pitaychu." },
+                { label: "Ch'uya Mikhuy", text: "Llasa mikhuyta saqiy." },
+                { label: "Yaku", text: "Askha yakuta ukyay." },
+                { label: "Yuyay", text: "Sapa p'unchay yuyaymanay, imatachus maskhanki." }
+            ]
+        },
+        packing: {
+            title: "Raymi P'unchay",
+            description: "Imatachus apamunayki:",
+            items: [
+                { label: "P'acha", text: "Q'uñi p'achata, sumaq p'achata apamuy." },
+                { label: "Ruphamanta", text: "Sombrerota apamuy." },
+                { label: "K'intu", text: "T'ikata, frutata apamuy apukunapaq." },
+                { label: "Yaku", text: "Yakuykita apamuy." },
+                { label: "Qillqana", text: "Yuyayniykita qillqanaykipaq." }
+            ]
+        },
+        suggestions: {
+            title: "Yuyaychaykuna",
+            description: "Aswan allin kananpaq:",
+            items: [
+                { label: "Ch'in Kay", text: "Ch'in kayta yachay." },
+                { label: "Samay", text: "Allinta samay." },
+                { label: "Antikunakunata Saqiy", text: "Celularta waqaychay." },
+                { label: "Pachamama", text: "Sapa p'unchay allpawan tinkuy." }
+            ]
+        },
+        closing: "Allin wakichikuwan, Wachuma hampiqa ñanta kicharichisunki. Suyaykiku.",
+        risks: {
+            title: "Allinta Yachay: Riesgokuna",
+            intro: "Kay hampiqa allinmi, ichaqa kanmi imaymanakuna yachanayki:",
+            sections: [
+                { title: "Qhali Kay", items: [{ label: "Unquykuna", text: "Willawayku sichus sunquwan unqunki, utaq umawan." }, { label: "Hampikuna", text: "Willawayku sichus pastillata tomarqanki." }, { label: "Cuerpo", text: "Mayninpiqa wiksa nananman, sunqu phata-phatayanman." }] },
+                { title: "Yuyay", items: [{ label: "Hatun Yuyay", text: "Wachumaqa ukhu yuyayta kicharin." }, { label: "Yanapay", text: "Raymi qhipaman, rimanakuyqa allinmi." }] },
+                { title: "Responsabilidad", items: [{ label: "Yachaspa", text: "Qam kikiymi munanki kayta ruwayta." }, { label: "Kasuy", text: "Hampiqpa nisqanta kasuy." }] }
+            ]
+        }
+      },
+      faq: {
+        title: "Wachuma Tapukuykuna",
+        subtitle: "Imatachus yachanayki",
+        articles: [
+            {
+                title: "Imatachus Suyanki",
+                content: [
+                    "Wachuma raymiqa manan pukllaychu, kayqa sunquq puriyninmi. Musuqña kanki otaq yachaqña kanki, sapa raymiqa sapaqmi. Kaypiqa Willka Qhichwapi kanki, apukunaq qhawayninpi.",
+                    "<strong>Willka Tiyay</strong><br>Cuscoq qayllanpi, Willka Qhichwaqa sumaqmi. Urqukunaqa kallpata qusunki.",
+                    "<strong>Raymi P'unchay</strong><br>Hernanwan qallarinki. Payqa allinta qhawasunki. Wachumaqa sunquta kicharin, yuyayta ch'uyancham.",
+                    "<strong>Yachayta Huñuy</strong><br>Raymi qhipaman, yachasqaykita kawsayniykiman apay. Hernan yanapasunki."
+                ]
+            },
+            {
+                title: "Wachumaq Kallpan",
+                content: [
+                    "<strong>Imataq San Pedro?</strong><br>San Pedro utaq Wachumaqa huk hampi kaktusmi. Andes urqukunapi wiñan. Ñawpaqmantapacha hampinapaq servin.",
+                    "<strong>Ñawpaq Kawsay</strong><br>Inkakuna, ñawpaq runakuna kaywan purirqanku. Kayqa p'uñtemi kay pachawan hanaq pachawan.",
+                    "<strong>Mescalina</strong><br>Kay hampiqa mescalinayuq. Kaymi yanapan yuyayta kicharinapaq. Manan drogachu, kayqa hampim.",
+                    "<strong>Hampikuy</strong><br>Wachumaqa sunquta hampin, yuyayta allinchan. Aswan llamp'um Ayahuascamantaqa."
+                ]
+            }
+        ],
+        questionsTitle: "Sapa Kuti Tapukuykuna",
+        questions: [
+            { question: "Imataq San Pedro raymi?", answer: "San Pedro (Huachuma)qa willka hampim, yuyayta kicharinapaq." },
+            { question: "Qallariqkunapaq allinchu?", answer: "Arí, llapapaqmi. Ñuqayku yachachiyku." },
+            { question: "Imataq Kinsacocha?", answer: "Kinsacochaqa huk sumaq qucham, Pisac patapi. Chaypi raymi ruwayqa ancha sumaqmi." },
+            { question: "Imata apasaq?", answer: "Q'uñi p'achata, purinapaq zapatota, sunquykita." },
+            { question: "Ima simita rimanku?", answer: "Hernanqa Quechuata Españoltawan riman. Huk runakuna yanapanqaku." },
+            { question: "Segurochu?", answer: "Arí, ñuqayku allinta qhawayku." },
+            { question: "Qullqi kutichiy kanmanchu?", answer: "Arí, willawayku sichus manaña hamuyta atinki." }
+        ]
+      },
+      testimonials: {
+          title: "Runakunaq Rimaynin",
+          items: [
+              { 
+                  name: "Zoltan E.", 
+                  location: "Hungría", 
+                  text: "Kayqa chiqaq puriymi, allpawan tinkuymi. Hernanwan puriyqa ñawpaq yachaywan tinkuymi karqa. Ancha agradecesqa kani.",
+                  image: IMAGES.zoltan 
+              },
+              {
+                name: "Stephanie K.",
+                location: "Google Review",
+                text: "Ancha kusisqa kani Don Hernanwan puriqtiy. Urqukunaman rirqayku, allpawan tinkurqayku. Payqa allin hampiqmi. Wayna Wasipi lawata mikhurqayku nina patapi. Yupaychani.",
+                image: IMAGES.kittel
+            }
+          ]
+      },
+      contact: {
+          title: "Rimaykakamuy",
+          form: { name: "Sutiyki", email: "Chaskiyki", message: "Willayniyki", submit: "Apachiy" },
+          info: "Willka Qhichwapi kachkayku."
+      }
   },
 
   // ARABIC
@@ -833,7 +1016,177 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       nav: { home: "الرئيسية", about: "العائلة", services: "المراسم", gallery: "المعرض", contact: "اتصل بنا", faq: "الأسئلة الشائعة" },
       hero: { title: "الطب المقدس في جبال الأنديز", subtitle: "أعد الاتصال مع باتشاماما (الأرض الأم) من خلال مراسم واتشوما التقليدية في الوادي المقدس.", cta: "احجز مراسم", ausangateTeaser: { label: "شامل", title: "رحلة أوسانجاتي", date: "3-9 يناير 2026" }, costaRicaTeaser: { label: "حدث خاص", title: "حج كوستاريكا", date: "22-28 يناير 2026" } },
       benefits: { title: "قوة الواتشوما", subtitle: "لماذا نسافر مع الصبار المقدس", items: [{ title: "الشفاء العاطفي", description: "تحرير الصدمات الماضية والانسدادات العاطفية." }, { title: "الاتصال بالطبيعة", description: "تجربة وحدة عميقة مع الأرض والعناصر." }, { title: "الوضوح والرؤية", description: "تهدئة العقل لتلقي التوجيه والغرض." }] },
-      footer: { description: "جرب القوة التحويلية للواتشوما، طب النباتات المقدس في جبال الأنديز.", columns: { links: { title: "روابط", items: [{label: "معلومات عنا", href: "/about"}, {label: "اتصل بنا", href: "/contact"}] }, reviews: { title: "تقييمات جوجل", rating: "4,9/5" }, follow: { title: "تابعنا", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram }, contact: { title: "اتصل بنا", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone }, find: { title: "موقعنا", address: "Wayna Wasi, Pisac, Perú" } }, rights: "جميع الحقوق محفوظة." }
+      footer: { description: "جرب القوة التحويلية للواتشوما، طب النباتات المقدس في جبال الأنديز.", columns: { links: { title: "روابط", items: [{label: "معلومات عنا", href: "/about"}, {label: "اتصل بنا", href: "/contact"}] }, reviews: { title: "تقييمات جوجل", rating: "4,9/5" }, follow: { title: "تابعنا", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram }, contact: { title: "اتصل بنا", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone }, find: { title: "موقعنا", address: "Wayna Wasi, Pisac, Perú" } }, rights: "جميع الحقوق محفوظة." },
+      about: {
+        title: "تعرف على هيرنان",
+        subtitle: "حارس الصبار المقدس",
+        description: [
+            "<strong>هيرنان كولكي</strong> هو من السكان الأصليين للكيتشوا وميسر مخلص لـ <strong>مراسم واتشوما (سان بيدرو)</strong>، متجذرة بعمق في التقاليد المقدسة لجبال الأنديز. ولد على ارتفاع يزيد عن 5000 متر في <strong>فياشا</strong>، وهو مجتمع مرتفع في <strong>بيساك</strong>، يحمل هيرنان سلالة شفاء طبية تعود إلى ما قبل الإنكا.",
+            "وفقًا لتقاليد الأجداد، يمكن لطفل واحد فقط في كل جيل أن يرث هذا المسار، ويجب عليه اختياره طواعية. انتقلت الحكمة من جده كارمن إلى والده بينينيو. من بين سبعة أشقاء، اختار هيرنان الطب في سن مبكرة جدًا، وأصبح الحامل الوحيد لهذا الإرث القديم واتصاله العميق بـ <strong>باتشاماما (الأرض الأم)</strong>.",
+            "<strong>سلالة كانا من إسبينار.</strong> ينحدر هيرنان من <strong>مقاطعة إسبينار</strong> وسلالته هي <strong>كانا</strong>. كانت ثقافة كانا مجتمعًا ما قبل الإنكا شكل تحالفًا استراتيجيًا سلميًا فريدًا مع إمبراطورية الإنكا بدلاً من الغزو النموذجي. وبسبب هذا التبادل، تم منحهم أراضي وتم إعادة بناء عاصمتهم القديمة من قبل الإنكا.",
+            "<strong>روح الواتشوما.</strong> هناك قول مأثور بأن روح الواتشوما ربطت الناس من هذه المنطقة أولاً واحتفظوا بها في قلوبهم لأن النبات أخبرهم أنه سيختفي من الأرض. يحمل هيرنان هذه الذاكرة والروح إلى الأمام.",
+            "<strong>بيساك وفياشا.</strong> نحن متواجدون في <strong>بيساك</strong>، وهي بلدة نابضة بالحياة في الوادي المقدس، حيث نستضيف الاحتفالات ونوفر أماكن إقامة هادئة في <strong>فندق واينا واسي</strong>. لتعميق التجربة، تقام خلواتنا متعددة الأيام في <strong>فياشا</strong>، وهو مجتمع هادئ مرتفع فوق بيساك."
+        ]
+      },
+      ausangate: {
+        title: "رحلة أوسانجاتي المقدسة",
+        subtitle: "3-9 يناير 2026",
+        description: "رحلة استكشافية عميقة تجمع بين مياه باتشانتا العلاجية، والوجود المهيب لـ أبو أوسانجاتي، والقوة التحويلية للواتشوما والتيمزكال.",
+        cta: "احجز مكانك",
+        itinerary: [
+          { day: "اليوم 1", title: "الوصول والتطهير", description: "السفر إلى باتشانتا. الاسترخاء في المياه الحرارية الطبيعية لتطهير الجسم، يليه نزهة نحو أوسانجاتي لتحديد نوايانا." },
+          { day: "اليوم 2", title: "مراسم الواتشوما الأولى", description: "فتح القلب. مراسم نهارية للتواصل مع روح الجبل وسماء الأنديز الشاسعة." },
+          { day: "اليوم 3", title: "تيمزكال ورابي", description: "طقوس حمام بخار تقليدية تمثل رحم الأرض الأم. التخلص من السموم الجسدية والروحية مع دواء رابي المقدس." },
+          { day: "اليوم 4", title: "مراسم الواتشوما الثانية", description: "تعميق الرحلة. العمل من خلال الانسدادات الداخلية وتوسيع الوعي في صمت المرتفعات." },
+          { day: "اليوم 5", title: "تيمزكال ورابي", description: "مراسم حمام بخار ثانية لتثبيت الطاقات المستلمة وتطهير الروح بشكل أكبر." },
+          { day: "اليوم 6", title: "الواتشوما الثالث والتكامل", description: "مراسم الطب النهائية. التركيز على التكامل والامتنان وختم الشفاء الذي تم تلقيه خلال الأسبوع." },
+          { day: "اليوم 7", title: "رحلة العودة", description: "المشي نزولاً من الجبل، نقع أخير في الينابيع الساخنة في باتشانتا، والنقل العودة إلى بيساك." }
+        ]
+      },
+      costaRica: {
+        title: "الحج المقدس إلى كوستاريكا",
+        subtitle: "اتحاد الجبال والمحيط",
+        intro: "مناسبة خاصة جداً، لأول مرة في كوستاريكا في مكان سري. اتصال الجبال المقدسة مع المحيط، حج جسدي وروحي خاص يتبع رؤية ورسالة من الطب.",
+        description: [
+            "انضم إلينا في تجمع تاريخي وتحويلي. لأول مرة، يجلب هيرنان طب الواتشوما المقدس إلى أراضي كوستاريكا النابضة بالحياة.",
+            "مسترشدين برؤية عميقة ورسالة مباشرة من الطب، تعد هذه الخلوة حجاً روحياً يربط حكمة جبال الأنديز بالقوة المنظفة للمحيط.",
+            "بالإضافة إلى مراسم الواتشوما المقدسة، سنشارك طب الرابي، ونقوم بأعمال التطهير بالزهور، ونسافر من خلال تأملات الطب الموجهة.",
+            "سنجتمع في مكان سري ومعزول، مغمورين في أحضان الطبيعة. هذه التجربة الحميمة محدودة بصرامة بـ 21 مشاركاً لضمان اهتمام شخصي عميق."
+        ],
+        details: { location: "موقع سري، كوستاريكا", capacity: "محدود بـ 21 روح", dates: "22-28 يناير 2026" },
+        cta: "طلب دعوة",
+        visionTitle: "رؤية من الطب",
+        visionText: "هذا التجمع ليس مجرد خلوة؛ إنه استجابة لنداء. تحدث الطب عن ربط الحكمة الموجودة في أعالي الأنديز بالطاقة النقية والسائلة للمحيط.",
+        themeValue: "المحيط والجبل"
+      },
+      retreat2Day: {
+        title: "خلوة لمدة يومين",
+        subtitle: "واينا واسي وكينساكوتشا",
+        intro: "انغماس عميق في الطب المقدس، يقام في ملاذ واينا واسي وجبال بيساك القوية.",
+        days: [
+            { title: "اليوم 1: التحضير والوصول", content: "عند الوصول إلى واينا واسي، سيبدأ المشاركون رحلتهم بالتحضير الاحتفالي لمشروب الواتشوما المقدس. تبدأ هذه التجربة رابطة مقدسة مع الطب. يوجه هيرنان كل مشارك بعناية.", accommodation: "قضاء الليلة في واينا واسي، ملاذ للسلام." },
+            { title: "اليوم 2: مراسم في كينساكوتشا", content: "في اليوم الثاني، سنسافر إلى موقع كينساكوتشا الموقر، حيث ستشارك في مراسم واتشوما وسط مناظر جبلية خلابة. بتوجيه هيرنان، يستكشف المشاركون مناظرهم الداخلية.", accommodation: "العودة إلى واينا واسي لقضاء ليلة هادئة." }
+        ],
+        conclusion: "سيغادر المشاركون بشعور متجدد بالذات والهدف، ممكّنين بتجربة الواتشوما وحكمة باتشاماما الخالدة."
+      },
+      juchuy: {
+        title: "انغماس جوتشوي كوسكو",
+        subtitle: "المجتمع، المطبخ والآثار",
+        intro: "رحلة خاصة لمدة يومين إلى جوتشوي كوسكو ('كوسكو الصغيرة')، تجمع بين المشي إلى الآثار القديمة والانغماس الثقافي العميق مع عائلة محلية.",
+        days: [
+            { title: "اليوم 1: المشي والطهي التقليدي", content: "نبدأ رحلتنا بالمشي لمسافات طويلة إلى أنقاض جوتشوي كوسكو المذهلة. في فترة ما بعد الظهر، نستقر في منزل عائلة محلية أصيلة. هنا، سنقوم بإعداد الطعام معاً.", accommodation: "إقامة أصيلة مع عائلة محلية بجوار الآثار." },
+            { title: "اليوم 2: مراسم في الآثار", content: "ينبلج الصباح فوق الجبال. ننخرط في مراسم واتشوما مقدسة في الوجود القوي لآثار جوتشوي كوسكو. تسمح المراسم بالتفكير العميق والاتصال بالأجداد.", accommodation: "النزول والنقل العودة إلى بيساك." }
+        ],
+        conclusion: "مزيج فريد من العجائب الأثرية والثقافة الحية والعمل الروحي."
+      },
+      retreat1Day: {
+          title: "مراسم ليوم واحد",
+          subtitle: "مواقع الوادي المقدسة",
+          intro: "رحلة مركزة وعميقة في الطب، تعقد في مواقع مقدسة مختلفة مثل الآثار القديمة، أو البحيرات الهادئة، أو الجبال القوية.",
+          days: [
+              { title: "المراسم", content: "نبدأ في الصباح الباكر، ونسافر إلى موقع مقدس مختار بعناية في الوادي المقدس. المراسم هي مشاركة ليوم كامل مع الطب والطبيعة والذات. يقدم هيرنان التوجيه.", accommodation: "الإقامة غير مشمولة، ولكن يتم ترتيب النقل." }
+          ],
+          conclusion: "إعادة ضبط قوية وإعادة اتصال بالعالم الطبيعي، مما يتركك بوضوح وقلب أخف.",
+          details: { durationLabel: "المدة", durationValue: "يوم كامل", locationLabel: "الموقع", locationValue: "مواقع الوادي المقدس", focusLabel: "التركيز", focusValue: "الشفاء والطبيعة" }
+      },
+      preparation: {
+        title: "التحضير لخلوة سان بيدرو",
+        subtitle: "تمكين مستقبل مجتمع الأنديز",
+        intro: "مرحباً بكم في خلوة سان بيدرو التحويلية! لتحقيق أقصى استفادة من هذه التجربة، ندعوكم لإعداد أنفسكم جسدياً وعقلياً.",
+        diet: {
+            title: "التحضير: نظام غذائي خفيف ونوايا",
+            description: "قبل الخلوة، يمكن لنظام غذائي خفيف ونظيف أن يساعد في فتح جسمك وعقلك. إليك بعض الاقتراحات:",
+            items: [
+                { label: "نظام غذائي نباتي", text: "تجنب اللحوم والمنتجات الحيوانية." },
+                { label: "بدون سكريات مضافة", text: "امتنع عن تناول السكريات المصنعة." },
+                { label: "الحد من المنشطات", text: "قلل أو تخلص من الكافيين والكحول." },
+                { label: "تجنب الأطعمة الثقيلة", text: "تخلص من الأطعمة المقلية ومنتجات الألبان." },
+                { label: "الترطيب", text: "اشرب الكثير من الماء." },
+                { label: "النوايا", text: "خذ بعض الوقت كل يوم لتحديد نوايا الخلوة." }
+            ]
+        },
+        packing: {
+            title: "يوم المراسم",
+            description: "في يوم المراسم، نوصي بإحضار بعض الأغراض الشخصية.",
+            items: [
+                { label: "ملابس مريحة", text: "ارتد ملابس فضفاضة ومريحة مناسبة للهواء الطلق." },
+                { label: "قبعة شمسية", text: "احضر قبعة لحماية نفسك من الشمس." },
+                { label: "إحضار عرض", text: "من المعتاد إحضار الفواكه والزهور كقرابين." },
+                { label: "زجاجة ماء", text: "البقاء رطباً طوال اليوم أمر ضروري." },
+                { label: "دفتر وقلم", text: "لتدوين الأفكار بعد المراسم." }
+            ]
+        },
+        suggestions: {
+            title: "اقتراحات إضافية",
+            description: "لتعزيز رحلتك، ضع في اعتبارك ما يلي:",
+            items: [
+                { label: "احترام وقت الصمت", text: "استخدم فترات الصمت للتفكير." },
+                { label: "التنفس والتأمل", text: "يمكن أن تساعد تمارين التنفس اللطيفة." },
+                { label: "التخلص من السموم الرقمية", text: "افصل الهواتف والأجهزة الإلكترونية." },
+                { label: "الاتصال بالطبيعة", text: "اقض وقتاً في الطبيعة كل يوم." }
+            ]
+        },
+        closing: "من خلال التحضير بوعي والبقاء منفتحاً، ستخلق مساحة لطب سان بيدرو لإرشادك.",
+        risks: {
+            title: "إشعار مهم: المخاطر والمسؤوليات",
+            intro: "من المهم الاعتراف بأن المشاركة تنطوي على مخاطر جسدية ونفسية.",
+            sections: [
+                { title: "الإفصاح الطبي", items: [{ label: "الحالات الطبية", text: "يجب إبلاغ الميسرين بأي حالات طبية." }, { label: "الأدوية", text: "قد يكون لبعض الأدوية تفاعلات ضارة." }, { label: "الحساسية الجسدية", text: "قد يسبب سان بيدرو تأثيرات جسدية مؤقتة." }] },
+                { title: "المخاطر النفسية", items: [{ label: "تجارب مكثفة", text: "يمكن أن يجلب سان بيدرو مشاعر عميقة." }, { label: "دعم التكامل", text: "ينصح بالتخطيط للوقت والدعم بعد الخلوة." }] },
+                { title: "المسؤولية الشخصية", items: [{ label: "الموافقة المستنيرة", text: "أنت تشارك طواعية." }, { label: "احتياطات السلامة", text: "اتبع جميع إرشادات السلامة." }] }
+            ]
+        }
+      },
+      faq: {
+        title: "دليل خلوة الواتشوما",
+        subtitle: "كل ما تحتاج لمعرفته حول التجربة",
+        articles: [
+            {
+                title: "ماذا تتوقع في خلوة واتشوما",
+                content: [
+                    "التخطيط لخلوة واتشوما يمكن أن يبدو وكأنه تحضير لحج الروح. سواء كنت جديداً على طب النباتات أو باحثاً متمرساً، تقدم كل مراسم تجربة فريدة.",
+                    "<strong>مكان مقدس للشفاء العميق</strong><br>الوادي المقدس بالقرب من كوسكو هو الخلفية المثالية لرحلتك الروحية.",
+                    "<strong>يوم مراسم نموذجي</strong><br>ستبدأ خلوتك بمقدمة لطيفة عن الواتشوما. تحت توجيه هيرنان كولكي، تتكشف المراسم في مساحة آمنة وداعمة.",
+                    "<strong>دمج تجربتك</strong><br>الرؤى المكتسبة من الواتشوما يمكن أن تكون عميقة، ومن المهم تخصيص وقت لدمج هذه الدروس في حياتك اليومية."
+                ]
+            },
+            {
+                title: "اكتشف القوة العلاجية للواتشوما",
+                content: [
+                    "<strong>ما هو صبار سان بيدرو؟</strong><br>صبار سان بيدرو، المعروف أيضاً باسم واتشوما، هو نبات طبي قديم موطنه مرتفعات الأنديز.",
+                    "<strong>الأصول والتاريخ</strong><br>تم استخدام سان بيدرو لآلاف السنين من قبل شعوب الأنديز الأصلية.",
+                    "<strong>قوة المسكالين</strong><br>أحد المركبات النشطة الرئيسية هو المسكالين، المسؤول عن التجارب البصرية.",
+                    "<strong>الفوائد الروحية والعلاجية</strong><br>يشتهر سان بيدرو بخصائصه الروحية والعلاجية. آثاره عموماً أكثر لطفاً وتدرجاً مقارنة بآياهواسكا."
+                ]
+            }
+        ],
+        questionsTitle: "أسئلة مكررة",
+        questions: [
+            { question: "ما هي مراسم سان بيدرو؟", answer: "سان بيدرو هو طب نباتي مقدس يستخدم للشفاء والرؤية." },
+            { question: "هل الخلوة مناسبة للمبتدئين؟", answer: "نعم، خلواتنا مفتوحة للجميع." },
+            { question: "ما هي كينساكوتشا؟", answer: "كينساكوتشا هي منطقة هادئة تحيط بها البحيرات المقدسة." },
+            { question: "ماذا يجب أن أحضر؟", answer: "ملابس مريحة، أحذية للمشي، وقلب مفتوح." },
+            { question: "ما هي اللغة المستخدمة؟", answer: "يتحدث هيرنان الكيتشوا والإسبانية. يتوفر مترجم." },
+            { question: "هل الخلوة آمنة؟", answer: "السلامة هي أولويتنا القصوى." },
+            { question: "ما هي سياسة الاسترداد؟", answer: "الودائع قابلة للاسترداد حتى تاريخ محدد." }
+        ]
+      },
+      testimonials: { title: "أصوات من القلب", items: [{ 
+          name: "Zoltan E.", 
+          location: "هنغاريا", 
+          text: `إنها تجربة أصيلة حقاً للتواصل مع روح الأرض والقوة العلاجية لطب النباتات. لقد كان اتصالاً عميقاً بالحكمة القديمة لمرشدي الإنكا وما قبل الإنكا الروحيين من خلال المايسترو هيرنان. أنا ممتن جداً للرحلة.`, 
+          image: IMAGES.zoltan 
+      }, {
+        name: "Stephanie K.",
+        location: "Google Review",
+        text: `أشعر بأنني محظوظة جداً لأنني شاركت في مراسم واتشوما لمدة يوم كامل مع دون هيرنان. سافرنا إلى الجبال، عبر قرية محلية، للتواصل مع الطبيعة والروح وطاقة المعاملة بالمثل. توجيهه صادق، وطبه هو أفضل واتشوما تناولته. عدنا إلى منزله لإنهاء المراسم بحساء الأنديز محلي الصنع اللذيذ، ونار في الحديقة تحت اكتمال القمر والنجوم. أوصي بشدة بزيارة واينا واسي والعمل مع دون هيرنان.`,
+        image: IMAGES.kittel
+    }] },
+    contact: {
+        title: "اتصل بنا",
+        form: { name: "اسمك", email: "بريدك الإلكتروني", message: "رسالتك", submit: "إرسال الرسالة" },
+        info: "نحن موجودون في قلب الوادي المقدس، بالقرب من كالكا، كوسكو."
+    }
   },
 
   // JAPANESE
@@ -868,8 +1221,177 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       nav: { home: "ホーム", about: "私たちについて", services: "セレモニー", gallery: "ギャラリー", contact: "お問い合わせ", faq: "よくある質問" },
       hero: { title: "アンデスの聖なる薬", subtitle: "聖なる谷での伝統的なワチュマ・セレモニーを通じて、パチャママ（母なる大地）と再びつながりましょう。", cta: "セレモニーを予約", ausangateTeaser: { label: "特別", title: "アウサンガテへの旅", date: "2026年1月3-9日" }, costaRicaTeaser: { label: "特別イベント", title: "コスタリカ巡礼", date: "2026年1月22-28日" } },
       benefits: { title: "ワチュマの力", subtitle: "なぜ聖なるサボテンと共に旅をするのか", items: [{ title: "感情の癒し", description: "過去のトラウマや感情的なブロックを解放します。" }, { title: "自然とのつながり", description: "大地、要素、そしてアンデスの精霊との深いつながりを体験します。" }, { title: "明晰さとビジョン", description: "心を静め、人生の道に対する導きと目的を受け取ります。" }] },
-      services: { title: "提供するサービス", items: [{ title: "2日間リトリート", description: "ワイナ・ワシとキンサコチャでの深い没入。", price: "$173+" }, { title: "フチュイ・コスコ体験", description: "「小さなクスコ」遺跡での2日間。", price: "$200+" }, { title: "1日セレモニー", description: "聖なる谷の様々な場所での聖なる旅。", price: "$250" }, { title: "コスタリカ巡礼", description: "アンデスと海をつなぐ聖なる旅。", price: "要問合せ" }, { title: "プライベートヒーリング", description: "個人のニーズに合わせたセッション。", price: "要問合せ" }], ausangateCta: { title: "アウサンガテ遠征", description: "聖なる山への7日間の変容の旅。", button: "旅程を見る" } },
-      footer: { description: "サンペドロとして知られるアンデスの聖なる植物薬、ワチュマの変容の力を体験してください。", columns: { links: { title: "リンク", items: [{label: "私たちについて", href: "/about"}, {label: "お問い合わせ", href: "/contact"}] }, reviews: { title: "Google レビュー", rating: "4,9/5" }, follow: { title: "フォローする", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram }, contact: { title: "連絡先", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone }, find: { title: "場所", address: "Wayna Wasi, Pisac, Perú" } }, rights: "無断転載を禁じます。" }
+      footer: { description: "サンペドロとして知られるアンデスの聖なる植物薬、ワチュマの変容の力を体験してください。", columns: { links: { title: "リンク", items: [{label: "私たちについて", href: "/about"}, {label: "お問い合わせ", href: "/contact"}] }, reviews: { title: "Google レビュー", rating: "4,9/5" }, follow: { title: "フォローする", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram }, contact: { title: "連絡先", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone }, find: { title: "場所", address: "Wayna Wasi, Pisac, Perú" } }, rights: "無断転載を禁じます。" },
+      about: {
+        title: "エルナンについて",
+        subtitle: "聖なるサボテンの守護者",
+        description: [
+            "<strong>エルナン・コルケ</strong>はケチュアの先住民であり、アンデスの聖なる伝統に深く根ざした<strong>ワチュマ（サンペドロ）セレモニー</strong>の献身的なファシリテーターです。<strong>ピサック</strong>の高地コミュニティである<strong>ビアチャ</strong>の標高5000m以上で生まれたエルナンは、インカ以前の時代にまで遡る薬用治癒の血統を受け継いでいます。",
+            "先祖代々の伝統によれば、各世代で一人の子供だけがこの道を継承することができ、それは自発的に選ばれなければなりません。知恵は祖父のカルメンから父のベニーニョへと受け継がれました。7人の兄弟の中で、エルナンは幼い頃に薬を選び、この古代の遺産と<strong>パチャママ（母なる大地）</strong>との深いつながりの唯一の継承者となりました。",
+            "<strong>エスピナル出身のカッナの血統。</strong> エルナンは<strong>エスピナル州</strong>の出身で、彼の血統は<strong>カッナ（K'ana）</strong>です。カッナ文化は、典型的な征服ではなく、インカ帝国と独自の平和的な戦略的同盟を結んだインカ以前の社会でした。パチャクテクの治世中に平和的に統合され、彼らは重要な軍事同盟国、つまりチャンカ族を打ち負かすのを助けたエリート<strong>「シンチ」</strong>戦士となりました。この互恵関係により、彼らはコラスヨに土地を与えられ、彼らの古代の首都カナマルカはインカによって再建されました。",
+            "<strong>ワチュマの精神。</strong> ワチュマの精神が最初にこの地域の人々をつなぎ、植物が彼らに「私は土地から姿を消すだろう」と告げたため、彼らはそれを心に留めておいたという言い伝えがあります。エルナンはこの記憶と精神を受け継いでいます。",
+            "<strong>ピサックとビアチャ。</strong> 私たちは聖なる谷の活気ある町<strong>ピサック</strong>に拠点を置き、セレモニーを開催し、<strong>ワイナ・ワシ・ホテル</strong>で平和な宿泊施設を提供しています。より深く没入するために、数日間のリトリートはピサックのはるか上にある静かなコミュニティ、<strong>ビアチャ</strong>で開催されます。"
+        ]
+      },
+      ausangate: {
+        title: "アウサンガテ聖なる旅",
+        subtitle: "2026年1月3日〜9日",
+        description: "パッチャンタの癒しの水、アプ・アウサンガテの荘厳な存在、そしてワチュマとテマズカルの変容の力を組み合わせた深遠な探検。",
+        cta: "場所を予約する",
+        itinerary: [
+          { day: "1日目", title: "到着と浄化", description: "パッチャンタへ移動。天然温泉でリラックスして体を清め、その後アウサンガテに向けてハイキングを行い、意図を設定します。" },
+          { day: "2日目", title: "最初のワチュマ・セレモニー", description: "アプに心を開く。山の精霊と広大なアンデスの空とつながる日中のセレモニー。" },
+          { day: "3日目", title: "テマズカル（スウェットロッジ）＆ラペ", description: "母なる大地の子宮を表す伝統的な蒸し風呂の儀式。聖なるラペの薬による肉体的および精神的な解毒。" },
+          { day: "4日目", title: "2回目のワチュマ・セレモニー", description: "旅を深める。高地の静寂の中で内部のブロックを通して働き、意識を拡大します。" },
+          { day: "5日目", title: "テマズカル＆ラペ", description: "受け取ったエネルギーをグラウンディングし、聖なるラペで精神をさらに浄化するための2回目のスウェットロッジ・セレモニー。" },
+          { day: "6日目", title: "3回目のワチュマ＆統合", description: "最後の薬のセレモニー。統合、感謝、そして週の間に受けた癒しの封印に焦点を当てます。" },
+          { day: "7日目", title: "帰路", description: "山を下り、パッチャンタの温泉に最後に浸かり、ピサックへ戻ります。" }
+        ]
+      },
+      costaRica: {
+        title: "コスタリカへの聖なる巡礼",
+        subtitle: "山と海の統合",
+        intro: "秘密の場所でのコスタリカ初開催となる非常に特別な機会。聖なる山々と海をつなぐ、薬からのビジョンとメッセージに従った特別な肉体的および精神的な巡礼。",
+        description: [
+            "歴史的で変容をもたらす集まりに参加しませんか。初めて、エルナンは聖なるワチュマの薬をコスタリカの活気ある土地にもたらします。",
+            "深遠なビジョンと薬からの直接のメッセージに導かれ、このリトリートはアンデスの山々の知恵と海の浄化力をつなぐ精神的な巡礼です。",
+            "聖なるワチュマのセレモニーに加えて、ラペの薬を共有し、花を使った浄化のワークを行い、ガイド付きの薬の瞑想を通じて旅をします。",
+            "私たちは自然に抱かれた秘密の人里離れた場所に集まります。この親密な体験は、深い個人的な注意とまとまりのあるエネルギー的な器を確保するために、厳密に21人の参加者（ヘルパーを含む）に制限されています。"
+        ],
+        details: { location: "コスタリカ、秘密の場所", capacity: "21名限定", dates: "2026年1月22日〜28日" },
+        cta: "招待をリクエスト",
+        visionTitle: "薬からのビジョン",
+        visionText: "この集まりは単なるリトリートではありません。それは呼びかけへの応答です。薬は、高いアンデスに保持されている知恵と、海の浄化する流動的なエネルギーをつなぐことについて語りました。精神と肉体の巡礼です。",
+        themeValue: "海と山"
+      },
+      retreat2Day: {
+        title: "2日間リトリート",
+        subtitle: "ワイナ・ワシ＆キンサコチャ",
+        intro: "ワイナ・ワシの聖域とピサックの力強い山々で開催される、聖なる薬への深い没入。",
+        days: [
+            { title: "1日目：準備とワイナ・ワシへの到着", content: "ワイナ・ワシに到着すると、参加者はベビダ（聖なるワチュマの飲み物）の儀式的な準備から旅を始めます。この体験は薬との聖なる絆を開始し、内なる探求とつながりの舞台を設定します。エルナンは各参加者を丁寧に導き、意図を明確にし、ワチュマの穏やかでありながら強力な効果に心を開くのを助けます。", accommodation: "アンデスの精霊が常に存在する平和の聖域、ワイナ・ワシで夜を過ごします。" },
+            { title: "2日目：ピサック、キンサコチャでのセレモニー", content: "2日目は、ピサックの崇敬される場所キンサコチャへ移動し、息をのむような山の景色の中でワチュマ・セレモニーに参加します。エルナンの経験豊富な指導の下、参加者は内面の風景を探求し、個人的な洞察を求め、ワチュマが提供する教えを受け取ります。セレモニーの終わりに、グループシェアリングサークルが参加者が旅を処理し、振り返ることを可能にし、リトリートの影響を高めます。", accommodation: "変容をもたらす体験を吸収するために、ワイナ・ワシに戻り、静かな夜を過ごします。" }
+        ],
+        conclusion: "参加者は、ワチュマの体験とパチャママの時代を超越した知恵によって力を与えられ、新たな自己意識と目的を持って出発します。"
+      },
+      juchuy: {
+        title: "フチュイ・コスコ 先祖代々の没入",
+        subtitle: "コミュニティ、料理、遺跡",
+        intro: "古代遺跡へのハイキングと地元の家族との滞在による深い文化的没入を組み合わせた、フチュイ・コスコ（「小さなクスコ」）への特別な2日間の旅。",
+        days: [
+            { title: "1日目：ハイキング＆伝統料理", content: "聖なる谷を見下ろすフチュイ・コスコの壮観な遺跡へのハイキングから旅を始めます。午後は、本物の地元の民家に落ち着きます。ここでは、一緒に食事を準備し、伝統的なアンデスのスープを作り、火を囲んで物語を共有します。この共同の準備はそれ自体がセレモニーであり、私たちを地元の生活様式にグラウンディングさせます。", accommodation: "遺跡の隣にある地元の家族との本物の宿泊施設。" },
+            { title: "2日目：遺跡でのセレモニー", content: "アプの上に朝が明けます。私たちはフチュイ・コスコ遺跡の強力な存在の中で聖なるワチュマ・セレモニーに従事します。他の場所のような混雑がなく、この王室の邸宅の歴史とエネルギーと深くつながることができます。セレモニーは、先祖との深い反省とつながりを可能にします。", accommodation: "下山し、ピサックへの帰りの送迎。" }
+        ],
+        conclusion: "考古学的な驚異、生きた文化、そして精神的なワークのユニークな融合。あなたはお腹がいっぱいで、心が温かく、精神がアンデスと一致した状態で出発します。"
+      },
+      retreat1Day: {
+          title: "1日セレモニー",
+          subtitle: "聖なる谷の聖地",
+          intro: "古代の遺跡、静かなラグーン、力強い山々など、様々な聖地で開催される、薬への集中的かつ深遠な旅。",
+          days: [
+              { title: "セレモニー", content: "早朝に出発し、聖なる谷（プマママルカ、キンサコチャ、その他のパワースポットなど）の厳選された聖地へ移動します。セレモニーは、薬、自然、そして自分自身との一日がかりの取り組みです。エルナンはガイダンスを提供し、深い癒しとつながりのためのスペースを保持します。体験は午後遅くに終了します。", accommodation: "宿泊施設は含まれていませんが、現地への送迎は手配されます。" }
+          ],
+          conclusion: "自然界との強力なリセットと再接続により、明晰さと軽い心を持って出発します。",
+          details: { durationLabel: "期間", durationValue: "終日（朝から午後まで）", locationLabel: "場所", locationValue: "聖なる谷の聖地", focusLabel: "フォーカス", focusValue: "癒しと自然" }
+      },
+      preparation: {
+        title: "サンペドロ・リトリートの準備",
+        subtitle: "アンデス・コミュニティの未来に力を",
+        intro: "変容をもたらす3日間のサンペドロ・リトリートへようこそ！この体験を最大限に活用するために、事前に肉体的および精神的に準備することをお勧めします。有意義な旅にするためのガイドはこちらです。",
+        diet: {
+            title: "準備：軽い食事と意図の設定",
+            description: "リトリートに向けて、軽くてきれいな食事は、体験に向けて体と心を開くのに役立ちます。到着の少なくとも3〜5日前に従うべきいくつかの提案があります：",
+            items: [
+                { label: "ベジタリアンダイエット", text: "肉や動物性製品は消化器系に負担をかける可能性があるため、避けてください。" },
+                { label: "砂糖無添加", text: "エネルギーのバランスを保つために、加工糖の摂取を控えてください。" },
+                { label: "刺激物を制限する", text: "心と体をきれいにするために、カフェイン、アルコール、その他の刺激物を減らすか排除してください。" },
+                { label: "重い食事を避ける", text: "消化プロセスを容易にするために、揚げ物や乳製品をカットしてください。" },
+                { label: "水分補給", text: "明晰さと全体的な健康のために、たくさんの水を飲んでください。" },
+                { label: "意図", text: "食事以外にも、毎日時間を取ってリトリートの意図を設定してください。ジャーナリング、瞑想、または静かな熟考を通じて、この旅を通じて何を得たいか、または解放したいかに同調してください。" }
+            ]
+        },
+        packing: {
+            title: "セレモニーの日",
+            description: "リトリートの2日目に行われるセレモニーの日には、つながりを高め、聖なる空間に貢献できるいくつかの私物を持参することをお勧めします。",
+            items: [
+                { label: "快適な服装", text: "屋外に適した、ゆったりとした快適な服を着てください。" },
+                { label: "日よけ帽子", text: "セレモニーは屋外で行われるため、日差しから身を守るために帽子を持参してください。" },
+                { label: "供物を持参する", text: "セレモニーのために果物や花を供物として持参するのが通例です。このジェスチャーは感謝と自然とのつながりを象徴しています。" },
+                { label: "水筒", text: "一日中水分補給をすることは不可欠です。" },
+                { label: "ノートとペン", text: "思考、洞察、または感情を捉えるために、セレモニーの後にジャーナリングをするインスピレーションを感じるかもしれません。" }
+            ]
+        },
+        suggestions: {
+            title: "リトリートのための追加の提案",
+            description: "旅を充実させるために、以下を検討してください：",
+            items: [
+                { label: "静かな時間を尊重する", text: "体験を振り返り、処理するために沈黙の期間を使用してください。" },
+                { label: "呼吸法と瞑想", text: "穏やかな呼吸法や瞑想は、グラウンディングし、中心を保つのに役立ちます。" },
+                { label: "デジタルデトックス", text: "電話やその他の電子機器から切断し、完全に存在することを許可してください。" },
+                { label: "自然とつながる", text: "可能であれば、毎日自然の中で過ごし、それが内なる旅をサポートするようにしてください。" }
+            ]
+        },
+        closing: "マインドフルに準備し、オープンでいることで、サンペドロの薬が発見の深遠な道へとあなたを導くためのスペースを作ることができます。この特別な体験をあなたと共有できることを楽しみにしています。",
+        risks: {
+            title: "重要なお知らせ：リスクと責任の理解",
+            intro: "このリトリートは安全で変容をもたらす体験を提供するように設計されていますが、サンペドロ・セレモニーへの参加には肉体的および心理的なリスクが伴うことを認識することが重要です。情報に基づいた参加を確実にするために、以下の考慮事項を慎重に確認してください：",
+            sections: [
+                { title: "健康および医療開示", items: [{ label: "病状", text: "参加者は、心臓の問題、精神的健康状態、または発作の病歴を含む病状をファシリテーターに通知する必要があります。一部の既往症は、サンペドロ体験に関連するリスクを高める可能性があります。" }, { label: "薬", text: "抗うつ薬、抗精神病薬、および一部の市販薬を含む特定の薬は、サンペドロと悪影響を及ぼす可能性があります。リトリートのかなり前にファシリテーターに薬を開示してください。" }, { label: "身体的感受性", text: "サンペドロは、吐き気、嘔吐、心拍数の増加など、一時的な身体的影響を引き起こす可能性があります。参加者はこれらの影響に対して肉体的および精神的に準備する必要があります。" }] },
+                { title: "心理的リスクと感情的責任", items: [{ label: "強烈な体験", text: "サンペドロは深い感情や過去のトラウマを引き起こす可能性があり、処理するのが難しい場合があります。トラウマの病歴がある場合、参加者は事前に個人的な振り返りを行うか、専門家の指導を求めることをお勧めします。" }, { label: "統合サポート", text: "リトリート後、参加者は体験を統合するための追加のサポートから恩恵を受ける場合があります。生じた洞察や感情を処理するための時間、サポート、リソースを計画することをお勧めします。" }] },
+                { title: "個人の責任", items: [{ label: "インフォームドコンセント", text: "このリトリートに参加することにより、あなたは自発的にこの体験に従事していることを認めます。あなたが経験する洞察、課題、または個人的な変容は、あなた自身の責任です。" }, { label: "安全上の注意", text: "食事制限、セレモニー中の推奨される行動、身体活動の制限など、ファシリテーターが提供するすべての安全ガイドラインに従ってください。" }] }
+            ]
+        }
+      },
+      faq: {
+        title: "ワチュマ・リトリートガイド",
+        subtitle: "体験について知っておくべきことすべて",
+        articles: [
+            {
+                title: "ワチュマ・リトリートで期待すること",
+                content: [
+                    "ワチュマ・リトリートを計画することは、魂の巡礼の準備のように感じられるかもしれません。植物薬が初めての方でも、経験豊富な探求者でも、すべてのワチュマ・セレモニーはユニークで変容をもたらす体験を提供します。アンデスの精霊とパチャママ自身が常に存在するペルーの聖なる谷でのリトリートに乗り出す際に期待できることは次のとおりです。",
+                    "<strong>深い癒しのための聖なる環境</strong><br>クスコ近くの聖なる谷は、あなたの精神的な旅のための完璧な背景です。アンデスの山々に囲まれたリトリートスペースは、ワチュマの力を増幅する素晴らしい風景に囲まれています。",
+                    "<strong>典型的なワチュマ・セレモニーの日</strong><br>リトリートは、ワチュマへの穏やかな紹介から始まります。エルナン・コルケの指導の下、セレモニーは安全で協力的なスペースで展開され、内なる声に耳を傾けることが奨励されます。",
+                    "<strong>ワチュマ体験の統合</strong><br>ワチュマから得られる洞察は深遠であり、これらの教訓を日常生活に統合するために時間を取ることが重要です。エルナンと彼のチームは、グループディスカッションやマンツーマンのサポートを通じて、あなたが体験を処理するのを助けるためにそこにいます。"
+                ]
+            },
+            {
+                title: "ワチュマの治癒力を発見する",
+                content: [
+                    "<strong>サンペドロサボテンとは？</strong><br>サンペドロサボテン（ワチュマとしても知られる）は、主にペルーのアンデス高地に自生する古代の薬用植物です。",
+                    "<strong>起源と歴史</strong><br>サンペドロは、アンデスの先住民、特にケチュア族とアイマラ族によって何千年もの間使用されてきました。",
+                    "<strong>メスカリンの力</strong><br>主要な活性化合物の一つはメスカリンであり、幻想的で内省的な体験に関与しています。",
+                    "<strong>精神的および治療的利点</strong><br>サンペドロはその精神的および治癒的特性で有名です。その効果は一般的に、アヤワスカなどの他の植物薬と比較して、より穏やかで段階的です。"
+                ]
+            }
+        ],
+        questionsTitle: "よくある質問",
+        questions: [
+            { question: "サンペドロ・セレモニーとは何ですか？", answer: "サンペドロ（ワチュマ）は、癒し、ビジョン、そして深い精神的なつながりのために使用される聖なる植物薬です。" },
+            { question: "リトリートは初心者にも適していますか？", answer: "はい、私たちのリトリートは、植物薬の経験があるかどうかにかかわらず、すべての人に開かれています。" },
+            { question: "キンサコチャとは何ですか、なぜ特別な場所なのですか？", answer: "ピサックの近くにあるキンサコチャは、聖なる湖に囲まれた静かな地域です。セレモニーに理想的な環境です。" },
+            { question: "リトリートには何を持っていくべきですか？", answer: "詳細なリストが提供されますが、必需品には快適な服、ハイキングシューズ、そしてオープンな心が含まれます。" },
+            { question: "リトリート中に話される言語は何ですか？", answer: "エルナンはケチュア語とスペイン語を話します。通訳が利用可能です。" },
+            { question: "リトリートは安全ですか？", answer: "安全は私たちの最優先事項です。" },
+            { question: "返金ポリシーは何ですか？", answer: "デポジットは特定の日付まで返金可能です。" }
+        ]
+      },
+      testimonials: { title: "心からの声", items: [{ 
+          name: "Zoltan E.", 
+          location: "ハンガリー", 
+          text: `大地の精霊と植物薬の治癒力とつながる、本当に本物の体験です。マエストロ・エルナンを通して、インカおよびインカ以前のスピリチュアルガイドの古代の知恵との深いつながりがありました。この旅にとても感謝しています。`, 
+          image: IMAGES.zoltan 
+      }, {
+        name: "Stephanie K.",
+        location: "Google Review",
+        text: `ドン・エルナンとの終日ワチュマ・セレモニーに参加できたことはとても幸運でした。私たちは山へ、地元の村を通り、自然、精神、そして互恵性のエネルギーと交信するために旅をしました。彼の指導は誠実で、彼の薬は私がこれまでに飲んだ中で最高のワチュマです。私たちは彼の家に戻り、美味しい自家製のアンデススープと、満月と星空の下での庭の焚き火でセレモニーを終えました。ワイナ・ワシを訪れ、ドン・エルナンと一緒にワークすることを強くお勧めします。`,
+        image: IMAGES.kittel
+    }] },
+    contact: {
+        title: "お問い合わせ",
+        form: { name: "お名前", email: "メールアドレス", message: "メッセージ", submit: "メッセージを送信" },
+        info: "私たちはクスコのカルカ近く、聖なる谷の中心に位置しています。"
+    }
   },
 
   // SANSKRIT
@@ -904,6 +1426,176 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       nav: { home: "गृहम्", about: "परिवारः", services: "संस्काराः", gallery: "चित्रवीथिका", contact: "सम्पर्कः", faq: "प्रश्नोत्तराणि" },
       hero: { title: "पवित्र अण्डीज ओषधि", subtitle: "पवित्र उपत्यकायाम् परम्परागत वाचुमा संस्कारैः सह पचमामायाः सह पुनः सम्बध्यताम्।", cta: "संस्कारं आरक्षयतु", ausangateTeaser: { label: "विशिष्टः", title: "औसंगाते यात्रा", date: "जनवरी ३-९, २०२६" }, costaRicaTeaser: { label: "विशेष कार्यक्रमः", title: "कोस्टा रिका तीर्थयात्रा", date: "जनवरी २२-२८, २०२६" } },
       benefits: { title: "वाचुमायाः शक्तिः", subtitle: "वयं पवित्र काक्टसनेन सह किमर्थं यात्रां कुर्मः", items: [{ title: "भावनात्मक चिकित्सा", description: "शरीरे सञ्चिताः पूर्वत्रासाः भावनात्मकबाधाः च मोचयन्तु।" }, { title: "प्रकृत्या सह सम्बन्धः", description: "पृथिव्या, तत्त्वैः, अण्डीजस्य जीवच्छक्त्या च सह गभीरं एकत्वं अनुभवन्तु।" }, { title: "स्पष्टता दृष्टिः च", description: "मार्गदर्शनं, उद्देश्यं, जीवनपथस्य नूतनदृष्टिकोणं च प्राप्तुं मनः शान्तं कुरुत।" }] },
-      footer: { description: "वाचुमायाः परिवर्तनशक्तिं अनुभवन्तु, या सेन् पेड्रो इति नाम्ना ख्याता अस्ति।", columns: { links: { title: "सम्बन्धाः", items: [{label: "अस्मान् प्रति", href: "/about"}, {label: "सम्पर्कः", href: "/contact"}] }, reviews: { title: "Google समीक्षाः", rating: "४.९/५" }, follow: { title: "अनुसरणं कुरुत", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram }, contact: { title: "सम्पर्कः", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone }, find: { title: "स्थानम्", address: "Wayna Wasi, Pisac, Perú" } }, rights: "सर्वाधिकारः सुरक्षितः।" }
+      footer: { description: "वाचुमायाः परिवर्तनशक्तिं अनुभवन्तु, या सेन् पेड्रो इति नाम्ना ख्याता अस्ति।", columns: { links: { title: "सम्बन्धाः", items: [{label: "अस्मान् प्रति", href: "/about"}, {label: "सम्पर्कः", href: "/contact"}] }, reviews: { title: "Google समीक्षाः", rating: "४.९/५" }, follow: { title: "अनुसरणं कुरुत", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram }, contact: { title: "सम्पर्कः", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone }, find: { title: "स्थानम्", address: "Wayna Wasi, Pisac, Perú" } }, rights: "सर्वाधिकारः सुरक्षितः।" },
+      about: {
+        title: "हर्नन् वर्येण सह मिलन्तु",
+        subtitle: "पवित्र कण्टकस्य रक्षकः",
+        description: [
+            "<strong>हर्नन् कोल्के</strong> क्वेशुआ देशीयः तथा <strong>वाचुमा (सेन् पेड्रो) संस्काराणाम्</strong> समर्पितः संचालकः अस्ति, यः अण्डीजस्य पवित्रपरम्परासु गभीररूपेण स्थितः अस्ति। <strong>पिसाक</strong> नगरस्य <strong>वियाचा</strong> नामके उच्चसमुदाये ५००० मीटोर्ध्वं जातः, हर्नन् ओषधीयचिकित्सायाः वंशं वहति यः इन्काकालात् पूर्वं गच्छति।",
+            "पैतृकपरम्परायाः अनुसारं, प्रत्येकं पीढ्याम् केवलं एकः एव बालः इमं मार्गं प्राप्तुं शक्नोति, स च स्वेच्छया तत् चिनुयात्। प्रज्ञा तस्य पितामहात् कार्मेनतः तस्य पितरं बेनिन्हो प्रति गता। सप्तसु भ्रातृषु, हर्नन् अतिबाल्यकाले एव ओषधिं चितवान्, यः अस्य प्राचीनपरम्परायाः तथा <strong>पचमामायाः (मातृभूम्याः)</strong> सह तस्य गभीरसम्बन्धस्य एकः एव वाहकः अभवत्।",
+            "<strong>एस्पिनार् तः क्काना वंशः।</strong> हर्नन् <strong>एस्पिनार् प्रान्तात्</strong> अस्ति तथा तस्य वंशः <strong>क्काना (K'ana)</strong> अस्ति। क्काना संस्कृतिः इन्काकालात् पूर्वं समाजः आसीत् यः इन्कासाम्राज्येन सह विशिष्टं, शान्तिपूर्णं रणनीतिकं सम्बन्धं स्थापितवान् न तु सामान्यविजयम्। पाचाकुतेकस्य शासनकाले शान्तिपूर्णरूपेण मिलित्वा, ते अत्यावश्यकाः सैनिकाः मित्राणि अभवन्—विशिष्टाः <strong>'सिञ्चिस्'</strong> योद्धारः ये चङ्काः पराजयितुं साहाय्यं कृतवन्तः। अस्य पारस्परिकतायाः कारणात्, तेभ्यः कोल्लासुयोमध्ये भूमिः प्रदत्ता तथा तेषां प्राचीनराजधानी, कानामार्का, इन्काभिः पुनःनिर्मिता।",
+            "<strong>वाचुमायाः आत्मा।</strong> एकं कथनं अस्ति यत् वाचुमायाः आत्मा प्रथमं अस्य क्षेत्रस्य जनान् योजितवान् तथा ते तत् स्वहृदये रक्षितवन्तः यतोहि वनस्पतिः तान् उक्तवान् यत् सा भूम्याः लुप्ता भविष्यति, यत् नातिचिरं पूर्वं अभवत्। हर्नन् इमां स्मृतिं तथा आत्मानं अग्रे नयति।",
+            "<strong>पिसाक तथा वियाचा।</strong> वयं पवित्र उपत्यकायाः <strong>पिसाक</strong> नगरे स्थिताः स्मः, यत्र वयं संस्कारान् आयोजयामः तथा <strong>वायना वासी होटेल्</strong> मध्ये शान्तं निवासं प्रदद्मः। गभीरानुभवाय, अस्माकं बहुदिवसीयाः शिबिराः <strong>वियाचा</strong> मध्ये आयोज्यन्ते, यः पिसाकात् उपरि एकः शान्तः समुदायः अस्ति।"
+        ]
+      },
+      ausangate: {
+        title: "औसंगाते पवित्र यात्रा",
+        subtitle: "जनवरी ३-९, २०२६",
+        description: "पाच्छन्तायाः चिकित्साजलानाम्, अपु औसंगातेः भव्योपस्थितेः, तथा वाचुमायाः तेमाज्कालस्य च परिवर्तनशक्तेः संयोजनं कुर्वती एका गभीरा यात्रा।",
+        cta: "स्वस्थानं रक्षितं कुरुत",
+        itinerary: [
+          { day: "दिनम् १", title: "आगमनं तथा शुद्धिः", description: "पाच्छन्ता प्रति यात्रा। शरीरं शोधयितुं प्राकृतिकुष्णजलेषु विश्रामः, ततः अस्माकं सङ्कल्पान् स्थापयितुं औसंगाते प्रति पदयात्रा।" },
+          { day: "दिनम् २", title: "प्रथमः वाचुमा संस्कारः", description: "अपु प्रति हृदयं उद्घाटनम्। पर्वतस्य आत्मना तथा विशाल अण्डीज आकाशेन सह सम्बन्धं स्थापयितुं एकः दिवससंस्कारः।" },
+          { day: "दिनम् ३", title: "तेमाज्काल & रापे", description: "मातृभूम्याः गर्भं प्रदर्शयन्ती एका पारम्परिका वाष्पस्नानविधिः। पवित्र रापे ओषधिना सह शारीरिकं तथा आध्यात्मिकं विषहरणम्।" },
+          { day: "दिनम् ४", title: "द्वितीयः वाचुमा संस्कारः", description: "यात्रायाः गभीरीकरणम्। उच्चभूमीनां मौने आन्तरिकबाधानां निवारणं तथा चेतनायाः विस्तारः।" },
+          { day: "दिनम् ५", title: "तेमाज्काल & रापे", description: "प्राप्तशक्तीनां स्थापनार्थं तथा आत्मानं अधिकं शोधयितुं द्वितीयः वाष्पस्नानसंस्कारः।" },
+          { day: "दिनम् ६", title: "तृतीयः वाचुमा & एकीकरणम्", description: "अन्तिमः ओषधिसंस्कारः। एकीकरणे, कृतज्ञतायाम्, तथा सप्ताहस्य चिकित्सायाः रक्षणे ध्यानम्।" },
+          { day: "दिनम् ७", title: "प्रत्यागमनयात्रा", description: "पर्वतात् अधः पदयात्रा, पाच्छन्ता उष्णजलेषु अन्तिमं स्नानम्, तथा पिसाक प्रति प्रत्यागमनम्।" }
+        ]
+      },
+      costaRica: {
+        title: "कोस्टा रिका प्रति पवित्र तीर्थयात्रा",
+        subtitle: "पर्वताः सागराः च मिलिताः",
+        intro: "एकः अतिविशेषः अवसरः, कोस्टा रिका मध्ये प्रथमवारं एकस्मिन् गुप्तस्थाने। पवित्रपर्वतानां सागरेण सह सम्बन्धः, ओषधेः दृष्टिं तथा सन्देशं अनुसरन्ती एका विशेषः शारीरिकः तथा आध्यात्मिकः तीर्थयात्रा।",
+        description: [
+            "एकस्मिन् ऐतिहासिके तथा परिवर्तनकारिणि समागमे अस्माभिः सह मिलन्तु। प्रथमवारं, हर्नन् पवित्र वाचुमा ओषधिं कोस्टा रिकायाः जीवन्तभूमिषु आनयति।",
+            "एकया गभीरदृष्ट्या तथा ओषधेः प्रत्यक्षसन्देशेन मार्गदर्शिता, इयं शिबिरः एका आध्यात्मिकी तीर्थयात्रा अस्ति या उच्च अण्डीजस्य प्रज्ञां सागरस्य शोधकशक्त्या सह योजयति।",
+            "पवित्र वाचुमा संस्कारैः सह, वयं रापे ओषधिं विभजेम, पुष्पैः सह शुद्धिं करिष्यामः, तथा मार्गदर्शितैः ओषधिध्यानैः यात्रां करिष्यामः।",
+            "वयं प्रकृतेः क्रोडे, एकस्मिन् गुप्तस्थाने मिलिष्यामः। इयं आत्मीया अनुभवः गभीरं व्यक्तिगतं ध्यानं तथा एकं सुसङ्गतं ऊर्जापात्रं सुनिश्चितं कर्तुं २१ प्रतिभागिषु (सहायकैः सह) सीमितः अस्ति।"
+        ],
+        details: { location: "गुप्तस्थानम्, कोस्टा रिका", capacity: "२१ जीवाः सीमिताः", dates: "जनवरी २२-२८, २०२६" },
+        cta: "आमन्त्रणं प्रार्थयन्तु",
+        visionTitle: "ओषधेः एका दृष्टिः",
+        visionText: "अयम् समागमः न केवलं एकं शिबिरं अस्ति; एतत् एकस्य आह्वानस्य उत्तरं अस्ति। ओषधिः उच्च अण्डीज मध्ये स्थितां प्रज्ञां सागरस्य पवित्र, प्रवाहितऊर्जया सह योजनस्य विषयं उक्तवती। आत्मनः शरीरस्य च तीर्थयात्रा।",
+        themeValue: "सागरः पर्वतः च"
+      },
+      retreat2Day: {
+        title: "२ दिवसीय शिबिरः",
+        subtitle: "वायना वासी तथा किन्साकोचा",
+        intro: "पवित्र ओषधौ गभीरं निमज्जनम्, वायना वासी पवित्राश्रमे तथा पिसाकस्य शक्तिमत्पर्वतेषु आयोजितम्।",
+        days: [
+            { title: "दिनम् १ : सज्जीकरणं तथा वायना वासी मध्ये आगमनम्", content: "वायना वासी मध्ये आगमनेन, प्रतिभागिनः बेबिदा (पवित्र वाचुमा पानम्) स्य संस्कारिकसज्जीकरणेन स्वयात्रां आरप्स्यन्ते। अयम् अनुभवः ओषधिना सह एकं पवित्रं बन्धनं आरभते। हर्नन् प्रत्येकं प्रतिभागिनं ध्यानेन मार्गदर्शयति।", accommodation: "वायना वासी मध्ये रात्रिं यापयन्तु, यत्र अण्डीजस्य आत्मा सर्वदा वर्तते।" },
+            { title: "दिनम् २ : किन्साकोचा, पिसाक मध्ये संस्कारः", content: "द्वितीये दिने, वयं पिसाकस्य पूजितस्थलं किन्साकोचा प्रति यात्रां करिष्यामः, यत्र भवान् पर्वतदृश्यानां मध्ये वाचुमा संस्कारे भागं ग्रहीष्यति। हर्नन् वर्यस्य मार्गदर्शनेन, प्रतिभागिनः स्वान्तरिकदृश्यान् अन्वेषयिष्यन्ति।", accommodation: "वायना वासी प्रति प्रत्यागमनं शान्तरात्रये।" }
+        ],
+        conclusion: "प्रतिभागिनः वाचुमा अनुभवेन तथा पचमामायाः शाश्वतप्रज्ञया शक्ताः सन्तः, नूतनआत्मज्ञानेन उद्देश्येन च प्रस्थास्यन्ते।"
+      },
+      juchuy: {
+        title: "जुचुय कोस्को पैतृक निमज्जनम्",
+        subtitle: "समुदायः, पाककला तथा भग्नावशेषाः",
+        intro: "जुचुय कोस्को ('लघु कुस्को') प्रति एका विशिष्टा २ दिवसीय यात्रा, प्राचीनभग्नावशेषान् प्रति पदयात्रां स्थानीयपरिवारेण सह निवासेन सह संयोजयति।",
+        days: [
+            { title: "दिनम् १ : पदयात्रा & पारम्परिक पाकः", content: "वयं पवित्र उपत्यकायाः उपरि जुचुय कोस्को इत्यस्य दर्शनीयभग्नावशेषान् प्रति पदयात्रया स्वयात्रां आरभामहे। अपराने, वयं एकस्मिन् प्रामाणिके स्थानीयपरिवारगृहे निवसामः। अत्र, वयं मिलित्वा भोजनं पचामः।", accommodation: "भग्नावशेषाणां समीपे स्थानीयपरिवारेण सह प्रामाणिकः निवासः।" },
+            { title: "दिनम् २ : भग्नावशेषेषु संस्कारः", content: "प्रातः अपुनां उपरि भवति। वयं जुचुय कोस्को भग्नावशेषाणां शक्तिमत् उपस्थितौ एकस्मिन् पवित्र वाचुमा संस्कारे रताः भवामः।", accommodation: "अवरोहणं तथा पिसाक प्रति प्रत्यागमनम्।" }
+        ],
+        conclusion: "पुरातत्व आश्चर्यस्य, जीवन्तसंस्कृतेः, तथा आध्यात्मिककार्यस्य एकं अद्वितीयं मिश्रणम्।"
+      },
+      retreat1Day: {
+          title: "१ दिवसीय संस्कारः",
+          subtitle: "उपत्यकायाः पवित्रस्थलानि",
+          intro: "ओषधौ एका एकाग्रा गभीरा च यात्रा, प्राचीनभग्नावशेषेषु, शान्तसरोवरेषु, शक्तिमत्पर्वतेषु वा आयोजिता।",
+          days: [
+              { title: "संस्कारः", content: "वयं प्रातःकाले आरभामहे, पवित्र उपत्यकायाः एकस्मिन् चयितपवित्रस्थले (यथा पुमामारका, किन्साकोचा वा अन्येषु शक्तिस्थलेषु) गच्छामः। संस्कारः ओषधिना, प्रकृत्या, तथा आत्मना सह पूर्णदिवसस्य संलग्नता अस्ति।", accommodation: "निवासः न समाविष्टः, किन्तु यातायातस्य व्यवस्था अस्ति।" }
+          ],
+          conclusion: "प्राकृतिकजरा सह एकः शक्तिशाली पुनःारम्भः तथा पुनःसम्बन्धः, स्पष्टतया तथा लघuhृदयेन सह प्रस्थानम्।",
+          details: { durationLabel: "अवधिः", durationValue: "पूर्णदिवसः (प्रातः तः अपराह्न पर्यन्तम्)", locationLabel: "स्थानम्", locationValue: "पवित्र उपत्यकायाः स्थलानि", focusLabel: "ध्यानम्", focusValue: "चिकित्सा तथा प्रकृतिः" }
+      },
+      preparation: {
+        title: "भवतः सेन् पेड्रो शिबिराय सज्जीकरणम्",
+        subtitle: "अण्डीज समुदायस्य भविष्यस्य सशक्तिकरणम्",
+        intro: "भवतः परिवर्तनकारिणि त्रिदिवसीये सेन् पेड्रो शिबिरे स्वागतम्! अस्य अनुभवस्य पूर्णलाभं प्राप्तुं, वयं भवन्तं आह्वयामः यत् भवान् पूर्वमेव शारीरिकरूपेण तथा मानसिकरूपेण आत्मानं सज्जीकरोतु।",
+        diet: {
+            title: "सज्जीकरणम्: लघु आहारः तथा सङ्कल्पाः",
+            description: "शिबिरात् पूर्वं, एकः लघुः, शुद्धः आहारः भवतः शरीरं मनः च अनुभवाय उद्घाटयितुं साहाय्यं कर्तुं शक्नोति। अत्र आगमनात् न्यूनातिन्यूनं ३-५ दिनानि पूर्वं अनुसरणं कर्तुं काश्चन सूचनाः सन्ति:",
+            items: [
+                { label: "शाकाहारी आहारः", text: "मांसं तथा पशुउत्पादान् परिहरतु यतोहि ते पाचनतन्त्रे भारं जनयितुं शक्नुवन्ति।" },
+                { label: "योजितशर्करा नास्ति", text: "भवतः ऊर्जां सन्तुलितं कर्तुं संस्कृतशर्करायाः सेवनात् विरमतु।" },
+                { label: "उत्तेजकान् न्यूनीकरोतु", text: "भवतः मनः शरीरं च शोधयितुं साहाय्यं कर्तुं काफीन्, मद्यं, तथा अन्येषां उत्तेजकानां न्यूनीकरणं वा त्यागं कुरुत।" },
+                { label: "गुरुभोजनानि परिहरतु", text: "सरलपाचनाय भर्जितभोजनानि तथा दुग्धउत्पादान् त्यजतु।" },
+                { label: "जलयोजनम्", text: "स्पष्टतायै तथा समग्रकल्याणाय पर्याप्तं जलं पिबतु।" },
+                { label: "सङ्कल्पाः", text: "आहारात् परं, शिबिराय सङ्कल्पान् स्थापयितुं प्रतिदिनं किञ्चित् समयं यच्छतु। ध्यानद्वारा वा शान्तचिन्तनेन वा।" }
+            ]
+        },
+        packing: {
+            title: "संस्कारस्य दिवसः",
+            description: "संस्कारस्य दिने, यः शिबिरस्य द्वितीये दिने भविष्यति, वयं कानिचन व्यक्तिगतवस्तूनि आनेतुं अनुशंसां कुर्मः।",
+            items: [
+                { label: "सुखदवस्त्राणि", text: "बहिः उपयुक्तं शिथिलं, सुखदं वस्त्रं धरतु।" },
+                { label: "आतपत्रं वा टोपी", text: "यतोहि संस्कारः बहिः भविष्यति, सूर्यतः रक्षितुं टोपीं आनयतु।" },
+                { label: "उपहारं आनयतु", text: "संस्काराय फलानि पुष्पाणि च उपहाररूपेण आनेतुं प्रथा अस्ति। इदं कृतज्ञतां तथा प्रकृत्या सह सम्बन्धं प्रती करोति।" },
+                { label: "जलपात्रम्", text: "पूर्णदिने जलयुक्तः भवितुं आवश्यकम् अस्ति।" },
+                { label: "लेखनीपुस्तिका", text: "संस्कारात् परं विचारान्, अन्तर्दृष्टीः, भावनाः वा लिखितुं प्रेरणां प्राप्तुं शक्नुवन्ति।" }
+            ]
+        },
+        suggestions: {
+            title: "शिबिराय अतिरिक्ताः सूचनाः",
+            description: "भवतः यात्रां वर्धयितुं, निम्नलिखितं विचारयतु:",
+            items: [
+                { label: "शान्तसमयस्य आदरः", text: "भवतः अनुभवं चिन्तयितुं संसाधितुं च मौनसमयस्य उपयोगं कुरुत।" },
+                { label: "प्राणायामः तथा ध्यानम्", text: "मृदु श्वसनव्यायामाः वा ध्यानं भवन्तं स्थिरं कर्तुं साहाय्यं कर्तुं शक्नुवन्ति।" },
+                { label: "अङ्कीय-उपवासः", text: "दूरवाणीभ्यः तथा अन्येभ्यः विद्युतीययन्त्रेभ्यः विच्छेदनं कुरुत, पूर्णतया उपस्थिताः भवितुं।" },
+                { label: "प्रकृत्या सह सम्बन्धः", text: "यदि शक्यं चेत्, प्रतिदिनं प्रकृतौ समयं यापयन्तु।" }
+            ]
+        },
+        closing: "सचेतनतया सज्जीकरणेन तथा उद्घाटितः भूत्वा, भवान् सेन् पेड्रो ओषधये भवन्तं अन्वेषणस्य गभीरमार्गे मार्गदर्शयितुं स्थानं रचयिष्यति।",
+        risks: {
+            title: "महत्वपूर्णा सूचना: जोखिमान् तथा दायित्वान् अवगच्छन्तु",
+            intro: "यद्यपि इदं शिबिरं सुरक्षितं तथा परिवर्तनकारिणं अनुभवं प्रदातुं परिकल्पितं अस्ति, तथापि सेन् पेड्रो संस्कारे भागग्रहणेन शारीरिकाः मानसिकी च जोखिमाः सन्ति इति स्वीकरणं महत्वपूर्णं अस्ति।",
+            sections: [
+                { title: "चिकित्सा प्रकटीकरणम्", items: [{ label: "चिकित्सा स्थितिः", text: "प्रतिभागिभिः हृदयसमस्याः, मानसिकस्वास्थ्यस्थितिः, वा आक्षेपस्य इतिहासः इत्यादीनां विषये संचालकान् सूचयितव्यम्।" }, { label: "ओषधयः", text: "केचन ओषधयः, यथा अवसादविरोधकाः, सेन् पेड्रो इत्यनेन सह प्रतिकूलाः भवितुं शक्नुवन्ति।" }, { label: "शारीरिकसंवेदनशीलता", text: "सेन् पेड्रो अस्थायी शारीरिकप्रभावान् जनयितुं शक्नोति, यथा वमनं, हृदयस्पन्दनवृद्धिः च।" }] },
+                { title: "मानसिकजोखिमाः", items: [{ label: "तीव्रानुभवाः", text: "सेन् पेड्रो गभीरभावनाः तथा पूर्वत्रासान् आनेतुं शक्नोति।" }, { label: "एकीकरणसहयोगः", text: "शिबिरात् परं, प्रतिभागिनः अनुभवान् एकीकृतुं अतिरिक्तसहयोगात् लाभं प्राप्तुं शक्नुवन्ति।" }] },
+                { title: "व्यक्तिगतदायित्वम्", items: [{ label: "सूचितसहमतिः", text: "भवान् स्वेच्छया अस्मिन् अनुभवे भागं गृह्णाति।" }, { label: "सुरक्षासावधानयः", text: "संचालकैः प्रदत्ताः सर्वाः सुरक्षासूचनाः पालयन्तु।" }] }
+            ]
+        }
+      },
+      faq: {
+        title: "वाचुमा शिबिर मार्गदर्शिका",
+        subtitle: "अनुभवस्य विषये भवता ज्ञातव्यं सर्वम्",
+        articles: [
+            {
+                title: "वाचुमा शिबिरे किं अपेक्षितव्यम्",
+                content: [
+                    "वाचुमा शिबिरस्य योजना आत्मनः तीर्थयात्रायाः सज्जीकरणमिव भवितुं शक्नोति।",
+                    "<strong>गभीरचिकित्सायै पवित्रस्थानम्</strong><br>कुस्को समीपे पवित्र उपत्यका भवतः आध्यात्मिकयात्रायाः कृते उत्तमं पृष्ठभूमिः अस्ति।",
+                    "<strong>एकः सामान्यः संस्कारदिवसः</strong><br>भवतः शिबिरं वाचुमायाः मृदुपरिचयेन आरप्स्यते। हर्नन् कोल्के वर्यस्य मार्गदर्शनेन, संस्काराः सुरक्षते स्थाने भवन्ति।",
+                    "<strong>भवतः वाचुमा अनुभवस्य एकीकरणम्</strong><br>वाचुमातः प्राप्ताः अन्तर्दृष्टयः गभीराः भवितुं शक्नुवन्ति, तथा एतान् पाठान् भवतः दैनन्दिनजीवने एकीकृतुं समयं स्वीकरणं महत्वपूर्णं अस्ति।"
+                ]
+            },
+            {
+                title: "वाचुमायाः चिकित्साशक्तिं अन्वेषयन्तु",
+                content: [
+                    "<strong>सेन् पेड्रो काक्टस् किम् अस्ति?</strong><br>सेन् पेड्रो काक्टस्, यः वाचुमा इति अपि ज्ञायते, एकः प्राचीनः ओषधीयवनस्पतिः अस्ति।",
+                    "<strong>उत्पत्तिः इतिहासः च</strong><br>सेन् पेड्रो इत्यस्य उपयोगः अण्डीजदेशीयजनैः सहस्रवर्षेभ्यः क्रियते।",
+                    "<strong>मेस्कालिन इत्यस्य शक्तिः</strong><br>मुख्यसक्रियघटकेषु अन्यतमं मेस्कालिन अस्ति, यत् दिव्यदर्शनानुभवानां कृते उत्तरदायी अस्ति।",
+                    "<strong>आध्यात्मिकाः उपचारात्मकाः च लाभाः</strong><br>सेन् पेड्रो तस्य आध्यात्मिकचिकित्सागुणैः प्रसिद्धः अस्ति।"
+                ]
+            }
+        ],
+        questionsTitle: "प्रायशः पृष्टाः प्रश्नाः",
+        questions: [
+            { question: "सेन् पेड्रो संस्कारः कः अस्ति?", answer: "सेन् पेड्रो (वाचुमा) एकः पवित्रः वनस्पतिओषधिः अस्ति यः चिकित्सा, दृष्टिः, तथा गभीर आध्यात्मिकसम्बन्धाय उपयुज्यते।" },
+            { question: "किं शिबिरं प्रारम्भिकेभ्यः उपयुक्तं अस्ति?", answer: "आम्, अस्माकं शिबिराः सर्वेषां कृते उद्घाटिताः सन्ति।" },
+            { question: "किन्साकोचा कः अस्ति, किमर्थं च विशिष्टः?", answer: "किन्साकोचा पिसाकसमीपे एकः शान्तः क्षेत्रः अस्ति, यः पवित्रसरोवरैः आवृतः अस्ति।" },
+            { question: "शिबिरे मया किं आनेतव्यम्?", answer: "विस्तृतसूची प्रदास्यते, किन्तु अत्यावश्यकवस्तुषु सुखदवस्त्राणि, पदयात्रापादुकाः, तथा मुक्तहृदयं समाविष्टानि सन्ति।" },
+            { question: "शिबिरे का भाषा उच्यते?", answer: "हर्नन् क्वेशुआ तथा स्पेनिश भाषां वदति। अनुवादकः उपलब्धः भविष्यति।" },
+            { question: "किं शिबिरं सुरक्षितं अस्ति?", answer: "सुरक्षा अस्माकं प्राथमिकता अस्ति।" },
+            { question: "भवतः धनप्रत्यार्पणनीतिः का अस्ति?", answer: "निक्षेपाः एकविशिष्टदिनाङ्कपर्यन्तं प्रतिदेयाः सन्ति।" }
+        ]
+      },
+      testimonials: { title: "हृदयात् स्वराः", items: [{ 
+          name: "जोल्टन् ई.", 
+          location: "हङ्गरी", 
+          text: `इदं भूम्याः आत्मना तथा वनस्पतिओषधेः चिकित्साशक्त्या सह सम्बन्धस्य एकः सत्यः प्रामाणिकः अनुभवः अस्ति। माएस्ट्रो हर्नन् द्वारा इन्का तथा पूर्व-इन्का आध्यात्मिकमार्गदर्शकानां प्राचीनप्रज्ञया सह गभीरसम्बन्धः अभवत्। अहं यात्रायाः कृते अतीव कृतज्ञः अस्मि।`, 
+          image: IMAGES.zoltan 
+      }, {
+        name: "स्टेफानी के.",
+        location: "Google समीक्षा",
+        text: `अहं डान् हर्नन् सह पूर्णदिवसस्य वाचुमा संस्कारे भागं ग्रहीतुं अतीव भाग्यशाली अनुभवामि। वयं पर्वतेषु, एकस्य स्थानीयग्रामस्य माध्यमेन, प्रकृत्या, आत्मना, तथा पारस्परिकतायाः ऊर्जया सह सम्भाषितुं यात्रां कृतवन्त। तस्य मार्गदर्शनं सच्चा अस्ति, तथा तस्य ओषधिः श्रेष्ठा वाचुमा अस्ति। वयं तस्य गृहं प्रत्यागतवन्तौ यत्र स्वादिष्टेन गृहनिर्मित-अण्डीज-सूप् तथा उद्याने अग्निना सह संस्कारं समापितवन्तौ।`,
+        image: IMAGES.kittel
+    }] },
+    contact: {
+        title: "सम्पर्कं कुरुत",
+        form: { name: "भवतः नाम", email: "भवतः ईपत्रम्", message: "भवतः सन्देशः", submit: "सन्देशं प्रेषयतु" },
+        info: "वयं पवित्र उपत्यकायाः हृदये, काल्का समीपे, कुस्को नगरे स्थिताः स्मः।"
+    }
   },
 };
