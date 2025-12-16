@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationData } from '../types';
 import { IMAGES } from '../constants';
-import { Sun, Moon, Sparkles, Mountain, Palmtree } from 'lucide-react';
+import { Sun, Moon, Sparkles, Mountain, Utensils } from 'lucide-react';
 
 interface ServicesProps {
   t: TranslationData['services'];
@@ -10,7 +10,7 @@ interface ServicesProps {
 }
 
 export const Services: React.FC<ServicesProps> = ({ t, ui }) => {
-  const icons = [Sun, Moon, Sparkles];
+  const icons = [Sun, Utensils, Sparkles, Moon];
 
   return (
     <section id="services" className="pt-32 pb-24 bg-pacha-stone text-white relative">
@@ -57,38 +57,39 @@ export const Services: React.FC<ServicesProps> = ({ t, ui }) => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {t.items.map((item, index) => {
             const Icon = icons[index % icons.length];
             
-            // Map index to service type to avoid string matching
+            // Map index to service type based on constants order
             // 0: 2 Day Retreat
-            // 1: 1 Day Ceremony
-            // 2: Costa Rica
-            // 3: Private Healing
+            // 1: Juchuy Qosqo (New)
+            // 2: 1 Day Ceremony
+            // 3: Costa Rica
+            // 4: Private Healing
             
             const isRetreat2Day = index === 0;
-            const isOneDay = index === 1;
-            const isCostaRica = index === 2;
-            const isPrivate = index === 3;
+            const isJuchuy = index === 1;
+            const isOneDay = index === 2;
+            const isCostaRica = index === 3;
+            const isPrivate = index === 4;
 
-            const isSpecialCard = isRetreat2Day || isOneDay || isPrivate || isCostaRica;
+            const isSpecialCard = true; // All cards are clickable now
 
             // Base styling
             const baseClasses = "border border-pacha-leaf/30 p-6 rounded-xl transition-all duration-300 group flex flex-col relative overflow-hidden backdrop-blur-sm";
-            const colorClasses = isSpecialCard
-                ? "hover:border-pacha-gold" 
-                : "bg-pacha-earth/50 hover:bg-pacha-earth hover:border-pacha-gold";
+            const colorClasses = "hover:border-pacha-gold";
 
             // Determine Background Image
             let bgImage = null;
             if (isRetreat2Day) bgImage = IMAGES.mayra;
+            if (isJuchuy) bgImage = IMAGES.juchuy;
             if (isOneDay) bgImage = IMAGES.flowers; 
             if (isPrivate) bgImage = IMAGES.private;
             if (isCostaRica) bgImage = IMAGES.costa;
 
             return (
-              <div key={index} className={`${baseClasses} ${colorClasses}`}>
+              <div key={index} className={`${baseClasses} ${colorClasses} ${isPrivate ? 'lg:col-span-2' : ''}`}>
                 
                 {/* Background Image for Special Cards */}
                 {bgImage && (
@@ -126,6 +127,13 @@ export const Services: React.FC<ServicesProps> = ({ t, ui }) => {
                             >
                                 {ui.viewDetails}
                             </Link>
+                        ) : isJuchuy ? (
+                             <Link 
+                                to="/juchuy-qosqo"
+                                className="block w-full text-center bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white font-bold py-2 rounded-lg transition-colors border border-pacha-leaf/50 text-sm"
+                            >
+                                {ui.viewDetails}
+                            </Link>
                         ) : isCostaRica ? (
                              <Link 
                                 to="/costa-rica"
@@ -143,7 +151,7 @@ export const Services: React.FC<ServicesProps> = ({ t, ui }) => {
                         ) : (
                           <Link 
                                 to="/contact"
-                                className={`block w-full text-center font-bold py-2 rounded-lg transition-colors border text-sm ${isSpecialCard ? 'bg-pacha-gold/20 hover:bg-pacha-gold/40 text-pacha-gold border-pacha-gold/50' : 'bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white border-pacha-leaf/50'}`}
+                                className={`block w-full text-center font-bold py-2 rounded-lg transition-colors border text-sm bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white border-pacha-leaf/50`}
                             >
                                 {ui.inquire}
                             </Link>

@@ -30,6 +30,7 @@ export interface TestimonialItem {
   name: string;
   location: string;
   text: string;
+  image?: string;
 }
 
 export interface BenefitItem {
@@ -125,6 +126,7 @@ export interface UiLabels {
     whatsapp: string;
     connectWithUs: string;
     featuredExperience: string;
+    viewFlyer: string;
 }
 
 export interface FAQItem {
@@ -208,6 +210,13 @@ export interface TranslationData {
       themeValue: string;
   };
   retreat2Day: {
+      title: string;
+      subtitle: string;
+      intro: string;
+      days: RetreatDay[];
+      conclusion: string;
+  };
+  juchuy: {
       title: string;
       subtitle: string;
       intro: string;

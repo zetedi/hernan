@@ -2,15 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationData } from '../types';
 import { IMAGES } from '../constants';
-import { Moon, Sun, Bed, Calendar, FileText } from 'lucide-react';
+import { Moon, Sun, Bed, Calendar, Flame, Utensils, FileText } from 'lucide-react';
 import { Preparation } from './Preparation';
 
-interface Retreat2DayProps {
-  t: TranslationData['retreat2Day'];
+interface JuchuyQosqoProps {
+  t: TranslationData['juchuy'];
+  preparation: TranslationData['preparation'];
   ui: TranslationData['ui'];
 }
 
-export const Retreat2Day: React.FC<Retreat2DayProps> = ({ t, ui }) => {
+export const JuchuyQosqo: React.FC<JuchuyQosqoProps> = ({ t, preparation, ui }) => {
   const content = t;
 
   return (
@@ -18,8 +19,8 @@ export const Retreat2Day: React.FC<Retreat2DayProps> = ({ t, ui }) => {
       {/* Hero Header - Parallax (Disabled on Mobile) */}
       <div className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div 
-            className="absolute inset-0 bg-cover bg-center bg-scroll md:bg-fixed bg-no-repeat"
-            style={{ backgroundImage: `url(${IMAGES.mayra})` }}
+            className="absolute inset-0 bg-cover bg-center md:bg-center bg-scroll md:bg-fixed bg-no-repeat"
+            style={{ backgroundImage: `url(${IMAGES.juchuy})` }}
         >
           <div className="absolute inset-0 bg-black/40" />
         </div>
@@ -36,7 +37,7 @@ export const Retreat2Day: React.FC<Retreat2DayProps> = ({ t, ui }) => {
           {/* Flyer Link Button */}
           <div className="mt-8 flex justify-center">
             <Link 
-                to="/flyer?event=retreat2Day" 
+                to="/flyer?event=juchuy" 
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-pacha-gold text-white hover:text-pacha-stone border border-white/30 hover:border-pacha-gold font-bold py-3 px-8 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg group uppercase tracking-widest text-sm"
             >
@@ -52,7 +53,7 @@ export const Retreat2Day: React.FC<Retreat2DayProps> = ({ t, ui }) => {
         
         <div className="space-y-12">
           {content.days && content.days.map((day, index) => {
-            const Icon = index === 0 ? Sun : Moon;
+            const Icon = index === 0 ? Utensils : Sun;
             return (
               <div key={index} className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-pacha-gold relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-4 opacity-10">
@@ -96,8 +97,7 @@ export const Retreat2Day: React.FC<Retreat2DayProps> = ({ t, ui }) => {
       </div>
 
       {/* Preparation Section */}
-      {/* @ts-ignore */}
-      <Preparation data={t['preparation']} />
+      <Preparation data={preparation} />
     </div>
   );
 };

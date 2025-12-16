@@ -62,10 +62,10 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
                 {data.columns.follow.title}
               </h3>
               <div className="flex gap-4">
-                <a href={data.columns.follow.facebook} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pacha-gold transition-colors">
+                <a href={data.columns.follow.facebook} target="_blank" rel="noopener noreferrer" className="text-[#1877F2] hover:text-white transition-colors">
                   <Facebook size={24} />
                 </a>
-                <a href={data.columns.follow.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pacha-gold transition-colors">
+                <a href={data.columns.follow.instagram} target="_blank" rel="noopener noreferrer" className="text-[#E1306C] hover:text-white transition-colors">
                   <Instagram size={24} />
                 </a>
               </div>

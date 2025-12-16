@@ -51,12 +51,12 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
 
   // Logic for logo size:
   // Mobile/Tablet: Always w-12 h-12
-  // Desktop (lg+):
+  // Desktop (xl+):
   //   - Scrolled: w-12 h-12
   //   - Top: w-32 h-32 (Floating large) and more padding top (mt-20) to push it down
   const logoContainerClass = isScrolled 
     ? 'w-12 h-12' 
-    : 'w-12 h-12 lg:w-32 lg:h-32 lg:mt-20';
+    : 'w-12 h-12 xl:w-32 xl:h-32 xl:mt-20';
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${navBackgroundClass}`}>
@@ -79,8 +79,8 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
             </div>
           </Link>
 
-          {/* Desktop Menu (Visible on LG and up) */}
-          <div className="hidden lg:flex items-center space-x-2">
+          {/* Desktop Menu (Visible on XL and up) */}
+          <div className="hidden xl:flex items-center space-x-2">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
@@ -95,8 +95,18 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
             </div>
           </div>
 
-          {/* Mobile Menu Button (Visible up to LG) */}
-          <div className="lg:hidden flex items-center gap-4">
+          {/* Mobile/Tablet Menu Button (Visible up to XL) */}
+          <div className="xl:hidden flex items-center gap-4">
+             {/* Tablet Links (Visible on MD to XL) - Ceremonies & Contact always visible */}
+             <div className="hidden md:flex items-center gap-2 mr-2">
+                <Link to="/services" className={`font-medium text-sm tracking-wide px-3 py-2 uppercase ${isActive('/services')}`}>
+                    {t.services}
+                </Link>
+                <Link to="/contact" className={`font-medium text-sm tracking-wide px-3 py-2 uppercase ${isActive('/contact')}`}>
+                    {t.contact}
+                </Link>
+             </div>
+
              <LanguageSelector currentLanguage={currentLanguage} onLanguageChange={onLanguageChange} />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -110,7 +120,7 @@ export const Navbar: React.FC<NavbarProps> = ({ t, currentLanguage, onLanguageCh
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-pacha-earth/95 backdrop-blur-xl border-t border-pacha-leaf/30 animate-fade-in-down">
+        <div className="xl:hidden bg-pacha-earth/95 backdrop-blur-xl border-t border-pacha-leaf/30 animate-fade-in-down">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link

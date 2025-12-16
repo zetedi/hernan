@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationData } from '../types';
 import { IMAGES } from '../constants';
-import { Mountain, Flame, Droplets, Calendar } from 'lucide-react';
+import { Mountain, Flame, Droplets, Calendar, FileText } from 'lucide-react';
 import { Preparation } from './Preparation';
 
 interface AusangateProps {
@@ -27,11 +27,23 @@ export const Ausangate: React.FC<AusangateProps> = ({ t }) => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-serif drop-shadow-lg">
             {t.title}
           </h1>
-          <div className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed">
+          <div className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed mb-8">
              {Array.isArray(t.description) 
                 ? t.description.map((d, i) => <p key={i} className={i > 0 ? "mt-4" : ""}>{d}</p>) 
                 : <p>{t.description}</p>
              }
+          </div>
+          
+          {/* Flyer Link Button */}
+          <div className="flex justify-center">
+            <Link 
+                to="/flyer?event=ausangate" 
+                target="_blank"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-pacha-gold text-white hover:text-pacha-stone border border-white/30 hover:border-pacha-gold font-bold py-3 px-8 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg group uppercase tracking-widest text-sm"
+            >
+                <FileText size={18} className="group-hover:scale-110 transition-transform" />
+                <span>View Event Flyer</span>
+            </Link>
           </div>
         </div>
       </div>

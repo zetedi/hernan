@@ -12,8 +12,10 @@ import { Ausangate } from './components/Ausangate';
 import { Retreat2Day } from './components/Retreat2Day';
 import { Retreat1Day } from './components/Retreat1Day';
 import { CostaRica } from './components/CostaRica';
+import { JuchuyQosqo } from './components/JuchuyQosqo';
 import { Footer } from './components/Footer';
 import { FAQ } from './components/FAQ';
+import { EventFlyer } from './components/EventFlyer';
 import { GoogleReviewsWidget } from './components/GoogleReviewsWidget';
 import { SEO } from './components/SEO';
 import { Language } from './types';
@@ -51,6 +53,23 @@ const App: React.FC = () => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  const isFlyerRoute = location.pathname === '/flyer';
+
+  if (isFlyerRoute) {
+      // Parse query param to decide which flyer to show
+      const searchParams = new URLSearchParams(location.search);
+      const type = searchParams.get('event') as 'ausangate' | 'costaRica' | 'retreat2Day' | 'retreat1Day' | 'juchuy' || 'ausangate';
+      
+      let flyerData;
+      if (type === 'costaRica') flyerData = t.costaRica;
+      else if (type === 'retreat2Day') flyerData = t.retreat2Day;
+      else if (type === 'retreat1Day') flyerData = t.retreat1Day;
+      else if (type === 'juchuy') flyerData = t.juchuy;
+      else flyerData = t.ausangate;
+
+      return <EventFlyer t={flyerData} contact={t.contact} footer={t.footer} type={type} />;
+  }
+
   return (
     <div className="min-h-screen flex flex-col font-sans text-gray-900">
       <SEO 
@@ -86,6 +105,9 @@ const App: React.FC = () => {
           } />
           <Route path="/costa-rica" element={
             <CostaRica t={t.costaRica} preparation={t.preparation} ui={t.ui} />
+          } />
+          <Route path="/juchuy-qosqo" element={
+            <JuchuyQosqo t={t.juchuy} preparation={t.preparation} ui={t.ui} />
           } />
           <Route path="/retreat-2day" element={
             <Retreat2Day t={{...t.retreat2Day, preparation: t.preparation} as any} ui={t.ui} />

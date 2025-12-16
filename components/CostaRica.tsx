@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationData } from '../types';
 import { IMAGES } from '../constants';
-import { Palmtree, Waves, Users, Eye } from 'lucide-react';
+import { Palmtree, Waves, Users, Eye, FileText } from 'lucide-react';
 import { Preparation } from './Preparation';
 
 interface CostaRicaProps {
@@ -33,6 +33,17 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui }) => {
           <p className="text-lg md:text-xl text-white/95 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
             {t.intro}
           </p>
+          {/* Flyer Link Button */}
+          <div className="mt-8 flex justify-center">
+            <Link 
+                to="/flyer?event=costaRica" 
+                target="_blank"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-pacha-gold text-white hover:text-pacha-stone border border-white/30 hover:border-pacha-gold font-bold py-3 px-8 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg group uppercase tracking-widest text-sm"
+            >
+                <FileText size={18} className="group-hover:scale-110 transition-transform" />
+                <span>{ui.viewFlyer}</span>
+            </Link>
+          </div>
         </div>
       </div>
 

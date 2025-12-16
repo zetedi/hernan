@@ -20,19 +20,33 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ t }) => {
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {t.items.map((item, index) => (
-            <div key={index} className="bg-white p-8 rounded-2xl shadow-xl relative">
+            <div key={index} className="bg-white p-8 rounded-2xl shadow-xl relative flex flex-col justify-between">
               <Quote className="absolute top-6 left-6 text-pacha-gold/30 w-12 h-12 transform -scale-x-100" />
               <div className="relative z-10">
                 <p className="text-gray-600 text-lg italic mb-6 leading-relaxed">
                   "{item.text}"
                 </p>
-                <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
-                        <img src={`https://picsum.photos/seed/user${index}/100/100`} alt="User" className="w-full h-full object-cover" />
+                <div className="flex items-center gap-4 mt-auto">
+                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-pacha-gold/20 flex-shrink-0 bg-pacha-earth/20 flex items-center justify-center">
+                        {item.image ? (
+                            <img 
+                                src={item.image} 
+                                alt={item.name} 
+                                className="w-full h-full object-cover" 
+                                onError={(e) => {
+                                    // Fallback if image fails - hide image so background emoji shows or replace
+                                    e.currentTarget.style.display = 'none';
+                                    e.currentTarget.parentElement!.innerText = '🌵';
+                                    e.currentTarget.parentElement!.style.fontSize = '1.5rem';
+                                }}
+                            />
+                        ) : (
+                            <span className="text-2xl">🌵</span>
+                        )}
                     </div>
                     <div>
-                        <h4 className="font-bold text-pacha-earth font-serif">{item.name}</h4>
-                        <span className="text-sm text-pacha-leaf uppercase tracking-wider">{item.location}</span>
+                        <h4 className="font-bold text-pacha-earth font-serif text-lg">{item.name}</h4>
+                        <span className="text-sm text-pacha-leaf uppercase tracking-wider font-bold">{item.location}</span>
                     </div>
                 </div>
               </div>
