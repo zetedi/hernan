@@ -51,14 +51,14 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4 md:p-8 print:p-0 print:bg-white relative">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-2 md:p-8 print:p-0 print:bg-white relative">
         {/* Print Button - Fixed and High Z-Index */}
-        <div className="fixed top-6 right-6 z-[100] print:hidden">
+        <div className="fixed top-4 right-4 md:top-6 md:right-6 z-[100] print:hidden">
             <button 
                 onClick={() => window.print()}
-                className="bg-pacha-gold text-pacha-stone font-bold py-3 px-6 rounded-full shadow-2xl flex items-center gap-2 hover:bg-[#b08d48] transition-all transform hover:scale-105 border-2 border-white ring-4 ring-black/10"
+                className="bg-pacha-gold text-pacha-stone font-bold py-2 px-4 md:py-3 md:px-6 text-xs md:text-base rounded-full shadow-2xl flex items-center gap-2 hover:bg-[#b08d48] transition-all transform hover:scale-105 border-2 border-white ring-2 md:ring-4 ring-black/10"
             >
-                <Printer size={20} />
+                <Printer size={16} className="md:w-5 md:h-5" />
                 <span>{flyerT.print}</span>
             </button>
         </div>
@@ -81,102 +81,102 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                 
                 {/* Juchuy Special: Logo Absolute Top Left */}
                 {isJuchuy && (
-                    <div className="absolute top-8 left-8 w-24 h-24 text-white drop-shadow-[0_4px_3px_rgba(0,0,0,0.9)] filter shadow-black z-20 print:text-pacha-earth">
+                    <div className="absolute top-4 left-4 md:top-8 md:left-8 w-12 h-12 md:w-24 md:h-24 text-white drop-shadow-[0_4px_3px_rgba(0,0,0,0.9)] filter shadow-black z-20 print:text-pacha-earth">
                          <Logo className="w-full h-full drop-shadow-lg" />
                     </div>
                 )}
 
                 {/* Header / Logo Area - Standard (Hidden for Juchuy) */}
                 {!isJuchuy && (
-                    <div className="p-8 text-center text-white drop-shadow-md pt-12 print:text-pacha-earth">
-                        <div className="w-28 h-28 mx-auto text-white mb-4 drop-shadow-[0_4px_3px_rgba(0,0,0,0.9)] filter shadow-black print:text-pacha-earth">
+                    <div className="p-4 md:p-8 text-center text-white drop-shadow-md pt-8 md:pt-12 print:text-pacha-earth">
+                        <div className="w-16 h-16 md:w-28 md:h-28 mx-auto text-white mb-2 md:mb-4 drop-shadow-[0_4px_3px_rgba(0,0,0,0.9)] filter shadow-black print:text-pacha-earth">
                             <Logo className="w-full h-full drop-shadow-lg" />
                         </div>
-                        <h2 className="text-xl tracking-[0.3em] uppercase font-bold text-pacha-gold drop-shadow-[0_2px_2px_rgba(0,0,0,1)] font-cinzel bg-black/40 backdrop-blur-md py-1 px-4 inline-block rounded-full print:text-pacha-earth print:bg-transparent print:drop-shadow-none shadow-lg border border-white/10">
+                        <h2 className="text-xs md:text-xl tracking-[0.2em] md:tracking-[0.3em] uppercase font-bold text-pacha-gold drop-shadow-[0_2px_2px_rgba(0,0,0,1)] font-cinzel bg-black/40 backdrop-blur-md py-1 px-3 md:px-4 inline-block rounded-full print:text-pacha-earth print:bg-transparent print:drop-shadow-none shadow-lg border border-white/10">
                             Hernan Raíces Quechua
                         </h2>
                     </div>
                 )}
                 
-                {/* Spacer for Juchuy to push Title down. Increased to ~22% to lower title significantly */}
+                {/* Spacer for Juchuy to push Title down. */}
                 {isJuchuy && <div className="h-[22%]"></div>}
 
                 {/* Main Title Area */}
-                <div className={`mt-auto px-12 pt-4 pb-4 text-center ${isJuchuy ? 'mb-2' : ''}`}>
-                    <h1 className="text-5xl md:text-6xl font-serif font-bold text-white mb-2 leading-tight drop-shadow-[0_4px_3px_rgba(0,0,0,0.9)]">
+                <div className={`mt-auto px-4 md:px-12 pt-2 md:pt-4 pb-2 md:pb-4 text-center ${isJuchuy ? 'mb-1 md:mb-2' : ''}`}>
+                    <h1 className="text-3xl md:text-6xl font-serif font-bold text-white mb-2 leading-tight drop-shadow-[0_4px_3px_rgba(0,0,0,0.9)]">
                         {t.title}
                     </h1>
-                    <div className="w-32 h-1 bg-pacha-gold mx-auto my-6 shadow-lg"></div>
-                    <div className="flex justify-center gap-8 text-lg font-bold text-pacha-stone">
-                        <div className="flex items-center gap-2 bg-pacha-sand/50 px-4 py-2 rounded-full backdrop-blur-sm print:bg-transparent print:border print:border-gray-300">
-                            <Calendar className="text-pacha-earth" />
+                    <div className="w-16 md:w-32 h-0.5 md:h-1 bg-pacha-gold mx-auto my-3 md:my-6 shadow-lg"></div>
+                    <div className="flex justify-center gap-3 md:gap-8 text-xs md:text-lg font-bold text-pacha-stone">
+                        <div className="flex items-center gap-1 md:gap-2 bg-pacha-sand/50 px-2 py-1 md:px-4 md:py-2 rounded-full backdrop-blur-sm print:bg-transparent print:border print:border-gray-300">
+                            <Calendar className="w-3 h-3 md:w-5 md:h-5 text-pacha-earth" />
                             <span>{dateText}</span>
                         </div>
-                        <div className="flex items-center gap-2 bg-pacha-sand/50 px-4 py-2 rounded-full backdrop-blur-sm print:bg-transparent print:border print:border-gray-300">
-                            <MapPin className="text-pacha-earth" />
+                        <div className="flex items-center gap-1 md:gap-2 bg-pacha-sand/50 px-2 py-1 md:px-4 md:py-2 rounded-full backdrop-blur-sm print:bg-transparent print:border print:border-gray-300">
+                            <MapPin className="w-3 h-3 md:w-5 md:h-5 text-pacha-earth" />
                             <span>{locationText}</span>
                         </div>
                     </div>
                 </div>
 
                 {/* Body Content */}
-                <div className="px-12 py-6 flex-grow flex flex-col justify-center">
-                    <p className="text-xl text-center text-gray-800 font-medium leading-relaxed mb-10 italic max-w-2xl mx-auto bg-white/60 p-4 rounded-xl backdrop-blur-sm shadow-sm border border-white/50 print:bg-transparent print:shadow-none print:border-none print:text-black">
+                <div className="px-4 md:px-12 py-3 md:py-6 flex-grow flex flex-col justify-center">
+                    <p className="text-xs md:text-xl text-center text-gray-800 font-medium leading-relaxed mb-4 md:mb-10 italic max-w-2xl mx-auto bg-white/60 p-2 md:p-4 rounded-xl backdrop-blur-sm shadow-sm border border-white/50 print:bg-transparent print:shadow-none print:border-none print:text-black line-clamp-3 md:line-clamp-none">
                         "{getDescription()}"
                     </p>
 
-                    <div className="grid grid-cols-3 gap-8 items-center">
+                    <div className="grid grid-cols-3 gap-4 md:gap-8 items-center">
                         {/* Highlights / Itinerary Summary */}
-                        <div className="col-span-2 bg-pacha-sand/30 p-6 rounded-xl border border-pacha-gold/20 print:bg-transparent print:border-gray-300">
-                            <h3 className="text-pacha-gold font-bold uppercase tracking-widest mb-4 border-b border-pacha-gold/30 pb-2 text-sm print:text-black print:border-black">{flyerT.highlights}</h3>
-                            <ul className="space-y-2">
+                        <div className="col-span-2 bg-pacha-sand/30 p-3 md:p-6 rounded-xl border border-pacha-gold/20 print:bg-transparent print:border-gray-300">
+                            <h3 className="text-pacha-gold font-bold uppercase tracking-widest mb-2 md:mb-4 border-b border-pacha-gold/30 pb-1 md:pb-2 text-[10px] md:text-sm print:text-black print:border-black">{flyerT.highlights}</h3>
+                            <ul className="space-y-1 md:space-y-2">
                                 {t.itinerary ? (
-                                    t.itinerary.map((day: any, i: number) => (
-                                        <li key={i} className="flex gap-3 text-sm">
-                                            <span className="font-bold text-pacha-leaf w-12 flex-shrink-0 print:text-black">{day.day}</span>
-                                            <span className="text-gray-800 font-medium">{day.title}</span>
+                                    t.itinerary.slice(0, 5).map((day: any, i: number) => (
+                                        <li key={i} className="flex gap-2 md:gap-3 text-[10px] md:text-sm">
+                                            <span className="font-bold text-pacha-leaf w-8 md:w-12 flex-shrink-0 print:text-black">{day.day.replace(/Day /i, 'D')}</span>
+                                            <span className="truncate text-gray-800 font-medium">{day.title}</span>
                                         </li>
                                     ))
                                 ) : t.days ? (
-                                     t.days.map((day: any, i: number) => (
-                                        <li key={i} className="flex gap-3 text-sm">
-                                            <span className="font-bold text-pacha-leaf w-16 flex-shrink-0 print:text-black">Day {i+1}</span>
-                                            <span className="text-gray-800 font-medium">{day.title}</span>
+                                     t.days.slice(0, 5).map((day: any, i: number) => (
+                                        <li key={i} className="flex gap-2 md:gap-3 text-[10px] md:text-sm">
+                                            <span className="font-bold text-pacha-leaf w-8 md:w-16 flex-shrink-0 print:text-black">Day {i+1}</span>
+                                            <span className="text-gray-800 font-medium truncate">{day.title}</span>
                                         </li>
                                     ))
                                 ) : (
-                                    <li className="text-gray-600 italic">Contact us for detailed itinerary.</li>
+                                    <li className="text-gray-600 italic text-xs">Contact us for detailed itinerary.</li>
                                 )}
                             </ul>
                         </div>
 
                         {/* QR Code Section */}
                         <div className="col-span-1 flex flex-col items-center justify-center text-center">
-                            <div className="bg-white p-2 rounded-lg shadow-md border border-gray-200 mb-2 print:shadow-none print:border-black">
-                                <img src={qrCodeUrl} alt="Scan for details" className="w-24 h-24" />
+                            <div className="bg-white p-1 md:p-2 rounded-lg shadow-md border border-gray-200 mb-1 md:mb-2 print:shadow-none print:border-black">
+                                <img src={qrCodeUrl} alt="Scan for details" className="w-16 h-16 md:w-24 md:h-24" />
                             </div>
-                            <span className="text-xs font-bold uppercase tracking-wider text-pacha-stone">{flyerT.scan}</span>
+                            <span className="text-[8px] md:text-xs font-bold uppercase tracking-wider text-pacha-stone">{flyerT.scan}</span>
                         </div>
                     </div>
                 </div>
 
                 {/* Footer / Contact */}
-                <div className="bg-pacha-stone text-white p-8 mt-4 relative overflow-hidden print:bg-white print:text-black print:border-t print:border-black">
+                <div className="bg-pacha-stone text-white p-4 md:p-8 mt-2 md:mt-4 relative overflow-hidden print:bg-white print:text-black print:border-t print:border-black">
                     {/* Decorative pattern */}
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 print:hidden"></div>
                     
                     <div className="flex justify-between items-center max-w-4xl mx-auto relative z-10">
                         <div className="text-left">
-                            <h4 className="font-serif text-3xl text-pacha-gold mb-1 print:text-black">{flyerT.reserve}</h4>
-                            <p className="text-gray-400 text-sm uppercase tracking-wider print:text-gray-600">{flyerT.limited}</p>
+                            <h4 className="font-serif text-lg md:text-3xl text-pacha-gold mb-0.5 md:mb-1 print:text-black">{flyerT.reserve}</h4>
+                            <p className="text-gray-400 text-[10px] md:text-sm uppercase tracking-wider print:text-gray-600">{flyerT.limited}</p>
                         </div>
-                        <div className="text-right space-y-2">
-                            <div className="flex items-center justify-end gap-3 text-sm font-medium">
-                                <Mail size={18} className="text-pacha-gold print:text-black" />
+                        <div className="text-right space-y-1 md:space-y-2">
+                            <div className="flex items-center justify-end gap-2 md:gap-3 text-[10px] md:text-sm font-medium">
+                                <Mail size={12} className="text-pacha-gold print:text-black md:w-[18px] md:h-[18px]" />
                                 {footer.columns.contact.email}
                             </div>
-                            <div className="flex items-center justify-end gap-3 text-sm font-medium">
-                                <Phone size={18} className="text-pacha-gold print:text-black" />
+                            <div className="flex items-center justify-end gap-2 md:gap-3 text-[10px] md:text-sm font-medium">
+                                <Phone size={12} className="text-pacha-gold print:text-black md:w-[18px] md:h-[18px]" />
                                 {footer.columns.contact.phone}
                             </div>
                         </div>
