@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationData, Language } from '../types';
@@ -50,14 +51,14 @@ export const Hero: React.FC<HeroProps> = ({ t, lang }) => {
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
                 <span className="text-white font-bold uppercase tracking-[0.2em] text-xs mb-2 bg-black/40 px-2 py-1 rounded-full border border-white/30 backdrop-blur-sm">
-                    Sacred Immersion
+                    {t.retreatTeaser.label}
                 </span>
                 <h3 className="text-white font-serif text-3xl drop-shadow-xl font-bold tracking-wide mb-2">
-                    2 Day Retreat
+                    {t.retreatTeaser.title}
                 </h3>
                  <div className="flex items-center gap-2 text-white/90 bg-black/30 px-3 py-1 rounded-md backdrop-blur-sm">
                     <Flower className="w-4 h-4 text-white" />
-                    <span className="font-light tracking-wide text-xs">Pisac & Kinsacocha</span>
+                    <span className="font-light tracking-wide text-xs">{t.retreatTeaser.location}</span>
                  </div>
             </div>
           </Link>

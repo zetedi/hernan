@@ -173,6 +173,11 @@ export interface TranslationData {
     title: string;
     subtitle: string;
     cta: string;
+    retreatTeaser: {
+      label: string;
+      title: string;
+      location: string;
+    };
     ausangateTeaser: {
       label: string;
       title: string;
