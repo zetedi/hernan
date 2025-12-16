@@ -98,8 +98,8 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                     </div>
                 )}
                 
-                {/* Spacer for Juchuy to push Title down to match others approx or center it */}
-                {isJuchuy && <div className="h-32"></div>}
+                {/* Spacer for Juchuy to push Title down. Increased to ~22% to lower title significantly */}
+                {isJuchuy && <div className="h-[22%]"></div>}
 
                 {/* Main Title Area */}
                 <div className={`mt-auto px-12 pt-4 pb-4 text-center ${isJuchuy ? 'mb-2' : ''}`}>
