@@ -106,7 +106,7 @@ const App: React.FC = () => {
           } />
           <Route path="/services" element={<Services t={t.services} ui={t.ui} lang={currentLanguage} />} />
           <Route path="/ausangate" element={
-            <Ausangate t={{...t.ausangate, preparation: t.preparation} as any} lang={currentLanguage} />
+            <Ausangate t={{...t.ausangate, preparation: t.preparation} as any} ui={t.ui} lang={currentLanguage} />
           } />
           <Route path="/costa-rica" element={
             <CostaRica t={t.costaRica} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />

@@ -8,10 +8,11 @@ import { Preparation } from './Preparation';
 
 interface AusangateProps {
   t: TranslationData['ausangate'];
+  ui: TranslationData['ui'];
   lang?: Language;
 }
 
-export const Ausangate: React.FC<AusangateProps> = ({ t, lang }) => {
+export const Ausangate: React.FC<AusangateProps> = ({ t, ui, lang }) => {
   return (
     <div className="bg-pacha-stone min-h-screen">
       {/* Hero Header - Parallax (Disabled on Mobile) */}
@@ -44,7 +45,7 @@ export const Ausangate: React.FC<AusangateProps> = ({ t, lang }) => {
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-pacha-gold text-white hover:text-pacha-stone border border-white/30 hover:border-pacha-gold font-bold py-3 px-8 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg group uppercase tracking-widest text-sm"
             >
                 <FileText size={18} className="group-hover:scale-110 transition-transform" />
-                <span>View Event Flyer</span>
+                <span>{ui.viewFlyer}</span>
             </Link>
           </div>
         </div>
