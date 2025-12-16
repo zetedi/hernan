@@ -93,7 +93,11 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={
             <>
-              <Hero t={t.hero} lang={currentLanguage} />
+              <Hero 
+                t={t.hero} 
+                lang={currentLanguage} 
+                retreatPrice={t.services.items[0].price}
+              />
               <Benefits t={t.benefits} />
               <GoogleReviewsWidget />
             </>

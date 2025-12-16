@@ -122,7 +122,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                 {/* Body Content */}
                 <div className="px-4 md:px-12 py-3 md:py-6 flex-grow flex flex-col justify-center">
                     <p className="text-xs md:text-xl text-center text-gray-800 font-medium leading-relaxed mb-4 md:mb-10 italic max-w-2xl mx-auto bg-white/60 p-2 md:p-4 rounded-xl backdrop-blur-sm shadow-sm border border-white/50 print:bg-transparent print:shadow-none print:border-none print:text-black line-clamp-3 md:line-clamp-none">
-                        "{getDescription()}"
+                        {getDescription()}
                     </p>
 
                     <div className="grid grid-cols-3 gap-4 md:gap-8 items-center">

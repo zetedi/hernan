@@ -8,9 +8,10 @@ import { Calendar, ChevronDown, Palmtree, Flower } from 'lucide-react';
 interface HeroProps {
   t: TranslationData['hero'];
   lang?: Language;
+  retreatPrice?: string;
 }
 
-export const Hero: React.FC<HeroProps> = ({ t, lang }) => {
+export const Hero: React.FC<HeroProps> = ({ t, lang, retreatPrice }) => {
   return (
     <section id="hero" className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
       {/* Background Image - Parallax (Disabled on Mobile) */}
@@ -61,6 +62,12 @@ export const Hero: React.FC<HeroProps> = ({ t, lang }) => {
                     <span className="font-light tracking-wide text-xs">{t.retreatTeaser.location}</span>
                  </div>
             </div>
+            {/* Price Badge */}
+            {retreatPrice && (
+                <div className="absolute bottom-3 right-3 bg-pacha-gold/90 text-pacha-stone text-xs font-bold px-3 py-1 rounded-full shadow-lg backdrop-blur-sm z-20 border border-white/20">
+                    {retreatPrice}
+                </div>
+            )}
           </Link>
 
           {/* 2. Ausangate Teaser */}
