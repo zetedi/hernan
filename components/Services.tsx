@@ -59,7 +59,7 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
           {t.items.map((item, index) => {
             const Icon = icons[index % icons.length];
             
@@ -164,6 +164,43 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
             );
           })}
         </div>
+
+        {/* Service Comparison Table */}
+        <div className="max-w-5xl mx-auto bg-pacha-stone/80 backdrop-blur-md rounded-xl overflow-hidden border border-pacha-gold/20 shadow-2xl">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-black/40 text-pacha-gold uppercase text-xs tracking-widest border-b border-pacha-gold/20">
+                  <th className="p-4 font-bold min-w-[150px]">{ui.service || 'Service'}</th>
+                  <th className="p-4 font-bold min-w-[120px]">{ui.location}</th>
+                  <th className="p-4 font-bold min-w-[100px]">{ui.duration || 'Duration'}</th>
+                  <th className="p-4 font-bold min-w-[100px]">{ui.capacity}</th>
+                  <th className="p-4 font-bold text-right min-w-[100px]">{ui.contribution}</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-white/10 text-sm text-gray-300">
+                {t.items.map((item, idx) => (
+                  <tr key={idx} className="hover:bg-white/5 transition-colors">
+                    <td className="p-4 font-bold text-white">{item.title}</td>
+                    <td className="p-4">{item.details?.location || '-'}</td>
+                    <td className="p-4">{item.details?.duration || '-'}</td>
+                    <td className="p-4">{item.details?.groupSize || '-'}</td>
+                    <td className="p-4 text-right text-pacha-gold font-bold">{item.price}</td>
+                  </tr>
+                ))}
+                {/* Manual row for Ausangate since it's separate in the data structure */}
+                <tr className="hover:bg-white/5 transition-colors bg-pacha-gold/5">
+                    <td className="p-4 font-bold text-white">{t.ausangateCta.title.replace('Special Retreat: ', '')}</td>
+                    <td className="p-4">Ausangate & Pacchanta</td>
+                    <td className="p-4">7 Days</td>
+                    <td className="p-4">Group</td>
+                    <td className="p-4 text-right text-pacha-gold font-bold">Inquire</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
       </div>
     </section>
   );

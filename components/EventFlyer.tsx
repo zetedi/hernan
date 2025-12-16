@@ -93,7 +93,9 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                             <Logo className="w-full h-full drop-shadow-lg" />
                         </div>
                         <h2 className="text-xs md:text-xl tracking-[0.2em] md:tracking-[0.3em] uppercase font-bold text-pacha-gold drop-shadow-[0_2px_2px_rgba(0,0,0,1)] font-cinzel bg-black/40 backdrop-blur-md py-1 px-3 md:px-4 inline-block rounded-full print:text-pacha-earth print:bg-transparent print:drop-shadow-none shadow-lg border border-white/10">
-                            Hernan Raíces Quechua
+                            <span className="text-white print:text-pacha-earth">Hernan</span>
+                            <span className="mx-2 text-white/50 print:text-gray-400">|</span>
+                            Raíces Quechua
                         </h2>
                     </div>
                 )}

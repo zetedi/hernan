@@ -76,7 +76,9 @@ const enTranslations: TranslationData = {
         whatsapp: "WhatsApp",
         connectWithUs: "Connect with us",
         featuredExperience: "Featured Experience",
-        viewFlyer: "View Event Flyer"
+        viewFlyer: "View Event Flyer",
+        duration: "Duration",
+        service: "Service"
     },
     flyer: {
       highlights: "Experience Highlights",
@@ -118,11 +120,36 @@ const enTranslations: TranslationData = {
     services: {
       title: "Our Offerings",
       items: [
-        { title: "2 Day Retreat", description: "Deep immersion at Wayna Wasi & Kinsacocha. Base cost $173 (1 person). Each additional person +$70. Accommodation +$20 per person. Max 10 people.", price: "$173+" },
-        { title: "Juchuy Qosqo Immersion", description: "2 Days at the 'Little Cusco' ruins. Stay with a local family, cook traditional food together, and experience deep connection.", price: "$200+" },
-        { title: "1 Day Ceremony", description: "A sacred journey for a minimum of 2 people. Experience the medicine in various sacred sites like ruins, lagoons, and mountains across the Sacred Valley.", price: "$250" },
-        { title: "Costa Rica Pilgrimage", description: "A sacred journey connecting the Andes and the Ocean in a secret location in Costa Rica. Limited to 21 participants.", price: "Inquire" },
-        { title: "Private Healing", description: "One-on-one sessions tailored to your specific spiritual and emotional needs. Deep blockage removal.", price: "Inquire" }
+        { 
+            title: "2 Day Retreat", 
+            description: "Deep immersion at Wayna Wasi & Kinsacocha. Base cost $173 (1 person). Each additional person +$70. Accommodation +$20 per person. Max 10 people.", 
+            price: "$173+",
+            details: { duration: "2 Days", location: "Pisac & Kinsacocha", groupSize: "Max 10" }
+        },
+        { 
+            title: "Juchuy Qosqo Immersion", 
+            description: "2 Days at the 'Little Cusco' ruins. Stay with a local family, cook traditional food together, and experience deep connection.", 
+            price: "$200+",
+            details: { duration: "2 Days", location: "Juchuy Qosqo", groupSize: "Min 2" }
+        },
+        { 
+            title: "1 Day Ceremony", 
+            description: "A sacred journey for a minimum of 2 people. Experience the medicine in various sacred sites like ruins, lagoons, and mountains across the Sacred Valley.", 
+            price: "$250",
+            details: { duration: "1 Day", location: "Sacred Valley", groupSize: "Min 2" }
+        },
+        { 
+            title: "Costa Rica Pilgrimage", 
+            description: "A sacred journey connecting the Andes and the Ocean in a secret location in Costa Rica. Limited to 21 participants.", 
+            price: "Inquire",
+            details: { duration: "7 Days", location: "Costa Rica", groupSize: "Max 21" }
+        },
+        { 
+            title: "Private Healing", 
+            description: "One-on-one sessions tailored to your specific spiritual and emotional needs. Deep blockage removal.", 
+            price: "Inquire",
+            details: { duration: "Varies", location: "Wayna Wasi", groupSize: "1 Person" }
+        }
       ],
       ausangateCta: { title: "Special Retreat: Ausangate Expedition", description: "Join us for a 7-day transformative journey to the sacred mountain of Ausangate. Hot springs, hiking, and deep medicine work.", button: "View Itinerary" }
     },
@@ -335,7 +362,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         whatsapp: "WhatsApp",
         connectWithUs: "Conecta con nosotros",
         featuredExperience: "Experiencia Destacada",
-        viewFlyer: "Ver Folleto del Evento"
+        viewFlyer: "Ver Folleto del Evento",
+        duration: "Duración",
+        service: "Servicio"
       },
       flyer: {
         highlights: "Puntos Destacados",
@@ -377,11 +406,36 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       services: {
           title: "Nuestras Ofrendas",
           items: [
-            { title: "Retiro de 2 Días", description: "Inmersión profunda en Wayna Wasi y Kinsacocha. Costo base $173 (1 persona). Persona extra +$70. Alojamiento +$20 por persona. Máx 10 personas.", price: "$173+" },
-            { title: "Inmersión Juchuy Qosqo", description: "2 Days at the 'Little Cusco' ruins. Stay with a local family, cook traditional food together, and experience deep connection.", price: "$200+" },
-            { title: "Ceremonia de 1 Día", description: "Un viaje sagrado para un mínimo de 2 personas. Experimenta la medicina en varios sitios sagrados como ruinas, lagunas y montañas en todo el Valle Sagrado.", price: "$250" },
-            { title: "Peregrinaje a Costa Rica", description: "Un viaje sagrado conectando los Andes y el Océano en una ubicación secreta en Costa Rica. Limitado a 21 participantes.", price: "Consultar" },
-            { title: "Sanación Privada", description: "Sesiones individuales adaptadas a tus necesidades espirituales y emocionales específicas. Eliminación de bloqueos profundos.", price: "Consultar" }
+            { 
+                title: "Retiro de 2 Días", 
+                description: "Inmersión profunda en Wayna Wasi y Kinsacocha. Costo base $173 (1 persona). Persona extra +$70. Alojamiento +$20 por persona. Máx 10 personas.", 
+                price: "$173+",
+                details: { duration: "2 Días", location: "Pisac y Kinsacocha", groupSize: "Máx 10" }
+            },
+            { 
+                title: "Inmersión Juchuy Qosqo", 
+                description: "2 Days at the 'Little Cusco' ruins. Stay with a local family, cook traditional food together, and experience deep connection.", 
+                price: "$200+",
+                details: { duration: "2 Días", location: "Juchuy Qosqo", groupSize: "Mín 2" }
+            },
+            { 
+                title: "Ceremonia de 1 Día", 
+                description: "Un viaje sagrado para un mínimo de 2 personas. Experimenta la medicina en varios sitios sagrados como ruinas, lagunas y montañas en todo el Valle Sagrado.", 
+                price: "$250",
+                details: { duration: "1 Día", location: "Valle Sagrado", groupSize: "Mín 2" }
+            },
+            { 
+                title: "Peregrinaje a Costa Rica", 
+                description: "Un viaje sagrado conectando los Andes y el Océano en una ubicación secreta en Costa Rica. Limitado a 21 participantes.", 
+                price: "Consultar",
+                details: { duration: "7 Días", location: "Costa Rica", groupSize: "Máx 21" }
+            },
+            { 
+                title: "Sanación Privada", 
+                description: "Sesiones individuales adaptadas a tus necesidades espirituales y emocionales específicas. Eliminación de bloqueos profundos.", 
+                price: "Consultar",
+                details: { duration: "Varía", location: "Wayna Wasi", groupSize: "1 Persona" }
+            }
           ],
           ausangateCta: { title: "Retiro Especial: Expedición Ausangate", description: "Únete a un viaje transformador de 7 días a la montaña sagrada de Ausangate. Aguas termales, caminatas y trabajo profundo con medicina.", button: "Ver Itinerario" }
       },
@@ -549,6 +603,42 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   // HUNGARIAN
   [Language.HU]: {
       ...enTranslations,
+      services: {
+          title: "Ajánlataink",
+          items: [
+            { 
+                title: "2 Napos Elvonulás", 
+                description: "Mély elmélyülés a Wayna Wasi-ban és Kinsacochában. Alapdíj $173 (1 fő). További személy +$70. Szállás +$20/fő. Max 10 fő.", 
+                price: "$173+",
+                details: { duration: "2 Nap", location: "Pisac és Kinsacocha", groupSize: "Max 10" }
+            },
+            { 
+                title: "Juchuy Qosqo Elmélyülés", 
+                description: "2 nap a 'Kis Cusco' romjainál. Szállás helyi családnál, közös hagyományos főzés és mély kapcsolódás.", 
+                price: "$200+",
+                details: { duration: "2 Nap", location: "Juchuy Qosqo", groupSize: "Min 2" }
+            },
+            { 
+                title: "1 Napos Szertartás", 
+                description: "Szent utazás minimum 2 fő részére. Tapasztald meg a gyógyítást különböző szent helyeken, mint romok, lagúnák vagy hegyek a Szent Völgyben.", 
+                price: "$250",
+                details: { duration: "1 Nap", location: "Szent Völgy", groupSize: "Min 2" }
+            },
+            { 
+                title: "Costa Rica-i Zarándoklat", 
+                description: "Szent utazás, amely összeköti az Andokat és az Óceánt egy titkos Costa Rica-i helyszínen. 21 résztvevőre korlátozva.", 
+                price: "Érdeklődj",
+                details: { duration: "7 Nap", location: "Costa Rica", groupSize: "Max 21" }
+            },
+            { 
+                title: "Privát Gyógyítás", 
+                description: "Személyre szabott egyéni ülések a spirituális és érzelmi igényeidhez igazítva. Mély blokkok oldása.", 
+                price: "Érdeklődj",
+                details: { duration: "Változó", location: "Wayna Wasi", groupSize: "1 Fő" }
+            }
+          ],
+          ausangateCta: { title: "Különleges Elvonulás: Ausangate Expedíció", description: "Csatlakozz hozzánk egy 7 napos átalakító utazásra az Ausangate szent hegyéhez. Hőforrások, túrázás és mély gyógyító munka.", button: "Útiterv Megtekintése" } 
+      },
       ui: {
         viewDetails: "Részletek Megtekintése",
         inquire: "Érdeklődés",
@@ -565,7 +655,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         whatsapp: "WhatsApp",
         connectWithUs: "Lépj Kapcsolatba Velünk",
         featuredExperience: "Kiemelt Élmény",
-        viewFlyer: "Esemény Szórólap"
+        viewFlyer: "Esemény Szórólap",
+        duration: "Időtartam",
+        service: "Szolgáltatás"
       },
       flyer: {
         highlights: "Kiemelt Élmények",
@@ -644,7 +736,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           conclusion: "Erőteljes újraindítás és újrakapcsolódás a természeti világgal, tisztánlátással és könnyebb szívvel távozol.",
           details: { durationLabel: "Időtartam", durationValue: "Egész nap (Reggeltől Délutánig)", locationLabel: "Helyszín", locationValue: "Szent Völgyi Helyszínek", focusLabel: "Fókusz", focusValue: "Gyógyítás és Természet" }
       },
-      services: { title: "Ajánlataink", items: [{ title: "2 Napos Elvonulás", description: "Mély elmélyülés a Wayna Wasi-ban és Kinsacochában. Alapdíj $173 (1 fő). További személy +$70. Szállás +$20/fő. Max 10 fő.", price: "$173+" }, { title: "Juchuy Qosqo Elmélyülés", description: "2 nap a 'Kis Cusco' romjainál. Szállás helyi családnál, közös hagyományos főzés és mély kapcsolódás.", price: "$200+" }, { title: "1 Napos Szertartás", description: "Szent utazás minimum 2 fő részére. Tapasztald meg a gyógyítást különböző szent helyeken, mint romok, lagúnák vagy hegyek a Szent Völgyben.", price: "$250" }, { title: "Costa Rica-i Zarándoklat", description: "Szent utazás, amely összeköti az Andokat és az Óceánt egy titkos Costa Rica-i helyszínen. 21 résztvevőre korlátozva.", price: "Érdeklődj" }, { title: "Privát Gyógyítás", description: "Személyre szabott egyéni ülések a spirituális és érzelmi igényeidhez igazítva. Mély blokkok oldása.", price: "Érdeklődj" }], ausangateCta: { title: "Különleges Elvonulás: Ausangate Expedíció", description: "Csatlakozz hozzánk egy 7 napos átalakító utazásra az Ausangate szent hegyéhez. Hőforrások, túrázás és mély gyógyító munka.", button: "Útiterv Megtekintése" } },
       preparation: {
         title: "Felkészülés a San Pedro Elvonulásra",
         subtitle: "Az Andoki Közösség Jövőjének Erősítése",
@@ -759,6 +850,36 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   // QUECHUA
   [Language.QU]: {
       ...enTranslations,
+      services: { 
+          title: "Munayniyku", 
+          items: [{ 
+              title: "2 P'unchay T'aqakuy", 
+              description: "Wayna Wasi & Kinsacocha. $173+.", 
+              price: "$173+",
+              details: { duration: "2 P'unchay", location: "Pisac & Kinsacocha", groupSize: "Max 10" } 
+          }, { 
+              title: "Juchuy Qosqo Puriy", 
+              description: "2 P'unchay ñawpaq llaqtapi.", 
+              price: "$200+",
+              details: { duration: "2 P'unchay", location: "Juchuy Qosqo", groupSize: "Min 2" }
+          }, { 
+              title: "1 P'unchay Raymi", 
+              description: "Huk p'unchay hampiwan.", 
+              price: "$250",
+              details: { duration: "1 P'unchay", location: "Willka Qhichwa", groupSize: "Min 2" }
+          }, { 
+              title: "Costa Rica Puriy", 
+              description: "Mama Qochawan tinkuy.", 
+              price: "Tapukuy",
+              details: { duration: "7 P'unchay", location: "Costa Rica", groupSize: "Max 21" }
+          }, { 
+              title: "Sapaq Hampi", 
+              description: "Qamllapaq hampi.", 
+              price: "Tapukuy",
+              details: { duration: "-", location: "Wayna Wasi", groupSize: "1 Runa" }
+          }], 
+          ausangateCta: { title: "Ausangate Puriy", description: "7 p'unchay Apu Ausangatewan.", button: "Qhawariy" } 
+      },
       ui: {
         viewDetails: "Qhawariy",
         inquire: "Tapukuy",
@@ -775,7 +896,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         whatsapp: "WhatsApp",
         connectWithUs: "Tinkuy",
         featuredExperience: "Kuraq Experiencia",
-        viewFlyer: "Qhawariy Flyer"
+        viewFlyer: "Qhawariy Flyer",
+        duration: "Unay",
+        service: "Raymi"
       },
       flyer: {
         highlights: "Kuraq Yachaykuna",
@@ -788,7 +911,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
       nav: { home: "Qallariy", about: "Ayllu", services: "Raymikuna", gallery: "Rikch'akuna", contact: "Tinkuy", faq: "Yanapana" },
       hero: { title: "Willka Hampi Wachuma", subtitle: "Pachamamawan tinkuy, ñawpaq yachaywan.", cta: "Raymita Waqaychay", retreatTeaser: { label: "Willka T'aqakuy", title: "2 P'unchay T'aqakuy", location: "Pisac & Kinsacocha" }, ausangateTeaser: { label: "Kuraq", title: "Ausangate Puriy", date: "Enero 3-9, 2026" }, costaRicaTeaser: { label: "Hatun Raymi", title: "Costa Rica Puriy", date: "Enero 22-28, 2026" } },
       benefits: { title: "Wachuma Kallpa", subtitle: "Imarayku purinchik kay hampiwan", items: [{ title: "Sonqo Hampi", description: "Llakikunata qarqoy, hawkayayta tariy." }, { title: "Pachamamawan Tinkuy", description: "Allpawan, wayrawan, yakuyan, ninawan huklla kay." }, { title: "Yuyay K'anchay", description: "Musuq yuyayta tariy, ñanniykita rikuriy." }] },
-      services: { title: "Munayniyku", items: [{ title: "2 P'unchay T'aqakuy", description: "Wayna Wasi & Kinsacocha. $173+.", price: "$173+" }, { title: "Juchuy Qosqo Puriy", description: "2 P'unchay ñawpaq llaqtapi.", price: "$200+" }, { title: "1 P'unchay Raymi", description: "Huk p'unchay hampiwan.", price: "$250" }, { title: "Costa Rica Puriy", description: "Mama Qochawan tinkuy.", price: "Tapukuy" }, { title: "Sapaq Hampi", description: "Qamllapaq hampi.", price: "Tapukuy" }], ausangateCta: { title: "Ausangate Puriy", description: "7 p'unchay Apu Ausangatewan.", button: "Qhawariy" } },
       footer: { description: "Wachuma hampiwan tinkuy, Hernanwan kuska.", columns: { links: { title: "Tinkiykuna", items: [{label: "Ayllu", href: "/about"}, {label: "Tinkuy", href: "/contact"}] }, reviews: { title: "Google", rating: "4,9/5" }, follow: { title: "Qatipay", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram }, contact: { title: "Tinkuy", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone }, find: { title: "Tiyay", address: "Wayna Wasi, Pisac, Perú" } }, rights: "Llapallan." },
       about: {
         title: "Hernanwan Riqsinakuy",
@@ -972,6 +1094,36 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   // ARABIC
   [Language.AR]: {
       ...enTranslations,
+      services: { 
+          title: "المراسم", 
+          items: [{ 
+              title: "خلوة لمدة يومين", 
+              description: "انغماس عميق في واينا واسي وكينساكوتشا. التكلفة الأساسية 173 دولارًا (شخص واحد). كل شخص إضافي +70 دولارًا. الإقامة +20 دولارًا للشخص الواحد. بحد أقصى 10 أشخاص.", 
+              price: "$173+",
+              details: { duration: "يومين", location: "بيساك وكينساكوتشا", groupSize: "الحد الأقصى 10" } 
+          }, { 
+              title: "انغماس جوتشوي كوسكو", 
+              description: "يومين في أطلال 'كوسكو الصغيرة'. إقامة مع عائلة محلية، وطهي الطعام التقليدي معًا، وتجربة اتصال عميق.", 
+              price: "$200+",
+              details: { duration: "يومين", location: "جوتشوي كوسكو", groupSize: "الحد الأدنى 2" }
+          }, { 
+              title: "مراسم ليوم واحد", 
+              description: "رحلة مقدسة بحد أدنى شخصين. جرب الدواء في مواقع مقدسة مختلفة مثل الأطلال والبحيرات والجبال عبر الوادي المقدس.", 
+              price: "$250",
+              details: { duration: "يوم واحد", location: "الوادي المقدس", groupSize: "الحد الأدنى 2" }
+          }, { 
+              title: "حج كوستاريكا", 
+              description: "رحلة مقدسة تربط جبال الأنديز والمحيط في مكان سري في كوستاريكا. تقتصر على 21 مشاركًا.", 
+              price: "استفسار",
+              details: { duration: "7 أيام", location: "كوستاريكا", groupSize: "الحد الأقصى 21" }
+          }, { 
+              title: "شفاء خاص", 
+              description: "جلسات فردية مصممة خصيصًا لاحتياجاتك الروحية والعاطفية. إزالة الانسداد العميق.", 
+              price: "استفسار",
+              details: { duration: "يختلف", location: "واينا واسي", groupSize: "شخص واحد" }
+          }], 
+          ausangateCta: { title: "خلوة خاصة: رحلة أوسانجاتي", description: "انضم إلينا في رحلة تحويلية لمدة 7 أيام إلى جبل أوسانجاتي المقدس. الينابيع الساخنة والمشي لمسافات طويلة والعمل الطبي العميق.", button: "عرض مسار الرحلة" } 
+      },
       ui: {
         viewDetails: "عرض التفاصيل",
         inquire: "استفسار",
@@ -988,7 +1140,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         whatsapp: "واتساب",
         connectWithUs: "تواصل معنا",
         featuredExperience: "تجربة مميزة",
-        viewFlyer: "عرض المنشور"
+        viewFlyer: "عرض المنشور",
+        duration: "المدة",
+        service: "الخدمة"
       },
       flyer: {
         highlights: "أبرز النقاط",
@@ -1177,6 +1331,36 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   // JAPANESE
   [Language.JA]: {
       ...enTranslations,
+      services: { 
+          title: "セレモニー", 
+          items: [{ 
+              title: "2日間リトリート", 
+              description: "ワイナ・ワシ＆キンサコチャでの深い没入。基本費用$173（1名）。追加1名につき+$70。宿泊費1名につき+$20。最大10名。", 
+              price: "$173+",
+              details: { duration: "2日間", location: "ピサック＆キンサコチャ", groupSize: "最大10名" } 
+          }, { 
+              title: "フチュイ・コスコ没入", 
+              description: "「小さなクスコ」遺跡での2日間。地元の家族と一緒に滞在し、伝統的な料理を一緒に作り、深いつながりを体験します。", 
+              price: "$200+",
+              details: { duration: "2日間", location: "フチュイ・コスコ", groupSize: "最小2名" }
+          }, { 
+              title: "1日セレモニー", 
+              description: "最低2名様からの聖なる旅。聖なる谷の遺跡、ラグーン、山々など、様々な聖地で薬を体験してください。", 
+              price: "$250",
+              details: { duration: "1日", location: "聖なる谷", groupSize: "最小2名" }
+          }, { 
+              title: "コスタリカ巡礼", 
+              description: "コスタリカの秘密の場所でアンデスと海をつなぐ聖なる旅。21名の参加者に限定。", 
+              price: "お問い合わせ",
+              details: { duration: "7日間", location: "コスタリカ", groupSize: "最大21名" }
+          }, { 
+              title: "プライベートヒーリング", 
+              description: "あなたの特定の精神的および感情的なニーズに合わせたマンツーマンのセッション。深いブロックの除去。", 
+              price: "お問い合わせ",
+              details: { duration: "様々", location: "ワイナ・ワシ", groupSize: "1名" }
+          }], 
+          ausangateCta: { title: "特別リトリート：アウサンガテ遠征", description: "アウサンガテの聖なる山への7日間の変容の旅に参加しましょう。温泉、ハイキング、そして深い薬のワーク。", button: "旅程を見る" } 
+      },
       ui: {
         viewDetails: "詳細を見る",
         inquire: "お問い合わせ",
@@ -1193,7 +1377,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         whatsapp: "WhatsApp",
         connectWithUs: "お問い合わせ",
         featuredExperience: "おすすめ体験",
-        viewFlyer: "チラシを見る"
+        viewFlyer: "チラシを見る",
+        duration: "期間",
+        service: "サービス"
       },
       flyer: {
         highlights: "ハイライト",
@@ -1382,6 +1568,36 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   // SANSKRIT
   [Language.SA]: {
       ...enTranslations,
+      services: { 
+          title: "संस्काराः", 
+          items: [{ 
+              title: "२ दिवसीय शिबिरः", 
+              description: "वायना वासी तथा किन्साकोचा मध्ये गभीरं निमज्जनम्। मूल व्ययः $१७३ (१ जनः)। प्रत्येकं अतिरिक्तः जनः +$७०। निवासः +$२० प्रति जनः। अधिकतमं १० जनाः।", 
+              price: "$१७३+",
+              details: { duration: "२ दिनानि", location: "पिसाक तथा किन्साकोचा", groupSize: "अधिकतमं १०" } 
+          }, { 
+              title: "जुचुय कोस्को निमज्जनम्", 
+              description: "२ दिनानि 'लघु कुस्को' भग्नावशेषेषु। स्थानीयपरिवारेण सह निवासः, पारम्परिक भोजनं पाकः, तथा गभीरसम्बन्धः।", 
+              price: "$२००+",
+              details: { duration: "२ दिनानि", location: "जुचुय कोस्को", groupSize: "न्यूनतमं २" }
+          }, { 
+              title: "१ दिवसीय संस्कारः", 
+              description: "न्यूनतमं २ जनानां कृते एका पवित्र यात्रा। पवित्र उपत्यकायाः विभिन्नेषु पवित्रस्थलेषु ओषधेः अनुभवः।", 
+              price: "$२५०",
+              details: { duration: "१ दिनम्", location: "पवित्र उपत्यका", groupSize: "न्यूनतमं २" }
+          }, { 
+              title: "कोस्टा रिका तीर्थयात्रा", 
+              description: "कोस्टा रिका मध्ये एकस्मिन् गुप्तस्थाने अण्डीज तथा सागरं योजनं कुर्वती एका पवित्र यात्रा। २१ प्रतिभागिषु सीमितः।", 
+              price: "प्रच्छन्तु",
+              details: { duration: "७ दिनानि", location: "कोस्टा रिका", groupSize: "अधिकतमं २१" }
+          }, { 
+              title: "व्यक्तिगत चिकित्सा", 
+              description: "भवतः विशिष्ट आध्यात्मिक तथा भावनात्मक आवश्यकतानुसारं एक-एक सत्रम्। गभीरबाधानां निवारणम्।", 
+              price: "प्रच्छन्तु",
+              details: { duration: "भिन्नः", location: "वायना वासी", groupSize: "१ जनः" }
+          }], 
+          ausangateCta: { title: "विशिष्टः शिबिरः: औसंगाते यात्रा", description: "औसंगाते पवित्र पर्वत प्रति ७ दिवसीय परिवर्तनकारिणि यात्रायां अस्माभिः सह मिलन्तु। उष्णजलानि, पदयात्रा, तथा गभीर चिकित्सा कार्यम्।", button: "यात्राविवरणं पश्यन्तु" } 
+      },
       ui: {
         viewDetails: "विवरणं पश्यन्तु",
         inquire: "प्रच्छन्तु",
@@ -1398,7 +1614,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         whatsapp: "WhatsApp",
         connectWithUs: "अस्माभिः सह सम्पर्कं कुरुत",
         featuredExperience: "विशिष्टः अनुभवः",
-        viewFlyer: "पत्रकं पश्यन्तु"
+        viewFlyer: "पत्रकं पश्यन्तु",
+        duration: "अवधिः",
+        service: "सेवा"
       },
       flyer: {
         highlights: "मुख्यांशाः",

@@ -21,10 +21,17 @@ export interface SectionContent {
   cta?: string;
 }
 
+export interface ServiceDetails {
+  duration: string;
+  location: string;
+  groupSize: string;
+}
+
 export interface ServiceItem {
   title: string;
   description: string;
   price?: string;
+  details?: ServiceDetails;
 }
 
 export interface TestimonialItem {
@@ -128,6 +135,8 @@ export interface UiLabels {
     connectWithUs: string;
     featuredExperience: string;
     viewFlyer: string;
+    duration: string;
+    service: string;
 }
 
 export interface FlyerLabels {
