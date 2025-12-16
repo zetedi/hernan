@@ -133,7 +133,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                             <h3 className="text-pacha-gold font-bold uppercase tracking-widest mb-2 md:mb-4 border-b border-pacha-gold/30 pb-1 md:pb-2 text-[10px] md:text-sm print:text-black print:border-black">{flyerT.highlights}</h3>
                             <ul className="space-y-1 md:space-y-2">
                                 {t.itinerary ? (
-                                    t.itinerary.slice(0, 5).map((day: any, i: number) => (
+                                    t.itinerary.map((day: any, i: number) => (
                                         <li key={i} className="flex gap-2 md:gap-3 text-[10px] md:text-sm">
                                             <span className="font-bold text-pacha-leaf w-8 md:w-12 flex-shrink-0 print:text-black">{day.day.replace(/Day /i, 'D')}</span>
                                             <span className="truncate text-gray-800 font-medium">{day.title}</span>
