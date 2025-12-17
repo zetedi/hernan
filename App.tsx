@@ -1,26 +1,29 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { Routes, Route, useLocation, useSearchParams } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Services } from './components/Services';
-import { Gallery } from './components/Gallery';
-import { Testimonials } from './components/Testimonials';
-import { Contact } from './components/Contact';
-import { Benefits } from './components/Benefits';
-import { Ausangate } from './components/Ausangate';
-import { Retreat2Day } from './components/Retreat2Day';
-import { Retreat1Day } from './components/Retreat1Day';
-import { CostaRica } from './components/CostaRica';
-import { JuchuyQosqo } from './components/JuchuyQosqo';
 import { Footer } from './components/Footer';
-import { FAQ } from './components/FAQ';
-import { EventFlyer } from './components/EventFlyer';
 import { GoogleReviewsWidget } from './components/GoogleReviewsWidget';
+import { Benefits } from './components/Benefits';
 import { SEO } from './components/SEO';
+import { Loading } from './components/Loading';
 import { Language } from './types';
 import { TRANSLATIONS } from './constants';
+
+// Lazy load heavy page components
+const About = lazy(() => import('./components/About').then(module => ({ default: module.About })));
+const Services = lazy(() => import('./components/Services').then(module => ({ default: module.Services })));
+const Gallery = lazy(() => import('./components/Gallery').then(module => ({ default: module.Gallery })));
+const Testimonials = lazy(() => import('./components/Testimonials').then(module => ({ default: module.Testimonials })));
+const Contact = lazy(() => import('./components/Contact').then(module => ({ default: module.Contact })));
+const Ausangate = lazy(() => import('./components/Ausangate').then(module => ({ default: module.Ausangate })));
+const Retreat2Day = lazy(() => import('./components/Retreat2Day').then(module => ({ default: module.Retreat2Day })));
+const Retreat1Day = lazy(() => import('./components/Retreat1Day').then(module => ({ default: module.Retreat1Day })));
+const CostaRica = lazy(() => import('./components/CostaRica').then(module => ({ default: module.CostaRica })));
+const JuchuyQosqo = lazy(() => import('./components/JuchuyQosqo').then(module => ({ default: module.JuchuyQosqo })));
+const FAQ = lazy(() => import('./components/FAQ').then(module => ({ default: module.FAQ })));
+const EventFlyer = lazy(() => import('./components/EventFlyer').then(module => ({ default: module.EventFlyer })));
 
 const App: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -72,7 +75,11 @@ const App: React.FC = () => {
       else if (type === 'juchuy') flyerData = t.juchuy;
       else flyerData = t.ausangate;
 
-      return <EventFlyer t={flyerData} flyerT={t.flyer} contact={t.contact} footer={t.footer} type={type} />;
+      return (
+        <Suspense fallback={<Loading />}>
+            <EventFlyer t={flyerData} flyerT={t.flyer} contact={t.contact} footer={t.footer} type={type} />
+        </Suspense>
+      );
   }
 
   return (
@@ -90,44 +97,46 @@ const App: React.FC = () => {
         onLanguageChange={setCurrentLanguage} 
       />
       <main className="flex-grow">
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Hero 
-                t={t.hero} 
-                lang={currentLanguage} 
-                retreatPrice={t.services.items[0].price}
-              />
-              <Benefits t={t.benefits} />
-              <GoogleReviewsWidget />
-            </>
-          } />
-          <Route path="/about" element={
-            <>
-              <About t={t.about} />
-              <Testimonials t={t.testimonials} />
-            </>
-          } />
-          <Route path="/services" element={<Services t={t.services} ui={t.ui} lang={currentLanguage} />} />
-          <Route path="/ausangate" element={
-            <Ausangate t={{...t.ausangate, preparation: t.preparation} as any} ui={t.ui} lang={currentLanguage} />
-          } />
-          <Route path="/costa-rica" element={
-            <CostaRica t={t.costaRica} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
-          } />
-          <Route path="/juchuy-qosqo" element={
-            <JuchuyQosqo t={t.juchuy} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
-          } />
-          <Route path="/retreat-2day" element={
-            <Retreat2Day t={{...t.retreat2Day, preparation: t.preparation} as any} ui={t.ui} lang={currentLanguage} />
-          } />
-          <Route path="/retreat-1day" element={
-            <Retreat1Day t={t.retreat1Day} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
-          } />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/faq" element={<FAQ t={t.faq} />} />
-          <Route path="/contact" element={<Contact t={t.contact} footerT={t.footer} ui={t.ui} />} />
-        </Routes>
+        <Suspense fallback={<Loading />}>
+            <Routes>
+            <Route path="/" element={
+                <>
+                <Hero 
+                    t={t.hero} 
+                    lang={currentLanguage} 
+                    retreatPrice={t.services.items[0].price}
+                />
+                <Benefits t={t.benefits} />
+                <GoogleReviewsWidget />
+                </>
+            } />
+            <Route path="/about" element={
+                <>
+                <About t={t.about} />
+                <Testimonials t={t.testimonials} />
+                </>
+            } />
+            <Route path="/services" element={<Services t={t.services} ui={t.ui} lang={currentLanguage} />} />
+            <Route path="/ausangate" element={
+                <Ausangate t={{...t.ausangate, preparation: t.preparation} as any} ui={t.ui} lang={currentLanguage} />
+            } />
+            <Route path="/costa-rica" element={
+                <CostaRica t={t.costaRica} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
+            } />
+            <Route path="/juchuy-qosqo" element={
+                <JuchuyQosqo t={t.juchuy} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
+            } />
+            <Route path="/retreat-2day" element={
+                <Retreat2Day t={{...t.retreat2Day, preparation: t.preparation} as any} ui={t.ui} lang={currentLanguage} />
+            } />
+            <Route path="/retreat-1day" element={
+                <Retreat1Day t={t.retreat1Day} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
+            } />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/faq" element={<FAQ t={t.faq} />} />
+            <Route path="/contact" element={<Contact t={t.contact} footerT={t.footer} ui={t.ui} />} />
+            </Routes>
+        </Suspense>
       </main>
       <Footer data={t.footer} />
     </div>

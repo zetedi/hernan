@@ -33,6 +33,7 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
           <img 
             src={IMAGES.ausangate} 
             alt="Ausangate" 
+            loading="lazy"
             className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-70 transition-opacity duration-500 scale-100 group-hover:scale-105 transition-transform"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent z-10"></div>
@@ -100,6 +101,8 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
                             src={bgImage} 
                             onError={(e) => { e.currentTarget.src = IMAGES.hero; }}
                             alt="Background" 
+                            loading="lazy"
+                            decoding="async"
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors duration-300"></div>

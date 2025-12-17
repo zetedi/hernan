@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
 import { IMAGES } from '../constants';
@@ -102,6 +103,8 @@ export const Gallery: React.FC = () => {
                     <img 
                         src={src} 
                         alt={`Gallery ${idx + 1}`} 
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                     />
                 </div>
