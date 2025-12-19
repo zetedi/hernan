@@ -95,7 +95,7 @@ const enTranslations: TranslationData = {
       cta: "Book a Ceremony",
       retreatTeaser: { label: "Sacred Immersion", title: "2 Day Retreat", location: "Pisac & Kinsacocha" },
       ausangateTeaser: { label: "Inclusive", title: "Ausangate Journey", date: "Jan 3-9, 2026" },
-      costaRicaTeaser: { label: "Special Event", title: "Costa Rica Pilgrimage", date: "Jan 22-28, 2026" }
+      costaRicaTeaser: { label: "Special Event", title: "Costa Rica Pilgrimage", date: "Feb 24 - Mar 2, 2026" }
     },
     benefits: {
       title: "The Power of Wachuma",
@@ -178,7 +178,7 @@ const enTranslations: TranslationData = {
             "In addition to the sacred Wachuma ceremonies, we will share the medicine of Rapé, perform cleansing works with flowers, and journey through guided medicine meditations.",
             "We will gather in a secret, secluded location, immersed in nature's embrace. This intimate experience is strictly limited to 21 participants (including helpers) to ensure deep, personal attention and a cohesive energetic container."
         ],
-        details: { location: "Secret Location, Costa Rica", capacity: "Limited to 21 Souls", dates: "January 22-28, 2026" },
+        details: { location: "Secret Location, Costa Rica", capacity: "Limited to 21 Souls", dates: "February 24 - March 2, 2026" },
         cta: "Request Invitation",
         visionTitle: "A Vision from the Medicine",
         visionText: "This gathering is not just a retreat; it is a response to a call. The medicine spoke of connecting the wisdom held in the high Andes with the purifying, fluid energy of the ocean. A pilgrimage of spirit and body.",
@@ -381,7 +381,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           cta: "Reserva una Ceremonia",
           retreatTeaser: { label: "Inmersión Sagrada", title: "Retiro de 2 Días", location: "Pisac y Kinsacocha" },
           ausangateTeaser: { label: "Inclusivo", title: "Viaje al Ausangate", date: "3-9 Enero, 2026" },
-          costaRicaTeaser: { label: "Evento Especial", title: "Peregrinaje a Costa Rica", date: "22-28 Enero, 2026" }
+          costaRicaTeaser: { label: "Evento Especial", title: "Peregrinaje a Costa Rica", date: "24 Feb - 2 Mar, 2026" }
       },
       benefits: {
         title: "El Poder del Wachuma",
@@ -464,7 +464,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             "Además de las ceremonias sagradas de Wachuma, compartiremos la medicina del Rapé, realizaremos trabajos de limpieza con flores y viajaremos a través de meditaciones guiadas con medicina.",
             "Nos reuniremos en un lugar secreto y apartado, inmersos en el abrazo de la naturaleza. Esta experiencia íntima está estrictamente limitada a 21 participantes (incluidos los ayudantes) para garantizar una atención personal profunda y un contenedor energético cohesivo."
         ],
-        details: { location: "Ubicación Secreta, Costa Rica", capacity: "Limitado a 21 Almas", dates: "22-28 de Enero, 2026" },
+        details: { location: "Ubicación Secreta, Costa Rica", capacity: "Limitado a 21 Almas", dates: "24 de Febrero - 2 de Marzo, 2026" },
         cta: "Solicitar Invitación",
         visionTitle: "Una Visión de la Medicina",
         visionText: "Este encuentro no es solo un retiro; es una respuesta a un llamado. La medicina habló de conectar la sabiduría de los Andes con la energía purificadora y fluida del océano. Un peregrinaje del espíritu y el cuerpo.",
@@ -555,7 +555,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             {
                 title: "Qué esperar en un retiro de Wachuma",
                 content: [
-                    "Planificar un retiro de Wachuma puede sentirse como prepararse para una peregrinación del alma. Ya seas nuevo en la medicina de plantas o un buscador experimentado, cada ceremonia de Wachuma ofrece una experiencia única y transformadora. Esto es lo que puedes esperar cuando te embarcas en un retiro en el Valle Sagrado de Perú, donde el espíritu de los Andes y la Pachamama están siempre presentes.",
+                    "Planificar un retiro de Wachuma puede sentirse como prepararse para una peregrinación del alma. Ya seas nuevo en la medicina de plantas o un buscador experimentado, cada ceremonia de Wachuma ofrece una experiencia única y transformadora. Esto es lo que puedes esperar cuando te embarcas en un retiro en el Valle Sagrado de Perú, where the spirit of the Andes and Pachamama herself are ever-present.",
                     "<strong>Un entorno sagrado para la sanación profunda</strong><br>El Valle Sagrado cerca de Cusco es el telón de fondo perfecto para tu viaje espiritual. Ubicado entre las montañas andinas, nuestro espacio de retiro está rodeado de paisajes impresionantes que amplifican el poder del Wachuma.",
                     "<strong>Un día típico de ceremonia</strong><br>Tu retiro comenzará con una suave introducción al Wachuma. Bajo la guía de Hernán Colque, las ceremonias se desarrollan en un espacio seguro y de apoyo donde se te animará a escuchar tu voz interior. Wachuma ayuda a abrir el corazón, proporcionando claridad y una sensación de paz.",
                     "<strong>Integrando tu experiencia</strong><br>Las ideas obtenidas del Wachuma pueden ser profundas, y es importante tomarse el tiempo para integrar estas lecciones en tu vida diaria. Hernán y su equipo están allí para ayudarte a procesar tus experiencias."
@@ -668,7 +668,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         print: "Nyomtatás / PDF Mentése"
       },
       nav: { home: "Főoldal", about: "A Család", services: "Szertartások", gallery: "Galéria", contact: "Kapcsolat", faq: "Segítség / GYIK" },
-      hero: { title: "Az Andok Szent Gyógyító Ereje", subtitle: "Kapcsolódj újra Pachamamával a hagyományos Wachuma szertartásokon keresztül a Szent Völgyben.", cta: "Szertartás Foglalása", retreatTeaser: { label: "Szent Elmélyülés", title: "2 Napos Elvonulás", location: "Pisac és Kinsacocha" }, ausangateTeaser: { label: "Exkluzív", title: "Ausangate Utazás", date: "2026. Jan 3-9." }, costaRicaTeaser: { label: "Különleges Esemény", title: "Costa Rica-i Zarándoklat", date: "2026. Jan 22-28." } },
+      hero: { title: "Az Andok Szent Gyógyító Ereje", subtitle: "Kapcsolódj újra Pachamamával a hagyományos Wachuma szertartásokon keresztül a Szent Völgyben.", cta: "Szertartás Foglalása", retreatTeaser: { label: "Szent Elmélyülés", title: "2 Napos Elvonulás", location: "Pisac és Kinsacocha" }, ausangateTeaser: { label: "Exkluzív", title: "Ausangate Utazás", date: "2026. Jan 3-9." }, costaRicaTeaser: { label: "Különleges Esemény", title: "Costa Rica-i Zarándoklat", date: "2026. Feb 24 - Már 2." } },
       benefits: {
         title: "A Wachuma Ereje",
         subtitle: "Miért utazunk a Szent Kaktusszal",
@@ -700,7 +700,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             "A szent Wachuma szertartások mellett megosztjuk a Rapé orvosságot, tisztító munkákat végzünk virágokkal, és vezetett meditációkon keresztül utazunk.",
             "Egy titkos, eldugott helyen gyűlünk össze, a természet ölelésében. Ez a meghitt élmény szigorúan 21 résztvevőre (beleértve a segítőket is) korlátozódik, hogy biztosítsuk a mély, személyes figyelmet és az összetartó energetikai teret."
         ],
-        details: { location: "Titkos Helyszín, Costa Rica", capacity: "21 Lélekre Korlátozva", dates: "2026. Január 22-28." },
+        details: { location: "Titkos Helyszín, Costa Rica", capacity: "21 Lélekre Korlátozva", dates: "2026. Február 24 - Március 2." },
         cta: "Meghívó Kérése",
         visionTitle: "Egy Látomás a Medicinától",
         visionText: "Ez az összejövetel nem csupán egy elvonulás; válasz egy hívásra. A medicina arról beszélt, hogy össze kell kötni a magas Andok bölcsességét az óceán tisztító, áramló energiájával. A lélek és a test zarándoklata.",
@@ -909,7 +909,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         print: "Imprimir / PDF Waqaychay"
       },
       nav: { home: "Qallariy", about: "Ayllu", services: "Raymikuna", gallery: "Rikch'akuna", contact: "Tinkuy", faq: "Yanapana" },
-      hero: { title: "Willka Hampi Wachuma", subtitle: "Pachamamawan tinkuy, ñawpaq yachaywan.", cta: "Raymita Waqaychay", retreatTeaser: { label: "Willka T'aqakuy", title: "2 P'unchay T'aqakuy", location: "Pisac & Kinsacocha" }, ausangateTeaser: { label: "Kuraq", title: "Ausangate Puriy", date: "Enero 3-9, 2026" }, costaRicaTeaser: { label: "Hatun Raymi", title: "Costa Rica Puriy", date: "Enero 22-28, 2026" } },
+      hero: { title: "Willka Hampi Wachuma", subtitle: "Pachamamawan tinkuy, ñawpaq yachaywan.", cta: "Raymita Waqaychay", retreatTeaser: { label: "Willka T'aqakuy", title: "2 P'unchay T'aqakuy", location: "Pisac & Kinsacocha" }, ausangateTeaser: { label: "Kuraq", title: "Ausangate Puriy", date: "Enero 3-9, 2026" }, costaRicaTeaser: { label: "Hatun Raymi", title: "Costa Rica Puriy", date: "Febrero 24 - Marzo 2, 2026" } },
       benefits: { title: "Wachuma Kallpa", subtitle: "Imarayku purinchik kay hampiwan", items: [{ title: "Sonqo Hampi", description: "Llakikunata qarqoy, hawkayayta tariy." }, { title: "Pachamamawan Tinkuy", description: "Allpawan, wayrawan, yakuyan, ninawan huklla kay." }, { title: "Yuyay K'anchay", description: "Musuq yuyayta tariy, ñanniykita rikuriy." }] },
       footer: { description: "Wachuma hampiwan tinkuy, Hernanwan kuska.", columns: { links: { title: "Tinkiykuna", items: [{label: "Ayllu", href: "/about"}, {label: "Tinkuy", href: "/contact"}] }, reviews: { title: "Google", rating: "4,9/5" }, follow: { title: "Qatipay", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram }, contact: { title: "Tinkuy", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone }, find: { title: "Tiyay", address: "Wayna Wasi, Pisac, Perú" } }, rights: "Llapallan." },
       about: {
@@ -949,7 +949,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             "Wachuma hampiwan, Rapé hampiwan, t'ikakunawan ima ch'uyanchik.",
             "Pakasqa tiyaypi kanqa. 21 runallapaqmi, aswan allin tinkuypaq."
         ],
-        details: { location: "Pakasqa Tiyay, Costa Rica", capacity: "21 Runalla", dates: "Enero 22-28, 2026" },
+        details: { location: "Pakasqa Tiyay, Costa Rica", capacity: "21 Runalla", dates: "Febrero 24 - Marzo 2, 2026" },
         cta: "Mink'ata Mañakuy",
         visionTitle: "Hampi Musquy",
         visionText: "Kayqa manan puriyllachu; kayqa apukunaq waqaychayninmi. Hampiqa nirqa: Urquq yachayninta qochawan tinkuchiy.",
@@ -1153,7 +1153,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         print: "طباعة / حفظ PDF"
       },
       nav: { home: "الرئيسية", about: "العائلة", services: "المراسم", gallery: "المعرض", contact: "اتصل بنا", faq: "الأسئلة الشائعة" },
-      hero: { title: "الطب المقدس في جبال الأنديز", subtitle: "أعد الاتصال مع باتشاماما (الأرض الأم) من خلال مراسم واتشوما التقليدية في الوادي المقدس.", cta: "احجز مراسم", retreatTeaser: { label: "انغماس مقدس", title: "خلوة لمدة يومين", location: "بيساك وكينساكوتشا" }, ausangateTeaser: { label: "شامل", title: "رحلة أوسانجاتي", date: "3-9 يناير 2026" }, costaRicaTeaser: { label: "حدث خاص", title: "حج كوستاريكا", date: "22-28 يناير 2026" } },
+      hero: { title: "الطب المقدس في جبال الأنديز", subtitle: "أعد الاتصال مع باتشاماما (الأرض الأم) من خلال مراسم واتشوما التقليدية في الوادي المقدس.", cta: "احجز مراسم", retreatTeaser: { label: "انغماس مقدس", title: "خلوة لمدة يومين", location: "بيساك وكينساكوتشا" }, ausangateTeaser: { label: "شامل", title: "رحلة أوسانجاتي", date: "3-9 يناير 2026" }, costaRicaTeaser: { label: "حدث خاص", title: "حج كوستاريكا", date: "24 فبراير - 2 مارس 2026" } },
       benefits: { title: "قوة الواتشوما", subtitle: "لماذا نسافر مع الصبار المقدس", items: [{ title: "الشفاء العاطفي", description: "تحرير الصدمات الماضية والانسدادات العاطفية." }, { title: "الاتصال بالطبيعة", description: "تجربة وحدة عميقة مع الأرض والعناصر." }, { title: "الوضوح والرؤية", description: "تهدئة العقل لتلقي التوجيه والغرض." }] },
       footer: { description: "جرب القوة التحويلية للواتشوما، طب النباتات المقدس في جبال الأنديز.", columns: { links: { title: "روابط", items: [{label: "معلومات عنا", href: "/about"}, {label: "اتصل بنا", href: "/contact"}] }, reviews: { title: "تقييمات جوجل", rating: "4,9/5" }, follow: { title: "تابعنا", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram }, contact: { title: "اتصل بنا", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone }, find: { title: "موقعنا", address: "Wayna Wasi, Pisac, Perú" } }, rights: "جميع الحقوق محفوظة." },
       about: {
@@ -1192,7 +1192,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             "بالإضافة إلى مراسم الواتشوما المقدسة، سنشارك طب الرابي، ونقوم بأعمال التطهير بالزهور، ونسافر من خلال تأملات الطب الموجهة.",
             "سنجتمع في مكان سري ومعزول، مغمورين في أحضان الطبيعة. هذه التجربة الحميمة محدودة بصرامة بـ 21 مشاركاً لضمان اهتمام شخصي عميق."
         ],
-        details: { location: "موقع سري، كوستاريكا", capacity: "محدود بـ 21 روح", dates: "22-28 يناير 2026" },
+        details: { location: "موقع سري، كوستاريكا", capacity: "محدود بـ 21 روح", dates: "24 فبراير - 2 مارس 2026" },
         cta: "طلب دعوة",
         visionTitle: "رؤية من الطب",
         visionText: "هذا التجمع ليس مجرد خلوة؛ إنه استجابة لنداء. تحدث الطب عن ربط الحكمة الموجودة في أعالي الأنديز بالطاقة النقية والسائلة للمحيط.",
@@ -1390,7 +1390,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         print: "印刷 / PDF保存"
       },
       nav: { home: "ホーム", about: "私たちについて", services: "セレモニー", gallery: "ギャラリー", contact: "お問い合わせ", faq: "よくある質問" },
-      hero: { title: "アンデスの聖なる薬", subtitle: "聖なる谷での伝統的なワチュマ・セレモニーを通じて、パチャママ（母なる大地）と再びつながりましょう。", cta: "セレモニーを予約", retreatTeaser: { label: "聖なる没入", title: "2日間リトリート", location: "ピサック＆キンサコチャ" }, ausangateTeaser: { label: "特別", title: "アウサンガテへの旅", date: "2026年1月3-9日" }, costaRicaTeaser: { label: "特別イベント", title: "コスタリカ巡礼", date: "2026年1月22-28日" } },
+      hero: { title: "アンデスの聖なる薬", subtitle: "聖なる谷での伝統的なワチュマ・セレモニーを通じて、パチャママ（母なる大地）と再びつながりましょう。", cta: "セレモニーを予約", retreatTeaser: { label: "聖なる没入", title: "2日間リトリート", location: "ピサック＆キンサコチャ" }, ausangateTeaser: { label: "特別", title: "アウサンガテへの旅", date: "2026年1月3-9日" }, costaRicaTeaser: { label: "特別イベント", title: "コスタリカ巡礼", date: "2026年2月24日〜3月2日" } },
       benefits: { title: "ワチュマの力", subtitle: "なぜ聖なるサボテンと共に旅をするのか", items: [{ title: "感情の癒し", description: "過去のトラウマや感情的なブロックを解放します。" }, { title: "自然とのつながり", description: "大地、要素、そしてアンデスの精霊との深いつながりを体験します。" }, { title: "明晰さとビジョン", description: "心を静め、人生の道に対する導きと目的を受け取ります。" }] },
       footer: { description: "サンペドロとして知られるアンデスの聖なる植物薬、ワチュマの変容の力を体験してください。", columns: { links: { title: "リンク", items: [{label: "私たちについて", href: "/about"}, {label: "お問い合わせ", href: "/contact"}] }, reviews: { title: "Google レビュー", rating: "4,9/5" }, follow: { title: "フォローする", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram }, contact: { title: "連絡先", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone }, find: { title: "場所", address: "Wayna Wasi, Pisac, Perú" } }, rights: "無断転載を禁じます。" },
       about: {
@@ -1429,7 +1429,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             "聖なるワチュマのセレモニーに加えて、ラペの薬を共有し、花を使った浄化のワークを行い、ガイド付きの薬の瞑想を通じて旅をします。",
             "私たちは自然に抱かれた秘密の人里離れた場所に集まります。この親密な体験は、深い個人的な注意とまとまりのあるエネルギー的な器を確保するために、厳密に21人の参加者（ヘルパーを含む）に制限されています。"
         ],
-        details: { location: "コスタリカ、秘密の場所", capacity: "21名限定", dates: "2026年1月22日〜28日" },
+        details: { location: "コスタリカ、秘密の場所", capacity: "21名限定", dates: "2026年2月24日〜3月2日" },
         cta: "招待をリクエスト",
         visionTitle: "薬からのビジョン",
         visionText: "この集まりは単なるリトリートではありません。それは呼びかけへの応答です。薬は、高いアンデスに保持されている知恵と、海の浄化する流動的なエネルギーをつなぐことについて語りました。精神と肉体の巡礼です。",
@@ -1627,11 +1627,11 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         print: "मुद्रणम् / PDF रक्षणम्"
       },
       nav: { home: "गृहम्", about: "परिवारः", services: "संस्काराः", gallery: "चित्रवीथिका", contact: "सम्पर्कः", faq: "प्रश्नोत्तराणि" },
-      hero: { title: "पवित्र अण्डीज ओषधि", subtitle: "पवित्र उपत्यकायाम् परम्परागत वाचुमा संस्कारैः सह पचमामायाः सह पुनः सम्बध्यताम्।", cta: "संस्कारं आरक्षयतु", retreatTeaser: { label: "पवित्र निमज्जनम्", title: "२ दिवसीय शिबिरः", location: "पिसाक तथा किन्साकोचा" }, ausangateTeaser: { label: "विशिष्टः", title: "औसंगाते यात्रा", date: "जनवरी ३-९, २०२६" }, costaRicaTeaser: { label: "विशेष कार्यक्रमः", title: "कोस्टा रिका तीर्थयात्रा", date: "जनवरी २२-२८, २०२६" } },
+      hero: { title: "पवित्र अण्डीज ओषधि", subtitle: "पवित्र उपत्यकायाम् परम्परागत वाचुमा संस्कारैः सह पचमामायाः सह पुनः सम्बध्यताम्।", cta: "संस्कारं आरक्षयतु", retreatTeaser: { label: "पवित्र निमज्जनम्", title: "२ दिवसीय शिबिरः", location: "पिसाक तथा किन्साकोचा" }, ausangateTeaser: { label: "विशिष्टः", title: "औसंगाते यात्रा", date: "जनवरी ३-९, २०२६" }, costaRicaTeaser: { label: "विशेष कार्यक्रमः", title: "कोस्टा रिका तीर्थयात्रा", date: "फरवरी २४ - मार्च २, २०२६" } },
       benefits: { title: "वाचुमायाः शक्तिः", subtitle: "वयं पवित्र काक्टसनेन सह किमर्थं यात्रां कुर्मः", items: [{ title: "भावनात्मक चिकित्सा", description: "शरीरे सञ्चिताः पूर्वत्रासाः भावनात्मकबाधाः च मोचयन्तु।" }, { title: "प्रकृत्या सह सम्बन्धः", description: "पृथिव्या, तत्त्वैः, अण्डीजस्य जीवच्छक्त्या च सह गभीरं एकत्वं अनुभवन्तु।" }, { title: "स्पष्टता दृष्टिः च", description: "मार्गदर्शनं, उद्देश्यं, जीवनपथस्य नूतनदृष्टिकोणं च प्राप्तुं मनः शान्तं कुरुत।" }] },
       footer: { description: "वाचुमायाः परिवर्तनशक्तिं अनुभवन्तु, या सेन् पेड्रो इति नाम्ना ख्याता अस्ति।", columns: { links: { title: "सम्बन्धाः", items: [{label: "अस्मान् प्रति", href: "/about"}, {label: "सम्पर्कः", href: "/contact"}] }, reviews: { title: "Google समीक्षाः", rating: "४.९/५" }, follow: { title: "अनुसरणं कुरुत", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram }, contact: { title: "सम्पर्कः", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone }, find: { title: "स्थानम्", address: "Wayna Wasi, Pisac, Perú" } }, rights: "सर्वाधिकारः सुरक्षितः।" },
       about: {
-        title: "हर्नन् वर्येण सह मिलन्तु",
+        title: "हर्नन् वर्यस्य सह मिलन्तु",
         subtitle: "पवित्र कण्टकस्य रक्षकः",
         description: [
             "<strong>हर्नन् कोल्के</strong> क्वेशुआ देशीयः तथा <strong>वाचुमा (सेन् पेड्रो) संस्काराणाम्</strong> समर्पितः संचालकः अस्ति, यः अण्डीजस्य पवित्रपरम्परासु गभीररूपेण स्थितः अस्ति। <strong>पिसाक</strong> नगरस्य <strong>वियाचा</strong> नामके उच्चसमुदाये ५००० मीटोर्ध्वं जातः, हर्नन् ओषधीयचिकित्सायाः वंशं वहति यः इन्काकालात् पूर्वं गच्छति।",
@@ -1666,7 +1666,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             "पवित्र वाचुमा संस्कारैः सह, वयं रापे ओषधिं विभजेम, पुष्पैः सह शुद्धिं करिष्यामः, तथा मार्गदर्शितैः ओषधिध्यानैः यात्रां करिष्यामः।",
             "वयं प्रकृतेः क्रोडे, एकस्मिन् गुप्तस्थाने मिलिष्यामः। इयं आत्मीया अनुभवः गभीरं व्यक्तिगतं ध्यानं तथा एकं सुसङ्गतं ऊर्जापात्रं सुनिश्चितं कर्तुं २१ प्रतिभागिषु (सहायकैः सह) सीमितः अस्ति।"
         ],
-        details: { location: "गुप्तस्थानम्, कोस्टा रिका", capacity: "२१ जीवाः सीमिताः", dates: "जनवरी २२-२८, २०२६" },
+        details: { location: "गुप्तस्थानम्, कोस्टा रिका", capacity: "२१ जीवाः सीमिताः", dates: "फरवरी २४ - मार्च २, २०२६" },
         cta: "आमन्त्रणं प्रार्थयन्तु",
         visionTitle: "ओषधेः एका दृष्टिः",
         visionText: "अयम् समागमः न केवलं एकं शिबिरं अस्ति; एतत् एकस्य आह्वानस्य उत्तरं अस्ति। ओषधिः उच्च अण्डीज मध्ये स्थितां प्रज्ञां सागरस्य पवित्र, प्रवाहितऊर्जया सह योजनस्य विषयं उक्तवती। आत्मनः शरीरस्य च तीर्थयात्रा।",
