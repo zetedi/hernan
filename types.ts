@@ -219,6 +219,18 @@ export interface TranslationData {
     itinerary: ItineraryDay[];
     cta: string;
   };
+  ausangate3Day: {
+    title: string;
+    subtitle: string;
+    description: string | string[];
+    details: {
+        dates: string;
+        price: string;
+        bonus: string;
+    };
+    itinerary: ItineraryDay[];
+    cta: string;
+  };
   costaRica: {
       title: string;
       subtitle: string;

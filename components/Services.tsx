@@ -27,12 +27,12 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
           <div className="w-24 h-1 bg-pacha-leaf mx-auto"></div>
         </div>
 
-        {/* Ausangate Featured Card - Moved to Top */}
+        {/* Ausangate Featured Card - 3-Day Special */}
         <div className="relative rounded-xl overflow-hidden group shadow-2xl mb-12 border border-pacha-gold/30">
           {/* Image Background */}
           <img 
-            src={IMAGES.ausangate} 
-            alt="Ausangate" 
+            src={IMAGES.maestros} 
+            alt="Ausangate Maestros" 
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-70 transition-opacity duration-500 scale-100 group-hover:scale-105 transition-transform"
           />
@@ -52,7 +52,7 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
                 </p>
              </div>
              <Link 
-               to="/ausangate"
+               to="/ausangate-3day"
                className="bg-pacha-gold hover:bg-[#b08d48] text-pacha-stone font-bold py-4 px-10 rounded-full transition-all duration-300 whitespace-nowrap uppercase tracking-widest text-sm shadow-xl"
              >
                {t.ausangateCta.button}
@@ -64,20 +64,22 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
           {t.items.map((item, index) => {
             const Icon = icons[index % icons.length];
             
-            // Map index to service type based on constants order
+            // Map based on index assuming structure from constants
             // 0: 2 Day Retreat
-            // 1: Juchuy Qosqo (New)
-            // 2: 1 Day Ceremony
-            // 3: Costa Rica
-            // 4: Private Healing
+            // 1: Ausangate 3 Day
+            // 2: Ausangate 7 Day
+            // 3: Juchuy Qosqo
+            // 4: 1 Day Ceremony
+            // 5: Costa Rica
+            // 6: Private Healing
             
             const isRetreat2Day = index === 0;
-            const isJuchuy = index === 1;
-            const isOneDay = index === 2;
-            const isCostaRica = index === 3;
-            const isPrivate = index === 4;
-
-            const isSpecialCard = true; // All cards are clickable now
+            const isAusangate3Day = index === 1;
+            const isAusangate7Day = index === 2;
+            const isJuchuy = index === 3;
+            const isOneDay = index === 4;
+            const isCostaRica = index === 5;
+            const isPrivate = index === 6;
 
             // Base styling
             const baseClasses = "border border-pacha-leaf/30 p-6 rounded-xl transition-all duration-300 group flex flex-col relative overflow-hidden backdrop-blur-sm";
@@ -86,13 +88,15 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
             // Determine Background Image
             let bgImage = null;
             if (isRetreat2Day) bgImage = IMAGES.mayra;
+            if (isAusangate3Day) bgImage = IMAGES.maestros;
+            if (isAusangate7Day) bgImage = IMAGES.ausangate;
             if (isJuchuy) bgImage = IMAGES.juchuy;
             if (isOneDay) bgImage = IMAGES.flowers; 
             if (isPrivate) bgImage = IMAGES.private;
             if (isCostaRica) bgImage = IMAGES.costa;
 
             return (
-              <div key={index} className={`${baseClasses} ${colorClasses} ${isPrivate ? 'lg:col-span-2' : ''}`}>
+              <div key={index} className={`${baseClasses} ${colorClasses} ${isPrivate ? 'lg:col-span-3 lg:w-1/2 lg:mx-auto' : ''}`}>
                 
                 {/* Background Image for Special Cards */}
                 {bgImage && (
@@ -128,6 +132,20 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
                         {isRetreat2Day ? (
                             <Link 
                                 to="/retreat-2day"
+                                className="block w-full text-center bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white font-bold py-2 rounded-lg transition-colors border border-pacha-leaf/50 text-sm"
+                            >
+                                {ui.viewDetails}
+                            </Link>
+                        ) : isAusangate3Day ? (
+                             <Link 
+                                to="/ausangate-3day"
+                                className="block w-full text-center bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white font-bold py-2 rounded-lg transition-colors border border-pacha-leaf/50 text-sm"
+                            >
+                                {ui.viewDetails}
+                            </Link>
+                        ) : isAusangate7Day ? (
+                             <Link 
+                                to="/ausangate"
                                 className="block w-full text-center bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white font-bold py-2 rounded-lg transition-colors border border-pacha-leaf/50 text-sm"
                             >
                                 {ui.viewDetails}
@@ -191,14 +209,6 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
                     <td className="p-4 text-right text-pacha-gold font-bold">{item.price}</td>
                   </tr>
                 ))}
-                {/* Manual row for Ausangate since it's separate in the data structure */}
-                <tr className="hover:bg-white/5 transition-colors bg-pacha-gold/5">
-                    <td className="p-4 font-bold text-white">{t.ausangateCta.title.replace('Special Retreat: ', '')}</td>
-                    <td className="p-4">Ausangate & Pacchanta</td>
-                    <td className="p-4">7 Days</td>
-                    <td className="p-4">Group</td>
-                    <td className="p-4 text-right text-pacha-gold font-bold">Inquire</td>
-                </tr>
               </tbody>
             </table>
           </div>

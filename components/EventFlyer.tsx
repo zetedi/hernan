@@ -10,7 +10,7 @@ interface EventFlyerProps {
   flyerT: TranslationData['flyer'];
   contact: TranslationData['contact'];
   footer: TranslationData['footer'];
-  type: 'ausangate' | 'costaRica' | 'retreat2Day' | 'retreat1Day' | 'juchuy';
+  type: 'ausangate' | 'ausangate3Day' | 'costaRica' | 'retreat2Day' | 'retreat1Day' | 'juchuy';
 }
 
 export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, footer, type }) => {
@@ -33,12 +33,16 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
   } else if (type === 'juchuy') {
       bgImage = IMAGES.juchuy;
       locationText = "Juchuy Qosqo, Peru";
+  } else if (type === 'ausangate3Day') {
+      bgImage = IMAGES.maestros;
+      locationText = "Pacchanta, Peru";
+      dateText = t.details?.dates || "Jan 3-5, 2026";
   }
 
   // QR Code URL Generation
   // In production, this would be the actual domain. For now using window.location.origin
   const currentOrigin = window.location.origin;
-  const pagePath = type === 'juchuy' ? 'juchuy-qosqo' : type === 'costaRica' ? 'costa-rica' : type === 'retreat2Day' ? 'retreat-2day' : type === 'retreat1Day' ? 'retreat-1day' : 'ausangate';
+  const pagePath = type === 'juchuy' ? 'juchuy-qosqo' : type === 'costaRica' ? 'costa-rica' : type === 'retreat2Day' ? 'retreat-2day' : type === 'retreat1Day' ? 'retreat-1day' : type === 'ausangate3Day' ? 'ausangate-3day' : 'ausangate';
   const qrData = `${currentOrigin}/${pagePath}`;
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(qrData)}&bgcolor=255-255-255`;
 

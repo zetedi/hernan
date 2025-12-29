@@ -18,6 +18,7 @@ const Gallery = lazy(() => import('./components/Gallery').then(module => ({ defa
 const Testimonials = lazy(() => import('./components/Testimonials').then(module => ({ default: module.Testimonials })));
 const Contact = lazy(() => import('./components/Contact').then(module => ({ default: module.Contact })));
 const Ausangate = lazy(() => import('./components/Ausangate').then(module => ({ default: module.Ausangate })));
+const Ausangate3Day = lazy(() => import('./components/Ausangate3Day').then(module => ({ default: module.Ausangate3Day })));
 const Retreat2Day = lazy(() => import('./components/Retreat2Day').then(module => ({ default: module.Retreat2Day })));
 const Retreat1Day = lazy(() => import('./components/Retreat1Day').then(module => ({ default: module.Retreat1Day })));
 const CostaRica = lazy(() => import('./components/CostaRica').then(module => ({ default: module.CostaRica })));
@@ -66,13 +67,14 @@ const App: React.FC = () => {
 
   if (isFlyerRoute) {
       // Parse query param to decide which flyer to show
-      const type = searchParams.get('event') as 'ausangate' | 'costaRica' | 'retreat2Day' | 'retreat1Day' | 'juchuy' || 'ausangate';
+      const type = searchParams.get('event') as 'ausangate' | 'costaRica' | 'retreat2Day' | 'retreat1Day' | 'juchuy' | 'ausangate3Day' || 'ausangate';
       
       let flyerData;
       if (type === 'costaRica') flyerData = t.costaRica;
       else if (type === 'retreat2Day') flyerData = t.retreat2Day;
       else if (type === 'retreat1Day') flyerData = t.retreat1Day;
       else if (type === 'juchuy') flyerData = t.juchuy;
+      else if (type === 'ausangate3Day') flyerData = t.ausangate3Day;
       else flyerData = t.ausangate;
 
       return (
@@ -119,6 +121,9 @@ const App: React.FC = () => {
             <Route path="/services" element={<Services t={t.services} ui={t.ui} lang={currentLanguage} />} />
             <Route path="/ausangate" element={
                 <Ausangate t={{...t.ausangate, preparation: t.preparation} as any} ui={t.ui} lang={currentLanguage} />
+            } />
+            <Route path="/ausangate-3day" element={
+                <Ausangate3Day t={t.ausangate3Day} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
             } />
             <Route path="/costa-rica" element={
                 <CostaRica t={t.costaRica} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
