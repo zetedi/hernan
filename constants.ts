@@ -124,13 +124,13 @@ const enTranslations: TranslationData = {
             title: "New Year Ausangate (3 Days)", 
             description: "Start 2026 with the Apu. Temazcal, Rapé, and Wachuma ceremony in Pacchanta. Includes free professional photography.", 
             price: "€173",
-            details: { duration: "3 Days", location: "Pacchanta & Ausangate", groupSize: "Group" }
+            details: { duration: "3 Days", location: "Ausangate", groupSize: "Group" }
         },
         { 
             title: "Ausangate Sacred Journey (7 Days)", 
             description: "The complete immersion. 3 Wachuma ceremonies, Temazcal rituals, hiking to the lagoons, and deep healing work.", 
             price: "Inquire",
-            details: { duration: "7 Days", location: "Pacchanta & Ausangate", groupSize: "Group" }
+            details: { duration: "7 Days", location: "Ausangate", groupSize: "Group" }
         },
         { 
             title: "Juchuy Qosqo Immersion", 
@@ -419,7 +419,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         subtitle: "Guardián del Cactus Sagrado",
         description: [
             "<strong>Hernan Colque</strong> es nativo Quechua y un devoto facilitador de <strong>ceremonias de Wachuma (San Pedro)</strong>, profundamente arraigado en las tradiciones sagradas de los Andes. Nacido por encima de los 5000m en <strong>Viacha</strong>, una comunidad de altura de <strong>Pisac</strong>, Hernan lleva un linaje de sanación medicinal que se remonta a tiempos pre-incas.",
-            "Según la tradición ancestral, solo un hijo por generación puede heredar este camino, y debe elegirlo voluntariamente. La sabiduría pasó de su abuelo Carmen a su padre Beninho. Entre siete hermanos, Hernan eligió la medicina a una edad muy temprana, convirtiéndose en el único portador de este antiguo legado y su profunda conexión con la <strong>Pachamama (Madre Tierra)</strong>.",
+            "Según la tradición ancestral, solo un hijo por generación puede heredar este camino, and they must choose it voluntarily. La sabiduría pasó de su abuelo Carmen a su padre Beninho. Entre siete hermanos, Hernan eligió la medicina a una edad muy temprana, convirtiéndose en el único portador de este antiguo legado y su profunda conexión con la <strong>Pachamama (Madre Tierra)</strong>.",
             "<strong>El Linaje Ccana de Espinar.</strong> Hernan proviene de la provincia de <strong>Espinar</strong> y su linaje es <strong>Ccana (K'ana)</strong>. La cultura K'ana fue una sociedad pre-inca que formó una alianza estratégica pacífica con el Imperio Inca en lugar de una conquista típica. Al integrarse pacíficamente durante el reinado de Pachacutec, se convirtieron en aliados militares vitales—guerreros de élite <strong>'Sinchis'</strong> que ayudaron a derrotar a los Chancas. Debido a esta reciprocidad, se les concedieron tierras en el Collasuyo y su antigua capital, Kanamarca, fue reconstruida por los Incas.",
             "<strong>El Espíritu del Wachuma.</strong> Se dice que el espíritu del Wachuma conectó primero a la gente de esta región y lo guardaron en su corazón porque la planta les dijo que desaparecería de la tierra, lo cual sucedió no hace mucho. Hernan lleva adelante esta memoria y espíritu.",
             "<strong>Pisac y Viacha.</strong> Estamos ubicados en <strong>Pisac</strong>, un pueblo vibrante en el Valle Sagrado, donde organizamos ceremonias y ofrecemos alojamiento tranquilo en el <strong>Hotel Wayna Wasi</strong>. Para una inmersión más profunda, nuestros retiros de varios días se llevan a cabo en <strong>Viacha</strong>, una comunidad serena en lo alto de Pisac."
@@ -438,13 +438,13 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
                 title: "Ausangate Año Nuevo (3 Días)", 
                 description: "Comienza el 2026 con el Apu. Temazcal, Rapé y ceremonia de Wachuma en Pacchanta. Incluye fotografía profesional gratuita.", 
                 price: "€173",
-                details: { duration: "3 Días", location: "Pacchanta y Ausangate", groupSize: "Grupo" }
+                details: { duration: "3 Días", location: "Ausangate", groupSize: "Grupo" }
             },
             { 
                 title: "Viaje Sagrado Ausangate (7 Días)", 
                 description: "La inmersión completa. 3 ceremonias de Wachuma, rituales de Temazcal, caminata a las lagunas y trabajo de sanación profunda.", 
                 price: "Consultar",
-                details: { duration: "7 Días", location: "Pacchanta y Ausangate", groupSize: "Grupo" }
+                details: { duration: "7 Días", location: "Ausangate", groupSize: "Grupo" }
             },
             { 
                 title: "Inmersión Juchuy Qosqo", 
@@ -560,7 +560,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             items: [
                 { label: "Dieta Vegetariana", text: "Evita la carne y los productos animales, ya que pueden pesar en el sistema digestivo." },
                 { label: "Sin Azúcares Añadidos", text: "Abstente de consumir azúcares procesados para mantener tu energía equilibrada." },
-                { label: "Limitar Estimulantes", text: "Reduce o elimina la cafeína, el alcohol y otros estimulantes para ayudar a despejar tu mente y cuerpo." },
+                { label: "Limitar Estimulantes", text: "Reduce o elimina la cafeína, el alcohol, y otros estimulantes para ayudar a despejar tu mente y cuerpo." },
                 { label: "Evitar Comidas Pesadas", text: "Elimina los alimentos fritos y los lácteos para un proceso digestivo más fácil." },
                 { label: "Hidratación", text: "Bebe mucha agua para ayudar con la claridad y el bienestar general." },
                 { label: "Intenciones", text: "Más allá de la dieta, tómate un tiempo cada día para establecer intenciones para el retiro. Ya sea a través del diario, la meditación o la reflexión tranquila, sintoniza con lo que esperas ganar o liberar a través de este viaje." }
@@ -582,19 +582,19 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             description: "Para mejorar tu viaje, considera lo siguiente:",
             items: [
                 { label: "Respetar el Tiempo de Silencio", text: "Usa períodos de silencio para reflexionar y procesar tu experiencia." },
-                { label: "Respiración y Meditación", text: "Los ejercicios suaves de respiración o la meditación pueden ayudarte a mantenerte conectado y centrado." },
-                { label: "Desintoxicación Digital", text: "Desconéctate de teléfonos y otros dispositivos electrónicos, permitiéndote estar completamente presente." },
-                { label: "Conectar con la Naturaleza", text: "Si es posible, pasa tiempo en la naturaleza cada día, dejando que apoye tu viaje interior." }
+                { label: "Respiración y Meditación", text: "Los ejercicios de respiración suave o la meditación pueden ayudar a enraizarte y mantenerte centrado." },
+                { label: "Desintoxicación Digital", text: "Desconéctate de teléfonos y otros dispositivos electrónicos para estar completamente presente." },
+                { label: "Conectar con la Naturaleza", text: "Si es posible, pasa tiempo en la naturaleza cada día." }
             ]
         },
-        closing: "Al prepararte conscientemente y mantenerte abierto, crearás espacio para que la medicina de San Pedro te guíe en un camino profundo de descubrimiento. Esperamos compartir esta experiencia especial contigo.",
+        closing: "Al prepararte conscientemente y mantenerte abierto, crearás espacio para que la medicina San Pedro te guíe en un profundo camino de descubrimiento. Esperamos compartir esta experiencia especial contigo.",
         risks: {
-            title: "Aviso Importante: Comprendiendo los Riesgos y Responsabilidades",
-            intro: "Si bien este retiro está diseñado para ofrecer una experiencia segura y transformadora, es importante reconocer que la participación en una ceremonia de San Pedro implica riesgos tanto físicos como psicológicos. Por favor, revisa las siguientes consideraciones cuidadosamente para asegurar una participación informada:",
+            title: "Aviso Importante: Riesgos y Responsabilidades",
+            intro: "Aunque este retiro está diseñado para ofrecer una experiencia segura y transformadora, es importante reconocer que la participación en una ceremonia de San Pedro implica riesgos tanto físicos como psicológicos. Por favor, revisa cuidadosamente las siguientes consideraciones para asegurar una participación informada:",
             sections: [
-                { title: "Divulgación Médica y de Salud", items: [{ label: "Condiciones Médicas", text: "Los participantes deben informar a los facilitadores de cualquier condición médica, incluidos problemas cardíacos, condiciones de salud mental o cualquier historial de convulsiones. Algunas condiciones preexistentes pueden aumentar los riesgos asociados con la experiencia de San Pedro." }, { label: "Medicamentos", text: "Ciertos medicamentos, incluidos antidepresivos, antipsicóticos y algunos medicamentos de venta libre, pueden tener interacciones adversas con San Pedro. Por favor, revela cualquier medicamento a los facilitadores mucho antes del retiro." }, { label: "Sensibilidad Física", text: "San Pedro puede causar efectos físicos temporales, como náuseas, vómitos y aumento de la frecuencia cardíaca. Los participantes deben estar preparados física y mentalmente para estos efectos." }] },
-                { title: "Riesgos Psicológicos y Responsabilidad Emocional", items: [{ label: "Experiencias Intensas", text: "San Pedro puede sacar a la superficie emociones profundas y traumas pasados, que pueden ser difíciles de procesar. Se anima a los participantes a participar en la reflexión personal o buscar orientación profesional de antemano si tienen un historial de trauma." }, { label: "Apoyo de Integración", text: "Después del retiro, los participantes pueden beneficiarse de apoyo adicional para integrar sus experiencias. Se aconseja planificar tiempo, apoyo y recursos para procesar cualquier idea o emoción que surja." }] },
-                { title: "Responsabilidad Personal", items: [{ label: "Consentimiento Informado", text: "Al participar en este retiro, reconoces que te involucras voluntariamente en esta experiencia. Cualquier idea, desafío o transformación personal que experimentes es tu propia responsabilidad." }, { label: "Precauciones de Seguridad", text: "Sigue todas las pautas de seguridad proporcionadas por los facilitadores, incluidas las restricciones dietéticas, el comportamiento sugerido durante las ceremonias y las limitaciones en las actividades físicas." }] }
+                { title: "Declaración de Salud y Médica", items: [{ label: "Condiciones Médicas", text: "Los participantes deben informar a los facilitadores sobre cualquier condición médica, incluyendo problemas cardíacos, condiciones de salud mental o historial de convulsiones. Algunas condiciones preexistentes pueden aumentar los riesgos asociados con la experiencia de San Pedro." }, { label: "Medicamentos", text: "Ciertos medicamentos, incluyendo antidepresivos, antipsicóticos y algunos medicamentos de venta libre, pueden tener interacciones adversas con San Pedro. Por favor, informa sobre cualquier medicamento a los facilitadores mucho antes del retiro." }, { label: "Sensibilidad Física", text: "San Pedro puede causar efectos físicos temporales, como náuseas, vómitos y aumento del ritmo cardíaco. Los participantes deben estar física y mentalmente preparados para estos efectos." }] },
+                { title: "Riesgos Psicológicos y Responsabilidad Emocional", items: [{ label: "Experiencias Intensas", text: "San Pedro puede traer a la superficie emociones profundas y traumas pasados, que pueden ser difíciles de procesar. Se anima a los participantes a realizar una reflexión personal o buscar orientación profesional de antemano si tienen un historial de trauma." }, { label: "Apoyo de Integración", text: "Después del retiro, los participantes pueden beneficiarse de apoyo adicional para integrar sus experiencias. Se aconseja planificar tiempo, apoyo y recursos para procesar cualquier idea o emoción que surja." }] },
+                { title: "Responsabilidad Personal", items: [{ label: "Consentimiento Informado", text: "Al participar en este retiro, reconoces que participas voluntariamente en esta experiencia. Cualquier idea, desafío o transformación personal que experimentes es tu propia responsabilidad." }, { label: "Precauciones de Seguridad", text: "Sigue todas las pautas de seguridad proporcionadas por los facilitadores, incluyendo restricciones dietéticas, comportamiento sugerido durante las ceremonias y limitaciones en actividades físicas." }] }
             ]
         }
       },
@@ -605,60 +605,60 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             {
                 title: "Qué esperar en un retiro de Wachuma",
                 content: [
-                    "Planificar un retiro de Wachuma puede sentirse como prepararse para una peregrinación del alma. Ya seas nuevo en la medicina de plantas o un buscador experimentado, cada ceremonia de Wachuma ofrece una experiencia única y transformadora. Esto es lo que puedes esperar cuando te embarcas en un retiro en el Valle Sagrado de Perú, donde el espíritu de los Andes y la Pachamama misma están siempre presentes.",
-                    "<strong>Un entorno sagrado para la sanación profunda</strong><br>El Valle Sagrado cerca de Cusco es el telón de fondo perfecto para tu viaje espiritual. Ubicado entre las montañas andinas, nuestro espacio de retiro está rodeado de paisajes impresionantes que amplifican el poder del Wachuma. Desde el momento en que llegas, sentirás la profunda conexión entre la Tierra y el cosmos—una conexión que es central en la cosmología andina y la tradición del Wachuma.",
-                    "<strong>Un día típico de ceremonia</strong><br>Tu retiro comenzará con una suave introducción al Wachuma. Bajo la guía de Hernán Colque, las ceremonias se desarrollan en un espacio seguro y de apoyo donde se te animará a escuchar tu voz interior. Wachuma ayuda a abrir el corazón, proporcionando claridad y una sensación de paz mientras viajas a lo largo del día. El retiro a menudo incluye tiempo de tranquilidad en la naturaleza, intercambio grupal y tiempo para la reflexión, haciendo que la experiencia sea holística y curativa.",
-                    "<strong>Integrando tu experiencia Wachuma</strong><br>Las ideas obtenidas del Wachuma pueden ser profundas, y es importante tomarse el tiempo para integrar estas lecciones en tu vida diaria. Hernán y su equipo están allí para ayudarte a procesar tus experiencias, ya sea a través de discusiones grupales o apoyo individual. Muchos participantes dejan el retiro con un renovado sentido de propósito y una conexión profunda consigo mismos y con el mundo que los rodea."
+                    "Planear un retiro de Wachuma puede sentirse como prepararse para una peregrinación del alma. Ya sea que seas nuevo en la medicina de plantas o un buscador experimentado, cada ceremonia de Wachuma ofrece una experiencia única y transformadora. Esto es lo que puedes esperar cuando te embarcas en un retiro en el Valle Sagrado de Perú, donde el espíritu de los Andes y la Pachamama misma están siempre presentes.",
+                    "<strong>Un entorno sagrado para una sanación profunda</strong><br>El Valle Sagrado cerca de Cusco es el telón de fondo perfecto para tu viaje espiritual. Ubicado entre las montañas andinas, nuestro espacio de retiro está rodeado de impresionantes paisajes que amplifican el poder de Wachuma. Desde el momento en que llegues, sentirás la profunda conexión entre la Tierra y el cosmos, una conexión que es fundamental para la cosmología andina y la tradición de Wachuma.",
+                    "<strong>Un día típico de ceremonia de Wachuma</strong><br>Tu retiro comenzará con una suave introducción a Wachuma. Bajo la guía de Hernan Colque, las ceremonias se desarrollan en un espacio seguro y de apoyo donde se te animará a escuchar tu voz interior. Wachuma ayuda a abrir tu corazón, brindando claridad y una sensación de paz mientras viajas a través del día. El retiro a menudo incluye tiempo tranquilo en la naturaleza, intercambio grupal y tiempo para la reflexión, haciendo que la experiencia sea holística y sanadora.",
+                    "<strong>Integrando tu experiencia Wachuma</strong><br>Las ideas obtenidas de Wachuma pueden ser profundas, y es importante tomarse el tiempo para integrar estas lecciones en tu vida diaria. Hernan y su equipo están allí para ayudarte a procesar tus experiencias, ya sea a través de discusiones grupales o apoyo individual. Muchos participantes dejan el retiro con un renovado sentido de propósito y una profunda conexión consigo mismos y con el mundo que los rodea."
                 ]
             },
             {
-                title: "Descubre el poder curativo del Wachuma",
+                title: "Descubre el poder curativo de Wachuma",
                 content: [
-                    "<strong>¿Qué es el cactus San Pedro?</strong><br>El cactus San Pedro, también conocido como Wachuma, es una planta medicinal antigua nativa de las tierras altas de los Andes, principalmente en Perú. Este cactus verde columnar alto, científicamente llamado <em>Echinopsis pachanoi</em>, prospera en grandes altitudes, a menudo entre 2,000 y 3,000 metros. Es fácilmente reconocido por sus costillas pronunciadas, espinas cortas y grandes flores blancas que florecen por la noche.",
-                    "<strong>Orígenes e Historia</strong><br>San Pedro has been used for thousands of years by indigenous Andean peoples, especially the Quechua and Aymara communities. Deeply rooted in shamanic tradition, it serves as a bridge between the physical and spiritual worlds. Its name, San Pedro, refers to Saint Peter, the guardian of the gates of heaven, symbolizing access to spiritual dimensions.",
-                    "<strong>El poder de la Mescalina: Conectando con la Armonía Universal</strong><br>Uno de los compuestos activos clave en el cactus San Pedro es la mescalina, un alcaloide psicoactivo natural. La mescalina es responsable de las profundas experiencias visionarias e introspectivas asociadas con Wachuma. A diferencia de las sustancias sintéticas, la mescalina de San Pedro guía suavemente a las personas hacia un estado alterado de conciencia, fomentando un sentido de unidad y armonía con el mundo que las rodea.",
+                    "<strong>¿Qué es el cactus San Pedro?</strong><br>El cactus San Pedro, también conocido como Wachuma, es una antigua planta medicinal nativa de las tierras altas de los Andes, principalmente en Perú. Este cactus verde columnar alto, científicamente llamado <em>Echinopsis pachanoi</em>, prospera en altitudes elevadas, a menudo entre 2,000 y 3,000 metros. Se reconoce fácilmente por sus costillas pronunciadas, espinas cortas y grandes flores blancas que florecen por la noche.",
+                    "<strong>Orígenes e Historia</strong><br>San Pedro ha sido utilizado durante miles de años por los pueblos indígenas andinos, especialmente las comunidades Quechua y Aymara. Profundamente arraigado en la tradición chamánica, sirve como un puente entre el mundo físico y espiritual. Su nombre, San Pedro, se refiere a San Pedro, el guardián de las puertas del cielo, simbolizando el acceso a las dimensiones espirituales.",
+                    "<strong>El Poder de la Mescalina: Conectando con la Armonía Universal</strong><br>Uno de los compuestos activos clave en el cactus San Pedro es la mescalina, un alcaloide psicoactivo natural. La mescalina es responsable de las profundas experiencias visionarias e introspectivas asociadas con Wachuma. A diferencia de las sustancias sintéticas, la mescalina de San Pedro guía suavemente a las personas a un estado alterado de conciencia, fomentando una sensación de unidad y armonía con el mundo que les rodea.",
                     "Las ceremonias de Wachuma a menudo llevan a los participantes a sentirse profundamente conectados con la Pachamama (Madre Tierra), experimentando el pulso de la naturaleza y el ritmo de la vida misma. Esta conexión ayuda a disolver los límites entre el yo y el universo, permitiendo profundas ideas y claridad espiritual. Muchos de los que se embarcan en este viaje lo describen como una experiencia de apertura del corazón, donde el amor y la compasión fluyen naturalmente.",
-                    "<strong>Beneficios Espirituales y Terapéuticos</strong><br>San Pedro es famoso por sus propiedades espirituales y curativas. Sus efectos son generalmente más suaves y graduales en comparación con otras medicinas vegetales como la Ayahuasca. Esto lo hace accesible para aquellos que buscan sanación emocional y claridad interior sin la intensidad de despertares más abruptos.<br><br><strong>Beneficios Espirituales:</strong><br>• Despertar Espiritual: Facilita la reconexión con el verdadero yo y el mundo natural.<br>• Apertura del Corazón: Promueve la compasión, el perdón y la profunda liberación emocional.<br>• Claridad Mental: Ayuda a ganar perspectiva sobre los desafíos de la vida y fomenta la aceptación.<br><br><strong>Beneficios Terapéuticos:</strong><br>• Liberación Emocional: Ayuda a procesar traumas pasados y emociones no resueltas.<br>• Calma y Serenidad: Reduce la ansiedad y cultiva la paz interior.<br>• Conexión con la Naturaleza: Fortalece el vínculo con la Tierra y los elementos."
+                    "<strong>Beneficios Espirituales y Terapéuticos</strong><br>San Pedro es famoso por sus propiedades espirituales y curativas. Sus efectos son generalmente más suaves y graduales en comparación con otras medicinas vegetales como la Ayahuasca. Esto lo hace accesible para aquellos que buscan sanación emocional y claridad interioruras sin la intensidad de despertares más abruptos.<br><br><strong>Beneficios Espirituales:</strong><br>• Despertar Espiritual: Facilita la reconexión con el verdadero yo y el mundo natural.<br>• Apertura del Corazón: Promueve la compasión, el perdón y la profunda liberación emocional.<br>• Claridad Mental: Ayuda a obtener perspectiva sobre los desafíos de la vida y fomenta la aceptación.<br><br><strong>Beneficios Terapéuticos:</strong><br>• Liberación Emocional: Ayuda a procesar traumas pasados y emociones no resueltas.<br>• Calma y Serenidad: Reduce la ansiedad y cultiva la paz interior.<br>• Conexión con la Naturaleza: Fortalece el vínculo con la Tierra y los elementos."
                 ]
             }
         ],
         questionsTitle: "Preguntas Frecuentes",
         questions: [
-            { question: "¿Qué es una ceremonia de San Pedro?", answer: "San Pedro (Huachuma) es una medicina vegetal sagrada utilizada para la curación, la visión y la conexión espiritual profunda. Nuestras ceremonias son guiadas por facilitadores experimentados para garantizar una experiencia segura y transformadora." },
-            { question: "¿Es el retiro adecuado para principiantes?", answer: "Sí, nuestros retiros están abiertos a todos, ya sea que tengas experiencia previa con la medicina de plantas o sea tu primera vez. Proporcionamos orientación completa y apoyo durante todo el proceso." },
-            { question: "¿Qué es Kinsacocha y por qué es especial?", answer: "Kinsacocha, ubicada cerca de Pisac, es una zona tranquila rodeada de lagos sagrados. Es un entorno ideal para las ceremonias de Huachuma, ofreciendo una profunda conexión con la naturaleza y la espiritualidad andina." },
-            { question: "¿Qué debo traer al retiro o ceremonia?", answer: "Se proporcionará una lista detallada, pero lo esencial incluye ropa cómoda, zapatos para caminar, artículos personales y un corazón abierto para la transformación." },
-            { question: "¿Qué idioma se habla durante el retiro?", answer: "Hernán habla quechua y español. Si no hablas estos idiomas, habrá un traductor francés-español disponible para ayudarte durante todo el retiro." },
-            { question: "¿Es seguro el retiro?", answer: "La seguridad es nuestra prioridad. Nuestros retiros se llevan a cabo en un entorno controlado y de apoyo con facilitadores experimentados para guiarte en cada paso del viaje." },
+            { question: "¿Qué es una ceremonia de San Pedro?", answer: "San Pedro (Huachuma) es una medicina vegetal sagrada utilizada para la sanación, la visión y la profunda conexión espiritual. Nuestras ceremonias son guiadas por facilitadores experimentados para garantizar una experiencia segura y transformadora." },
+            { question: "¿El retiro es adecuado para principiantes?", answer: "Sí, nuestros retiros están abiertos a todos, ya sea que tengas experiencia previa con medicina vegetal o seas un participante por primera vez. Brindamos orientación y apoyo completos durante todo el proceso." },
+            { question: "¿Qué es Kinsacocha y por qué es especial?", answer: "Kinsacocha, ubicada cerca de Pisac, es un área tranquila rodeada de lagos sagrados. Es un entorno ideal para las ceremonias de Huachuma, ofreciendo una profunda conexión con la naturaleza y la espiritualidad andina." },
+            { question: "¿Qué debo llevar al retiro o ceremonia?", answer: "Se proporcionará una lista detallada, pero lo esencial incluye ropa cómoda, zapatos para caminar, artículos personales y un corazón abierto para la transformación." },
+            { question: "¿Qué idioma se habla durante el retiro?", answer: "Hernán habla Quechua y Español. Si no hablas estos idiomas, habrá un traductor francés-español disponible para ayudarte durante todo el retiro." },
+            { question: "¿Es seguro el retiro?", answer: "La seguridad es nuestra principal prioridad. Nuestros retiros se llevan a cabo en un entorno controlado y de apoyo con facilitadores experimentados para guiarte en cada paso del viaje." },
             { question: "¿Cuál es su política de reembolso o cancelación?", answer: "Los depósitos son reembolsables hasta una fecha específica. Fomentamos la comunicación temprana si tus planes cambian para garantizar claridad y apoyo." }
         ]
       },
       testimonials: { title: "Voces del Corazón", items: [{ 
           name: "Zoltan E.", 
           location: "Hungría", 
-          text: `Es una experiencia verdaderamente auténtica de conexión con el espíritu de la tierra y el poder curativo de la medicina de las plantas. Ha sido una conexión profunda con la sabiduría antigua de los guías espirituales Incas y Pre-Incas a través del Maestro Hernan. Estoy muy agradecido por el viaje.`, 
+          text: `Es una experiencia verdaderamente auténtica de conexión con el espíritu de la tierra y el poder curativo de la medicina vegetal. Ha sido una conexión profunda con la sabiduría antigua de los guías espirituales Incas y pre-Incas a través del Maestro Hernan. Estoy muy agradecido por el viaje.`, 
           image: IMAGES.zoltan 
       }, {
         name: "Stephanie K.",
         location: "Google Review",
-        text: `Me siento muy afortunada de haber participado en una ceremonia de Wachuma de día completo con Don Hernan. Viajamos hacia las montañas, a través de un pueblo local, para comulgar con la naturaleza, el espíritu y la energía de la reciprocidad. Su guía es sincera y su medicina es el mejor Wachuma I’ve imbibed. Regresamos a su casa para terminar la ceremonia con una deliciosa sopa andina casera y un fuego en el jardín bajo la luna llena y las estrellas. Recomiendo encarecidamente visitar Wayna Wasi y trabajar con Don Hernan. 🫶🏼✨🌵🙏🏼⛰️`,
+        text: `Me siento muy afortunada de haber participado en una ceremonia de Wachuma de día completo con Don Hernan. Viajamos a las montañas, a través de un pueblo local, para comulgar con la naturaleza, el espíritu y la energía de la reciprocidad. Su guía es sincera y su medicina es la mejor Wachuma que he bebido. Regresamos a su casa para terminar la ceremonia con una deliciosa sopa andina casera y un fuego en el jardín bajo la luna llena y las estrellas. Recomiendo encarecidamente visitar Wayna Wasi y trabajar con Don Hernan.`,
         image: IMAGES.kittel
     }] },
     contact: {
-        title: "Contáctanos",
+        title: "Contacto",
         form: { name: "Tu Nombre", email: "Tu Email", message: "Tu Mensaje", submit: "Enviar Mensaje" },
         info: "Estamos ubicados en el corazón del Valle Sagrado, cerca de Calca, Cusco."
     },
     footer: {
-      description: "Experimenta el poder transformador de Wachuma, la medicina sagrada de las plantas andinas conocida como San Pedro. Únete a Hernan en ceremonias guiadas que te ayudarán a reconectar con tu ser interior, sanar profundamente y despertar tu espíritu cerca de Cusco, en el corazón del Valle Sagrado de Perú.",
-      columns: {
-        links: { title: "Enlaces", items: [{ label: "Sobre nosotros", href: "/about" }, { label: "La Comunidad", href: "/about" }, { label: "Contáctanos", href: "/contact" }] },
-        reviews: { title: "Reseñas de Google", rating: "4,9/5" },
-        follow: { title: "Síguenos", facebook: "https://www.facebook.com/hernan.wachuma", instagram: "https://www.instagram.com/hernan_wachuma" },
-        contact: { title: "Contáctanos", email: "hernan.wachuma@gmail.com", phone: "+51 928 383 821" },
-        find: { title: "Encuéntranos", address: "Wayna Wasi, Pisac, Perú" }
-      },
-      rights: "Todos los derechos reservados."
+        description: "Experimenta el poder transformador de Wachuma, la medicina vegetal sagrada andina conocida como San Pedro. Únete a Hernan en ceremonias guiadas que te ayudarán a reconectar con tu ser interior, sanar profundamente y despertar tu espíritu cerca de Cusco, en el corazón del Valle Sagrado de Perú.",
+        columns: {
+            links: { title: "Enlaces", items: [{label: "Sobre Nosotros", href: "/about"}, {label: "La Comunidad", href: "/about"}, {label: "Contacto", href: "/contact"}] },
+            reviews: { title: "Reseñas de Google", rating: "4,9/5" },
+            follow: { title: "Síguenos", facebook: enTranslations.footer.columns.follow.facebook, instagram: enTranslations.footer.columns.follow.instagram },
+            contact: { title: "Contacto", email: enTranslations.footer.columns.contact.email, phone: enTranslations.footer.columns.contact.phone },
+            find: { title: "Encuéntranos", address: "Wayna Wasi, Pisac, Perú" }
+        },
+        rights: "Todos los derechos reservados."
     }
   },
 
@@ -666,198 +666,219 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   [Language.HU]: {
       ...enTranslations,
       ui: {
-        viewDetails: "Részletek Megtekintése",
+        viewDetails: "Részletek megtekintése",
         inquire: "Érdeklődés",
         contribution: "Hozzájárulás",
-        bookRetreat: "Elvonulás Foglalása",
-        bookCeremony: "Szertartás Foglalása",
+        bookRetreat: "Foglalás",
+        bookCeremony: "Szertartás foglalása",
         accommodation: "Szállás",
         note: "Megjegyzés",
-        eventDetails: "Esemény Részletei",
+        eventDetails: "Esemény részletei",
         location: "Helyszín",
         capacity: "Kapacitás",
         theme: "Téma",
         email: "Email",
         whatsapp: "WhatsApp",
-        connectWithUs: "Lépj Kapcsolatba Velünk",
+        connectWithUs: "Kapcsolat",
         featuredExperience: "Kiemelt Élmény",
-        viewFlyer: "Esemény Szórólap",
+        viewFlyer: "Szórólap megtekintése",
         duration: "Időtartam",
         service: "Szolgáltatás"
       },
       flyer: {
         highlights: "Kiemelt Élmények",
-        scan: "Részletekért Szkenneld",
-        reserve: "Foglald le a Helyed",
-        limited: "Korlátozott férőhelyek",
+        scan: "Részletek szkennelése",
+        reserve: "Helyfoglalás",
+        limited: "Korlátozott helyek",
         flexibleDates: "Rugalmas Dátumok",
-        print: "Nyomtatás / PDF Mentése"
+        print: "Nyomtatás / Mentés PDF-ként"
       },
-      nav: { home: "Főoldal", about: "A Család", services: "Szertartások", gallery: "Galéria", contact: "Kapcsolat", faq: "Segítség / GYIK" },
-      services: {
-          title: "Ajánlataink",
-          items: [
-            { 
-                title: "2 Napos Elvonulás", 
-                description: "Mély elmélyülés a Wayna Wasi-ban és Kinsacochában. Alapdíj $173 (1 fő). További személy +$70. Szállás +$20/fő. Max 10 fő.", 
-                price: "$173+",
-                details: { duration: "2 Nap", location: "Pisac és Kinsacocha", groupSize: "Max 10" }
-            },
-            { 
-                title: "Újévi Ausangate (3 Nap)", 
-                description: "Kezdd a 2026-os évet az Apuval. Temazcal, Rapé és Wachuma szertartás Pacchantában. Ingyenes professzionális fotózással.", 
-                price: "€173",
-                details: { duration: "3 Nap", location: "Pacchanta és Ausangate", groupSize: "Csoport" }
-            },
-            { 
-                title: "Ausangate Szent Utazás (7 Nap)", 
-                description: "A teljes elmélyülés. 3 Wachuma szertartás, Temazcal rituálék, túrázás a lagúnákhoz és mély gyógyító munka.", 
-                price: "Érdeklődj",
-                details: { duration: "7 Nap", location: "Pacchanta és Ausangate", groupSize: "Csoport" }
-            },
-            { 
-                title: "Juchuy Qosqo Elmélyülés", 
-                description: "2 nap a 'Kis Cusco' romjainál. Szállás helyi családnál, közös hagyományos főzés és mély kapcsolódás.", 
-                price: "$200+",
-                details: { duration: "2 Nap", location: "Juchuy Qosqo", groupSize: "Min 2" }
-            },
-            { 
-                title: "1 Napos Szertartás", 
-                description: "Szent utazás minimum 2 fő részére. Tapasztald meg a gyógyítást különböző szent helyeken, mint romok, lagúnák vagy hegyek a Szent Völgyben.", 
-                price: "$250",
-                details: { duration: "1 Nap", location: "Szent Völgy", groupSize: "Min 2" }
-            },
-            { 
-                title: "Costa Rica-i Zarándoklat", 
-                description: "Szent utazás, amely összeköti az Andokat és az Óceánt egy titkos Costa Rica-i helyszínen. 21 résztvevőre korlátozva.", 
-                price: "Érdeklődj",
-                details: { duration: "7 Nap", location: "Costa Rica", groupSize: "Max 21" }
-            },
-            { 
-                title: "Privát Gyógyítás", 
-                description: "Személyre szabott egyéni ülések a spirituális és érzelmi igényeidhez igazítva. Mély blokkok oldása.", 
-                price: "Érdeklődj",
-                details: { duration: "Változó", location: "Wayna Wasi", groupSize: "1 Fő" }
-            }
-          ],
-          ausangateCta: { title: "Különleges Újév: Ausangate 3 Nap", description: "Kezdd az évet egy különleges Wachuma utazással az Ausangate-hez. Ingyenes professzionális fotózással.", button: "3 Napos Utazás Megtekintése" } 
+      nav: { home: "Kezdőlap", about: "A Család", services: "Szertartások", gallery: "Galéria", contact: "Kapcsolat", faq: "GYIK" },
+      hero: {
+        title: "Az Andok Szent Medicinája",
+        subtitle: "Kapcsolódj újra Pachamamával a hagyományos Wachuma szertartásokon keresztül a Szent Völgyben.",
+        cta: "Szertartás Foglalása",
+        retreatTeaser: { label: "Szent Elmélyülés", title: "2 Napos Elvonulás", location: "Pisac & Kinsacocha" },
+        ausangateTeaser: { label: "Újévi Különlegesség", title: "Ausangate 3 Napos", date: "2026. Jan 3-5." },
+        costaRicaTeaser: { label: "Különleges Esemény", title: "Costa Rica Zarándoklat", date: "2026. Feb 24 - Már 2." }
       },
-      hero: { title: "Az Andok Szent Gyógyító Ereje", subtitle: "Kapcsolódj újra Pachamamával a hagyományos Wachuma szertartásokon keresztül a Szent Völgyben.", cta: "Szertartás Foglalása", retreatTeaser: { label: "Szent Elmélyülés", title: "2 Napos Elvonulás", location: "Pisac és Kinsacocha" }, ausangateTeaser: { label: "Újévi Különleges", title: "Ausangate 3 Nap", date: "2026. Jan 3-5." }, costaRicaTeaser: { label: "Különleges Esemény", title: "Costa Rica-i Zarándoklat", date: "2026. Feb 24 - Már 2." } },
       benefits: {
         title: "A Wachuma Ereje",
         subtitle: "Miért utazunk a Szent Kaktusszal",
         items: [
-            { title: "Érzelmi Gyógyulás", description: "A múltbéli traumák és a testben tárolt érzelmi blokkok elengedése, megbocsátás és béke megtalálása." },
-            { title: "Kapcsolat a Természettel", description: "Tapasztald meg a mély egységet a Földdel, az elemekkel és az Andok élő szellemével." },
-            { title: "Tisztánlátás és Vízió", description: "Csendesítsd el az elmét, hogy útmutatást, célt és megújult perspektívát kaphass életed útjáról." }
+          { title: "Érzelmi Gyógyulás", description: "Múltbeli traumák és érzelmi blokkok elengedése, megbocsátás és béke megtalálása." },
+          { title: "Kapcsolat a Természettel", description: "Tapasztald meg a mély egységet a Földdel, az elemekkel és az Andok élő szellemével." },
+          { title: "Tisztánlátás és Vízió", description: "Csendesítsd el az elmét, hogy útmutatást, célt és megújult perspektívát kaphass életutadhoz." }
         ]
       },
       about: {
-        title: "Ismerd meg Hernant",
+        title: "Találkozz Hernannal",
         subtitle: "A Szent Kaktusz Őrzője",
         description: [
-            "<strong>Hernan Colque</strong> kecsua őslakos és a <strong>Wachuma (San Pedro) szertartások</strong> elkötelezett vezetője, aki mélyen gyökerezik az Andok szent hagyományaiban. 5000 méter felett született <strong>Viachában</strong>, <strong>Pisac</strong> egyik magaslati közösségében. Hernan olyan gyógyító vérvonalat hordoz, amely az inkák előtti időkig nyúlik vissza.",
-            "Az ősi hagyomány szerint generációnként csak egy gyermek örökölheti ezt az utat, és azt önként kell választania. A bölcsesség nagyapjától, Carmentől szállt apjára, Beninhóra. Hét testvére közül Hernan választotta a gyógyítást nagyon fiatalon, így vált ennek az ősi örökségnek és a <strong>Pachamamával (Földanya)</strong> való mély kapcsolatnak az egyedüli hordozójává.",
-            "<strong>A Ccana Vérvonal Espinarból.</strong> Hernan <strong>Espinar tartományból</strong> származik, vérvonala pedig <strong>Ccana (K'ana)</strong>. A K'ana kultúra egy inka előtti társadalom volt, amely egyedülálló, békés stratégiai szövetséget kötött az Inka Birodalommal a tipikus hódítás helyett. Mivel békésen integrálódtak Pachacutec uralkodása alatt, létfontosságú katonai szövetségesekké váltak – elit <strong>'Sinchis'</strong> harcosokká, akik segítettek legyőzni a Chancákat. Ennek a kölcsönösségnek köszönhetően földeket kaptak Collasuyóban, és ősi fővárosukat, Kanamarcát az inkák újjáépítették.",
-            "<strong>A Wachuma Szelleme.</strong> Azt mondják, hogy a Wachuma szelleme először e régió embereit kötötte össze, és ők a szívükben őrizték, mert a növény azt mondta nekik, hogy el fog tűnni a földről, ami nem is olyan régen meg is történt. Hernan ezt az emléket és szellemet viszi tovább.",
-            "<strong>Pisac és Viacha.</strong> Székhelyünk <strong>Pisacban</strong>, a Szent Völgy egyik nyüzsgő városában található, ahol szertartásokat tartunk és békés szállást kínálunk a <strong>Wayna Wasi Hotelben</strong>. A mélyebb elmélyülés érdekében többnapos elvonulásainkat <strong>Viachában</strong> tartjuk, egy nyugodt közösségben, magasan Pisac felett."
+          "<strong>Hernan Colque</strong> kecsua származású, a <strong>Wachuma (San Pedro) szertartások</strong> elkötelezett vezetője, aki mélyen gyökerezik az Andok szent hagyományaiban. 5000 méter felett született <strong>Viachában</strong>, <strong>Pisac</strong> egy magashegyi közösségében, Hernan olyan gyógyító vérvonalat hordoz, amely az inka idők előtti korokra nyúlik vissza.",
+          "Az ősi hagyomány szerint generációnként csak egy gyermek örökölheti ezt az utat, és önként kell választania. A bölcsesség nagyapjától, Carmentől szállt apjára, Beninhóra. Hét testvér közül Hernan nagyon fiatalon választotta a medicinát, így ő lett ennek az ősi örökségnek és a <strong>Pachamamával (Földanya)</strong> való mély kapcsolatának egyetlen hordozója.",
+          "<strong>A Ccana Vérvonal Espinarból.</strong> Hernan <strong>Espinar tartományból</strong> származik, vérvonala <strong>Ccana (K'ana)</strong>. A K'ana kultúra egy inka előtti társadalom volt, amely egyedülálló, békés stratégiai szövetséget kötött az Inka Birodalommal a tipikus hódítás helyett. Pachacutec uralkodása alatt békésen integrálódtak, és létfontosságú katonai szövetségesekké váltak - elit <strong>'Sinchis'</strong> harcosokká, akik segítettek legyőzni a Chancákat. Ennek a kölcsönösségnek köszönhetően földeket kaptak Collasuyoban, és ősi fővárosukat, Kanamarcát az inkák újjáépítették.",
+          "<strong>A Wachuma Szelleme.</strong> A mondás szerint a Wachuma szelleme először ennek a régiónak az embereit kötötte össze, és ők a szívükben őrizték, mert a növény azt mondta nekik, hogy el fog tűnni a földről, ami nem is olyan régen meg is történt. Hernan ezt az emléket és szellemet viszi tovább.",
+          "<strong>Pisac és Viacha.</strong> Székhelyünk <strong>Pisacban</strong>, a Szent Völgy egyik élettel teli városában található, ahol szertartásokat tartunk és békés szállást kínálunk a <strong>Wayna Wasi Hotelben</strong>. A mélyebb elmélyülés érdekében többnapos elvonulásainkat <strong>Viachában</strong> tartjuk, egy csendes közösségben, magasan Pisac felett."
         ]
       },
-      ausangate: { title: "Ausangate Szent Utazás", subtitle: "2026. Január 3-9.", description: "Mélyreható expedíció, amely egyesíti Pacchanta gyógyító vizeit, Apu Ausangate fenséges jelenlétét, valamint a Wachuma és a Temazcal átalakító erejét.", cta: "Helyfoglalás", itinerary: [{ day: "1. Nap", title: "Érkezés és Megtisztulás", description: "Utazás Pacchantába. Lazítás a természetes termálvízben a test megtisztítására, majd túra az Ausangate felé a szándékok megfogalmazásához." }, { day: "2. Nap", title: "Első Wachuma Szertartás", description: "A szív megnyitása az Apu felé. Nappali szertartás, kapcsolódás a hegy szellemével és a hatalmas andoki éggel." }, { day: "3. Nap", title: "Temazcal (Izzasztókunyhó) és Rapé", description: "Hagyományos gőzfürdő rituálé, amely a Földanya méhét jelképezi. Fizikai és spirituális méregtelenítés szent Rapé orvossággal." }, { day: "4. Nap", title: "Második Wachuma Szertartás", description: "Az utazás elmélyítése. A belső blokkok feloldása és a tudatosság kiterjesztése a felvidéki csendben." }, { day: "5. Nap", title: "Temazcal és Rapé", description: "Második gőzfürdő szertartás a kapott energiák leföldelésére és a lélek további tisztítására szent Rapéval." }, { day: "6. Nap", title: "Harmadik Wachuma & Integráció", description: "A végső gyógyszertartás. Fókuszban az integráció, a hála és a héten kapott gyógyulás lezárása." }, { day: "7. Nap", title: "Visszaút", description: "Túra le a hegyről, utolsó fürdőzés a Pacchanta hőforrásokban, majd visszautazás Pisacba." }] },
+      services: {
+        title: "Kínálatunk",
+        items: [
+          { 
+              title: "2 Napos Elvonulás", 
+              description: "Mély elmélyülés a Wayna Wasiban és a Kinsacochánál. Alapár $173 (1 fő). Minden további fő +$70. Szállás +$20/fő. Max 10 fő.", 
+              price: "$173+",
+              details: { duration: "2 Nap", location: "Pisac & Kinsacocha", groupSize: "Max 10" }
+          },
+          { 
+              title: "Újévi Ausangate (3 Nap)", 
+              description: "Kezdd a 2026-os évet az Apuval. Temazcal, Rapé és Wachuma szertartás Pacchantában. Ingyenes professzionális fotózással.", 
+              price: "€173",
+              details: { duration: "3 Nap", location: "Ausangate", groupSize: "Csoport" }
+          },
+          { 
+              title: "Ausangate Szent Utazás (7 Nap)", 
+              description: "A teljes elmélyülés. 3 Wachuma szertartás, Temazcal rituálék, túrázás a lagúnákhoz és mély gyógyító munka.", 
+              price: "Érdeklődés",
+              details: { duration: "7 Nap", location: "Ausangate", groupSize: "Csoport" }
+          },
+          { 
+              title: "Juchuy Qosqo Elmélyülés", 
+              description: "2 nap a 'Kis Cusco' romjainál. Szállás egy helyi családnál, hagyományos ételek közös főzése és mély kapcsolódás.", 
+              price: "$200+",
+              details: { duration: "2 Nap", location: "Juchuy Qosqo", groupSize: "Min 2" }
+          },
+          { 
+              title: "1 Napos Szertartás", 
+              description: "Szent utazás minimum 2 fő részére. Tapasztald meg a medicinát különböző szent helyeken, mint romok, lagúnák és hegyek a Szent Völgyben.", 
+              price: "$250",
+              details: { duration: "1 Nap", location: "Szent Völgy", groupSize: "Min 2" }
+          },
+          { 
+              title: "Costa Rica Zarándoklat", 
+              description: "Szent utazás, amely összeköti az Andokat és az Óceánt egy titkos helyszínen Costa Ricában. 21 résztvevőre korlátozva.", 
+              price: "Érdeklődés",
+              details: { duration: "7 Nap", location: "Costa Rica", groupSize: "Max 21" }
+          },
+          { 
+              title: "Privát Gyógyítás", 
+              description: "Személyre szabott ülések az egyedi spirituális és érzelmi igényeidhez. Mély blokkok oldása.", 
+              price: "Érdeklődés",
+              details: { duration: "Változó", location: "Wayna Wasi", groupSize: "1 Fő" }
+          }
+        ],
+        ausangateCta: { title: "Újévi Különlegesség: Ausangate 3 Napos", description: "Kezdd az új évet egy különleges Wachuma utazással az Ausangate-hoz. Ingyenes professzionális fotózással.", button: "3 Napos Utazás Megtekintése" }
+      },
+      ausangate: {
+        title: "Ausangate Szent Utazás (7 Nap)",
+        subtitle: "2026. Január 3-9.",
+        description: "Mélyreható expedíció, amely ötvözi Pacchanta gyógyító vizeit, Apu Ausangate fenséges jelenlétét, valamint a Wachuma és a Temazcal átalakító erejét.",
+        cta: "Helyfoglalás",
+        itinerary: [
+          { day: "1. Nap", title: "Érkezés és Megtisztulás", description: "Utazás Pacchantába. Lazítás a természetes termálvizekben a test megtisztítására, majd túra az Ausangate felé szándékaink megfogalmazására." },
+          { day: "2. Nap", title: "Első Wachuma Szertartás", description: "A szív megnyitása az Apu felé. Nappali szertartás, kapcsolódás a hegy szellemével és a végtelen andoki éggel." },
+          { day: "3. Nap", title: "Temazcal (Izzasztókunyhó) és Rapé", description: "Hagyományos gőzfürdő rituálé, amely Földanya méhét jelképezi. Fizikai és spirituális méregtelenítés szent Rapé medicinával." },
+          { day: "4. Nap", title: "Második Wachuma Szertartás", description: "Az utazás elmélyítése. Munka a belső blokkokon és a tudat tágítása a felföld csendjében." },
+          { day: "5. Nap", title: "Temazcal és Rapé", description: "Második izzasztókunyhó szertartás a kapott energiák földelésére és a szellem további tisztítására szent Rapéval." },
+          { day: "6. Nap", title: "Harmadik Wachuma és Integráció", description: "Az utolsó medicina szertartás. Fókuszban az integráció, a hála és a héten kapott gyógyulás lezárása." },
+          { day: "7. Nap", title: "Visszautazás", description: "Túra le a hegyről, utolsó mártózás a pacchantai hőforrásokban, és transzfer vissza Pisacba." }
+        ]
+      },
       ausangate3Day: {
         title: "Újévi Ausangate Utazás (3 Nap)",
-        subtitle: "Kezdd az Újévet az Apuval",
-        description: "Tömör és erőteljes módja a 2026-os év kezdésének. Kezdd az új évet egy különleges Wachuma utazással az Ausangate-hez, kapcsolódva a szent heggyel és a gyógyító vizekkel.",
+        subtitle: "Kezdd az Új Évet az Apuval",
+        description: "Tömör és erőteljes módja a 2026-os év kezdésének. Kezdd az új évet egy különleges Wachuma utazással az Ausangate-hoz, kapcsolódva a szent hegyhez és a gyógyító vizekhez.",
         details: {
-            dates: "2026. Január 3 - 5.",
+            dates: "2026. Január 3-5.",
             price: "€173",
             bonus: "Ingyenes professzionális fotózást tartalmaz"
         },
         cta: "Helyfoglalás",
         itinerary: [
-          { day: "1. Nap", title: "Érkezés, Megtisztulás és Temazcal", description: "Utazás Pacchantába. Lazítás a természetes termálvízben. Temazcal (Izzasztókunyhó) szertartáson veszünk részt szent Rapé orvossággal a mély megtisztulásért, majd túra az Ausangate felé az újévi szándékok megfogalmazásához." },
-          { day: "2. Nap", title: "Wachuma Szertartás", description: "A szív megnyitása az Apu felé. Mély nappali szertartás, kapcsolódás a hegy szellemével és a hatalmas andoki éggel." },
-          { day: "3. Nap", title: "Visszaút", description: "A kör bezárása. Túra le a hegyről, utolsó fürdőzés a Pacchanta hőforrásokban, majd visszautazás Pisacba." }
+          { day: "1. Nap", title: "Érkezés, Megtisztulás és Temazcal", description: "Utazás Pacchantába. Lazítás a természetes termálvizekben. Részt veszünk egy Temazcal (Izzasztókunyhó) szertartáson szent Rapé medicinával a mély megtisztulásért, majd túrázunk az Ausangate felé, hogy megfogalmazzuk újévi szándékainkat." },
+          { day: "2. Nap", title: "Wachuma Szertartás", description: "A szív megnyitása az Apu felé. Mélyreható nappali szertartás, kapcsolódás a hegy szellemével és a végtelen andoki éggel." },
+          { day: "3. Nap", title: "Visszautazás", description: "A kör bezárása. Túra le a hegyről, utolsó mártózás a pacchantai hőforrásokban, és transzfer vissza Pisacba." }
         ]
       },
       costaRica: {
-        title: "Szent Zarándoklat Costa Ricába",
-        subtitle: "Hegyek és Óceán Egyesülése",
-        intro: "Különleges alkalom, először Costa Ricán, egy titkos helyszínen. A szent hegyek és az óceán összekapcsolása, egy különleges fizikai és spirituális zarándoklat, követve egy látomást és a medicina üzenetét.",
-        description: [
-            "Csatlakozz hozzánk egy történelmi és átalakító erejű összejövetelre. Hernan először hozza el a szent Wachuma medicinát Costa Rica vibráló földjére.",
-            "Egy mély látomás és a medicina közvetlen üzenete által vezérelve ez az elvonulás egy spirituális zarándoklat, amely összeköti az andoki hegyek bölcsességét az óceán tisztító erejével.",
-            "A szent Wachuma szertartások mellett megosztjuk a Rapé orvosságot, tisztító munkákat végzünk virágokkal, és vezetett meditációkon keresztül utazunk.",
-            "Egy titkos, eldugott helyen gyűlünk össze, a természet ölelésében. Ez a meghitt élmény szigorúan 21 résztvevőre (beleértve a segítőket is) korlátozódik, hogy biztosítsuk a mély, személyes figyelmet és az összetartó energetikai teret."
-        ],
-        details: { location: "Titkos Helyszín, Costa Rica", capacity: "21 Lélekre Korlátozva", dates: "2026. Február 24 - Március 2." },
-        cta: "Meghívó Kérése",
-        visionTitle: "Egy Látomás a Medicinától",
-        visionText: "Ez az összejövetel nem csupán egy elvonulás; válasz egy hívásra. A medicina arról beszélt, hogy össze kell kötni a magas Andok bölcsességét az óceán tisztító, áramló energiájával. A lélek és a test zarándoklata.",
-        themeValue: "Óceán és Hegy"
+          title: "Szent Zarándoklat Costa Ricába",
+          subtitle: "Hegyek és Óceán Egyesülése",
+          intro: "Különleges alkalom, először Costa Ricában egy titkos helyszínen. A szent hegyek és az óceán összekapcsolása, különleges fizikai és spirituális zarándoklat a medicina látomása és üzenete nyomán.",
+          description: [
+              "Csatlakozz hozzánk egy történelmi és átalakító összejövetelre. Hernan először viszi el a szent Wachuma medicinát Costa Rica vibráló földjeire.",
+              "Egy mély látomás és a medicina közvetlen üzenete által vezérelve, ez az elvonulás egy spirituális zarándoklat, amely összeköti az andoki hegyek bölcsességét az óceán tisztító erejével.",
+              "A szent Wachuma szertartások mellett megosztjuk a Rapé medicinát, tisztító munkákat végzünk virágokkal, és vezetett medicina meditációkon veszünk részt.",
+              "Egy titkos, eldugott helyszínen gyűlünk össze, a természet ölelésében. Ez a bensőséges élmény szigorúan 21 résztvevőre korlátozódik (a segítőket is beleértve), hogy biztosítsuk a mély, személyes figyelmet és az összetartó energetikai teret."
+          ],
+          details: { location: "Titkos Helyszín, Costa Rica", capacity: "21 Lélekre Korlátozva", dates: "2026. Február 24 - Március 2." },
+          cta: "Meghívó Kérése",
+          visionTitle: "Látomás a Medicinától",
+          visionText: "Ez az összejövetel nem csupán egy elvonulás; válasz egy hívásra. A medicina arról beszélt, hogy össze kell kötni a magas Andokban őrzött bölcsességet az óceán tisztító, áramló energiájával. A szellem és a test zarándoklata.",
+          themeValue: "Óceán és Hegy"
       },
       retreat2Day: {
-        title: "2 Napos Elvonulás",
-        subtitle: "Wayna Wasi és Kinsacocha",
-        intro: "Mély elmélyülés a szent medicinában, a Wayna Wasi szentélyében és Pisac erőteljes hegyeiben.",
-        days: [
-            { title: "1. Nap: Felkészülés és Érkezés Wayna Wasiba", content: "Wayna Wasiba érkezéskor a résztvevők a bedida (a szent Wachuma ital) ceremoniális elkészítésével kezdik útjukat. Ez az élmény szent köteléket kezdeményez a medicinával, megteremtve a belső felfedezés és kapcsolat alapjait. Hernan gondosan vezeti a résztvevőket, segítve őket szándékaik tisztázásában és szívük megnyitásában a Wachuma gyengéd, mégis erőteljes hatásai felé.", accommodation: "Éjszaka a Wayna Wasiban, a béke szentélyében, ahol az Andok szelleme mindig jelen van." },
-            { title: "2. Nap: Szertartás Kinsacochában, Pisac", content: "A második napon elutazunk a tisztelt Kinsacocha helyszínre Pisacban, ahol Wachuma szertartáson vesztek részt lélegzetelállító hegyi kilátás közepette. Hernan tapasztalt vezetésével a résztvevők felfedezik belső tájaikat, személyes belátásokat keresnek, és fogadják a Wachuma tanításait. A szertartás végén egy közös megosztó kör lehetővé teszi az élmények feldolgozását és reflektálását, fokozva az elvonulás hatását.", accommodation: "Visszatérés Wayna Wasiba egy békés éjszakára, a nap átalakító élményeinek integrálására." }
-        ],
-        conclusion: "A résztvevők megújult önazonossággal és céltudattal távoznak, megerősödve a Wachuma élmény és Pachamama időtlen bölcsessége által."
+          title: "2 Napos Elvonulás",
+          subtitle: "Wayna Wasi és Kinsacocha",
+          intro: "Mély elmélyülés a szent medicinában, a Wayna Wasi szentélyében és Pisac erőteljes hegyei között.",
+          days: [
+              { title: "1. Nap: Felkészülés és Érkezés a Wayna Wasiba", content: "A Wayna Wasiba érkezéskor a résztvevők a bedida (a szent Wachuma ital) ceremoniális elkészítésével kezdik meg utazásukat. Ez az élmény szent köteléket kezdeményez a medicinával, megteremtve a teret a belső felfedezéshez és kapcsolódáshoz. Hernan gondosan vezeti a résztvevőket, segítve őket szándékaik tisztázásában és szívük megnyitásában a Wachuma gyengéd, mégis erőteljes hatásai előtt.", accommodation: "Az éjszakát a Wayna Wasiban töltjük, a béke szentélyében, ahol az Andok szelleme mindig jelen van." },
+              { title: "2. Nap: Szertartás Kinsacochánál, Pisac", content: "A második napon a Pisacban található, nagy tiszteletnek örvendő Kinsacochához utazunk, ahol lélegzetelállító hegyi kilátás közepette vesztek részt a Wachuma szertartáson. Hernan tapasztalt vezetésével a résztvevők felfedezik belső tájaikat, személyes felismeréseket keresnek, és fogadják a Wachuma tanításait. A szertartás végén egy csoportos megosztó kör lehetővé teszi a résztvevők számára, hogy feldolgozzák és reflektáljanak utazásukra, fokozva az elvonulás hatását.", accommodation: "Visszatérés a Wayna Wasiba egy békés éjszakára, a nap átalakító élményeinek befogadására." }
+          ],
+          conclusion: "A résztvevők megújult önérzettel és céltudattal távoznak, megerősödve a Wachuma élménye és Pachamama időtlen bölcsessége által."
       },
       juchuy: {
-        title: "Juchuy Qosqo Ősi Elmélyülés",
-        subtitle: "Közösség, Konyha és Romok",
-        intro: "Egy különleges 2 napos utazás Juchuy Qosqo-ba ('Kis Cusco'), amely ötvözi az ősi romokhoz való túrázást a mély kulturális elmélyüléssel, egy helyi családnál megszállva.",
-        days: [
-            { title: "1. Nap: Túra és Hagyományos Főzés", content: "Utazásunkat a Juchuy Qosqo látványos romjaihoz való túrával kezdjük, amely a Szent Völgyre néz. Délután egy autentikus helyi családi házban telepedünk le. Itt együtt készítjük el az ételt, hagyományos andoki levest főzünk és történeteket osztunk meg a tűz mellett. Ez a közös készülődés önmagában egy szertartás, amely megalapozza a helyi életmóddal való kapcsolatunkat.", accommodation: "Autentikus szállás egy helyi családnál a romok mellett." },
-            { title: "2. Nap: Szertartás a Romoknál", content: "A reggel az Apuk felett virrad. Szent Wachuma szertartáson veszünk részt a Juchuy Qosqo romok erőteljes jelenlétében. Más helyszínek tömegei nélkül mélyen kapcsolódhatunk e királyi birtok történelméhez és energiájához. A szertartás mély reflexiót és az ősökkel való kapcsolódást tesz lehetővé.", accommodation: "Ereszkedés és visszautazás Pisacba." }
-        ],
-        conclusion: "A régészeti csodák, az élő kultúra és a spirituális munka egyedülálló keveréke. Teli hassal, meleg szívvel és az Andokkal összehangolt lélekkel távozol."
+          title: "Juchuy Qosqo Ősi Elmélyülés",
+          subtitle: "Közösség, Konyha és Romok",
+          intro: "Különleges 2 napos utazás Juchuy Qosqóba ('Kis Cusco'), amely ötvözi az ősi romokhoz való túrázást egy mély kulturális elmélyüléssel egy helyi családnál.",
+          days: [
+              { title: "1. Nap: Túra és Hagyományos Főzés", content: "Utazásunkat a Szent Völgyre néző látványos Juchuy Qosqo romjaihoz való túrával kezdjük. Délután egy autentikus helyi családi házban szállunk meg. Itt együtt készítünk ételt, hagyományos andoki levest főzünk és történeteket osztunk meg a tűz mellett. Ez a közös készülődés önmagában is egy szertartás, amely leföldel minket a helyi életmódban.", accommodation: "Autentikus szállás egy helyi családnál a romok mellett." },
+              { title: "2. Nap: Szertartás a Romoknál", content: "A reggel az Apuk felett virrad. Szent Wachuma szertartáson veszünk részt Juchuy Qosqo romjainak erőteljes jelenlétében. Más helyszínek tömegétől mentesen mélyen kapcsolódhatunk ennek a királyi birtoknak a történelméhez és energiájához. A szertartás mély reflexiót és az ősökkel való kapcsolatot tesz lehetővé.", accommodation: "Ereszkedés és transzfer vissza Pisacba." }
+          ],
+          conclusion: "A régészeti csodák, az élő kultúra és a spirituális munka egyedülálló keveréke. Teli hassal, meleg szívvel és az Andokkal összhangban lévő lélekkel távozol."
       },
       retreat1Day: {
           title: "1 Napos Szertartás",
           subtitle: "A Völgy Szent Helyei",
-          intro: "Fókuszált és mély utazás a medicinába, különböző szent helyszíneken, mint ősi romok, nyugodt lagúnák vagy erőteljes hegyek.",
+          intro: "Fókuszált és mély utazás a medicinába, különböző szent helyszíneken, mint például ősi romok, csendes lagúnák vagy erőteljes hegyek.",
           days: [
-              { title: "A Szertartás", content: "Kora reggel indulunk egy gondosan kiválasztott szent helyre a Szent Völgyben (mint Pumamarca, Kinsacocha vagy más erőhelyek). A szertartás egész napos elköteleződés a medicinával, a természettel és önmagunkkal. Hernan útmutatást nyújt, teret tartva a mély gyógyuláshoz és kapcsolódáshoz. Az élmény késő délután zárul.", accommodation: "A szállást nem tartalmazza, de a helyszínre történő szállítást megszervezzük." }
+              { title: "A Szertartás", content: "Kora reggel indulunk egy gondosan kiválasztott szent helyre a Szent Völgyben (mint például Pumamarca, Kinsacocha vagy más erőhelyek). A szertartás egy egész napos elköteleződés a medicinával, a természettel és önmagunkkal. Hernan útmutatást nyújt, teret tartva a mély gyógyuláshoz és kapcsolódáshoz. Az élmény késő délután zárul.", accommodation: "A szállást nem tartalmazza, de a helyszínre és vissza történő szállítást megszervezzük." }
           ],
-          conclusion: "Erőteljes újraindítás és újrakapcsolódás a természeti világgal, tisztánlátással és könnyebb szívvel távozol.",
-          details: { durationLabel: "Időtartam", durationValue: "Egész nap (Reggeltől Délutánig)", locationLabel: "Helyszín", locationValue: "Szent Völgyi Helyszínek", focusLabel: "Fókusz", focusValue: "Gyógyítás és Természet" }
+          conclusion: "Erőteljes újraindítás és újrakapcsolódás a természeti világgal, tisztánlátással és könnyebb szívvel távozva.",
+          details: { durationLabel: "Időtartam", durationValue: "Egész Nap (Reggeltől Délutánig)", locationLabel: "Helyszín", locationValue: "Szent Völgy Helyszínei", focusLabel: "Fókusz", focusValue: "Gyógyulás és Természet" }
       },
       preparation: {
         title: "Felkészülés a San Pedro Elvonulásra",
-        subtitle: "Az Andoki Közösség Jövőjének Erősítése",
-        intro: "Üdvözlünk a háromnapos, átalakító erejű San Pedro elvonuláson! Hogy a legtöbbet hozd ki ebből az élményből, kérünk, készülj fel fizikailag és mentálisan is. Íme egy útmutató a jelentőségteljes utazáshoz.",
+        subtitle: "Az Andoki Közösség Jövőjének Megerősítése",
+        intro: "Üdvözlünk az átalakító háromnapos San Pedro elvonuláson! Hogy a legtöbbet hozd ki ebből az élményből, kérjük, készülj fel előre mind fizikailag, mind mentálisan. Íme egy útmutató a jelentőségteljes utazás biztosításához.",
         diet: {
-            title: "Felkészülés: Könnyű Diéta és Szándékok",
-            description: "Az elvonulást megelőzően egy könnyű, tiszta étrend segíthet megnyitni a tested és az elméd. Íme néhány javaslat legalább 3-5 napra az érkezés előtt:",
+            title: "Felkészülés: Könnyű Étrend és Szándékok",
+            description: "Az elvonulást megelőzően egy könnyű, tiszta étrend segíthet megnyitni a tested és elméd az élményre. Íme néhány javaslat legalább 3-5 nappal az érkezés előtt:",
             items: [
                 { label: "Vegetáriánus Étrend", text: "Kerüld a húst és az állati eredetű termékeket, mivel ezek megterhelhetik az emésztőrendszert." },
                 { label: "Hozzáadott Cukor Nélkül", text: "Tartózkodj a feldolgozott cukrok fogyasztásától az energiaszinted kiegyensúlyozása érdekében." },
-                { label: "Stimulánsok Korlátozása", text: "Csökkentsd vagy hagyd el a koffeint, alkoholt és egyéb stimulánsokat az elme és a test tisztulása érdekében." },
-                { label: "Nehéz Ételek Kerülése", text: "Hagyd el az olajban sült ételeket és a tejtermékeket a könnyebb emésztésért." },
-                { label: "Hidratálás", text: "Igyál bőségesen vizet a tisztánlátás és az általános jóllét érdekében." },
-                { label: "Szándékok", text: "Az étrend mellett szánj időt minden nap a szándékaid megfogalmazására. Naplóírással, meditációval vagy csendes reflexióval hangolódj rá arra, mit szeretnél elérni vagy elengedni ezen az utazáson." }
+                { label: "Stimulánsok Korlátozása", text: "Csökkentsd vagy iktasd ki a koffeint, alkoholt és egyéb stimulánsokat, hogy segítsd az elméd és tested tisztulását." },
+                { label: "Nehéz Ételek Kerülése", text: "Hagyd el az olajban sült ételeket és a tejtermékeket a könnyebb emésztés érdekében." },
+                { label: "Hidratálás", text: "Igyál sok vizet a tisztánlátás és az általános jólét érdekében." },
+                { label: "Szándékok", text: "Az étrenden túl szánj időt minden nap az elvonulással kapcsolatos szándékaid megfogalmazására. Naplózással, meditációval vagy csendes elmélkedéssel hangolódj rá arra, mit remélsz nyerni vagy elengedni ezen az utazáson keresztül." }
             ]
         },
         packing: {
             title: "A Szertartás Napja",
-            description: "A szertartás napján, amely az elvonulás második napjára esik, javasoljuk, hogy hozz magaddal néhány személyes tárgyat, amelyek fokozhatják a kapcsolódást.",
+            description: "A szertartás napján, amelyre az elvonulás második napján kerül sor, javasoljuk, hogy hozz magaddal néhány személyes tárgyat, amelyek fokozhatják a kapcsolódást és hozzájárulhatnak a szent térhez.",
             items: [
                 { label: "Kényelmes Ruházat", text: "Viselj laza, kényelmes ruházatot, amely alkalmas a szabadban való tartózkodásra." },
-                { label: "Napkalap vagy Sapka", text: "Mivel a szertartás a szabadban zajlik, hozz kalapot a nap elleni védelemhez." },
-                { label: "Hozz Felajánlást", text: "Szokás gyümölcsöt és virágot hozni felajánlásként. Ez a gesztus a hálát és a természettel való kapcsolatot jelképezi." },
-                { label: "Kulacs", text: "A hidratáltság fenntartása egész nap elengedhetetlen." },
-                { label: "Füzet és Toll", text: "Inspirálónak érezheted a naplóírást a szertartás után, hogy rögzítsd gondolataidat és érzelmeidet." }
+                { label: "Napsapka", text: "Mivel a szertartás a szabadban zajlik, hozz magaddal kalapot vagy sapkát a nap elleni védelemhez." },
+                { label: "Felajánlás", text: "Szokás gyümölcsöt és virágot hozni felajánlásként a szertartásra. Ez a gesztus a hálát és a természettel való kapcsolatot szimbolizálja." },
+                { label: "Kulacs", text: "A hidratáltság megőrzése egész nap elengedhetetlen." },
+                { label: "Jegyzetfüzet és Toll", text: "Lehet, hogy a szertartás után inspirációt érzel a naplózásra, hogy rögzítsd gondolataidat, felismeréseidet vagy érzelmeidet." }
             ]
         },
         suggestions: {
-            title: "További Javaslatok",
-            description: "Az utazás fokozása érdekében fontold meg a következőket:",
+            title: "További Javaslatok az Elvonuláshoz",
+            description: "Utazásod fokozása érdekében fontold meg a következőket:",
             items: [
-                { label: "Csend Tiszteletben Tartása", text: "Használd a csendes időszakokat a reflexióra és az élmények feldolgozására." },
+                { label: "Csendes Idő Tiszteletben Tartása", text: "Használd a csendes időszakokat az élményeidre való reflektálásra és feldolgozásra." },
                 { label: "Légzés és Meditáció", text: "A gyengéd légzőgyakorlatok segíthetnek a földelésben és a középpontban maradásban." },
                 { label: "Digitális Detox", text: "Kapcsolódj le a telefonról és egyéb eszközökről, hogy teljesen jelen lehess." },
                 { label: "Kapcsolódás a Természettel", text: "Ha lehetséges, tölts időt a természetben minden nap." }
@@ -982,13 +1003,13 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             title: "Musuq Wata Ausangate (3 P'unchay)", 
             description: "2026 qallariy Apuwan. Temazcal, Rapé, Wachuma ima. Fotoqrafiya qispisqa.", 
             price: "€173",
-            details: { duration: "3 P'unchay", location: "Pacchanta & Ausangate", groupSize: "Huñu" } 
+            details: { duration: "3 P'unchay", location: "Ausangate", groupSize: "Huñu" } 
           },
           { 
             title: "Ausangate Willka Puriy (7 P'unchay)", 
             description: "Hatun puriy. 3 Wachuma raymikuna, Temazcal, quchakunaman puriy, ukhu hampi.", 
             price: "Tapukuy",
-            details: { duration: "7 P'unchay", location: "Pacchanta & Ausangate", groupSize: "Huñu" } 
+            details: { duration: "7 P'unchay", location: "Ausangate", groupSize: "Huñu" } 
           },
           { 
               title: "Juchuy Qosqo Puriy", 
@@ -1038,7 +1059,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         description: [
             "<strong>Hernan Colque</strong> runa simi rimaq, <strong>Wachuma hampiq</strong>, ñawpaq yachaykunata apaq. <strong>Viacha</strong> llaqtapi paqarisqa, <strong>Pisac</strong> patapi, payqa ñawpaq hampiq yawarniyuq.",
             "Ñawpaq yachaykuna willan, sapa miraymanta huklla kay ñanta apanman. Abuelon Carmenmanta taytan Beninhoman yachay chayarqa. Qanchis wawqikunamanta, Hernanllataq kay ñanta akllarqa, <strong>Pachamamawan</strong> tinkuspa.",
-            "<strong>Espinar llaqtamanta Ccana yawar.</strong> Hernanpa yawarninqa <strong>Ccana (K'ana)</strong> llaqtamanta. K'ana runakunaqa Inka Pachacutecwan thakpi tinkurqanku, manan maqanakuspachu. Chayrayku <strong>'Sinchis'</strong> sutichasqa karqanku, allin awqaq runakuna.",
+            "<strong>Espinar llaqtamanta Ccana yawar.</strong> Hernanpa yawarninqa <strong>Ccana (K'ana)</strong>. K'ana runakunaqa Inka Pachacutecwan thakpi tinkurqanku, manan maqanakuspachu. Chayrayku <strong>'Sinchis'</strong> sutichasqa karqanku, allin awqaq runakuna.",
             "<strong>Wachuma Nunam.</strong> Wachumaqa ñawpaq runakunata tinkuchirqa, chayta sunqunkupi waqaycharqanku. Kay hampiqa yachachikunmi, kunan p'unchaykunaqa Hernan kay yachayta apachkan.",
             "<strong>Pisacwan Viachawan.</strong> <strong>Pisac</strong> llaqtapi tiyayku, <strong>Wayna Wasi Hotelpi</strong> samaykuna kan. Aswan kuraq hampiqa <strong>Viacha</strong> ayllupi ruwakun, urqu patapi."
         ]
@@ -1254,13 +1275,13 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             title: "العام الجديد في أوسانجاتي (3 أيام)", 
             description: "ابدأ عام 2026 مع الأبو. مراسم تيمزكال، رابي، وواتشوما في باتشانتا. يشمل تصويرًا احترافيًا مجانيًا.", 
             price: "€173",
-            details: { duration: "3 أيام", location: "باتشانتا وأوسانجاتي", groupSize: "مجموعة" } 
+            details: { duration: "3 أيام", location: "أوسانجاتي", groupSize: "مجموعة" } 
           },
           { 
             title: "رحلة أوسانجاتي المقدسة (7 أيام)", 
             description: "الانغماس الكامل. 3 مراسم واتشوما، طقوس تيمزكال، المشي إلى البحيرات، وعمل شفاء عميق.", 
             price: "استفسار",
-            details: { duration: "7 أيام", location: "باتشانتا وأوسانجاتي", groupSize: "مجموعة" } 
+            details: { duration: "7 أيام", location: "أوسانجاتي", groupSize: "مجموعة" } 
           },
           { 
               title: "انغماس جوتشوي كوسكو", 
@@ -1431,32 +1452,31 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             {
                 title: "ماذا تتوقع في خلوة واتشوما",
                 content: [
-                    "التخطيط لخلوة واتشوما يمكن أن يبدو وكأنه تحضير لحج الروح. سواء كنت جديداً على طب النباتات أو باحثاً متمرساً، تقدم كل مراسم واتشوما تجربة فريدة وتحويلية. إليك ما يمكنك توقعه عند الشروع في خلوة في الوادي المقدس في بيرو، حيث تكون روح الأنديز وباتشاماما حاضرة دائمًا.",
-                    "<strong>مكان مقدس للشفاء العميق</strong><br>الوادي المقدس بالقرب من كوسكو هو الخلفية المثالية لرحلتك الروحية. يقع مساحة الخلوة لدينا بين جبال الأنديز، وتحيط به مناظر طبيعية خلابة تضخم قوة الواتشوما. من لحظة وصولك، ستشعر بالاتصال العميق بين الأرض والكون - وهو اتصال مركزي في علم الكونيات الأنديزي وتقاليد الواتشوما.",
-                    "<strong>يوم مراسم نموذجي</strong><br>ستبدأ خلوتك بمقدمة لطيفة عن الواتشوما. تحت توجيه هيرنان كولكي، تتكشف المراسم في مساحة آمنة وداعمة حيث سيتم تشجيعك على الاستماع إلى صوتك الداخلي. يساعد الواتشوما على فتح قلبك، مما يوفر الوضوح والشعور بالسلام أثناء رحلتك خلال اليوم. تتضمن الخلوة غالبًا وقتًا هادئًا في الطبيعة، ومشاركة جماعية، ووقتًا للتفكير، مما يجعل التجربة شمولية وعلاجية.",
-                    "<strong>دمج تجربتك مع الواتشوما</strong><br>الرؤى المكتسبة من الواتشوما يمكن أن تكون عميقة، ومن المهم تخصيص وقت لدمج هذه الدروس في حياتك اليومية. هيرنان وفريقه موجودون لمساعدتك في معالجة تجاربك، سواء من خلال المناقشات الجماعية أو الدعم الفردي. يغادر العديد من المشاركين الخلوة بشعور متجدد بالهدف واتصال عميق بأنفسهم والعالم من حولهم."
+                    "التخطيط لخلوة واتشوما يمكن أن يبدو وكأنه تحضير لحج الروح. سواء كنت جديداً على طب النباتات أو باحثاً متمرساً، تقدم كل مراسم تجربة فريدة.",
+                    "<strong>مكان مقدس للشفاء العميق</strong><br>الوادي المقدس بالقرب من كوسكو هو الخلفية المثالية لرحلتك الروحية.",
+                    "<strong>يوم مراسم نموذجي</strong><br>ستبدأ خلوتك بمقدمة لطيفة عن الواتشوما. تحت توجيه هيرنان كولكي، تتكشف المراسم في مساحة آمنة وداعمة.",
+                    "<strong>دمج تجربتك</strong><br>الرؤى المكتسبة من الواتشوما يمكن أن تكون عميقة، ومن المهم تخصيص وقت لدمج هذه الدروس في حياتك اليومية."
                 ]
             },
             {
                 title: "اكتشف القوة العلاجية للواتشوما",
                 content: [
-                    "<strong>ما هو صبار سان بيدرو؟</strong><br>صبار سان بيدرو، المعروف أيضاً باسم واتشوما، هو نبات طبي قديم موطنه مرتفعات الأنديز، وبشكل أساسي في بيرو. يزدهر هذا الصبار الأخضر العمودي الطويل، المسمى علمياً <em>Echinopsis pachanoi</em>، على ارتفاعات عالية، غالباً ما بين 2000 و 3000 متر. يمكن التعرف عليه بسهولة من خلال أضلاعه البارزة وأشواكه القصيرة وزهوره البيضاء الكبيرة التي تتفتح في الليل.",
-                    "<strong>الأصول والتاريخ</strong><br>تم استخدام سان بيدرو لآلاف السنين من قبل شعوب الأنديز الأصلية، وخاصة مجتمعات الكيتشوا والأيمارا. متجذر بعمق في التقاليد الشامانية، فهو بمثابة جسر بين العالمين المادي والروحي. يشير اسمه، سان بيدرو، إلى القديس بطرس، حارس أبواب الجنة، مما يرمز إلى الوصول إلى الأبعاد الروحية.",
-                    "<strong>قوة المسكالين: الاتصال بالتناغم الكوني</strong><br>أحد المركبات النشطة الرئيسية في صبار سان بيدرو هو المسكالين، وهو قلويد ذو تأثير نفسي طبيعي. المسكالين مسؤول عن التجارب البصرية والاستبطانية العميقة المرتبطة بالواتشوما. على عكس المواد الاصطناعية، يوجه مسكالين سان بيدرو الأفراد بلطف إلى حالة معدلة من الوعي، مما يعزز الشعور بالوحدة والانسجام مع العالم من حولهم.",
-                    "غالبًا ما تقود مراسم الواتشوما المشاركين للشعور بارتباط عميق بباتشاماما (الأرض الأم)، وتجربة نبض الطبيعة وإيقاع الحياة نفسها. يساعد هذا الاتصال في إذابة الحدود بين الذات والكون، مما يسمح برؤى عميقة ووضوح روحي. يصف الكثيرون ممن يشرعون في هذه الرحلة بأنها تجربة فتح القلب، حيث يتدفق الحب والرحمة بشكل طبيعي.",
-                    "<strong>الفوائد الروحية والعلاجية</strong><br>يشتهر سان بيدرو بخصائصه الروحية والعلاجية. آثاره عموماً أكثر لطفاً وتدرجاً مقارنة بأدوية النباتات الأخرى مثل آياهواسكا. هذا يجعله في متناول أولئك الذين يسعون للشفاء العاطفي والوضوح الداخلي دون شدة اليقظة المفاجئة.<br><br><strong>الفوائد الروحية:</strong><br>• اليقظة الروحية: تسهل إعادة الاتصال بالذات الحقيقية والعالم الطبيعي.<br>• فتح القلب: يعزز الرحمة والمغفرة والتحرر العاطفي العميق.<br>• الوضوح العقلي: يساعد في اكتساب منظور حول تحديات الحياة ويعزز القبول.<br><br><strong>الفوائد العلاجية:</strong><br>• التحرر العاطفي: يساعد في معالجة الصدمات الماضية والمشاعر غير المحلولة.<br>• الهدوء والسكينة: يقلل من القلق ويزرع السلام الداخلي.<br>• الاتصال بالطبيعة: يقوي الرابطة مع الأرض والعناصر."
+                    "<strong>ما هو صبار سان بيدرو؟</strong><br>صبار سان بيدرو، المعروف أيضاً باسم واتشوما، هو نبات طبي قديم موطنه مرتفعات الأنديز.",
+                    "<strong>الأصول والتاريخ</strong><br>تم استخدام سان بيدرو لآلاف السنين من قبل شعوب الأنديز الأصلية.",
+                    "<strong>قوة المسكالين</strong><br>أحد المركبات النشطة الرئيسية هو المسكالين، المسؤول عن التجارب البصرية.",
+                    "<strong>الفوائد الروحية والعلاجية</strong><br>يشتهر سان بيدرو بخصائصه الروحية والعلاجية. آثاره عموماً أكثر لطفاً وتدرجاً مقارنة بآياهواسكا."
                 ]
             }
         ],
         questionsTitle: "أسئلة مكررة",
         questions: [
-            { question: "ما هي مراسم سان بيدرو؟", answer: "سان بيدرو (واتشوما) هو دواء نباتي مقدس يستخدم للشفاء والرؤية والاتصال الروحي العميق. يتم توجيه مراسمنا من قبل ميسرين ذوي خبرة لضمان تجربة آمنة وتحويلية." },
-            { question: "هل الخلوة مناسبة للمبتدئين؟", answer: "نعم، خلواتنا مفتوحة للجميع، سواء كانت لديك خبرة سابقة في طب النباتات أو كنت مشاركًا لأول مرة. نحن نقدم التوجيه والدعم الكامل طوال العملية." },
-            { question: "ما هي كينساكوتشا، ولماذا هي مميزة؟", answer: "كينساكوتشا، الواقعة بالقرب من بيساك، هي منطقة هادئة تحيط بها البحيرات المقدسة. إنها مكان مثالي لمراسم الواتشوما، حيث توفر اتصالًا عميقًا بالطبيعة والروحانية الأنديزية." },
-            { question: "ماذا يجب أن أحضر للخلوة أو المراسم؟", answer: "سيتم توفير قائمة مفصلة، ولكن الأساسيات تشمل ملابس مريحة وأحذية للمشي وأغراض شخصية وقلبًا مفتوحًا للتحول." },
-            { question: "ما هي اللغة المستخدمة خلال الخلوة؟", answer: "يتحدث هيرنان الكيتشوا والإسبانية. إذا كنت لا تتحدث هذه اللغات، فسيكون هناك مترجم فرنسي-إسباني متاح لمساعدتك طوال الخلوة." },
-            { question: "هل الخلوة آمنة؟", answer: "السلامة هي أولويتنا القصوى. تقام خلواتنا في بيئة خاضعة للرقابة وداعمة مع ميسرين ذوي خبرة لإرشادك خلال كل خطوة من الرحلة." },
-            { question: "ما هي سياسة الاسترداد أو الإلغاء الخاصة بك؟", answer: "الودائع قابلة للاسترداد حتى تاريخ محدد. نحن نشجع التواصل المبكر إذا تغيرت خططك لضمان الوضوح والدعم." }
+            { question: "ما هي مراسم سان بيدرو؟", answer: "سان بيدرو (واتشوما) هو طب نباتي مقدس يستخدم للشفاء والرؤية." },
+            { question: "هل الخلوة مناسبة للمبتدئين؟", answer: "نعم، خلواتنا مفتوحة للجميع." },
+            { question: "ما هي كينساكوتشا؟", answer: "كينساكوتشا هي منطقة هادئة تحيط بها البحيرات المقدسة." },
+            { question: "ماذا يجب أن أحضر؟", answer: "ملابس مريحة، أحذية للمشي، وقلب مفتوح." },
+            { question: "ما هي اللغة المستخدمة؟", answer: "يتحدث هيرنان الكيتشوا والإسبانية. يتوفر مترجم." },
+            { question: "هل الخلوة آمنة؟", answer: "السلامة هي أولويتنا القصوى." },
+            { question: "ما هي سياسة الاسترداد؟", answer: "الودائع قابلة للاسترداد حتى تاريخ محدد." }
         ]
       },
       testimonials: { title: "أصوات من القلب", items: [{ 
@@ -1521,13 +1541,13 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             title: "新年アウサンガテ（3日間）", 
             description: "アプと共に2026年をスタート。パッチャンタでのテマズカル、ラペ、ワチュマ・セレモニー。無料のプロ写真撮影付き。", 
             price: "€173",
-            details: { duration: "3日間", location: "パッチャンタ＆アウサンガテ", groupSize: "グループ" } 
+            details: { duration: "3日間", location: "アウサンガテ", groupSize: "グループ" } 
           },
           { 
             title: "アウサンガテ聖なる旅（7日間）", 
             description: "完全な没入体験。3回のワチュマ・セレモニー、テマズカルの儀式、ラグーンへのハイキング、そして深い癒しのワーク。", 
             price: "お問い合わせ",
-            details: { duration: "7日間", location: "パッチャンタ＆アウサンガテ", groupSize: "グループ" } 
+            details: { duration: "7日間", location: "アウサンガテ", groupSize: "グループ" } 
           },
           { 
               title: "フチュイ・コスコ没入", 
@@ -1564,9 +1584,13 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         },
         cta: "場所を予約する",
         itinerary: [
-          { day: "1日目", title: "到着、浄化、テマズカル", description: "パッチャンタへ移動。天然温泉でリラックスして体を清めます。聖なるラペの薬を使ったテマズカル（スウェットロッジ）セレモニーで深く浄化し、その後アウサンガテに向けてハイキングを行い、新年の意図を設定します。" },
-          { day: "2日目", title: "ワチュマ・セレモニー", description: "アプに心を開く。山の精霊と広大なアンデスの空とつながる深遠な日中のセレモニー。" },
-          { day: "3日目", title: "帰路", description: "サークルを閉じる。山を下り、パッチャンタの温泉に最後に浸かり、ピサックへ戻ります。" }
+          { day: "1日目", title: "到着、浄化、テマズカル", description: "パッチャンタへ移動。天然温泉でリラックスして体を清め、その後アウサンガテに向けてハイキングを行い、意図を設定します。" },
+          { day: "2日目", title: "ワチュマ・セレモニー", description: "アプに心を開く。山の精霊と広大なアンデスの空とつながる日中のセレモニー。" },
+          { day: "3日目", title: "テマズカル（スウェットロッジ）＆ラペ", description: "母なる大地の子宮を表す伝統的な蒸し風呂の儀式。聖なるラペの薬による肉体的および精神的な解毒。" },
+          { day: "4日目", title: "2回目のワチュマ・セレモニー", description: "旅を深める。高地の静寂の中で内部のブロックを通して働き、意識を拡大します。" },
+          { day: "5日目", title: "テマズカル＆ラペ", description: "受け取ったエネルギーをグラウンディングし、聖なるラペで精神をさらに浄化するための2回目のスウェットロッジ・セレモニー。" },
+          { day: "6日目", title: "3回目のワチュマ＆統合", description: "最後の薬のセレモニー。統合、感謝、そして週の間に受けた癒しの封印に焦点を当てます。" },
+          { day: "7日目", title: "帰路", description: "山を下り、パッチャンタの温泉に最後に浸かり、ピサックへ戻ります。" }
         ]
       },
       benefits: { title: "ワチュマの力", subtitle: "なぜ聖なるサボテンと共に旅をするのか", items: [{ title: "感情の癒し", description: "過去のトラウマや感情的なブロックを解放します。" }, { title: "自然とのつながり", description: "大地、要素、そしてアンデスの精霊との深いつながりを体験します。" }, { title: "明晰さとビジョン", description: "心を静め、人生の道に対する導きと目的を受け取ります。" }] },
@@ -1699,31 +1723,30 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
                 title: "ワチュマ・リトリートで期待すること",
                 content: [
                     "ワチュマ・リトリートを計画することは、魂の巡礼の準備のように感じられるかもしれません。植物薬が初めての方でも、経験豊富な探求者でも、すべてのワチュマ・セレモニーはユニークで変容をもたらす体験を提供します。アンデスの精霊とパチャママ自身が常に存在するペルーの聖なる谷でのリトリートに乗り出す際に期待できることは次のとおりです。",
-                    "<strong>深い癒しのための聖なる環境</strong><br>クスコ近くの聖なる谷は、あなたの精神的な旅のための完璧な背景です。アンデスの山々に囲まれたリトリートスペースは、ワチュマの力を増幅する素晴らしい風景に囲まれています。到着した瞬間から、地球と宇宙の間の深いつながりを感じるでしょう。このつながりは、アンデスの宇宙論とワチュマの伝統の中心です。",
-                    "<strong>典型的なワチュマ・セレモニーの日</strong><br>リトリートは、ワチュマへの穏やかな紹介から始まります。エルナン・コルケの指導の下、セレモニーは安全で協力的なスペースで展開され、内なる声に耳を傾けることが奨励されます。ワチュマは心を開き、明晰さと安らぎを与えながら、一日を通して旅をします。リトリートには、自然の中での静かな時間、グループシェアリング、内省の時間が含まれることが多く、体験を全体的かつ癒しのあるものにします。",
-                    "<strong>ワチュマ体験の統合</strong><br>ワチュマから得られる洞察は深遠であり、これらの教訓を日常生活に統合するために時間を取ることが重要です。エルナンと彼のチームは、グループディスカッションやマンツーマンのサポートを通じて、あなたが体験を処理するのを助けるためにそこにいます。多くの参加者は、新たな目的意識と、自分自身や周りの世界との深いつながりを持ってリトリートを後にします。"
+                    "<strong>深い癒しのための聖なる環境</strong><br>クスコ近くの聖なる谷は、あなたの精神的な旅のための完璧な背景です。アンデスの山々に囲まれたリトリートスペースは、ワチュマの力を増幅する素晴らしい風景に囲まれています。",
+                    "<strong>典型的なワチュマ・セレモニーの日</strong><br>リトリートは、ワチュマへの穏やかな紹介から始まります。エルナン・コルケの指導の下、セレモニーは安全で協力的なスペースで展開され、内なる声に耳を傾けることが奨励されます。",
+                    "<strong>ワチュマ体験の統合</strong><br>ワチュマから得られる洞察は深遠であり、これらの教訓を日常生活に統合するために時間を取ることが重要です。エルナンと彼のチームは、グループディスカッションやマンツーマンのサポートを通じて、あなたが体験を処理するのを助けるためにそこにいます。"
                 ]
             },
             {
                 title: "ワチュマの治癒力を発見する",
                 content: [
-                    "<strong>サンペドロサボテンとは？</strong><br>サンペドロサボテン（ワチュマとしても知られる）は、主にペルーのアンデス高地に自生する古代の薬用植物です。学名<em>Echinopsis pachanoi</em>と呼ばれるこの背の高い円柱状の緑色のサボテンは、標高2,000〜3,000メートルの高地で繁栄します。顕著な肋骨、短い棘、そして夜に咲く大きな白い花によって容易に認識されます。",
-                    "<strong>起源と歴史</strong><br>サンペドロは、何千年もの間、アンデスの先住民族、特にケチュア族とアイマラ族によって使用されてきました。シャーマニズムの伝統に深く根ざしており、物理的世界と精神的世界の間の架け橋として機能します。サンペドロという名前は、天国の門の守護者である聖ペテロにちなんでおり、精神的な次元へのアクセスを象徴しています。",
-                    "<strong>メスカリンの力：普遍的な調和への接続</strong><br>サンペドロサボテンの主要な活性化合物の一つは、天然に存在する向精神性アルカロイドであるメスカリンです。メスカリンは、ワチュマに関連する深遠な幻想的および内省的な体験に関与しています。合成物質とは異なり、サンペドロからのメスカリンは、個人を変性意識状態へと優しく導き、周囲の世界との一体感と調和を育みます。",
-                    "ワチュマの儀式は、参加者がパチャママ（母なる大地）と深くつながり、自然の鼓動と生命のリズムそのものを体験するように導くことがよくあります。このつながりは、自己と宇宙の間の境界を解消するのに役立ち、深遠な洞察と精神的な明晰さを可能にします。この旅に乗り出す多くの人々は、それを愛と思いやりの心が自然に流れる、心を開く体験として説明しています。",
-                    "<strong>精神的および治療的利点</strong><br>サンペドロはその精神的および治癒的特性で有名です。その効果は一般的に、アヤワスカなどの他の植物薬と比較して、より穏やかで段階的です。これにより、より突然の目覚めの激しさなしに、感情的な癒しと内面の明晰さを求める人々にとってアクセスしやすくなります。<br><br><strong>精神的利点：</strong><br>• スピリチュアルな目覚め：本当の自分や自然界との再接続を促進します。<br>• 心を開く：思いやり、許し、そして深い感情の解放を促進します。<br>• 精神的な明晰さ：人生の課題に対する視点を得るのを助け、受容を促進します。<br><br><strong>治療的利点：</strong><br>• 感情の解放：過去のトラウマや未解決の感情を処理するのに役立ちます。<br>• 平穏と静けさ：不安を軽減し、内面の平和を育みます。<br>• 自然とのつながり：地球や要素との絆を強化します。"
+                    "<strong>サンペドロサボテンとは？</strong><br>サンペドロサボテン（ワチュマとしても知られる）は、主にペルーのアンデス高地に自生する古代の薬用植物です。",
+                    "<strong>起源と歴史</strong><br>サンペドロは、アンデスの先住民、特にケチュア族とアイマラ族によって何千年もの間使用されてきました。",
+                    "<strong>メスカリンの力</strong><br>主要な活性化合物の一つはメスカリンであり、幻想的で内省的な体験に関与しています。",
+                    "<strong>精神的および治療的利点</strong><br>サンペドロはその精神的および治癒的特性で有名です。その効果は一般的に、アヤワスカなどの他の植物薬と比較して、より穏やかで段階的です。"
                 ]
             }
         ],
         questionsTitle: "よくある質問",
         questions: [
-            { question: "サンペドロ・セレモニーとは何ですか？", answer: "サンペドロ（ワチュマ）は、癒し、ビジョン、そして深い精神的なつながりのために使用される聖なる植物薬です。私たちのセレモニーは、安全で変容をもたらす体験を確実にするために、経験豊富なファシリテーターによって導かれます。" },
-            { question: "リトリートは初心者にも適していますか？", answer: "はい、私たちのリトリートは、植物薬の経験があるかどうかにかかわらず、すべての人に開かれています。プロセス全体を通して完全なガイダンスとサポートを提供します。" },
-            { question: "キンサコチャとは何ですか、なぜ特別な場所なのですか？", answer: "ピサックの近くにあるキンサコチャは、聖なる湖に囲まれた静かな地域です。自然やアンデスの精神性との深いつながりを提供する、ワチュマのセレモニーに理想的な環境です。" },
-            { question: "リトリートやセレモニーには何を持っていくべきですか？", answer: "詳細なリストが提供されますが、必需品には快適な服、ハイキングシューズ、私物、そして変容のためのオープンな心が含まれます。" },
-            { question: "リトリート中に話される言語は何ですか？", answer: "エルナンはケチュア語とスペイン語を話します。これらの言語を話さない場合は、リトリート全体を通してフランス語-スペイン語の通訳が利用可能です。" },
-            { question: "リトリートは安全ですか？", answer: "安全は私たちの最優先事項です。私たちのリトリートは、旅の各ステップをガイドする経験豊富なファシリテーターと共に、管理された支援的な環境で開催されます。" },
-            { question: "返金またはキャンセルポリシーは何ですか？", answer: "デポジットは特定の日付まで返金可能です。計画が変更された場合は、明確さとサポートを確保するために、早期の連絡をお勧めします。" }
+            { question: "サンペドロ・セレモニーとは何ですか？", answer: "サンペドロ（ワチュマ）は、癒し、ビジョン、そして深い精神的なつながりのために使用される聖なる植物薬です。" },
+            { question: "リトリートは初心者にも適していますか？", answer: "はい、私たちのリトリートは、植物薬の経験があるかどうかにかかわらず、すべての人に開かれています。" },
+            { question: "キンサコチャとは何ですか、なぜ特別な場所なのですか？", answer: "ピサックの近くにあるキンサコチャは、聖なる湖に囲まれた静かな地域です。セレモニーに理想的な環境です。" },
+            { question: "リトリートには何を持っていくべきですか？", answer: "詳細なリストが提供されますが、必需品には快適な服、ハイキングシューズ、そしてオープンな心が含まれます。" },
+            { question: "リトリート中に話される言語は何ですか？", answer: "エルナンはケチュア語とスペイン語を話します。通訳が利用可能です。" },
+            { question: "リトリートは安全ですか？", answer: "安全は私たちの最優先事項です。" },
+            { question: "返金ポリシーは何ですか？", answer: "デポジットは特定の日付まで返金可能です。" }
         ]
       },
       testimonials: { title: "心からの声", items: [{ 
@@ -1788,13 +1811,13 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             title: "नूतनवर्ष औसंगाते (३ दिनानि)", 
             description: "अपुना सह २०२६ आरभत। पाच्छन्ता मध्ये तेमाज्काल, रापे, तथा वाचुमा संस्कारः। निःशुल्क व्यावसायिक छायाचित्रणम् समाविष्टम्।", 
             price: "€१७३",
-            details: { duration: "३ दिनानि", location: "पाच्छन्ता तथा औसंगाते", groupSize: "समूहः" } 
+            details: { duration: "३ दिनानि", location: "औसंगाते", groupSize: "समूहः" } 
           },
           { 
             title: "औसंगाते पवित्र यात्रा (७ दिनानि)", 
             description: "पूर्ण निमज्जनम्। ३ वाचुमा संस्काराः, तेमाज्काल विधयः, सरोवरेभ्यः पदयात्रा, तथा गभीर चिकित्सा कार्यम्।", 
             price: "प्रच्छन्तु",
-            details: { duration: "७ दिनानि", location: "पाच्छन्ता तथा औसंगाते", groupSize: "समूहः" } 
+            details: { duration: "७ दिनानि", location: "औसंगाते", groupSize: "समूहः" } 
           },
           { 
               title: "जुचुय कोस्को निमज्जनम्", 

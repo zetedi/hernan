@@ -35,7 +35,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
       locationText = "Juchuy Qosqo, Peru";
   } else if (type === 'ausangate3Day') {
       bgImage = IMAGES.maestros;
-      locationText = "Pacchanta, Peru";
+      locationText = "Ausangate, Peru";
       dateText = t.details?.dates || "Jan 3-5, 2026";
   }
 
