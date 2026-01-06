@@ -31,8 +31,8 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
         <div className="relative rounded-xl overflow-hidden group shadow-2xl mb-12 border border-pacha-gold/30">
           {/* Image Background */}
           <img 
-            src={IMAGES.maestros} 
-            alt="Ausangate Maestros" 
+            src={IMAGES.ausangate3} 
+            alt="Ausangate Full Moon" 
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-70 transition-opacity duration-500 scale-100 group-hover:scale-105 transition-transform"
           />
@@ -88,7 +88,7 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
             // Determine Background Image
             let bgImage = null;
             if (isRetreat2Day) bgImage = IMAGES.mayra;
-            if (isAusangate3Day) bgImage = IMAGES.maestros;
+            if (isAusangate3Day) bgImage = IMAGES.ausangate3;
             if (isAusangate7Day) bgImage = IMAGES.ausangate;
             if (isJuchuy) bgImage = IMAGES.juchuy;
             if (isOneDay) bgImage = IMAGES.flowers; 

@@ -20,7 +20,7 @@ export const Ausangate3Day: React.FC<Ausangate3DayProps> = ({ t, preparation, ui
       <div className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div 
             className="absolute inset-0 bg-cover bg-center bg-scroll md:bg-fixed bg-no-repeat"
-            style={{ backgroundImage: `url(${IMAGES.maestros})` }}
+            style={{ backgroundImage: `url(${IMAGES.ausangate3})` }}
         >
           <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-t from-pacha-stone via-transparent to-transparent" />

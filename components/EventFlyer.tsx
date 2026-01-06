@@ -34,9 +34,9 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
       bgImage = IMAGES.juchuy;
       locationText = "Juchuy Qosqo, Peru";
   } else if (type === 'ausangate3Day') {
-      bgImage = IMAGES.maestros;
+      bgImage = IMAGES.ausangate3;
       locationText = "Ausangate, Peru";
-      dateText = t.details?.dates || "Jan 3-5, 2026";
+      dateText = t.details?.dates || "Jan 31 - Feb 2, 2026";
   }
 
   // QR Code URL Generation
@@ -177,12 +177,12 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                             <p className="text-gray-400 text-[10px] md:text-sm uppercase tracking-wider print:text-gray-600">{flyerT.limited}</p>
                         </div>
                         <div className="text-right space-y-1 md:space-y-2">
-                            <div className="flex items-center justify-end gap-2 md:gap-3 text-[10px] md:text-sm font-medium">
-                                <Mail size={12} className="text-pacha-gold print:text-black md:w-[18px] md:h-[18px]" />
+                            <div className="flex items-center justify-end gap-3 text-[10px] md:text-sm font-medium">
+                                <Mail size={14} className="text-pacha-gold md:w-5 md:h-5" />
                                 {footer.columns.contact.email}
                             </div>
-                            <div className="flex items-center justify-end gap-2 md:gap-3 text-[10px] md:text-sm font-medium">
-                                <Phone size={12} className="text-pacha-gold print:text-black md:w-[18px] md:h-[18px]" />
+                            <div className="flex items-center justify-end gap-3 text-[10px] md:text-sm font-medium">
+                                <Phone size={14} className="text-pacha-gold md:w-5 md:h-5" />
                                 {footer.columns.contact.phone}
                             </div>
                         </div>

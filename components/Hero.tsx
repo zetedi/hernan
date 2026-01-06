@@ -70,14 +70,14 @@ export const Hero: React.FC<HeroProps> = ({ t, lang, retreatPrice }) => {
             )}
           </Link>
 
-          {/* 2. Ausangate 3-Day Teaser (Updated for New Year Special) */}
+          {/* 2. Ausangate 3-Day Teaser (Updated for Full Moon Special) */}
           <Link 
             to="/ausangate-3day"
             className="w-full h-48 relative rounded-xl overflow-hidden shadow-2xl border border-pacha-gold/30 bg-black/50 group cursor-pointer block"
           >
             <img 
-                src={IMAGES.maestros} 
-                alt="Ausangate Maestros" 
+                src={IMAGES.ausangate3} 
+                alt="Ausangate Full Moon" 
                 className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 scale-100 group-hover:scale-105 transition-transform"
             />
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
