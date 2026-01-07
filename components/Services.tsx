@@ -81,8 +81,8 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
             const isCostaRica = index === 5;
             const isPrivate = index === 6;
 
-            // Base styling
-            const baseClasses = "border border-pacha-leaf/30 p-6 rounded-xl transition-all duration-300 group flex flex-col relative overflow-hidden backdrop-blur-sm";
+            // Base styling - Updated to border-[1.5px] and border-white
+            const baseClasses = "border-[1.5px] border-white shadow-[0_0_25px_rgba(255,255,255,0.25)] p-6 rounded-xl transition-all duration-300 group flex flex-col relative overflow-hidden backdrop-blur-sm";
             const colorClasses = "hover:border-pacha-gold";
 
             // Determine Background Image

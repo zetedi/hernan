@@ -12,8 +12,8 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ t, lang, retreatPrice }) => {
-  // Shared card classes for consistent border and shadow - Updated to border-2 and border-white/90 (less thick, more white)
-  const cardClasses = "w-full h-48 relative rounded-xl overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.15)] border-2 border-white/90 bg-black/50 group cursor-pointer block hover:border-pacha-gold/60 hover:shadow-[0_0_20px_rgba(232,185,35,0.3)] transition-all duration-300";
+  // Shared card classes - Reverted to border-2, stronger shadow
+  const cardClasses = "w-full h-48 relative rounded-xl overflow-hidden shadow-[0_0_25px_rgba(255,255,255,0.25)] border-2 border-white bg-black/50 group cursor-pointer block hover:border-pacha-gold/60 hover:shadow-[0_0_30px_rgba(232,185,35,0.4)] transition-all duration-300";
 
   return (
     <section id="hero" className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
