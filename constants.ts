@@ -32,6 +32,7 @@ export const IMAGES = {
   flowers: "/flowers.jpg",
   ausangate: "/ausangate.jpg",
   ausangate3: "/ausangate3.jpg",
+  hat: "/hat.jpg",
   costa: "/costa.jpg",
   mayra: "/mayra.jpg",
   drum: "/drum.jpg",
@@ -368,7 +369,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
 
   // SPANISH
   [Language.ES]: {
-      ...enTranslations, // Keep structure for type safety, but override ALL text fields below
+      ...enTranslations, 
       ui: {
         viewDetails: "Ver Detalles",
         inquire: "Consultar",
@@ -572,7 +573,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             description: "El día de la ceremonia, que tendrá lugar el segundo día del retiro, recomendamos traer algunos artículos personales que puedan mejorar tu conexión y contribuir al espacio sagrado.",
             items: [
                 { label: "Ropa Cómoda", text: "Viste ropa suelta y cómoda adecuada para el aire libre." },
-                { label: "Protección Solar", text: "Dado que la ceremonia se llevará a cabo al aire libre, trae un sombrero o gorra para protegerte del sol." },
+                { label: "Sombrero o Gorra", text: "Dado que la ceremonia se llevará a cabo al aire libre, trae un sombrero o gorra para protegerte del sol." },
                 { label: "Traer una Ofrenda", text: "Es costumbre traer frutas y flores como ofrendas para la ceremonia. Este gesto simboliza gratitud y conexión con la naturaleza." },
                 { label: "Botella de Agua", text: "Mantenerse hidratado durante todo el día es esencial." },
                 { label: "Cuaderno y Bolígrafo", text: "Puede que te sientas inspirado para escribir en un diario después de la ceremonia para capturar pensamientos, ideas o emociones." }
@@ -582,7 +583,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             title: "Sugerencias Adicionales para el Retiro",
             description: "Para mejorar tu viaje, considera lo siguiente:",
             items: [
-                { label: "Respetar el Tiempo de Silencio", text: "Usa períodos de silencio para reflexionar y procesar tu experiencia." },
+                { label: "Respetar el Silencio", text: "Usa períodos de silencio para reflexionar y procesar tu experiencia." },
                 { label: "Respiración y Meditación", text: "Los ejercicios de respiración suave o la meditación pueden ayudar a enraizarte y mantenerte centrado." },
                 { label: "Desintoxicación Digital", text: "Desconéctate de teléfonos y otros dispositivos electrónicos para estar completamente presente." },
                 { label: "Conectar con la Naturaleza", text: "Si es posible, pasa tiempo en la naturaleza cada día." }
@@ -1551,7 +1552,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           }], 
           ausangateCta: { title: "アウサンガテ：空に近い旅", description: "アウサンガテへの特別なワチュマの旅に参加しましょう。無料のプロ写真撮影付き。", button: "旅程を見る" } 
       },
-      hero: { title: "アンデスの聖なる薬", subtitle: "聖なる谷での伝統的なワチュマ・セレモニーを通じて、パチャママ（母なる大地）と再びつながりましょう。", cta: "セレモニーを予約", retreatTeaser: { label: "聖なる没入", title: "2日間リトリート", location: "ピサック＆キンサコチャ" }, ausangateTeaser: { label: "空に近い場所", title: "アウサンガテ3日間", date: "2026年1月28日〜30日" }, costaRicaTeaser: { label: "特別イベント", title: "コスタリカ巡礼", date: "2026年2月24日〜3月2日" } },
       ausangate3Day: {
         title: "アウサンガテ：空に近い旅（3日間）",
         subtitle: "アプとのセレモニー",
@@ -1817,7 +1817,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           }], 
           ausangateCta: { title: "औसंगाते: आकाशस्य समीपे यात्रा", description: "औसंगाते प्रति विशिष्ट वाचुमा यात्रा। निःशुल्क छायाचित्रणम् समाविष्टम्।", button: "३ दिवसीय यात्रां पश्यन्तु" } 
       },
-      hero: { title: "पवित्र अण्डीज ओषधि", subtitle: "पवित्र उपत्यकायाम् परम्परागत वाचुमा संस्कारैः सह पचमामायाः सह पुनः सम्बध्यताम्।", cta: "संस्कारं आरक्षयतु", retreatTeaser: { label: "पवित्र निमज्जनम्", title: "२ दिवसीय शिबिरः", location: "पिसाक तथा किन्साकोचा" }, ausangateTeaser: { label: "आकाशस्य समीपे", title: "औसंगाते ३ दिनानि", date: "जनवरी २८ - ३०, २०२६" }, costaRicaTeaser: { label: "विशेष कार्यक्रमः", title: "कोस्टा रिका तीर्थयात्रा", date: "फरवरी २४ - मार्च २, २०२६" } },
       ausangate3Day: {
         title: "औसंगाते: आकाशस्य समीपे यात्रा (३ दिनानि)",
         subtitle: "अपुना सह संस्कारः",
