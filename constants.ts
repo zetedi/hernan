@@ -89,7 +89,7 @@ const enTranslations: TranslationData = {
       subtitle: "Reconnect with Pachamama through traditional Wachuma ceremonies in the Sacred Valley.",
       cta: "Book a Ceremony",
       retreatTeaser: { label: "Sacred Immersion", title: "2 Day Retreat", location: "Pisac & Kinsacocha" },
-      ausangateTeaser: { label: "Full Moon Special", title: "Ausangate Full Moon", date: "Jan 28 - 30, 2026" },
+      ausangateTeaser: { label: "Closer to the Sky", title: "Ausangate 3 Days", date: "Jan 28 - 30, 2026" },
       costaRicaTeaser: { label: "Special Event", title: "Costa Rica Pilgrimage", date: "Feb 24 - Mar 2, 2026" }
     },
     benefits: {
@@ -122,8 +122,8 @@ const enTranslations: TranslationData = {
             details: { duration: "2 Days", location: "Pisac & Kinsacocha", groupSize: "Max 10" }
         },
         { 
-            title: "Ausangate Full Moon (3 Days)", 
-            description: "A powerful Full Moon journey with the Apu. Temazcal, Rapé, and Wachuma ceremony in Pacchanta. Includes free professional photography.", 
+            title: "Ausangate: Closer to the Sky (3 Days)", 
+            description: "A powerful journey with the Apu. Temazcal, Rapé, and Wachuma ceremony in Pacchanta. Includes free professional photography.", 
             price: "€173",
             details: { duration: "3 Days", location: "Ausangate", groupSize: "Group" }
         },
@@ -158,7 +158,7 @@ const enTranslations: TranslationData = {
             details: { duration: "Varies", location: "Wayna Wasi", groupSize: "1 Person" }
         }
       ],
-      ausangateCta: { title: "Special Full Moon: Ausangate 3-Day", description: "Join a special Full Moon Wachuma Journey to Ausangate. Includes free professional photography.", button: "View 3-Day Journey" }
+      ausangateCta: { title: "Ausangate: A Journey Closer to the Sky", description: "Join a special Wachuma Journey to Ausangate. Includes free professional photography.", button: "View 3-Day Journey" }
     },
     ausangate: {
       title: "Ausangate Sacred Journey (7 Days)",
@@ -176,9 +176,9 @@ const enTranslations: TranslationData = {
       ]
     },
     ausangate3Day: {
-      title: "Ausangate Full Moon Journey (3 Days)",
-      subtitle: "Full Moon Ceremony with the Apu",
-      description: "A condensed and powerful Full Moon plant medicine journey. Connect with the sacred mountain and the healing waters under the light of the moon.",
+      title: "Ausangate: A Journey Closer to the Sky (3 Days)",
+      subtitle: "Ceremony with the Apu",
+      description: "A condensed and powerful plant medicine journey. Connect with the sacred mountain and the healing waters in the high Andes.",
       details: {
           dates: "Jan 28 - 30, 2026",
           price: "€173",
@@ -403,7 +403,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           subtitle: "Reconecta con la Pachamama a través de ceremonias tradicionales de Wachuma en el Valle Sagrado.",
           cta: "Reserva una Ceremonia",
           retreatTeaser: { label: "Inmersión Sagrada", title: "Retiro de 2 Días", location: "Pisac y Kinsacocha" },
-          ausangateTeaser: { label: "Especial Luna Llena", title: "Ausangate Luna Llena", date: "28 - 30 Ene, 2026" },
+          ausangateTeaser: { label: "Más Cerca del Cielo", title: "Viaje Ausangate", date: "28 - 30 Ene, 2026" },
           costaRicaTeaser: { label: "Evento Especial", title: "Peregrinaje a Costa Rica", date: "24 Feb - 2 Mar, 2026" }
       },
       benefits: {
@@ -436,8 +436,8 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
                 details: { duration: "2 Días", location: "Pisac y Kinsacocha", groupSize: "Max 10" }
             },
             { 
-                title: "Ausangate Luna Llena (3 Días)", 
-                description: "Una poderosa jornada de Luna Llena con el Apu. Temazcal, Rapé y ceremonia de Wachuma en Pacchanta. Incluye fotografía profesional gratuita.", 
+                title: "Ausangate: Más Cerca del Cielo (3 Días)", 
+                description: "Una poderosa jornada con el Apu. Temazcal, Rapé y ceremonia de Wachuma en Pacchanta. Incluye fotografía profesional gratuita.", 
                 price: "€173",
                 details: { duration: "3 Días", location: "Ausangate", groupSize: "Grupo" }
             },
@@ -472,7 +472,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
                 details: { duration: "Varía", location: "Wayna Wasi", groupSize: "1 Persona" }
             }
           ],
-          ausangateCta: { title: "Especial Luna Llena: Ausangate 3 Días", description: "Únete a un viaje especial de Wachuma de Luna Llena al Ausangate. Incluye fotografía profesional gratuita.", button: "Ver Viaje de 3 Días" }
+          ausangateCta: { title: "Ausangate: Un Viaje Más Cerca del Cielo", description: "Únete a un viaje especial de Wachuma al Ausangate. Incluye fotografía profesional gratuita.", button: "Ver Viaje de 3 Días" }
       },
       ausangate: {
         title: "Viaje Sagrado al Ausangate",
@@ -490,9 +490,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         ]
       },
       ausangate3Day: {
-        title: "Viaje Ausangate de Luna Llena (3 Días)",
-        subtitle: "Ceremonia de Luna Llena con el Apu",
-        description: "Un viaje de medicina vegetal condensado y poderoso bajo la Luna Llena. Conecta con la montaña sagrada y las aguas curativas bajo la luz de la luna.",
+        title: "Ausangate: Un Viaje Más Cerca del Cielo (3 Días)",
+        subtitle: "Ceremonia con el Apu",
+        description: "Un viaje de medicina vegetal condensado y poderoso en los altos Andes. Conecta con la montaña sagrada y las aguas curativas.",
         details: {
             dates: "28 - 30 Ene, 2026",
             price: "€173",
@@ -689,7 +689,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         subtitle: "Kapcsolódj újra Pachamamával a hagyományos Wachuma szertartásokon keresztül a Szent Völgyben.",
         cta: "Szertartás Foglalása",
         retreatTeaser: { label: "Szent Elmélyülés", title: "2 Napos Elvonulás", location: "Pisac & Kinsacocha" },
-        ausangateTeaser: { label: "Telihold Különlegesség", title: "Ausangate 3 Nap", date: "2026. Jan 28 - 30." },
+        ausangateTeaser: { label: "Közelebb az Éghez", title: "Ausangate 3 Nap", date: "2026. Jan 28 - 30." },
         costaRicaTeaser: { label: "Különleges Esemény", title: "Costa Rica Zarándoklat", date: "2026. Feb 24 - Már 2." }
       },
       benefits: {
@@ -722,8 +722,8 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               details: { duration: "2 Nap", location: "Pisac & Kinsacocha", groupSize: "Max 10" }
           },
           { 
-              title: "Ausangate Telihold (3 Nap)", 
-              description: "Egy erőteljes Telihold utazás az Apuval. Temazcal, Rapé és Wachuma szertartás Pacchantában. Ingyenes professzionális fotózással.", 
+              title: "Ausangate: Közelebb az Éghez (3 Nap)", 
+              description: "Egy erőteljes utazás az Apuval. Temazcal, Rapé és Wachuma szertartás Pacchantában. Ingyenes professzionális fotózással.", 
               price: "€173",
               details: { duration: "3 Nap", location: "Ausangate", groupSize: "Csoport" }
           },
@@ -758,7 +758,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               details: { duration: "Változó", location: "Wayna Wasi", groupSize: "1 Fő" }
           }
         ],
-        ausangateCta: { title: "Különleges Telihold: Ausangate 3 Nap", description: "Csatlakozz egy különleges Telihold Wachuma utazáshoz az Ausangate-hoz. Ingyenes professzionális fotózással.", button: "3 Napos Utazás Megtekintése" }
+        ausangateCta: { title: "Ausangate: Utazás Közelebb az Éghez", description: "Csatlakozz egy különleges Wachuma utazáshoz az Ausangate-hoz. Ingyenes professzionális fotózással.", button: "3 Napos Utazás Megtekintése" }
       },
       ausangate: {
         title: "Ausangate Szent Utazás (7 Nap)",
@@ -776,9 +776,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         ]
       },
       ausangate3Day: {
-        title: "Ausangate Telihold Utazás (3 Nap)",
-        subtitle: "Telihold Szertartás az Apuval",
-        description: "Egy tömör és erőteljes Telihold növényi medicina utazás. Kapcsolódj a szent heggyel és a gyógyító vizekkel a holdfény alatt.",
+        title: "Ausangate: Utazás Közelebb az Éghez (3 Nap)",
+        subtitle: "Szertartás az Apuval",
+        description: "Egy tömör és erőteljes növényi medicina utazás. Kapcsolódj a szent heggyel és a gyógyító vizekkel a magas Andokban.",
         details: {
             dates: "2026. Január 28 - 30.",
             price: "€173",
@@ -979,8 +979,8 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               details: { duration: "2 P'unchay", location: "Pisac & Kinsacocha", groupSize: "Max 10" } 
           }, 
           { 
-            title: "Ausangate Hunt'a Killa (3 P'unchay)", 
-            description: "Huk atiyniyuq Hunt'a Killa puriy Apuwan. Temazcal, Rapé, Wachuma ima. Fotoqrafiya qispisqa.", 
+            title: "Ausangate: Hanaq Pacha (3 P'unchay)", 
+            description: "Huk atiyniyuq puriy Apuwan. Temazcal, Rapé, Wachuma ima. Fotoqrafiya qispisqa.", 
             price: "€173",
             details: { duration: "3 P'unchay", location: "Ausangate", groupSize: "Huñu" } 
           },
@@ -1011,13 +1011,13 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               price: "Tapukuy",
               details: { duration: "-", location: "Wayna Wasi", groupSize: "1 Runa" }
           }], 
-          ausangateCta: { title: "Hunt'a Killa: Ausangate 3 P'unchay", description: "Hamuy kay Hunt'a Killa Wachuma puriyman Ausangatepi. Fotoqrafiya qispisqa.", button: "Qhawariy" } 
+          ausangateCta: { title: "Ausangate: Hanaq Pachaman Astawan Qaylla", description: "Hamuy kay Wachuma puriyman Ausangatepi. Fotoqrafiya qispisqa.", button: "Qhawariy" } 
       },
-      hero: { title: "Willka Hampi Wachuma", subtitle: "Pachamamawan tinkuy, ñawpaq yachaywan.", cta: "Raymita Waqaychay", retreatTeaser: { label: "Willka T'aqakuy", title: "2 P'unchay T'aqakuy", location: "Pisac & Kinsacocha" }, ausangateTeaser: { label: "Hunt'a Killa", title: "Ausangate 3 P'unchay", date: "Enero 28 - 30, 2026" }, costaRicaTeaser: { label: "Hatun Raymi", title: "Costa Rica Puriy", date: "Febrero 24 - Marzo 2, 2026" } },
+      hero: { title: "Willka Hampi Wachuma", subtitle: "Pachamamawan tinkuy, ñawpaq yachaywan.", cta: "Raymita Waqaychay", retreatTeaser: { label: "Willka T'aqakuy", title: "2 P'unchay T'aqakuy", location: "Pisac & Kinsacocha" }, ausangateTeaser: { label: "Hanaq Pacha", title: "Ausangate 3 P'unchay", date: "Enero 28 - 30, 2026" }, costaRicaTeaser: { label: "Hatun Raymi", title: "Costa Rica Puriy", date: "Febrero 24 - Marzo 2, 2026" } },
       ausangate3Day: {
-        title: "Ausangate Hunt'a Killa Puriy (3 P'unchay)",
-        subtitle: "Hunt'a Killa Raymi Apuwan",
-        description: "Huk pisi ichaqa atiyniyuq Hunt'a Killa hampi puriy. Willka urquwan hampi yakuwan tinkuy killa k'anchaypi.",
+        title: "Ausangate: Hanaq Pacha Puriy (3 P'unchay)",
+        subtitle: "Raymi Apuwan",
+        description: "Huk pisi ichaqa atiyniyuq hampi puriy. Willka urquwan hampi yakuwan tinkuy hanaq pachapi.",
         details: {
             dates: "Enero 28 - 30, 2026",
             price: "€173",
@@ -1251,8 +1251,8 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               details: { duration: "يومين", location: "بيساك وكينساكوتشا", groupSize: "الحد الأقصى 10" } 
           }, 
           { 
-            title: "أوسانجاتي في البدر (3 أيام)", 
-            description: "رحلة بدر قوية مع الأبو. مراسم تيمزكال، رابي، وواتشوما في باتشانتا. يشمل تصويرًا احترافيًا مجانيًا.", 
+            title: "أوسانجاتي: رحلة أقرب إلى السماء (3 أيام)", 
+            description: "رحلة قوية مع الأبو. مراسم تيمزكال، رابي، وواتشوما في باتشانتا. يشمل تصويرًا احترافيًا مجانيًا.", 
             price: "€173",
             details: { duration: "3 أيام", location: "أوسانجاتي", groupSize: "مجموعة" } 
           },
@@ -1283,13 +1283,13 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               price: "استفسار",
               details: { duration: "يختلف", location: "واينا واسي", groupSize: "شخص واحد" }
           }], 
-          ausangateCta: { title: "بدر خاص: أوسانجاتي 3 أيام", description: "انضم إلى رحلة واتشوما خاصة في البدر إلى أوسانجاتي. يشمل تصويرًا احترافيًا مجانيًا.", button: "عرض مسار الرحلة" } 
+          ausangateCta: { title: "أوسانجاتي: رحلة أقرب إلى السماء", description: "انضم إلى رحلة واتشوما خاصة إلى أوسانجاتي. يشمل تصويرًا احترافيًا مجانيًا.", button: "عرض مسار الرحلة" } 
       },
-      hero: { title: "الطب المقدس في جبال الأنديز", subtitle: "أعد الاتصال مع باتشاماما (الأرض الأم) من خلال مراسم واتشوما التقليدية في الوادي المقدس.", cta: "احجز مراسم", retreatTeaser: { label: "انغماس مقدس", title: "خلوة لمدة يومين", location: "بيساك وكينساكوتشا" }, ausangateTeaser: { label: "خاص بالبدر", title: "أوسانجاتي 3 أيام", date: "28 - 30 يناير 2026" }, costaRicaTeaser: { label: "حدث خاص", title: "حج كوستاريكا", date: "24 فبراير - 2 مارس 2026" } },
+      hero: { title: "الطب المقدس في جبال الأنديز", subtitle: "أعد الاتصال مع باتشاماما (الأرض الأم) من خلال مراسم واتشوما التقليدية في الوادي المقدس.", cta: "احجز مراسم", retreatTeaser: { label: "انغماس مقدس", title: "خلوة لمدة يومين", location: "بيساك وكينساكوتشا" }, ausangateTeaser: { label: "أقرب إلى السماء", title: "أوسانجاتي 3 أيام", date: "28 - 30 يناير 2026" }, costaRicaTeaser: { label: "حدث خاص", title: "حج كوستاريكا", date: "24 فبراير - 2 مارس 2026" } },
       ausangate3Day: {
-        title: "رحلة أوسانجاتي في البدر (3 أيام)",
-        subtitle: "مراسم البدر مع الأبو",
-        description: "رحلة طب نباتي مكثفة وقوية في البدر. تواصل مع الجبل المقدس والمياه الشافية تحت ضوء القمر.",
+        title: "أوسانجاتي: رحلة أقرب إلى السماء (3 أيام)",
+        subtitle: "مراسم مع الأبو",
+        description: "رحلة طب نباتي مكثفة وقوية في أعالي الأنديز. تواصل مع الجبل المقدس والمياه الشافية.",
         details: {
             dates: "28 - 30 يناير 2026",
             price: "€173",
@@ -1517,8 +1517,8 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               details: { duration: "2日間", location: "ピサック＆キンサコチャ", groupSize: "最大10名" } 
           }, 
           { 
-            title: "アウサンガテ満月（3日間）", 
-            description: "アプとの強力な満月の旅。パッチャンタでのテマズカル、ラペ、ワチュマ・セレモニー。無料のプロ写真撮影付き。", 
+            title: "アウサンガテ：空に近い旅（3日間）", 
+            description: "アプとの強力な旅。パッチャンタでのテマズカル、ラペ、ワチュマ・セレモニー。無料のプロ写真撮影付き。", 
             price: "€173",
             details: { duration: "3日間", location: "アウサンガテ", groupSize: "グループ" } 
           },
@@ -1549,13 +1549,13 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               price: "お問い合わせ",
               details: { duration: "様々", location: "ワイナ・ワシ", groupSize: "1名" }
           }], 
-          ausangateCta: { title: "特別満月：アウサンガテ3日間", description: "アウサンガテへの特別な満月ワチュマの旅に参加しましょう。無料のプロ写真撮影付き。", button: "旅程を見る" } 
+          ausangateCta: { title: "アウサンガテ：空に近い旅", description: "アウサンガテへの特別なワチュマの旅に参加しましょう。無料のプロ写真撮影付き。", button: "旅程を見る" } 
       },
-      hero: { title: "アンデスの聖なる薬", subtitle: "聖なる谷での伝統的なワチュマ・セレモニーを通じて、パチャママ（母なる大地）と再びつながりましょう。", cta: "セレモニーを予約", retreatTeaser: { label: "聖なる没入", title: "2日間リトリート", location: "ピサック＆キンサコチャ" }, ausangateTeaser: { label: "満月スペシャル", title: "アウサンガテ満月", date: "2026年1月28日〜30日" }, costaRicaTeaser: { label: "特別イベント", title: "コスタリカ巡礼", date: "2026年2月24日〜3月2日" } },
+      hero: { title: "アンデスの聖なる薬", subtitle: "聖なる谷での伝統的なワチュマ・セレモニーを通じて、パチャママ（母なる大地）と再びつながりましょう。", cta: "セレモニーを予約", retreatTeaser: { label: "聖なる没入", title: "2日間リトリート", location: "ピサック＆キンサコチャ" }, ausangateTeaser: { label: "空に近い場所", title: "アウサンガテ3日間", date: "2026年1月28日〜30日" }, costaRicaTeaser: { label: "特別イベント", title: "コスタリカ巡礼", date: "2026年2月24日〜3月2日" } },
       ausangate3Day: {
-        title: "アウサンガテ満月の旅（3日間）",
-        subtitle: "アプとの満月セレモニー",
-        description: "凝縮された強力な満月の植物薬の旅。月の光の下で聖なる山と癒しの水とつながりましょう。",
+        title: "アウサンガテ：空に近い旅（3日間）",
+        subtitle: "アプとのセレモニー",
+        description: "高地アンデスでの凝縮された強力な植物薬の旅。聖なる山と癒しの水とつながりましょう。",
         details: {
             dates: "2026年1月28日〜30日",
             price: "€173",
@@ -1783,8 +1783,8 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               details: { duration: "२ दिनानि", location: "पिसाक तथा किन्साकोचा", groupSize: "अधिकतमं १०" } 
           }, 
           { 
-            title: "औसंगाते पूर्णिमा यात्रा (३ दिनानि)", 
-            description: "अपुना सह पूर्णिमा संस्कारः। पाच्छन्ता मध्ये तेमाज्काल, रापे, तथा वाचुमा संस्कारः। निःशुल्क व्यावसायिक छायाचित्रणम् समाविष्टम्।", 
+            title: "औसंगाते: आकाशस्य समीपे यात्रा (३ दिनानि)", 
+            description: "अपुना सह एकः शक्तिशाली यात्रा। पाच्छन्ता मध्ये तेमाज्काल, रापे, तथा वाचुमा संस्कारः। निःशुल्क व्यावसायिक छायाचित्रणम् समाविष्टम्।", 
             price: "€१७३",
             details: { duration: "३ दिनानि", location: "औसंगाते", groupSize: "समूहः" } 
           },
@@ -1815,13 +1815,13 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               price: "प्रच्छन्तु",
               details: { duration: "भिन्नः", location: "वायना वासी", groupSize: "१ जनः" }
           }], 
-          ausangateCta: { title: "पूर्णिमा विशेष: औसंगाते ३ दिनानि", description: "औसंगाते प्रति विशिष्ट पूर्णिमा वाचुमा यात्रा। निःशुल्क छायाचित्रणम् समाविष्टम्।", button: "३ दिवसीय यात्रां पश्यन्तु" } 
+          ausangateCta: { title: "औसंगाते: आकाशस्य समीपे यात्रा", description: "औसंगाते प्रति विशिष्ट वाचुमा यात्रा। निःशुल्क छायाचित्रणम् समाविष्टम्।", button: "३ दिवसीय यात्रां पश्यन्तु" } 
       },
-      hero: { title: "पवित्र अण्डीज ओषधि", subtitle: "पवित्र उपत्यकायाम् परम्परागत वाचुमा संस्कारैः सह पचमामायाः सह पुनः सम्बध्यताम्।", cta: "संस्कारं आरक्षयतु", retreatTeaser: { label: "पवित्र निमज्जनम्", title: "२ दिवसीय शिबिरः", location: "पिसाक तथा किन्साकोचा" }, ausangateTeaser: { label: "पूर्णिमा विशेष", title: "औसंगाते ३ दिनानि", date: "जनवरी २८ - ३०, २०२६" }, costaRicaTeaser: { label: "विशेष कार्यक्रमः", title: "कोस्टा रिका तीर्थयात्रा", date: "फरवरी २४ - मार्च २, २०२६" } },
+      hero: { title: "पवित्र अण्डीज ओषधि", subtitle: "पवित्र उपत्यकायाम् परम्परागत वाचुमा संस्कारैः सह पचमामायाः सह पुनः सम्बध्यताम्।", cta: "संस्कारं आरक्षयतु", retreatTeaser: { label: "पवित्र निमज्जनम्", title: "२ दिवसीय शिबिरः", location: "पिसाक तथा किन्साकोचा" }, ausangateTeaser: { label: "आकाशस्य समीपे", title: "औसंगाते ३ दिनानि", date: "जनवरी २८ - ३०, २०२६" }, costaRicaTeaser: { label: "विशेष कार्यक्रमः", title: "कोस्टा रिका तीर्थयात्रा", date: "फरवरी २४ - मार्च २, २०२६" } },
       ausangate3Day: {
-        title: "औसंगाते पूर्णिमा यात्रा (३ दिनानि)",
-        subtitle: "अपुना सह पूर्णिमा संस्कारः",
-        description: "एकः संक्षिप्तः शक्तिशाली च पूर्णिमा वनस्पतिओषधि यात्रा। चन्द्रप्रकाशे पवित्रपर्वतेन तथा चिकित्साजलैः सह सम्बध्यताम्।",
+        title: "औसंगाते: आकाशस्य समीपे यात्रा (३ दिनानि)",
+        subtitle: "अपुना सह संस्कारः",
+        description: "एकः संक्षिप्तः शक्तिशाली च वनस्पतिओषधि यात्रा उच्च अण्डीज मध्ये। पवित्रपर्वतेन तथा चिकित्साजलैः सह सम्बध्यताम्।",
         details: {
             dates: "जनवरी २८ - ३०, २०२६",
             price: "€१७३",

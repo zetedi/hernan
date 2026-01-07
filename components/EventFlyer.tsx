@@ -54,6 +54,22 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
       return "";
   }
 
+  // Helper to split title for layout
+  const renderTitle = () => {
+      if (t.title && t.title.includes('(')) {
+          const parts = t.title.split('(');
+          return (
+              <>
+                  {parts[0]}
+                  <span className="block mt-1 md:mt-2 text-2xl md:text-5xl">
+                      ({parts[1]}
+                  </span>
+              </>
+          );
+      }
+      return t.title;
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-2 md:p-8 print:p-0 print:bg-white relative">
         {/* Print Button - Fixed and High Z-Index */}
@@ -110,7 +126,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                 {/* Main Title Area */}
                 <div className={`mt-auto px-4 md:px-12 pt-2 md:pt-4 pb-2 md:pb-4 text-center ${isJuchuy ? 'mb-1 md:mb-2' : ''}`}>
                     <h1 className="text-3xl md:text-6xl font-serif font-bold text-white mb-2 leading-tight drop-shadow-[0_4px_3px_rgba(0,0,0,0.9)]">
-                        {t.title}
+                        {renderTitle()}
                     </h1>
                     <div className="w-16 md:w-32 h-0.5 md:h-1 bg-pacha-gold mx-auto my-3 md:my-6 shadow-lg"></div>
                     <div className="flex justify-center gap-3 md:gap-8 text-xs md:text-lg font-bold text-pacha-stone">
