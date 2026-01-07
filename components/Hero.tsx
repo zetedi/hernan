@@ -12,6 +12,9 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ t, lang, retreatPrice }) => {
+  // Shared card classes for consistent border and shadow - Updated to border-2 and border-white/90 (less thick, more white)
+  const cardClasses = "w-full h-48 relative rounded-xl overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.15)] border-2 border-white/90 bg-black/50 group cursor-pointer block hover:border-pacha-gold/60 hover:shadow-[0_0_20px_rgba(232,185,35,0.3)] transition-all duration-300";
+
   return (
     <section id="hero" className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
       {/* Background Image - Parallax (Disabled on Mobile) */}
@@ -38,10 +41,35 @@ export const Hero: React.FC<HeroProps> = ({ t, lang, retreatPrice }) => {
         {/* Media Container: 2x2 Grid */}
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           
-          {/* 1. 2 Day Retreat Card (First) */}
+          {/* 1. Ausangate 3-Day Teaser (Moved First) */}
+          <Link 
+            to="/ausangate-3day"
+            className={cardClasses}
+          >
+            <img 
+                src={IMAGES.ausangate3} 
+                alt="Ausangate Full Moon" 
+                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 scale-100 group-hover:scale-105 transition-transform"
+            />
+            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
+                <span className="text-pacha-gold font-bold uppercase tracking-[0.2em] text-xs mb-2 bg-black/40 px-2 py-1 rounded-full border border-pacha-gold/50 backdrop-blur-sm">
+                    {t.ausangateTeaser.label}
+                </span>
+                <h3 className="text-white font-serif text-3xl drop-shadow-xl font-bold tracking-wide mb-2">
+                    {t.ausangateTeaser.title}
+                </h3>
+                 <div className="flex items-center gap-2 text-white/90 bg-black/30 px-3 py-1 rounded-md backdrop-blur-sm">
+                    <Calendar className="w-4 h-4 text-pacha-gold" />
+                    <span className="font-light tracking-wide text-xs">{t.ausangateTeaser.date}</span>
+                 </div>
+            </div>
+          </Link>
+
+          {/* 2. 2 Day Retreat Card */}
           <Link 
             to="/retreat-2day"
-            className="w-full h-48 relative rounded-xl overflow-hidden shadow-2xl border border-white/20 bg-black/50 group cursor-pointer block"
+            className={cardClasses}
           >
             <img 
                 src={IMAGES.mayra} 
@@ -70,35 +98,10 @@ export const Hero: React.FC<HeroProps> = ({ t, lang, retreatPrice }) => {
             )}
           </Link>
 
-          {/* 2. Ausangate 3-Day Teaser (Updated for Full Moon Special) */}
-          <Link 
-            to="/ausangate-3day"
-            className="w-full h-48 relative rounded-xl overflow-hidden shadow-2xl border border-pacha-gold/30 bg-black/50 group cursor-pointer block"
-          >
-            <img 
-                src={IMAGES.ausangate3} 
-                alt="Ausangate Full Moon" 
-                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 scale-100 group-hover:scale-105 transition-transform"
-            />
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
-                <span className="text-pacha-gold font-bold uppercase tracking-[0.2em] text-xs mb-2 bg-black/40 px-2 py-1 rounded-full border border-pacha-gold/50 backdrop-blur-sm">
-                    {t.ausangateTeaser.label}
-                </span>
-                <h3 className="text-white font-serif text-3xl drop-shadow-xl font-bold tracking-wide mb-2">
-                    {t.ausangateTeaser.title}
-                </h3>
-                 <div className="flex items-center gap-2 text-white/90 bg-black/30 px-3 py-1 rounded-md backdrop-blur-sm">
-                    <Calendar className="w-4 h-4 text-pacha-gold" />
-                    <span className="font-light tracking-wide text-xs">{t.ausangateTeaser.date}</span>
-                 </div>
-            </div>
-          </Link>
-
           {/* 3. Costa Rica Teaser */}
           <Link 
             to="/costa-rica"
-            className="w-full h-48 relative rounded-xl overflow-hidden shadow-2xl border border-pacha-leaf/50 bg-black/50 group cursor-pointer block"
+            className={cardClasses}
           >
             <img 
                 src={IMAGES.costa} 
@@ -122,7 +125,7 @@ export const Hero: React.FC<HeroProps> = ({ t, lang, retreatPrice }) => {
           </Link>
 
           {/* 4. YouTube Video */}
-          <div className="w-full h-48 relative rounded-xl overflow-hidden shadow-2xl border border-pacha-gold/30 bg-black/50">
+          <div className={cardClasses}>
             <iframe 
               className="absolute top-0 left-0 w-full h-full"
               src="https://www.youtube.com/embed/yfB7mFZmvNs?rel=0" 

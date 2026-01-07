@@ -36,6 +36,7 @@ export const IMAGES = {
   costa: "/costa.jpg",
   mayra: "/mayra.jpg",
   drum: "/drum.jpg",
+  wachuma: "/wachuma.jpg",
   connect: "/connect.jpg",
   private: "/private.jpg",
   day1: "/day1.jpg",
@@ -1014,7 +1015,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           }], 
           ausangateCta: { title: "Ausangate: Hanaq Pachaman Astawan Qaylla", description: "Hamuy kay Wachuma puriyman Ausangatepi. Fotoqrafiya qispisqa.", button: "Qhawariy" } 
       },
-      hero: { title: "Willka Hampi Wachuma", subtitle: "Pachamamawan tinkuy, ñawpaq yachaywan.", cta: "Raymita Waqaychay", retreatTeaser: { label: "Willka T'aqakuy", title: "2 P'unchay T'aqakuy", location: "Pisac & Kinsacocha" }, ausangateTeaser: { label: "Hanaq Pacha", title: "Ausangate 3 P'unchay", date: "Enero 28 - 30, 2026" }, costaRicaTeaser: { label: "Hatun Raymi", title: "Costa Rica Puriy", date: "Febrero 24 - Marzo 2, 2026" } },
       ausangate3Day: {
         title: "Ausangate: Hanaq Pacha Puriy (3 P'unchay)",
         subtitle: "Raymi Apuwan",
@@ -1564,7 +1564,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         cta: "場所を予約する",
         itinerary: [
           { day: "1日目", title: "到着、浄化、テマズカル", description: "パッチャンタへ移動。天然温泉でリラックスして体を清めます。聖なるラペの薬を使ったテマズカル（スウェットロッジ）セレモニーで深く浄化し、その後アウサンガテに向けてハイキングを行い、旅の意図を設定します。" },
-          { day: "2日目", title: "ワチュマ・セレモニー", description: "アプに心を開く。山の精霊と広大なアンデスの空とつながる深遠な日中のセレモニー。" },
+          { day: "2日目", title: "ワチュマ・セレモニー", description: "アプに心を開く。山の精霊と広大なアンデスの空とつながる日中のセレモニー。" },
           { day: "3日目", title: "帰路", description: "サークルを閉じる。山を下り、パッチャンタの温泉に最後に浸かり、ピサックへ戻ります。" }
         ]
       },

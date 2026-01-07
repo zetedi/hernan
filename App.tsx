@@ -79,7 +79,7 @@ const App: React.FC = () => {
 
       return (
         <Suspense fallback={<Loading />}>
-            <EventFlyer t={flyerData} flyerT={t.flyer} contact={t.contact} footer={t.footer} type={type} />
+            <EventFlyer t={flyerData} flyerT={t.flyer} contact={t.contact} footer={t.footer} type={type} lang={currentLanguage} />
         </Suspense>
       );
   }
