@@ -5,6 +5,7 @@ import { TranslationData, Language } from '../types';
 import { IMAGES } from '../constants';
 import { Mountain, Droplets, Calendar, Camera, Info, Flame, FileText } from 'lucide-react';
 import { Preparation } from './Preparation';
+import { MediaCarousel, MediaItem } from './MediaCarousel';
 
 interface Ausangate3DayProps {
   t: TranslationData['ausangate3Day'];
@@ -96,7 +97,25 @@ export const Ausangate3Day: React.FC<Ausangate3DayProps> = ({ t, preparation, ui
             if (descriptionStr.toLowerCase().includes('waters')) DayIcon = Droplets;
             if (descriptionStr.toLowerCase().includes('temazcal')) DayIcon = Flame;
 
-            const isTemazcalDay = descriptionStr.toLowerCase().includes('temazcal');
+            // Prepare Media Items
+            let mediaItems: MediaItem[] = [];
+            const isDay1 = index === 0;
+
+            if (isDay1) {
+                // Day 1: Carousel (Fire Video + Bungalow)
+                mediaItems = [
+                    { type: 'video', src: IMAGES.fireVideo, poster: dayImage || IMAGES.ausangate, alt: 'Temazcal Fire' },
+                    { type: 'image', src: IMAGES.bungalow, alt: 'Bungalow Accommodation' }
+                ];
+            } else {
+                // Other Days: Single Media
+                const isTemazcalDay = descriptionStr.toLowerCase().includes('temazcal');
+                if (isTemazcalDay) {
+                    mediaItems = [{ type: 'video', src: IMAGES.fireVideo, poster: dayImage || IMAGES.ausangate, alt: 'Temazcal' }];
+                } else {
+                    mediaItems = [{ type: 'image', src: dayImage || IMAGES.ausangate, alt: day.title }];
+                }
+            }
 
             return (
               <div key={index} className={`flex flex-col md:flex-row items-center gap-8 ${isLeft ? '' : 'md:flex-row-reverse'}`}>
@@ -126,48 +145,15 @@ export const Ausangate3Day: React.FC<Ausangate3DayProps> = ({ t, preparation, ui
                 
                 {/* Image/Video Card */}
                 <div className={`hidden md:block w-1/2 ${isLeft ? 'pl-16' : 'pr-16'}`}>
-                   <div className="rounded-xl overflow-hidden shadow-2xl border border-white/10 aspect-video w-full relative group">
-                        {isTemazcalDay ? (
-                             <video 
-                                src={IMAGES.fireVideo} 
-                                poster={dayImage || IMAGES.ausangate}
-                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                             />
-                        ) : (
-                            <img 
-                                src={dayImage || IMAGES.ausangate} 
-                                alt={day.title}
-                                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                            />
-                        )}
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300 pointer-events-none"></div>
+                   <div className="rounded-xl overflow-hidden shadow-2xl border border-white/10 aspect-video w-full relative">
+                        <MediaCarousel items={mediaItems} />
                    </div>
                 </div>
 
                 {/* Mobile Image */}
                  <div className="md:hidden w-full pl-12">
                    <div className="rounded-xl overflow-hidden shadow-lg border border-white/10 aspect-video w-full relative">
-                        {isTemazcalDay ? (
-                             <video 
-                                src={IMAGES.fireVideo} 
-                                poster={dayImage || IMAGES.ausangate}
-                                className="w-full h-full object-cover"
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                             />
-                        ) : (
-                            <img 
-                                src={dayImage || IMAGES.ausangate} 
-                                alt={day.title}
-                                className="w-full h-full object-cover"
-                            />
-                        )}
+                        <MediaCarousel items={mediaItems} />
                    </div>
                 </div>
               </div>

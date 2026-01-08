@@ -47,6 +47,7 @@ export const IMAGES = {
   day6: "/day6.jpg",
   day7: "/day7.jpg",
   fireVideo: "/fire.mp4",
+  bungalow: "/bungalow.jpg",
   zoltan: "/zoltan.jpg",
   kittel: "/kittel.jpg",
   juchuy: "/juchuy.jpg",
@@ -352,13 +353,36 @@ const enTranslations: TranslationData = {
       info: "We are located in the heart of the Sacred Valley, near Calca, Cusco."
     },
     footer: {
-      description: "Experience the transformative power of Wachuma, the sacred Andean plant medicine known as San Pedro. Join Hernan in guided ceremonies that will help you reconnect with your inner self, heal deeply, and awaken your spirit near Cusco, in the heart of Peru’s Sacred Valley.",
+      description: "Experience the transformative power of Wachuma, the sacred Andean plant medicine known as San Pedro. Join Hernan in guided ceremonies that will help you reconnect with your inner self, heal deeply, and awaken your spirit.",
       columns: {
-        links: { title: "Links", items: [{ label: "About us", href: "/about" }, { label: "The Community", href: "/about" }, { label: "Contact us", href: "/contact" }] },
-        reviews: { title: "Google Reviews", rating: "4,9/5" },
-        follow: { title: "Follow us", facebook: "https://www.facebook.com/hernan.wachuma", instagram: "https://www.instagram.com/hernan_wachuma" },
-        contact: { title: "Contact us", email: "hernan.wachuma@gmail.com", phone: "+51 928 383 821" },
-        find: { title: "Find us", address: "Wayna Wasi, Pisac, Perú" }
+        links: {
+          title: "Quick Links",
+          items: [
+            { label: "Home", href: "/" },
+            { label: "The Family", href: "/about" },
+            { label: "Ceremonies", href: "/services" },
+            { label: "Gallery", href: "/gallery" },
+            { label: "Contact", href: "/contact" }
+          ]
+        },
+        reviews: {
+            title: "Reviews",
+            rating: "5.0 on Google"
+        },
+        follow: {
+            title: "Follow Us",
+            facebook: "https://www.facebook.com/hernan.wachuma",
+            instagram: "https://www.instagram.com/hernan_wachuma"
+        },
+        contact: {
+            title: "Contact",
+            email: "hernan.wachuma@gmail.com",
+            phone: "+51 984 316 283"
+        },
+        find: {
+            title: "Find Us",
+            address: "Sacred Valley, Calca, Cusco, Peru"
+        }
       },
       rights: "All rights reserved."
     }
@@ -944,7 +968,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   [Language.QU]: {
       ...enTranslations,
       ui: {
-        viewDetails: "Qhawariy",
+        viewDetails: "K'iskiykuna",
         inquire: "Tapukuy",
         contribution: "Yanapay",
         bookRetreat: "Kayta Waqaychay",
@@ -971,7 +995,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         flexibleDates: "Fechakuna",
         print: "Imprimir / PDF Waqaychay"
       },
-      nav: { home: "Qallariy", about: "Ayllu", services: "Raymikuna", gallery: "Rikch'akuna", contact: "Tinkuy", faq: "Yanapana" },
+      nav: { home: "Qallariy", about: "Ayllu", services: "Raymikuna", gallery: "Rikch'akuna", contact: "Rimay", faq: "Yanapana" },
       services: { 
           title: "Munayniyku", 
           items: [{ 
@@ -1908,7 +1932,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           days: [
               { title: "संस्कारः", content: "वयं प्रातःकाले आरभामहे, पवित्र उपत्यकायाः एकस्मिन् चयितपवित्रस्थले (यथा पुमामारका, किन्साकोचा वा अन्येषु शक्तिस्थलेषु) गच्छामः। संस्कारः ओषधिना, प्रकृत्या, तथा आत्मना सह पूर्णदिवसस्य संलग्नता अस्ति।", accommodation: "निवासः न समाविष्टः, किन्तु यातायातस्य व्यवस्था अस्ति।" }
           ],
-          conclusion: "प्राकृतिकजरा सह एकः शक्तिशाली पुनःारम्भः तथा पुनःसम्बन्धः, स्पष्टतया तथा लघuhृदयेन सह प्रस्थानम्।",
+          conclusion: "प्राकृतिकजरा सह एकः शक्तिशाली पुनःसम्बन्धः, स्पष्टतया तथा लघuhृदयेन सह प्रस्थानम्।",
           details: { durationLabel: "अवधिः", durationValue: "पूर्णदिवसः (प्रातः तः अपराह्न पर्यन्तम्)", locationLabel: "स्थानम्", locationValue: "पवित्र उपत्यकायाः स्थलानि", focusLabel: "ध्यानम्", focusValue: "चिकित्सा तथा प्रकृतिः" }
       },
       preparation: {
