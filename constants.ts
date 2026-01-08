@@ -126,7 +126,7 @@ const enTranslations: TranslationData = {
         { 
             title: "Ausangate: Closer to the Sky (3 Days)", 
             description: "A powerful journey with the Apu. Temazcal, Rapé, and Wachuma ceremony in Pacchanta. Includes free professional photography.", 
-            price: "€173",
+            price: "$199",
             details: { duration: "3 Days", location: "Ausangate", groupSize: "Group" }
         },
         { 
@@ -183,7 +183,7 @@ const enTranslations: TranslationData = {
       description: "A condensed and powerful plant medicine journey. Connect with the sacred mountain and the healing waters in the high Andes.",
       details: {
           dates: "Jan 28 - 30, 2026",
-          price: "€173",
+          price: "$199",
           bonus: "Includes free professional photography session"
       },
       cta: "Reserve Spot",
@@ -440,7 +440,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             { 
                 title: "Ausangate: Más Cerca del Cielo (3 Días)", 
                 description: "Una poderosa jornada con el Apu. Temazcal, Rapé y ceremonia de Wachuma en Pacchanta. Incluye fotografía profesional gratuita.", 
-                price: "€173",
+                price: "$199",
                 details: { duration: "3 Días", location: "Ausangate", groupSize: "Grupo" }
             },
             { 
@@ -497,7 +497,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         description: "Un viaje de medicina vegetal condensado y poderoso en los altos Andes. Conecta con la montaña sagrada y las aguas curativas.",
         details: {
             dates: "28 - 30 Ene, 2026",
-            price: "€173",
+            price: "$199",
             bonus: "Incluye sesión de fotografía profesional gratuita"
         },
         cta: "Reservar Lugar",
@@ -726,7 +726,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           { 
               title: "Ausangate: Közelebb az Éghez (3 Nap)", 
               description: "Egy erőteljes utazás az Apuval. Temazcal, Rapé és Wachuma szertartás Pacchantában. Ingyenes professzionális fotózással.", 
-              price: "€173",
+              price: "$199",
               details: { duration: "3 Nap", location: "Ausangate", groupSize: "Csoport" }
           },
           { 
@@ -783,7 +783,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         description: "Egy tömör és erőteljes növényi medicina utazás. Kapcsolódj a szent heggyel és a gyógyító vizekkel a magas Andokban.",
         details: {
             dates: "2026. Január 28 - 30.",
-            price: "€173",
+            price: "$199",
             bonus: "Ingyenes professzionális fotózást tartalmaz"
         },
         cta: "Helyfoglalás",
@@ -983,7 +983,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           { 
             title: "Ausangate: Hanaq Pacha (3 P'unchay)", 
             description: "Huk atiyniyuq puriy Apuwan. Temazcal, Rapé, Wachuma ima. Fotoqrafiya qispisqa.", 
-            price: "€173",
+            price: "$199",
             details: { duration: "3 P'unchay", location: "Ausangate", groupSize: "Huñu" } 
           },
           { 
@@ -1021,7 +1021,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         description: "Huk pisi ichaqa atiyniyuq hampi puriy. Willka urquwan hampi yakuwan tinkuy hanaq pachapi.",
         details: {
             dates: "Enero 28 - 30, 2026",
-            price: "€173",
+            price: "$199",
             bonus: "Fotoqrafiya qispisqa"
         },
         cta: "Tiyayniykita Waqaychay",
@@ -1254,7 +1254,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           { 
             title: "أوسانجاتي: رحلة أقرب إلى السماء (3 أيام)", 
             description: "رحلة قوية مع الأبو. مراسم تيمزكال، رابي، وواتشوما في باتشانتا. يشمل تصويرًا احترافيًا مجانيًا.", 
-            price: "€173",
+            price: "$199",
             details: { duration: "3 أيام", location: "أوسانجاتي", groupSize: "مجموعة" } 
           },
           { 
@@ -1293,7 +1293,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         description: "رحلة طب نباتي مكثفة وقوية في أعالي الأنديز. تواصل مع الجبل المقدس والمياه الشافية.",
         details: {
             dates: "28 - 30 يناير 2026",
-            price: "€173",
+            price: "$199",
             bonus: "يشمل جلسة تصوير احترافية مجانية"
         },
         cta: "احجز مكانك",
@@ -1520,7 +1520,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           { 
             title: "アウサンガテ：空に近い旅（3日間）", 
             description: "アプとの強力な旅。パッチャンタでのテマズカル、ラペ、ワチュマ・セレモニー。無料のプロ写真撮影付き。", 
-            price: "€173",
+            price: "$199",
             details: { duration: "3日間", location: "アウサンガテ", groupSize: "グループ" } 
           },
           { 
@@ -1558,14 +1558,18 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         description: "高地アンデスでの凝縮された強力な植物薬の旅。聖なる山と癒しの水とつながりましょう。",
         details: {
             dates: "2026年1月28日〜30日",
-            price: "€173",
+            price: "$199",
             bonus: "無料のプロ写真撮影セッションが含まれています"
         },
         cta: "場所を予約する",
         itinerary: [
-          { day: "1日目", title: "到着、浄化、テマズカル", description: "パッチャンタへ移動。天然温泉でリラックスして体を清めます。聖なるラペの薬を使ったテマズカル（スウェットロッジ）セレモニーで深く浄化し、その後アウサンガテに向けてハイキングを行い、旅の意図を設定します。" },
-          { day: "2日目", title: "ワチュマ・セレモニー", description: "アプに心を開く。山の精霊と広大なアンデスの空とつながる日中のセレモニー。" },
-          { day: "3日目", title: "帰路", description: "サークルを閉じる。山を下り、パッチャンタの温泉に最後に浸かり、ピサックへ戻ります。" }
+          { day: "1日目", title: "到着と浄化", description: "パッチャンタへ移動。天然温泉でリラックスして体を清め、その後アウサンガテに向けてハイキングを行い、意図を設定します。" },
+          { day: "2日目", title: "最初のワチュマ・セレモニー", description: "アプに心を開く。山の精霊と広大なアンデスの空とつながる日中のセレモニー。" },
+          { day: "3日目", title: "テマズカル（スウェットロッジ）＆ラペ", description: "母なる大地の子宮を表す伝統的な蒸し風呂の儀式。聖なるラペの薬による肉体的および精神的な解毒。" },
+          { day: "4日目", title: "2回目のワチュマ・セレモニー", description: "旅を深める。高地の静寂の中で内部のブロックを通して働き、意識を拡大します。" },
+          { day: "5日目", title: "テマズカル＆ラペ", description: "受け取ったエネルギーをグラウンディングし、聖なるラペで精神をさらに浄化するための2回目のスウェットロッジ・セレモニー。" },
+          { day: "6日目", title: "3回目のワチュマ＆統合", description: "最後の薬のセレモニー。統合、感謝、そして週の間に受けた癒しの封印に焦点を当てます。" },
+          { day: "7日目", title: "帰路", description: "山を下り、パッチャンタの温泉に最後に浸かり、ピサックへ戻ります。" }
         ]
       },
       benefits: { title: "ワチュマの力", subtitle: "なぜ聖なるサボテンと共に旅をするのか", items: [{ title: "感情の癒し", description: "過去のトラウマや感情的なブロックを解放します。" }, { title: "自然とのつながり", description: "大地、要素、そしてアンデスの精霊との深いつながりを体験します。" }, { title: "明晰さとビジョン", description: "心を静め、人生の道に対する導きと目的を受け取ります。" }] },
@@ -1785,7 +1789,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           { 
             title: "औसंगाते: आकाशस्य समीपे यात्रा (३ दिनानि)", 
             description: "अपुना सह एकः शक्तिशाली यात्रा। पाच्छन्ता मध्ये तेमाज्काल, रापे, तथा वाचुमा संस्कारः। निःशुल्क व्यावसायिक छायाचित्रणम् समाविष्टम्।", 
-            price: "€१७३",
+            price: "$199",
             details: { duration: "३ दिनानि", location: "औसंगाते", groupSize: "समूहः" } 
           },
           { 
@@ -1823,7 +1827,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         description: "एकः संक्षिप्तः शक्तिशाली च वनस्पतिओषधि यात्रा उच्च अण्डीज मध्ये। पवित्रपर्वतेन तथा चिकित्साजलैः सह सम्बध्यताम्।",
         details: {
             dates: "जनवरी २८ - ३०, २०२६",
-            price: "€१७३",
+            price: "$199",
             bonus: "निःशुल्क व्यावसायिक छायाचित्रण सत्र समाविष्टम्"
         },
         cta: "स्वस्थानं रक्षितं कुरुत",
