@@ -78,9 +78,8 @@ export const Ausangate: React.FC<AusangateProps> = ({ t, ui, lang }) => {
             const isTemazcalDay = index === 2 || index === 4; // Day 3 and 5 are indices 2 and 4
 
             if (isDay1) {
-                // Day 1: Carousel (Fire Video + Bungalow)
+                // Day 1: Bungalow only (Fire removed)
                 mediaItems = [
-                    { type: 'video', src: IMAGES.fireVideo, poster: dayImage, alt: 'Temazcal Fire' },
                     { type: 'image', src: IMAGES.bungalow, alt: 'Bungalow Accommodation' }
                 ];
             } else if (isTemazcalDay) {
