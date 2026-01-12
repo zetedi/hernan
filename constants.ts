@@ -1,21 +1,7 @@
 
 import { Language, TranslationData } from './types';
 
-// --- DYNAMIC IMAGE LOADING (VITE) ---
-const galleryModules = (import.meta as any).glob('./assets/gallery/*.{jpg,JPG,jpeg,JPEG,png,PNG,webp,WEBP}', { 
-    eager: true, 
-    import: 'default' 
-});
-
-const sortedGalleryKeys = Object.keys(galleryModules).sort((a, b) => {
-    const nameA = a.split('/').pop() || '';
-    const nameB = b.split('/').pop() || '';
-    return nameA.localeCompare(nameB, undefined, { numeric: true, sensitivity: 'base' });
-});
-
-const dynamicGallery = sortedGalleryKeys.map(key => galleryModules[key] as string);
-
-const fallbackGallery = [
+const galleryImages = [
     "/gallery/1.jpg", "/gallery/2.jpg", "/gallery/3.jpg", "/gallery/4.jpg",
     "/gallery/5.jpg", "/gallery/6.jpg", "/gallery/7.jpg", "/gallery/8.jpg",
     "/gallery/9.jpg", "/gallery/10.jpg", "/gallery/11.jpg", "/gallery/12.jpg",
@@ -34,6 +20,15 @@ export const IMAGES = {
   ausangate3: "/ausangate3.jpg",
   hat: "/hat.jpg",
   costa: "/costa.jpg",
+  diamante1: "/diamante1.jpg",
+  diamante2: "/diamante2.jpg",
+  chirripo1: "/chirripo1.jpg",
+  chirripo2: "/chirripo2.jpg",
+  chirripo3: "/chirripo3.jpg",
+  chirripo4: "/chirripo4.jpg",
+  chirripo5: "/chirripo5.jpg",
+  chirripo6: "/chirripo6.jpg",
+  chirripo7: "/chirripo7.jpg",
   mayra: "/mayra.jpg",
   drum: "/drum.jpg",
   wachuma: "/wachuma.jpg",
@@ -52,10 +47,30 @@ export const IMAGES = {
   kittel: "/kittel.jpg",
   juchuy: "/juchuy.jpg",
   maestros: "/maestros.jpg",
-  gallery: dynamicGallery.length > 0 ? dynamicGallery : fallbackGallery
+  gallery: galleryImages
 };
 
-// --- ENGLISH DATA (Source of Truth) ---
+export const CREDITS: Record<string, string> = {
+    chirripo1: `Photo by <a href="https://unsplash.com/@azzamaulana?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Azza Maulana</a> on <a href="https://unsplash.com/photos/a-waterfall-in-the-middle-of-a-forest-iBRtUZd7ykQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Unsplash</a>`,
+    chirripo2: `Photo by <a href="https://unsplash.com/@fatihsimsek?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Fatih Simsek</a> on <a href="https://unsplash.com/photos/a-green-parrot-perched-on-top-of-a-tree-branch-bBK5m8pPf9w?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Unsplash</a>`,
+    chirripo3: `Photo by <a href="https://unsplash.com/@moisesvisuals?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Moises Guillen</a> on <a href="https://unsplash.com/photos/a-green-plant-in-a-field-JxeoLcp-wuo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Unsplash</a>`,
+    chirripo4: `Photo by <a href="https://unsplash.com/@abhiver?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Abhi Verma</a> on <a href="https://unsplash.com/photos/mountain-and-forest-landscape-with-a-resort-at-the-bottom-x2AenH9eQhk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Unsplash</a>`,
+    chirripo5: `Photo by <a href="https://unsplash.com/@patresinger?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Patrick Langwallner</a> on <a href="https://unsplash.com/photos/aerial-view-of-green-trees-beside-body-of-water-during-daytime-LUN3Yb6U-U4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Unsplash</a>`,
+    chirripo6: `Photo by <a href="https://unsplash.com/@hdbernd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Bernd 📷 Dittrich</a> on <a href="https://unsplash.com/photos/a-waterfall-with-a-man-standing-in-front-of-it-D7rcTJDZEDM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Unsplash</a>`,
+    chirripo7: `Photo by <a href="https://unsplash.com/@ehmoy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Moisés Vazquez</a> on <a href="https://unsplash.com/photos/green-trees-near-river-under-cloudy-sky-during-daytime-pMYmKvVsCss?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Unsplash</a>`
+};
+
+const costaRicaItinerary = [
+    { day: "Feb 25", title: "Arrival & Ocean Connection", description: "We begin by connecting with the vast energy of the Pacific Ocean, grounding ourselves in the land before journeying to the Diamante Valley." },
+    { day: "Feb 26-28", title: "Diamante Valley Immersion", description: "A transformative time in the lush Diamante Valley. This first part is intimate and strictly limited to 9 spots, fostering a deep connection with nature and the group." },
+    { day: "Mar 1", title: "Journey to El Chirripó", description: "We travel to the sacred lands of El Chirripó National Park to connect with the indigenous tribes and prepare for the initiation journey." },
+    { day: "Mar 2", title: "First Wachuma Ceremony", description: "Opening the initiation journey. A profound ceremony guided by Maestro Hernan in the presence of the mountains." },
+    { day: "Mar 3", title: "Rest & Integration", description: "A day to rest, reflect, and integrate the teachings of the medicine in the peace of the national park." },
+    { day: "Mar 4", title: "Second Wachuma Ceremony", description: "Deepening the work. A second ceremony to explore further into the spirit and the ancestral wisdom." },
+    { day: "Mar 5", title: "Rest & Integration", description: "Time for solitude, community sharing, and gentle integration of the journey's lessons." },
+    { day: "Mar 6", title: "Third Wachuma Ceremony", description: "The final ceremony of the initiation. Closing the circle with gratitude and sealing the transformation." },
+    { day: "Mar 7", title: "Closing & Departure", description: "Final words, gratitude to the land and the tribes, and beginning our journey home." }
+];
 
 const enTranslations: TranslationData = {
     ui: {
@@ -208,7 +223,19 @@ const enTranslations: TranslationData = {
         cta: "Request Invitation",
         visionTitle: "A Vision from the Medicine",
         visionText: "This gathering is not just a retreat; it is a response to a call. The medicine spoke of connecting the wisdom held in the high Andes with the purifying, fluid energy of the ocean. A pilgrimage of spirit and body.",
-        themeValue: "Ocean & Mountain"
+        themeValue: "Ocean & Mountain",
+        itinerary: costaRicaItinerary,
+        packages: {
+            title: "Participation Includes",
+            items: [
+                "7 Days / 6 Nights in Sacred Sanctuary",
+                "3 Full Wachuma Ceremonies",
+                "Rapé & Floral Cleansing Rituals",
+                "Daily Integration Circles",
+                "All Organic Meals Provided",
+                "Transport from San Isidro"
+            ]
+        }
     },
     retreat2Day: {
         title: "2 Day Retreat",
@@ -313,7 +340,7 @@ const enTranslations: TranslationData = {
                 content: [
                     "<strong>What is the San Pedro Cactus?</strong><br>The San Pedro cactus, also known as Wachuma, is an ancient medicinal plant native to the highlands of the Andes, primarily in Peru. This tall, columnar green cactus, scientifically named <em>Echinopsis pachanoi</em>, thrives at high altitudes, often between 2,000 and 3,000 meters. It is easily recognized by its pronounced ribs, short spines, and large white flowers that bloom at night.",
                     "<strong>Origins and History</strong><br>San Pedro has been used for thousands of years by indigenous Andean peoples, especially the Quechua and Aymara communities. Deeply rooted in shamanic tradition, it serves as a bridge between the physical and spiritual worlds. Its name, San Pedro, refers to Saint Peter, the guardian of the gates of heaven, symbolizing access to spiritual dimensions.",
-                    "<strong>The Power of Mescaline: Connecting to Universal Harmony</strong><br>One of the key active compounds in the San Pedro cactus is mescaline, a naturally occurring psychoactive alkaloid. Mescaline is responsible for the profound visionary and introspective experiences associated with Wachuma. Unlike synthetic substances, mescaline from San Pedro gently guides individuals into an altered state of consciousness, fostering a sense of unity and harmony with the world around them.",
+                    "<strong>The Power of Mescaline: Connecting to Universal Harmony</strong><br>One of the key active compounds in the San Pedro cactus is mescaline, a naturally occurring psychoactive alkaloid. Mescaline is responsible for the profound visionary and introspective experiences associated with Wachuma. Unlike synthetic substances, the mescaline in San Pedro gently guides individuals into an altered state of consciousness, fostering a sense of unity and harmony with the world around them.",
                     "Wachuma ceremonies often lead participants to feel deeply connected to Pachamama (Mother Earth), experiencing the pulse of nature and the rhythm of life itself. This connection helps dissolve the boundaries between self and the universe, allowing for profound insights and spiritual clarity. Many who embark on this journey describe it as a heart-opening experience, where love and compassion naturally flow.",
                     "<strong>Spiritual and Therapeutic Benefits</strong><br>San Pedro is renowned for its spiritual and healing properties. Its effects are generally more gentle and gradual compared to other plant medicines like Ayahuasca. This makes it accessible for those seeking emotional healing and inner clarity without the intensity of more abrupt awakenings.<br><br><strong>Spiritual Benefits:</strong><br>• Spiritual Awakening: Facilitates reconnection with one’s true self and the natural world.<br>• Heart Opening: Promotes compassion, forgiveness, and deep emotional release.<br>• Mental Clarity: Helps gain perspective on life challenges and fosters acceptance.<br><br><strong>Therapeutic Benefits:</strong><br>• Emotional Release: Aids in processing past trauma and unresolved emotions.<br>• Calmness and Serenity: Reduces anxiety and cultivates inner peace.<br>• Nature Connection: Strengthens the bond with the Earth and the elements."
                 ]
@@ -395,6 +422,45 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   // SPANISH
   [Language.ES]: {
       ...enTranslations, 
+      costaRica: {
+          ...enTranslations.costaRica,
+          title: "Peregrinaje Sagrado a Costa Rica",
+          subtitle: "Montañas y Océano Unidos",
+          intro: "Una ocasión muy especial, por primera vez en Costa Rica en una ubicación secreta. Una conexión de las montañas sagradas con el océano, un peregrinaje físico y espiritual especial siguiendo una visión y un mensaje de la medicina.",
+          description: [
+              "Únete a nosotros para una reunión histórica y transformadora. Por primera vez, Hernan trae la medicina sagrada Wachuma a las vibrantes tierras de Costa Rica.",
+              "Guiados por una profunda visión y un mensaje directo de la medicina, este retiro es un peregrinaje espiritual que conecta la sabiduría de los Andes con el poder limpiador del océano.",
+              "Además de las ceremonias sagradas de Wachuma, compartiremos la medicina del Rapé, realizaremos trabajos de limpieza con flores y viajaremos a través de meditaciones guiadas con medicina.",
+              "Nos reuniremos en un lugar secreto y apartado, inmersos en el abrazo de la naturaleza. Esta experiencia íntima está estrictamente limitada a 21 participantes (incluidos los ayudantes) para garantizar una atención personal profunda y un contenedor energético cohesivo."
+          ],
+          details: { location: "Ubicación Secreta, Costa Rica", capacity: "Limitado a 21 Almas", dates: "24 de Febrero - 2 de Marzo, 2026" },
+          cta: "Solicitar Invitación",
+          visionTitle: "Una Visión de la Medicina",
+          visionText: "Este encuentro no es solo un retiro; es una respuesta a un llamado. La medicina habló de conectar la sabiduría de los Andes con la energía purificadora y fluida del océano. Un peregrinaje del espíritu y el cuerpo.",
+          themeValue: "Océano y Montaña",
+          itinerary: [
+            { day: "25 Feb", title: "Llegada y Conexión con el Océano", description: "Comenzamos conectando con la vasta energía del Océano Pacífico, arraigándonos en la tierra antes de viajar al Valle Diamante." },
+            { day: "26-28 Feb", title: "Inmersión en el Valle Diamante", description: "Un tiempo transformador en el exuberante Valle Diamante. Esta primera parte es íntima y estrictamente limitada a 9 plazas, fomentando una profunda conexión con la naturaleza y el grupo." },
+            { day: "1 Mar", title: "Viaje a El Chirripó", description: "Viajamos a las tierras sagradas del Parque Nacional El Chirripó para conectar con las tribus indígenas y prepararnos para el viaje de iniciación." },
+            { day: "2 Mar", title: "Primera Ceremonia de Wachuma", description: "Abriendo el viaje de iniciación. Una profunda ceremonia guiada por el Maestro Hernan en presencia de las montañas." },
+            { day: "3 Mar", title: "Descanso e Integración", description: "Un día para descansar, reflexionar e integrar las enseñanzas de la medicina en la paz del parque nacional." },
+            { day: "4 Mar", title: "Segunda Ceremonia de Wachuma", description: "Profundizando en el trabajo. Una segunda ceremonia para explorar más a fondo en el espíritu y la sabiduría ancestral." },
+            { day: "5 Mar", title: "Descanso e Integración", description: "Tiempo para la soledad, compartir en comunidad y la integración suave de las lecciones del viaje." },
+            { day: "6 Mar", title: "Tercera Ceremonia de Wachuma", description: "La ceremonia final de la iniciación. Cerrando el círculo con gratitud y sellando la transformación." },
+            { day: "7 Mar", title: "Cierre y Partida", description: "Palabras finales, gratitud a la tierra y a las tribus, y comienzo de nuestro viaje a casa." }
+          ],
+          packages: {
+            title: "La Participación Incluye",
+            items: [
+                "7 Días / 6 Noches en Santuario Sagrado",
+                "3 Ceremonias Completas de Wachuma",
+                "Rituales de Rapé y Limpieza Floral",
+                "Círculos Diarios de Integración",
+                "Todas las Comidas Orgánicas",
+                "Transporte desde San Isidro"
+            ]
+          }
+      },
       ui: {
         viewDetails: "Ver Detalles",
         inquire: "Consultar",
@@ -531,22 +597,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           { day: "Día 3", title: "Viaje de Regreso", description: "Cerrando el círculo. Caminata de descenso de la montaña, baño final en las aguas termales de Pacchanta y transporte de regreso a Pisac." }
         ]
       },
-      costaRica: {
-        title: "Peregrinaje Sagrado a Costa Rica",
-        subtitle: "Montañas y Océano Unidos",
-        intro: "Una ocasión muy especial, por primera vez en Costa Rica en una ubicación secreta. Una conexión de las montañas sagradas con el océano, un peregrinaje físico y espiritual especial siguiendo una visión y un mensaje de la medicina.",
-        description: [
-            "Únete a nosotros para una reunión histórica y transformadora. Por primera vez, Hernan trae la medicina sagrada Wachuma a las vibrantes tierras de Costa Rica.",
-            "Guiados por una profunda visión y un mensaje directo de la medicina, este retiro es un peregrinaje espiritual que conecta la sabiduría de los Andes con el poder limpiador del océano.",
-            "Además de las ceremonias sagradas de Wachuma, compartiremos la medicina del Rapé, realizaremos trabajos de limpieza con flores y viajaremos a través de meditaciones guiadas con medicina.",
-            "Nos reuniremos en un lugar secreto y apartado, inmersos en el abrazo de la naturaleza. Esta experiencia íntima está estrictamente limitada a 21 participantes (incluidos los ayudantes) para garantizar una atención personal profunda y un contenedor energético cohesivo."
-        ],
-        details: { location: "Ubicación Secreta, Costa Rica", capacity: "Limitado a 21 Almas", dates: "24 de Febrero - 2 de Marzo, 2026" },
-        cta: "Solicitar Invitación",
-        visionTitle: "Una Visión de la Medicina",
-        visionText: "Este encuentro no es solo un retiro; es una respuesta a un llamado. La medicina habló de conectar la sabiduría de los Andes con la energía purificadora y fluida del océano. Un peregrinaje del espíritu y el cuerpo.",
-        themeValue: "Océano y Montaña"
-      },
       retreat2Day: {
           title: "Retiro de 2 Días",
           subtitle: "Wayna Wasi y Kinsacocha",
@@ -641,7 +691,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             {
                 title: "Descubre el poder curativo de Wachuma",
                 content: [
-                    "<strong>¿Qué es el cactus San Pedro?</strong><br>El cactus San Pedro, también conocido como Wachuma, es una antigua planta medicinal nativa de las tierras altas de los Andes, principalmente en Perú. Este cactus verde columnar alto, científicamente llamado <em>Echinopsis pachanoi</em>, prospera en altitudes elevadas, a menudo entre 2,000 y 3,000 metros. Se reconoce fácilmente por sus costillas pronunciadas, espinas cortas y grandes flores blancas que florecen por la noche.",
+                    "<strong>¿Qué es el cactus San Pedro?</strong><br>El cactus San Pedro, también conocido como Wachuma, es una antigua planta medicinal nativa de las tierras altas de los Andes, principalmente en Perú. Este cactus verde columnar alto, científicamente llamado <em>Echinopsis pachanoi</em>, thrives at high altitudes, often between 2,000 and 3,000 meters. Se reconoce fácilmente por sus costillas pronunciadas, espinas cortas y grandes flores blancas que florecen por la noche.",
                     "<strong>Orígenes e Historia</strong><br>San Pedro ha sido utilizado durante miles de años por los pueblos indígenas andinos, especialmente las comunidades Quechua y Aymara. Profundamente arraigado en la tradición chamánica, sirve como un puente entre el mundo físico y espiritual. Su nombre, San Pedro, se refiere a San Pedro, el guardián de las puertas del cielo, simbolizando el acceso a las dimensiones espirituales.",
                     "<strong>El Poder de la Mescalina: Conectando con la Armonía Universal</strong><br>Uno de los compuestos activos clave en el cactus San Pedro es la mescalina, un alcaloide psicoactivo natural. La mescalina es responsable de las profundas experiencias visionarias e introspectivas asociadas con Wachuma. A diferencia de las sustancias sintéticas, la mescalina de San Pedro guía suavemente a las personas a un estado alterado de conciencia, fomentando una sensación de unidad y armonía con el mundo que les rodea.",
                     "Las ceremonias de Wachuma a menudo llevan a los participantes a sentirse profundamente conectados con la Pachamama (Madre Tierra), experimentando el pulso de la naturaleza y el ritmo de la vida misma. Esta conexión ayuda a disolver los límites entre el yo y el universo, permitiendo profundas ideas y claridad espiritual. Muchos de los que se embarcan en este viaje lo describen como una experiencia de apertura del corazón, donde el amor y la compasión fluyen naturalmente.",
@@ -681,6 +731,45 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   // HUNGARIAN
   [Language.HU]: {
       ...enTranslations,
+      costaRica: {
+          ...enTranslations.costaRica,
+          title: "Szent Zarándoklat Costa Ricába",
+          subtitle: "Hegyek és Óceán Egyesülése",
+          intro: "Különleges alkalom, először Costa Ricában egy titkos helyszínen. A szent hegyek és az óceán összekapcsolása, különleges fizikai és spirituális zarándoklat a medicina látomása és üzenete nyomán.",
+          description: [
+              "Csatlakozz hozzánk egy történelmi és átalakító összejövetelre. Hernan először viszi el a szent Wachuma medicinát Costa Rica vibráló földjeire.",
+              "Egy mély látomás és a medicina közvetlen üzenete által vezérelve, ez az elvonulás egy spirituális zarándoklat, amely összeköti az andoki hegyek bölcsességét az óceán tisztító erejével.",
+              "A szent Wachuma szertartások mellett megosztjuk a Rapé medicinát, tisztító munkákat végzünk virágokkal, és vezetett medicina meditációkon veszünk részt.",
+              "Egy titkos, eldugott helyszínen gyűlünk össze, a természet ölelésében. Ez a bensőséges élmény szigorúan 21 résztvevőre korlátozódik (a segítőket is beleértve), hogy biztosítsuk a mély, személyes figyelmet és az összetartó energetikai teret."
+          ],
+          details: { location: "Titkos Helyszín, Costa Rica", capacity: "21 Lélekre Korlátozva", dates: "2026. Február 24 - Március 2." },
+          cta: "Meghívó Kérése",
+          visionTitle: "Látomás a Medicinától",
+          visionText: "Ez az összejövetel nem csupán egy elvonulás; válasz egy hívásra. A medicina arról beszélt, hogy össze kell kötni a magas Andokban őrzött bölcsességet az óceán tisztító, áramló energiájával. A szellem és a test zarándoklata.",
+          themeValue: "Óceán és Hegy",
+          itinerary: [
+            { day: "Feb 25", title: "Érkezés és Kapcsolódás az Óceánhoz", description: "A Csendes-óceán hatalmas energiájával való kapcsolódással kezdünk, leföldelve magunkat a földön, mielőtt a Diamante-völgybe utaznánk." },
+            { day: "Feb 26-28", title: "Elmélyülés a Diamante-völgyben", description: "Átalakító időszak a buja Diamante-völgyben. Ez az első rész meghitt és szigorúan 9 főre korlátozódik, elősegítve a mély kapcsolatot a természettel és a csoporttal." },
+            { day: "Már 1", title: "Utazás El Chirripóba", description: "El Chirripó Nemzeti Park szent földjére utazunk, hogy kapcsolatba lépjünk az őslakos törzsekkel és felkészüljünk a beavatási utazásra." },
+            { day: "Már 2", title: "Első Wachuma Szertartás", description: "A beavatási utazás megnyitása. Mélyreható szertartás Hernan mester vezetésével a hegyek jelenlétében." },
+            { day: "Már 3", title: "Pihenés és Integráció", description: "Egy nap a pihenésre, elmélkedésre és a medicina tanításainak integrálására a nemzeti park békéjében." },
+            { day: "Már 4", title: "Második Wachuma Szertartás", description: "A munka elmélyítése. Egy második szertartás a szellem és az ősi bölcsesség további felfedezésére." },
+            { day: "Már 5", title: "Pihenés és Integráció", description: "Idő az egyedüllétre, a közösségi megosztásra és az utazás tanulságainak gyengéd integrálására." },
+            { day: "Már 6", title: "Harmadik Wachuma Szertartás", description: "A beavatás utolsó szertartása. A kör bezárása hálával és az átalakulás megpecsételése." },
+            { day: "Már 7", title: "Zárás és Hazautazás", description: "Végső szavak, hála a földnek és a törzseknek, és hazaútunk megkezdése." }
+          ],
+          packages: {
+            title: "A Részvétel Tartalmazza",
+            items: [
+                "7 Nap / 6 Éjszaka Szent Menedékhelyen",
+                "3 Teljes Wachuma Szertartás",
+                "Rapé és Virágos Tisztító Rituálék",
+                "Napi Integrációs Körök",
+                "Minden Bio Étkezés",
+                "Szállítás San Isidróból"
+            ]
+          }
+      },
       ui: {
         viewDetails: "Részletek megtekintése",
         inquire: "Érdeklődés",
@@ -817,22 +906,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           { day: "3. Nap", title: "Visszautazás", description: "A kör bezárása. Túra le a hegyről, utolsó mártózás a pacchantai hőforrásokban, és transzfer vissza Pisacba." }
         ]
       },
-      costaRica: {
-          title: "Szent Zarándoklat Costa Ricába",
-          subtitle: "Hegyek és Óceán Egyesülése",
-          intro: "Különleges alkalom, először Costa Ricában egy titkos helyszínen. A szent hegyek és az óceán összekapcsolása, különleges fizikai és spirituális zarándoklat a medicina látomása és üzenete nyomán.",
-          description: [
-              "Csatlakozz hozzánk egy történelmi és átalakító összejövetelre. Hernan először viszi el a szent Wachuma medicinát Costa Rica vibráló földjeire.",
-              "Egy mély látomás és a medicina közvetlen üzenete által vezérelve, ez az elvonulás egy spirituális zarándoklat, amely összeköti az andoki hegyek bölcsességét az óceán tisztító erejével.",
-              "A szent Wachuma szertartások mellett megosztjuk a Rapé medicinát, tisztító munkákat végzünk virágokkal, és vezetett medicina meditációkon veszünk részt.",
-              "Egy titkos, eldugott helyszínen gyűlünk össze, a természet ölelésében. Ez a bensőséges élmény szigorúan 21 résztvevőre korlátozódik (a segítőket is beleértve), hogy biztosítsuk a mély, személyes figyelmet és az összetartó energetikai teret."
-          ],
-          details: { location: "Titkos Helyszín, Costa Rica", capacity: "21 Lélekre Korlátozva", dates: "2026. Február 24 - Március 2." },
-          cta: "Meghívó Kérése",
-          visionTitle: "Látomás a Medicinától",
-          visionText: "Ez az összejövetel nem csupán egy elvonulás; válasz egy hívásra. A medicina arról beszélt, hogy össze kell kötni a magas Andokban őrzött bölcsességet az óceán tisztító, áramló energiájával. A szellem és a test zarándoklata.",
-          themeValue: "Óceán és Hegy"
-      },
       retreat2Day: {
           title: "2 Napos Elvonulás",
           subtitle: "Wayna Wasi és Kinsacocha",
@@ -967,6 +1040,45 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   // QUECHUA
   [Language.QU]: {
       ...enTranslations,
+      costaRica: {
+          ...enTranslations.costaRica,
+          title: "Costa Rica Willka Puriy",
+          subtitle: "Urquwan Mama Qochawan Tinkun",
+          intro: "Huk sapaq kuti, Costa Rica suyu ukhupi. Willka urqukuna mama qochawan tinkunqaku, Wachuma hampiwan.",
+          description: [
+              "Ñuqaykuwan kay hatun puriyman hamuy. Hernan apamun Wachuma hampita Costa Rica allpaman.",
+              "Musquypi rikhurisqa, kay puriyqa urqukunata qochawan tinkuchinapaq.",
+              "Wachuma hampiwan, Rapé hampiwan, t'ikakunawan ima ch'uyanchik.",
+              "Pakasqa tiyaypi kanqa. 21 runallapaqmi, aswan allin tinkuypaq."
+          ],
+          details: { location: "Pakasqa Tiyay, Costa Rica", capacity: "21 Runalla", dates: "Febrero 24 - Marzo 2, 2026" },
+          cta: "Mink'ata Mañakuy",
+          visionTitle: "Hampi Musquy",
+          visionText: "Kayqa manan puriyllachu; kayqa apukunaq waqaychayninmi. Hampiqa nirqa: Urquq yachayninta qochawan tinkuchiy.",
+          themeValue: "Qocha & Urqu",
+          itinerary: [
+            { day: "25 Hatun Puquy", title: "Chayamuy & Mama Qochawan Tinkuy", description: "Pacifico Mama Qochawan tinkuspa qallarinchik, allpapi kallpachakuspa manaraq Diamante Wayq'oman purichkaspa." },
+            { day: "26-28 Hatun Puquy", title: "Diamante Wayq'opi Ukhunchay", description: "Huk tikray pacha sumaq Diamante Wayq'opi. Kay ñawpaq rakiqa pisi runallapaqmi (9 tiyay), sallqa pachawan aylluwan sumaqta tinkunapaq." },
+            { day: "1 Pawqar Waray", title: "El Chirripóman Puriy", description: "El Chirripó Willka Parkiman purinchik, chaypi tiyaq runakunawan tinkunapaq, qallariy puriypaq wakichikunapaq." },
+            { day: "2 Pawqar Waray", title: "Ñawpaq Wachuma Raymi", description: "Qallariy puriyta kicharispa. Huk ukhu raymi Maestro Hernanwan, urqukunaq ñawpaqinpi." },
+            { day: "3 Pawqar Waray", title: "Samay & Yachay Huñuy", description: "Samana p'unchay, yuyaymanana, hampi yachaykunata sunquman churanapaq willka parki thak kayninpi." },
+            { day: "4 Pawqar Waray", title: "Iskay Kaq Wachuma Raymi", description: "Llank'ayta ukhunchaspa. Iskay kaq raymi aswan ukhuta nunaman ñawpaq yachaymanpis purinapaq." },
+            { day: "5 Pawqar Waray", title: "Samay & Yachay Huñuy", description: "Sapalla kay pacha, aylluwan rimanakuy, puriy yachaykunata llamp'u sunquwan huñuy." },
+            { day: "6 Pawqar Waray", title: "Kimsa Kaq Wachuma Raymi", description: "Tukuq qallariy raymi. Muyuta wisq'aspa yupaychaywan, tikrayta sellaspa." },
+            { day: "7 Pawqar Waray", title: "Tukuy & Ripuy", description: "Tukuq rimaykuna, allpaman runakunaman yupaychay, wasiman kutiy qallariy." }
+          ],
+          packages: {
+            title: "Kaykuna Kanqa",
+            items: [
+                "7 P'unchay / 6 Tuta Willka Tiyaypi",
+                "3 Hunt'asqa Wachuma Raymikuna",
+                "Rapé & T'ika Ch'uyay",
+                "Sapa P'unchay Rimanakuy",
+                "Lliw Mikhuykuna",
+                "San Isidromanta Apay"
+            ]
+          }
+      },
       ui: {
         viewDetails: "K'iskiykuna",
         inquire: "Tapukuy",
@@ -1063,7 +1175,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         description: [
             "<strong>Hernan Colque</strong> runa simi rimaq, <strong>Wachuma hampiq</strong>, ñawpaq yachaykunata apaq. <strong>Viacha</strong> llaqtapi paqarisqa, <strong>Pisac</strong> patapi, payqa ñawpaq hampiq yawarniyuq.",
             "Ñawpaq yachaykuna willan, sapa miraymanta huklla kay ñanta apanman. Abuelon Carmenmanta taytan Beninhoman yachay chayarqa. Qanchis wawqikunamanta, Hernanllataq kay ñanta akllarqa, <strong>Pachamamawan</strong> tinkuspa.",
-            "<strong>Espinar llaqtamanta Ccana yawar.</strong> Hernanpa yawarninqa <strong>Ccana (K'ana)</strong> llaqtamanta. K'ana runakunaqa Inka Pachacutecwan thakpi tinkurqanku, manan maqanakuspachu. Chayrayku <strong>'Sinchis'</strong> sutichasqa karqanku, allin awqaq runakuna.",
+            "<strong>Espinar llaqtamanta Ccana yawar.</strong> Hernanpa yawarninqa <strong>Ccana (K'ana)</strong>. K'ana runakunaqa Inka Pachacutecwan thakpi tinkurqanku, manan maqanakuspachu. Chayrayku <strong>'Sinchis'</strong> sutichasqa karqanku, allin awqaq runakuna.",
             "<strong>Wachuma Nunam.</strong> Wachumaqa ñawpaq runakunata tinkuchirqa, chayta sunqunkupi waqaycharqanku. Kay hampiqa yachachikunmi, kunan p'unchaykunaqa Hernan kay yachayta apachkan.",
             "<strong>Pisacwan Viachawan.</strong> <strong>Pisac</strong> llaqtapi tiyayku, <strong>Wayna Wasi Hotelpi</strong> samaykuna kan. Aswan kuraq hampiqa <strong>Viacha</strong> ayllupi ruwakun, urqu patapi."
         ]
@@ -1082,22 +1194,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           { day: "6 P'unchay", title: "Kimsa Kaq Wachuma & Tukunapaq", description: "Tukuy hampi. Añaschay, kallpachakuy, tukuy yachasqata huñuy." },
           { day: "7 P'unchay", title: "Kutimuy", description: "Urqumanta uraykamuy, Pacchanta yakupi samay, Pisacman kutimuy." }
         ]
-      },
-      costaRica: {
-        title: "Costa Rica Willka Puriy",
-        subtitle: "Urquwan Mama Qochawan Tinkun",
-        intro: "Huk sapaq kuti, Costa Rica suyu ukhupi. Willka urqukuna mama qochawan tinkunqaku, Wachuma hampiwan.",
-        description: [
-            "Ñuqaykuwan kay hatun puriyman hamuy. Hernan apamun Wachuma hampita Costa Rica allpaman.",
-            "Musquypi rikhurisqa, kay puriyqa urqukunata qochawan tinkuchinapaq.",
-            "Wachuma hampiwan, Rapé hampiwan, t'ikakunawan ima ch'uyanchik.",
-            "Pakasqa tiyaypi kanqa. 21 runallapaqmi, aswan allin tinkuypaq."
-        ],
-        details: { location: "Pakasqa Tiyay, Costa Rica", capacity: "21 Runalla", dates: "Febrero 24 - Marzo 2, 2026" },
-        cta: "Mink'ata Mañakuy",
-        visionTitle: "Hampi Musquy",
-        visionText: "Kayqa manan puriyllachu; kayqa apukunaq waqaychayninmi. Hampiqa nirqa: Urquq yachayninta qochawan tinkuchiy.",
-        themeValue: "Qocha & Urqu"
       },
       retreat2Day: {
         title: "2 P'unchay T'aqakuy",
@@ -1238,6 +1334,45 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   // ARABIC
   [Language.AR]: {
       ...enTranslations,
+      costaRica: {
+          ...enTranslations.costaRica,
+          title: "الحج المقدس إلى كوستاريكا",
+          subtitle: "اتحاد الجبال والمحيط",
+          intro: "مناسبة خاصة جداً، لأول مرة في كوستاريكا في مكان سري. اتصال الجبال المقدسة مع المحيط، حج جسدي وروحي خاص يتبع رؤية ورسالة من الطب.",
+          description: [
+              "انضم إلينا في تجمع تاريخي وتحويلي. لأول مرة، يجلب هيرنان طب الواتشوما المقدس إلى أراضي كوستاريكا النابضة بالحياة.",
+              "مسترشدين برؤية عميقة ورسالة مباشرة من الطب، تعد هذه الخلوة حجاً روحياً يربط حكمة جبال الأنديز بالقوة المنظفة للمحيط.",
+              "بالإضافة إلى مراسم الواتشوما المقدسة، سنشارك طب الرابي، ونقوم بأعمال التطهير بالزهور، ونسافر من خلال تأملات الطب الموجهة.",
+              "سنجتمع في مكان سري ومعزول، مغمورين في أحضان الطبيعة. هذه التجربة الحميمة محدودة بصرامة بـ 21 مشاركاً لضمان اهتمام شخصي عميق."
+          ],
+          details: { location: "موقع سري، كوستاريكا", capacity: "محدود بـ 21 روح", dates: "24 فبراير - 2 مارس 2026" },
+          cta: "طلب دعوة",
+          visionTitle: "رؤية من الطب",
+          visionText: "هذا التجمع ليس مجرد خلوة؛ إنه استجابة لنداء. تحدث الطب عن ربط الحكمة الموجودة في أعالي الأنديز بالطاقة النقية والسائلة للمحيط.",
+          themeValue: "المحيط والجبل",
+          itinerary: [
+            { day: "25 فبراير", title: "الوصول والاتصال بالمحيط", description: "نبدأ بالتواصل مع الطاقة الهائلة للمحيط الهادئ، وتثبيت أنفسنا في الأرض قبل السفر إلى وادي ديامانتي." },
+            { day: "26-28 فبراير", title: "الانغماس في وادي ديامانتي", description: "وقت تحويلي في وادي ديامانتي الخصب. هذا الجزء الأول حميم ومحدود بصرامة بـ 9 أماكن، مما يعزز التواصل العميق مع الطبيعة والمجموعة." },
+            { day: "1 مارس", title: "رحلة إلى إل شيريبو", description: "نسافر إلى الأراضي المقدسة في حديقة إل شيريبو الوطنية للتواصل مع القبائل الأصلية والاستعداد لرحلة البدء." },
+            { day: "2 مارس", title: "مراسم الواتشوما الأولى", description: "فتح رحلة البدء. مراسم عميقة بتوجيه من المايسترو هيرنان في وجود الجبال." },
+            { day: "3 مارس", title: "الراحة والتكامل", description: "يوم للراحة والتفكير ودمج تعاليم الطب في سلام الحديقة الوطنية." },
+            { day: "4 مارس", title: "مراسم الواتشوما الثانية", description: "تعميق العمل. مراسم ثانية لاستكشاف المزيد في الروح والحكمة القديمة." },
+            { day: "5 مارس", title: "الراحة والتكامل", description: "وقت للعزلة والمشاركة المجتمعية والدمج اللطيف لدروس الرحلة." },
+            { day: "6 مارس", title: "مراسم الواتشوما الثالثة", description: "المراسم النهائية للبدء. إغلاق الدائرة بامتنان وختم التحول." },
+            { day: "7 مارس", title: "الختام والمغادرة", description: "الكلمات الأخيرة، الامتنان للأرض والقبائل، وبدء رحلة العودة إلى الوطن." }
+          ],
+          packages: {
+            title: "تشمل المشاركة",
+            items: [
+                "7 أيام / 6 ليالي في ملاذ مقدس",
+                "3 مراسم واتشوما كاملة",
+                "طقوس رابي وتطهير بالزهور",
+                "دوائر التكامل اليومية",
+                "جميع الوجبات العضوية",
+                "النقل من سان إيسيدرو"
+            ]
+          }
+      },
       ui: {
         viewDetails: "عرض التفاصيل",
         inquire: "استفسار",
@@ -1354,22 +1489,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           { day: "اليوم 6", title: "الواتشوما الثالث والتكامل", description: "مراسم الطب النهائية. التركيز على التكامل والامتنان وختم الشفاء الذي تم تلقيه خلال الأسبوع." },
           { day: "اليوم 7", title: "رحلة العودة", description: "المشي نزولاً من الجبل، نقع أخير في الينابيع الساخنة في باتشانتا، والنقل العودة إلى بيساك." }
         ]
-      },
-      costaRica: {
-        title: "الحج المقدس إلى كوستاريكا",
-        subtitle: "اتحاد الجبال والمحيط",
-        intro: "مناسبة خاصة جداً، لأول مرة في كوستاريكا في مكان سري. اتصال الجبال المقدسة مع المحيط، حج جسدي وروحي خاص يتبع رؤية ورسالة من الطب.",
-        description: [
-            "انضم إلينا في تجمع تاريخي وتحويلي. لأول مرة، يجلب هيرنان طب الواتشوما المقدس إلى أراضي كوستاريكا النابضة بالحياة.",
-            "مسترشدين برؤية عميقة ورسالة مباشرة من الطب، تعد هذه الخلوة حجاً روحياً يربط حكمة جبال الأنديز بالقوة المنظفة للمحيط.",
-            "بالإضافة إلى مراسم الواتشوما المقدسة، سنشارك طب الرابي، ونقوم بأعمال التطهير بالزهور، ونسافر من خلال تأملات الطب الموجهة.",
-            "سنجتمع في مكان سري ومعزول، مغمورين في أحضان الطبيعة. هذه التجربة الحميمة محدودة بصرامة بـ 21 مشاركاً لضمان اهتمام شخصي عميق."
-        ],
-        details: { location: "موقع سري، كوستاريكا", capacity: "محدود بـ 21 روح", dates: "24 فبراير - 2 مارس 2026" },
-        cta: "طلب دعوة",
-        visionTitle: "رؤية من الطب",
-        visionText: "هذا التجمع ليس مجرد خلوة؛ إنه استجابة لنداء. تحدث الطب عن ربط الحكمة الموجودة في أعالي الأنديز بالطاقة النقية والسائلة للمحيط.",
-        themeValue: "المحيط والجبل"
       },
       retreat2Day: {
         title: "خلوة لمدة يومين",
@@ -1504,6 +1623,45 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   // JAPANESE
   [Language.JA]: {
       ...enTranslations,
+      costaRica: {
+          ...enTranslations.costaRica,
+          title: "コスタリカへの聖なる巡礼",
+          subtitle: "山と海の統合",
+          intro: "秘密の場所でのコスタリカ初開催となる非常に特別な機会。聖なる山々と海をつなぐ、薬からのビジョンとメッセージに従った特別な肉体的および精神的な巡礼。",
+          description: [
+              "歴史的で変容をもたらす集まりに参加しませんか。初めて、エルナンは聖なるワチュマの薬をコスタリカの活気ある土地にもたらします。",
+              "深遠なビジョンと薬からの直接のメッセージに導かれ、このリトリートはアンデスの山々の知恵と海の浄化力をつなぐ精神的な巡礼です。",
+              "聖なるワチュマのセレモニーに加えて、ラペの薬を共有し、花を使った浄化のワークを行い、ガイド付きの薬の瞑想を通じて旅をします。",
+              "私たちは自然に抱かれた秘密の人里離れた場所に集まります。この親密な体験は、深い個人的な注意とまとまりのあるエネルギー的な器を確保するために、厳密に21人の参加者（ヘルパーを含む）に制限されています。"
+          ],
+          details: { location: "コスタリカ、秘密の場所", capacity: "21名限定", dates: "2026年2月24日〜3月2日" },
+          cta: "招待をリクエスト",
+          visionTitle: "薬からのビジョン",
+          visionText: "この集まりは単なるリトリートではありません。それは呼びかけへの応答です。薬は、高いアンデスに保持されている知恵と、海の浄化する流動的なエネルギーをつなぐことについて語りました。精神と肉体の巡礼です。",
+          themeValue: "海と山",
+          itinerary: [
+            { day: "2月25日", title: "到着と海とのつながり", description: "私たちは太平洋の広大なエネルギーとつながり、ディアマンテ渓谷への旅の前に大地に自分自身をグラウンディングさせることから始めます。" },
+            { day: "2月26-28日", title: "ディアマンテ渓谷への没入", description: "緑豊かなディアマンテ渓谷での変容の時。この最初の部分は親密で、9名限定となっており、自然やグループとの深いつながりを育みます。" },
+            { day: "3月1日", title: "エル・チリポへの旅", description: "先住民族とつながり、イニシエーションの旅の準備をするために、エル・チリポ国立公園の聖なる土地へ移動します。" },
+            { day: "3月2日", title: "最初のワチュマ・セレモニー", description: "イニシエーションの旅の始まり。山々の前でマエストロ・エルナンが導く深遠なセレモニー。" },
+            { day: "3月3日", title: "休息と統合", description: "国立公園の静けさの中で、休息し、振り返り、薬の教えを統合する日。" },
+            { day: "3月4日", title: "2回目のワチュマ・セレモニー", description: "ワークを深める。精神と先祖代々の知恵をさらに探求するための2回目のセレモニー。" },
+            { day: "3月5日", title: "休息と統合", description: "孤独、コミュニティでの共有、そして旅の教訓の穏やかな統合のための時間。" },
+            { day: "3月6日", title: "3回目のワチュマ・セレモニー", description: "イニシエーションの最後のセレモニー。感謝の気持ちでサークルを閉じ、変容を封印します。" },
+            { day: "3月7日", title: "閉会と出発", description: "最後の言葉、土地と部族への感謝、そして家路への旅の始まり。" }
+          ],
+          packages: {
+            title: "参加に含まれるもの",
+            items: [
+                "聖なる聖域での7日間/6泊",
+                "3回の完全なワチュマ・セレモニー",
+                "ラペと花の浄化の儀式",
+                "毎日の統合サークル",
+                "すべてのオーガニック食",
+                "サン・イシドロからの移動"
+            ]
+          }
+      },
       ui: {
         viewDetails: "詳細を見る",
         inquire: "お問い合わせ",
@@ -1623,22 +1781,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           { day: "6日目", title: "3回目のワチュマ＆統合", description: "最後の薬のセレモニー。統合、感謝、そして週の間に受けた癒しの封印に焦点を当てます。" },
           { day: "7日目", title: "帰路", description: "山を下り、パッチャンタの温泉に最後に浸かり、ピサックへ戻ります。" }
         ]
-      },
-      costaRica: {
-        title: "コスタリカへの聖なる巡礼",
-        subtitle: "山と海の統合",
-        intro: "秘密の場所でのコスタリカ初開催となる非常に特別な機会。聖なる山々と海をつなぐ、薬からのビジョンとメッセージに従った特別な肉体的および精神的な巡礼。",
-        description: [
-            "歴史的で変容をもたらす集まりに参加しませんか。初めて、エルナンは聖なるワチュマの薬をコスタリカの活気ある土地にもたらします。",
-            "深遠なビジョンと薬からの直接のメッセージに導かれ、このリトリートはアンデスの山々の知恵と海の浄化力をつなぐ精神的な巡礼です。",
-            "聖なるワチュマのセレモニーに加えて、ラペの薬を共有し、花を使った浄化のワークを行い、ガイド付きの薬の瞑想を通じて旅をします。",
-            "私たちは自然に抱かれた秘密の人里離れた場所に集まります。この親密な体験は、深い個人的な注意とまとまりのあるエネルギー的な器を確保するために、厳密に21人の参加者（ヘルパーを含む）に制限されています。"
-        ],
-        details: { location: "コスタリカ、秘密の場所", capacity: "21名限定", dates: "2026年2月24日〜3月2日" },
-        cta: "招待をリクエスト",
-        visionTitle: "薬からのビジョン",
-        visionText: "この集まりは単なるリトリートではありません。それは呼びかけへの応答です。薬は、高いアンデスに保持されている知恵と、海の浄化する流動的なエネルギーをつなぐことについて語りました。精神と肉体の巡礼です。",
-        themeValue: "海と山"
       },
       retreat2Day: {
         title: "2日間リトリート",
@@ -1773,6 +1915,45 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
   // SANSKRIT
   [Language.SA]: {
       ...enTranslations,
+      costaRica: {
+          ...enTranslations.costaRica,
+          title: "कोस्टा रिका प्रति पवित्र तीर्थयात्रा",
+          subtitle: "पर्वताः सागराः च मिलिताः",
+          intro: "एकः अतिविशेषः अवसरः, कोस्टा रिका मध्ये प्रथमवारं एकस्मिन् गुप्तस्थाने। पवित्रपर्वतानां सागरेण सह सम्बन्धः, ओषधेः दृष्टिं तथा सन्देशं अनुसरन्ती एका विशेषः शारीरिकः तथा आध्यात्मिकः तीर्थयात्रा।",
+          description: [
+              "एकस्मिन् ऐतिहासिके तथा परिवर्तनकारिणि समागमे अस्माभिः सह मिलन्तु। प्रथमवारं, हर्नन् पवित्र वाचुमा ओषधिं कोस्टा रिकायाः जीवन्तभूमिषु आनयति।",
+              "एकया गभीरदृष्ट्या तथा ओषधेः प्रत्यक्षसन्देशेन मार्गदर्शिता, इयं शिबिरः एका आध्यात्मिकी तीर्थयात्रा अस्ति या उच्च अण्डीजस्य प्रज्ञां सागरस्य शोधकशक्त्या सह योजयति।",
+              "पवित्र वाचुमा संस्कारैः सह, वयं रापे ओषधिं विभजेम, पुष्पैः सह शुद्धिं करिष्यामः, तथा मार्गदर्शितैः ओषधिध्यानैः यात्रां करिष्यामः।",
+              "वयं प्रकृतेः क्रोडे, एकस्मिन् गुप्तस्थाने मिलिष्यामः। इयं आत्मीया अनुभवः गभीरं व्यक्तिगतं ध्यानं तथा एकं सुसङ्गतं ऊर्जापात्रं सुनिश्चितं कर्तुं २१ प्रतिभागिषु (सहायकैः सह) सीमितः अस्ति।"
+          ],
+          details: { location: "गुप्तस्थानम्, कोस्टा रिका", capacity: "२१ जीवाः सीमिताः", dates: "फरवरी २४ - मार्च २, २०२६" },
+          cta: "आमन्त्रणं प्रार्थयन्तु",
+          visionTitle: "ओषधेः एका दृष्टिः",
+          visionText: "अयम् समागमः न केवलं एकं शिबिरं अस्ति; एतत् एकस्य आह्वानस्य उत्तरं अस्ति। ओषधिः उच्च अण्डीज मध्ये स्थितां प्रज्ञां सागरस्य पवित्र, प्रवाहितऊर्जया सह योजनस्य विषयं उक्तवती। आत्मनः शरीरस्य च तीर्थयात्रा।",
+          themeValue: "सागरः पर्वतः च",
+          itinerary: [
+            { day: "२५ फरवरी", title: "आगमनं तथा सागरेण सह सम्बन्धः", description: "वयं प्रशान्तमहासागरस्य विशालऊर्जया सह सम्बन्धेन आरभामहे, डियामान्टे उपत्यका प्रति यात्रायाः पूर्वं भूमौ आत्मानं स्थापयामः।" },
+            { day: "२६-२८ फरवरी", title: "डियामान्टे उपत्यकायां निमज्जनम्", description: "समृद्धे डियामान्टे उपत्यकायां एकः परिवर्तनकारी समयः। एषः प्रथमः भागः आत्मीयः तथा ९ स्थानेषु कठोरतया सीमितः अस्ति, यः प्रकृत्या समूहेन च सह गभीरसम्बन्धं पोषयति।" },
+            { day: "१ मार्च", title: "एल चिर्रिपो प्रति यात्रा", description: "वयं एल चिर्रिपो राष्ट्रियोद्यानस्य पवित्रभूमिं प्रति यात्रां कुर्मः, यत्र देशीयजनजातिभिः सह सम्पर्कं कर्तुं तथा दीक्षायत्रायाः सज्जीकरणं कर्तुं शक्नुमः।" },
+            { day: "२ मार्च", title: "प्रथमः वाचुमा संस्कारः", description: "दीक्षायत्रायाः उद्घाटनम्। पर्वतानां उपस्थितौ माएस्ट्रो हर्नन् द्वारा मार्गदर्शितः एकः गभीरः संस्कारः।" },
+            { day: "३ मार्च", title: "विश्रामः तथा एकीकरणम्", description: "राष्ट्रियोद्यानस्य शान्तौ विश्रामाय, चिन्तनाय, तथा ओषधेः शिक्षाणां एकीकरणाय एकः दिवसः।" },
+            { day: "४ मार्च", title: "द्वितीयः वाचुमा संस्कारः", description: "कार्यस्य गभीरीकरणम्। आत्मनि तथा पैतृकप्रज्ञायां अधिकं अन्वेषणं कर्तुं द्वितीयः संस्कारः।" },
+            { day: "५ मार्च", title: "विश्रामः तथा एकीकरणम्", description: "एकान्तस्य, सामुदायिकसाझाकरणस्य, तथा यात्रायाः पाठानां मृदु एकीकरणस्य समयः।" },
+            { day: "६ मार्च", title: "तृतीयः वाचुमा संस्कारः", description: "दीक्षायाः अन्तिमः संस्कारः। कृतज्ञतया सह चक्रं पिधाय तथा परिवर्तनं मुद्रितं कृत्वा।" },
+            { day: "७ मार्च", title: "समापनं तथा प्रस्थानम्", description: "अन्तिमवचनानि, भूम्यै तथा जनजातिभ्यः कृतज्ञता, तथा गृहं प्रति अस्माकं यात्रायाः आरम्भः।" }
+          ],
+          packages: {
+            title: "भागग्रहणे समाविष्टम्",
+            items: [
+                "पवित्राश्रमे ७ दिनानि / ६ रात्रयः",
+                "३ पूर्ण वाचुमा संस्काराः",
+                "रापे तथा पुष्पशुद्धि विधयः",
+                "दैनिक एकीकरण चक्राणि",
+                "सर्वाणि जैविक भोजनानि",
+                "सान् इसिड्रो तः परिवहनम्"
+            ]
+          }
+      },
       ui: {
         viewDetails: "विवरणं पश्यन्तु",
         inquire: "प्रच्छन्तु",
@@ -1888,22 +2069,6 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           { day: "दिनम् ६", title: "तृतीयः वाचुमा & एकीकरणम्", description: "अन्तिमः ओषधिसंस्कारः। एकीकरणे, कृतज्ञतायाम्, तथा सप्ताहस्य चिकित्सायाः रक्षणे ध्यानम्।" },
           { day: "दिनम् ७", title: "प्रत्यागमनयात्रा", description: "पर्वतात् अधः पदयात्रा, पाच्छन्ता उष्णजलेषु अन्तिमं स्नानम्, तथा पिसाक प्रति प्रत्यागमनम्।" }
         ]
-      },
-      costaRica: {
-        title: "कोस्टा रिका प्रति पवित्र तीर्थयात्रा",
-        subtitle: "पर्वताः सागराः च मिलिताः",
-        intro: "एकः अतिविशेषः अवसरः, कोस्टा रिका मध्ये प्रथमवारं एकस्मिन् गुप्तस्थाने। पवित्रपर्वतानां सागरेण सह सम्बन्धः, ओषधेः दृष्टिं तथा सन्देशं अनुसरन्ती एका विशेषः शारीरिकः तथा आध्यात्मिकः तीर्थयात्रा।",
-        description: [
-            "एकस्मिन् ऐतिहासिके तथा परिवर्तनकारिणि समागमे अस्माभिः सह मिलन्तु। प्रथमवारं, हर्नन् पवित्र वाचुमा ओषधिं कोस्टा रिकायाः जीवन्तभूमिषु आनयति।",
-            "एकया गभीरदृष्ट्या तथा ओषधेः प्रत्यक्षसन्देशेन मार्गदर्शिता, इयं शिबिरः एका आध्यात्मिकी तीर्थयात्रा अस्ति या उच्च अण्डीजस्य प्रज्ञां सागरस्य शोधकशक्त्या सह योजयति।",
-            "पवित्र वाचुमा संस्कारैः सह, वयं रापे ओषधिं विभजेम, पुष्पैः सह शुद्धिं करिष्यामः, तथा मार्गदर्शितैः ओषधिध्यानैः यात्रां करिष्यामः।",
-            "वयं प्रकृतेः क्रोडे, एकस्मिन् गुप्तस्थाने मिलिष्यामः। इयं आत्मीया अनुभवः गभीरं व्यक्तिगतं ध्यानं तथा एकं सुसङ्गतं ऊर्जापात्रं सुनिश्चितं कर्तुं २१ प्रतिभागिषु (सहायकैः सह) सीमितः अस्ति।"
-        ],
-        details: { location: "गुप्तस्थानम्, कोस्टा रिका", capacity: "२१ जीवाः सीमिताः", dates: "फरवरी २४ - मार्च २, २०२६" },
-        cta: "आमन्त्रणं प्रार्थयन्तु",
-        visionTitle: "ओषधेः एका दृष्टिः",
-        visionText: "अयम् समागमः न केवलं एकं शिबिरं अस्ति; एतत् एकस्य आह्वानस्य उत्तरं अस्ति। ओषधिः उच्च अण्डीज मध्ये स्थितां प्रज्ञां सागरस्य पवित्र, प्रवाहितऊर्जया सह योजनस्य विषयं उक्तवती। आत्मनः शरीरस्य च तीर्थयात्रा।",
-        themeValue: "सागरः पर्वतः च"
       },
       retreat2Day: {
         title: "२ दिवसीय शिबिरः",

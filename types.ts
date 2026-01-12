@@ -245,6 +245,11 @@ export interface TranslationData {
       visionTitle: string;
       visionText: string;
       themeValue: string;
+      itinerary: ItineraryDay[];
+      packages?: {
+          title: string;
+          items: string[];
+      };
   };
   retreat2Day: {
       title: string;
