@@ -1,18 +1,20 @@
 
 import React, { useState, useEffect } from 'react';
-import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ZoomIn, ChevronLeft, ChevronRight, ImageOff } from 'lucide-react';
 import { IMAGES } from '../constants';
 
 export const Gallery: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [imageError, setImageError] = useState(false);
 
   // Minimum swipe distance (in px)
   const minSwipeDistance = 50;
 
   // Use the image list directly from constants (which is already sorted and dynamic)
-  const galleryImages = IMAGES.gallery;
+  // Default to empty array to prevent crashes if undefined
+  const galleryImages = IMAGES?.gallery || [];
 
   // Prevent scrolling when modal is open
   useEffect(() => {
@@ -24,6 +26,11 @@ export const Gallery: React.FC = () => {
     return () => {
       document.body.style.overflow = 'unset';
     };
+  }, [selectedIndex]);
+
+  // Reset error state when image changes
+  useEffect(() => {
+    setImageError(false);
   }, [selectedIndex]);
 
   // Keyboard navigation
@@ -90,26 +97,44 @@ export const Gallery: React.FC = () => {
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-12 text-center">
             Gallery
         </h2>
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
-            {galleryImages.map((src, idx) => (
-                <div 
-                    key={idx} 
-                    className="break-inside-avoid overflow-hidden rounded-lg shadow-lg group cursor-pointer relative border border-white/10"
-                    onClick={() => setSelectedIndex(idx)}
-                >
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                        <ZoomIn className="text-white w-8 h-8 opacity-80" />
+        {galleryImages.length > 0 ? (
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+                {galleryImages.map((src, idx) => (
+                    <div 
+                        key={idx} 
+                        className="break-inside-avoid overflow-hidden rounded-lg shadow-lg group cursor-pointer relative border border-white/10 bg-pacha-earth/20 min-h-[200px]"
+                        onClick={() => setSelectedIndex(idx)}
+                    >
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                            <ZoomIn className="text-white w-8 h-8 opacity-80" />
+                        </div>
+                        <img 
+                            src={src} 
+                            alt={`Gallery ${idx + 1}`} 
+                            loading="lazy"
+                            decoding="async"
+                            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            onError={(e) => {
+                                // Fallback for missing images in grid
+                                e.currentTarget.style.display = 'none';
+                                const parent = e.currentTarget.parentElement;
+                                if (parent) {
+                                    parent.classList.add('flex', 'items-center', 'justify-center');
+                                    const icon = document.createElement('div');
+                                    icon.innerHTML = '<span class="text-white/20 text-4xl">🌵</span>';
+                                    parent.appendChild(icon);
+                                }
+                            }}
+                        />
                     </div>
-                    <img 
-                        src={src} 
-                        alt={`Gallery ${idx + 1}`} 
-                        loading="lazy"
-                        decoding="async"
-                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                    />
-                </div>
-            ))}
-        </div>
+                ))}
+            </div>
+        ) : (
+            <div className="text-center text-gray-400 py-20 flex flex-col items-center">
+                <ImageOff className="w-12 h-12 mb-4 opacity-50" />
+                <p>No images available in the gallery yet.</p>
+            </div>
+        )}
       </div>
 
       {/* Lightbox Modal */}
@@ -148,14 +173,25 @@ export const Gallery: React.FC = () => {
             </button>
 
             <div className="relative max-w-7xl max-h-[85vh] w-full flex items-center justify-center px-8 md:px-12 select-none">
-                <img 
-                    src={galleryImages[selectedIndex]} 
-                    alt="Full screen view" 
-                    className="max-w-full max-h-[85vh] object-contain rounded-sm shadow-2xl pointer-events-none md:pointer-events-auto"
-                    // Pointer events none on mobile image to allow touch events to pass through for swiping if needed, 
-                    // though touch events on container should handle it.
-                    onClick={(e) => e.stopPropagation()} 
-                />
+                {!imageError ? (
+                    <img 
+                        key={selectedIndex} // Force remount on index change to reset loading state
+                        src={galleryImages[selectedIndex]} 
+                        alt="Full screen view" 
+                        className="max-w-full max-h-[85vh] object-contain rounded-sm shadow-2xl"
+                        onClick={(e) => e.stopPropagation()}
+                        onError={() => setImageError(true)}
+                    />
+                ) : (
+                    <div 
+                        className="flex flex-col items-center justify-center text-white/50 p-10 bg-white/5 rounded-lg border border-white/10 backdrop-blur-sm"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <ImageOff size={64} className="mb-4 opacity-50" />
+                        <span className="text-xl font-serif">Image not found</span>
+                        <span className="text-sm mt-2 opacity-50">{galleryImages[selectedIndex]}</span>
+                    </div>
+                )}
             </div>
             
             {/* Image Counter */}

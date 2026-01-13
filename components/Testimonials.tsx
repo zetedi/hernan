@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { TranslationData } from '../types';
 import { Quote } from 'lucide-react';
@@ -35,9 +36,16 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ t }) => {
                                 className="w-full h-full object-cover" 
                                 onError={(e) => {
                                     // Fallback if image fails - hide image so background emoji shows or replace
-                                    e.currentTarget.style.display = 'none';
-                                    e.currentTarget.parentElement!.innerText = '🌵';
-                                    e.currentTarget.parentElement!.style.fontSize = '1.5rem';
+                                    const target = e.currentTarget;
+                                    target.style.display = 'none';
+                                    const parent = target.parentElement;
+                                    if (parent) {
+                                        parent.innerText = '🌵';
+                                        parent.style.fontSize = '1.5rem';
+                                        parent.style.display = 'flex';
+                                        parent.style.alignItems = 'center';
+                                        parent.style.justifyContent = 'center';
+                                    }
                                 }}
                             />
                         ) : (
@@ -45,8 +53,8 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ t }) => {
                         )}
                     </div>
                     <div>
-                        <h4 className="font-bold text-pacha-earth font-serif text-lg">{item.name}</h4>
-                        <span className="text-sm text-pacha-leaf uppercase tracking-wider font-bold">{item.location}</span>
+                        <h4 className="font-bold text-pacha-stone text-lg">{item.name}</h4>
+                        <span className="text-pacha-leaf text-sm font-medium uppercase tracking-wide">{item.location}</span>
                     </div>
                 </div>
               </div>

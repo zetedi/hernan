@@ -46,14 +46,9 @@ const App: React.FC = () => {
         case Language.QU: return "Hernan Raíces Quechua - Hampi Wachuma";
         case Language.JA: return "ヘルナン・ライセス・ケチュア - アンデスの聖なる薬";
         case Language.HU: return "Hernan Raíces Quechua - Andok Szent Gyógyító Ereje";
-        case Language.SA: return "Hernan Raíces Quechua - पवित्र अण्डीज ओषधि";
-        case Language.AR: return "هيرنان جذور الكيتشوا - الطب المقدس";
         default: return "Hernan Raíces Quechua";
     }
   };
-
-  // Helper to get text direction
-  const getDir = (lang: Language) => lang === Language.AR ? 'rtl' : 'ltr';
 
   // Helper to get HTML lang attribute
   const getHtmlLang = (lang: Language) => lang.toLowerCase();
@@ -90,7 +85,6 @@ const App: React.FC = () => {
         title={getTitle(currentLanguage)}
         description={t.footer.description}
         lang={getHtmlLang(currentLanguage)}
-        dir={getDir(currentLanguage)}
       />
 
       <Navbar 

@@ -20,9 +20,7 @@ const FLYER_BIO_TRANSLATIONS: Record<Language, string> = {
     [Language.ES]: "Hernan Colque es nativo Quechua y un devoto facilitador de ceremonias de Wachuma (San Pedro), profundamente arraigado en las tradiciones sagradas de los Andes.",
     [Language.HU]: "Hernan Colque kecsua őslakos, a Wachuma (San Pedro) szertartások elkötelezett vezetője, aki mélyen gyökerezik az Andok szent hagyományaiban.",
     [Language.QU]: "Hernan Colqueqa Qichwa runam, Wachuma (San Pedro) raymikuna pusaq, Andeskunap willka yachayninkunapi saphichasqa.",
-    [Language.JA]: "エルナン・コルケはケチュア族のネイティブであり、アンデスの神聖な伝統に深く根ざしたワチュマ（サンペドロ）セレモニーの献身的なファシリテーターです。",
-    [Language.AR]: "هيرنان كولكي هو من السكان الأصليين للكيتشوا وميسر مخلص لمراسم الواتشوما (سان بيدرو)، متجذر بعمق في التقاليد المقدسة للأنديز.",
-    [Language.SA]: "हर्नन् कोल्के क्वेशुआ देशीयः तथा वाचुमा (सेन् पेड्रो) संस्काराणाम् समर्पितः संचालकः अस्ति, यः अण्डीजस्य पवित्रपरम्परासु गभीररूपेण स्थितः अस्ति।"
+    [Language.JA]: "エルナン・コルケはケチュア族のネイティブであり、アンデスの神聖な伝統に深く根ざしたワチュマ（サンペドロ）セレモニーの献身的なファシリテーターです。"
 };
 
 export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, footer, type, lang }) => {
@@ -61,7 +59,6 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
       bgImage = IMAGES.juchuy;
       locationText = locJuchuy;
   } else if (type === 'ausangate3Day') {
-      // Changed background to ausangate3.jpg as requested
       bgImage = IMAGES.ausangate3;
       locationText = locAusangate;
       dateText = t.details?.dates || (isSpanish ? "28 - 30 Ene, 2026" : "Jan 28 - 30, 2026");
@@ -116,8 +113,6 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
         case Language.ES: return "Día";
         case Language.HU: return "Nap";
         case Language.QU: return "P'unchay";
-        case Language.AR: return "اليوم";
-        case Language.SA: return "दिनम्";
         case Language.JA: return "日目";
         default: return "Day";
     }
@@ -205,7 +200,6 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                                 <img src={IMAGES.hat} className="w-full h-full object-cover" alt="Hernan's Hat" />
                             </div>
                             <div className="w-28 h-28 md:w-36 md:h-36 rounded-lg overflow-hidden border-2 border-white shadow-lg transform rotate-3 z-0 bg-white">
-                                {/* Changed to wachuma.jpg per request */}
                                 <img src={IMAGES.wachuma} className="w-full h-full object-cover" alt="Wachuma" />
                             </div>
                         </div>
