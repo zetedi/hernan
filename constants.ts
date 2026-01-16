@@ -62,9 +62,9 @@ export const CREDITS: Record<string, string> = {
 const costaRicaItinerary = [
     { day: "Feb 25", title: "Arrival & Ocean Connection", description: "We begin by connecting with the vast energy of the Pacific Ocean, grounding ourselves in the land before journeying to the Diamante Valley." },
     { day: "Feb 26-28", title: "Diamante Valley Immersion", description: "A transformative time in the lush Diamante Valley. This first part is intimate and strictly limited to 9 spots, fostering a deep connection with nature and the group." },
-    { day: "Mar 1", title: "Journey to El Chirripó", description: "We travel to the sacred lands of El Chirripó National Park to connect with the indigenous tribes and prepare for the initiation journey." },
+    { day: "Mar 1", title: "Journey to El Chirripó", description: "We travel to the sacred lands of El Chirripó to connect with the indigenous tribes and prepare for the initiation journey." },
     { day: "Mar 2", title: "First Wachuma Ceremony", description: "Opening the initiation journey. A profound ceremony guided by Maestro Hernan in the presence of the mountains." },
-    { day: "Mar 3", title: "Rest & Integration", description: "A day to rest, reflect, and integrate the teachings of the medicine in the peace of the national park." },
+    { day: "Mar 3", title: "Rest & Integration", description: "A day to rest, reflect, and integrate the teachings of the medicine in the peace of the mountains." },
     { day: "Mar 4", title: "Second Wachuma Ceremony", description: "Deepening the work. A second ceremony to explore further into the spirit and the ancestral wisdom." },
     { day: "Mar 5", title: "Rest & Integration", description: "Time for solitude, community sharing, and gentle integration of the journey's lessons." },
     { day: "Mar 6", title: "Third Wachuma Ceremony", description: "The final ceremony of the initiation. Closing the circle with gratitude and sealing the transformation." },
@@ -355,28 +355,22 @@ const enTranslations: TranslationData = {
             { question: "Is the retreat safe?", answer: "Safety is our top priority. Our retreats are held in a controlled, supportive environment with experienced facilitators to guide you through each step of the journey." },
             { question: "What is your refund or cancellation policy?", answer: "Deposits are refundable up to a specific date. We encourage early communication if your plans change to ensure clarity and support." }
         ]
-    },
-    testimonials: {
-      title: "Voices from the Heart",
-      items: [
-        { 
-            name: "Zoltan E.", 
-            location: "Hungary", 
-            text: `It’s a truly authentic experience of connecting with the spirit of the land and the healing power of the plant medicine. It has been a profound connection with the ancient wisdom of the Incan and pre Incan spiritual guides through Maestro Hernan. I’m very grateful for the journey.`,
-            image: IMAGES.zoltan 
-        },
-        {
-            name: "Stephanie K.",
-            location: "Google Review",
-            text: `I feel so fortunate to have participated in a full-day Wachuma ceremony with Don Hernan. We journeyed way up into the mountains, through a local village, to commune with nature, spirit, and the energy of reciprocity. His guidance is sincere, and his medicine is the best Wachuma I’ve imbibed. We returned to his house to finish the ceremony with delicious homemade Andean soup, and a fire in the garden under the full moon and stars. I highly recommend visiting Wayna Wasi and working with Don Hernan. 🫶🏼✨🌵🙏🏼⛰️`,
-            image: IMAGES.kittel
-        }
-      ]
-    },
+      },
+      testimonials: { title: "Voices from the Heart", items: [{ 
+          name: "Zoltan E.", 
+          location: "Hungary", 
+          text: `It’s a truly authentic experience of connecting with the spirit of the land and the healing power of the plant medicine. It has been a profound connection with the ancient wisdom of the Incan and pre Incan spiritual guides through Maestro Hernan. I’m very grateful for the journey.`, 
+          image: IMAGES.zoltan 
+      }, {
+        name: "Stephanie K.",
+        location: "Google Review",
+        text: `I feel so fortunate to have participated in a full-day Wachuma ceremony with Don Hernan. We journeyed way up into the mountains, through a local village, to commune with nature, spirit, and the energy of reciprocity. His guidance is sincere, and his medicine is the best Wachuma I’ve imbibed. We returned to his house to finish the ceremony with delicious homemade Andean soup, and a fire in the garden under the full moon and stars. I highly recommend visiting Wayna Wasi and working with Don Hernan. 🫶🏼✨🌵🙏🏼⛰️`,
+        image: IMAGES.kittel
+    }] },
     contact: {
-      title: "Get in Touch",
-      form: { name: "Your Name", email: "Your Email", message: "Your Message", submit: "Send Message" },
-      info: "We are located in the heart of the Sacred Valley, near Calca, Cusco."
+        title: "Get in Touch",
+        form: { name: "Your Name", email: "Your Email", message: "Your Message", submit: "Send Message" },
+        info: "We are located in the heart of the Sacred Valley, near Calca, Cusco."
     },
     footer: {
       description: "Experience the transformative power of Wachuma, the sacred Andean plant medicine known as San Pedro. Join Hernan in guided ceremonies that will help you reconnect with your inner self, heal deeply, and awaken your spirit.",
@@ -440,9 +434,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           itinerary: [
             { day: "25 Feb", title: "Llegada y Conexión con el Océano", description: "Comenzamos conectando con la vasta energía del Océano Pacífico, arraigándonos en la tierra antes de viajar al Valle Diamante." },
             { day: "26-28 Feb", title: "Inmersión en el Valle Diamante", description: "Un tiempo transformador en el exuberante Valle Diamante. Esta primera parte es íntima y estrictamente limitada a 9 plazas, fomentando una profunda conexión con la naturaleza y el grupo." },
-            { day: "1 Mar", title: "Viaje a El Chirripó", description: "Viajamos a las tierras sagradas del Parque Nacional El Chirripó para conectar con las tribus indígenas y prepararnos para el viaje de iniciación." },
+            { day: "1 Mar", title: "Viaje a El Chirripó", description: "Viajamos a las tierras sagradas de El Chirripó para conectar con las tribus indígenas y prepararnos para el viaje de iniciación." },
             { day: "2 Mar", title: "Primera Ceremonia de Wachuma", description: "Abriendo el viaje de iniciación. Una profunda ceremonia guiada por el Maestro Hernan en presencia de las montañas." },
-            { day: "3 Mar", title: "Descanso e Integración", description: "Un día para descansar, reflexionar e integrar las enseñanzas de la medicina en la paz del parque nacional." },
+            { day: "3 Mar", title: "Descanso e Integración", description: "Un día para descansar, reflexionar e integrar las enseñanzas de la medicina en la paz de las montañas." },
             { day: "4 Mar", title: "Segunda Ceremonia de Wachuma", description: "Profundizando en el trabajo. Una segunda ceremonia para explorar más a fondo en el espíritu y la sabiduría ancestral." },
             { day: "5 Mar", title: "Descanso e Integración", description: "Tiempo para la soledad, compartir en comunidad y la integración suave de las lecciones del viaje." },
             { day: "6 Mar", title: "Tercera Ceremonia de Wachuma", description: "La ceremonia final de la iniciación. Cerrando el círculo con gratitud y sellando la transformación." },
@@ -749,9 +743,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           itinerary: [
             { day: "Feb 25", title: "Érkezés és Kapcsolódás az Óceánhoz", description: "A Csendes-óceán hatalmas energiájával való kapcsolódással kezdünk, leföldelve magunkat a földön, mielőtt a Diamante-völgybe utaznánk." },
             { day: "Feb 26-28", title: "Elmélyülés a Diamante-völgyben", description: "Átalakító időszak a buja Diamante-völgyben. Ez az első rész meghitt és szigorúan 9 főre korlátozódik, elősegítve a mély kapcsolatot a természettel és a csoporttal." },
-            { day: "Már 1", title: "Utazás El Chirripóba", description: "El Chirripó Nemzeti Park szent földjére utazunk, hogy kapcsolatba lépjünk az őslakos törzsekkel és felkészüljünk a beavatási utazásra." },
+            { day: "Már 1", title: "Utazás El Chirripóba", description: "El Chirripó szent földjére utazunk, hogy kapcsolatba lépjünk az őslakos törzsekkel és felkészüljünk a beavatási utazásra." },
             { day: "Már 2", title: "Első Wachuma Szertartás", description: "A beavatási utazás megnyitása. Mélyreható szertartás Hernan mester vezetésével a hegyek jelenlétében." },
-            { day: "Már 3", title: "Pihenés és Integráció", description: "Egy nap a pihenésre, elmélkedésre és a medicina tanításainak integrálására a nemzeti park békéjében." },
+            { day: "Már 3", title: "Pihenés és Integráció", description: "Egy nap a pihenésre, elmélkedésre és a medicina tanításainak integrálására a hegyek békéjében." },
             { day: "Már 4", title: "Második Wachuma Szertartás", description: "A munka elmélyítése. Egy második szertartás a szellem és az ősi bölcsesség további felfedezésére." },
             { day: "Már 5", title: "Pihenés és Integráció", description: "Idő az egyedüllétre, a közösségi megosztásra és az utazás tanulságainak gyengéd integrálására." },
             { day: "Már 6", title: "Harmadik Wachuma Szertartás", description: "A beavatás utolsó szertartása. A kör bezárása hálával és az átalakulás megpecsételése." },
@@ -1058,9 +1052,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           itinerary: [
             { day: "25 Hatun Puquy", title: "Chayamuy & Mama Qochawan Tinkuy", description: "Pacifico Mama Qochawan tinkuspa qallarinchik, allpapi kallpachakuspa manaraq Diamante Wayq'oman purichkaspa." },
             { day: "26-28 Hatun Puquy", title: "Diamante Wayq'opi Ukhunchay", description: "Huk tikray pacha sumaq Diamante Wayq'opi. Kay ñawpaq rakiqa pisi runallapaqmi (9 tiyay), sallqa pachawan aylluwan sumaqta tinkunapaq." },
-            { day: "1 Pawqar Waray", title: "El Chirripóman Puriy", description: "El Chirripó Willka Parkiman purinchik, chaypi tiyaq runakunawan tinkunapaq, qallariy puriypaq wakichikunapaq." },
+            { day: "1 Pawqar Waray", title: "El Chirripóman Puriy", description: "El Chirripó willka allpakunaman purinchik, chaypi tiyaq runakunawan tinkunapaq, qallariy puriypaq wakichikunapaq." },
             { day: "2 Pawqar Waray", title: "Ñawpaq Wachuma Raymi", description: "Qallariy puriyta kicharispa. Huk ukhu raymi Maestro Hernanwan, urqukunaq ñawpaqinpi." },
-            { day: "3 Pawqar Waray", title: "Samay & Yachay Huñuy", description: "Samana p'unchay, yuyaymanana, hampi yachaykunata sunquman churanapaq willka parki thak kayninpi." },
+            { day: "3 Pawqar Waray", title: "Samay & Yachay Huñuy", description: "Samana p'unchay, yuyaymanana, hampi yachaykunata sunquman churanapaq willka tiyay thak kayninpi." },
             { day: "4 Pawqar Waray", title: "Iskay Kaq Wachuma Raymi", description: "Llank'ayta ukhunchaspa. Iskay kaq raymi aswan ukhuta nunaman ñawpaq yachaymanpis purinapaq." },
             { day: "5 Pawqar Waray", title: "Samay & Yachay Huñuy", description: "Sapalla kay pacha, aylluwan rimanakuy, puriy yachaykunata llamp'u sunquwan huñuy." },
             { day: "6 Pawqar Waray", title: "Kimsa Kaq Wachuma Raymi", description: "Tukuq qallariy raymi. Muyuta wisq'aspa yupaychaywan, tikrayta sellaspa." },
@@ -1352,9 +1346,9 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           itinerary: [
             { day: "2月25日", title: "到着と海とのつながり", description: "私たちは太平洋の広大なエネルギーとつながり、ディアマンテ渓谷への旅の前に大地に自分自身をグラウンディングさせることから始めます。" },
             { day: "2月26-28日", title: "ディアマンテ渓谷への没入", description: "緑豊かなディアマンテ渓谷での変容の時。この最初の部分は親密で、9名限定となっており、自然やグループとの深いつながりを育みます。" },
-            { day: "3月1日", title: "エル・チリポへの旅", description: "先住民族とつながり、イニシエーションの旅の準備をするために、エル・チリポ国立公園の聖なる土地へ移動します。" },
+            { day: "3月1日", title: "エル・チリポへの旅", description: "先住民族とつながり、イニシエーションの旅の準備をするために、エル・チリポの聖なる土地へ移動します。" },
             { day: "3月2日", title: "最初のワチュマ・セレモニー", description: "イニシエーションの旅の始まり。山々の前でマエストロ・エルナンが導く深遠なセレモニー。" },
-            { day: "3月3日", title: "休息と統合", description: "国立公園の静けさの中で、休息し、振り返り、薬の教えを統合する日。" },
+            { day: "3月3日", title: "休息と統合", description: "聖域の静けさの中で、休息し、振り返り、薬の教えを統合する日。" },
             { day: "3月4日", title: "2回目のワチュマ・セレモニー", description: "ワークを深める。精神と先祖代々の知恵をさらに探求するための2回目のセレモニー。" },
             { day: "3月5日", title: "休息と統合", description: "孤独、コミュニティでの共有、そして旅の教訓の穏やかな統合のための時間。" },
             { day: "3月6日", title: "3回目のワチュマ・セレモニー", description: "イニシエーションの最後のセレモニー。感謝の気持ちでサークルを閉じ、変容を封印します。" },
