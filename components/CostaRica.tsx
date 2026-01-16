@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationData, Language } from '../types';
@@ -195,8 +196,8 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang }
                                 if (titleLower.includes('ceremony')) DayIcon = Eye;
                                 if (titleLower.includes('ocean')) DayIcon = Waves;
 
-                                // Location Logic: Index 2+ (March 1 onwards) is El Chirripó
-                                const locationName = index >= 2 ? 'El Chirripó' : 'Diamante Valley';
+                                // Location Logic: Index 2+ (March 1 onwards) is El Chirripó leg
+                                const locationName = index >= 2 ? 'The Mountains' : 'Diamante Valley';
 
                                 return (
                                     <div key={index} className="relative pl-12 group">

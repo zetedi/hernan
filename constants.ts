@@ -1,4 +1,3 @@
-
 import { Language, TranslationData } from './types';
 
 const galleryImages = [
@@ -252,7 +251,7 @@ const enTranslations: TranslationData = {
         subtitle: "Community, Cuisine & Ruins",
         intro: "A special 2-day journey to Juchuy Qosqo ('Little Cusco'), combining a hike to ancient ruins with a deep cultural immersion staying with a local family.",
         days: [
-            { title: "Day 1 : Hike & Traditional Cooking", content: "We begin our journey hiking up to the spectacular ruins of Juchuy Qosqo, overlooking the Sacred Valley. In the afternoon, we settle into an authentic local family home. Here, we will prepare food together, cooking traditional Andean soup and sharing stories by the fire. This communal preparation is a ceremony in itself, grounding us in the local way of life.", accommodation: "Authentic accommodation with a local family next to the ruins." },
+            { title: "Day 1 : Hike & Traditional Cooking", content: "We begin with a scenic hike up to the archaeological site of Juchuy Qosqo, enjoying panoramic views of the Sacred Valley. Upon arrival, we connect with a local family who will host us. In the afternoon, we explore the ruins and learn about their history, followed by a traditional dinner prepared together with our hosts.", accommodation: "Authentic accommodation with a local family next to the ruins." },
             { title: "Day 2 : Ceremony at the Ruins", content: "Morning breaks over the Apus. We engage in a sacred Wachuma ceremony in the powerful presence of the Juchuy Qosqo ruins. Without the crowds of other sites, we can connect deeply with the history and energy of this royal estate. The ceremony allows for profound reflection and connection with the ancestors.", accommodation: "Descent and return transport to Pisac." }
         ],
         conclusion: "A unique blend of archaeological wonder, living culture, and spiritual work. You will leave with a full belly, a warm heart, and a spirit aligned with the Andes."
@@ -541,7 +540,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             },
             { 
                 title: "Inmersión Juchuy Qosqo", 
-                description: "2 Días en las ruinas de 'Cusco Pequeño'. Quédate con una familia local, cocina comida tradicional juntos y experimenta una conexión profunda.", 
+                description: "2 Días en las ruinas de 'Cusco Pequeño'. Quédate con una familia local, cocina comida tradicional y experimenta una conexión profunda.", 
                 price: "$200+",
                 details: { duration: "2 Días", location: "Juchuy Qosqo", groupSize: "Mín 2" }
             },
