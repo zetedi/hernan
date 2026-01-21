@@ -60,15 +60,15 @@ export const CREDITS: Record<string, string> = {
 };
 
 const costaRicaItinerary = [
-    { day: "Feb 25", title: "Arrival & Ocean Connection", description: "We begin by connecting with the vast energy of the Pacific Ocean, grounding ourselves in the land before journeying to the Diamante Valley." },
-    { day: "Feb 26-28", title: "Diamante Valley Immersion", description: "A transformative time in the lush Diamante Valley. This first part is intimate and strictly limited to 9 spots, fostering a deep connection with nature and the group." },
-    { day: "Mar 1", title: "Journey to El Chirripó", description: "We travel to the sacred lands of El Chirripó to connect with the indigenous tribes and prepare for the initiation journey." },
-    { day: "Mar 2", title: "First Wachuma Ceremony", description: "Opening the initiation journey. A profound ceremony guided by Maestro Hernan in the presence of the mountains." },
-    { day: "Mar 3", title: "Rest & Integration", description: "A day to rest, reflect, and integrate the teachings of the medicine in the peace of the mountains." },
-    { day: "Mar 4", title: "Second Wachuma Ceremony", description: "Deepening the work. A second ceremony to explore further into the spirit and the ancestral wisdom." },
-    { day: "Mar 5", title: "Rest & Integration", description: "Time for solitude, community sharing, and gentle integration of the journey's lessons." },
-    { day: "Mar 6", title: "Third Wachuma Ceremony", description: "The final ceremony of the initiation. Closing the circle with gratitude and sealing the transformation." },
-    { day: "Mar 7", title: "Closing & Departure", description: "Final words, gratitude to the land and the tribes, and beginning our journey home." }
+    { day: "Feb 21", title: "Arrival & Ocean Connection", description: "We begin by connecting with the vast energy of the Pacific Ocean, grounding ourselves in the land before journeying to our secret location." },
+    { day: "Feb 22", title: "Secret Sanctuary Immersion", description: "A transformative time in a secluded sanctuary. Deep connection with nature and the group, preparing for the work ahead." },
+    { day: "Feb 23", title: "First Wachuma Ceremony", description: "Opening the journey at a secret location. A profound ceremony guided by Maestro Hernan." },
+    { day: "Feb 24-25", title: "Rest & Integration", description: "Days to rest, reflect, and integrate the teachings of the medicine." },
+    { day: "Feb 26", title: "Second Wachuma Ceremony", description: "Deepening the work. A second ceremony to explore further into the spirit and ancestral wisdom." },
+    { day: "Feb 27-28", title: "Integration & Preparation", description: "Time for community sharing, nature immersion, and preparing for the journey to the indigenous lands." },
+    { day: "Mar 1", title: "Journey to Talamanca Reserve", description: "We travel to the sacred Talamanca Reserve to connect with the indigenous tribes." },
+    { day: "Mar 2", title: "Ceremony with Indigenous Tribes", description: "A special ceremony shared with the indigenous community, honoring their ancestral lands and wisdom." },
+    { day: "Mar 3", title: "Sandero Gigante & Lunar Eclipse", description: "We journey to Sandero Gigante to connect with the powerful energy of the full lunar eclipse. Closing the circle." }
 ];
 
 const enTranslations: TranslationData = {
@@ -107,7 +107,7 @@ const enTranslations: TranslationData = {
       cta: "Book a Ceremony",
       retreatTeaser: { label: "Sacred Immersion", title: "2 Day Retreat", location: "Pisac & Kinsacocha" },
       ausangateTeaser: { label: "Closer to the Sky", title: "Ausangate 3 Days", date: "Jan 28 - 30, 2026" },
-      costaRicaTeaser: { label: "Special Event", title: "Costa Rica Pilgrimage", date: "Feb 24 - Mar 2, 2026" }
+      costaRicaTeaser: { label: "Special Event", title: "Costa Rica Pilgrimage", date: "Feb 21 - Mar 3, 2026" }
     },
     benefits: {
       title: "The Power of Wachuma",
@@ -166,7 +166,7 @@ const enTranslations: TranslationData = {
             title: "Costa Rica Pilgrimage", 
             description: "A sacred journey connecting the Andes and the Ocean in a secret location in Costa Rica. Limited to 21 participants.", 
             price: "Inquire",
-            details: { duration: "7 Days", location: "Costa Rica", groupSize: "Max 21" }
+            details: { duration: "11 Days", location: "Costa Rica", groupSize: "Max 21" }
         },
         { 
             title: "Private Healing", 
@@ -218,7 +218,7 @@ const enTranslations: TranslationData = {
             "In addition to the sacred Wachuma ceremonies, we will share the medicine of Rapé, perform cleansing works with flowers, and journey through guided medicine meditations.",
             "We will gather in a secret, secluded location, immersed in nature's embrace. This intimate experience is strictly limited to 21 participants (including helpers) to ensure deep, personal attention and a cohesive energetic container."
         ],
-        details: { location: "Secret Location, Costa Rica", capacity: "Limited to 21 Souls", dates: "February 24 - March 2, 2026" },
+        details: { location: "Secret Location, Costa Rica", capacity: "Limited to 21 Souls", dates: "February 21 - March 3, 2026" },
         cta: "Request Invitation",
         visionTitle: "A Vision from the Medicine",
         visionText: "This gathering is not just a retreat; it is a response to a call. The medicine spoke of connecting the wisdom held in the high Andes with the purifying, fluid energy of the ocean. A pilgrimage of spirit and body.",
@@ -227,10 +227,10 @@ const enTranslations: TranslationData = {
         packages: {
             title: "Participation Includes",
             items: [
-                "7 Days / 6 Nights in Sacred Sanctuary",
-                "3 Full Wachuma Ceremonies",
+                "11 Days / 10 Nights in Sacred Sanctuary",
+                "Wachuma Ceremonies with Indigenous Tribes",
+                "Full Lunar Eclipse Ritual",
                 "Rapé & Floral Cleansing Rituals",
-                "Daily Integration Circles",
                 "All Organic Meals Provided",
                 "Transport from San Isidro"
             ]
@@ -355,22 +355,28 @@ const enTranslations: TranslationData = {
             { question: "Is the retreat safe?", answer: "Safety is our top priority. Our retreats are held in a controlled, supportive environment with experienced facilitators to guide you through each step of the journey." },
             { question: "What is your refund or cancellation policy?", answer: "Deposits are refundable up to a specific date. We encourage early communication if your plans change to ensure clarity and support." }
         ]
-      },
-      testimonials: { title: "Voices from the Heart", items: [{ 
-          name: "Zoltan E.", 
-          location: "Hungary", 
-          text: `It’s a truly authentic experience of connecting with the spirit of the land and the healing power of the plant medicine. It has been a profound connection with the ancient wisdom of the Incan and pre Incan spiritual guides through Maestro Hernan. I’m very grateful for the journey.`, 
-          image: IMAGES.zoltan 
-      }, {
-        name: "Stephanie K.",
-        location: "Google Review",
-        text: `I feel so fortunate to have participated in a full-day Wachuma ceremony with Don Hernan. We journeyed way up into the mountains, through a local village, to commune with nature, spirit, and the energy of reciprocity. His guidance is sincere, and his medicine is the best Wachuma I’ve imbibed. We returned to his house to finish the ceremony with delicious homemade Andean soup, and a fire in the garden under the full moon and stars. I highly recommend visiting Wayna Wasi and working with Don Hernan. 🫶🏼✨🌵🙏🏼⛰️`,
-        image: IMAGES.kittel
-    }] },
+    },
+    testimonials: {
+      title: "Voices from the Heart",
+      items: [
+        { 
+            name: "Zoltan E.", 
+            location: "Hungary", 
+            text: `It’s a truly authentic experience of connecting with the spirit of the land and the healing power of the plant medicine. It has been a profound connection with the ancient wisdom of the Incan and pre Incan spiritual guides through Maestro Hernan. I’m very grateful for the journey.`,
+            image: IMAGES.zoltan 
+        },
+        {
+            name: "Stephanie K.",
+            location: "Google Review",
+            text: `I feel so fortunate to have participated in a full-day Wachuma ceremony with Don Hernan. We journeyed way up into the mountains, through a local village, to commune with nature, spirit, and the energy of reciprocity. His guidance is sincere, and his medicine is the best Wachuma I’ve imbibed. We returned to his house to finish the ceremony with delicious homemade Andean soup, and a fire in the garden under the full moon and stars. I highly recommend visiting Wayna Wasi and working with Don Hernan. 🫶🏼✨🌵🙏🏼⛰️`,
+            image: IMAGES.kittel
+        }
+      ]
+    },
     contact: {
-        title: "Get in Touch",
-        form: { name: "Your Name", email: "Your Email", message: "Your Message", submit: "Send Message" },
-        info: "We are located in the heart of the Sacred Valley, near Calca, Cusco."
+      title: "Get in Touch",
+      form: { name: "Your Name", email: "Your Email", message: "Your Message", submit: "Send Message" },
+      info: "We are located in the heart of the Sacred Valley, near Calca, Cusco."
     },
     footer: {
       description: "Experience the transformative power of Wachuma, the sacred Andean plant medicine known as San Pedro. Join Hernan in guided ceremonies that will help you reconnect with your inner self, heal deeply, and awaken your spirit.",
@@ -426,29 +432,29 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               "Además de las ceremonias sagradas de Wachuma, compartiremos la medicina del Rapé, realizaremos trabajos de limpieza con flores y viajaremos a través de meditaciones guiadas con medicina.",
               "Nos reuniremos en un lugar secreto y apartado, inmersos en el abrazo de la naturaleza. Esta experiencia íntima está estrictamente limitada a 21 participantes (incluidos los ayudantes) para garantizar una atención personal profunda y un contenedor energético cohesivo."
           ],
-          details: { location: "Ubicación Secreta, Costa Rica", capacity: "Limitado a 21 Almas", dates: "24 de Febrero - 2 de Marzo, 2026" },
+          details: { location: "Ubicación Secreta, Costa Rica", capacity: "Limitado a 21 Almas", dates: "21 de Febrero - 3 de Marzo, 2026" },
           cta: "Solicitar Invitación",
           visionTitle: "Una Visión de la Medicina",
           visionText: "Este encuentro no es solo un retiro; es una respuesta a un llamado. La medicina habló de conectar la sabiduría de los Andes con la energía purificadora y fluida del océano. Un peregrinaje del espíritu y el cuerpo.",
           themeValue: "Océano y Montaña",
           itinerary: [
-            { day: "25 Feb", title: "Llegada y Conexión con el Océano", description: "Comenzamos conectando con la vasta energía del Océano Pacífico, arraigándonos en la tierra antes de viajar al Valle Diamante." },
-            { day: "26-28 Feb", title: "Inmersión en el Valle Diamante", description: "Un tiempo transformador en el exuberante Valle Diamante. Esta primera parte es íntima y estrictamente limitada a 9 plazas, fomentando una profunda conexión con la naturaleza y el grupo." },
-            { day: "1 Mar", title: "Viaje a El Chirripó", description: "Viajamos a las tierras sagradas de El Chirripó para conectar con las tribus indígenas y prepararnos para el viaje de iniciación." },
-            { day: "2 Mar", title: "Primera Ceremonia de Wachuma", description: "Abriendo el viaje de iniciación. Una profunda ceremonia guiada por el Maestro Hernan en presencia de las montañas." },
-            { day: "3 Mar", title: "Descanso e Integración", description: "Un día para descansar, reflexionar e integrar las enseñanzas de la medicina en la paz de las montañas." },
-            { day: "4 Mar", title: "Segunda Ceremonia de Wachuma", description: "Profundizando en el trabajo. Una segunda ceremonia para explorar más a fondo en el espíritu y la sabiduría ancestral." },
-            { day: "5 Mar", title: "Descanso e Integración", description: "Tiempo para la soledad, compartir en comunidad y la integración suave de las lecciones del viaje." },
-            { day: "6 Mar", title: "Tercera Ceremonia de Wachuma", description: "La ceremonia final de la iniciación. Cerrando el círculo con gratitud y sellando la transformación." },
-            { day: "7 Mar", title: "Cierre y Partida", description: "Palabras finales, gratitud a la tierra y a las tribus, y comienzo de nuestro viaje a casa." }
+            { day: "21 Feb", title: "Llegada y Conexión con el Océano", description: "Comenzamos conectando con la vasta energía del Océano Pacífico, arraigándonos en la tierra antes de viajar a nuestra ubicación secreta." },
+            { day: "22 Feb", title: "Inmersión en Santuario Secreto", description: "Un tiempo transformador en un santuario apartado. Profunda conexión con la naturaleza y el grupo." },
+            { day: "23 Feb", title: "Primera Ceremonia de Wachuma", description: "Abriendo el viaje en una ubicación secreta. Una profunda ceremonia guiada por el Maestro Hernan." },
+            { day: "24-25 Feb", title: "Descanso e Integración", description: "Días para descansar, reflexionar e integrar las enseñanzas de la medicina." },
+            { day: "26 Feb", title: "Segunda Ceremonia de Wachuma", description: "Profundizando en el trabajo. Una segunda ceremonia para explorar más a fondo en el espíritu y la sabiduría ancestral." },
+            { day: "27-28 Feb", title: "Integración y Preparación", description: "Tiempo para compartir en comunidad y prepararse para el viaje a las tierras indígenas." },
+            { day: "1 Mar", title: "Viaje a la Reserva Talamanca", description: "Viajamos a la Reserva Talamanca para conectar con las tribus indígenas." },
+            { day: "2 Mar", title: "Ceremonia con Tribus Indígenas", description: "Una ceremonia especial compartida con la comunidad indígena, honrando sus tierras ancestrales." },
+            { day: "3 Mar", title: "Sandero Gigante y Eclipse Lunar", description: "Viajamos a Sandero Gigante para conectar con la energía del eclipse lunar total. Cerrando el círculo." }
           ],
           packages: {
             title: "La Participación Incluye",
             items: [
-                "7 Días / 6 Noches en Santuario Sagrado",
-                "3 Ceremonias Completas de Wachuma",
+                "11 Días / 10 Noches en Santuario Sagrado",
+                "Ceremonias Wachuma con Tribus Indígenas",
+                "Ritual de Eclipse Lunar Total",
                 "Rituales de Rapé y Limpieza Floral",
-                "Círculos Diarios de Integración",
                 "Todas las Comidas Orgánicas",
                 "Transporte desde San Isidro"
             ]
@@ -489,7 +495,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           cta: "Reserva una Ceremonia",
           retreatTeaser: { label: "Inmersión Sagrada", title: "Retiro de 2 Días", location: "Pisac y Kinsacocha" },
           ausangateTeaser: { label: "Más Cerca del Cielo", title: "Viaje Ausangate", date: "28 - 30 Ene, 2026" },
-          costaRicaTeaser: { label: "Evento Especial", title: "Peregrinaje a Costa Rica", date: "24 Feb - 2 Mar, 2026" }
+          costaRicaTeaser: { label: "Evento Especial", title: "Peregrinaje a Costa Rica", date: "21 Feb - 3 Mar, 2026" }
       },
       benefits: {
         title: "El Poder del Wachuma",
@@ -548,7 +554,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
                 title: "Peregrinaje a Costa Rica", 
                 description: "Un viaje sagrado conectando los Andes y el Océano en una ubicación secreta en Costa Rica. Limitado a 21 participantes.", 
                 price: "Consultar",
-                details: { duration: "7 Días", location: "Costa Rica", groupSize: "Máx 21" }
+                details: { duration: "11 Días", location: "Costa Rica", groupSize: "Máx 21" }
             },
             { 
                 title: "Sanación Privada", 
@@ -735,29 +741,29 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               "A szent Wachuma szertartások mellett megosztjuk a Rapé medicinát, tisztító munkákat végzünk virágokkal, és vezetett medicina meditációkon veszünk részt.",
               "Egy titkos, eldugott helyszínen gyűlünk össze, a természet ölelésében. Ez a bensőséges élmény szigorúan 21 résztvevőre korlátozódik (a segítőket is beleértve), hogy biztosítsuk a mély, személyes figyelmet és az összetartó energetikai teret."
           ],
-          details: { location: "Titkos Helyszín, Costa Rica", capacity: "21 Lélekre Korlátozva", dates: "2026. Február 24 - Március 2." },
+          details: { location: "Titkos Helyszín, Costa Rica", capacity: "21 Lélekre Korlátozva", dates: "2026. Február 21 - Március 3." },
           cta: "Meghívó Kérése",
           visionTitle: "Látomás a Medicinától",
           visionText: "Ez az összejövetel nem csupán egy elvonulás; válasz egy hívásra. A medicina arról beszélt, hogy össze kell kötni a magas Andokban őrzött bölcsességet az óceán tisztító, áramló energiájával. A szellem és a test zarándoklata.",
           themeValue: "Óceán és Hegy",
           itinerary: [
-            { day: "Feb 25", title: "Érkezés és Kapcsolódás az Óceánhoz", description: "A Csendes-óceán hatalmas energiájával való kapcsolódással kezdünk, leföldelve magunkat a földön, mielőtt a Diamante-völgybe utaznánk." },
-            { day: "Feb 26-28", title: "Elmélyülés a Diamante-völgyben", description: "Átalakító időszak a buja Diamante-völgyben. Ez az első rész meghitt és szigorúan 9 főre korlátozódik, elősegítve a mély kapcsolatot a természettel és a csoporttal." },
-            { day: "Már 1", title: "Utazás El Chirripóba", description: "El Chirripó szent földjére utazunk, hogy kapcsolatba lépjünk az őslakos törzsekkel és felkészüljünk a beavatási utazásra." },
-            { day: "Már 2", title: "Első Wachuma Szertartás", description: "A beavatási utazás megnyitása. Mélyreható szertartás Hernan mester vezetésével a hegyek jelenlétében." },
-            { day: "Már 3", title: "Pihenés és Integráció", description: "Egy nap a pihenésre, elmélkedésre és a medicina tanításainak integrálására a hegyek békéjében." },
-            { day: "Már 4", title: "Második Wachuma Szertartás", description: "A munka elmélyítése. Egy második szertartás a szellem és az ősi bölcsesség további felfedezésére." },
-            { day: "Már 5", title: "Pihenés és Integráció", description: "Idő az egyedüllétre, a közösségi megosztásra és az utazás tanulságainak gyengéd integrálására." },
-            { day: "Már 6", title: "Harmadik Wachuma Szertartás", description: "A beavatás utolsó szertartása. A kör bezárása hálával és az átalakulás megpecsételése." },
-            { day: "Már 7", title: "Zárás és Hazautazás", description: "Végső szavak, hála a földnek és a törzseknek, és hazaútunk megkezdése." }
+            { day: "Feb 21", title: "Érkezés és Kapcsolódás az Óceánhoz", description: "A Csendes-óceán hatalmas energiájával való kapcsolódással kezdünk, leföldelve magunkat a földön, mielőtt a titkos helyszínünkre utaznánk." },
+            { day: "Feb 22", title: "Elmélyülés a Titkos Szentélyben", description: "Átalakító időszak egy eldugott szentélyben. Mély kapcsolat a természettel és a csoporttal." },
+            { day: "Feb 23", title: "Első Wachuma Szertartás", description: "Az utazás megnyitása a titkos helyszínen. Mélyreható szertartás Hernan mester vezetésével." },
+            { day: "Feb 24-25", title: "Pihenés és Integráció", description: "Napok a pihenésre, elmélkedésre és a medicina tanításainak integrálására." },
+            { day: "Feb 26", title: "Második Wachuma Szertartás", description: "A munka elmélyítése. Egy második szertartás a szellem és az ősi bölcsesség további felfedezésére." },
+            { day: "Feb 27-28", title: "Integráció és Felkészülés", description: "Idő a közösségi megosztásra, a természetben való elmélyülésre és felkészülés az őslakos földekre való utazásra." },
+            { day: "Már 1", title: "Utazás a Talamanca Rezervátumba", description: "A Talamanca Rezervátumba utazunk, hogy kapcsolatba lépjünk az őslakos törzsekkel." },
+            { day: "Már 2", title: "Szertartás Őslakos Törzsekkel", description: "Egy különleges szertartás, amelyet az őslakos közösséggel osztunk meg, tisztelegve ősi földjeik előtt." },
+            { day: "Már 3", title: "Sandero Gigante és Holdfogyatkozás", description: "A Sandero Gigantéhoz utazunk, hogy kapcsolatba lépjünk a teljes holdfogyatkozás energiájával. A kör bezárása." }
           ],
           packages: {
             title: "A Részvétel Tartalmazza",
             items: [
-                "7 Nap / 6 Éjszaka Szent Menedékhelyen",
-                "3 Teljes Wachuma Szertartás",
+                "11 Nap / 10 Éjszaka Szent Menedékhelyen",
+                "Wachuma Szertartások Őslakos Törzsekkel",
+                "Teljes Holdfogyatkozás Rituálé",
                 "Rapé és Virágos Tisztító Rituálék",
-                "Napi Integrációs Körök",
                 "Minden Bio Étkezés",
                 "Szállítás San Isidróból"
             ]
@@ -798,7 +804,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         cta: "Szertartás Foglalása",
         retreatTeaser: { label: "Szent Elmélyülés", title: "2 Napos Elvonulás", location: "Pisac & Kinsacocha" },
         ausangateTeaser: { label: "Közelebb az Éghez", title: "Ausangate 3 Nap", date: "2026. Jan 28 - 30." },
-        costaRicaTeaser: { label: "Különleges Esemény", title: "Costa Rica Zarándoklat", date: "2026. Feb 24 - Már 2." }
+        costaRicaTeaser: { label: "Különleges Esemény", title: "Costa Rica Zarándoklat", date: "2026. Feb 21 - Már 3." }
       },
       benefits: {
         title: "A Wachuma Ereje",
@@ -857,7 +863,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               title: "Costa Rica Zarándoklat", 
               description: "Szent utazás, amely összeköti az Andokat és az Óceánt egy titkos helyszínen Costa Ricában. 21 résztvevőre korlátozva.", 
               price: "Érdeklődés",
-              details: { duration: "7 Nap", location: "Costa Rica", groupSize: "Max 21" }
+              details: { duration: "11 Nap", location: "Costa Rica", groupSize: "Max 21" }
           },
           { 
               title: "Privát Gyógyítás", 
@@ -1044,29 +1050,29 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               "Wachuma hampiwan, Rapé hampiwan, t'ikakunawan ima ch'uyanchik.",
               "Pakasqa tiyaypi kanqa. 21 runallapaqmi, aswan allin tinkuypaq."
           ],
-          details: { location: "Pakasqa Tiyay, Costa Rica", capacity: "21 Runalla", dates: "Febrero 24 - Marzo 2, 2026" },
+          details: { location: "Pakasqa Tiyay, Costa Rica", capacity: "21 Runalla", dates: "Febrero 21 - Marzo 3, 2026" },
           cta: "Mink'ata Mañakuy",
           visionTitle: "Hampi Musquy",
           visionText: "Kayqa manan puriyllachu; kayqa apukunaq waqaychayninmi. Hampiqa nirqa: Urquq yachayninta qochawan tinkuchiy.",
           themeValue: "Qocha & Urqu",
           itinerary: [
-            { day: "25 Hatun Puquy", title: "Chayamuy & Mama Qochawan Tinkuy", description: "Pacifico Mama Qochawan tinkuspa qallarinchik, allpapi kallpachakuspa manaraq Diamante Wayq'oman purichkaspa." },
-            { day: "26-28 Hatun Puquy", title: "Diamante Wayq'opi Ukhunchay", description: "Huk tikray pacha sumaq Diamante Wayq'opi. Kay ñawpaq rakiqa pisi runallapaqmi (9 tiyay), sallqa pachawan aylluwan sumaqta tinkunapaq." },
-            { day: "1 Pawqar Waray", title: "El Chirripóman Puriy", description: "El Chirripó willka allpakunaman purinchik, chaypi tiyaq runakunawan tinkunapaq, qallariy puriypaq wakichikunapaq." },
-            { day: "2 Pawqar Waray", title: "Ñawpaq Wachuma Raymi", description: "Qallariy puriyta kicharispa. Huk ukhu raymi Maestro Hernanwan, urqukunaq ñawpaqinpi." },
-            { day: "3 Pawqar Waray", title: "Samay & Yachay Huñuy", description: "Samana p'unchay, yuyaymanana, hampi yachaykunata sunquman churanapaq willka tiyay thak kayninpi." },
-            { day: "4 Pawqar Waray", title: "Iskay Kaq Wachuma Raymi", description: "Llank'ayta ukhunchaspa. Iskay kaq raymi aswan ukhuta nunaman ñawpaq yachaymanpis purinapaq." },
-            { day: "5 Pawqar Waray", title: "Samay & Yachay Huñuy", description: "Sapalla kay pacha, aylluwan rimanakuy, puriy yachaykunata llamp'u sunquwan huñuy." },
-            { day: "6 Pawqar Waray", title: "Kimsa Kaq Wachuma Raymi", description: "Tukuq qallariy raymi. Muyuta wisq'aspa yupaychaywan, tikrayta sellaspa." },
-            { day: "7 Pawqar Waray", title: "Tukuy & Ripuy", description: "Tukuq rimaykuna, allpaman runakunaman yupaychay, wasiman kutiy qallariy." }
+            { day: "21 Feb", title: "Chayamuy & Mama Qochawan Tinkuy", description: "Pacifico Mama Qochawan tinkuspa qallarinchik, allpapi kallpachakuspa manaraq pakasqa tiyayman purichkaspa." },
+            { day: "22 Feb", title: "Pakasqa Tiyaypi Ukhunchay", description: "Huk tikray pacha pakasqa tiyaypi. Sallqa pachawan aylluwan sumaqta tinkunapaq." },
+            { day: "23 Feb", title: "Ñawpaq Wachuma Raymi", description: "Qallariy puriyta kicharispa pakasqa tiyaypi. Huk ukhu raymi Maestro Hernanwan." },
+            { day: "24-25 Feb", title: "Samay & Yachay Huñuy", description: "Samana p'unchaykuna, yuyaymanana, hampi yachaykunata sunquman churanapaq." },
+            { day: "26 Feb", title: "Iskay Kaq Wachuma Raymi", description: "Llank'ayta ukhunchaspa. Iskay kaq raymi aswan ukhuta nunaman ñawpaq yachaymanpis purinapaq." },
+            { day: "27-28 Feb", title: "Samay & Wakichikuy", description: "Aylluwan rimanakuy, wakichikuy ñawpaq runakunaman puriypaq." },
+            { day: "1 Mar", title: "Talamanca Reserveman Puriy", description: "Talamanca Reserveman purinchik, chaypi tiyaq runakunawan tinkunapaq." },
+            { day: "2 Mar", title: "Ñawpaq Runakunawan Raymi", description: "Huk sapaq raymi aylluwan, ñawpaq allpankuta yupaychaspa." },
+            { day: "3 Mar", title: "Sandero Gigante & Killa Wañuy", description: "Sandero Giganteman purinchik, hunt'a killa wañuywan tinkunapaq. Muyuta wisq'aspa." }
           ],
           packages: {
             title: "Kaykuna Kanqa",
             items: [
-                "7 P'unchay / 6 Tuta Willka Tiyaypi",
-                "3 Hunt'asqa Wachuma Raymikuna",
+                "11 P'unchay / 10 Tuta Willka Tiyaypi",
+                "Wachuma Raymikuna Ñawpaq Runakunawan",
+                "Hunt'a Killa Wañuy Raymi",
                 "Rapé & T'ika Ch'uyay",
-                "Sapa P'unchay Rimanakuy",
                 "Lliw Mikhuykuna",
                 "San Isidromanta Apay"
             ]
@@ -1135,7 +1141,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               title: "Costa Rica Puriy", 
               description: "Mama Qochawan tinkuy.", 
               price: "Tapukuy",
-              details: { duration: "7 P'unchay", location: "Costa Rica", groupSize: "Max 21" }
+              details: { duration: "11 P'unchay", location: "Costa Rica", groupSize: "Max 21" }
           }, { 
               title: "Sapaq Hampi", 
               description: "Qamllapaq hampi.", 
@@ -1338,29 +1344,29 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               "聖なるワチュマのセレモニーに加えて、ラペの薬を共有し、花を使った浄化のワークを行い、ガイド付きの薬の瞑想を通じて旅をします。",
               "私たちは自然に抱かれた秘密の人里離れた場所に集まります。この親密な体験は、深い個人的な注意とまとまりのあるエネルギー的な器を確保するために、厳密に21人の参加者（ヘルパーを含む）に制限されています。"
           ],
-          details: { location: "コスタリカ、秘密の場所", capacity: "21名限定", dates: "2026年2月24日〜3月2日" },
+          details: { location: "コスタリカ、秘密の場所", capacity: "21名限定", dates: "2026年2月21日〜3月3日" },
           cta: "招待をリクエスト",
           visionTitle: "薬からのビジョン",
           visionText: "この集まりは単なるリトリートではありません。それは呼びかけへの応答です。薬は、高いアンデスに保持されている知恵と、海の浄化する流動的なエネルギーをつなぐことについて語りました。精神と肉体の巡礼です。",
           themeValue: "海と山",
           itinerary: [
-            { day: "2月25日", title: "到着と海とのつながり", description: "私たちは太平洋の広大なエネルギーとつながり、ディアマンテ渓谷への旅の前に大地に自分自身をグラウンディングさせることから始めます。" },
-            { day: "2月26-28日", title: "ディアマンテ渓谷への没入", description: "緑豊かなディアマンテ渓谷での変容の時。この最初の部分は親密で、9名限定となっており、自然やグループとの深いつながりを育みます。" },
-            { day: "3月1日", title: "エル・チリポへの旅", description: "先住民族とつながり、イニシエーションの旅の準備をするために、エル・チリポの聖なる土地へ移動します。" },
-            { day: "3月2日", title: "最初のワチュマ・セレモニー", description: "イニシエーションの旅の始まり。山々の前でマエストロ・エルナンが導く深遠なセレモニー。" },
-            { day: "3月3日", title: "休息と統合", description: "聖域の静けさの中で、休息し、振り返り、薬の教えを統合する日。" },
-            { day: "3月4日", title: "2回目のワチュマ・セレモニー", description: "ワークを深める。精神と先祖代々の知恵をさらに探求するための2回目のセレモニー。" },
-            { day: "3月5日", title: "休息と統合", description: "孤独、コミュニティでの共有、そして旅の教訓の穏やかな統合のための時間。" },
-            { day: "3月6日", title: "3回目のワチュマ・セレモニー", description: "イニシエーションの最後のセレモニー。感謝の気持ちでサークルを閉じ、変容を封印します。" },
-            { day: "3月7日", title: "閉会と出発", description: "最後の言葉、土地と部族への感謝、そして家路への旅の始まり。" }
+            { day: "2月21日", title: "到着と海とのつながり", description: "私たちは太平洋の広大なエネルギーとつながり、秘密の場所への旅の前に大地に自分自身をグラウンディングさせることから始めます。" },
+            { day: "2月22日", title: "秘密の聖域への没入", description: "人里離れた聖域での変容の時。自然やグループとの深いつながりを育みます。" },
+            { day: "2月23日", title: "最初のワチュマ・セレモニー", description: "秘密の場所での旅の始まり。マエストロ・エルナンが導く深遠なセレモニー。" },
+            { day: "2月24-25日", title: "休息と統合", description: "休息し、振り返り、薬の教えを統合する日。" },
+            { day: "2月26日", title: "2回目のワチュマ・セレモニー", description: "ワークを深める。精神と先祖代々の知恵をさらに探求するための2回目のセレモニー。" },
+            { day: "2月27-28日", title: "統合と準備", description: "コミュニティでの共有、自然への没入、そして先住民族の土地への旅の準備のための時間。" },
+            { day: "3月1日", title: "タラマンカ保護区への旅", description: "先住民族とつながるために、タラマンカ保護区へ移動します。" },
+            { day: "3月2日", title: "先住民族とのセレモニー", description: "先住民族のコミュニティと共有し、彼らの先祖代々の土地を称える特別なセレモニー。" },
+            { day: "3月3日", title: "サンデロ・ヒガンテと月食", description: "皆既月食の強力なエネルギーとつながるためにサンデロ・ヒガンテへ旅をします。サークルを閉じます。" }
           ],
           packages: {
             title: "参加に含まれるもの",
             items: [
-                "聖なる聖域での7日間/6泊",
-                "3回の完全なワチュマ・セレモニー",
+                "聖なる聖域での11日間/10泊",
+                "先住民族とのワチュマ・セレモニー",
+                "皆既月食の儀式",
                 "ラペと花の浄化の儀式",
-                "毎日の統合サークル",
                 "すべてのオーガニック食",
                 "サン・イシドロからの移動"
             ]
@@ -1429,7 +1435,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
               title: "コスタリカ巡礼", 
               description: "コスタリカの秘密の場所でアンデスと海をつなぐ聖なる旅。21名の参加者に限定。", 
               price: "お問い合わせ",
-              details: { duration: "7日間", location: "コスタリカ", groupSize: "最大21名" }
+              details: { duration: "11日間", location: "コスタリカ", groupSize: "最大21名" }
           }, { 
               title: "プライベートヒーリング", 
               description: "あなたの特定の精神的および感情的なニーズに合わせたマンツーマンのセッション。深いブロックの除去。", 
