@@ -141,7 +141,7 @@ const enTranslations: TranslationData = {
         { 
             title: "Ausangate: Closer to the Sky (3 Days)", 
             description: "A powerful journey with the Apu. Temazcal, Rapé, and Wachuma ceremony in Pacchanta. Includes free professional photography.", 
-            price: "$199",
+            price: "700 Soles",
             details: { duration: "3 Days", location: "Ausangate", groupSize: "Group" }
         },
         { 
@@ -198,7 +198,7 @@ const enTranslations: TranslationData = {
       description: "A condensed and powerful plant medicine journey. Connect with the sacred mountain and the healing waters in the high Andes.",
       details: {
           dates: "Jan 28 - 30, 2026",
-          price: "$199",
+          price: "700 Soles",
           bonus: "Includes free professional photography session"
       },
       cta: "Reserve Spot",
@@ -529,7 +529,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
             { 
                 title: "Ausangate: Más Cerca del Cielo (3 Días)", 
                 description: "Una poderosa jornada con el Apu. Temazcal, Rapé y ceremonia de Wachuma en Pacchanta. Incluye fotografía profesional gratuita.", 
-                price: "$199",
+                price: "700 Soles",
                 details: { duration: "3 Días", location: "Ausangate", groupSize: "Grupo" }
             },
             { 
@@ -554,7 +554,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
                 title: "Peregrinaje a Costa Rica", 
                 description: "Un viaje sagrado conectando los Andes y el Océano en una ubicación secreta en Costa Rica. Limitado a 21 participantes.", 
                 price: "Consultar",
-                details: { duration: "11 Días", location: "Costa Rica", groupSize: "Máx 21" }
+                details: { duration: "7 Días", location: "Costa Rica", groupSize: "Máx 21" }
             },
             { 
                 title: "Sanación Privada", 
@@ -586,7 +586,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         description: "Un viaje de medicina vegetal condensado y poderoso en los altos Andes. Conecta con la montaña sagrada y las aguas curativas.",
         details: {
             dates: "28 - 30 Ene, 2026",
-            price: "$199",
+            price: "700 Soles",
             bonus: "Incluye sesión de fotografía profesional gratuita"
         },
         cta: "Reservar Lugar",
@@ -838,7 +838,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           { 
               title: "Ausangate: Közelebb az Éghez (3 Nap)", 
               description: "Egy erőteljes utazás az Apuval. Temazcal, Rapé és Wachuma szertartás Pacchantában. Ingyenes professzionális fotózással.", 
-              price: "$199",
+              price: "700 Soles",
               details: { duration: "3 Nap", location: "Ausangate", groupSize: "Csoport" }
           },
           { 
@@ -895,7 +895,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         description: "Egy tömör és erőteljes növényi medicina utazás. Kapcsolódj a szent heggyel és a gyógyító vizekkel a magas Andokban.",
         details: {
             dates: "2026. Január 28 - 30.",
-            price: "$199",
+            price: "700 Soles",
             bonus: "Ingyenes professzionális fotózást tartalmaz"
         },
         cta: "Helyfoglalás",
@@ -1118,7 +1118,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           { 
             title: "Ausangate: Hanaq Pacha (3 P'unchay)", 
             description: "Huk atiyniyuq puriy Apuwan. Temazcal, Rapé, Wachuma ima. Fotoqrafiya qispisqa.", 
-            price: "$199",
+            price: "700 Soles",
             details: { duration: "3 P'unchay", location: "Ausangate", groupSize: "Huñu" } 
           },
           { 
@@ -1156,7 +1156,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         description: "Huk pisi ichaqa atiyniyuq hampi puriy. Willka urquwan hampi yakuwan tinkuy hanaq pachapi.",
         details: {
             dates: "Enero 28 - 30, 2026",
-            price: "$199",
+            price: "700 Soles",
             bonus: "Fotoqrafiya qispisqa"
         },
         cta: "Tiyayniykita Waqaychay",
@@ -1412,7 +1412,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           { 
             title: "アウサンガテ：空に近い旅（3日間）", 
             description: "アプとの強力な旅。パッチャンタでのテマズカル、ラペ、ワチュマ・セレモニー。無料のプロ写真撮影付き。", 
-            price: "$199",
+            price: "700 Soles",
             details: { duration: "3日間", location: "アウサンガテ", groupSize: "グループ" } 
           },
           { 
@@ -1450,7 +1450,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
         description: "高地アンデスでの凝縮された強力な植物薬の旅。聖なる山と癒しの水とつながりましょう。",
         details: {
             dates: "2026年1月28日〜30日",
-            price: "$199",
+            price: "700 Soles",
             bonus: "無料のプロ写真撮影セッションが含まれています"
         },
         cta: "場所を予約する",
