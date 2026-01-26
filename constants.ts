@@ -1,12 +1,7 @@
 import { Language, TranslationData } from './types';
 
-const galleryImages = [
-    "/gallery/1.jpg", "/gallery/2.jpg", "/gallery/3.jpg", "/gallery/4.jpg",
-    "/gallery/5.jpg", "/gallery/6.jpg", "/gallery/7.jpg", "/gallery/8.jpg",
-    "/gallery/9.jpg", "/gallery/10.jpg", "/gallery/11.jpg", "/gallery/12.jpg",
-    "/gallery/13.jpg", "/gallery/14.jpg", "/gallery/15.jpg", "/gallery/16.jpg",
-    "/gallery/17.jpg", "/gallery/18.jpg",
-];
+// Dynamically generate gallery images from photo1.jpg to photo29.jpg
+const galleryImages = Array.from({ length: 29 }, (_, i) => `/gallery/photo${i + 1}.jpg`);
 
 export const IMAGES = {
   logo: "/logo.svg",
@@ -317,11 +312,11 @@ const enTranslations: TranslationData = {
             sections: [
                 { title: "Health and Medical Disclosure", items: [{ label: "Medical Conditions", text: "Participants should inform facilitators of any medical conditions, including heart issues, mental health conditions, or any history of seizures. Some pre-existing conditions may increase risks associated with the San Pedro experience." }, { label: "Medications", text: "Certain medications, including antidepressants, antipsychotics, and some over-the-counter drugs, may have adverse interactions with San Pedro. Please disclose any medications to the facilitators well before the retreat." }, { label: "Physical Sensitivity", text: "San Pedro can cause temporary physical effects, such as nausea, vomiting, and increased heart rate. Participants should be physically and mentally prepared for these effects." }] },
                 { title: "Psychological Risks and Emotional Responsibility", items: [{ label: "Intense Experiences", text: "San Pedro can bring up deep emotions and past traumas, which can be challenging to process. Participants are encouraged to engage in personal reflection or seek professional guidance beforehand if they have a history of trauma." }, { label: "Integration Support", text: "Following the retreat, participants may benefit from additional support to integrate their experiences. It is advised to plan for time, support, and resources to process any insights or emotions that arise." }] },
-                { title: "Personal Responsibility", items: [{ label: "Informed Consent", text: "By participating in this retreat, you acknowledge that you are voluntarily engaging in this experience. Any insights, challenges, or personal transformations you experience are your own responsibility." }, { label: "Safety Precautions", text: "Follow all safety guidelines provided by facilitators, including dietary restrictions, suggested behavior during ceremonies, and limitations on physical activities." }] }
+                { title: "Personal Responsibility", items: [{ label: "Consentimiento Informado", text: "Al participar en este retiro, reconoces que participas voluntariamente en esta experiencia. Cualquier idea, desafío o transformación personal que experimentes es tu propia responsabilidad." }, { label: "Precauciones de Seguridad", text: "Sigue todas las pautas de seguridad proporcionadas por los facilitadores, incluyendo restricciones dietéticas, comportamiento sugerido durante las ceremonias y limitaciones en actividades físicas." }] }
             ]
         }
-    },
-    faq: {
+      },
+      faq: {
         title: "Wachuma Retreat Guide",
         subtitle: "Everything you need to know about the experience",
         articles: [
@@ -341,7 +336,7 @@ const enTranslations: TranslationData = {
                     "<strong>Origins and History</strong><br>San Pedro has been used for thousands of years by indigenous Andean peoples, especially the Quechua and Aymara communities. Deeply rooted in shamanic tradition, it serves as a bridge between the physical and spiritual worlds. Its name, San Pedro, refers to Saint Peter, the guardian of the gates of heaven, symbolizing access to spiritual dimensions.",
                     "<strong>The Power of Mescaline: Connecting to Universal Harmony</strong><br>One of the key active compounds in the San Pedro cactus is mescaline, a naturally occurring psychoactive alkaloid. Mescaline is responsible for the profound visionary and introspective experiences associated with Wachuma. Unlike synthetic substances, the mescaline in San Pedro gently guides individuals into an altered state of consciousness, fostering a sense of unity and harmony with the world around them.",
                     "Wachuma ceremonies often lead participants to feel deeply connected to Pachamama (Mother Earth), experiencing the pulse of nature and the rhythm of life itself. This connection helps dissolve the boundaries between self and the universe, allowing for profound insights and spiritual clarity. Many who embark on this journey describe it as a heart-opening experience, where love and compassion naturally flow.",
-                    "<strong>Spiritual and Therapeutic Benefits</strong><br>San Pedro is renowned for its spiritual and healing properties. Its effects are generally more gentle and gradual compared to other plant medicines like Ayahuasca. This makes it accessible for those seeking emotional healing and inner clarity without the intensity of more abrupt awakenings.<br><br><strong>Spiritual Benefits:</strong><br>• Spiritual Awakening: Facilitates reconnection with one’s true self and the natural world.<br>• Heart Opening: Promotes compassion, forgiveness, and deep emotional release.<br>• Mental Clarity: Helps gain perspective on life challenges and fosters acceptance.<br><br><strong>Therapeutic Benefits:</strong><br>• Emotional Release: Aids in processing past trauma and unresolved emotions.<br>• Calmness and Serenity: Reduces anxiety and cultivates inner peace.<br>• Nature Connection: Strengthens the bond with the Earth and the elements."
+                    "<strong>Spiritual and Therapeutic Benefits</strong><br>San Pedro is renowned for its spiritual and healing properties. Its effects are generally more gentle and gradual compared to other plant medicines like Ayahuasca. This makes it accessible for those seeking emotional healing and inner clarity without the intensity of more abrupt awakenings.<br><br><strong>Spiritual Benefits:</strong><br>• Spiritual Awakening: Facilitates reconnection with one’s true self and the natural world.<br>• Heart Opening: Promotes compassion, forgiveness, and deep emotional release.<br>• Mental Clarity: Helps gain perspective on life challenges and fosters acceptance.<br><br><strong>Beneficios Terapéuticos:</strong><br>• Emotional Release: Aids in processing past trauma and unresolved emotions.<br>• Calmness and Serenity: Reduces anxiety and cultivates inner peace.<br>• Nature Connection: Strengthens the bond with the Earth and the elements."
                 ]
             }
         ],
@@ -554,7 +549,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
                 title: "Peregrinaje a Costa Rica", 
                 description: "Un viaje sagrado conectando los Andes y el Océano en una ubicación secreta en Costa Rica. Limitado a 21 participantes.", 
                 price: "Consultar",
-                details: { duration: "7 Días", location: "Costa Rica", groupSize: "Máx 21" }
+                details: { duration: "11 Días", location: "Costa Rica", groupSize: "Máx 21" }
             },
             { 
                 title: "Sanación Privada", 
@@ -910,7 +905,7 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
           subtitle: "Wayna Wasi és Kinsacocha",
           intro: "Mély elmélyülés a szent medicinában, a Wayna Wasi szentélyében és Pisac erőteljes hegyei között.",
           days: [
-              { title: "1. Nap: Felkészülés és Érkezés a Wayna Wasiba", content: "A Wayna Wasiba érkezéskor a résztvevők a bedida (a szent Wachuma ital) ceremoniális elkészítésével kezdik meg utazásukat. Ez az élmény szent köteléket kezdeményez a medicinával, megteremtve a teret a belső felfedezéshez és kapcsolódáshoz. Hernan gondosan vezeti a résztvevőket, segítve őket szándékaik tisztázásában és szívük megnyitásában a Wachuma gyengéd, mégis erőteljes hatásai előtt.", accommodation: "Az éjszakát a Wayna Wasiban töltjük, a béke szentélyében, ahol az Andok szelleme mindig jelen van." },
+              { title: "1. Nap: Felkészülés és Érkezés a Wayna Wasiba", content: "A Wayna Wasiba érkezéskor a résztvevők a bedida (a szent Wachuma ital) ceremoniális elkészítésével kezdik meg utazásukat. Ez az élmény szent köteléket kezdeményez a medicinával, megteremtve a teret a belső felfedezéshez és kapcsolódáshoz. Hernan gondosan vezeti a résztvevőkét, segítve őket szándékaik tisztázásában és szívük megnyitásában a Wachuma gyengéd, mégis erőteljes hatásai előtt.", accommodation: "Az éjszakát a Wayna Wasiban töltjük, a béke szentélyében, ahol az Andok szelleme mindig jelen van." },
               { title: "2. Nap: Szertartás Kinsacochánál, Pisac", content: "A második napon a Pisacban található, nagy tiszteletnek örvendő Kinsacochához utazunk, ahol lélegzetelállító hegyi kilátás közepette vesztek részt a Wachuma szertartáson. Hernan tapasztalt vezetésével a résztvevők felfedezik belső tájaikat, személyes felismeréseket keresnek, és fogadják a Wachuma tanításait. A szertartás végén egy csoportos megosztó kör lehetővé teszi a résztvevők számára, hogy feldolgozzák és reflektáljanak utazásukra, fokozva az elvonulás hatását.", accommodation: "Visszatérés a Wayna Wasiba egy békés éjszakára, a nap átalakító élményeinek befogadására." }
           ],
           conclusion: "A résztvevők megújult önérzettel és céltudattal távoznak, megerősödve a Wachuma élménye és Pachamama időtlen bölcsessége által."

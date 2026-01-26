@@ -7,14 +7,12 @@ export const Gallery: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
-  const [imageError, setImageError] = useState(false);
+  
+  // Use the image list directly from constants
+  const galleryImages = IMAGES?.gallery || [];
 
   // Minimum swipe distance (in px)
   const minSwipeDistance = 50;
-
-  // Use the image list directly from constants (which is already sorted and dynamic)
-  // Default to empty array to prevent crashes if undefined
-  const galleryImages = IMAGES?.gallery || [];
 
   // Prevent scrolling when modal is open
   useEffect(() => {
@@ -26,11 +24,6 @@ export const Gallery: React.FC = () => {
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [selectedIndex]);
-
-  // Reset error state when image changes
-  useEffect(() => {
-    setImageError(false);
   }, [selectedIndex]);
 
   // Keyboard navigation
@@ -82,11 +75,9 @@ export const Gallery: React.FC = () => {
     const isRightSwipe = distance < -minSwipeDistance;
     
     if (isLeftSwipe) {
-      // Swiped Left -> Next Image
       setSelectedIndex((prev) => (prev !== null ? (prev + 1) % galleryImages.length : null));
     }
     if (isRightSwipe) {
-      // Swiped Right -> Previous Image
       setSelectedIndex((prev) => (prev !== null ? (prev - 1 + galleryImages.length) % galleryImages.length : null));
     }
   };
@@ -102,7 +93,7 @@ export const Gallery: React.FC = () => {
                 {galleryImages.map((src, idx) => (
                     <div 
                         key={idx} 
-                        className="break-inside-avoid overflow-hidden rounded-lg shadow-lg group cursor-pointer relative border border-white/10 bg-pacha-earth/20 min-h-[200px]"
+                        className="break-inside-avoid overflow-hidden rounded-lg shadow-lg group cursor-pointer relative border border-white/10 bg-pacha-earth/20 min-h-[100px]"
                         onClick={() => setSelectedIndex(idx)}
                     >
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100">
@@ -115,15 +106,8 @@ export const Gallery: React.FC = () => {
                             decoding="async"
                             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                             onError={(e) => {
-                                // Fallback for missing images in grid
+                                // Simple fallback for errors
                                 e.currentTarget.style.display = 'none';
-                                const parent = e.currentTarget.parentElement;
-                                if (parent) {
-                                    parent.classList.add('flex', 'items-center', 'justify-center');
-                                    const icon = document.createElement('div');
-                                    icon.innerHTML = '<span class="text-white/20 text-4xl">🌵</span>';
-                                    parent.appendChild(icon);
-                                }
                             }}
                         />
                     </div>
@@ -173,25 +157,13 @@ export const Gallery: React.FC = () => {
             </button>
 
             <div className="relative max-w-7xl max-h-[85vh] w-full flex items-center justify-center px-8 md:px-12 select-none">
-                {!imageError ? (
-                    <img 
-                        key={selectedIndex} // Force remount on index change to reset loading state
-                        src={galleryImages[selectedIndex]} 
-                        alt="Full screen view" 
-                        className="max-w-full max-h-[85vh] object-contain rounded-sm shadow-2xl"
-                        onClick={(e) => e.stopPropagation()}
-                        onError={() => setImageError(true)}
-                    />
-                ) : (
-                    <div 
-                        className="flex flex-col items-center justify-center text-white/50 p-10 bg-white/5 rounded-lg border border-white/10 backdrop-blur-sm"
-                        onClick={(e) => e.stopPropagation()}
-                    >
-                        <ImageOff size={64} className="mb-4 opacity-50" />
-                        <span className="text-xl font-serif">Image not found</span>
-                        <span className="text-sm mt-2 opacity-50">{galleryImages[selectedIndex]}</span>
-                    </div>
-                )}
+                <img 
+                    key={selectedIndex}
+                    src={galleryImages[selectedIndex]} 
+                    alt="Full screen view" 
+                    className="max-w-full max-h-[85vh] object-contain rounded-sm shadow-2xl"
+                    onClick={(e) => e.stopPropagation()}
+                />
             </div>
             
             {/* Image Counter */}
