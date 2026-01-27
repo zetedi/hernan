@@ -1015,6 +1015,40 @@ const quTranslations: TranslationData = {
           title: "Rimaykakamuy",
           form: { name: "Sutiyki", email: "Chaskiyki", message: "Willayniyki", submit: "Apachiy" },
           info: "Willka Qhichwapi kachkayku."
+      },
+      footer: {
+        description: "Pachamamawan tinkuy, Wachuma hampiwan, Willka Qhichwapi.",
+        rights: "Llapallan derechos waqaychasqa.",
+        columns: {
+          links: {
+            title: "Purinapaq",
+            items: [
+              { label: "Qallariy", href: "/" },
+              { label: "Ayllu", href: "/about" },
+              { label: "Raymikuna", href: "/services" },
+              { label: "Rikch'akuna", href: "/gallery" },
+              { label: "Tinkuy", href: "/contact" }
+            ]
+          },
+          reviews: {
+              title: "Runakunaq Rimaynin",
+              rating: "5.0"
+          },
+          follow: {
+              title: "Qatipayku",
+              facebook: "https://www.facebook.com/hernan.wachuma",
+              instagram: "https://www.instagram.com/hernan_wachuma"
+          },
+          contact: {
+              title: "Tinkuy",
+              email: "hernan.wachuma@gmail.com",
+              phone: "+51 984 316 833"
+          },
+          find: {
+              title: "Tariyku",
+              address: "Willka Qhichwa, Cusco, Peru"
+          }
+        }
       }
 };
 
