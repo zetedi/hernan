@@ -36,8 +36,8 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
   locationText = locCusco;
 
   // Specific Contact for Costa Rica
-  const costaRicaTelegram = " (Zahara): +506 7020 8143";
-  const costaRicaWhatsapp = " (Zoltan): +32 494 988 937";
+  const costaRicaTelegram = "(Zahara): +506 7020 8143";
+  const costaRicaWhatsapp = "(Zoltan): +32 494 988 937";
 
   if (type === 'costaRica') {
       bgImage = IMAGES.crbg;
@@ -173,7 +173,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
 
                     {/* Special Image Row for Ausangate or Costa Rica */}
                     {(isAusangateType || isCostaRica) && (
-                        <div className="flex justify-center items-center gap-4 mt-6 mb-4">
+                        <div className="flex justify-center items-center gap-4 mt-10 mb-1">
                             <div className="w-24 h-24 md:w-36 md:h-36 rounded-lg overflow-hidden border-2 border-white shadow-lg transform -rotate-3 z-0 bg-white">
                                 <img src={isCostaRica ? IMAGES.cr1 : IMAGES.ausangate} className="w-full h-full object-cover" alt="Event Image 1" />
                             </div>
