@@ -1,10 +1,7 @@
-
 export enum Language {
   EN = 'EN',
   ES = 'ES',
-  QU = 'QU',
-  JA = 'JA',
-  HU = 'HU'
+  QU = 'QU'
 }
 
 export interface NavLink {
@@ -144,6 +141,7 @@ export interface FlyerLabels {
   limited: string;
   flexibleDates: string;
   print: string;
+  oneDayPossible: string;
 }
 
 export interface FAQItem {

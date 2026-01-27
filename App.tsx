@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { Routes, Route, useLocation, useSearchParams } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
@@ -44,8 +43,6 @@ const App: React.FC = () => {
         case Language.EN: return "Hernan Raíces Quechua - Sacred Medicine";
         case Language.ES: return "Hernan Raíces Quechua - Medicina Sagrada";
         case Language.QU: return "Hernan Raíces Quechua - Hampi Wachuma";
-        case Language.JA: return "ヘルナン・ライセス・ケチュア - アンデスの聖なる薬";
-        case Language.HU: return "Hernan Raíces Quechua - Andok Szent Gyógyító Ereje";
         default: return "Hernan Raíces Quechua";
     }
   };
