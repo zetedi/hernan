@@ -36,8 +36,8 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
   locationText = locCusco;
 
   // Specific Contact for Costa Rica
-  const costaRicaTelegram = "+506 7020 8143";
-  const costaRicaWhatsapp = "+32 494 988 937";
+  const costaRicaTelegram = " (Zahara): +506 7020 8143";
+  const costaRicaWhatsapp = " (Zoltan): +32 494 988 937";
 
   if (type === 'costaRica') {
       bgImage = IMAGES.crbg;
@@ -264,12 +264,12 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                             </div>
                             <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
                                 {isCostaRica ? <Send size={14} className="text-pacha-gold" /> : <Phone size={14} className="text-pacha-gold" />}
-                                {isCostaRica ? `Telegram: ${costaRicaTelegram}` : footer.columns.contact.phone}
+                                {isCostaRica ? `Telegram ${costaRicaTelegram}` : footer.columns.contact.phone}
                             </div>
                             {isCostaRica && (
                                 <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
                                     <Phone size={14} className="text-pacha-gold" />
-                                    WhatsApp: {costaRicaWhatsapp}
+                                    WhatsApp {costaRicaWhatsapp}
                                 </div>
                             )}
                         </div>
