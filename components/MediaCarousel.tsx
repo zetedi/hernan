@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -7,6 +6,7 @@ export interface MediaItem {
   src: string;
   poster?: string;
   alt?: string;
+  credit?: string;
 }
 
 export const MediaCarousel: React.FC<{ items: MediaItem[] }> = ({ items }) => {
@@ -50,6 +50,16 @@ export const MediaCarousel: React.FC<{ items: MediaItem[] }> = ({ items }) => {
        
        {/* Overlay */}
        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300 pointer-events-none"></div>
+
+       {/* Credit Overlay */}
+       {current.credit && (
+         <div className="absolute bottom-4 right-4 z-20 pointer-events-auto">
+            <span 
+              className="text-[10px] text-white/80 bg-black/50 px-2 py-1 rounded backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity"
+              dangerouslySetInnerHTML={{ __html: current.credit }} 
+            />
+         </div>
+       )}
 
        {items.length > 1 && (
          <>

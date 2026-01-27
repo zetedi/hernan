@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationData, Language } from '../types';
 import { IMAGES, CREDITS } from '../constants';
-import { Palmtree, Waves, Users, Eye, FileText, Mountain, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
+import { Palmtree, Waves, Users, Eye, FileText, Mountain, Calendar, MapPin, CheckCircle2, Banknote } from 'lucide-react';
 import { Preparation } from './Preparation';
 import { MediaCarousel, MediaItem } from './MediaCarousel';
 
@@ -105,6 +104,18 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang }
                                     <span className="text-pacha-stone font-medium">{t.themeValue}</span>
                                 </div>
                             </div>
+
+                            {t.oneDayPrice && (
+                                <div className="flex items-start gap-4 pt-4 border-t border-gray-100">
+                                    <div className="bg-pacha-leaf/20 p-2 rounded-full">
+                                        <Banknote className="w-5 h-5 text-pacha-leaf" />
+                                    </div>
+                                    <div>
+                                        <span className="block text-xs font-bold text-gray-400 uppercase tracking-wider">{ui.contribution}</span>
+                                        <span className="text-pacha-stone font-medium">{t.oneDayPrice}</span>
+                                    </div>
+                                </div>
+                            )}
                         </div>
 
                         <div className="mt-8 pt-8 border-t border-gray-100">
@@ -167,36 +178,47 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang }
                         
                         <div className="space-y-12">
                             {t.itinerary && t.itinerary.map((day, index) => {
-                                // Determine placeholder image based on location/context
-                                let dayImage = IMAGES.costa as string; // Default Costa Rica - explicitly cast as string default
+                                // Default placeholders
+                                let dayImage = IMAGES.costa as string; 
                                 let credit = null;
+                                let isCarousel = false;
+                                let carouselItems: MediaItem[] = [];
 
                                 const descLower = (typeof day.description === 'string' ? day.description : day.description[0]).toLowerCase();
                                 const titleLower = day.title.toLowerCase();
                                 
-                                if (index === 0) {
+                                // Logic for El Chirripo Start (The Carousel)
+                                // Identified by title containing "Medicinal Journey" or being index 2 (Feb 25)
+                                if (index === 2 || titleLower.includes('medicinal journey')) {
+                                    isCarousel = true;
+                                    // Build the carousel items
+                                    const chirripoKeys = ['chirripo1', 'chirripo2', 'chirripo3', 'chirripo4', 'chirripo5', 'chirripo6', 'chirripo7'];
+                                    carouselItems = chirripoKeys.map(key => ({
+                                        type: 'image',
+                                        src: IMAGES[key as keyof typeof IMAGES] as string,
+                                        alt: 'El Chirripó',
+                                        credit: CREDITS[key]
+                                    }));
+                                } else if (index === 0) {
                                     dayImage = IMAGES.diamante1;
                                 } else if (index === 1) {
                                     dayImage = IMAGES.diamante2;
-                                } else if (index >= 2) {
-                                    // Chirripo leg - Cycle through specific images
-                                    const chirripoKeys = ['chirripo1', 'chirripo2', 'chirripo3', 'chirripo4', 'chirripo5', 'chirripo6', 'chirripo7'];
-                                    const key = chirripoKeys[(index - 2) % chirripoKeys.length];
-                                    dayImage = IMAGES[key as keyof typeof IMAGES] as string;
-                                    credit = CREDITS[key];
-                                } else if (titleLower.includes('chirripó') || descLower.includes('mountain') || titleLower.includes('ceremony')) {
-                                    dayImage = IMAGES.canyon; // Fallback
                                 } else if (titleLower.includes('ocean')) {
                                     dayImage = IMAGES.costa;
+                                } else {
+                                    // Fallbacks
+                                    if (titleLower.includes('eclipse')) dayImage = IMAGES.ausangate3;
+                                    else if (titleLower.includes('closing')) dayImage = IMAGES.flowers;
                                 }
 
                                 // Icons
                                 let DayIcon = Palmtree;
-                                if (titleLower.includes('chirripó') || titleLower.includes('mountain')) DayIcon = Mountain;
-                                if (titleLower.includes('ceremony')) DayIcon = Eye;
+                                if (titleLower.includes('chirripó') || titleLower.includes('mountain') || titleLower.includes('medicinal journey')) DayIcon = Mountain;
+                                if (titleLower.includes('ceremony') || titleLower.includes('opening')) DayIcon = Eye;
                                 if (titleLower.includes('ocean')) DayIcon = Waves;
 
-                                // Location Logic: Index 2+ (March 1 onwards) is El Chirripó leg
+                                // Location Logic
+                                // Feb 25 onwards is The Mountains
                                 const locationName = index >= 2 ? 'The Mountains' : 'Diamante Valley';
 
                                 return (
@@ -234,18 +256,23 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang }
 
                                                 {/* Image Side */}
                                                 <div className="h-48 md:h-auto md:w-1/3 relative group/image">
-                                                    <img 
-                                                        src={dayImage} 
-                                                        alt={day.title}
-                                                        className="absolute inset-0 w-full h-full object-cover"
-                                                    />
-                                                    <div className="absolute inset-0 bg-black/10 group-hover/image:bg-transparent transition-colors"></div>
-                                                    
-                                                    {/* Credits Overlay */}
-                                                    {credit && (
-                                                        <div className="absolute bottom-1 right-1 max-w-[90%] text-[10px] text-white/80 bg-black/50 px-2 py-1 rounded backdrop-blur-sm opacity-0 group-hover/image:opacity-100 transition-opacity pointer-events-auto">
-                                                            <span dangerouslySetInnerHTML={{ __html: credit }} />
-                                                        </div>
+                                                    {isCarousel ? (
+                                                        <MediaCarousel items={carouselItems} />
+                                                    ) : (
+                                                        <>
+                                                            <img 
+                                                                src={dayImage} 
+                                                                alt={day.title}
+                                                                className="absolute inset-0 w-full h-full object-cover"
+                                                            />
+                                                            <div className="absolute inset-0 bg-black/10 group-hover/image:bg-transparent transition-colors pointer-events-none"></div>
+                                                            {/* Credits Overlay for non-carousel items if needed */}
+                                                            {credit && (
+                                                                <div className="absolute bottom-1 right-1 max-w-[90%] text-[10px] text-white/80 bg-black/50 px-2 py-1 rounded backdrop-blur-sm opacity-0 group-hover/image:opacity-100 transition-opacity pointer-events-auto">
+                                                                    <span dangerouslySetInnerHTML={{ __html: credit }} />
+                                                                </div>
+                                                            )}
+                                                        </>
                                                     )}
                                                 </div>
                                             </div>

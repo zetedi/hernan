@@ -238,6 +238,7 @@ export interface TranslationData {
           dates: string;
       };
       cta: string;
+      oneDayPrice?: string;
       visionTitle: string;
       visionText: string;
       themeValue: string;
