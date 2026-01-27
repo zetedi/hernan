@@ -207,7 +207,7 @@ const enTranslations: TranslationData = {
     costaRica: {
         title: "Sacred Pilgrimage to Costa Rica",
         subtitle: "Mountains & Ocean United",
-        intro: "Join Hernan Colque, a Quechua native guardian of ancestral traditions, for a historic pilgrimage to Costa Rica. This unique journey connects the high-altitude wisdom of the Andes with the vibrant life of the tropical coast through sacred Wachuma ceremonies, visits to medicinal botanical sanctuaries, and deep communion with indigenous tribes. Experience profound healing and spiritual awakening as we bridge the mountains and the ocean. Possible to join for a single day.",
+        intro: "Join Hernan Colque, a Quechua native Wachumero from the K'ana lineage and guardian of ancestral traditions, for a historic pilgrimage to Costa Rica. This unique journey connects the high-altitude wisdom of the Peruvian Andes with the vibrant life of the tropical coast through sacred, heart-centered Wachuma ceremonies, visits to medicinal botanical sanctuaries, and deep communion with indigenous tribes. Experience profound healing and spiritual awakening as we bridge the mountains and the ocean. Possible to join for a single day.",
         description: [
             "Experience a historic gathering as Hernan brings the sacred Wachuma medicine to the vibrant lands of Costa Rica for the first time.",
             "Guided by a profound vision, this retreat is a spiritual pilgrimage connecting the wisdom of the high Andes with the purifying energy of the ocean.",
@@ -342,67 +342,73 @@ const enTranslations: TranslationData = {
                 ]
             }
         ],
-        questionsTitle: "Frequently Asked Questions",
+        questionsTitle: "Sapa Kuti Tapukuykuna",
         questions: [
-            { question: "What is a San Pedro ceremony?", answer: "San Pedro (Huachuma) is a sacred plant medicine used for healing, vision, and deep spiritual connection. Our ceremonies are guided by experienced facilitators to ensure a safe and transformative experience." },
-            { question: "Is the retreat suitable for beginners?", answer: "Yes, our retreats are open to everyone, whether you have prior experience with plant medicine or are a first-time participant. We provide full guidance and support throughout the process." },
-            { question: "What is Kinsacocha, and why is it special?", answer: "Kinsacocha, located near Pisac, is a tranquil area surrounded by sacred lakes. It is an ideal setting for Huachuma ceremonies, offering a deep connection to nature and Andean spirituality." },
-            { question: "What should I bring to the retreat or ceremony?", answer: "A detailed list will be provided, but essentials include comfortable clothing, hiking shoes, personal items, and an open heart for transformation." },
-            { question: "What language is spoken during the retreat?", answer: "Hernán speaks Quechua and Spanish. If you don’t speak these languages, a French-Spanish translator will be available to assist you throughout the retreat." },
-            { question: "Is the retreat safe?", answer: "Safety is our top priority. Our retreats are held in a controlled, supportive environment with experienced facilitators to guide you through each step of the journey." },
-            { question: "What is your refund or cancellation policy?", answer: "Deposits are refundable up to a specific date. We encourage early communication if your plans change to ensure clarity and support." }
+            { question: "Imataq San Pedro raymi?", answer: "San Pedro (Huachuma)qa willka hampim, yuyayta kicharinapaq, hampinapaq. Ñuqayku allinta pusayku." },
+            { question: "Qallariqkunapaq allinchu?", answer: "Arí, llapapaqmi. Ñuqayku yachachiyku, allinta pusayku tukuy puriypi." },
+            { question: "Imataq Kinsacocha?", answer: "Kinsacochaqa huk sumaq qucham, Pisac patapi. Chaypi raymi ruwayqa ancha sumaqmi, apukunawan tinkunapaq." },
+            { question: "Imata apasaq?", answer: "Q'uñi p'achata, purinapaq zapatota, sunquykita, imatachus necesitanki chayta. Huk lista qusaykiku." },
+            { question: "Ima simita rimanku?", answer: "Hernanqa Quechuata Españoltawan riman. Huk runakuna yanapanqaku, Frances simitapas rimanku." },
+            { question: "Segurochu?", answer: "Arí, ñuqayku allinta qhawayku. Yachaqkuna kanku, manan saqisunkichu." },
+            { question: "Qullqi kutichiy kanmanchu?", answer: "Arí, willawayku sichus manaña hamuyta atinki, ñawpaqta willay." }
         ]
-    },
-    testimonials: { title: "Voces del Corazón", items: [{ 
-          name: "Zoltan E.", 
-          location: "Hungría", 
-          text: `Es una experiencia verdaderamente auténtica de conexión con el espíritu de la tierra y el poder curativo de la medicina vegetal. Ha sido una conexión profunda con la sabiduría antigua de los guías espirituales Incas y pre-Incas a través del Maestro Hernan. Estoy muy agradecido por el viaje.`, 
-          image: IMAGES.zoltan 
-      }, {
-        name: "Stephanie K.",
-        location: "Google Review",
-        text: `Me siento muy afortunada de haber participado en una ceremonia de Wachuma de día completo con Don Hernan. Viajamos a las montañas, a través de un pueblo local, para comulgar con la naturaleza, el espíritu y la energía de la reciprocidad. Su guía es sincera y su medicina es la mejor Wachuma que he bebido. Regresamos a su casa para terminar la ceremonia con una deliciosa sopa andina casera y un fuego en el jardín bajo la luna llena y las estrellas. Recomiendo encarecidamente visitar Wayna Wasi y trabajar con Don Hernan.`,
-        image: IMAGES.kittel
-    }] },
-    contact: {
-        title: "Contact",
-        form: { name: "Your Name", email: "Your Email", message: "Your Message", submit: "Send Message" },
-        info: "We are located in the heart of the Sacred Valley, near Calca, Cusco."
-    },
-    footer: {
-      description: "Reconnect with Pachamama through traditional Wachuma ceremonies in the Sacred Valley.",
-      rights: "All rights reserved.",
-      columns: {
-        links: {
-          title: "Navigation",
+      },
+      testimonials: {
+          title: "Runakunaq Rimaynin",
           items: [
-            { label: "Home", href: "/" },
-            { label: "The Family", href: "/about" },
-            { label: "Ceremonies", href: "/services" },
-            { label: "Gallery", href: "/gallery" },
-            { label: "Contact", href: "/contact" }
+              { 
+                  name: "Zoltan E.", 
+                  location: "Hungría", 
+                  text: "Kayqa chiqaq puriymi, allpawan tinkuymi. Hernanwan puriyqa ñawpaq yachaywan tinkuymi karqa. Ancha agradecesqa kani.",
+                  image: IMAGES.zoltan 
+              },
+              {
+                name: "Stephanie K.",
+                location: "Google Review",
+                text: "Ancha kusisqa kani Don Hernanwan puriqtiy. Urqukunaman rirqayku, allpawan tinkurqayku. Payqa allin hampiqmi. Wayna Wasipi lawata mikhurqayku nina patapi. Yupaychani.",
+                image: IMAGES.kittel
+            }
           ]
-        },
-        reviews: {
-            title: "Reviews",
-            rating: "5.0"
-        },
-        follow: {
-            title: "Follow Us",
-            facebook: "https://www.facebook.com/hernan.wachuma",
-            instagram: "https://www.instagram.com/hernan_wachuma"
-        },
-        contact: {
-            title: "Contact",
-            email: "hernan.wachuma@gmail.com",
-            phone: "+51 984 316 833"
-        },
-        find: {
-            title: "Find Us",
-            address: "Sacred Valley, Cusco, Peru"
+      },
+      contact: {
+          title: "Rimaykakamuy",
+          form: { name: "Sutiyki", email: "Chaskiyki", message: "Willayniyki", submit: "Apachiy" },
+          info: "Willka Qhichwapi kachkayku."
+      },
+      footer: {
+        description: "Reconecta con la Pachamama a través de ceremonias tradicionales de Wachuma en el Valle Sagrado.",
+        rights: "All rights reserved.",
+        columns: {
+          links: {
+            title: "Navigation",
+            items: [
+              { label: "Home", href: "/" },
+              { label: "The Family", href: "/about" },
+              { label: "Ceremonies", href: "/services" },
+              { label: "Gallery", href: "/gallery" },
+              { label: "Contact", href: "/contact" }
+            ]
+          },
+          reviews: {
+              title: "Reviews",
+              rating: "5.0"
+          },
+          follow: {
+              title: "Follow Us",
+              facebook: "https://www.facebook.com/hernan.wachuma",
+              instagram: "https://www.instagram.com/hernan_wachuma"
+          },
+          contact: {
+              title: "Contact",
+              email: "hernan.wachuma@gmail.com",
+              phone: "+51 984 316 833"
+          },
+          find: {
+              title: "Find Us",
+              address: "Sacred Valley, Cusco, Peru"
+          }
         }
       }
-    }
 };
 
 const esTranslations: TranslationData = {
@@ -546,7 +552,7 @@ const esTranslations: TranslationData = {
     costaRica: {
           title: "Peregrinaje Sagrado a Costa Rica",
           subtitle: "Montañas y Océano Unidos",
-          intro: "Un peregrinaje histórico que conecta los altos Andes con la costa tropical de Costa Rica. Únete a nosotros para ceremonias sagradas de Wachuma, sabiduría botánica en la Biblioteca Viviente y una conexión profunda con las tribus indígenas. Hernan Colque es nativo Quechua y un devoto facilitador de ceremonias de Wachuma (San Pedro), profundamente arraigado en las tradiciones sagradas de los Andes. Es posible unirse solo por un día.",
+          intro: "Únete a Hernan Colque, Wachumero nativo Quechua del linaje K'ana y guardián de las tradiciones ancestrales, para un peregrinaje histórico a Costa Rica. Este viaje único conecta la sabiduría de gran altura de los Andes Peruanos con la vida vibrante de la costa tropical a través de ceremonias sagradas de Wachuma centradas en el corazón, visitas a santuarios botánicos medicinales y una profunda comunión con tribus indígenas. Experimenta una sanación profunda y un despertar espiritual mientras unimos las montañas y el océano. Es posible unirse solo por un día.",
           description: [
             "Experimenta un encuentro histórico mientras Hernan trae la medicina sagrada de Wachuma a las tierras vibrantes de Costa Rica por primera vez.",
             "Guiados por una visión profunda, este retiro es un peregrinaje espiritual que conecta la sabiduría de los altos Andes con la energía purificadora del océano.",
@@ -682,13 +688,13 @@ const esTranslations: TranslationData = {
         ],
         questionsTitle: "Preguntas Frecuentes",
         questions: [
-            { question: "¿Qué es una ceremonia de San Pedro?", answer: "San Pedro (Huachuma) es una medicina sagrada de plantas utilizada para la sanación, la visión y la profunda conexión espiritual. Nuestras ceremonias son guiadas por facilitadores experimentados para asegurar una experiencia segura y transformadora." },
-            { question: "¿Es el retiro adecuado para principiantes?", answer: "Sí, nuestros retiros están abiertos a todos, ya sea que tengas experiencia previa con la medicina de plantas o seas un participante por primera vez. Brindamos orientación y apoyo completo durante todo el proceso." },
-            { question: "¿Qué es Kinsacocha y por qué es especial?", answer: "Kinsacocha, ubicada cerca de Pisac, es un área tranquila rodeada de lagos sagrados. Es un entorno ideal para las ceremonias de Huachuma, ofreciendo una profunda conexión con la naturaleza y la espiritualidad andina." },
+            { question: "¿Qué es una ceremonia de San Pedro?", answer: "San Pedro (Huachuma) es una medicina vegetal sagrada utilizada para la sanación, la visión y una profunda conexión espiritual. Nuestras ceremonias son guiadas por facilitadores experimentados para garantizar una experiencia segura y transformadora." },
+            { question: "¿El retiro es adecuado para principiantes?", answer: "Sí, nuestros retiros están abiertos a todos, ya sea que tengas experiencia previa con la medicina vegetal o seas un participante por primera vez. Brindamos orientación y apoyo completo durante todo el proceso." },
+            { question: "¿Qué es Kinsacocha y por qué es especial?", answer: "Kinsacocha, ubicada cerca de Pisac, es una zona tranquila rodeada de lagos sagrados. Es un entorno ideal para las ceremonias de Huachuma, ofreciendo una profunda conexión con la naturaleza y la espiritualidad andina." },
             { question: "¿Qué debo llevar al retiro o ceremonia?", answer: "Se proporcionará una lista detallada, pero lo esencial incluye ropa cómoda, zapatos para caminar, artículos personales y un corazón abierto para la transformación." },
-            { question: "¿Qué idioma se habla durante el retiro?", answer: "Hernán habla quechua y español. Si no hablas estos idiomas, habrá un traductor de inglés/francés disponible para ayudarte durante todo el retiro." },
+            { question: "¿Qué idioma se habla durante el retiro?", answer: "Hernán habla quechua y español. Si no hablas estos idiomas, habrá un traductor (dependiendo de la disponibilidad o arreglo previo) o asistencia para asegurar la comunicación." },
             { question: "¿Es seguro el retiro?", answer: "La seguridad es nuestra principal prioridad. Nuestros retiros se llevan a cabo en un entorno controlado y de apoyo con facilitadores experimentados para guiarte en cada paso del viaje." },
-            { question: "¿Cuál es su política de reembolso o cancelación?", answer: "Los depósitos son reembolsables hasta una fecha específica. Fomentamos la comunicación temprana si tus planes cambian para asegurar claridad y apoyo." }
+            { question: "¿Cuál es su política de reembolso o cancelación?", answer: "Los depósitos son reembolsables hasta una fecha específica. Recomendamos una comunicación temprana si tus planes cambian." }
         ]
       },
       testimonials: {
@@ -714,39 +720,39 @@ const esTranslations: TranslationData = {
           info: "Estamos ubicados en el corazón del Valle Sagrado, cerca de Calca, Cusco."
       },
       footer: {
-      description: "Reconecta con la Pachamama a través de ceremonias tradicionales de Wachuma en el Valle Sagrado.",
-      rights: "Todos los derechos reservados.",
-      columns: {
-        links: {
-          title: "Navegación",
-          items: [
-            { label: "Inicio", href: "/" },
-            { label: "La Familia", href: "/about" },
-            { label: "Ceremonias", href: "/services" },
-            { label: "Galería", href: "/gallery" },
-            { label: "Contacto", href: "/contact" }
-          ]
-        },
-        reviews: {
-            title: "Reseñas",
-            rating: "5.0"
-        },
-        follow: {
-            title: "Síguenos",
-            facebook: "https://www.facebook.com/hernan.wachuma",
-            instagram: "https://www.instagram.com/hernan_wachuma"
-        },
-        contact: {
-            title: "Contacto",
-            email: "hernan.wachuma@gmail.com",
-            phone: "+51 984 316 833"
-        },
-        find: {
-            title: "Encuéntranos",
-            address: "Valle Sagrado, Cusco, Perú"
+        description: "Reconecta con la Pachamama a través de ceremonias tradicionales de Wachuma en el Valle Sagrado.",
+        rights: "Todos los derechos reservados.",
+        columns: {
+          links: {
+            title: "Navegación",
+            items: [
+              { label: "Inicio", href: "/" },
+              { label: "La Familia", href: "/about" },
+              { label: "Ceremonias", href: "/services" },
+              { label: "Galería", href: "/gallery" },
+              { label: "Contacto", href: "/contact" }
+            ]
+          },
+          reviews: {
+              title: "Reseñas",
+              rating: "5.0"
+          },
+          follow: {
+              title: "Síguenos",
+              facebook: "https://www.facebook.com/hernan.wachuma",
+              instagram: "https://www.instagram.com/hernan_wachuma"
+          },
+          contact: {
+              title: "Contacto",
+              email: "hernan.wachuma@gmail.com",
+              phone: "+51 984 316 833"
+          },
+          find: {
+              title: "Encuéntranos",
+              address: "Valle Sagrado, Cusco, Perú"
+          }
         }
       }
-    }
 };
 
 const quTranslations: TranslationData = {
@@ -847,7 +853,7 @@ const quTranslations: TranslationData = {
       costaRica: {
           title: "Costa Rica Willka Puriy",
           subtitle: "Urquwan Mama Qochawan Tinkun",
-          intro: "Andeskunata Costa Rica qochawan tinkuchiq willka puriy. Wachuma raymi, Biblioteca Vivientepi yachaykuna, ñawpaq runakunawan tinkuy. Hernan Colque Qichwa runam, Wachuma hampip pusaqnin. Huk p'unchayllapas hamuyta atinki.",
+          intro: "Hernan Colquewan, K'ana ayllumanta Wachumero, Costa Ricaman hatun puriy. Kay sapaq puriyqa Perou Andeskunaq yachayninta tinkuchin mama qochawan, sunqumanta pacha Wachuma hampiwan, hampi sach'akunawan, ñawpaq runakunawan ima. Huk p'unchayllapas hamuyta atinki.",
           description: [
             "Kayqa huk hatun tinkuymi, Hernan Wachuma hampita Costa Ricaman apamun.",
             "Huk hatun rikhuypa pusasqan, kay puriyqa Andespa yachayninta mama qochawan tinkuchin.",
