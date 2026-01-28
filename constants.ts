@@ -376,7 +376,7 @@ const enTranslations: TranslationData = {
           info: "Willka Qhichwapi kachkayku."
       },
       footer: {
-        description: "Reconecta con la Pachamama a través de ceremonias tradicionales de Wachuma en el Valle Sagrado.",
+        description: "Pachamamawan tinkuy, Wachuma hampiwan, Willka Qhichwapi.",
         rights: "All rights reserved.",
         columns: {
           links: {
@@ -679,7 +679,7 @@ const esTranslations: TranslationData = {
             {
                 title: "Descubre el poder curativo de Wachuma",
                 content: [
-                    "<strong>¿Qué es el cactus San Pedro?</strong><br>El cactus San Pedro, también conocido como Wachuma, es una antigua planta medicinal nativa de las tierras altas de los Andes, principalmente en Perú. Este cactus verde columnar alto, científicamente llamado <em>Echinopsis pachanoi</em>, prospera a grandes altitudes, a menudo entre 2,000 y 3,000 metros. Se reconoce fácilmente por sus costillas pronunciadas, espinas cortas y grandes flores blancas que florecen por la noche.",
+                    "<strong>¿Qué es el cactus San Pedro?</strong><br>El cactus San Pedro, también conocido como Wachuma, es una antigua planta medicinal nativa de las tierras altas de los Andes, principalmente en Perú. Este cactus verde columnar alto, científicamente llamado <em>Echinopsis pachanoi</em>, thrives at high altitudes, often between 2,000 y 3,000 metros. Se reconoce fácilmente por sus costillas pronunciadas, espinas cortas y grandes flores blancas que florecen por la noche.",
                     "<strong>Orígenes e Historia</strong><br>San Pedro has been used for thousands of years by indigenous Andean peoples, especially the Quechua and Aymara communities. Deeply rooted in shamanic tradition, it serves as a bridge between the physical and spiritual worlds. Its name, San Pedro, refers to Saint Peter, the guardian of the gates of heaven, symbolizing access to spiritual dimensions.",
                     "<strong>The Power of Mescaline: Conectando con la Armonía Universal</strong><br>One of the key active compounds in the San Pedro cactus is mescaline, a naturally occurring psychoactive alkaloid. Mescaline is responsible for the profound visionary and introspective experiences associated with Wachuma. Unlike synthetic substances, the mescaline in San Pedro gently guides individuals into an altered state of consciousness, fostering a sense of unity and harmony with the world around them.",
                     "Las ceremonias de Wachuma a menudo llevan a los participantes a sentirse profundamente conectados con la Pachamama (Madre Tierra), experimentando el pulso de la naturaleza y el ritmo de la vida misma. Esta conexión ayuda a disolver los límites entre el yo y el universo, permitiendo profundas ideas y claridad espiritual. Muchos de los que se embarcan en este viaje lo describen como una experiencia de apertura del corazón, donde el amor y la compasión fluyen naturalmente.",
@@ -920,6 +920,22 @@ const quTranslations: TranslationData = {
           { day: "5 P'unchay", title: "Temazcal & Rapé", description: "Iskay kaq wapsi wasi, kallpata tiyachiy." },
           { day: "6 P'unchay", title: "Kimsa Kaq Wachuma & Tukunapaq", description: "Tukuy hampi. Añaschay, kallpachakuy, tukuy yachasqata huñuy." },
           { day: "7 P'unchay", title: "Kutimuy", description: "Urqumanta uraykamuy, Pacchanta yakupi samay, Pisacman kutimuy." }
+        ]
+      },
+      ausangate3Day: {
+        title: "Ausangate: Hanaq Pachaman Astawan Qaylla (3 P'unchay)",
+        subtitle: "Apuwan Raymi",
+        description: "Huk pisi p'unchaykunallapi hatun hampi puriy. Willka urquwan, hampi yakukunawan tinkuy.",
+        details: {
+            dates: "Ene 28 - 30, 2026",
+            price: "700 Soles",
+            bonus: "Foto toqyayta qukyku"
+        },
+        cta: "Tiyayniykita Waqaychay",
+        itinerary: [
+          { day: "1 P'unchay", title: "Chayamuy, Ch'uyay & Temazcal", description: "Pacchantaman puriy. Q'uñi yakupi ch'uyakuy. Temazcalpi (Wapsi Wasi) Rapé hampiwan ch'uyakusun, chaymanta Ausangate ñawpaqpi mañakusun." },
+          { day: "2 P'unchay", title: "Wachuma Raymi", description: "Apuwan tinkuy. P'unchaypi hampi ukyay, urquwan tinkunapaq." },
+          { day: "3 P'unchay", title: "Kutimuy", description: "Muyuta wisq'ay. Urqumanta uraykamuy, Pacchanta yakupi samay, Pisacman kutimuy." }
         ]
       },
       retreat2Day: {
