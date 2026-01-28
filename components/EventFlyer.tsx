@@ -36,7 +36,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
   locationText = locCusco;
 
   // Specific Contact for Costa Rica
-  const costaRicaTelegram = "(Zahara): +506 7020 8143";
+  const costaRicaTelegram = "(Zahara Ananta): +506 7020 8143";
   const costaRicaWhatsapp = "(Zoltan): +32 494 988 937";
 
   if (type === 'costaRica') {
