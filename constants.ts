@@ -118,7 +118,7 @@ const enTranslations: TranslationData = {
       title: "Meet Hernan",
       subtitle: "Guardian of the Sacred Cactus",
       description: [
-        "<strong>Hernan Colque</strong> is a Quechua native and a devoted facilitator of <strong>Wachuma (San Pedro) ceremonies</strong>, deeply rooted in the sacred traditions of the Andes. Born above 5000m in <strong>Viacha</strong>, a high-altitude community of <strong>Pisac</strong>, Hernan carries a medicinal healing lineage that dates back to pre-Inca times.",
+        "<strong>Hernan Ccolque</strong> is a Quechua native and a devoted facilitator of <strong>Wachuma (San Pedro) ceremonies</strong>, deeply rooted in the sacred traditions of the Andes. Born above 5000m in <strong>Viacha</strong>, a high-altitude community of <strong>Pisac</strong>, Hernan carries a medicinal healing lineage that dates back to pre-Inca times.",
         "According to ancestral tradition, only one child per generation may inherit this path, and they must choose it voluntarily. The wisdom passed from his grandfather Carmen to his father Beninho. Among seven siblings, Hernan chose the medicine at a very early age, becoming the sole carrier of this ancient legacy and its profound connection to <strong>Pachamama (Mother Earth)</strong>.",
         "<strong>The Ccana Lineage from Espinar.</strong> Hernan hails from the <strong>Espinar province</strong> and his lineage is <strong>Ccana (K'ana)</strong>. The K'ana culture was a pre-Inca society that formed a unique, peaceful strategic alliance with the Inca Empire rather than typical conquest. Integrating peacefully during the reign of Pachacutec, they became vital military allies—elite <strong>'Sinchis'</strong> warriors who helped defeat the Chancas. Because of this reciprocity, they were granted lands in Collasuyo and their ancient capital, Kanamarca, was rebuilt by the Incas.",
         "<strong>The Spirit of Wachuma.</strong> There is a saying that the spirit of Wachuma connected the people from this region first and they kept it in their heart because the plant told them it will disappear from the land, which happened not too long ago. Hernan carries this memory and spirit forward.",
@@ -207,7 +207,7 @@ const enTranslations: TranslationData = {
     costaRica: {
         title: "Sacred Pilgrimage to Costa Rica",
         subtitle: "Mountains & Ocean United",
-        intro: "Join Hernan Colque, a Quechua native Wachumero from the pre-Incan K'ana lineage and guardian of ancestral traditions, for a historic pilgrimage to Costa Rica. This unique journey connects the high-altitude wisdom of the Peruvian Andes with the vibrant life of the tropical coast through sacred, heart-centered Wachuma ceremonies, visits to medicinal botanical sanctuaries, and deep communion with indigenous tribes. Experience profound healing and spiritual awakening as we bridge the mountains and the ocean. Possible to join for a single day.",
+        intro: "Join Hernan Ccolque, a Quechua native Wachumero from the pre-Incan K'ana lineage and guardian of ancestral traditions, for a historic pilgrimage to Costa Rica. This unique journey connects the high-altitude wisdom of the Peruvian Andes with the vibrant life of the tropical coast through sacred, heart-centered Wachuma ceremonies, visits to medicinal botanical sanctuaries, and deep communion with indigenous tribes. Experience profound healing and spiritual awakening as we bridge the mountains and the ocean. Possible to join for a single day.",
         description: [
             "Experience a historic gathering as Hernan brings the sacred Wachuma medicine to the vibrant lands of Costa Rica for the first time.",
             "Guided by a profound vision, this retreat is a spiritual pilgrimage connecting the wisdom of the high Andes with the purifying energy of the ocean.",
@@ -327,14 +327,14 @@ const enTranslations: TranslationData = {
                 content: [
                     "Planning a Wachuma retreat can feel like preparing for a pilgrimage of the soul. Whether you are new to plant medicine or an experienced seeker, every Wachuma ceremony offers a unique, transformative experience. Here’s what to expect when you embark on a retreat in the Sacred Valley of Peru, where the spirit of the Andes and Pachamama herself are ever-present.",
                     "<strong>A Sacred Setting for Deep Healing</strong><br>The Sacred Valley near Cusco is the perfect backdrop for your spiritual journey. Nestled among Andean mountains, our retreat space is surrounded by breathtaking landscapes that amplify the power of Wachuma. From the moment you arrive, you’ll feel the profound connection between Earth and cosmos, a connection fundamental to Andean cosmology and the Wachuma tradition.",
-                    "<strong>A Typical Wachuma Ceremony Day</strong><br>Your retreat will start with a gentle introduction to Wachuma. Under the guidance of Hernan Colque, the ceremonies unfold in a safe, supportive space where you’ll be encouraged to listen to your inner voice. Wachuma helps open your heart, providing clarity and a sense of peace as you journey through the day. The retreat often includes quiet time in nature, group sharing, and time for reflection, making the experience holistic and healing.",
+                    "<strong>A Typical Wachuma Ceremony Day</strong><br>Your retreat will start with a gentle introduction to Wachuma. Under the guidance of Hernan Ccolque, the ceremonies unfold in a safe, supportive space where you’ll be encouraged to listen to your inner voice. Wachuma helps open your heart, providing clarity and a sense of peace as you journey through the day. The retreat often includes quiet time in nature, group sharing, and time for reflection, making the experience holistic and healing.",
                     "<strong>Integrating Your Wachuma Experience</strong><br>The insights gained from Wachuma can be profound, and it’s important to take time to integrate these lessons into your daily life. Hernan and his team are there to help you process your experiences, whether through group discussions or one-on-one support. Many participants leave the retreat with a renewed sense of purpose and a deep connection to themselves and the world around them."
                 ]
             },
             {
                 title: "Discover the Healing Power of Wachuma",
                 content: [
-                    "<strong>What is the San Pedro Cactus?</strong><br>The San Pedro cactus, also known as Wachuma, is an ancient medicinal plant native to the highlands of the Andes, primarily in Peru. This tall, columnar green cactus, scientifically named <em>Echinopsis pachanoi</em>, thrives at high altitudes, often between 2,000 and 3,000 meters. It is easily recognized by its pronounced ribs, short spines, and large white flowers that bloom at night.",
+                    "<strong>What is the San Pedro Cactus?</strong><br>The San Pedro cactus, also known as Wachuma, is an ancient medicinal plant native to the highlands of the Andes, primarily in Peru. This tall, columnar green cactus, scientifically named <em>Echinopsis pachanoi</em>, thrives at high altitudes, often between 2,000 and 3,000 metros. It is easily recognized by its pronounced ribs, short spines, and large white flowers that bloom at night.",
                     "<strong>Origins and History</strong><br>San Pedro has been used for thousands of years by indigenous Andean peoples, especially the Quechua and Aymara communities. Deeply rooted in shamanic tradition, it serves as a bridge between the physical and spiritual worlds. Its name, San Pedro, refers to Saint Peter, the guardian of the gates of heaven, symbolizing access to spiritual dimensions.",
                     "<strong>The Power of Mescaline: Connecting to Universal Harmony</strong><br>One of the key active compounds in the San Pedro cactus is mescaline, a naturally occurring psychoactive alkaloid. Mescaline is responsible for the profound visionary and introspective experiences associated with Wachuma. Unlike synthetic substances, the mescaline in San Pedro gently guides individuals into an altered state of consciousness, fostering a sense of unity and harmony with the world around them.",
                     "Wachuma ceremonies often lead participants to feel deeply connected to Pachamama (Mother Earth), experiencing the pulse of nature and the rhythm of life itself. This connection helps dissolve the boundaries between self and the universe, allowing for profound insights and spiritual clarity. Many who embark on this journey describe it as a heart-opening experience, where love and compassion flow naturally.",
@@ -376,7 +376,7 @@ const enTranslations: TranslationData = {
           info: "Willka Qhichwapi kachkayku."
       },
       footer: {
-        description: "Pachamamawan tinkuy, Wachuma hampiwan, Willka Qhichwapi.",
+        description: "Reconecta con la Pachamama a través de ceremonias tradicionales de Wachuma en el Valle Sagrado.",
         rights: "All rights reserved.",
         columns: {
           links: {
@@ -463,7 +463,7 @@ const esTranslations: TranslationData = {
       title: "Conoce a Hernan",
       subtitle: "Guardián del Cactus Sagrado",
       description: [
-        "<strong>Hernan Colque</strong> es un nativo Quechua y un devoto facilitador de <strong>ceremonias de Wachuma (San Pedro)</strong>, profundamente arraigado en las tradiciones sagradas de los Andes. Nacido por encima de los 5000m en <strong>Viacha</strong>, una comunidad de altura de <strong>Pisac</strong>, Hernan lleva un linaje de sanación medicinal que se remonta a tiempos pre-incas.",
+        "<strong>Hernan Ccolque</strong> es un nativo Quechua y un devoto facilitador de <strong>ceremonias de Wachuma (San Pedro)</strong>, profundamente arraigado en las tradiciones sagradas de los Andes. Nacido por encima de los 5000m en <strong>Viacha</strong>, una comunidad de altura de <strong>Pisac</strong>, Hernan lleva un linaje de sanación medicinal que se remonta a tiempos pre-incas.",
         "Según la tradición ancestral, solo un hijo por generación puede heredar este camino, y debe elegirlo voluntariamente. La sabiduría pasó de su abuelo Carmen a su padre Beninho. Entre siete hermanos, Hernan eligió la medicina a una edad muy temprana, convirtiéndose en el único portador de este antiguo legado y su profunda conexión con la <strong>Pachamama (Madre Tierra)</strong>.",
         "<strong>El Linaje Ccana de Espinar.</strong> Hernan proviene de la <strong>provincia de Espinar</strong> y su linaje es <strong>Ccana (K'ana)</strong>. La cultura K'ana fue una sociedad pre-inca que formó una alianza estratégica única y pacífica con el Imperio Inca en lugar de la típica conquista. Integrándose pacíficamente durante el reinado de Pachacutec, se convirtieron en aliados militares vitales—guerreros de élite <strong>'Sinchis'</strong> que ayudaron a derrotar a los Chancas. Debido a esta reciprocidad, se les concedieron tierras en Collasuyo y su antigua capital, Kanamarca, fue reconstruida por los Incas.",
         "<strong>El Espíritu de Wachuma.</strong> Hay un dicho que dice que el espíritu de Wachuma conectó primero a la gente de esta región y lo guardaron en su corazón porque la planta les dijo que desaparecería de la tierra, lo cual sucedió no hace mucho. Hernan lleva esta memoria y espíritu hacia adelante.",
@@ -552,20 +552,26 @@ const esTranslations: TranslationData = {
     costaRica: {
         title: "Peregrinaje Sagrado a Costa Rica",
         subtitle: "Montañas y Océano Unidos",
-        intro: "Únete a Hernan Colque, un Wachumero nativo Quechua del linaje pre-inca K'ana y guardián de tradiciones ancestrales, para un peregrinaje histórico a Costa Rica. Este viaje único conecta la sabiduría de gran altitud de los Andes peruanos con la vida vibrante de la costa tropical a través de ceremonias sagradas de Wachuma centradas en el corazón, visitas a santuarios botánicos medicinales y profunda comunión con tribus indígenas. Experimenta una profunda sanación y despertar espiritual mientras unimos las montañas y el océano. Posible unirse por un solo día.",
+        intro: "Únete a Hernan Ccolque, un Wachumero nativo Quechua del linaje pre-inca K'ana y guardián de tradiciones ancestrales, para un peregrinaje histórico a Costa Rica. Este viaje único conecta la sabiduría de gran altitud de los Andes peruanos con la vida vibrante de la costa tropical a través de ceremonias sagradas de Wachuma centradas en el corazón, visitas a santuarios botánicos medicinales y profunda comunión con tribus indígenas. Experimenta una profunda sanación y despertar espiritual mientras unimos las montañas y el océano. Posible unirse por un solo día.",
         description: [
             "Experimenta una reunión histórica mientras Hernan trae la medicina sagrada de Wachuma a las tierras vibrantes de Costa Rica por primera vez.",
             "Guiado por una visión profunda, este retiro es un peregrinaje espiritual conectando la sabiduría de los altos Andes con la energía purificadora del océano.",
             "Además de las ceremonias de Wachuma, compartiremos la medicina de Rapé, realizaremos limpiezas florales y viajaremos a través de meditaciones guiadas.",
             "Nos reunimos en un santuario aislado para asegurar una profunda atención personal y un contenedor energético cohesivo."
         ],
-        details: { location: "Ubicación Secreta, Costa Rica", capacity: "Grupo Íntimo", dates: "Feb 21 - Mar 4, 2026" },
+        details: { location: "Ubicación Secreta, Costa Rica", capacity: "Grupo Íntimo", dates: "21 Feb - 4 Mar, 2026" },
         cta: "Solicitar Invitación",
         oneDayPrice: "$249 USD (Pase de 1 Día)",
         visionTitle: "Una Visión de la Medicina",
         visionText: "La medicina habló de conectar la sabiduría sostenida en los altos Andes con la energía purificadora y fluida del océano. Un peregrinaje de espíritu y cuerpo.",
         themeValue: "Océano y Montaña",
-        itinerary: costaRicaItinerary,
+        itinerary: [
+            { day: "21 Feb", title: "Ceremonia de Apertura", description: "Ceremonia de Apertura junto al Océano Pacífico." },
+            { day: "24 Feb", title: "Selvas Primarias", description: "Conexión con las Selvas Primarias del Valle del Diamante." },
+            { day: "25 Feb", title: "Apertura del Viaje Medicinal", description: "Comenzando nuestra inmersión profunda en las montañas sagradas de El Chirripó." },
+            { day: "3 Mar", title: "Celebración del Eclipse Lunar", description: "Celebrando el Eclipse Lunar en Sondero Gigante con las tribus indígenas de Costa Rica." },
+            { day: "4 Mar", title: "Círculo de Cierre", description: "Integración final y partida del santuario." }
+        ],
         packages: {
             title: "La Participación Incluye",
             items: [
@@ -672,7 +678,7 @@ const esTranslations: TranslationData = {
                 content: [
                     "Planear un retiro de Wachuma puede sentirse como prepararse para una peregrinación del alma. Ya sea que seas nuevo en la medicina de plantas o un buscador experimentado, cada ceremonia de Wachuma ofrece una experiencia única y transformadora. Esto es lo que puedes esperar cuando te embarcas en un retiro en el Valle Sagrado de Perú, donde el espíritu de los Andes y la Pachamama misma están siempre presentes.",
                     "<strong>Un entorno sagrado para una sanación profunda</strong><br>El Valle Sagrado cerca de Cusco es el telón de fondo perfecto para tu viaje espiritual. Ubicado entre las montañas andinas, nuestro espacio de retiro está rodeado de impresionantes paisajes que amplifican el poder de Wachuma. Desde el momento en que llegues, sentirás la profunda conexión entre la Tierra y el cosmos, una conexión que es fundamental para la cosmología andina y la tradición de Wachuma.",
-                    "<strong>Un día típico de ceremonia de Wachuma</strong><br>Tu retiro comenzará con una suave introducción a Wachuma. Bajo la guía de Hernan Colque, las ceremonias se desarrollan en un espacio seguro y de apoyo donde se te animará a escuchar tu voz interior. Wachuma ayuda a abrir tu corazón, brindando claridad y una sensación de paz mientras viajas a través del día. El retiro a menudo incluye tiempo tranquilo en la naturaleza, intercambio grupal y tiempo para la reflexión, haciendo que la experiencia sea holística y sanadora.",
+                    "<strong>Un día típico de ceremonia de Wachuma</strong><br>Tu retiro comenzará con una suave introducción a Wachuma. Bajo la guía de Hernan Ccolque, las ceremonias se desarrollan en un espacio seguro y de apoyo donde se te animará a escuchar tu voz interior. Wachuma ayuda a abrir tu corazón, brindando claridad y una sensación de paz mientras viajas a través del día. El retiro a menudo incluye tiempo tranquilo en la naturaleza, intercambio grupal y tiempo para la reflexión, haciendo que la experiencia sea holística y sanadora.",
                     "<strong>Integrando tu experiencia Wachuma</strong><br>Las ideas obtenidas de Wachuma pueden ser profundas, y es importante tomarse el tiempo para integrar estas lecciones en tu vida diaria. Hernan y su equipo están allí para ayudarte a procesar tus experiencias, ya sea a través de discusiones grupales o apoyo individual. Muchos participantes dejan el retiro con un renovado sentido de propósito y una profunda conexión consigo mismos y con el mundo que los rodea."
                 ]
             },
@@ -854,7 +860,7 @@ const quTranslations: TranslationData = {
       costaRica: {
           title: "Costa Rica Willka Puriy",
           subtitle: "Urquwan Mama Qochawan Tinkun",
-          intro: "Hernan Colquewan, K'ana ayllumanta Wachumero, Costa Ricaman hatun puriy. Kay sapaq puriyqa Perou Andeskunaq yachayninta tinkuchin mama qochawan, sunqumanta pacha Wachuma hampiwan, hampi sach'akunawan, ñawpaq runakunawan ima. Huk p'unchayllapas hamuyta atinki.",
+          intro: "Hernan Ccolquewan, K'ana ayllumanta Wachumero, Costa Ricaman hatun puriy. Kay sapaq puriyqa Perou Andeskunaq yachayninta tinkuchin mama qochawan, sunqumanta pacha Wachuma hampiwan, hampi sach'akunawan, ñawpaq runakunawan ima. Huk p'unchayllapas hamuyta atinki.",
           description: [
             "Kayqa huk hatun tinkuymi, Hernan Wachuma hampita Costa Ricaman apamun.",
             "Huk hatun rikhuypa pusasqan, kay puriyqa Andespa yachayninta mama qochawan tinkuchin.",
@@ -900,7 +906,7 @@ const quTranslations: TranslationData = {
         title: "Hernanwan Riqsinakuy",
         subtitle: "Willka Hampi Waqaychaq",
         description: [
-            "<strong>Hernan Colque</strong> runa simi rimaq, <strong>Wachuma hampiq</strong>, ñawpaq yachaykunata apaq. <strong>Viacha</strong> llaqtapi paqarisqa, <strong>Pisac</strong> patapi, payqa ñawpaq hampiq yawarniyuq.",
+            "<strong>Hernan Ccolque</strong> runa simi rimaq, <strong>Wachuma hampiq</strong>, ñawpaq yachaykunata apaq. <strong>Viacha</strong> llaqtapi paqarisqa, <strong>Pisac</strong> patapi, payqa ñawpaq hampiq yawarniyuq.",
             "Ñawpaq yachaykuna willan, sapa miraymanta huklla kay ñanta apanman. Abuelon Carmenmanta taytan Beninhoman yachay chayarqa. Qanchis wawqikunamanta, Hernanllataq kay ñanta akllarqa, <strong>Pachamamawan</strong> tinkuspa.",
             "<strong>Espinar llaqtamanta Ccana yawar.</strong> Hernanpa yawarninqa <strong>Ccana (K'ana)</strong>. K'ana runakunaqa Inka Pachacutecwan thakpi tinkurqanku, manan maqanakuspachu. Chayrayku <strong>'Sinchis'</strong> sutichasqa karqanku, allin awqaq runakuna.",
             "<strong>Wachuma Nunam.</strong> Wachumaqa ñawpaq runakunata tinkuchirqa, chayta sunqunkupi waqaycharqanku. Kay hampiqa yachachikunmi, kunan p'unchaykunaqa Hernan kay yachayta apachkan.",
