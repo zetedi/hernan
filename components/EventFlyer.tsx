@@ -102,6 +102,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
   };
 
   const dayLabel = getDayLabel(lang);
+  const lineageText = isSpanish ? "Linaje Pre-Inca K'ana" : "Pre-Incan K'ana Lineage";
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-2 md:p-4 print:p-0 print:bg-white relative">
@@ -134,15 +135,18 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                 
                 {/* Logo Area */}
                 {!isJuchuy && (
-                    <div className="p-2 text-center text-white drop-shadow-md pt-4 print:text-pacha-earth">
+                    <div className="p-2 text-center text-white drop-shadow-md pt-4 print:text-pacha-earth flex flex-col items-center">
                         <div className="w-14 h-14 md:w-20 md:h-20 mx-auto text-white mb-2 drop-shadow-[0_4px_3px_rgba(0,0,0,0.9)] filter shadow-black print:text-pacha-earth">
                             <Logo className="w-full h-full drop-shadow-lg" />
                         </div>
-                        <h2 className="text-[10px] md:text-xs tracking-[0.2em] uppercase font-bold text-pacha-gold drop-shadow-[0_2px_2px_rgba(0,0,0,1)] font-cinzel bg-black/40 backdrop-blur-md py-1 px-3 inline-block rounded-full print:text-pacha-earth print:bg-transparent print:drop-shadow-none shadow-lg border border-white/10">
+                        <h2 className="text-[10px] md:text-xs tracking-[0.2em] uppercase font-bold text-pacha-gold drop-shadow-[0_2px_2px_rgba(0,0,0,1)] font-cinzel bg-black/40 backdrop-blur-md py-1 px-3 inline-block rounded-full print:text-pacha-earth print:bg-transparent print:drop-shadow-none shadow-lg border border-white/10 mb-1">
                             <span className="text-white print:text-pacha-earth">Hernan</span>
                             <span className="mx-2 text-white/50 print:text-gray-400">|</span>
                             Raíces Quechua
                         </h2>
+                        <span className="text-[8px] md:text-[10px] tracking-widest uppercase text-white/90 drop-shadow-md font-medium bg-black/20 px-2 py-0.5 rounded-full backdrop-blur-sm print:text-gray-500 print:bg-transparent">
+                            {lineageText}
+                        </span>
                     </div>
                 )}
                 
