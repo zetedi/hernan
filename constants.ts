@@ -102,7 +102,7 @@ const enTranslations: TranslationData = {
       subtitle: "Reconnect with Pachamama through traditional Wachuma ceremonies in the Sacred Valley.",
       cta: "Book a Ceremony",
       retreatTeaser: { label: "Sacred Immersion", title: "2 Day Retreat", location: "Pisac & Kinsacocha" },
-      ausangateTeaser: { label: "Closer to the Sky", title: "Ausangate 3 Days", date: "Jan 28 - 30, 2026" },
+      ausangateTeaser: { label: "Closer to the Sky", title: "Ausangate 3 Days", date: "Mar 31 - Apr 2, 2026" },
       costaRicaTeaser: { label: "Special Event", title: "Costa Rica Pilgrimage", date: "Feb 21 - Mar 4, 2026" }
     },
     benefits: {
@@ -193,7 +193,7 @@ const enTranslations: TranslationData = {
       subtitle: "Ceremony with the Apu",
       description: "A condensed and powerful plant medicine journey. Connect with the sacred mountain and the healing waters in the high Andes.",
       details: {
-          dates: "Jan 28 - 30, 2026",
+          dates: "Mar 31 - Apr 2, 2026",
           price: "700 Soles",
           bonus: "Includes free professional photography session"
       },
@@ -354,29 +354,29 @@ const enTranslations: TranslationData = {
         ]
       },
       testimonials: {
-          title: "Runakunaq Rimaynin",
+          title: "Voices of the Heart",
           items: [
               { 
                   name: "Zoltan E.", 
-                  location: "Hungría", 
-                  text: "Kayqa chiqaq puriymi, allpawan tinkuymi. Hernanwan puriyqa ñawpaq yachaywan tinkuymi karqa. Ancha agradecesqa kani.",
+                  location: "Hungary", 
+                  text: "It is a truly authentic experience of connection with the spirit of the earth and the healing power of plant medicine. It has been a deep connection with the ancient wisdom of Inca and pre-Inca spiritual guides through Maestro Hernan. I am very grateful for the journey.",
                   image: IMAGES.zoltan 
               },
               {
                 name: "Stephanie K.",
                 location: "Google Review",
-                text: "Ancha kusisqa kani Don Hernanwan puriqtiy. Urqukunaman rirqayku, allpawan tinkurqayku. Payqa allin hampiqmi. Wayna Wasipi lawata mikhurqayku nina patapi. Yupaychani.",
+                text: "I feel very fortunate to have participated in a full-day Wachuma ceremony with Don Hernan. We traveled to the mountains, through a local village, to commune with nature, spirit, and the energy of reciprocity. His guidance is sincere and his medicine is the best Wachuma I have drunk. We returned to his home to finish the ceremony with a delicious homemade Andean soup and a fire in the garden under the full moon and stars. I highly recommend visiting Wayna Wasi and working with Don Hernan.",
                 image: IMAGES.kittel
             }
           ]
       },
       contact: {
-          title: "Rimaykakamuy",
-          form: { name: "Sutiyki", email: "Chaskiyki", message: "Willayniyki", submit: "Apachiy" },
-          info: "Willka Qhichwapi kachkayku."
+          title: "Contact",
+          form: { name: "Your Name", email: "Your Email", message: "Your Message", submit: "Send Message" },
+          info: "We are located in the heart of the Sacred Valley, near Calca, Cusco."
       },
       footer: {
-        description: "Reconecta con la Pachamama a través de ceremonias tradicionales de Wachuma en el Valle Sagrado.",
+        description: "Reconnect with Pachamama through traditional Wachuma ceremonies in the Sacred Valley.",
         rights: "All rights reserved.",
         columns: {
           links: {
@@ -441,13 +441,13 @@ const esTranslations: TranslationData = {
       print: "Imprimir / Guardar PDF",
       oneDayPossible: "Posible unirse por un día"
     },
-    nav: { home: "Inicio", about: "La Familia", services: "Ceremonias", gallery: "Galería", contact: "Contacto", faq: "Ayuda / FAQ" },
+    nav: { home: "Inicio", about: "La Familia", services: "Ceremonies", gallery: "Galería", contact: "Contacto", faq: "Ayuda / FAQ" },
     hero: {
       title: "Medicina Sagrada de los Andes",
       subtitle: "Reconecta con la Pachamama a través de ceremonias tradicionales de Wachuma en el Valle Sagrado.",
       cta: "Reservar una Ceremonia",
       retreatTeaser: { label: "Inmersión Sagrada", title: "Retiro de 2 Días", location: "Pisac y Kinsacocha" },
-      ausangateTeaser: { label: "Más Cerca del Cielo", title: "Ausangate 3 Días", date: "Ene 28 - 30, 2026" },
+      ausangateTeaser: { label: "Más Cerca del Cielo", title: "Ausangate 3 Días", date: "Mar 31 - Abr 2, 2026" },
       costaRicaTeaser: { label: "Evento Especial", title: "Peregrinaje a Costa Rica", date: "Feb 21 - Mar 4, 2026" }
     },
     benefits: {
@@ -538,7 +538,7 @@ const esTranslations: TranslationData = {
       subtitle: "Ceremonia con el Apu",
       description: "Un viaje de medicina vegetal condensado y poderoso. Conecta con la montaña sagrada y las aguas curativas en los altos Andes.",
       details: {
-          dates: "Ene 28 - 30, 2026",
+          dates: "Mar 31 - Abr 2, 2026",
           price: "700 Soles",
           bonus: "Incluye sesión de fotografía profesional gratuita"
       },
@@ -559,19 +559,13 @@ const esTranslations: TranslationData = {
             "Además de las ceremonias de Wachuma, compartiremos la medicina de Rapé, realizaremos limpiezas florales y viajaremos a través de meditaciones guiadas.",
             "Nos reunimos en un santuario aislado para asegurar una profunda atención personal y un contenedor energético cohesivo."
         ],
-        details: { location: "Ubicación Secreta, Costa Rica", capacity: "Grupo Íntimo", dates: "21 Feb - 4 Mar, 2026" },
+        details: { location: "Ubicación Secreta, Costa Rica", capacity: "Grupo Íntimo", dates: "Feb 21 - Mar 4, 2026" },
         cta: "Solicitar Invitación",
         oneDayPrice: "$249 USD (Pase de 1 Día)",
         visionTitle: "Una Visión de la Medicina",
         visionText: "La medicina habló de conectar la sabiduría sostenida en los altos Andes con la energía purificadora y fluida del océano. Un peregrinaje de espíritu y cuerpo.",
         themeValue: "Océano y Montaña",
-        itinerary: [
-            { day: "21 Feb", title: "Ceremonia de Apertura", description: "Ceremonia de Apertura junto al Océano Pacífico." },
-            { day: "24 Feb", title: "Selvas Primarias", description: "Conexión con las Selvas Primarias del Valle del Diamante." },
-            { day: "25 Feb", title: "Apertura del Viaje Medicinal", description: "Comenzando nuestra inmersión profunda en las montañas sagradas de El Chirripó." },
-            { day: "3 Mar", title: "Celebración del Eclipse Lunar", description: "Celebrando el Eclipse Lunar en Sondero Gigante con las tribus indígenas de Costa Rica." },
-            { day: "4 Mar", title: "Círculo de Cierre", description: "Integración final y partida del santuario." }
-        ],
+        itinerary: costaRicaItinerary,
         packages: {
             title: "La Participación Incluye",
             items: [
@@ -693,15 +687,15 @@ const esTranslations: TranslationData = {
                 ]
             }
         ],
-        questionsTitle: "Preguntas Frecuentes",
+        questionsTitle: "Sapa Kuti Tapukuykuna",
         questions: [
-            { question: "¿Qué es una ceremonia de San Pedro?", answer: "San Pedro (Huachuma) es una medicina vegetal sagrada utilizada para la sanación, la visión y una profunda conexión espiritual. Nuestras ceremonias son guiadas por facilitadores experimentados para garantizar una experiencia segura y transformadora." },
-            { question: "¿El retiro es adecuado para principiantes?", answer: "Sí, nuestros retiros están abiertos a todos, ya sea que tengas experiencia previa con la medicina vegetal o seas un participante por primera vez. Brindamos orientación y apoyo completo durante todo el proceso." },
-            { question: "¿Qué es Kinsacocha y por qué es especial?", answer: "Kinsacocha, ubicada cerca de Pisac, es una zona tranquila rodeada de lagos sagrados. Es un entorno ideal para las ceremonias de Huachuma, ofreciendo una profunda conexión con la naturaleza y la espiritualidad andina." },
-            { question: "¿Qué debo llevar al retiro o ceremonia?", answer: "Se proporcionará una lista detallada, pero lo esencial incluye ropa cómoda, zapatos para caminar, artículos personales y un corazón abierto para la transformación." },
-            { question: "¿Qué idioma se habla durante el retiro?", answer: "Hernán habla quechua y español. Si no hablas estos idiomas, habrá un traductor (dependiendo de la disponibilidad o arreglo previo) o asistencia para asegurar la comunicación." },
-            { question: "¿Es seguro el retiro?", answer: "La seguridad es nuestra principal prioridad. Nuestros retiros se llevan a cabo en un entorno controlado y de apoyo con facilitadores experimentados para guiarte en cada paso del viaje." },
-            { question: "¿Cuál es su política de reembolso o cancelación?", answer: "Los depósitos son reembolsables hasta una fecha específica. Recomendamos una comunicación temprana si tus planes cambian." }
+            { question: "Imataq San Pedro raymi?", answer: "San Pedro (Huachuma)qa willka hampim, yuyayta kicharinapaq, hampinapaq. Ñuqayku allinta pusayku." },
+            { question: "Qallariqkunapaq allinchu?", answer: "Arí, llapapaqmi. Ñuqayku yachachiyku, allinta pusayku tukuy puriypi." },
+            { question: "Imataq Kinsacocha?", answer: "Kinsacochaqa huk sumaq qucham, Pisac patapi. Chaypi raymi ruwayqa ancha sumaqmi, apukunawan tinkunapaq." },
+            { question: "Imata apasaq?", answer: "Q'uñi p'achata, purinapaq zapatota, sunquykita, imatachus necesitanki chayta. Huk lista qusaykiku." },
+            { question: "Ima simita rimanku?", answer: "Hernanqa Quechuata Españoltawan riman. Huk runakuna yanapanqaku, Frances simitapas rimanku." },
+            { question: "Segurochu?", answer: "Arí, ñuqayku allinta qhawayku. Yachaqkuna kanku, manan saqisunkichu." },
+            { question: "Qullqi kutichiy kanmanchu?", answer: "Arí, willawayku sichus manaña hamuyta atinki, ñawpaqta willay." }
         ]
       },
       testimonials: {
@@ -797,7 +791,7 @@ const quTranslations: TranslationData = {
         subtitle: "Pachamamawan tinkuy, Wachuma hampiwan, Willka Qhichwapi.",
         cta: "Hampi Raymita Waqaychay",
         retreatTeaser: { label: "Willka T'aqakuy", title: "2 P'unchay T'aqakuy", location: "Pisac & Kinsacocha" },
-        ausangateTeaser: { label: "Hanaq Pachaman Astawan Qaylla", title: "Ausangate 3 P'unchay", date: "Ene 28 - 30, 2026" },
+        ausangateTeaser: { label: "Hanaq Pachaman Astawan Qaylla", title: "Ausangate 3 P'unchay", date: "Mar 31 - Abr 2, 2026" },
         costaRicaTeaser: { label: "Hatun Puriy", title: "Costa Rica Puriy", date: "Feb 21 - Mar 4, 2026" }
       },
       benefits: {
@@ -933,7 +927,7 @@ const quTranslations: TranslationData = {
         subtitle: "Apuwan Raymi",
         description: "Huk pisi p'unchaykunallapi hatun hampi puriy. Willka urquwan, hampi yakukunawan tinkuy.",
         details: {
-            dates: "Ene 28 - 30, 2026",
+            dates: "Mar 31 - Abr 2, 2026",
             price: "700 Soles",
             bonus: "Foto toqyayta qukyku"
         },
