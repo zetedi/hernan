@@ -36,6 +36,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
   locationText = locCusco;
 
   // Specific Contact for Costa Rica
+  const costaRicaTelegram = "(Zahara): +506 7020 8143";
   const costaRicaWhatsapp = "(Zoltan): +32 494 988 937";
 
   if (type === 'costaRica') {
@@ -54,7 +55,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
   } else if (type === 'ausangate3Day') {
       bgImage = IMAGES.ausangate3;
       locationText = locAusangate;
-      dateText = t.details?.dates || (isSpanish ? "31 Mar - 2 Abr, 2026" : "Mar 31 - Apr 2, 2026");
+      dateText = t.details?.dates || (isSpanish ? "28 - 30 Ene, 2026" : "Jan 28 - 30, 2026");
   }
 
   // QR Code URL Generation
@@ -193,6 +194,9 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                 {/* Body Content */}
                 <div className="px-8 py-4 flex-grow flex flex-col justify-center">
                     <p className="text-[10px] md:text-sm lg:text-base text-center text-gray-800 font-medium leading-relaxed mb-6 italic max-w-3xl mx-auto bg-white/60 p-4 rounded-xl backdrop-blur-sm shadow-sm border border-white/50 print:bg-transparent print:shadow-none print:border-none print:text-black">
+                        <span className="block mb-2 font-bold not-italic text-pacha-earth uppercase tracking-widest text-[9px] md:text-xs">
+                             {lineageText}
+                        </span>
                         {getDescription()}
                     </p>
 
@@ -267,8 +271,14 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                             </div>
                             <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
                                 {isCostaRica ? <Send size={14} className="text-pacha-gold" /> : <Phone size={14} className="text-pacha-gold" />}
-                                {isCostaRica ? `WhatsApp ${costaRicaWhatsapp}` : footer.columns.contact.phone}
+                                {isCostaRica ? `Telegram ${costaRicaTelegram}` : footer.columns.contact.phone}
                             </div>
+                            {isCostaRica && (
+                                <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
+                                    <Phone size={14} className="text-pacha-gold" />
+                                    WhatsApp {costaRicaWhatsapp}
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
