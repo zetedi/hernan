@@ -248,6 +248,26 @@ export interface TranslationData {
           items: string[];
       };
   };
+  costaRicaPilgrimage: {
+      title: string;
+      subtitle: string;
+      intro: string;
+      description: string | string[];
+      details: {
+          location: string;
+          capacity: string;
+          dates: string;
+      };
+      cta: string;
+      visionTitle: string;
+      visionText: string;
+      themeValue: string;
+      itinerary: ItineraryDay[];
+      packages?: {
+        title: string;
+        items: string[];
+    };
+  };
   retreat2Day: {
       title: string;
       subtitle: string;

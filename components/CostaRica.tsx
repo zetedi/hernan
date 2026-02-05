@@ -11,9 +11,10 @@ interface CostaRicaProps {
   preparation: TranslationData['preparation'];
   ui: TranslationData['ui'];
   lang?: Language;
+  flyerEvent?: string;
 }
 
-export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang }) => {
+export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang, flyerEvent = 'costaRica' }) => {
   return (
     <div className="bg-pacha-sand min-h-screen text-pacha-earth">
       {/* Hero Header - Parallax (Disabled on Mobile) */}
@@ -38,7 +39,7 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang }
           {/* Flyer Link Button */}
           <div className="mt-8 flex justify-center">
             <Link 
-                to={`/flyer?event=costaRica&lang=${lang || 'ES'}`} 
+                to={`/flyer?event=${flyerEvent}&lang=${lang || 'ES'}`} 
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-pacha-gold text-white hover:text-pacha-stone border border-white/30 hover:border-pacha-gold font-bold py-3 px-8 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg group uppercase tracking-widest text-sm"
             >

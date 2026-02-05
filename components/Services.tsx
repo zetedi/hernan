@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationData, Language } from '../types';
@@ -27,12 +26,12 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
           <div className="w-24 h-1 bg-pacha-leaf mx-auto"></div>
         </div>
 
-        {/* Ausangate Featured Card - 3-Day Special */}
+        {/* Featured Card - Costa Rica Sacred Pilgrimage */}
         <div className="relative rounded-xl overflow-hidden group shadow-2xl mb-12 border border-pacha-gold/30">
           {/* Image Background */}
           <img 
-            src={IMAGES.ausangate3} 
-            alt="Ausangate Full Moon" 
+            src={IMAGES.chirripo1} 
+            alt="Costa Rica Pilgrimage" 
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-70 transition-opacity duration-500 scale-100 group-hover:scale-105 transition-transform"
           />
@@ -52,7 +51,7 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
                 </p>
              </div>
              <Link 
-               to="/ausangate-3day"
+               to="/costa-rica-pilgrimage"
                className="bg-pacha-gold hover:bg-[#b08d48] text-pacha-stone font-bold py-4 px-10 rounded-full transition-all duration-300 whitespace-nowrap uppercase tracking-widest text-sm shadow-xl"
              >
                {t.ausangateCta.button}
@@ -68,18 +67,20 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
             // 0: 2 Day Retreat
             // 1: Ausangate 3 Day
             // 2: Ausangate 7 Day
-            // 3: Juchuy Qosqo
-            // 4: 1 Day Ceremony
-            // 5: Costa Rica
-            // 6: Private Healing
+            // 3: Costa Rica 3 Day
+            // 4: Costa Rica Pilgrimage
+            // 5: Juchuy Qosqo
+            // 6: 1 Day Ceremony
+            // 7: Private Healing
             
             const isRetreat2Day = index === 0;
             const isAusangate3Day = index === 1;
             const isAusangate7Day = index === 2;
-            const isJuchuy = index === 3;
-            const isOneDay = index === 4;
-            const isCostaRica = index === 5;
-            const isPrivate = index === 6;
+            const isCostaRica = index === 3;
+            const isCostaRicaPilgrimage = index === 4;
+            const isJuchuy = index === 5;
+            const isOneDay = index === 6;
+            const isPrivate = index === 7;
 
             // Base styling - Updated to border-[1.5px] and border-white
             const baseClasses = "border-[1.5px] border-white shadow-[0_0_25px_rgba(255,255,255,0.25)] p-6 rounded-xl transition-all duration-300 group flex flex-col relative overflow-hidden backdrop-blur-sm";
@@ -90,13 +91,14 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
             if (isRetreat2Day) bgImage = IMAGES.mayra;
             if (isAusangate3Day) bgImage = IMAGES.ausangate3;
             if (isAusangate7Day) bgImage = IMAGES.ausangate;
+            if (isCostaRica) bgImage = IMAGES.costa;
+            if (isCostaRicaPilgrimage) bgImage = IMAGES.chirripo1;
             if (isJuchuy) bgImage = IMAGES.juchuy;
             if (isOneDay) bgImage = IMAGES.flowers; 
             if (isPrivate) bgImage = IMAGES.private;
-            if (isCostaRica) bgImage = IMAGES.costa;
 
             return (
-              <div key={index} className={`${baseClasses} ${colorClasses} ${isPrivate ? 'lg:col-span-3 lg:w-1/2 lg:mx-auto' : ''}`}>
+              <div key={index} className={`${baseClasses} ${colorClasses}`}>
                 
                 {/* Background Image for Special Cards */}
                 {bgImage && (
@@ -150,16 +152,23 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
                             >
                                 {ui.viewDetails}
                             </Link>
-                        ) : isJuchuy ? (
+                        ) : isCostaRica ? (
                              <Link 
-                                to="/juchuy-qosqo"
+                                to="/costa-rica"
                                 className="block w-full text-center bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white font-bold py-2 rounded-lg transition-colors border border-pacha-leaf/50 text-sm"
                             >
                                 {ui.viewDetails}
                             </Link>
-                        ) : isCostaRica ? (
+                        ) : isCostaRicaPilgrimage ? (
                              <Link 
-                                to="/costa-rica"
+                                to="/costa-rica-pilgrimage"
+                                className="block w-full text-center bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white font-bold py-2 rounded-lg transition-colors border border-pacha-leaf/50 text-sm"
+                            >
+                                {ui.viewDetails}
+                            </Link>
+                        ) : isJuchuy ? (
+                             <Link 
+                                to="/juchuy-qosqo"
                                 className="block w-full text-center bg-pacha-leaf/20 hover:bg-pacha-leaf/40 text-white font-bold py-2 rounded-lg transition-colors border border-pacha-leaf/50 text-sm"
                             >
                                 {ui.viewDetails}

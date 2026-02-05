@@ -9,7 +9,7 @@ interface EventFlyerProps {
   flyerT: TranslationData['flyer'];
   contact: TranslationData['contact'];
   footer: TranslationData['footer'];
-  type: 'ausangate' | 'ausangate3Day' | 'costaRica' | 'retreat2Day' | 'retreat1Day' | 'juchuy';
+  type: 'ausangate' | 'ausangate3Day' | 'costaRica' | 'costaRicaPilgrimage' | 'retreat2Day' | 'retreat1Day' | 'juchuy';
   lang: Language;
 }
 
@@ -20,7 +20,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
   let dateText = t.subtitle || flyerT.flexibleDates;
   const isJuchuy = type === 'juchuy';
   const isAusangateType = type === 'ausangate' || type === 'ausangate3Day';
-  const isCostaRica = type === 'costaRica';
+  const isCostaRicaType = type === 'costaRica' || type === 'costaRicaPilgrimage';
   
   // Localization helpers
   const isSpanish = lang === Language.ES;
@@ -35,12 +35,15 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
   // Default Location
   locationText = locCusco;
 
-  // Specific Contact for Costa Rica
-  const costaRicaTelegram = "(Zahara): +506 7020 8143";
+  // Specific Contact for Costa Rica (Zoltan only)
   const costaRicaWhatsapp = "(Zoltan): +32 494 988 937";
 
   if (type === 'costaRica') {
       bgImage = IMAGES.crbg;
+      locationText = locCostaRica;
+      dateText = t.details?.dates || t.subtitle;
+  } else if (type === 'costaRicaPilgrimage') {
+      bgImage = IMAGES.chirripo1; // Use Chirripo image for Pilgrimage
       locationText = locCostaRica;
       dateText = t.details?.dates || t.subtitle;
   } else if (type === 'retreat2Day') {
@@ -60,12 +63,12 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
 
   // QR Code URL Generation
   const currentOrigin = window.location.origin;
-  const pagePath = type === 'juchuy' ? 'juchuy-qosqo' : type === 'costaRica' ? 'costa-rica' : type === 'retreat2Day' ? 'retreat-2day' : type === 'retreat1Day' ? 'retreat-1day' : type === 'ausangate3Day' ? 'ausangate-3day' : 'ausangate';
+  const pagePath = type === 'juchuy' ? 'juchuy-qosqo' : type === 'costaRica' ? 'costa-rica' : type === 'costaRicaPilgrimage' ? 'costa-rica-pilgrimage' : type === 'retreat2Day' ? 'retreat-2day' : type === 'retreat1Day' ? 'retreat-1day' : type === 'ausangate3Day' ? 'ausangate-3day' : 'ausangate';
   const qrData = `${currentOrigin}/${pagePath}?lang=${lang}`;
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(qrData)}&bgcolor=255-255-255`;
 
   const getDescription = () => {
-      if (isCostaRica) return t.intro;
+      if (isCostaRicaType) return t.intro;
       
       let eventDesc = "";
       if (typeof t.description === 'string') {
@@ -176,16 +179,16 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                     </div>
 
                     {/* Special Image Row for Ausangate or Costa Rica */}
-                    {(isAusangateType || isCostaRica) && (
+                    {(isAusangateType || isCostaRicaType) && (
                         <div className="flex justify-center items-center gap-4 mt-10 mb-1">
                             <div className="w-24 h-24 md:w-36 md:h-36 rounded-lg overflow-hidden border-2 border-white shadow-lg transform -rotate-3 z-0 bg-white">
-                                <img src={isCostaRica ? IMAGES.cr1 : IMAGES.ausangate} className="w-full h-full object-cover" alt="Event Image 1" />
+                                <img src={isCostaRicaType ? IMAGES.cr1 : IMAGES.ausangate} className="w-full h-full object-cover" alt="Event Image 1" />
                             </div>
                             <div className="w-28 h-28 md:w-44 md:h-44 rounded-lg overflow-hidden border-2 border-white shadow-xl z-10 -mt-4 bg-white">
-                                <img src={isCostaRica ? IMAGES.cr2 : IMAGES.hat} className="w-full h-full object-cover" alt="Event Image 2" />
+                                <img src={isCostaRicaType ? IMAGES.cr2 : IMAGES.hat} className="w-full h-full object-cover" alt="Event Image 2" />
                             </div>
                             <div className="w-24 h-24 md:w-36 md:h-36 rounded-lg overflow-hidden border-2 border-white shadow-lg transform rotate-3 z-0 bg-white">
-                                <img src={isCostaRica ? IMAGES.cr3 : IMAGES.wachuma} className="w-full h-full object-cover" alt="Event Image 3" />
+                                <img src={isCostaRicaType ? IMAGES.cr3 : IMAGES.wachuma} className="w-full h-full object-cover" alt="Event Image 3" />
                             </div>
                         </div>
                     )}
@@ -205,7 +208,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                         <div className="col-span-2 bg-pacha-sand/30 p-4 lg:p-6 rounded-xl border border-pacha-gold/20 print:bg-transparent print:border-gray-300">
                             <div className="flex items-center justify-between mb-3 border-b border-pacha-gold/30 pb-2">
                                 <h3 className="text-pacha-gold font-bold uppercase tracking-widest text-[10px] md:text-sm print:text-black print:border-black">{flyerT.highlights}</h3>
-                                {isCostaRica && (
+                                {isCostaRicaType && (
                                     <div className="flex items-center gap-1 text-pacha-leaf font-bold text-[9px] md:text-xs">
                                         <Clock size={12} />
                                         <span>{flyerT.oneDayPossible}</span>
@@ -270,15 +273,9 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                                 {footer.columns.contact.email}
                             </div>
                             <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
-                                {isCostaRica ? <Send size={14} className="text-pacha-gold" /> : <Phone size={14} className="text-pacha-gold" />}
-                                {isCostaRica ? `Telegram ${costaRicaTelegram}` : footer.columns.contact.phone}
+                                {isCostaRicaType ? <Send size={14} className="text-pacha-gold" /> : <Phone size={14} className="text-pacha-gold" />}
+                                {isCostaRicaType ? `WhatsApp ${costaRicaWhatsapp}` : footer.columns.contact.phone}
                             </div>
-                            {isCostaRica && (
-                                <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
-                                    <Phone size={14} className="text-pacha-gold" />
-                                    WhatsApp {costaRicaWhatsapp}
-                                </div>
-                            )}
                         </div>
                     </div>
                 </div>

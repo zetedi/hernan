@@ -59,10 +59,11 @@ const App: React.FC = () => {
 
   if (isFlyerRoute) {
       // Parse query param to decide which flyer to show
-      const type = searchParams.get('event') as 'ausangate' | 'costaRica' | 'retreat2Day' | 'retreat1Day' | 'juchuy' | 'ausangate3Day' || 'ausangate';
+      const type = searchParams.get('event') as 'ausangate' | 'costaRica' | 'costaRicaPilgrimage' | 'retreat2Day' | 'retreat1Day' | 'juchuy' | 'ausangate3Day' || 'ausangate';
       
       let flyerData;
       if (type === 'costaRica') flyerData = t.costaRica;
+      else if (type === 'costaRicaPilgrimage') flyerData = t.costaRicaPilgrimage;
       else if (type === 'retreat2Day') flyerData = t.retreat2Day;
       else if (type === 'retreat1Day') flyerData = t.retreat1Day;
       else if (type === 'juchuy') flyerData = t.juchuy;
@@ -117,7 +118,10 @@ const App: React.FC = () => {
                 <Ausangate3Day t={t.ausangate3Day} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
             } />
             <Route path="/costa-rica" element={
-                <CostaRica t={t.costaRica} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
+                <CostaRica t={t.costaRica} preparation={t.preparation} ui={t.ui} lang={currentLanguage} flyerEvent="costaRica" />
+            } />
+            <Route path="/costa-rica-pilgrimage" element={
+                <CostaRica t={t.costaRicaPilgrimage as any} preparation={t.preparation} ui={t.ui} lang={currentLanguage} flyerEvent="costaRicaPilgrimage" />
             } />
             <Route path="/juchuy-qosqo" element={
                 <JuchuyQosqo t={t.juchuy} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />

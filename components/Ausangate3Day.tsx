@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationData, Language } from '../types';
@@ -67,15 +66,17 @@ export const Ausangate3Day: React.FC<Ausangate3DayProps> = ({ t, preparation, ui
         </div>
       </div>
 
-      {/* Bonus Section: Free Photography */}
-      <div className="bg-pacha-leaf/20 border-y border-pacha-leaf/30 py-8">
-         <div className="max-w-4xl mx-auto px-4 flex items-center justify-center gap-4 text-center">
-            <Camera className="w-8 h-8 text-pacha-gold shrink-0" />
-            <span className="text-white text-lg font-serif italic tracking-wide">
-                {t.details.bonus}
-            </span>
-         </div>
-      </div>
+      {/* Bonus Section: Free Photography (Only show if text exists) */}
+      {t.details.bonus && (
+        <div className="bg-pacha-leaf/20 border-y border-pacha-leaf/30 py-8">
+            <div className="max-w-4xl mx-auto px-4 flex items-center justify-center gap-4 text-center">
+                <Camera className="w-8 h-8 text-pacha-gold shrink-0" />
+                <span className="text-white text-lg font-serif italic tracking-wide">
+                    {t.details.bonus}
+                </span>
+            </div>
+        </div>
+      )}
 
       {/* Itinerary Section */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative">

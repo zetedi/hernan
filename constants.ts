@@ -58,14 +58,6 @@ export const CREDITS: Record<string, string> = {
     chirripo7: `Photo by <a href="https://unsplash.com/@ehmoy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Moisés Vazquez</a> on <a href="https://unsplash.com/photos/green-trees-near-river-under-cloudy-sky-during-daytime-pMYmKvVsCss?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" class="underline hover:text-pacha-gold transition-colors">Unsplash</a>`
 };
 
-const costaRicaItinerary = [
-    { day: "Feb 21st", title: "Opening Ceremony", description: "Opening Ceremony by the Pacific Ocean." },
-    { day: "Feb 24th", title: "Primary Rainforests", description: "Connection with the Primary Rainforests of the Diamante Valley." },
-    { day: "Feb 25th", title: "Opening of the Medicinal Journey", description: "Beginning our deep immersion in the sacred mountains of El Chirripó." },
-    { day: "Mar 3rd", title: "Lunar Eclipse Celebration", description: "Celebrating Lunar Eclipse at Sondero Gigante with the Indigenous tribes of Costa Rica." },
-    { day: "Mar 4th", title: "Closing Circle", description: "Final integration and departure from the sanctuary." }
-];
-
 const enTranslations: TranslationData = {
     ui: {
         viewDetails: "View Details",
@@ -136,7 +128,7 @@ const enTranslations: TranslationData = {
         },
         { 
             title: "Ausangate: Closer to the Sky (3 Days)", 
-            description: "A powerful journey with the Apu. Temazcal, Rapé, and Wachuma ceremony in Pacchanta. Includes free professional photography.", 
+            description: "A powerful journey with the Apu. Temazcal, Rapé, and Wachuma ceremony in Pacchanta.", 
             price: "700 Soles",
             details: { duration: "3 Days", location: "Ausangate", groupSize: "Group" }
         },
@@ -145,6 +137,18 @@ const enTranslations: TranslationData = {
             description: "The complete immersion. 3 Wachuma ceremonies, Temazcal rituals, hiking to the lagoons, and deep healing work.", 
             price: "Inquire",
             details: { duration: "7 Days", location: "Ausangate", groupSize: "Group" }
+        },
+        { 
+            title: "Costa Rica: 3-Day Retreat", 
+            description: "Opening Ceremony and connection with the Primary Rainforests of the Diamante Valley.", 
+            price: "$249 / Day",
+            details: { duration: "3 Days", location: "Diamante Valley", groupSize: "Intimate Group" }
+        },
+        { 
+            title: "Costa Rica: Sacred Pilgrimage", 
+            description: "Deep immersion in El Chirripó with tribal visits, waterfall walks, and lunar eclipse celebration.", 
+            price: "$249 / Day",
+            details: { duration: "8 Days", location: "El Chirripó", groupSize: "Small Group" }
         },
         { 
             title: "Juchuy Qosqo Immersion", 
@@ -159,19 +163,17 @@ const enTranslations: TranslationData = {
             details: { duration: "1 Day", location: "Sacred Valley", groupSize: "Min 2" }
         },
         { 
-            title: "Costa Rica Pilgrimage", 
-            description: "A sacred journey connecting the Andes and the Ocean in a secret location in Costa Rica.", 
-            price: "Inquire",
-            details: { duration: "12 Days", location: "Costa Rica", groupSize: "Group" }
-        },
-        { 
             title: "Private Healing", 
             description: "One-on-one sessions tailored to your specific spiritual and emotional needs. Deep blockage removal.", 
             price: "Inquire",
             details: { duration: "Varies", location: "Wayna Wasi", groupSize: "1 Persona" }
         }
       ],
-      ausangateCta: { title: "Ausangate: A Journey Closer to the Sky", description: "Join a special Wachuma Journey to Ausangate. Includes free professional photography.", button: "View 3-Day Journey" }
+      ausangateCta: { 
+          title: "Costa Rica: Sacred Pilgrimage", 
+          description: "Deep immersion in El Chirripó with tribal visits, waterfall walks, and lunar eclipse celebration.", 
+          button: "View Pilgrimage" 
+      }
     },
     ausangate: {
       title: "Ausangate Sacred Journey (7 Days)",
@@ -195,7 +197,7 @@ const enTranslations: TranslationData = {
       details: {
           dates: "Mar 31 - Apr 2, 2026",
           price: "700 Soles",
-          bonus: "Includes free professional photography session"
+          bonus: "" // Text removed
       },
       cta: "Reserve Spot",
       itinerary: [
@@ -205,33 +207,56 @@ const enTranslations: TranslationData = {
       ]
     },
     costaRica: {
-        title: "Sacred Pilgrimage to Costa Rica",
-        subtitle: "Mountains & Ocean United",
-        intro: "Join Hernan Ccolque, a Quechua native Wachumero from the pre-Incan K'ana lineage and guardian of ancestral traditions, for a historic pilgrimage to Costa Rica. This unique journey connects the high-altitude wisdom of the Peruvian Andes with the vibrant life of the tropical coast through sacred, heart-centered Wachuma ceremonies, visits to medicinal botanical sanctuaries, and deep communion with indigenous tribes. Experience profound healing and spiritual awakening as we bridge the mountains and the ocean. Possible to join for a single day.",
+        title: "Costa Rica: 3-Day Retreat",
+        subtitle: "Mountains & Ocean Opening",
+        intro: "Join Hernan Ccolque, a Quechua native Wachumero from the pre-Incan K'ana lineage, for the opening of our Costa Rica journey. This 3-day immersion focuses on establishing our connection with the spirit of Wachuma amidst the vibrant energy of the Pacific coast and the primary rainforests. Possible to join for a single day.",
         description: [
-            "Experience a historic gathering as Hernan brings the sacred Wachuma medicine to the vibrant lands of Costa Rica for the first time.",
-            "Guided by a profound vision, this retreat is a spiritual pilgrimage connecting the wisdom of the high Andes with the purifying energy of the ocean.",
-            "In addition to Wachuma ceremonies, we will share the medicine of Rapé, perform floral cleansing, and journey through guided meditations.",
-            "We gather in a secluded sanctuary to ensure deep personal attention and a cohesive energetic container."
+            "Experience the first step of our historic Costa Rica gathering as we open the sacred container by the Pacific Ocean.",
+            "Guided by Hernan's ancestral wisdom, we focus on deep heart-opening ceremonies and immersion in the lush botanical sanctuaries of the Diamante Valley.",
+            "This retreat serves as the foundation for the pilgrimage, offering purification and grounding in a secluded tropical sanctuary."
         ],
-        details: { location: "Secret Location, Costa Rica", capacity: "Intimate Group", dates: "Feb 21 - Mar 4, 2026" },
+        details: { location: "Diamante Valley, Costa Rica", capacity: "Intimate Group", dates: "Feb 21 - Feb 23, 2026" },
         cta: "Request Invitation",
-        oneDayPrice: "$249 USD (1 Day Pass)",
-        visionTitle: "A Vision from the Medicine",
-        visionText: "The medicine spoke of connecting the wisdom held in the high Andes with the purifying, fluid energy of the ocean. A pilgrimage of spirit and body.",
-        themeValue: "Ocean & Mountain",
-        itinerary: costaRicaItinerary,
+        oneDayPrice: "$249 / Day",
+        visionTitle: "The Ocean's Call",
+        visionText: "The medicine spoke of connecting the Andean wisdom with the purifying, fluid energy of the ocean. This retreat is the first step of that spiritual bridge.",
+        themeValue: "Ocean & Jungle",
+        itinerary: [
+            { day: "Feb 21st", title: "Opening Ceremony", description: "Initial gathering and sacred opening ceremony by the Pacific Ocean." },
+            { day: "Feb 22nd", title: "Rainforest Connection", description: "Full day Wachuma immersion within the botanical beauty of the Diamante Valley." },
+            { day: "Feb 23rd", title: "Integration & Flow", description: "Flower cleansing rituals and integration before concluding the initial retreat." }
+        ],
         packages: {
             title: "Participation Includes",
             items: [
-                "11 Days / 10 Nights in Sacred Sanctuary",
-                "Wachuma Ceremonies with Indigenous Tribes",
-                "Full Lunar Eclipse Ritual",
-                "Rapé & Floral Cleansing Rituals",
-                "All Organic Meals Provided",
+                "3 Days / 2 Nights in Sacred Sanctuary",
+                "Heart-Centered Wachuma Ceremonies",
+                "Organic Tropical Meals",
+                "Floral Cleansing & Rapé Medicine",
                 "Transport from San Isidro"
             ]
         }
+    },
+    costaRicaPilgrimage: {
+        title: "Costa Rica: Sacred Pilgrimage",
+        subtitle: "The Chirripó Journey",
+        intro: "Don Hernan is a Quechua native Wachumero from the pre-Incan K’ana lineage and guardian of ancestral traditions. This journey connects the high-altitude wisdom of the Peruvian Andes with our beloved Chirripó Mountain in sacred heart-centred Wachuma ceremonies. Experience profound healing and spiritual awakening with the ancient wisdom of the lands. Private medicine walks available for small groups every day with two very special key dates to join.",
+        description: [
+            "Visits to the sacred sites with representatives from the local Cabécar / Bribri and Talamanca indigenous tribes linking the wisdom of the tribes with prayers and honouring the ancient ancestors of the land.",
+            "Private medicine walks available for small groups every day with two very special key dates to join.",
+            "We gather in a secluded sanctuary in El Chirripó to ensure deep personal attention and a cohesive energetic container."
+        ],
+        details: { location: "El Chirripó, Costa Rica", capacity: "Small Group", dates: "Feb 25 - Mar 4, 2026" },
+        cta: "Request Invitation",
+        visionTitle: "Mountain Wisdom",
+        visionText: "The high-altitude spirits of the Andes meet the sacred Chirripó. A pilgrimage of spirit, honouring the indigenous guardians of the land.",
+        themeValue: "Ancestors & Mountains",
+        itinerary: [
+            { day: "Feb 25th", title: "Chirripó Opening", description: "Beginning our deep immersion in the sacred mountains of El Chirripó." },
+            { day: "Mar 1st", title: "Sacred Waterfall Walk", description: "Sacred Walk to waterfall at a private nature sanctuary bordering Costa Rica’s largest national reserve. San Gerardo de Rivas." },
+            { day: "Mar 3rd", title: "Lunar Eclipse Celebration", description: "Lunar Eclipse Celebration and Sacred Walk to vista point at a private protected land of spiritual significance to the Cabécar people guided by Cabécar/ Bribri guardian Tsuru Cacoa. Sendero Gigante, San Jose de Rivas." },
+            { day: "Mar 4th", title: "Closing Circle", description: "Final integration and departure from the sanctuary." }
+        ]
     },
     retreat2Day: {
         title: "2 Day Retreat",
@@ -481,7 +506,7 @@ const esTranslations: TranslationData = {
         },
         { 
             title: "Ausangate: Más Cerca del Cielo (3 Días)", 
-            description: "Una poderosa jornada con el Apu. Temazcal, Rapé y ceremonia de Wachuma en Pacchanta. Incluye fotografía profesional gratuita.", 
+            description: "Una poderosa jornada con el Apu. Temazcal, Rapé y ceremonia de Wachuma en Pacchanta.", 
             price: "700 Soles",
             details: { duration: "3 Días", location: "Ausangate", groupSize: "Grupo" }
         },
@@ -490,6 +515,18 @@ const esTranslations: TranslationData = {
             description: "La inmersión completa. 3 ceremonias de Wachuma, rituales de Temazcal, caminata a las lagunas y trabajo de sanación profunda.", 
             price: "Consultar",
             details: { duration: "7 Días", location: "Ausangate", groupSize: "Grupo" }
+        },
+        { 
+            title: "Costa Rica: Retiro de 3 Días", 
+            description: "Ceremonia de Apertura y conexión con las Selvas Primarias del Valle del Diamante.", 
+            price: "$249 / Día",
+            details: { duration: "3 Días", location: "Valle del Diamante", groupSize: "Grupo Íntimo" }
+        },
+        { 
+            title: "Costa Rica: Peregrinaje Sagrado", 
+            description: "Inmersión profunda en El Chirripó con visitas tribales, caminatas a cascadas y celebración del eclipse lunar.", 
+            price: "$249 / Día",
+            details: { duration: "8 Días", location: "El Chirripó", groupSize: "Grupo Pequeño" }
         },
         { 
             title: "Inmersión Juchuy Qosqo", 
@@ -504,19 +541,17 @@ const esTranslations: TranslationData = {
             details: { duration: "1 Día", location: "Valle Sagrado", groupSize: "Mín 2" }
         },
         { 
-            title: "Peregrinaje a Costa Rica", 
-            description: "Un viaje sagrado conectando los Andes y el Océano en una ubicación secreta en Costa Rica.", 
-            price: "Consultar",
-            details: { duration: "12 Días", location: "Costa Rica", groupSize: "Grupo" }
-        },
-        { 
             title: "Sanación Privada", 
             description: "Sesiones individuales adaptadas a tus necesidades espirituales y emocionales específicas. Eliminación de bloqueos profundos.", 
             price: "Consultar",
             details: { duration: "Varía", location: "Wayna Wasi", groupSize: "1 Persona" }
         }
       ],
-      ausangateCta: { title: "Ausangate: Un Viaje Más Cerca del Cielo", description: "Únete a un viaje especial de Wachuma al Ausangate. Incluye fotografía profesional gratuita.", button: "Ver Viaje de 3 Días" }
+      ausangateCta: { 
+          title: "Costa Rica: Peregrinaje Sagrado", 
+          description: "Inmersión profunda en El Chirripó con visitas tribales, caminatas a cascadas y celebración del eclipse lunar.", 
+          button: "Ver Peregrinaje" 
+      }
     },
     ausangate: {
         title: "Viaje Sagrado al Ausangate",
@@ -540,7 +575,7 @@ const esTranslations: TranslationData = {
         details: {
             dates: "31 Mar - 2 Abr, 2026",
             price: "700 Soles",
-            bonus: "Incluye sesión de fotografía profesional gratuita"
+            bonus: "" // Text removed
         },
         cta: "Reservar Lugar",
         itinerary: [
@@ -550,39 +585,56 @@ const esTranslations: TranslationData = {
         ]
     },
     costaRica: {
-          title: "Peregrinaje Sagrado a Costa Rica",
-          subtitle: "Montañas y Océano Unidos",
-          intro: "Únete a Hernan Ccolque, Wachumero nativo Quechua del linaje K'ana y guardián de las tradiciones ancestrales, para un peregrinaje histórico a Costa Rica. Este viaje único conecta la sabiduría de gran altura de los Andes Peruanos con la vida vibrante de la costa tropical a través de ceremonias sagradas de Wachuma centradas en el corazón, visitas a santuarios botánicos medicinales y una profunda comunión con tribus indígenas. Experimenta una sanación profunda y un despertar espiritual mientras unimos las montañas y el océano. Es posible unirse solo por un día.",
+          title: "Costa Rica: Retiro de 3 Días",
+          subtitle: "Apertura de Montañas y Océano",
+          intro: "Únete a Hernan Ccolque, Wachumero nativo Quechua del linaje K'ana, para la apertura de nuestro viaje a Costa Rica. Esta inmersión de 3 días se centra en establecer nuestra conexión con el espíritu de Wachuma en medio de la energía vibrante de la costa del Pacífico y las selvas primarias. Es posible unirse solo por un día.",
           description: [
-            "Experimenta un encuentro histórico mientras Hernan trae la medicina sagrada de Wachuma a las tierras vibrantes de Costa Rica por primera vez.",
-            "Guiados por una visión profunda, este retiro es un peregrinaje espiritual que conecta la sabiduría de los altos Andes con la energía purificadora del océano.",
-            "Además de las ceremonias de Wachuma, compartiremos la medicina de Rapé, realizaremos limpiezas florales y viajaremos a través de meditaciones guiadas.",
-            "Nos reunimos en un santuario apartado para garantizar una atención personal profunda y un contenedor energético cohesivo."
+            "Experimenta el primer paso de nuestra histórica reunión en Costa Rica mientras abrimos el contenedor sagrado junto al Océano Pacífico.",
+            "Guiados por la sabiduría ancestral de Hernan, nos centramos en profundas ceremonias de apertura del corazón e inmersión en los exuberantes santuarios botánicos del Valle del Diamante.",
+            "Este retiro sirve como base para el peregrinaje, ofreciendo purificación y arraigo en un santuario tropical apartado."
           ],
-          details: { location: "Ubicación Secreta, Costa Rica", capacity: "Grupo Íntimo", dates: "21 Feb - 4 Mar, 2026" },
+          details: { location: "Valle del Diamante, Costa Rica", capacity: "Grupo Íntimo", dates: "21 Feb - 23 Feb, 2026" },
           cta: "Solicitar Invitación",
-          oneDayPrice: "$249 USD (Pase de 1 Día)",
-          visionTitle: "Una Visión de la Medicina",
-          visionText: "La medicina habló de conectar la sabiduría contenida en los altos Andes con la energía fluida y purificadora del océano. Un peregrinaje de espíritu y cuerpo.",
-          themeValue: "Océano y Montaña",
+          oneDayPrice: "$249 USD / Día",
+          visionTitle: "El Llamado del Océano",
+          visionText: "La medicina habló de conectar la sabiduría andina con la energía fluida y purificadora del océano. Este retiro es el primer paso de ese puente espiritual.",
+          themeValue: "Océano y Selva",
           itinerary: [
-            { day: "21 de Feb", title: "Ceremonia de Apertura", description: "Ceremonia de Apertura junto al Océano Pacífico." },
-            { day: "24 de Feb", title: "Selvas Primarias", description: "Conexión con las Selvas Primarias del Valle del Diamante." },
-            { day: "25 de Feb", title: "Apertura del Viaje Medicinal", description: "Comenzando nuestra inmersión profunda en las montañas sagradas de El Chirripó." },
-            { day: "3 de Mar", title: "Celebración del Eclipse Lunar", description: "Celebrando el Eclipse Lunar en Sondero Gigante con las tribus indígenas de Costa Rica." },
-            { day: "4 de Mar", title: "Círculo de Cierre", description: "Integración final y partida del santuario." }
+            { day: "21 de Feb", title: "Ceremonia de Apertura", description: "Reunión inicial y ceremonia sagrada de apertura junto al Océano Pacífico." },
+            { day: "22 de Feb", title: "Conexión con la Selva", description: "Inmersión de día completo con Wachuma dentro de la belleza botánica del Valle del Diamante." },
+            { day: "23 de Feb", title: "Integración y Flujo", description: "Rituales de limpieza floral e integración antes de concluir el retiro inicial." }
           ],
           packages: {
             title: "La Participación Incluye",
             items: [
-                "11 Días / 10 Noches en Santuario Sagrado",
-                "Ceremonias de Wachuma con Tribus Indígenas",
-                "Ritual de Eclipse Lunar Completo",
-                "Rituales de Rapé y Limpieza Floral",
-                "Todas las Comidas Orgánicas Incluidas",
+                "3 Días / 2 Noches en Santuario Sagrado",
+                "Ceremonias de Wachuma centradas en el Corazón",
+                "Comidas Tropicales Orgánicas",
+                "Limpieza Floral y Medicina de Rapé",
                 "Transporte desde San Isidro"
             ]
         }
+    },
+    costaRicaPilgrimage: {
+        title: "Costa Rica: Peregrinaje Sagrado",
+        subtitle: "El Viaje al Chirripó",
+        intro: "Don Hernan es un Wachumero nativo Quechua del linaje pre-Inca K’ana y guardián de tradiciones ancestrales. Este viaje conecta la sabiduría de altura de los Andes Peruanos con nuestra amada Montaña Chirripó en ceremonias sagradas de Wachuma centradas en el corazón. Experimenta una sanación profunda y un despertar espiritual con la sabiduría antigua de las tierras. Caminatas medicinales privadas disponibles para grupos pequeños cada día con dos fechas clave muy especiales para unirse.",
+        description: [
+            "Visitas a sitios sagrados con representantes de las tribus indígenas locales Cabécar / Bribri y Talamanca, uniendo la sabiduría de las tribus con oraciones y honrando a los antiguos ancestros de la tierra.",
+            "Caminatas medicinales privadas disponibles para grupos pequeños cada día con dos fechas clave muy especiales para unirse.",
+            "Nos reunimos en un santuario apartado en El Chirripó para garantizar una atención personal profunda y un contenedor energético cohesivo."
+        ],
+        details: { location: "El Chirripó, Costa Rica", capacity: "Grupo Pequeño", dates: "25 Feb - 4 Mar, 2026" },
+        cta: "Solicitar Invitación",
+        visionTitle: "Sabiduría de la Montaña",
+        visionText: "Los espíritus de altura de los Andes se encuentran con el sagrado Chirripó. Un peregrinaje del espíritu, honrando a los guardianes indígenas de la tierra.",
+        themeValue: "Ancestros y Montañas",
+        itinerary: [
+            { day: "25 de Feb", title: "Apertura del Chirripó", description: "Comenzando nuestra inmersión profunda en las montañas sagradas de El Chirripó." },
+            { day: "1 de Mar", title: "Caminata Sagrada a la Cascada", description: "Caminata Sagrada a la cascada en un santuario natural privado que bordea la reserva nacional más grande de Costa Rica. San Gerardo de Rivas." },
+            { day: "3 de Mar", title: "Celebración del Eclipse Lunar", description: "Celebración del Eclipse Lunar y Caminata Sagrada al mirador en una tierra privada protegida de importancia espiritual para el pueblo Cabécar guiada por el guardián Cabécar/ Bribri Tsuru Cacoa. Sendero Gigante, San José de Rivas." },
+            { day: "4 de Mar", title: "Círculo de Cierre", description: "Integración final y partida del santuario." }
+        ]
     },
     retreat2Day: {
           title: "Retiro de 2 Días",
@@ -709,7 +761,7 @@ const esTranslations: TranslationData = {
               {
                 name: "Stephanie K.",
                 location: "Google Review",
-                text: "Me siento muy afortunada de haber participado en una ceremonia de Wachuma de día completo con Don Hernan. Viajamos a las montañas, a través de un pueblo local, para comulgar con la naturaleza, el espíritu y la energía de la reciprocidad. Su guía es sincera y su medicina es la mejor Wachuma que he bebido. Regresamos a su casa para terminar la ceremonia con una deliciosa sopa andina casera y un fuego en el jardín bajo la luna llena y las estrellas. Recomiendo encarecidamente visitar Wayna Wasi y trabajar con Don Hernan.",
+                text: "Me siento muy afortunada de haber participado en una ceremonia de Wachuma de día completo con Don Hernan. Viajamos a las montañas, a través de un pueblo local, para comulgar con la naturaleza, el espíritu y la energía de la reciprocidad. Su guía es sincera y su medicina es la mejor Wachuma I have drunk. Regresamos a su casa para terminar la ceremonia con una deliciosa sopa andina casera y un fuego en el jardín bajo la luna llena y las estrellas. Recomiendo encarecidamente visitar Wayna Wasi y trabajar con Don Hernan.",
                 image: IMAGES.kittel
             }
           ]
@@ -824,6 +876,18 @@ const quTranslations: TranslationData = {
               details: { duration: "7 P'unchay", location: "Ausangate", groupSize: "Huñu" }
           },
           { 
+              title: "Costa Rica: 3-P'unchay T'aqakuy", 
+              description: "Qallariy Raymi, Diamante Qhichwa sach'akunawan.", 
+              price: "$249 / P'unchay",
+              details: { duration: "3 P'unchay", location: "Diamante Qhichwa", groupSize: "Huñu" }
+          },
+          { 
+              title: "Costa Rica: Willka Puriy", 
+              description: "Chirripó urqupi ukhu puriy, phaqchakunawan, killa wañuywan.", 
+              price: "$249 / P'unchay",
+              details: { duration: "8 P'unchay", location: "Chirripó", groupSize: "Pisi Huñu" }
+          },
+          { 
               title: "Juchuy Qosqo Puriy", 
               description: "2 P'unchay 'Huch'uy Qosqo'pi. Aylluwan tiyay, kuska wayk'uy.", 
               price: "$200+",
@@ -836,54 +900,65 @@ const quTranslations: TranslationData = {
               details: { duration: "1 P'unchay", location: "Willka Qhichwa", groupSize: "Pisi 2" }
           },
           { 
-              title: "Costa Rica Puriy", 
-              description: "Willka puriy Andeskunata Mama Qochawan tinkuchiy.", 
-              price: "Tapukuy",
-              details: { duration: "12 P'unchay", location: "Costa Rica", groupSize: "Huñu" }
-          },
-          { 
               title: "Sapalla Hampikuy", 
               description: "Sapaq hampi qampaqlla. Nanayta qarqoy.", 
               price: "Tapukuy",
               details: { duration: "Sapaq", location: "Wayna Wasi", groupSize: "1 Runa" }
           }
         ],
-        ausangateCta: { title: "Ausangate: Huk Puriy Hanaq Pachaman", description: "Wachuma puriy Ausangatewan. Foto toqyayta qukyku.", button: "3-P'unchay Puriyta Qhaway" }
+        ausangateCta: { title: "Costa Rica: Willka Puriy", description: "Chirripó urqupi ukhu puriy, phaqchakunawan, killa wañuywan.", button: "Puriyta Qhaway" }
       },
       costaRica: {
-          title: "Costa Rica Willka Puriy",
-          subtitle: "Urquwan Mama Qochawan Tinkun",
-          intro: "Hernan Ccolquewan, K'ana ayllumanta Wachumero, Costa Ricaman hatun puriy. Kay sapaq puriyqa Perou Andeskunaq yachayninta tinkuchin mama qochawan, sunqumanta pacha Wachuma hampiwan, hampi sach'akunawan, ñawpaq runakunawan ima. Huk p'unchayllapas hamuyta atinki.",
+          title: "Costa Rica: 3-P'unchay T'aqakuy",
+          subtitle: "Urquwan Mama Qochawan Kichay",
+          intro: "Hernan Ccolquewan, K'ana ayllumanta Wachumero, Costa Rica puriyninchikta kicharin. Kay 3 p'unchayqa Wachuma nunawan tinkunapaq, mama qochawan, sach'a-sach'awan ima.",
           description: [
-            "Kayqa huk hatun tinkuymi, Hernan Wachuma hampita Costa Ricaman apamun.",
-            "Huk hatun rikhuypa pusasqan, kay puriyqa Andespa yachayninta mama qochawan tinkuchin.",
-            "Wachumawan kuska, Rapé hampita, t'ika ch'uyayta ima ruwasun, yuyaymanaypi purispa.",
-            "Huk ch'in tiyaypi huñunakusun, allin qhawayta chaskianykipaq."
+            "Kayqa ñawpaq puriy, Costa Rica tinkuyninchikta kichanapaq, Pacifico mama qochaq patanpi.",
+            "Hernanpa yachayninwan, sunquta kicharisun, Diamante Qhichwaq t'ikankunawan.",
+            "Kay t'aqakuyqa tiksim, ch'uyay, takyachiy ima."
           ],
-          details: { location: "Pakasqa Tiyay, Costa Rica", capacity: "Huñu", dates: "Feb 21 - Mar 4, 2026" },
+          details: { location: "Diamante Qhichwa, Costa Rica", capacity: "Huñu", dates: "Feb 21 - Feb 23, 2026" },
           cta: "Mink'ayta Mañakuy",
-          oneDayPrice: "$249 USD (1 P'unchay)",
-          visionTitle: "Hampi Rikhuy",
-          visionText: "Hampiqa nirqa: Andespa yachaynin mama qochawan tinkunan.",
-          themeValue: "Mama Qochawan Urquwan",
+          oneDayPrice: "$249 / P'unchay",
+          visionTitle: "Mama Qochaq Waqyakuynin",
+          visionText: "Hampiqa nirqa: Andespa yachaynin mama qochawan tinkunan. Kay t'aqakuyqa chay p'uñtem.",
+          themeValue: "Mama Qochawan Sach'a",
           itinerary: [
-            { day: "21 Feb", title: "Qallariy Raymi", description: "Pacifico Mama Qochawan tinkuspa raymi." },
-            { day: "24 Feb", title: "Sach'a-sach'a", description: "Diamante Qhichwapi hatun sach'akunawan tinkuy." },
-            { day: "25 Feb", title: "Hampi Puriy Qallariy", description: "El Chirripó willka urqukunapi ukhu puriyta qallarichkanchik." },
-            { day: "3 Mar", title: "Killa Wañuy Raymi", description: "Sondero Gigantepi killa wañuy raymi Costa Rica ayllukunawan." },
-            { day: "4 Mar", title: "Tukuy Raymi", description: "Tukuy yachasqata huñuspa, santuariomanta ripuy." }
+            { day: "21 Feb", title: "Qallariy Raymi", description: "Huñunakuy, Pacifico Mama Qochawan tinkuspa raymi." },
+            { day: "22 Feb", title: "Sach'awan Tinkuy", description: "Tukuy p'unchay Wachumawan, Diamante Qhichwapi." },
+            { day: "23 Feb", title: "Huñuy & Puriy", description: "T'ika ch'uyay, ñawpaq t'aqakuyta tukunapaq." }
           ],
           packages: {
             title: "Kaykunam Kanqa",
             items: [
-                "11 P'unchay / 10 Tuta Willka Tiyaypi",
-                "Wachuma Raymi Ñawpaq Runakunawan",
-                "Killa Wañuy Raymi",
-                "Rapé & T'ika Ch'uyay",
-                "Tukuy Mikhuykuna",
+                "3 P'unchay / 2 Tuta Willka Tiyaypi",
+                "Sunqumanta Pacha Wachuma Raymikuna",
+                "Misk'i Mikhuykuna",
+                "T'ika Ch'uyay & Rapé Hampi",
                 "San Isidromanta Apaykachana"
             ]
         }
+      },
+      costaRicaPilgrimage: {
+        title: "Costa Rica: Willka Puriy",
+        subtitle: "Chirripó Ñan",
+        intro: "Don Hernanqa Wachumero, ñawpaq K'ana yawarniyuq. Kay puriyqa Perou Andeskunata Chirripó Urquwan tinkuchin, sunqumanta pacha Wachuma raymikunawan. Hatun hampiyta, yuyay kicharichiyta tariy.",
+        description: [
+            "Willka tiyaykunaman puriy, Cabécar / Bribri ayllukunawan tinkuspa, yachayninkuta huñuspa, ñawpaq runakunata yupaychaspa.",
+            "Sapa p'unchay hampi puriykuna kanqa, iskay hatun p'unchaykunawan.",
+            "Chirripó ukhupi huñunakusun, allin qhawayta chaskianykipaq."
+        ],
+        details: { location: "Chirripó, Costa Rica", capacity: "Pisi Huñu", dates: "Feb 25 - Mar 4, 2026" },
+        cta: "Mink'ayta Mañakuy",
+        visionTitle: "Urquq Yachaynin",
+        visionText: "Andespa nunankuna Chirripó Urquwan tinkun. Ñawpaq ayllukunata yupaychana puriy.",
+        themeValue: "Ñawpaq Runakuna & Urqukuna",
+        itinerary: [
+            { day: "25 Feb", title: "Chirripó Qallariy", description: "El Chirripó willka urqukunapi ukhu puriyta qallarichkanchik." },
+            { day: "1 Mar", title: "Phaqchaman Willka Puriy", description: "Huk pakasqa phaqchaman puriy, Costa Ricaq hatun tiyayninta qhawaspa. San Gerardo de Rivas." },
+            { day: "3 Mar", title: "Killa Wañuy Raymi", description: "Killa Wañuy Raymi, Cabécar runakunawan tinkuspa. Tsuru Cacoa pusaqwan. Sendero Gigante, San José de Rivas." },
+            { day: "4 Mar", title: "Tukuy Raymi", description: "Tukuy yachasqata huñuspa, santuariomanta ripuy." }
+        ]
       },
       flyer: {
         ...enTranslations.flyer,
@@ -928,7 +1003,7 @@ const quTranslations: TranslationData = {
         details: {
             dates: "Mar 31 - Abr 2, 2026",
             price: "700 Soles",
-            bonus: "Foto toqyayta qukyku"
+            bonus: "" // Text removed
         },
         cta: "Tiyayniykita Waqaychay",
         itinerary: [
