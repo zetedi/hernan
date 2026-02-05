@@ -18,6 +18,7 @@ export const IMAGES = {
   cr2: "/cr2.jpg",
   cr3: "/cr3.jpg",
   crbg: "/crbg.jpg",
+  crbg2: "/crbg2.jpg",
   diamante1: "/diamante1.jpg",
   diamante2: "/diamante2.jpg",
   chirripo1: "/chirripo1.jpg",
@@ -269,7 +270,7 @@ const enTranslations: TranslationData = {
         conclusion: "Participants will leave with a renewed sense of self and purpose, empowered by the Wachuma experience and the timeless wisdom of Pachamama."
     },
     juchuy: {
-        title: "Juchuy Qosqo Ancestral Immersion",
+        title: "Juchuy Qosqo Immersion",
         subtitle: "Community, Cuisine & Ruins",
         intro: "A special 2-day journey to Juchuy Qosqo ('Little Cusco'), combining a hike to ancient ruins with a deep cultural immersion staying with a local family.",
         days: [
@@ -742,7 +743,7 @@ const esTranslations: TranslationData = {
         questions: [
             { question: "¿Qué es una ceremonia de San Pedro?", answer: "San Pedro (Huachuma) es una medicina sagrada utilizada para sanar y expandir la conciencia. Te guiamos de forma segura a través de la experiencia." },
             { question: "¿Es adecuado para principiantes?", answer: "Sí, es adecuado para todos. Brindamos orientación y apoyo durante todo el viaje." },
-            { question: "¿Qué es Kinsacocha?", answer: "Kinsacocha es una hermosa laguna en las alturas de Pisac. Tener una ceremonia allí es una forma profunda de conectar con los Apus (montañas)." },
+            { question: "¿Qué es Kinsacocha?", answer: "Kinsacocha es una hermosa laguna en las alturas de Pisac. Tener una ceremonia allí es una forma profunda de conectar con los Apus (mountains)." },
             { question: "¿Qué debo llevar?", answer: "Ropa abrigada, zapatos cómodos para caminar, un corazón abierto y necesidades personales. Proporcionaremos una lista de empaque detallada." },
             { question: "¿Qué idiomas se hablan?", answer: "Hernan habla Quechua y Español. Tenemos asistentes que hablan Inglés y Francés para ayudar con la traducción." },
             { question: "¿Es seguro?", answer: "Sí, priorizamos la seguridad. Nuestros facilitadores tienen experiencia y no te dejarán desatendido." },

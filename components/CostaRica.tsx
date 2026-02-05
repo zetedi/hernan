@@ -15,13 +15,15 @@ interface CostaRicaProps {
 }
 
 export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang, flyerEvent = 'costaRica' }) => {
+  const bgImage = flyerEvent === 'costaRicaPilgrimage' ? IMAGES.crbg2 : IMAGES.costa;
+
   return (
     <div className="bg-pacha-sand min-h-screen text-pacha-earth">
       {/* Hero Header - Parallax (Disabled on Mobile) */}
       <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
             className="absolute inset-0 bg-cover bg-center bg-scroll md:bg-fixed bg-no-repeat"
-            style={{ backgroundImage: `url(${IMAGES.costa})` }}
+            style={{ backgroundImage: `url(${bgImage})` }}
         >
           <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-t from-pacha-sand via-transparent to-transparent" />

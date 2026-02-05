@@ -30,7 +30,7 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
         <div className="relative rounded-xl overflow-hidden group shadow-2xl mb-12 border border-pacha-gold/30">
           {/* Image Background */}
           <img 
-            src={IMAGES.chirripo1} 
+            src={IMAGES.crbg2} 
             alt="Costa Rica Pilgrimage" 
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-70 transition-opacity duration-500 scale-100 group-hover:scale-105 transition-transform"
@@ -92,7 +92,7 @@ export const Services: React.FC<ServicesProps> = ({ t, ui, lang }) => {
             if (isAusangate3Day) bgImage = IMAGES.ausangate3;
             if (isAusangate7Day) bgImage = IMAGES.ausangate;
             if (isCostaRica) bgImage = IMAGES.costa;
-            if (isCostaRicaPilgrimage) bgImage = IMAGES.chirripo1;
+            if (isCostaRicaPilgrimage) bgImage = IMAGES.crbg2;
             if (isJuchuy) bgImage = IMAGES.juchuy;
             if (isOneDay) bgImage = IMAGES.flowers; 
             if (isPrivate) bgImage = IMAGES.private;

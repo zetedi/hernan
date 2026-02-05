@@ -40,7 +40,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
       locationText = locCostaRica;
       dateText = t.details?.dates || t.subtitle;
   } else if (type === 'costaRicaPilgrimage') {
-      bgImage = IMAGES.chirripo1; // Use Chirripo image for Pilgrimage
+      bgImage = IMAGES.crbg2; // Use crbg2 image for Pilgrimage
       locationText = locCostaRica;
       dateText = t.details?.dates || t.subtitle;
   } else if (type === 'retreat2Day') {
