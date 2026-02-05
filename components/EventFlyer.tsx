@@ -35,9 +35,6 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
   // Default Location
   locationText = locCusco;
 
-  // Specific Contact for Costa Rica (Zoltan only)
-  const costaRicaWhatsapp = "(Zoltan): +32 494 988 937";
-
   if (type === 'costaRica') {
       bgImage = IMAGES.crbg;
       locationText = locCostaRica;
@@ -106,6 +103,9 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
 
   const dayLabel = getDayLabel(lang);
   const lineageText = isSpanish ? "Linaje Pre-Inca K'ana" : "Pre-Incan K'ana Lineage";
+
+  // Determine email address
+  const displayEmail = type === 'costaRicaPilgrimage' ? 'darkbliss22@protonmail.com' : footer.columns.contact.email;
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-2 md:p-4 print:p-0 print:bg-white relative">
@@ -270,12 +270,28 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                         <div className="text-right space-y-1">
                             <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
                                 <Mail size={14} className="text-pacha-gold" />
-                                {footer.columns.contact.email}
+                                {displayEmail}
                             </div>
-                            <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
-                                {isCostaRicaType ? <Send size={14} className="text-pacha-gold" /> : <Phone size={14} className="text-pacha-gold" />}
-                                {isCostaRicaType ? `WhatsApp ${costaRicaWhatsapp}` : footer.columns.contact.phone}
-                            </div>
+                            
+                            {isCostaRicaType ? (
+                                <>
+                                    {type === 'costaRicaPilgrimage' && (
+                                        <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
+                                            <Send size={14} className="text-pacha-gold" />
+                                            Telegram/Signal (Zahara Ananta): +506 7020 8143
+                                        </div>
+                                    )}
+                                    <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
+                                        <Send size={14} className="text-pacha-gold" />
+                                        WhatsApp (Zoltan): +32 494 988 937
+                                    </div>
+                                </>
+                            ) : (
+                                <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
+                                    <Phone size={14} className="text-pacha-gold" />
+                                    {footer.columns.contact.phone}
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
