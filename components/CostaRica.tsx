@@ -173,7 +173,7 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang, 
                 {/* Itinerary Section */}
                 <div className="space-y-12">
                     <h3 className="text-3xl font-serif font-bold text-pacha-earth border-b-2 border-pacha-gold inline-block pb-2">
-                        Daily Journey
+                        {ui.dailyJourney || 'Daily Journey'}
                     </h3>
                     
                     <div className="relative">

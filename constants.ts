@@ -78,7 +78,8 @@ const enTranslations: TranslationData = {
         featuredExperience: "Featured Experience",
         viewFlyer: "View Event Flyer",
         duration: "Duration",
-        service: "Service"
+        service: "Service",
+        dailyJourney: "Daily Journey"
     },
     flyer: {
       highlights: "Key Dates",
@@ -456,7 +457,8 @@ const esTranslations: TranslationData = {
         featuredExperience: "Experiencia Destacada",
         viewFlyer: "Ver Folleto",
         duration: "Duración",
-        service: "Servicio"
+        service: "Servicio",
+        dailyJourney: "Jornada Diaria"
     },
     flyer: {
       highlights: "Puntos Clave",
@@ -828,7 +830,8 @@ const quTranslations: TranslationData = {
         featuredExperience: "Hatun Raymi",
         viewFlyer: "Flyer Qhaway",
         duration: "Unay",
-        service: "Hampi"
+        service: "Hampi",
+        dailyJourney: "Sapa P'unchay Puriy"
       },
       nav: { 
         home: "Qallariy", 

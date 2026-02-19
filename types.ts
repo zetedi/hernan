@@ -1,3 +1,4 @@
+
 export enum Language {
   EN = 'EN',
   ES = 'ES',
@@ -132,6 +133,7 @@ export interface UiLabels {
     viewFlyer: string;
     duration: string;
     service: string;
+    dailyJourney: string;
 }
 
 export interface FlyerLabels {
