@@ -243,7 +243,7 @@ const enTranslations: TranslationData = {
         subtitle: "The Chirripó Journey",
         intro: "Don Hernan is a Quechua native Wachumero from the pre-Incan K’ana lineage and guardian of ancestral traditions. This journey connects the high-altitude wisdom of the Peruvian Andes with our beloved Chirripó Mountain in sacred heart-centred Wachuma ceremonies. Experience profound healing and spiritual awakening with the ancient wisdom of the lands. Private medicine walks available for small groups every day with two very special key dates to join.",
         description: [
-            "Visits to the sacred sites with representatives from the local Cabécar / Bribri and Talamanca indigenous tribes linking the wisdom of the tribes with prayers and honouring the ancient ancestors of the land.",
+            "Visits to the sacred sites linking the wisdom of the land with prayers and honouring the ancient ancestors.",
             "Private medicine walks available for small groups every day with two very special key dates to join.",
             "We gather in a secluded sanctuary in El Chirripó to ensure deep personal attention and a cohesive energetic container."
         ],
@@ -255,7 +255,7 @@ const enTranslations: TranslationData = {
         itinerary: [
             { day: "Feb 25th", title: "Chirripó Opening", description: "Beginning our deep immersion in the sacred mountains of El Chirripó." },
             { day: "Mar 1st", title: "Sacred Waterfall Walk", description: "Sacred Walk to waterfall at a private nature sanctuary bordering Costa Rica’s largest national reserve. San Gerardo de Rivas." },
-            { day: "Mar 3rd", title: "Lunar Eclipse Celebration", description: "Lunar Eclipse Celebration and Sacred Walk to vista point at a private protected land of spiritual significance to the Cabécar people guided by Cabécar/ Bribri guardian Tsuru Cacoa. Sendero Gigante, San Jose de Rivas." },
+            { day: "Mar 3rd", title: "Lunar Eclipse Celebration", description: "Lunar Eclipse Celebration and Sacred Walk to vista point at a private protected land of spiritual significance guided by a local guardian. Sendero Gigante, San Jose de Rivas." },
             { day: "Mar 4th", title: "Closing Circle", description: "Final integration and departure from the sanctuary." }
         ]
     },
@@ -621,7 +621,7 @@ const esTranslations: TranslationData = {
         subtitle: "El Viaje al Chirripó",
         intro: "Don Hernan es un Wachumero nativo Quechua del linaje pre-Inca K’ana y guardián de tradiciones ancestrales. Este viaje conecta la sabiduría de altura de los Andes Peruanos con nuestra amada Montaña Chirripó en ceremonias sagradas de Wachuma centradas en el corazón. Experimenta una sanación profunda y un despertar espiritual con la sabiduría antigua de las tierras. Caminatas medicinales privadas disponibles para grupos pequeños cada día con dos fechas clave muy especiales para unirse.",
         description: [
-            "Visitas a sitios sagrados con representantes de las tribus indígenas locales Cabécar / Bribri y Talamanca, uniendo la sabiduría de las tribus con oraciones y honrando a los antiguos ancestros de la tierra.",
+            "Visitas a sitios sagrados uniendo la sabiduría de la tierra con oraciones y honrando a los antiguos ancestros.",
             "Caminatas medicinales privadas disponibles para grupos pequeños cada día con dos fechas clave muy especiales para unirse.",
             "Nos reunimos en un santuario apartado en El Chirripó para garantizar una atención personal profunda y un contenedor energético cohesivo."
         ],
@@ -633,7 +633,7 @@ const esTranslations: TranslationData = {
         itinerary: [
             { day: "25 de Feb", title: "Apertura del Chirripó", description: "Comenzando nuestra inmersión profunda en las montañas sagradas de El Chirripó." },
             { day: "1 de Mar", title: "Caminata Sagrada a la Cascada", description: "Caminata Sagrada a la cascada en un santuario natural privado que bordea la reserva nacional más grande de Costa Rica. San Gerardo de Rivas." },
-            { day: "3 de Mar", title: "Celebración del Eclipse Lunar", description: "Celebración del Eclipse Lunar y Caminata Sagrada al mirador en una tierra privada protegida de importancia espiritual para el pueblo Cabécar guiada por el guardián Cabécar/ Bribri Tsuru Cacoa. Sendero Gigante, San José de Rivas." },
+            { day: "3 de Mar", title: "Celebración del Eclipse Lunar", description: "Celebración del Eclipse Lunar y Caminata Sagrada al mirador en una tierra privada protegida de importancia espiritual guiada por un guardián local. Sendero Gigante, San José de Rivas." },
             { day: "4 de Mar", title: "Círculo de Cierre", description: "Integración final y partida del santuario." }
         ]
     },
@@ -731,7 +731,7 @@ const esTranslations: TranslationData = {
             {
                 title: "Descubre el poder curativo de Wachuma",
                 content: [
-                    "<strong>¿Qué es el cactus San Pedro?</strong><br>El cactus San Pedro, también conocido como Wachuma, es una antigua planta medicinal nativa de las tierras altas de los Andes, principalmente en Perú. Este cactus verde columnar alto, científicamente llamado <em>Echinopsis pachanoi</em>, prospera a grandes altitudes, a menudo entre 2,000 y 3,000 metros. Se reconoce fácilmente por sus costillas pronunciadas, espinas cortas y grandes flores blancas que florecen por la noche.",
+                    "<strong>¿Qué es el cactus San Pedro?</strong><br>El cactus San Pedro, también conocido como Wachuma, es una antigua planta medicinal nativa de las tierras altas de los Andes, principalmente en Perú. Este cactus verde columnar alto, científicamente llamado <em>Echinopsis pachanoi</em>, thrives at high altitudes, often between 2,000 and 3,000 metros. Se reconoce fácilmente por sus costillas pronunciadas, espinas cortas y grandes flores blancas que florecen por la noche.",
                     "<strong>Orígenes e Historia</strong><br>San Pedro has been used for thousands of years by indigenous Andean peoples, especially the Quechua and Aymara communities. Deeply rooted in shamanic tradition, it serves as a bridge between the physical and spiritual worlds. Its name, San Pedro, refers to Saint Peter, the guardian of the gates of heaven, symbolizing access to spiritual dimensions.",
                     "<strong>The Power of la Mescalina: Conectando con la Armonía Universal</strong><br>One of the key active compounds in the San Pedro cactus is mescaline, a naturally occurring psychoactive alkaloid. Mescaline is responsible for the profound visionary and introspective experiences associated with Wachuma. A diferencia de las sustancias sintéticas, la mescalina de San Pedro guía suavemente a las personas a un estado alterado de conciencia, fomentando una sensación de unidad y armonía con el mundo que les rodea.",
                     "Las ceremonias de Wachuma a menudo llevan a los participantes a sentirse profundamente conectados con la Pachamama (Madre Tierra), experimentando el pulso de la naturaleza y el ritmo de la vida misma. Esta conexión ayuda a disolver los límites entre el yo y el universo, permitiendo profundas ideas y claridad espiritual. Muchos de los que se embarcan en este viaje lo describen como una experiencia de apertura del corazón, donde el amor y la compasión fluyen naturalmente.",
@@ -945,7 +945,7 @@ const quTranslations: TranslationData = {
         subtitle: "Chirripó Ñan",
         intro: "Don Hernanqa Wachumero, ñawpaq K'ana yawarniyuq. Kay puriyqa Perou Andeskunata Chirripó Urquwan tinkuchin, sunqumanta pacha Wachuma raymikunawan. Hatun hampiyta, yuyay kicharichiyta tariy.",
         description: [
-            "Willka tiyaykunaman puriy, Cabécar / Bribri ayllukunawan tinkuspa, yachayninkuta huñuspa, ñawpaq runakunata yupaychaspa.",
+            "Willka tiyaykunaman puriy, hallp'aq yachayninta huñuspa, ñawpaq runakunata yupaychaspa.",
             "Sapa p'unchay hampi puriykuna kanqa, iskay hatun p'unchaykunawan.",
             "Chirripó ukhupi huñunakusun, allin qhawayta chaskianykipaq."
         ],
@@ -957,7 +957,7 @@ const quTranslations: TranslationData = {
         itinerary: [
             { day: "25 Feb", title: "Chirripó Qallariy", description: "El Chirripó willka urqukunapi ukhu puriyta qallarichkanchik." },
             { day: "1 Mar", title: "Phaqchaman Willka Puriy", description: "Huk pakasqa phaqchaman puriy, Costa Ricaq hatun tiyayninta qhawaspa. San Gerardo de Rivas." },
-            { day: "3 Mar", title: "Killa Wañuy Raymi", description: "Killa Wañuy Raymi, Cabécar runakunawan tinkuspa. Tsuru Cacoa pusaqwan. Sendero Gigante, San José de Rivas." },
+            { day: "3 Mar", title: "Killa Wañuy Raymi", description: "Killa Wañuy Raymi, tiyay pusaqwan. Sendero Gigante, San José de Rivas." },
             { day: "4 Mar", title: "Tukuy Raymi", description: "Tukuy yachasqata huñuspa, santuariomanta ripuy." }
         ]
       },
