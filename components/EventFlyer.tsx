@@ -273,25 +273,10 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                                 {displayEmail}
                             </div>
                             
-                            {isCostaRicaType ? (
-                                <>
-                                    {type === 'costaRicaPilgrimage' && (
-                                        <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
-                                            <Send size={14} className="text-pacha-gold" />
-                                            Telegram/Signal (Zahara Ananta): +506 7020 8143
-                                        </div>
-                                    )}
-                                    <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
-                                        <Send size={14} className="text-pacha-gold" />
-                                        WhatsApp (Zoltan): +32 494 988 937
-                                    </div>
-                                </>
-                            ) : (
-                                <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
-                                    <Phone size={14} className="text-pacha-gold" />
-                                    {footer.columns.contact.phone}
-                                </div>
-                            )}
+                            <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
+                                <Phone size={14} className="text-pacha-gold" />
+                                Maestro Hernan: {footer.columns.contact.phone}
+                            </div>
                         </div>
                     </div>
                 </div>

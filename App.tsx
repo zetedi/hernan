@@ -112,25 +112,25 @@ const App: React.FC = () => {
             } />
             <Route path="/services" element={<Services t={t.services} ui={t.ui} lang={currentLanguage} />} />
             <Route path="/ausangate" element={
-                <Ausangate t={{...t.ausangate, preparation: t.preparation} as any} ui={t.ui} lang={currentLanguage} />
+                <Ausangate t={{...t.ausangate, preparation: t.preparation} as any} ui={t.ui} lang={currentLanguage} contactPhone={t.footer.columns.contact.phone} />
             } />
             <Route path="/ausangate-3day" element={
-                <Ausangate3Day t={t.ausangate3Day} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
+                <Ausangate3Day t={t.ausangate3Day} preparation={t.preparation} ui={t.ui} lang={currentLanguage} contactPhone={t.footer.columns.contact.phone} />
             } />
             <Route path="/costa-rica" element={
-                <CostaRica t={t.costaRica} preparation={t.preparation} ui={t.ui} lang={currentLanguage} flyerEvent="costaRica" />
+                <CostaRica t={t.costaRica} preparation={t.preparation} ui={t.ui} lang={currentLanguage} flyerEvent="costaRica" contactPhone={t.footer.columns.contact.phone} />
             } />
             <Route path="/costa-rica-pilgrimage" element={
-                <CostaRica t={t.costaRicaPilgrimage as any} preparation={t.preparation} ui={t.ui} lang={currentLanguage} flyerEvent="costaRicaPilgrimage" />
+                <CostaRica t={t.costaRicaPilgrimage as any} preparation={t.preparation} ui={t.ui} lang={currentLanguage} flyerEvent="costaRicaPilgrimage" contactPhone={t.footer.columns.contact.phone} />
             } />
             <Route path="/juchuy-qosqo" element={
-                <JuchuyQosqo t={t.juchuy} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
+                <JuchuyQosqo t={t.juchuy} preparation={t.preparation} ui={t.ui} lang={currentLanguage} contactPhone={t.footer.columns.contact.phone} />
             } />
             <Route path="/retreat-2day" element={
-                <Retreat2Day t={{...t.retreat2Day, preparation: t.preparation} as any} ui={t.ui} lang={currentLanguage} />
+                <Retreat2Day t={{...t.retreat2Day, preparation: t.preparation} as any} ui={t.ui} lang={currentLanguage} contactPhone={t.footer.columns.contact.phone} />
             } />
             <Route path="/retreat-1day" element={
-                <Retreat1Day t={t.retreat1Day} preparation={t.preparation} ui={t.ui} lang={currentLanguage} />
+                <Retreat1Day t={t.retreat1Day} preparation={t.preparation} ui={t.ui} lang={currentLanguage} contactPhone={t.footer.columns.contact.phone} />
             } />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/faq" element={<FAQ t={t.faq} />} />

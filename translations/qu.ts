@@ -368,7 +368,7 @@ export const quTranslations: TranslationData = {
           contact: {
               title: "Tinkuy",
               email: "hernan.wachuma@gmail.com",
-              phone: "+51 984 316 833"
+              phone: "+51928383821"
           },
           find: {
               title: "Tariwayku",

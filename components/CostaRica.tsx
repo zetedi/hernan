@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationData, Language } from '../types';
-import { IMAGES, CREDITS } from '../constants';
+import { IMAGES, CREDITS, getWhatsAppLink } from '../constants';
 import { Palmtree, Waves, Users, Eye, FileText, Mountain, Calendar, MapPin, CheckCircle2, Banknote } from 'lucide-react';
 import { Preparation } from './Preparation';
 import { MediaCarousel, MediaItem } from './MediaCarousel';
@@ -12,9 +12,10 @@ interface CostaRicaProps {
   ui: TranslationData['ui'];
   lang?: Language;
   flyerEvent?: string;
+  contactPhone: string;
 }
 
-export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang, flyerEvent = 'costaRica' }) => {
+export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang, flyerEvent = 'costaRica', contactPhone }) => {
   const bgImage = flyerEvent === 'costaRicaPilgrimage' ? IMAGES.crbg2 : IMAGES.costa;
 
   return (
@@ -38,15 +39,23 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang, 
           <p className="text-lg md:text-xl text-white/95 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
             {t.intro}
           </p>
-          {/* Flyer Link Button */}
-          <div className="mt-8 flex justify-center">
-            <Link 
-                to={`/flyer?event=${flyerEvent}&lang=${lang || 'ES'}`} 
-                target="_blank"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-pacha-gold text-white hover:text-pacha-stone border border-white/30 hover:border-pacha-gold font-bold py-3 px-8 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg group uppercase tracking-widest text-sm"
+          {/* WhatsApp + Flyer Link */}
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <a
+              href={getWhatsAppLink(contactPhone)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-green-600/90 hover:bg-green-500 text-white border border-green-300/40 font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-lg uppercase tracking-widest text-sm"
             >
-                <FileText size={18} className="group-hover:scale-110 transition-transform" />
-                <span>{ui.viewFlyer}</span>
+              <span>{ui.whatsapp}</span>
+            </a>
+            <Link 
+              to={`/flyer?event=${flyerEvent}&lang=${lang || 'ES'}`} 
+              target="_blank"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-pacha-gold text-white hover:text-pacha-stone border border-white/30 hover:border-pacha-gold font-bold py-3 px-8 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg group uppercase tracking-widest text-sm"
+            >
+              <FileText size={18} className="group-hover:scale-110 transition-transform" />
+              <span>{ui.viewFlyer}</span>
             </Link>
           </div>
         </div>

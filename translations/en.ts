@@ -370,7 +370,7 @@ export const enTranslations: TranslationData = {
           contact: {
               title: "Contact",
               email: "hernan.wachuma@gmail.com",
-              phone: "+51 984 316 833"
+              phone: "+51928383821"
           },
           find: {
               title: "Find Us",

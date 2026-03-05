@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationData, Language } from '../types';
-import { IMAGES } from '../constants';
+import { IMAGES, getWhatsAppLink } from '../constants';
 import { Moon, Sun, Bed, Calendar, Flame, Utensils, FileText } from 'lucide-react';
 import { Preparation } from './Preparation';
 
@@ -11,9 +11,10 @@ interface JuchuyQosqoProps {
   preparation: TranslationData['preparation'];
   ui: TranslationData['ui'];
   lang?: Language;
+  contactPhone: string;
 }
 
-export const JuchuyQosqo: React.FC<JuchuyQosqoProps> = ({ t, preparation, ui, lang }) => {
+export const JuchuyQosqo: React.FC<JuchuyQosqoProps> = ({ t, preparation, ui, lang, contactPhone }) => {
   const content = t;
 
   return (
@@ -36,15 +37,23 @@ export const JuchuyQosqo: React.FC<JuchuyQosqoProps> = ({ t, preparation, ui, la
           <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-light leading-relaxed">
             {content.intro}
           </p>
-          {/* Flyer Link Button */}
-          <div className="mt-8 flex justify-center">
-            <Link 
-                to={`/flyer?event=juchuy&lang=${lang || 'ES'}`} 
-                target="_blank"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-pacha-gold text-white hover:text-pacha-stone border border-white/30 hover:border-pacha-gold font-bold py-3 px-8 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg group uppercase tracking-widest text-sm"
+          {/* WhatsApp + Flyer Link */}
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <a
+              href={getWhatsAppLink(contactPhone)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-green-600/90 hover:bg-green-500 text-white border border-green-300/40 font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-lg uppercase tracking-widest text-sm"
             >
-                <FileText size={18} className="group-hover:scale-110 transition-transform" />
-                <span>{ui.viewFlyer}</span>
+              <span>{ui.whatsapp}</span>
+            </a>
+            <Link 
+              to={`/flyer?event=juchuy&lang=${lang || 'ES'}`} 
+              target="_blank"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-pacha-gold text-white hover:text-pacha-stone border border-white/30 hover:border-pacha-gold font-bold py-3 px-8 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg group uppercase tracking-widest text-sm"
+            >
+              <FileText size={18} className="group-hover:scale-110 transition-transform" />
+              <span>{ui.viewFlyer}</span>
             </Link>
           </div>
         </div>

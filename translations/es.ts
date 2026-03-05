@@ -363,7 +363,7 @@ export const esTranslations: TranslationData = {
           contact: {
               title: "Contacto",
               email: "hernan.wachuma@gmail.com",
-              phone: "+51 984 316 833"
+              phone: "+51928383821"
           },
           find: {
               title: "Encuéntranos",

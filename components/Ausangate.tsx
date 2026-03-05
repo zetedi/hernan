@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationData, Language } from '../types';
-import { IMAGES } from '../constants';
+import { IMAGES, getWhatsAppLink } from '../constants';
 import { Mountain, Flame, Droplets, Calendar, FileText } from 'lucide-react';
 import { Preparation } from './Preparation';
 import { MediaCarousel, MediaItem } from './MediaCarousel';
@@ -11,9 +11,10 @@ interface AusangateProps {
   t: TranslationData['ausangate'];
   ui: TranslationData['ui'];
   lang?: Language;
+  contactPhone: string;
 }
 
-export const Ausangate: React.FC<AusangateProps> = ({ t, ui, lang }) => {
+export const Ausangate: React.FC<AusangateProps> = ({ t, ui, lang, contactPhone }) => {
   return (
     <div className="bg-pacha-stone min-h-screen">
       {/* Hero Header - Parallax (Disabled on Mobile) */}
@@ -38,15 +39,23 @@ export const Ausangate: React.FC<AusangateProps> = ({ t, ui, lang }) => {
              }
           </div>
           
-          {/* Flyer Link Button */}
-          <div className="flex justify-center">
-            <Link 
-                to={`/flyer?event=ausangate&lang=${lang || 'ES'}`} 
-                target="_blank"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-pacha-gold text-white hover:text-pacha-stone border border-white/30 hover:border-pacha-gold font-bold py-3 px-8 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg group uppercase tracking-widest text-sm"
+          {/* WhatsApp + Flyer Link */}
+          <div className="flex flex-col items-center gap-3">
+            <a
+              href={getWhatsAppLink(contactPhone)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-green-600/90 hover:bg-green-500 text-white border border-green-300/40 font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-lg uppercase tracking-widest text-sm"
             >
-                <FileText size={18} className="group-hover:scale-110 transition-transform" />
-                <span>{ui.viewFlyer}</span>
+              <span>{ui.whatsapp}</span>
+            </a>
+            <Link 
+              to={`/flyer?event=ausangate&lang=${lang || 'ES'}`} 
+              target="_blank"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-pacha-gold text-white hover:text-pacha-stone border border-white/30 hover:border-pacha-gold font-bold py-3 px-8 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg group uppercase tracking-widest text-sm"
+            >
+              <FileText size={18} className="group-hover:scale-110 transition-transform" />
+              <span>{ui.viewFlyer}</span>
             </Link>
           </div>
         </div>

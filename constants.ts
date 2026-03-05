@@ -10,3 +10,5 @@ export const TRANSLATIONS: Record<Language, TranslationData> = {
     [Language.ES]: esTranslations,
     [Language.QU]: quTranslations
 };
+
+export const getWhatsAppLink = (phone: string) => `https://wa.me/${phone.replace(/[^0-9]/g, '')}`;

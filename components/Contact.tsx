@@ -1,7 +1,7 @@
 import React from 'react';
 import { TranslationData } from '../types';
 import { Mail, MapPin, Instagram, Facebook, Phone } from 'lucide-react';
-import { IMAGES } from '../constants';
+import { IMAGES, getWhatsAppLink } from '../constants';
 
 interface ContactProps {
   t: TranslationData['contact'];
@@ -63,7 +63,7 @@ export const Contact: React.FC<ContactProps> = ({ t, footerT, ui }) => {
                     <div>
                         <h4 className="font-bold text-white mb-1 uppercase tracking-wider text-sm">{ui.whatsapp}</h4>
                         <a 
-                            href={`https://wa.me/${footerT.columns.contact.phone.replace(/[^0-9]/g, '')}`}
+                            href={getWhatsAppLink(footerT.columns.contact.phone)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-400 hover:text-white transition-colors text-lg"

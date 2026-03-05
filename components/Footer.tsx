@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FooterData } from '../types';
 import { Logo } from './Logo';
 import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { getWhatsAppLink } from '../constants';
 
 interface FooterProps {
   data: FooterData;
@@ -90,7 +91,7 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
                  {/* WhatsApp Link */}
                 <li className="flex items-center gap-3 text-sm text-gray-400">
                    <a 
-                      href={`https://wa.me/${data.columns.contact.phone.replace(/[^0-9]/g, '')}`} 
+                      href={getWhatsAppLink(data.columns.contact.phone)} 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 hover:text-white transition-colors"
