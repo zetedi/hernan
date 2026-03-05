@@ -105,10 +105,10 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
   const lineageText = isSpanish ? "Linaje Pre-Inca K'ana" : "Pre-Incan K'ana Lineage";
 
   // Determine email address
-  const displayEmail = type === 'costaRicaPilgrimage' ? 'darkbliss22@protonmail.com' : footer.columns.contact.email;
+  const displayEmail = 'hernan.wachuma@gmail.com';
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-2 md:p-4 print:p-0 print:bg-white relative">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-0 md:p-4 print:p-0 print:bg-white relative">
         {/* Print Button */}
         <div className="fixed top-4 right-4 z-[100] print:hidden">
             <button 
@@ -120,17 +120,17 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
             </button>
         </div>
 
-        <div className="w-full max-w-[210mm] aspect-[1/1.414] bg-white shadow-2xl relative overflow-hidden text-pacha-earth flex flex-col print:shadow-none print:w-full print:h-full print:aspect-auto">
+        <div className="w-full max-w-[210mm] md:aspect-[1/1.414] bg-white shadow-2xl relative overflow-hidden text-pacha-earth flex flex-col print:shadow-none print:w-full print:h-full print:aspect-auto min-h-screen md:min-h-0">
             
             {/* Background Image with Gradient */}
             <div className="absolute inset-0 z-0">
                 <img 
                     src={bgImage} 
                     alt="Background" 
-                    className="w-full h-[65%] object-cover object-center print:opacity-100" 
+                    className="w-full h-[50%] md:h-[65%] object-cover object-center print:opacity-100" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-white h-[65%] print:hidden"></div>
-                <div className="absolute top-[50%] left-0 right-0 h-[15%] bg-gradient-to-b from-transparent to-white print:hidden"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-white h-[50%] md:h-[65%] print:hidden"></div>
+                <div className="absolute top-[40%] md:top-[50%] left-0 right-0 h-[15%] bg-gradient-to-b from-transparent to-white print:hidden"></div>
             </div>
 
             {/* Content Container */}
@@ -162,32 +162,32 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                 {isJuchuy && <div className="h-[15%]"></div>}
 
                 {/* Main Title Area */}
-                <div className={`mt-auto px-8 pt-2 pb-2 text-center ${isJuchuy ? 'mb-1' : ''}`}>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-2 leading-tight drop-shadow-[0_4px_3px_rgba(0,0,0,0.9)]">
+                <div className={`mt-auto px-4 md:px-8 pt-2 pb-2 text-center ${isJuchuy ? 'mb-1' : ''}`}>
+                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-2 leading-tight drop-shadow-[0_4px_3px_rgba(0,0,0,0.9)]">
                         {renderTitle()}
                     </h1>
-                    <div className="w-16 h-0.5 bg-pacha-gold mx-auto my-2 shadow-lg"></div>
-                    <div className="flex justify-center gap-3 text-sm md:text-base font-bold text-pacha-stone">
+                    <div className="w-12 md:w-16 h-0.5 bg-pacha-gold mx-auto my-2 shadow-lg"></div>
+                    <div className="flex flex-wrap justify-center gap-2 md:gap-3 text-xs md:text-base font-bold text-pacha-stone">
                         <div className="flex items-center gap-1 bg-pacha-sand/50 px-2 py-1 rounded-full backdrop-blur-sm print:bg-transparent print:border print:border-gray-300">
-                            <Calendar className="w-4 h-4 text-pacha-earth" />
+                            <Calendar className="w-3 h-3 md:w-4 md:h-4 text-pacha-earth" />
                             <span>{dateText}</span>
                         </div>
                         <div className="flex items-center gap-1 bg-pacha-sand/50 px-2 py-1 rounded-full backdrop-blur-sm print:bg-transparent print:border print:border-gray-300">
-                            <MapPin className="w-4 h-4 text-pacha-earth" />
+                            <MapPin className="w-3 h-3 md:w-4 md:h-4 text-pacha-earth" />
                             <span>{locationText}</span>
                         </div>
                     </div>
 
                     {/* Special Image Row for Ausangate or Costa Rica */}
                     {(isAusangateType || isCostaRicaType) && (
-                        <div className="flex justify-center items-center gap-4 mt-10 mb-1">
-                            <div className="w-24 h-24 md:w-36 md:h-36 rounded-lg overflow-hidden border-2 border-white shadow-lg transform -rotate-3 z-0 bg-white">
+                        <div className="flex justify-center items-center gap-2 md:gap-4 mt-4 md:mt-10 mb-1">
+                            <div className="w-16 h-16 md:w-36 md:h-36 rounded-lg overflow-hidden border-2 border-white shadow-lg transform -rotate-3 z-0 bg-white">
                                 <img src={isCostaRicaType ? IMAGES.cr1 : IMAGES.ausangate} className="w-full h-full object-cover" alt="Event Image 1" />
                             </div>
-                            <div className="w-28 h-28 md:w-44 md:h-44 rounded-lg overflow-hidden border-2 border-white shadow-xl z-10 -mt-4 bg-white">
+                            <div className="w-20 h-20 md:w-44 md:h-44 rounded-lg overflow-hidden border-2 border-white shadow-xl z-10 -mt-2 md:-mt-4 bg-white">
                                 <img src={isCostaRicaType ? IMAGES.cr2 : IMAGES.hat} className="w-full h-full object-cover" alt="Event Image 2" />
                             </div>
-                            <div className="w-24 h-24 md:w-36 md:h-36 rounded-lg overflow-hidden border-2 border-white shadow-lg transform rotate-3 z-0 bg-white">
+                            <div className="w-16 h-16 md:w-36 md:h-36 rounded-lg overflow-hidden border-2 border-white shadow-lg transform rotate-3 z-0 bg-white">
                                 <img src={isCostaRicaType ? IMAGES.cr3 : IMAGES.wachuma} className="w-full h-full object-cover" alt="Event Image 3" />
                             </div>
                         </div>
@@ -195,17 +195,17 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                 </div>
 
                 {/* Body Content */}
-                <div className="px-8 py-4 flex-grow flex flex-col justify-center">
-                    <p className="text-[10px] md:text-sm lg:text-base text-center text-gray-800 font-medium leading-relaxed mb-6 italic max-w-3xl mx-auto bg-white/60 p-4 rounded-xl backdrop-blur-sm shadow-sm border border-white/50 print:bg-transparent print:shadow-none print:border-none print:text-black">
-                        <span className="block mb-2 font-bold not-italic text-pacha-earth uppercase tracking-widest text-[9px] md:text-xs">
+                <div className="px-4 md:px-8 py-4 flex-grow flex flex-col justify-center">
+                    <p className="text-[10px] md:text-sm lg:text-base text-center text-gray-800 font-medium leading-relaxed mb-4 md:mb-6 italic max-w-3xl mx-auto bg-white/60 p-3 md:p-4 rounded-xl backdrop-blur-sm shadow-sm border border-white/50 print:bg-transparent print:shadow-none print:border-none print:text-black">
+                        <span className="block mb-1 md:mb-2 font-bold not-italic text-pacha-earth uppercase tracking-widest text-[8px] md:text-xs">
                              {lineageText}
                         </span>
                         {getDescription()}
                     </p>
 
-                    <div className="grid grid-cols-3 gap-4 lg:gap-8 items-center">
+                    <div className="flex flex-col md:grid md:grid-cols-3 gap-4 md:gap-8 items-center">
                         {/* Highlights */}
-                        <div className="col-span-2 bg-pacha-sand/30 p-4 lg:p-6 rounded-xl border border-pacha-gold/20 print:bg-transparent print:border-gray-300">
+                        <div className="w-full md:col-span-2 bg-pacha-sand/30 p-3 md:p-6 rounded-xl border border-pacha-gold/20 print:bg-transparent print:border-gray-300">
                             <div className="flex items-center justify-between mb-3 border-b border-pacha-gold/30 pb-2">
                                 <h3 className="text-pacha-gold font-bold uppercase tracking-widest text-[10px] md:text-sm print:text-black print:border-black">{flyerT.highlights}</h3>
                                 {isCostaRicaType && (
@@ -244,8 +244,8 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                         </div>
 
                         {/* QR Code Section */}
-                        <div className="col-span-1 flex flex-col items-center justify-center text-center">
-                            <div className="bg-white p-1 md:p-2 rounded-lg shadow-sm border border-gray-200 mb-2 print:shadow-none print:border-black flex items-center justify-center w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 shrink-0">
+                        <div className="w-full md:col-span-1 flex flex-row md:flex-col items-center justify-center gap-4 md:gap-0 text-center">
+                            <div className="bg-white p-1 md:p-2 rounded-lg shadow-sm border border-gray-200 md:mb-2 print:shadow-none print:border-black flex items-center justify-center w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 shrink-0">
                                 <img 
                                   src={qrCodeUrl} 
                                   alt="Scan for details" 
@@ -253,7 +253,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                                   style={{ imageRendering: 'pixelated' }}
                                 />
                             </div>
-                            <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-wider text-pacha-stone">{flyerT.scan}</span>
+                            <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-wider text-pacha-stone text-left md:text-center max-w-[80px] md:max-w-none">{flyerT.scan}</span>
                         </div>
                     </div>
                 </div>
@@ -262,20 +262,20 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
                 <div className="bg-pacha-stone text-white p-4 md:p-6 mt-auto relative overflow-hidden print:bg-pacha-stone print:text-white print:print-color-adjust-exact">
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 print:hidden"></div>
                     
-                    <div className="flex justify-between items-center max-w-5xl mx-auto relative z-10">
-                        <div className="text-left">
-                            <h4 className="font-serif text-lg md:text-2xl lg:text-3xl text-pacha-gold mb-1">{flyerT.reserve}</h4>
-                            <p className="text-gray-400 text-[9px] md:text-xs uppercase tracking-wider">{flyerT.limited}</p>
+                    <div className="flex flex-row justify-between items-center max-w-5xl mx-auto relative z-10 gap-2">
+                        <div className="text-left flex-shrink-0">
+                            <h4 className="font-serif text-sm md:text-2xl lg:text-3xl text-pacha-gold mb-0.5 md:mb-1 leading-tight">{flyerT.reserve}</h4>
+                            <p className="text-gray-400 text-[7px] md:text-xs uppercase tracking-wider">{flyerT.limited}</p>
                         </div>
-                        <div className="text-right space-y-1">
-                            <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
-                                <Mail size={14} className="text-pacha-gold" />
-                                {displayEmail}
+                        <div className="text-right space-y-0.5 md:space-y-1 min-w-0">
+                            <div className="flex items-center justify-end gap-1 md:gap-2 text-[8px] md:text-xs lg:text-sm font-medium truncate">
+                                <Mail size={10} className="text-pacha-gold shrink-0 md:w-3.5 md:h-3.5" />
+                                <span className="truncate">{displayEmail}</span>
                             </div>
                             
-                            <div className="flex items-center justify-end gap-2 text-[10px] md:text-xs lg:text-sm font-medium">
-                                <Phone size={14} className="text-pacha-gold" />
-                                Maestro Hernan: {footer.columns.contact.phone}
+                            <div className="flex items-center justify-end gap-1 md:gap-2 text-[8px] md:text-xs lg:text-sm font-medium">
+                                <Phone size={10} className="text-pacha-gold shrink-0 md:w-3.5 md:h-3.5" />
+                                <span className="truncate">Don Hernan: {footer.columns.contact.phone}</span>
                             </div>
                         </div>
                     </div>

@@ -124,7 +124,7 @@ export const AusangateFlyer: React.FC<FlyerProps> = ({ t, contact, footer }) => 
                             </div>
                             <div className="flex items-center justify-end gap-3 text-sm font-medium">
                                 <Phone size={18} className="text-pacha-gold" />
-                                Maestro Hernan: {footer.columns.contact.phone}
+                                Don Hernan: {footer.columns.contact.phone}
                             </div>
                         </div>
                     </div>
