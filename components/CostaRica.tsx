@@ -198,16 +198,16 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang, 
                                 const descLower = (typeof day.description === 'string' ? day.description : day.description[0]).toLowerCase();
                                 const titleLower = day.title.toLowerCase();
                                 
-                                // Logic for El Chirripo Start (The Carousel)
+                                // Logic for Duchí Start (The Carousel)
                                 // Show carousel for all pilgrimage items or if specifically named
-                                if (flyerEvent === 'costaRicaPilgrimage' || titleLower.includes('chirripó') || titleLower.includes('medicinal journey')) {
+                                if (flyerEvent === 'costaRicaPilgrimage' || titleLower.includes('duchí') || titleLower.includes('medicinal journey')) {
                                     isCarousel = true;
                                     // Build the carousel items
-                                    const chirripoKeys = ['chirripo1', 'chirripo2', 'chirripo3', 'chirripo4', 'chirripo5', 'chirripo6', 'chirripo7'];
-                                    carouselItems = chirripoKeys.map(key => ({
+                                    const duchiKeys = ['duchi1', 'duchi2', 'duchi3', 'duchi4', 'duchi5', 'duchi6', 'duchi7'];
+                                    carouselItems = duchiKeys.map(key => ({
                                         type: 'image',
                                         src: IMAGES[key as keyof typeof IMAGES] as string,
-                                        alt: 'El Chirripó',
+                                        alt: 'Duchí',
                                         credit: CREDITS[key]
                                     }));
                                 } else if (index === 0) {
@@ -224,7 +224,7 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang, 
 
                                 // Icons
                                 let DayIcon = Palmtree;
-                                if (flyerEvent === 'costaRicaPilgrimage' || titleLower.includes('chirripó') || titleLower.includes('mountain') || titleLower.includes('medicinal journey')) DayIcon = Mountain;
+                                if (flyerEvent === 'costaRicaPilgrimage' || titleLower.includes('duchí') || titleLower.includes('mountain') || titleLower.includes('medicinal journey')) DayIcon = Mountain;
                                 if (titleLower.includes('ceremony') || titleLower.includes('opening') || titleLower.includes('walk')) DayIcon = Eye;
                                 if (titleLower.includes('ocean')) DayIcon = Waves;
 

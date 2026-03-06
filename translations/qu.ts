@@ -79,9 +79,9 @@ export const quTranslations: TranslationData = {
           },
           { 
               title: "Costa Rica: Willka Puriy", 
-              description: "Chirripó urqupi ukhu puriy, phaqchakunawan, urqu raymikunawan.", 
+              description: "Duchí urqupi ukhu puriy, phaqchakunawan, urqu raymikunawan.", 
               price: "$249 / P'unchay",
-              details: { duration: "8 P'unchay", location: "Chirripó", groupSize: "Pisi Huñu" }
+              details: { duration: "8 P'unchay", location: "Duchí", groupSize: "Pisi Huñu" }
           },
           { 
               title: "Juchuy Qosqo Puriy", 
@@ -102,7 +102,7 @@ export const quTranslations: TranslationData = {
               details: { duration: "Sapaq", location: "Wayna Wasi", groupSize: "1 Runa" }
           }
         ],
-        ausangateCta: { title: "Costa Rica: Willka Puriy", description: "Chirripó urqupi ukhu puriy, phaqchakunawan, urqu raymikunawan.", button: "Puriyta Qhaway" }
+        ausangateCta: { title: "Costa Rica: Willka Puriy", description: "Duchí urqupi ukhu puriy, phaqchakunawan, urqu raymikunawan.", button: "Puriyta Qhaway" }
       },
       costaRica: {
           title: "Costa Rica: 3-P'unchay T'aqakuy",
@@ -137,17 +137,17 @@ export const quTranslations: TranslationData = {
       },
       costaRicaPilgrimage: {
         title: "Costa Rica: Willka Puriy",
-        subtitle: "Chirripó Ñan",
-        intro: "Don Hernanqa Wachumero, ñawpaq K'ana yawarniyuq. Kay puriyqa Perou Andeskunata Chirripó Urquwan tinkuchin, sunqumanta pacha Wachuma raymikunawan. Hatun hampiyta, yuyay kicharichiyta tariy.",
+        subtitle: "Duchí Ñan",
+        intro: "Don Hernanqa Wachumero, ñawpaq K'ana yawarniyuq. Kay puriyqa Perou Andeskunata Duchí Urquwan tinkuchin, sunqumanta pacha Wachuma raymikunawan. Hatun hampiyta, yuyay kicharichiyta tariy.",
         description: [
             "Willka tiyaykunaman puriy, hallp'aq yachayninta huñuspa, ñawpaq runakunata yupaychaspa.",
             "Sapa p'unchay hampi puriykuna kanqa, iskay hatun p'unchaykunawan.",
-            "Chirripó ukhupi huñunakusun, allin qhawayta chaskianykipaq."
+            "Duchí ukhupi huñunakusun, allin qhawayta chaskianykipaq."
         ],
-        details: { location: "Chirripó, Costa Rica", capacity: "Pisi Huñu", dates: "Oct 7 - Oct 14, 2026" },
+        details: { location: "Duchí, Costa Rica", capacity: "Pisi Huñu", dates: "Oct 7 - Oct 14, 2026" },
         cta: "Mink'ayta Mañakuy",
         visionTitle: "Urquq Yachaynin",
-        visionText: "Andespa nunankuna Chirripó Urquwan tinkun. Ñawpaq ayllukunata yupaychana puriy.",
+        visionText: "Andespa nunankuna Duchí Urquwan tinkun. Ñawpaq ayllukunata yupaychana puriy.",
         themeValue: "Ñawpaq Runakuna & Urqukuna",
         itinerary: [
             { day: "7 Oct", title: "Phaqchaman Willka Puriy", description: "Huk pakasqa phaqchaman puriy, Costa Ricaq hatun tiyayninta qhawaspa. San Gerardo de Rivas." },

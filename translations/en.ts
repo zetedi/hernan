@@ -90,9 +90,9 @@ export const enTranslations: TranslationData = {
         },
         { 
             title: "Costa Rica: Sacred Pilgrimage", 
-            description: "Deep immersion in El Chirripó with tribal visits, waterfall walks, and special mountain ceremonies.", 
+            description: "Deep immersion in El Duchí with tribal visits, waterfall walks, and special mountain ceremonies.", 
             price: "$249 / Day",
-            details: { duration: "8 Days", location: "El Chirripó", groupSize: "Small Group" }
+            details: { duration: "8 Days", location: "El Duchí", groupSize: "Small Group" }
         },
         { 
             title: "Juchuy Qosqo Immersion", 
@@ -115,7 +115,7 @@ export const enTranslations: TranslationData = {
       ],
       ausangateCta: { 
           title: "Costa Rica: Sacred Pilgrimage", 
-          description: "Deep immersion in El Chirripó with tribal visits, waterfall walks, and special mountain ceremonies.", 
+          description: "Deep immersion in El Duchí with tribal visits, waterfall walks, and special mountain ceremonies.", 
           button: "View Pilgrimage" 
       }
     },
@@ -183,17 +183,17 @@ export const enTranslations: TranslationData = {
     },
     costaRicaPilgrimage: {
         title: "Costa Rica: Sacred Pilgrimage",
-        subtitle: "The Chirripó Journey",
-        intro: "Don Hernan is a Quechua native Wachumero from the pre-Incan K'ana lineage and guardian of ancestral traditions. This journey connects the high-altitude wisdom of the Peruvian Andes with our beloved Chirripó Mountain in sacred heart-centred Wachuma ceremonies. Experience profound healing and spiritual awakening with the ancient wisdom of the lands. Private medicine walks available for small groups every day with two very special key dates to join.",
+        subtitle: "The Duchí Journey",
+        intro: "Don Hernan is a Quechua native Wachumero from the pre-Incan K'ana lineage and guardian of ancestral traditions. This journey connects the high-altitude wisdom of the Peruvian Andes with our beloved Duchí Mountain in sacred heart-centred Wachuma ceremonies. Experience profound healing and spiritual awakening with the ancient wisdom of the lands. Private medicine walks available for small groups every day with two very special key dates to join.",
         description: [
             "Visits to the sacred sites linking the wisdom of the land with prayers and honouring the ancient ancestors.",
             "Private medicine walks available for small groups every day with two very special key dates to join.",
-            "We gather in a secluded sanctuary in El Chirripó to ensure deep personal attention and a cohesive energetic container."
+            "We gather in a secluded sanctuary in El Duchí to ensure deep personal attention and a cohesive energetic container."
         ],
-        details: { location: "El Chirripó, Costa Rica", capacity: "Small Group", dates: "Oct 7 - Oct 14, 2026" },
+        details: { location: "El Duchí, Costa Rica", capacity: "Small Group", dates: "Oct 7 - Oct 14, 2026" },
         cta: "Request Invitation",
         visionTitle: "Mountain Wisdom",
-        visionText: "The high-altitude spirits of the Andes meet the sacred Chirripó. A pilgrimage of spirit, honouring the indigenous guardians of the land.",
+        visionText: "The high-altitude spirits of the Andes meet the sacred Duchí. A pilgrimage of spirit, honouring the indigenous guardians of the land.",
         themeValue: "Ancestors & Mountains",
         itinerary: [
             { day: "Oct 7th", title: "Sacred Waterfall Walk", description: "Sacred Walk to waterfall at a private nature sanctuary bordering Costa Rica’s largest national reserve. San Gerardo de Rivas." },

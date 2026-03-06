@@ -90,9 +90,9 @@ export const esTranslations: TranslationData = {
         },
         { 
             title: "Costa Rica: Peregrinaje Sagrado", 
-            description: "Inmersión profunda en El Chirripó con visitas tribales, caminatas a cascadas y ceremonias especiales en la montaña.", 
+            description: "Inmersión profunda en El Duchí con visitas tribales, caminatas a cascadas y ceremonias especiales en la montaña.", 
             price: "$249 / Día",
-            details: { duration: "8 Días", location: "El Chirripó", groupSize: "Grupo Pequeño" }
+            details: { duration: "8 Días", location: "El Duchí", groupSize: "Grupo Pequeño" }
         },
         { 
             title: "Inmersión Juchuy Qosqo", 
@@ -115,7 +115,7 @@ export const esTranslations: TranslationData = {
       ],
       ausangateCta: { 
           title: "Costa Rica: Peregrinaje Sagrado", 
-          description: "Inmersión profunda en El Chirripó con visitas tribales, caminatas a cascadas y ceremonias especiales en la montaña.", 
+          description: "Inmersión profunda en El Duchí con visitas tribales, caminatas a cascadas y ceremonias especiales en la montaña.", 
           button: "Ver Peregrinaje" 
       }
     },
@@ -183,17 +183,17 @@ export const esTranslations: TranslationData = {
     },
     costaRicaPilgrimage: {
         title: "Costa Rica: Peregrinaje Sagrado",
-        subtitle: "El Viaje al Chirripó",
-        intro: "Don Hernan es un Wachumero nativo Quechua del linaje pre-Inca K’ana y guardián de tradiciones ancestrales. Este viaje conecta la sabiduría de altura de los Andes Peruanos con nuestra amada Montaña Chirripó en ceremonias sagradas de Wachuma centradas en el corazón. Experimenta una sanación profunda y un despertar espiritual con la sabiduría antigua de las tierras. Caminatas medicinales privadas disponibles para grupos pequeños cada día con dos fechas clave muy especiales para unirse.",
+        subtitle: "El Viaje al Duchí",
+        intro: "Don Hernan es un Wachumero nativo Quechua del linaje pre-Inca K’ana y guardián de tradiciones ancestrales. Este viaje conecta la sabiduría de altura de los Andes Peruanos con nuestra amada Montaña Duchí en ceremonias sagradas de Wachuma centradas en el corazón. Experimenta una sanación profunda y un despertar espiritual con la sabiduría antigua de las tierras. Caminatas medicinales privadas disponibles para grupos pequeños cada día con dos fechas clave muy especiales para unirse.",
         description: [
             "Visitas a sitios sagrados uniendo la sabiduría de la tierra con oraciones y honrando a los antiguos ancestros.",
             "Caminatas medicinales privadas disponibles para grupos pequeños cada día con dos fechas clave muy especiales para unirse.",
-            "Nos reunimos en un santuario apartado en El Chirripó para garantizar una atención personal profunda y un contenedor energético cohesivo."
+            "Nos reunimos en un santuario apartado en El Duchí para garantizar una atención personal profunda y un contenedor energético cohesivo."
         ],
-        details: { location: "El Chirripó, Costa Rica", capacity: "Grupo Pequeño", dates: "7 Oct - 14 Oct, 2026" },
+        details: { location: "El Duchí, Costa Rica", capacity: "Grupo Pequeño", dates: "7 Oct - 14 Oct, 2026" },
         cta: "Solicitar Invitación",
         visionTitle: "Sabiduría de la Montaña",
-        visionText: "Los espíritus de altura de los Andes se encuentran con el sagrado Chirripó. Un peregrinaje del espíritu, honrando a los guardianes indígenas de la tierra.",
+        visionText: "Los espíritus de altura de los Andes se encuentran con el sagrado Duchí. Un peregrinaje del espíritu, honrando a los guardianes indígenas de la tierra.",
         themeValue: "Ancestros y Montañas",
         itinerary: [
             { day: "7 de Oct", title: "Caminata Sagrada a la Cascada", description: "Caminata Sagrada a la cascada en un santuario natural privado que bordea la reserva nacional más grande de Costa Rica. San Gerardo de Rivas." },
