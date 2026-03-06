@@ -39,7 +39,7 @@ export const quTranslations: TranslationData = {
         cta: "Hampi Raymita Waqaychay",
         retreatTeaser: { label: "Willka T'aqakuy", title: "2 P'unchay T'aqakuy", location: "Pisac & Kinsacocha" },
         ausangateTeaser: { label: "Hanaq Pachaman Astawan Qaylla", title: "Ausangate 3 P'unchay", date: "Mar 31 - Abr 2, 2026" },
-        costaRicaTeaser: { label: "Hatun Puriy", title: "Costa Rica Puriy", date: "Feb 21 - Mar 4, 2026" }
+        costaRicaTeaser: { label: "Hatun Puriy", title: "Costa Rica Puriy", date: "3 Oct - 14 Oct, 2026" }
       },
       benefits: {
         title: "Wachumaq Kallpan",
@@ -79,7 +79,7 @@ export const quTranslations: TranslationData = {
           },
           { 
               title: "Costa Rica: Willka Puriy", 
-              description: "Chirripó urqupi ukhu puriy, phaqchakunawan, killa wañuywan.", 
+              description: "Chirripó urqupi ukhu puriy, phaqchakunawan, urqu raymikunawan.", 
               price: "$249 / P'unchay",
               details: { duration: "8 P'unchay", location: "Chirripó", groupSize: "Pisi Huñu" }
           },
@@ -102,7 +102,7 @@ export const quTranslations: TranslationData = {
               details: { duration: "Sapaq", location: "Wayna Wasi", groupSize: "1 Runa" }
           }
         ],
-        ausangateCta: { title: "Costa Rica: Willka Puriy", description: "Chirripó urqupi ukhu puriy, phaqchakunawan, killa wañuywan.", button: "Puriyta Qhaway" }
+        ausangateCta: { title: "Costa Rica: Willka Puriy", description: "Chirripó urqupi ukhu puriy, phaqchakunawan, urqu raymikunawan.", button: "Puriyta Qhaway" }
       },
       costaRica: {
           title: "Costa Rica: 3-P'unchay T'aqakuy",
@@ -113,16 +113,16 @@ export const quTranslations: TranslationData = {
             "Hernanpa yachayninwan, sunquta kicharisun, Diamante Qhichwaq t'ikankunawan.",
             "Kay t'aqakuyqa tiksim, ch'uyay, takyachiy ima."
           ],
-          details: { location: "Diamante Qhichwa, Costa Rica", capacity: "Huñu", dates: "Feb 21 - Feb 23, 2026" },
+          details: { location: "Diamante Qhichwa, Costa Rica", capacity: "Huñu", dates: "Oct 3 - Oct 5, 2026" },
           cta: "Mink'ayta Mañakuy",
           oneDayPrice: "$249 / P'unchay",
           visionTitle: "Mama Qochaq Waqyakuynin",
           visionText: "Hampiqa nirqa: Andespa yachaynin mama qochawan tinkunan. Kay t'aqakuyqa chay p'uñtem.",
           themeValue: "Mama Qochawan Sach'a",
           itinerary: [
-            { day: "21 Feb", title: "Qallariy Raymi", description: "Huñunakuy, Pacifico Mama Qochawan tinkuspa raymi." },
-            { day: "22 Feb", title: "Sach'awan Tinkuy", description: "Tukuy p'unchay Wachumawan, Diamante Qhichwapi." },
-            { day: "23 Feb", title: "Huñuy & Puriy", description: "T'ika ch'uyay, ñawpaq t'aqakuyta tukunapaq." }
+            { day: "3 Oct", title: "Qallariy Raymi", description: "Huñunakuy, Pacifico Mama Qochawan tinkuspa raymi." },
+            { day: "4 Oct", title: "Sach'awan Tinkuy", description: "Tukuy p'unchay Wachumawan, Diamante Qhichwapi." },
+            { day: "5 Oct", title: "Huñuy & Puriy", description: "T'ika ch'uyay, ñawpaq t'aqakuyta tukunapaq." }
           ],
           packages: {
             title: "Kaykunam Kanqa",
@@ -144,16 +144,14 @@ export const quTranslations: TranslationData = {
             "Sapa p'unchay hampi puriykuna kanqa, iskay hatun p'unchaykunawan.",
             "Chirripó ukhupi huñunakusun, allin qhawayta chaskianykipaq."
         ],
-        details: { location: "Chirripó, Costa Rica", capacity: "Pisi Huñu", dates: "Feb 25 - Mar 4, 2026" },
+        details: { location: "Chirripó, Costa Rica", capacity: "Pisi Huñu", dates: "Oct 7 - Oct 14, 2026" },
         cta: "Mink'ayta Mañakuy",
         visionTitle: "Urquq Yachaynin",
         visionText: "Andespa nunankuna Chirripó Urquwan tinkun. Ñawpaq ayllukunata yupaychana puriy.",
         themeValue: "Ñawpaq Runakuna & Urqukuna",
         itinerary: [
-            { day: "25 Feb", title: "Chirripó Qallariy", description: "El Chirripó willka urqukunapi ukhu puriyta qallarichkanchik." },
-            { day: "1 Mar", title: "Phaqchaman Willka Puriy", description: "Huk pakasqa phaqchaman puriy, Costa Ricaq hatun tiyayninta qhawaspa. San Gerardo de Rivas." },
-            { day: "3 Mar", title: "Killa Wañuy Raymi", description: "Killa Wañuy Raymi, tiyay pusaqwan. Sendero Gigante, San José de Rivas." },
-            { day: "4 Mar", title: "Tukuy Raymi", description: "Tukuy yachasqata huñuspa, santuariomanta ripuy." }
+            { day: "7 Oct", title: "Phaqchaman Willka Puriy", description: "Huk pakasqa phaqchaman puriy, Costa Ricaq hatun tiyayninta qhawaspa. San Gerardo de Rivas." },
+            { day: "9 Oct", title: "Qhawana Raymi", description: "Killa Raymi, tiyay pusaqwan. Sendero Gigante, San José de Rivas." }
         ]
       },
       flyer: {

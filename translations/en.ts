@@ -39,7 +39,7 @@ export const enTranslations: TranslationData = {
       cta: "Book a Ceremony",
       retreatTeaser: { label: "Sacred Immersion", title: "2 Day Retreat", location: "Pisac & Kinsacocha" },
       ausangateTeaser: { label: "Closer to the Sky", title: "Ausangate 3 Days", date: "Mar 31 - Apr 2, 2026" },
-      costaRicaTeaser: { label: "Special Event", title: "Costa Rica Pilgrimage", date: "Feb 21 - Mar 4, 2026" }
+      costaRicaTeaser: { label: "Special Event", title: "Costa Rica Pilgrimage", date: "Oct 3 - Oct 14, 2026" }
     },
     benefits: {
       title: "The Power of Wachuma",
@@ -90,7 +90,7 @@ export const enTranslations: TranslationData = {
         },
         { 
             title: "Costa Rica: Sacred Pilgrimage", 
-            description: "Deep immersion in El Chirripó with tribal visits, waterfall walks, and lunar eclipse celebration.", 
+            description: "Deep immersion in El Chirripó with tribal visits, waterfall walks, and special mountain ceremonies.", 
             price: "$249 / Day",
             details: { duration: "8 Days", location: "El Chirripó", groupSize: "Small Group" }
         },
@@ -115,7 +115,7 @@ export const enTranslations: TranslationData = {
       ],
       ausangateCta: { 
           title: "Costa Rica: Sacred Pilgrimage", 
-          description: "Deep immersion in El Chirripó with tribal visits, waterfall walks, and lunar eclipse celebration.", 
+          description: "Deep immersion in El Chirripó with tribal visits, waterfall walks, and special mountain ceremonies.", 
           button: "View Pilgrimage" 
       }
     },
@@ -159,16 +159,16 @@ export const enTranslations: TranslationData = {
             "Guided by Hernan's ancestral wisdom, we focus on deep heart-opening ceremonies and immersion in the lush botanical sanctuaries of the Diamante Valley.",
             "This retreat serves as the foundation for the pilgrimage, offering purification and grounding in a secluded tropical sanctuary."
         ],
-        details: { location: "Diamante Valley, Costa Rica", capacity: "Intimate Group", dates: "Feb 21 - Feb 23, 2026" },
+        details: { location: "Diamante Valley, Costa Rica", capacity: "Intimate Group", dates: "Oct 3 - Oct 5, 2026" },
         cta: "Request Invitation",
         oneDayPrice: "$249 / Day",
         visionTitle: "The Ocean's Call",
         visionText: "The medicine spoke of connecting the Andean wisdom with the purifying, fluid energy of the ocean. This retreat is the first step of that spiritual bridge.",
         themeValue: "Ocean & Jungle",
         itinerary: [
-            { day: "Feb 21st", title: "Opening Ceremony", description: "Initial gathering and sacred opening ceremony by the Pacific Ocean." },
-            { day: "Feb 22nd", title: "Rainforest Connection", description: "Full day Wachuma immersion within the botanical beauty of the Diamante Valley." },
-            { day: "Feb 23rd", title: "Integration & Flow", description: "Flower cleansing rituals and integration before concluding the initial retreat." }
+            { day: "Oct 3rd", title: "Opening Ceremony", description: "Initial gathering and sacred opening ceremony by the Pacific Ocean." },
+            { day: "Oct 4th", title: "Rainforest Connection", description: "Full day Wachuma immersion within the botanical beauty of the Diamante Valley." },
+            { day: "Oct 5th", title: "Integration & Flow", description: "Flower cleansing rituals and integration before concluding the initial retreat." }
         ],
         packages: {
             title: "Participation Includes",
@@ -184,22 +184,20 @@ export const enTranslations: TranslationData = {
     costaRicaPilgrimage: {
         title: "Costa Rica: Sacred Pilgrimage",
         subtitle: "The Chirripó Journey",
-        intro: "Don Hernan is a Quechua native Wachumero from the pre-Incan K’ana lineage and guardian of ancestral traditions. This journey connects the high-altitude wisdom of the Peruvian Andes with our beloved Chirripó Mountain in sacred heart-centred Wachuma ceremonies. Experience profound healing and spiritual awakening with the ancient wisdom of the lands. Private medicine walks available for small groups every day with two very special key dates to join.",
+        intro: "Don Hernan is a Quechua native Wachumero from the pre-Incan K'ana lineage and guardian of ancestral traditions. This journey connects the high-altitude wisdom of the Peruvian Andes with our beloved Chirripó Mountain in sacred heart-centred Wachuma ceremonies. Experience profound healing and spiritual awakening with the ancient wisdom of the lands. Private medicine walks available for small groups every day with two very special key dates to join.",
         description: [
             "Visits to the sacred sites linking the wisdom of the land with prayers and honouring the ancient ancestors.",
             "Private medicine walks available for small groups every day with two very special key dates to join.",
             "We gather in a secluded sanctuary in El Chirripó to ensure deep personal attention and a cohesive energetic container."
         ],
-        details: { location: "El Chirripó, Costa Rica", capacity: "Small Group", dates: "Feb 25 - Mar 4, 2026" },
+        details: { location: "El Chirripó, Costa Rica", capacity: "Small Group", dates: "Oct 7 - Oct 14, 2026" },
         cta: "Request Invitation",
         visionTitle: "Mountain Wisdom",
         visionText: "The high-altitude spirits of the Andes meet the sacred Chirripó. A pilgrimage of spirit, honouring the indigenous guardians of the land.",
         themeValue: "Ancestors & Mountains",
         itinerary: [
-            { day: "Feb 25th", title: "Chirripó Opening", description: "Beginning our deep immersion in the sacred mountains of El Chirripó." },
-            { day: "Mar 1st", title: "Sacred Waterfall Walk", description: "Sacred Walk to waterfall at a private nature sanctuary bordering Costa Rica’s largest national reserve. San Gerardo de Rivas." },
-            { day: "Mar 3rd", title: "Lunar Eclipse Celebration", description: "Lunar Eclipse Celebration and Sacred Walk to vista point at a private protected land of spiritual significance guided by a local guardian. Sendero Gigante, San Jose de Rivas." },
-            { day: "Mar 4th", title: "Closing Circle", description: "Final integration and departure from the sanctuary." }
+            { day: "Oct 7th", title: "Sacred Waterfall Walk", description: "Sacred Walk to waterfall at a private nature sanctuary bordering Costa Rica’s largest national reserve. San Gerardo de Rivas." },
+            { day: "Oct 9th", title: "View Point Celebration", description: "Lunar Celebration and Sacred Walk to vista point at a private protected land of spiritual significance guided by a local guardian. Sendero Gigante, San Jose de Rivas." }
         ]
     },
     retreat2Day: {

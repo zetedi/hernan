@@ -39,7 +39,7 @@ export const esTranslations: TranslationData = {
       cta: "Reservar una Ceremonia",
       retreatTeaser: { label: "Inmersión Sagrada", title: "Retiro de 2 Días", location: "Pisac y Kinsacocha" },
       ausangateTeaser: { label: "Más Cerca del Cielo", title: "Ausangate 3 Días", date: "31 Mar - 2 Abr, 2026" },
-      costaRicaTeaser: { label: "Evento Especial", title: "Peregrinaje a Costa Rica", date: "21 Feb - 4 Mar, 2026" }
+      costaRicaTeaser: { label: "Evento Especial", title: "Peregrinaje a Costa Rica", date: "3 Oct - 14 Oct, 2026" }
     },
     benefits: {
       title: "El Poder del Wachuma",
@@ -90,7 +90,7 @@ export const esTranslations: TranslationData = {
         },
         { 
             title: "Costa Rica: Peregrinaje Sagrado", 
-            description: "Inmersión profunda en El Chirripó con visitas tribales, caminatas a cascadas y celebración del eclipse lunar.", 
+            description: "Inmersión profunda en El Chirripó con visitas tribales, caminatas a cascadas y ceremonias especiales en la montaña.", 
             price: "$249 / Día",
             details: { duration: "8 Días", location: "El Chirripó", groupSize: "Grupo Pequeño" }
         },
@@ -115,7 +115,7 @@ export const esTranslations: TranslationData = {
       ],
       ausangateCta: { 
           title: "Costa Rica: Peregrinaje Sagrado", 
-          description: "Inmersión profunda en El Chirripó con visitas tribales, caminatas a cascadas y celebración del eclipse lunar.", 
+          description: "Inmersión profunda en El Chirripó con visitas tribales, caminatas a cascadas y ceremonias especiales en la montaña.", 
           button: "Ver Peregrinaje" 
       }
     },
@@ -159,16 +159,16 @@ export const esTranslations: TranslationData = {
             "Guiados por la sabiduría ancestral de Hernan, nos centramos en profundas ceremonias de apertura del corazón e inmersión en los exuberantes santuarios botánicos del Valle del Diamante.",
             "Este retiro sirve como base para el peregrinaje, ofreciendo purificación y arraigo en un santuario tropical apartado."
           ],
-          details: { location: "Valle del Diamante, Costa Rica", capacity: "Grupo Íntimo", dates: "21 Feb - 23 Feb, 2026" },
+          details: { location: "Valle del Diamante, Costa Rica", capacity: "Grupo Íntimo", dates: "3 Oct - 5 Oct, 2026" },
           cta: "Solicitar Invitación",
           oneDayPrice: "$249 USD / Día",
           visionTitle: "El Llamado del Océano",
           visionText: "La medicina habló de conectar la sabiduría andina con la energía fluida y purificadora del océano. Este retiro es el primer paso de ese puente espiritual.",
           themeValue: "Océano y Selva",
           itinerary: [
-            { day: "21 de Feb", title: "Ceremonia de Apertura", description: "Reunión inicial y ceremonia sagrada de apertura junto al Océano Pacífico." },
-            { day: "22 de Feb", title: "Conexión con la Selva", description: "Inmersión de día completo con Wachuma dentro de la belleza botánica del Valle del Diamante." },
-            { day: "23 de Feb", title: "Integración y Flujo", description: "Rituales de limpieza floral e integración antes de concluir el retiro inicial." }
+            { day: "3 de Oct", title: "Ceremonia de Apertura", description: "Reunión inicial y ceremonia sagrada de apertura junto al Océano Pacífico." },
+            { day: "4 de Oct", title: "Conexión con la Selva", description: "Inmersión de día completo con Wachuma dentro de la belleza botánica del Valle del Diamante." },
+            { day: "5 de Oct", title: "Integración y Flujo", description: "Rituales de limpieza floral e integración antes de concluir el retiro inicial." }
           ],
           packages: {
             title: "La Participación Incluye",
@@ -190,16 +190,14 @@ export const esTranslations: TranslationData = {
             "Caminatas medicinales privadas disponibles para grupos pequeños cada día con dos fechas clave muy especiales para unirse.",
             "Nos reunimos en un santuario apartado en El Chirripó para garantizar una atención personal profunda y un contenedor energético cohesivo."
         ],
-        details: { location: "El Chirripó, Costa Rica", capacity: "Grupo Pequeño", dates: "25 Feb - 4 Mar, 2026" },
+        details: { location: "El Chirripó, Costa Rica", capacity: "Grupo Pequeño", dates: "7 Oct - 14 Oct, 2026" },
         cta: "Solicitar Invitación",
         visionTitle: "Sabiduría de la Montaña",
         visionText: "Los espíritus de altura de los Andes se encuentran con el sagrado Chirripó. Un peregrinaje del espíritu, honrando a los guardianes indígenas de la tierra.",
         themeValue: "Ancestros y Montañas",
         itinerary: [
-            { day: "25 de Feb", title: "Apertura del Chirripó", description: "Comenzando nuestra inmersión profunda en las montañas sagradas de El Chirripó." },
-            { day: "1 de Mar", title: "Caminata Sagrada a la Cascada", description: "Caminata Sagrada a la cascada en un santuario natural privado que bordea la reserva nacional más grande de Costa Rica. San Gerardo de Rivas." },
-            { day: "3 de Mar", title: "Celebración del Eclipse Lunar", description: "Celebración del Eclipse Lunar y Caminata Sagrada al mirador en una tierra privada protegida de importancia espiritual guiada por un guardián local. Sendero Gigante, San José de Rivas." },
-            { day: "4 de Mar", title: "Círculo de Cierre", description: "Integración final y partida del santuario." }
+            { day: "7 de Oct", title: "Caminata Sagrada a la Cascada", description: "Caminata Sagrada a la cascada en un santuario natural privado que bordea la reserva nacional más grande de Costa Rica. San Gerardo de Rivas." },
+            { day: "9 de Oct", title: "Celebración en el Mirador", description: "Celebración Lunar y Caminata Sagrada al mirador en una tierra privada protegida de importancia espiritual guiada por un guardián local. Sendero Gigante, San José de Rivas." }
         ]
     },
     retreat2Day: {

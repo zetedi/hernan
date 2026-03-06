@@ -199,8 +199,8 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang, 
                                 const titleLower = day.title.toLowerCase();
                                 
                                 // Logic for El Chirripo Start (The Carousel)
-                                // Identified by title containing "Medicinal Journey" or being index 2 (Feb 25)
-                                if (index === 2 || titleLower.includes('medicinal journey')) {
+                                // Show carousel for all pilgrimage items or if specifically named
+                                if (flyerEvent === 'costaRicaPilgrimage' || titleLower.includes('chirripó') || titleLower.includes('medicinal journey')) {
                                     isCarousel = true;
                                     // Build the carousel items
                                     const chirripoKeys = ['chirripo1', 'chirripo2', 'chirripo3', 'chirripo4', 'chirripo5', 'chirripo6', 'chirripo7'];
@@ -218,19 +218,18 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang, 
                                     dayImage = IMAGES.costa;
                                 } else {
                                     // Fallbacks
-                                    if (titleLower.includes('eclipse')) dayImage = IMAGES.ausangate3;
+                                    if (titleLower.includes('eclipse') || titleLower.includes('celebration')) dayImage = IMAGES.ausangate3;
                                     else if (titleLower.includes('closing')) dayImage = IMAGES.flowers;
                                 }
 
                                 // Icons
                                 let DayIcon = Palmtree;
-                                if (titleLower.includes('chirripó') || titleLower.includes('mountain') || titleLower.includes('medicinal journey')) DayIcon = Mountain;
-                                if (titleLower.includes('ceremony') || titleLower.includes('opening')) DayIcon = Eye;
+                                if (flyerEvent === 'costaRicaPilgrimage' || titleLower.includes('chirripó') || titleLower.includes('mountain') || titleLower.includes('medicinal journey')) DayIcon = Mountain;
+                                if (titleLower.includes('ceremony') || titleLower.includes('opening') || titleLower.includes('walk')) DayIcon = Eye;
                                 if (titleLower.includes('ocean')) DayIcon = Waves;
 
                                 // Location Logic
-                                // Feb 25 onwards is The Mountains
-                                const locationName = index >= 2 ? 'The Mountains' : 'Diamante Valley';
+                                const locationName = flyerEvent === 'costaRicaPilgrimage' ? 'The Mountains' : 'Diamante Valley';
 
                                 return (
                                     <div key={index} className="relative pl-12 group">
