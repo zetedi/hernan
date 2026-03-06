@@ -3,7 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationData, Language } from '../types';
 import { IMAGES, getWhatsAppLink } from '../constants';
-import { Moon, Sun, Bed, Calendar, FileText } from 'lucide-react';
+import { ViewFlyerButton } from './ViewFlyerButton';
+import { Moon, Sun, Bed, Calendar, FileText, Send } from 'lucide-react';
 import { Preparation } from './Preparation';
 
 interface Retreat2DayProps {
@@ -38,22 +39,20 @@ export const Retreat2Day: React.FC<Retreat2DayProps> = ({ t, ui, lang, contactPh
           </p>
           {/* WhatsApp + Flyer Link */}
           <div className="mt-8 flex flex-col items-center gap-3">
+            <ViewFlyerButton 
+              event="retreat2Day" 
+              lang={lang || Language.ES} 
+              label={ui.viewFlyer} 
+            />
             <a
               href={getWhatsAppLink(contactPhone)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-600/90 hover:bg-green-500 text-white border border-green-300/40 font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-lg uppercase tracking-widest text-sm"
             >
+              <Send size={18} />
               <span>{ui.whatsapp}</span>
             </a>
-            <Link 
-              to={`/flyer?event=retreat2Day&lang=${lang || 'ES'}`} 
-              target="_blank"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-pacha-gold text-white hover:text-pacha-stone border border-white/30 hover:border-pacha-gold font-bold py-3 px-8 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg group uppercase tracking-widest text-sm"
-            >
-              <FileText size={18} className="group-hover:scale-110 transition-transform" />
-              <span>{ui.viewFlyer}</span>
-            </Link>
           </div>
         </div>
       </div>
