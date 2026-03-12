@@ -38,7 +38,7 @@ export const quTranslations: TranslationData = {
         subtitle: "Pachamamawan tinkuy, Wachuma hampiwan, Willka Qhichwapi.",
         cta: "Hampi Raymita Waqaychay",
         retreatTeaser: { label: "Willka T'aqakuy", title: "2 P'unchay T'aqakuy", location: "Pisac & Kinsacocha" },
-        ausangateTeaser: { label: "Hanaq Pachaman Astawan Qaylla", title: "Ausangate 3 P'unchay", date: "Mar 31 - Abr 2, 2026" },
+        ausangateTeaser: { label: "Hanaq Pachaman Astawan Qaylla", title: "Ausangate 3 P'unchay", date: "Tapukuy" },
         costaRicaTeaser: { label: "Hatun Puriy", title: "Costa Rica Puriy", date: "3 Oct - 14 Oct, 2026" }
       },
       benefits: {
@@ -62,7 +62,7 @@ export const quTranslations: TranslationData = {
           { 
               title: "Ausangate: Hanaq Pachaman Qaylla (3 P'unchay)", 
               description: "Hatun puriy Apuwan. Temazcal, Rapé, Wachuma raymi Pacchantapi. Foto toqyayta qukyku.", 
-              price: "700 Soles",
+              price: "Tapukuy",
               details: { duration: "3 P'unchay", location: "Ausangate", groupSize: "Huñu" }
           },
           { 
@@ -179,6 +179,7 @@ export const quTranslations: TranslationData = {
         title: "Ausangate Willka Puriy",
         subtitle: "Willakunqa",
         description: "Huk hatun puriy, Pacchanta q'uñi yakupi, Apu Ausangatewan, Wachuma hampiwan, Temazcalwan ima.",
+        inquiryPrompt: "Kay 7 p'unchay puriyqa mañakuypallam kanqa. Tapukuwayku hayk'aqchus kanman chayta yachanaykipaq.",
         cta: "Tiyayniykita Waqaychay",
         itinerary: [
           { day: "1 P'unchay", title: "Chayamuy & Ch'uyay", description: "Pacchantaman puriy. Q'uñi yakupi ch'uyakuy, Ausangate ñawpaqpi mañakuy." },
@@ -194,9 +195,10 @@ export const quTranslations: TranslationData = {
         title: "Ausangate: Hanaq Pachaman Astawan Qaylla (3 P'unchay)",
         subtitle: "Apuwan Raymi",
         description: "Huk pisi p'unchaykunallapi hatun hampi puriy. Willka urquwan, hampi yakukunawan tinkuy.",
+        inquiryPrompt: "Kay puriyqa mañakuypallam kanqa. Tapukuwayku hayk'aqchus kanman chayta yachanaykipaq.",
         details: {
-            dates: "Mar 31 - Abr 2, 2026",
-            price: "700 Soles",
+            dates: "Tapukuy",
+            price: "Tapukuy",
             bonus: "" // Text removed
         },
         cta: "Tiyayniykita Waqaychay",

@@ -55,7 +55,7 @@ export const EventFlyer: React.FC<EventFlyerProps> = ({ t, flyerT, contact, foot
   } else if (type === 'ausangate3Day') {
       bgImage = IMAGES.ausangate3;
       locationText = locAusangate;
-      dateText = t.details?.dates || (isSpanish ? "28 - 30 Ene, 2026" : "Jan 28 - 30, 2026");
+      dateText = t.details?.dates || flyerT.flexibleDates;
   }
 
   // QR Code URL Generation

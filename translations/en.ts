@@ -38,7 +38,7 @@ export const enTranslations: TranslationData = {
       subtitle: "Reconnect with Pachamama through traditional Wachuma ceremonies in the Sacred Valley.",
       cta: "Book a Ceremony",
       retreatTeaser: { label: "Sacred Immersion", title: "2 Day Retreat", location: "Pisac & Kinsacocha" },
-      ausangateTeaser: { label: "Closer to the Sky", title: "Ausangate 3 Days", date: "Mar 31 - Apr 2, 2026" },
+      ausangateTeaser: { label: "Closer to the Sky", title: "Ausangate 3 Days", date: "Flexible Dates" },
       costaRicaTeaser: { label: "Special Event", title: "Costa Rica Pilgrimage", date: "Oct 3 - Oct 14, 2026" }
     },
     benefits: {
@@ -73,7 +73,7 @@ export const enTranslations: TranslationData = {
         { 
             title: "Ausangate: Closer to the Sky (3 Days)", 
             description: "A powerful journey with the Apu. Temazcal, Rapé, and Wachuma ceremony in Pacchanta.", 
-            price: "700 Soles",
+            price: "Inquire",
             details: { duration: "3 Days", location: "Ausangate", groupSize: "Group" }
         },
         { 
@@ -123,6 +123,7 @@ export const enTranslations: TranslationData = {
       title: "Ausangate Sacred Journey (7 Days)",
       subtitle: "To be announced",
       description: "A profound expedition combining the healing waters of Pacchanta, the majestic presence of Apu Ausangate, and the transformative power of Wachuma and Temazcal.",
+      inquiryPrompt: "This 7-day immersion is organized for private groups upon request. Please contact us to coordinate dates and receive contribution details.",
       cta: "Reserve Your Spot",
       itinerary: [
         { day: "Day 1", title: "Arrival & Purification", description: "Travel to Pacchanta. Relax in the natural thermal waters to cleanse the body, followed by a hike up towards Ausangate to set our intentions." },
@@ -138,9 +139,10 @@ export const enTranslations: TranslationData = {
       title: "Ausangate: A Journey Closer to the Sky (3 Days)",
       subtitle: "Ceremony with the Apu",
       description: "A condensed and powerful plant medicine journey. Connect with the sacred mountain and the healing waters in the high Andes.",
+      inquiryPrompt: "This journey is available upon request for private groups. Please contact us for available dates and contribution details.",
       details: {
-          dates: "Mar 31 - Apr 2, 2026",
-          price: "700 Soles",
+          dates: "Flexible Dates",
+          price: "Inquire",
           bonus: "" // Text removed
       },
       cta: "Reserve Spot",
@@ -216,7 +218,7 @@ export const enTranslations: TranslationData = {
         intro: "A special 2-day journey to Juchuy Qosqo ('Little Cusco'), combining a hike to ancient ruins with a deep cultural immersion staying with a local family.",
         days: [
             { title: "Day 1 : Hike & Traditional Cooking", content: "We begin with a scenic hike up to the archaeological site of Juchuy Qosqo, enjoying panoramic views of the Sacred Valley. Upon arrival, we connect with a local family who will host us. In the afternoon, we explore the ruins and learn about their history, followed by a traditional dinner prepared together with our hosts.", accommodation: "Authentic accommodation with a local family next to the ruins." },
-            { title: "Day 2 : Ceremony at the Ruins", content: "Morning breaks over the Apus. We engage in a sacred Wachuma ceremony in the powerful presence of the Juchuy Qosqo ruins. Without the crowds of other sites, we can connect deeply with the history and energy of this royal estate. The ceremony allows for profound reflection and connection with the ancestors.", accommodation: "Descent and return transport to Pisac." }
+            { title: "Day 2 : Ceremony at the Ruins", content: "Morning breaks over the Apus. We engage in a sacred Wachuma ceremony in the powerful presence of the Juchuy Qosqo ruins. Without the crowds of other sites, we can connect deeply with the history and energy of this royal estate. The ceremony allows for profound reflection and connection with the ancestors.", accommodation: "Authentic accommodation with a local family next to the ruins." }
         ],
         conclusion: "A unique blend of archaeological wonder, living culture, and spiritual work. You will leave with a full belly, a warm heart, and a spirit aligned with the Andes."
     },

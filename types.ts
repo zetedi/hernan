@@ -221,6 +221,7 @@ export interface TranslationData {
     title: string;
     subtitle: string;
     description: string | string[];
+    inquiryPrompt?: string;
     details: {
         dates: string;
         price: string;

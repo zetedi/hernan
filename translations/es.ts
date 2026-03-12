@@ -38,7 +38,7 @@ export const esTranslations: TranslationData = {
       subtitle: "Reconecta con la Pachamama a través de ceremonias tradicionales de Wachuma en el Valle Sagrado.",
       cta: "Reservar una Ceremonia",
       retreatTeaser: { label: "Inmersión Sagrada", title: "Retiro de 2 Días", location: "Pisac y Kinsacocha" },
-      ausangateTeaser: { label: "Más Cerca del Cielo", title: "Ausangate 3 Días", date: "31 Mar - 2 Abr, 2026" },
+      ausangateTeaser: { label: "Más Cerca del Cielo", title: "Ausangate 3 Días", date: "Fechas Flexibles" },
       costaRicaTeaser: { label: "Evento Especial", title: "Peregrinaje a Costa Rica", date: "3 Oct - 14 Oct, 2026" }
     },
     benefits: {
@@ -73,7 +73,7 @@ export const esTranslations: TranslationData = {
         { 
             title: "Ausangate: Más Cerca del Cielo (3 Días)", 
             description: "Una poderosa jornada con el Apu. Temazcal, Rapé y ceremonia de Wachuma en Pacchanta.", 
-            price: "700 Soles",
+            price: "Consultar",
             details: { duration: "3 Días", location: "Ausangate", groupSize: "Grupo" }
         },
         { 
@@ -123,6 +123,7 @@ export const esTranslations: TranslationData = {
         title: "Viaje Sagrado al Ausangate",
         subtitle: "Fecha por anunciar",
         description: "Una expedición profunda combinando las aguas curativas de Pacchanta, la majestuosa presencia del Apu Ausangate y el poder transformador del Wachuma y el Temazcal.",
+        inquiryPrompt: "Esta inmersión de 7 días se organiza para grupos privados bajo petición. Por favor, contáctanos para coordinar fechas y recibir detalles sobre la contribución.",
         cta: "Reserva tu Lugar",
         itinerary: [
           { day: "Día 1", title: "Llegada y Purificación", description: "Viaje a Pacchanta. Relajación en las aguas termales naturales para limpiar el cuerpo, seguido de una caminata hacia el Ausangate para establecer nuestras intenciones." },
@@ -136,11 +137,12 @@ export const esTranslations: TranslationData = {
     },
     ausangate3Day: {
         title: "Ausangate: Un Viaje Más Cerca del Cielo (3 Días)",
-        subtitle: "Ceremonia con el Apu",
+        subtitle: "Ceremony con el Apu",
         description: "Un viaje de medicina vegetal condensado y poderoso en los altos Andes. Conecta con la montaña sagrada y las aguas curativas.",
+        inquiryPrompt: "Este viaje está disponible bajo petición para grupos privados. Por favor, contáctanos para conocer las fechas disponibles y los detalles de la contribución.",
         details: {
-            dates: "31 Mar - 2 Abr, 2026",
-            price: "700 Soles",
+            dates: "Fechas Flexibles",
+            price: "Consultar",
             bonus: "" // Text removed
         },
         cta: "Reservar Lugar",
@@ -157,7 +159,7 @@ export const esTranslations: TranslationData = {
           description: [
             "Experimenta el primer paso de nuestra histórica reunión en Costa Rica mientras abrimos el contenedor sagrado junto al Océano Pacífico.",
             "Guiados por la sabiduría ancestral de Hernan, nos centramos en profundas ceremonias de apertura del corazón e inmersión en los exuberantes santuarios botánicos del Valle del Diamante.",
-            "Este retiro sirve como base para el peregrinaje, ofreciendo purificación y arraigo en un santuario tropical apartado."
+            "Este retiro sirve como base para el peregrinaje, ofreciendo purificación y arraigo en un sanuario tropical apartado."
           ],
           details: { location: "Valle del Diamante, Costa Rica", capacity: "Grupo Íntimo", dates: "3 Oct - 5 Oct, 2026" },
           cta: "Solicitar Invitación",
@@ -186,9 +188,9 @@ export const esTranslations: TranslationData = {
         subtitle: "El Viaje al Duchí",
         intro: "Don Hernan es un Wachumero nativo Quechua del linaje pre-Inca K’ana y guardián de tradiciones ancestrales. Este viaje conecta la sabiduría de altura de los Andes Peruanos con nuestra amada Montaña Duchí en ceremonias sagradas de Wachuma centradas en el corazón. Experimenta una sanación profunda y un despertar espiritual con la sabiduría antigua de las tierras. Caminatas medicinales privadas disponibles para grupos pequeños cada día con dos fechas clave muy especiales para unirse.",
         description: [
-            "Visitas a sitios sagrados uniendo la sabiduría de la tierra con oraciones y honrando a los antiguos ancestros.",
-            "Caminatas medicinales privadas disponibles para grupos pequeños cada día con dos fechas clave muy especiales para unirse.",
-            "Nos reunimos en un santuario apartado en El Duchí para garantizar una atención personal profunda y un contenedor energético cohesivo."
+            "Visits to sacred sites linking the wisdom of the land with prayers and honouring the ancient ancestors.",
+            "Private medicine walks available for small groups every day with two very special key dates to join.",
+            "We gather in a secluded sanctuary in El Duchí to ensure deep personal attention and a cohesive energetic container."
         ],
         details: { location: "El Duchí, Costa Rica", capacity: "Grupo Pequeño", dates: "7 Oct - 14 Oct, 2026" },
         cta: "Solicitar Invitación",
@@ -213,7 +215,7 @@ export const esTranslations: TranslationData = {
     juchuy: {
         title: "Inmersión Ancestral en Juchuy Qosqo",
         subtitle: "Comunidad, Cocina y Ruinas",
-        intro: "Un viaje especial de 2 días a Juchuy Qosqo ('Pequeño Cusco'), combinando una caminata a antiguas ruinas con una profunda inmersión cultural alojándose con una familia local.",
+        intro: "Un viaje especial de 2 día a Juchuy Qosqo ('Pequeño Cusco'), combinando una caminata a antiguas ruinas con una profunda inmersión cultural alojándose con una familia local.",
         days: [
             { title: "Día 1 : Caminata y Cocina Tradicional", content: "Comenzamos nuestro viaje caminando hacia las espectaculares ruinas de Juchuy Qosqo, con vistas al Valle Sagrado. Por la tarde, nos instalamos en una auténtica casa familiar local. Aquí, prepararemos comida juntos, cocinando sopa andina tradicional y compartiendo historias junto al fuego. Esta preparación comunitaria es una ceremonia en sí misma, conectándonos con la forma de vida local.", accommodation: "Alojamiento auténtico con una familia local junto a las ruinas." },
             { title: "Día 2 : Ceremonia en las Ruinas", content: "La mañana despunta sobre los Apus. Participamos en una ceremonia sagrada de Wachuma en la poderosa presencia de las ruinas de Juchuy Qosqo. Sin las multitudes de otros sitios, podemos conectar profundamente con la historia y la energía de esta finca real. La ceremonia permite una profunda reflexión y conexión con los antepasados.", accommodation: "Descenso y transporte de regreso a Pisac." }
@@ -225,7 +227,7 @@ export const esTranslations: TranslationData = {
           subtitle: "Sitios Sagrados del Valle",
           intro: "Un viaje enfocado y profundo en la medicina, realizado en varios lugares sagrados como ruinas antiguas, lagunas serenas o montañas poderosas.",
           days: [
-              { title: "La Ceremonia", content: "Comenzamos temprano en la mañana, viajando a un sitio sagrado cuidadosamente seleccionado en el Valle Sagrado (como Pumamarca, Kinsacocha u otros lugares de poder). La ceremonia es un compromiso de día completo con la medicina, la naturaleza y uno mismo. Hernan proporciona orientación, manteniendo el espacio para una sanación profunda y conexión. La experiencia concluye a última hora de la tarde.", accommodation: "El alojamiento no está incluido, pero se organiza el transporte hacia y desde el sitio." }
+              { title: "La Ceremonia", content: "Comenzamos temprano en la mañana, viajando a un sitio sagrado cuidadosamente seleccionado en el Valle Sagrado (como Pumamarca, Kinsacocha u otros lugares de poder). La ceremonia es un compromiso de día completo con la medicina, naturaleza y uno mismo. Hernan proporciona orientación, manteniendo el espacio para una sanación profunda y conexión. La experiencia concluye a última hora de la tarde.", accommodation: "El alojamiento no está incluido, pero se organiza el transporte hacia y desde el sitio." }
           ],
           conclusion: "Un reinicio poderoso y reconexión con el mundo natural, dejándote con claridad y un corazón más ligero.",
           details: { durationLabel: "Duración", durationValue: "Día Completo", locationLabel: "Ubicación", locationValue: "Sitios del Valle Sagrado", focusLabel: "Enfoque", focusValue: "Sanación y Naturaleza" }
@@ -273,8 +275,8 @@ export const esTranslations: TranslationData = {
             intro: "Aunque este retiro está diseñado para ofrecer una experiencia segura y transformadora, es importante reconocer que la participación en una ceremonia de San Pedro implica riesgos tanto físicos como psicológicos. Por favor, revisa cuidadosamente las siguientes consideraciones para asegurar una participación informada:",
             sections: [
                 { title: "Declaración de Salud y Médica", items: [{ label: "Condiciones Médicas", text: "Los participantes deben informar a los facilitadores sobre cualquier condición médica, incluyendo problemas cardíacos, condiciones de salud mental o historial de convulsiones. Algunas condiciones preexistentes pueden aumentar los riesgos asociados con la experiencia de San Pedro." }, { label: "Medicamentos", text: "Ciertos medicamentos, incluyendo antidepresivos, antipsicóticos y algunos medicamentos de venta libre, pueden tener interacciones adversas con San Pedro. Por favor, informa sobre cualquier medicamento a los facilitadores mucho antes del retiro." }, { label: "Sensibilidad Física", text: "San Pedro puede causar efectos físicos temporales, como náuseas, vómitos y aumento del ritmo cardíaco. Los participantes deben estar física y mentalmente preparados para estos efectos." }] },
-                { title: "Riesgos Psicológicos y Responsabilidad Emocional", items: [{ label: "Experiencias Intensas", text: "San Pedro can bring up deep emotions and past traumas, which can be challenging to process. Participants are encouraged to engage in personal reflection or seek professional guidance beforehand if they have a history of trauma." }, { label: "Integration Support", text: "Después del retiro, los participantes pueden beneficiarse de apoyo adicional para integrar sus experiencias. Se aconseja planificar tiempo, apoyo y recursos para procesar cualquier idea o emoción que surja." }] },
-                { title: "Responsabilidad Personal", items: [{ label: "Consentimiento Informado", text: "Al participar en este retiro, reconoces que participas voluntariamente en esta experiencia. Cualquier idea, desafío o transformación personal que experimentes es tu propia responsabilidad." }, { label: "Precauciones de Seguridad", text: "Sigue todas las pautas de seguridad proporcionadas por los facilitadores, incluyendo restricciones dietéticas, comportamiento sugerido durante las ceremonias y limitaciones en actividades físicas." }] }
+                { title: "Riesgos Psicológicos y Responsabilidad Emocional", items: [{ label: "Intense Experiences", text: "San Pedro can bring up deep emotions and past traumas, which can be challenging to process. Participants are encouraged to engage in personal reflection or seek professional guidance beforehand if they have a history of trauma." }, { label: "Integration Support", text: "Después del retiro, los participantes pueden beneficiarse de apoyo adicional para integrar sus experiencias. Se aconseja planificar tiempo, apoyo y recursos para procesar cualquier idea o emoción que surja." }] },
+                { title: "Responsabilidad Personal", items: [{ label: "Informed Consent", text: "Al participar en este retiro, reconoces que participas voluntariamente en esta experiencia. Cualquier idea, desafío o transformación personal que experimentes es tu propia responsabilidad." }, { label: "Precauciones de Seguridad", text: "Sigue todas las pautas de seguridad proporcionadas por los facilitadores, incluyendo restricciones dietéticas, comportamiento sugerido durante las ceremonias y limitaciones en actividades físicas." }] }
             ]
         }
     },
@@ -297,7 +299,7 @@ export const esTranslations: TranslationData = {
                     "<strong>¿Qué es el cactus San Pedro?</strong><br>El cactus San Pedro, también conocido como Wachuma, es una antigua planta medicinal nativa de las tierras altas de los Andes, principalmente en Perú. Este cactus verde columnar alto, científicamente llamado <em>Echinopsis pachanoi</em>, thrives at high altitudes, often between 2,000 and 3,000 metros. Se reconoce fácilmente por sus costillas pronunciadas, espinas cortas y grandes flores blancas que florecen por la noche.",
                     "<strong>Orígenes e Historia</strong><br>San Pedro has been used for thousands of years by indigenous Andean peoples, especially the Quechua and Aymara communities. Deeply rooted in shamanic tradition, it serves as a bridge between the physical and spiritual worlds. Its name, San Pedro, refers to Saint Peter, the guardian of the gates of heaven, symbolizing access to spiritual dimensions.",
                     "<strong>The Power of la Mescalina: Conectando con la Armonía Universal</strong><br>One of the key active compounds in the San Pedro cactus is mescaline, a naturally occurring psychoactive alkaloid. Mescaline is responsible for the profound visionary and introspective experiences associated with Wachuma. A diferencia de las sustancias sintéticas, la mescalina de San Pedro guía suavemente a las personas a un estado alterado de conciencia, fomentando una sensación de unidad y armonía con el mundo que les rodea.",
-                    "Las ceremonias de Wachuma a menudo llevan a los participantes a sentirse profundamente conectados con la Pachamama (Madre Tierra), experimentando el pulso de la naturaleza y el ritmo de la vida misma. Esta conexión ayuda a disolver los límites entre el yo y el universo, permitiendo profundas ideas y claridad espiritual. Muchos de los que se embarcan en este viaje lo describen como una experiencia de apertura del corazón, donde el amor y la compasión fluyen naturalmente.",
+                    "Las ceremonias de Wachuma a menudo llevan a los participantes a sentirse profundamente conectados con la Pachamama (Madre Tierra), experimentando el pulso de la naturaleza y el ritmo de la vida misma. Esta conexión ayuda a disolver los límites entre el yo y el universo, permitiendo profundas ideas y claridad espiritual. Muchos de los que se embarcan en este viaje lo describen como una experiencia de apertura del corazón, donde el amor y la compasión floyen naturalmente.",
                     "<strong>Beneficios Espirituales y Terapéuticos</strong><br>San Pedro es famoso por sus propiedades espirituales y curativas. Sus efectos son generalmente más suaves y graduales en comparación con otras medicinas vegetales como la Ayahuasca. Esto lo hace accesible para aquellos que buscan sanación emocional y claridad interior sin la intensidad de despertares más abruptos.<br><br><strong>Beneficios Espirituales:</strong><br>• Despertar Espiritual: Facilita la reconexión con el verdadero yo y el mundo natural.<br>• Apertura del Corazón: Promueve la compasión, el perdón y la profunda liberación emocional.<br>• Claridad Mental: Ayuda a obtener perspectiva sobre los desafíos de la vida y fomenta la aceptación.<br><br><strong>Beneficios Terapéuticos:</strong><br>• Liberación Emocional: Ayuda a procesar traumas pasados y emociones no resueltas.<br>• Calma y Serenidad: Reduce la ansiedad y cultiva la paz interior.<br>• Conexión con la Naturaleza: Fortalece el vínculo con la Tierra y los elementos."
                 ]
             }
@@ -344,7 +346,7 @@ export const esTranslations: TranslationData = {
             items: [
               { label: "Inicio", href: "/" },
               { label: "La Familia", href: "/about" },
-              { label: "Ceremonias", href: "/services" },
+              { label: "Ceremonies", href: "/services" },
               { label: "Galería", href: "/gallery" },
               { label: "Contacto", href: "/contact" }
             ]

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { TranslationData, Language } from '../types';
 import { IMAGES, getWhatsAppLink } from '../constants';
 import { ViewFlyerButton } from './ViewFlyerButton';
-import { Mountain, Flame, Droplets, Calendar, FileText, Send } from 'lucide-react';
+import { Mountain, Flame, Droplets, Calendar, Info, FileText, Send } from 'lucide-react';
 import { Preparation } from './Preparation';
 import { MediaCarousel, MediaItem } from './MediaCarousel';
 
@@ -26,7 +26,7 @@ export const Ausangate: React.FC<AusangateProps> = ({ t, ui, lang, contactPhone 
         >
           <div className="absolute inset-0 bg-black/50" />
         </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-32">
           <span className="text-pacha-gold text-sm md:text-base font-bold tracking-[0.3em] uppercase mb-4 block animate-fade-in">
             {t.subtitle}
           </span>
@@ -38,6 +38,16 @@ export const Ausangate: React.FC<AusangateProps> = ({ t, ui, lang, contactPhone 
                 ? t.description.map((d, i) => <p key={i} className={i > 0 ? "mt-4" : ""}>{d}</p>) 
                 : <p>{t.description}</p>
              }
+          </div>
+
+          {/* Inquiry Prompt */}
+          <div className="max-w-2xl mx-auto mb-10 animate-fade-in-up">
+            <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-xl">
+              <p className="text-pacha-gold font-serif italic text-xl leading-relaxed flex items-center justify-center gap-3">
+                <Info className="shrink-0" />
+                {t.inquiryPrompt}
+              </p>
+            </div>
           </div>
           
           {/* WhatsApp + Flyer Link */}

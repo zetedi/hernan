@@ -27,7 +27,7 @@ export const Retreat2Day: React.FC<Retreat2DayProps> = ({ t, ui, lang, contactPh
         >
           <div className="absolute inset-0 bg-black/40" />
         </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-32">
           <span className="text-pacha-gold text-sm md:text-base font-bold tracking-[0.3em] uppercase mb-4 block animate-fade-in">
             {content.subtitle}
           </span>

@@ -27,7 +27,7 @@ export const Ausangate3Day: React.FC<Ausangate3DayProps> = ({ t, preparation, ui
           <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-t from-pacha-stone via-transparent to-transparent" />
         </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-32">
           <span className="text-pacha-gold text-sm md:text-base font-bold tracking-[0.3em] uppercase mb-4 block animate-fade-in">
             {t.subtitle}
           </span>
@@ -41,17 +41,23 @@ export const Ausangate3Day: React.FC<Ausangate3DayProps> = ({ t, preparation, ui
              }
           </div>
           
-          {/* Key Details Badge */}
-          <div className="flex flex-wrap justify-center gap-4 text-sm font-bold uppercase tracking-widest text-white/90 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 inline-flex shadow-lg mb-8">
-             <div className="flex items-center gap-2">
-                <Calendar className="text-pacha-gold w-4 h-4" />
-                <span>{t.details.dates}</span>
-             </div>
-             <div className="hidden md:block text-pacha-gold">|</div>
-             <div className="flex items-center gap-2">
-                <Info className="text-pacha-gold w-4 h-4" />
-                <span className="text-pacha-gold text-lg">{t.details.price}</span>
-             </div>
+          {/* Inquiry Prompt */}
+          <div className="max-w-2xl mx-auto mb-10 animate-fade-in-up">
+            <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-xl">
+              <p className="text-pacha-gold font-serif italic text-xl mb-4 leading-relaxed">
+                {t.inquiryPrompt}
+              </p>
+              <div className="flex flex-wrap justify-center gap-6 text-xs font-bold uppercase tracking-[0.2em] text-white/70">
+                 <div className="flex items-center gap-2">
+                    <Calendar className="text-pacha-gold w-4 h-4" />
+                    <span>{t.details.dates}</span>
+                 </div>
+                 <div className="flex items-center gap-2">
+                    <Info className="text-pacha-gold w-4 h-4" />
+                    <span>{t.details.price}</span>
+                 </div>
+              </div>
+            </div>
           </div>
 
           {/* WhatsApp + Flyer Link */}

@@ -30,7 +30,7 @@ export const CostaRica: React.FC<CostaRicaProps> = ({ t, preparation, ui, lang, 
           <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-t from-pacha-sand via-transparent to-transparent" />
         </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto md:mt-20">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto md:mt-32">
           <span className="text-pacha-gold text-sm md:text-base font-bold tracking-[0.3em] uppercase mb-4 block animate-fade-in drop-shadow-md">
             {t.subtitle}
           </span>
