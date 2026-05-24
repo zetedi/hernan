@@ -55,8 +55,8 @@ export const quTranslations: TranslationData = {
         items: [
           { 
               title: "2 P'unchay T'aqakuy", 
-              description: "Ukhu hampi puriy Wayna Wasi & Kinsacochapi. Chanin $173 (1 runa). Huk runa yapay +$70. Puñuna +$20 sapa runa. Astawan 10 runakuna.", 
-              price: "$173+",
+              description: "Ukhu hampi puriy Wayna Wasi & Kinsacochapi. Astawan 10 runakuna.", 
+              price: "Tapukuy",
               details: { duration: "2 P'unchay", location: "Pisac & Kinsacocha", groupSize: "Astawan 10" }
           },
           { 
@@ -74,25 +74,25 @@ export const quTranslations: TranslationData = {
           { 
               title: "Costa Rica: 3-P'unchay T'aqakuy", 
               description: "Qallariy Raymi, Diamante Qhichwa sach'akunawan.", 
-              price: "$249 / P'unchay",
+              price: "Tapukuy",
               details: { duration: "3 P'unchay", location: "Diamante Qhichwa", groupSize: "Huñu" }
           },
           { 
               title: "Costa Rica: Willka Puriy", 
               description: "Duchí urqupi ukhu puriy, phaqchakunawan, urqu raymikunawan.", 
-              price: "$249 / P'unchay",
+              price: "Tapukuy",
               details: { duration: "8 P'unchay", location: "Duchí", groupSize: "Pisi Huñu" }
           },
           { 
               title: "Juchuy Qosqo Puriy", 
               description: "2 P'unchay 'Huch'uy Qosqo'pi. Aylluwan tiyay, kuska wayk'uy.", 
-              price: "$200+",
+              price: "Tapukuy",
               details: { duration: "2 P'unchay", location: "Juchuy Qosqo", groupSize: "Pisi 2" }
           },
           { 
               title: "1 P'unchay Raymi", 
               description: "Willka raymi pisi 2 runapaq. Urqukunapi, quchakunapi, Willka Qhichwapi.", 
-              price: "$250",
+              price: "Tapukuy",
               details: { duration: "1 P'unchay", location: "Willka Qhichwa", groupSize: "Pisi 2" }
           },
           { 
@@ -115,7 +115,7 @@ export const quTranslations: TranslationData = {
           ],
           details: { location: "Diamante Qhichwa, Costa Rica", capacity: "Huñu", dates: "Oct 3 - Oct 5, 2026" },
           cta: "Mink'ayta Mañakuy",
-          oneDayPrice: "$249 / P'unchay",
+          oneDayPrice: "Tapukuy",
           visionTitle: "Mama Qochaq Waqyakuynin",
           visionText: "Hampiqa nirqa: Andespa yachaynin mama qochawan tinkunan. Kay t'aqakuyqa chay p'uñtem.",
           themeValue: "Mama Qochawan Sach'a",

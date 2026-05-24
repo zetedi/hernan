@@ -66,8 +66,8 @@ export const enTranslations: TranslationData = {
       items: [
         { 
             title: "2 Day Retreat", 
-            description: "Deep immersion at Wayna Wasi & Kinsacocha. Base cost $173 (1 person). Each additional person +$70. Accommodation +$20 per person. Max 10 people.", 
-            price: "$173+",
+            description: "Deep immersion at Wayna Wasi & Kinsacocha. Max 10 people.", 
+            price: "Inquire",
             details: { duration: "2 Days", location: "Pisac & Kinsacocha", groupSize: "Max 10" }
         },
         { 
@@ -85,25 +85,25 @@ export const enTranslations: TranslationData = {
         { 
             title: "Costa Rica: 3-Day Retreat", 
             description: "Opening Ceremony and connection with the Primary Rainforests of the Diamante Valley.", 
-            price: "$249 / Day",
+            price: "Inquire",
             details: { duration: "3 Days", location: "Diamante Valley", groupSize: "Intimate Group" }
         },
         { 
             title: "Costa Rica: Sacred Pilgrimage", 
             description: "Deep immersion in El Duchí with tribal visits, waterfall walks, and special mountain ceremonies.", 
-            price: "$249 / Day",
+            price: "Inquire",
             details: { duration: "8 Days", location: "El Duchí", groupSize: "Small Group" }
         },
         { 
             title: "Juchuy Qosqo Immersion", 
             description: "2 Days at the 'Little Cusco' ruins. Stay with a local family, cook traditional food together, and experience deep connection.", 
-            price: "$200+",
+            price: "Inquire",
             details: { duration: "2 Days", location: "Juchuy Qosqo", groupSize: "Min 2" }
         },
         { 
             title: "1 Day Ceremony", 
             description: "A sacred journey for a minimum of 2 people. Experience the medicine in various sacred sites like ruins, lagoons, and mountains across the Sacred Valley.", 
-            price: "$250",
+            price: "Inquire",
             details: { duration: "1 Day", location: "Sacred Valley", groupSize: "Min 2" }
         },
         { 
@@ -163,7 +163,7 @@ export const enTranslations: TranslationData = {
         ],
         details: { location: "Diamante Valley, Costa Rica", capacity: "Intimate Group", dates: "Oct 3 - Oct 5, 2026" },
         cta: "Request Invitation",
-        oneDayPrice: "$249 / Day",
+        oneDayPrice: "Inquire",
         visionTitle: "The Ocean's Call",
         visionText: "The medicine spoke of connecting the Andean wisdom with the purifying, fluid energy of the ocean. This retreat is the first step of that spiritual bridge.",
         themeValue: "Ocean & Jungle",

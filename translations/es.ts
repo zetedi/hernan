@@ -66,8 +66,8 @@ export const esTranslations: TranslationData = {
       items: [
         { 
             title: "Retiro de 2 Días", 
-            description: "Inmersión profunda en Wayna Wasi y Kinsacocha. Costo base $173 (1 persona). Persona extra +$70. Alojamiento +$20 por persona. Máx 10 personas.", 
-            price: "$173+",
+            description: "Inmersión profunda en Wayna Wasi y Kinsacocha. Máx 10 personas.", 
+            price: "Consultar",
             details: { duration: "2 Días", location: "Pisac y Kinsacocha", groupSize: "Max 10" }
         },
         { 
@@ -85,25 +85,25 @@ export const esTranslations: TranslationData = {
         { 
             title: "Costa Rica: Retiro de 3 Días", 
             description: "Ceremonia de Apertura y conexión con las Selvas Primarias del Valle del Diamante.", 
-            price: "$249 / Día",
+            price: "Consultar",
             details: { duration: "3 Días", location: "Valle del Diamante", groupSize: "Grupo Íntimo" }
         },
         { 
             title: "Costa Rica: Peregrinaje Sagrado", 
             description: "Inmersión profunda en El Duchí con visitas tribales, caminatas a cascadas y ceremonias especiales en la montaña.", 
-            price: "$249 / Día",
+            price: "Consultar",
             details: { duration: "8 Días", location: "El Duchí", groupSize: "Grupo Pequeño" }
         },
         { 
             title: "Inmersión Juchuy Qosqo", 
             description: "2 Días en las ruinas de 'Cusco Pequeño'. Quédate con una familia local, cocina comida tradicional y experiencia una conexión profunda.", 
-            price: "$200+",
+            price: "Consultar",
             details: { duration: "2 Días", location: "Juchuy Qosqo", groupSize: "Mín 2" }
         },
         { 
             title: "Ceremonia de 1 Día", 
             description: "Un viaje sagrado para un mínimo de 2 personas. Experimenta la medicina en varios sitios sagrados como ruinas, lagunas y montañas en todo el Valle Sagrado.", 
-            price: "$250",
+            price: "Consultar",
             details: { duration: "1 Día", location: "Valle Sagrado", groupSize: "Mín 2" }
         },
         { 
@@ -163,7 +163,7 @@ export const esTranslations: TranslationData = {
           ],
           details: { location: "Valle del Diamante, Costa Rica", capacity: "Grupo Íntimo", dates: "3 Oct - 5 Oct, 2026" },
           cta: "Solicitar Invitación",
-          oneDayPrice: "$249 USD / Día",
+          oneDayPrice: "Consultar",
           visionTitle: "El Llamado del Océano",
           visionText: "La medicina habló de conectar la sabiduría andina con la energía fluida y purificadora del océano. Este retiro es el primer paso de ese puente espiritual.",
           themeValue: "Océano y Selva",
